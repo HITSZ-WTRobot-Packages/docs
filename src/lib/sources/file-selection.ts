@@ -232,6 +232,7 @@ export async function discoverSnapshotFiles(cloneRoot: string): Promise<Selectio
       message: "No upstream license file was found in the synchronized module.",
     });
   }
+  warnings.sort((left, right) => compareStrings(left.code, right.code));
   return { paths, warnings };
 }
 

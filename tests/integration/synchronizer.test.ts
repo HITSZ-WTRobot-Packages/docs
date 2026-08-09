@@ -187,6 +187,7 @@ describe("source synchronizer", () => {
     const upstream = await createFixtureRepository();
     await rm(path.join(upstream, "README.md"));
     await rm(path.join(upstream, "packages/Demo/cpkg.toml"));
+    await rm(path.join(upstream, "LICENSE"));
     const git = simpleGit(upstream);
     await git.add(["--all"]);
     await git.commit("fixture: remove package metadata and README");
@@ -198,6 +199,7 @@ describe("source synchronizer", () => {
     );
 
     expect(result.modules[0]?.warnings.map((warning) => warning.code)).toEqual([
+      "LICENSE_MISSING",
       "PACKAGE_MANIFEST_MISSING",
       "README_MISSING",
     ]);

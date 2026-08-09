@@ -22,6 +22,9 @@ free-form error message to determine behavior.
 ## Failure Semantics
 
 - Invalid configuration and repository-owned data fail fast with a non-zero exit code.
+- Remote Git operations use a 90-second idle timeout, HTTP/1.1 with TLS 1.2 transport, and at most
+  three bounded attempts. Each failed clone attempt removes its incomplete temporary destination
+  before retrying.
 - A synchronization failure preserves the last successful snapshot and removes temporary state.
 - Doxygen failure is isolated per package and becomes a recorded API quality state unless the
   executable itself is unavailable or non-reproducible; that case triggers `issues.md`.
