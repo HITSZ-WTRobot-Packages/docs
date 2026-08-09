@@ -18,12 +18,11 @@ Create the typed module/package catalog used by every generated page from commit
 
 ## Acceptance Criteria
 
-- [ ] Every synchronized `cpkg.toml` maps to exactly one package entry and stable route.
-- [ ] Internal and external dependency behavior is covered by unit tests.
-- [ ] Catalog generation works without network access.
-- [ ] Known packages omitted by historical indexes are found through direct snapshot scanning.
+- [x] Every synchronized `cpkg.toml` maps to exactly one package entry and stable route.
+- [x] Internal and external dependency behavior is covered by unit tests.
+- [x] Catalog generation works without network access.
+- [x] Known packages omitted by historical indexes are found through direct snapshot scanning.
 
 ## Dependencies
 
 Requires committed real snapshots.
-

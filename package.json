@@ -20,6 +20,7 @@
     "test:integration": "bun test tests/integration",
     "test:e2e": "playwright test",
     "sync": "bun run scripts/sync/sync-cli.ts",
+    "generate:catalog": "bun run scripts/generate/catalog-cli.ts",
     "check:conventions": "bun run scripts/validation/check-conventions.ts",
     "check": "bun run check:conventions && bun run format:check && bun run lint && bun run typecheck && bun run test"
   },
@@ -30,6 +31,7 @@
     "rehype-parse": "^9.0.1",
     "remark-parse": "^11.0.0",
     "simple-git": "^3.36.0",
+    "smol-toml": "^1.7.1",
     "tinyglobby": "^0.2.17",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.1.0",

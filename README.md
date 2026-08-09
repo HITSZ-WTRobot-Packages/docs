@@ -38,6 +38,7 @@ the same commands rather than duplicate their logic in shell scripts.
 bun install --frozen-lockfile
 bun run dev
 bun run sync [--module <name> | --changed] [--dry-run]
+bun run generate:catalog
 bun run generate
 bun run lint
 bun run typecheck
@@ -76,6 +77,19 @@ byte count, warnings, license paths, and every selected file's path, kind, byte 
 All arrays use stable ordering and the manifest contains no timestamp, so an identical rerun leaves
 the worktree byte-for-byte unchanged. A dry-run or failed validation preserves the last complete
 snapshot.
+
+## Package Catalog
+
+`bun run generate:catalog` verifies every synchronized `cpkg.toml` and builds the shared catalog in
+memory without network access or tracked output. Package discovery uses the snapshot manifest, so a
+new upstream package is included automatically after synchronization.
+
+The catalog accepts current manifests with an omitted `format_version` or `format_version = 1` and
+strictly validates package identity, semantic version shape, dependency names, snapshot checksums,
+and paths. Internal dependencies resolve to stable package slugs and reverse-dependency entries; the
+exact approved external set is `FreeRTOS`, `stm32cubemx`, and `VelocityProfile::SCurve`. Duplicate
+names/slugs and any other unresolved dependency fail generation. Source links are pinned to the
+module's full snapshot SHA and displayed revisions use `<version>+<short-sha>`.
 
 ## Architecture Issues
 

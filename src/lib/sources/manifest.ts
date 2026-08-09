@@ -36,6 +36,8 @@ export const SnapshotFileSchema = z
   })
   .strict();
 
+export type SnapshotFile = z.infer<typeof SnapshotFileSchema>;
+
 export const SnapshotWarningSchema = z
   .object({
     code: z.enum(["LICENSE_MISSING", "PACKAGE_MANIFEST_MISSING", "README_MISSING"]),

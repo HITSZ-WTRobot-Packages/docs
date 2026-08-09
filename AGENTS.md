@@ -34,6 +34,8 @@ future `trellis update`.
 - Invoke third-party CLIs through `bun run <script>`, but do not force Astro, esbuild, ESLint, or
   Playwright onto Bun's runtime with `--bun`; respect their declared shebang/runtime while Bun
   remains the package manager and command entry point.
+- Use `bun run generate:catalog` for the offline cpkg catalog check. It must discover packages from
+  the committed snapshot rather than a maintained package index.
 - Keep `ASTRO_DEV_BACKGROUND=0` and `ASTRO_PREVIEW_BACKGROUND=0` in the package scripts. Astro 7
   otherwise auto-backgrounds servers in detected agent environments, breaking process ownership in
   Playwright and CI.

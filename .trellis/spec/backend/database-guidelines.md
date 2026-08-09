@@ -35,6 +35,19 @@ Add an explicit format version to repository-owned manifests and generated data.
 documented historical upstream `cpkg.toml` variants, but repository-owned formats fail on unknown
 versions. Schema changes require fixture migration tests and deterministic-output tests.
 
+## cpkg Catalog Contract
+
+- Discover catalog entries only from manifest records whose file kind is `manifest` and whose
+  basename is `cpkg.toml`; verify the snapshot byte count and SHA-256 before parsing.
+- Accept an omitted upstream `format_version` for historical manifests. If present it must equal 1.
+- Require globally unique `pkgname` and derived package slug values. Display `name` may repeat across
+  namespaces and is not a stable identifier.
+- Resolve dependencies only after every package is parsed. The exact approved external dependency
+  set is `FreeRTOS`, `stm32cubemx`, and `VelocityProfile::SCurve`; all other missing targets fail.
+- Derive reverse dependencies from the normalized catalog, revision labels as
+  `<version>+<module-short-sha>`, and source URLs pinned to the full module SHA.
+- Keep catalog arrays explicitly sorted and serialize format version 1 without timestamps.
+
 ## Common Mistakes
 
 - Using file modification times or clone paths as build input.
