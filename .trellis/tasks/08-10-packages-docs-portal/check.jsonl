@@ -1,1 +1,5 @@
-{"_example": "Fill with {\"file\": \"<path>\", \"reason\": \"<why>\"}. Put spec/research files only — no code paths. Run `python3 .trellis/scripts/get_context.py --mode packages` to list available specs. Delete this line once real entries are added."}
+{"file":".trellis/spec/backend/quality-guidelines.md","reason":"Verify the frozen toolchain, full automated gate, snapshot integrity, workflow permissions, and artifact invariants."}
+{"file":".trellis/spec/frontend/quality-guidelines.md","reason":"Verify every supported origin/base variant with static links, Pagefind, exact-artifact Playwright, axe, and layout checks."}
+{"file":".trellis/spec/guides/cross-layer-thinking-guide.md","reason":"Audit the complete source-to-deployment-artifact flow and ensure browser validation does not rebuild validated bytes."}
+{"file":".trellis/tasks/archive/2026-08/08-10-add-sync-and-validation-actions/research/actions-decisions.md","reason":"Verify event validation, immutable Action pins, permissions, concurrency, and offline validation behavior."}
+{"file":".trellis/tasks/archive/2026-08/08-10-release-readiness-and-deployment-plan/research/release-evidence.md","reason":"Provides the final command matrix, counts, production-address artifact digest, browser evidence, and deployment exclusions."}

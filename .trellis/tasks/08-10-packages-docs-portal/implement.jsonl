@@ -1,1 +1,6 @@
-{"_example": "Fill with {\"file\": \"<path>\", \"reason\": \"<why>\"}. Put spec/research files only — no code paths. Run `python3 .trellis/scripts/get_context.py --mode packages` to list available specs. Delete this line once real entries are added."}
+{"file":".trellis/spec/backend/quality-guidelines.md","reason":"Defines the offline snapshot boundary, deterministic generation, Doxygen, workflow, and release-artifact contracts implemented across the portal."}
+{"file":".trellis/spec/frontend/quality-guidelines.md","reason":"Defines route content, nested-base behavior, search, browser, responsive, screenshot, and accessibility requirements."}
+{"file":".trellis/spec/guides/code-reuse-thinking-guide.md","reason":"Requires shared URL, path, checksum, slug, and dependency helpers instead of parallel implementations."}
+{"file":".trellis/spec/guides/cross-layer-thinking-guide.md","reason":"Guides the snapshot-to-catalog-to-render-to-release data flow and exact prebuilt artifact handoff."}
+{"file":".trellis/tasks/archive/2026-08/08-10-research-and-select-libraries/research/library-selection.md","reason":"Records the researched maintained libraries selected before implementation."}
+{"file":".trellis/tasks/archive/2026-08/08-10-release-readiness-and-deployment-plan/research/deployment-decisions.md","reason":"Records the release boundary, candidate production address, deployment exclusions, and future rollout decisions."}

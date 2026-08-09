@@ -41,16 +41,16 @@ repositories.
 
 ## Acceptance Criteria
 
-- [ ] Every child task is completed in dependency order and passes its own quality gate.
-- [ ] Real snapshots for all configured modules are committed and sufficient for an offline build.
-- [ ] Repeated synchronization is idempotent and changed-only synchronization is incremental.
-- [ ] Root, nested base paths, and custom site origins pass build and browser tests.
-- [ ] All snapshot packages have stable pages, revision metadata, README or fallback content,
+- [x] Every child task is completed in dependency order and passes its own quality gate.
+- [x] Real snapshots for all configured modules are committed and sufficient for an offline build.
+- [x] Repeated synchronization is idempotent and changed-only synchronization is incremental.
+- [x] Root, nested base paths, and custom site origins pass build and browser tests.
+- [x] All snapshot packages have stable pages, revision metadata, README or fallback content,
       dependencies, and Doxygen status.
-- [ ] Lint, typecheck, unit, integration, link, search, browser, accessibility, and convention checks
+- [x] Lint, typecheck, unit, integration, link, search, browser, accessibility, and convention checks
       pass.
-- [ ] `dist/` is deployment-ready and deployment-stage tests are documented.
-- [ ] No formal deployment or upstream-repository modification is included.
+- [x] `dist/` is deployment-ready and deployment-stage tests are documented.
+- [x] No formal deployment or upstream-repository modification is included.
 
 ## Architecture Decision Gate
 
@@ -58,3 +58,25 @@ Stop implementation, create or update `issues.md`, and request user input when s
 licensing, cross-root references, unavailable Doxygen tooling, Action write permissions, library
 availability, or static base-path behavior would force a different architecture.
 
+## Implementation Notes
+
+- Completed and archived all 12 child tasks in the declared dependency order. Each child records
+  its own implementation and verification context under `.trellis/tasks/archive/2026-08/`.
+- Committed deterministic snapshots for 6 modules and 42 packages. Normal generation, build, and
+  validation use only those snapshots; synchronization integration coverage proves full,
+  per-module, changed-only, dry-run, rollback, and identical-rerun behavior.
+- Generated 48 documentation records and 43 Doxygen API references containing 2,136 symbols.
+  Every module, package, and API route is joined back to validated catalog data during artifact
+  verification.
+- The complete quality gate passes with 68 tests, 594 expectations, zero Astro diagnostics, and
+  immutable-Action workflow validation. Root `/`, repository `/docs/`, and nested
+  `/products/wtr/docs/` variants each pass build, artifact, Pagefind, static-link, Playwright,
+  responsive, screenshot, and axe checks.
+- The production-address candidate was built for
+  `https://hitsz-wtrobot-packages.github.io/docs/`: 95 HTML documents, 93 Pagefind pages, and 229
+  files passed artifact and exact-prebuilt browser validation. The deterministic rollback archive
+  and SHA-256 are recorded in the release evidence.
+- Deployment remains intentionally excluded. `docs/deployment.md` specifies the future protected
+  Pages rollout, custom-domain migration, post-deployment checks, stop conditions, and rollback.
+  `issues.md` records the remaining administrator-owned Pages/repository decision and the separate
+  upstream source-reference limitation.
