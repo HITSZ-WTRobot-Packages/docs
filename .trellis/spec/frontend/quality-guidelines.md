@@ -39,3 +39,12 @@
 - Verify root and nested base builds after any link, asset, search, or routing change.
 - Inspect both the hydrated and no-JavaScript page.
 - Confirm focus order, accessible names, contrast, and reduced-motion behavior.
+
+## Astro Server Process Ownership
+
+Run all project commands through `bun run`, but allow third-party CLI shebangs to select their
+supported runtime. Package scripts set `ASTRO_DEV_BACKGROUND=0` and
+`ASTRO_PREVIEW_BACKGROUND=0`; despite the value's spelling, Astro checks whether the variable is
+non-empty and therefore disables automatic agent-environment backgrounding. Do not remove these
+sentinels or add `--bun` to Astro commands without repeating production build and fresh-server
+Playwright checks.

@@ -57,6 +57,8 @@ network-dependent and keeps synchronization behavior identical locally and in Ac
 bun run sync [--module <allowlisted-name> | --changed] [--dry-run]
 bun run generate
 SITE_URL=<absolute-http-url> BASE_PATH=<absolute-path> bun run build
+ASTRO_DEV_BACKGROUND=0 bun run dev
+ASTRO_PREVIEW_BACKGROUND=0 bun run preview
 ```
 
 `--module` and `--changed` are mutually exclusive. With neither, synchronization processes every
@@ -69,6 +71,7 @@ allowlisted module. `--dry-run` composes with all modes and performs no reposito
 | Synchronization | Allowlist, mode, optional module, current manifest, upstream Git repositories | Atomically replaced module directories plus deterministic `sources/manifest.json` |
 | Generation | Valid committed `sources/` tree and manifest | Versioned in-memory or ignored generated catalogs; no snapshot mutation |
 | Build | `SITE_URL` absolute `http:`/`https:` URL; normalized absolute `BASE_PATH` | Static `dist/` whose internal routes and assets include the configured base |
+| Local server | The same site/base inputs and an Astro foreground sentinel | A foreground process owned and terminated by the invoking terminal or Playwright worker |
 
 `BASE_PATH` defaults to `/`, starts and ends with `/`, and contains no `.` or `..` segment. Normal
 generation and build commands make zero upstream network requests.
@@ -83,12 +86,14 @@ generation and build commands make zero upstream network requests.
 | Unchanged SHA in changed mode | Report skipped; write nothing |
 | Identical full synchronization | Exit zero and leave the worktree byte-identical |
 | Network attempt during generation/build | Test failure; no fallback fetch |
+| Astro server command exits while its server remains alive | Invalid process ownership; restore the foreground sentinel in the package script |
 
 ### 5. Good / Base / Bad Cases
 
 - Good: `SITE_URL=https://docs.example.org BASE_PATH=/products/wtr/docs/ bun run build`
   produces base-aware canonical, asset, search, and content links.
 - Base: `BASE_PATH=/ bun run build` builds from committed snapshots with network disabled.
+- Local: `bun run dev` stays in the foreground even when Astro detects an agent environment.
 - Bad: `BASE_PATH=../../docs bun run build` fails before Astro emits output.
 
 ### 6. Tests Required
@@ -99,6 +104,8 @@ generation and build commands make zero upstream network requests.
 - Offline build tests deny network and assert successful root and nested-base artifacts.
 - Browser and static-link tests assert canonical URLs, Pagefind assets, Markdown resources, and deep
   links under each configured base.
+- A Playwright run with no pre-existing server must start, await, and stop its configured web server
+  without leaving an Astro background process.
 
 ### 7. Wrong vs Correct
 
@@ -108,4 +115,12 @@ const packageUrl = `/packages/${slug}/`;
 
 // Correct: every internal path crosses the shared base-aware helper.
 const packageUrl = sitePath("packages", slug);
+```
+
+```jsonc
+// Wrong: forcing Astro onto Bun's runtime breaks esbuild IPC in supported environments.
+{ "build": "bun run --bun astro build" }
+
+// Correct: Bun owns script/package resolution and Astro uses its declared runtime.
+{ "build": "astro build", "dev": "ASTRO_DEV_BACKGROUND=0 astro dev" }
 ```

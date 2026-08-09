@@ -1,0 +1,64 @@
+---
+title: Package catalog
+description: STM32 driver packages maintained by the HITSZ Wentian Robotics Team.
+sidebar:
+  order: 1
+---
+
+The package catalog tracks reusable STM32 + HAL drivers maintained by the HITSZ Wentian Robotics
+Team. Each synchronized release records its upstream revision, package manifest, manual, dependency
+relationships, license, and C/C++ API status.
+
+## Modules
+
+<div class="table-scroll" tabIndex="0" role="region" aria-labelledby="modules">
+  <table>
+    <caption class="sr-only">Package modules and snapshot status</caption>
+    <thead>
+      <tr>
+        <th scope="col">Module</th>
+        <th scope="col">Scope</th>
+        <th scope="col">Snapshot</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>BasicComponents</td>
+        <td>Shared firmware primitives</td>
+        <td>Pending initial synchronization</td>
+      </tr>
+      <tr>
+        <td>MotorDrivers</td>
+        <td>Unified motor interfaces and implementations</td>
+        <td>Pending initial synchronization</td>
+      </tr>
+      <tr>
+        <td>Sensors</td>
+        <td>Sensor drivers and data interfaces</td>
+        <td>Pending initial synchronization</td>
+      </tr>
+      <tr>
+        <td>TrajectoryControl</td>
+        <td>Velocity-profile trajectory controllers</td>
+        <td>Pending initial synchronization</td>
+      </tr>
+      <tr>
+        <td>ChassisController</td>
+        <td>Chassis control packages</td>
+        <td>Pending initial synchronization</td>
+      </tr>
+      <tr>
+        <td>ArmController</td>
+        <td>Robotic arm control packages</td>
+        <td>Pending initial synchronization</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Package guarantees
+
+- Package pages are generated from committed, revision-pinned snapshots.
+- Install names and dependencies come directly from validated `cpkg.toml` manifests.
+- Manuals preserve upstream language and link to source files at the synchronized commit.
+- API pages report Doxygen coverage explicitly, including empty or undocumented packages.

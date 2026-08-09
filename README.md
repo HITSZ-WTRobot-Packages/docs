@@ -19,20 +19,20 @@ contact upstream repositories. Network access is isolated to an explicit synchro
 
 ## Repository Layout
 
-| Path | Purpose |
-| --- | --- |
-| `src/` | Astro pages, components, build-time loaders, and shared TypeScript contracts |
-| `scripts/` | Bun CLIs for synchronization, generation, and validation |
-| `sources/` | Tracked upstream snapshots and their manifest |
-| `tests/` | Unit, integration, browser, accessibility, and fixture coverage |
-| `public/` | Static assets owned by this repository |
-| `docs/` | Operational and deployment documentation |
-| `.trellis/spec/` | Executable conventions for contributors and agents |
+| Path             | Purpose                                                                      |
+| ---------------- | ---------------------------------------------------------------------------- |
+| `src/`           | Astro pages, components, build-time loaders, and shared TypeScript contracts |
+| `scripts/`       | Bun CLIs for synchronization, generation, and validation                     |
+| `sources/`       | Tracked upstream snapshots and their manifest                                |
+| `tests/`         | Unit, integration, browser, accessibility, and fixture coverage              |
+| `public/`        | Static assets owned by this repository                                       |
+| `docs/`          | Operational and deployment documentation                                     |
+| `.trellis/spec/` | Executable conventions for contributors and agents                           |
 
 ## Command Contract
 
-The application scaffold will provide these Bun commands. CI and contributor documentation must
-call the same commands rather than duplicate their logic in shell scripts.
+The application scaffold will provide these Bun commands. CI and contributor documentation must call
+the same commands rather than duplicate their logic in shell scripts.
 
 ```text
 bun install --frozen-lockfile

@@ -1,0 +1,13 @@
+.agents/
+.astro/
+.cache/
+.codex/
+.doxygen/
+.trellis/
+coverage/
+dist/
+node_modules/
+playwright-report/
+sources/
+test-results/
+bun.lock

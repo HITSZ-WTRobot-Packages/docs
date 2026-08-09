@@ -1,4 +1,5 @@
 <!-- TRELLIS:START -->
+
 # Trellis Instructions
 
 These instructions are for AI assistants working in this project.
@@ -6,17 +7,21 @@ These instructions are for AI assistants working in this project.
 This project is managed by Trellis. The working knowledge you need lives under `.trellis/`:
 
 - `.trellis/workflow.md` — development phases, when to create tasks, skill routing
-- `.trellis/spec/` — package- and layer-scoped coding guidelines (read before writing code in a given layer)
+- `.trellis/spec/` — package- and layer-scoped coding guidelines (read before writing code in a
+  given layer)
 - `.trellis/workspace/` — per-developer journals and session traces
 - `.trellis/tasks/` — active and archived tasks (PRDs, research, jsonl context)
 
-If a Trellis command is available on your platform (e.g. `/trellis:finish-work`, `/trellis:continue`), prefer it over manual steps. Not every platform exposes every command.
+If a Trellis command is available on your platform (e.g. `/trellis:finish-work`,
+`/trellis:continue`), prefer it over manual steps. Not every platform exposes every command.
 
 If you're using Codex or another agent-capable tool, additional project-scoped helpers may live in:
+
 - `.agents/skills/` — reusable Trellis skills
 - `.codex/agents/` — optional custom subagents
 
-Managed by Trellis. Edits outside this block are preserved; edits inside may be overwritten by a future `trellis update`.
+Managed by Trellis. Edits outside this block are preserved; edits inside may be overwritten by a
+future `trellis update`.
 
 <!-- TRELLIS:END -->
 
@@ -26,6 +31,12 @@ Managed by Trellis. Edits outside this block are preserved; edits inside may be 
 
 - Use Bun for every JavaScript/TypeScript command and dependency change. The only allowed lockfile
   is `bun.lock`; never use npm, pnpm, or Yarn commands.
+- Invoke third-party CLIs through `bun run <script>`, but do not force Astro, esbuild, ESLint, or
+  Playwright onto Bun's runtime with `--bun`; respect their declared shebang/runtime while Bun
+  remains the package manager and command entry point.
+- Keep `ASTRO_DEV_BACKGROUND=0` and `ASTRO_PREVIEW_BACKGROUND=0` in the package scripts. Astro 7
+  otherwise auto-backgrounds servers in detected agent environments, breaking process ownership in
+  Playwright and CI.
 - When Python is required, use uv without relocating its project `.venv` or global cache.
 - Use Astro with Starlight in static-output mode. `SITE_URL` and `BASE_PATH` are the only supported
   deployment address inputs; route and asset code must go through the shared URL helper.
