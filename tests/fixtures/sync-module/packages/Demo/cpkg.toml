@@ -1,0 +1,6 @@
+[package]
+name = "Demo"
+pkgname = "Demo"
+version = "1.0.0"
+
+[dependencies]

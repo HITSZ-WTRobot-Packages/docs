@@ -20,14 +20,13 @@ tracked documentation snapshots.
 
 ## Acceptance Criteria
 
-- [ ] Full and one-module syncs produce valid snapshots.
-- [ ] Changed-only mode skips unchanged SHA values.
-- [ ] Dry-run never writes repository files.
-- [ ] Failed syncs leave prior snapshots intact.
-- [ ] Repeating a sync against unchanged upstream state leaves Git clean.
-- [ ] Snapshot size or licensing concerns that alter the design trigger the architecture issue gate.
+- [x] Full and one-module syncs produce valid snapshots.
+- [x] Changed-only mode skips unchanged SHA values.
+- [x] Dry-run never writes repository files.
+- [x] Failed syncs leave prior snapshots intact.
+- [x] Repeating a sync against unchanged upstream state leaves Git clean.
+- [x] Snapshot size or licensing concerns that alter the design trigger the architecture issue gate.
 
 ## Dependencies
 
 Requires the application/tooling scaffold and selected parsing/Git libraries.
-

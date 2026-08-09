@@ -51,6 +51,32 @@ Use `SITE_URL=https://example.invalid` and `BASE_PATH=/` for a root build. `BASE
 nested path such as `/products/wtr/docs/`; code must not contain a repository-specific deployment
 prefix.
 
+## Source Synchronization
+
+`bun run sync` is the repository's only network-aware command. It shallow-clones the six allowlisted
+module repositories into operating-system temporary storage, resolves each branch to a full commit
+SHA, and validates the complete candidate before changing tracked files.
+
+```text
+bun run sync                         # refresh every allowlisted module
+bun run sync --module MotorDrivers   # refresh one module
+bun run sync --changed               # skip modules at an intact, unchanged SHA
+bun run sync --changed --dry-run     # validate and report without writing sources/
+```
+
+The synchronized closure contains available `cpkg.toml`, README and transitively referenced
+Markdown/assets, C/C++ Doxygen inputs, and license files. Local Markdown references must remain
+inside their module; symlinks, missing targets, unsafe paths, and configured size-limit violations
+fail the operation. Missing package manifests, README content, or licenses are retained as explicit
+upstream-quality warnings so source-only modules still have reproducible snapshots.
+
+Each successful snapshot is stored under `sources/modules/<module>/`. `sources/manifest.json` has
+`formatVersion: 1` and records the module repository, branch, full and abbreviated SHAs, aggregate
+byte count, warnings, license paths, and every selected file's path, kind, byte count, and SHA-256.
+All arrays use stable ordering and the manifest contains no timestamp, so an identical rerun leaves
+the worktree byte-for-byte unchanged. A dry-run or failed validation preserves the last complete
+snapshot.
+
 ## Architecture Issues
 
 If snapshot size, licensing, cross-root references, unavailable Doxygen tooling, GitHub Actions

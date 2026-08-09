@@ -8,6 +8,6 @@ coverage/
 dist/
 node_modules/
 playwright-report/
-sources/
+/sources/
 test-results/
 bun.lock

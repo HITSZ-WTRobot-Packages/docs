@@ -11,10 +11,16 @@ catalogs are derived during the build and are never a competing source of truth.
 - Discover packages by scanning snapshot `cpkg.toml` files, not a maintained index.
 - Validate `sources/manifest.json` and each `cpkg.toml` at its read boundary.
 - Record repository URL, branch, full SHA, selected file path, byte size, and SHA-256 checksum.
+- Manifest format version 1 requires `shortSha` to equal the first 12 characters of `sha`,
+  `totalBytes` to equal the sum of file byte counts, unique module IDs and file paths, and a complete
+  one-to-one license-file index.
 - Sort object keys and arrays with an explicit stable comparator before serialization.
 - Normalize line endings and finish text files with one newline where source fidelity permits.
 - Treat snapshot paths as POSIX-style relative paths and reject absolute paths, `..` escapes,
   symlinks, and entries outside the module root.
+- A configured module may legitimately contain no package manifest or README. Preserve its selected
+  source files and record `PACKAGE_MANIFEST_MISSING`, `README_MISSING`, or `LICENSE_MISSING` warnings
+  instead of dropping the module or aborting unrelated synchronization.
 
 ## Atomic Replacement
 
