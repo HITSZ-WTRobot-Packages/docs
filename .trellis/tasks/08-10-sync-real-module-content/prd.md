@@ -16,12 +16,11 @@ snapshot as production documentation input.
 
 ## Acceptance Criteria
 
-- [ ] All six configured modules have committed snapshots.
-- [ ] The snapshot contains enough local input for cpkg, README, and Doxygen generation.
-- [ ] A second unchanged sync leaves the worktree clean.
-- [ ] No temporary clone, `.git`, build output, `.venv`, or credential is committed.
+- [x] All six configured modules have committed snapshots.
+- [x] The snapshot contains enough local input for cpkg, README, and Doxygen generation.
+- [x] A second unchanged sync leaves the worktree clean.
+- [x] No temporary clone, `.git`, build output, `.venv`, or credential is committed.
 
 ## Dependencies
 
 Requires a fully tested source synchronizer.
-
