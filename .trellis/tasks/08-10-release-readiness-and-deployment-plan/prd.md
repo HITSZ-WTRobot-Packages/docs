@@ -48,10 +48,10 @@ Requires every preceding child task.
   packages, 43 API references, 95 HTML pages, 93 Pagefind pages, and 229 files.
 - Linkinator passed 102 internal targets for every address variant while 2,741 repeated external
   links were deliberately skipped without requests.
-- Root and deep nested variants each passed 12 Playwright scenarios across desktop and mobile,
-  including Pagefind, graph canvas pixels, 404, screenshots, axe, responsive layout, and an explicit
-  Chinese upstream README check. Successful screenshots were manually inspected for blank output,
-  overlap, overflow, and graph/text clipping. Both browser matrices used
+- Root, `/docs/`, and deep nested variants each passed 12 Playwright scenarios across desktop and
+  mobile, including Pagefind, graph canvas pixels, 404, screenshots, axe, responsive layout, and an
+  explicit Chinese upstream README check. Successful screenshots were manually inspected for blank
+  output, overlap, overflow, and graph/text clipping. All three browser matrices used
   `PLAYWRIGHT_REUSE_ARTIFACT=1`; their logs started preview without a second build.
 - `docs/deployment.md` selects the default GitHub Pages project-site address, defines the custom
   domain transition, minimum permissions, protected environment, exact-byte artifact handoff,
