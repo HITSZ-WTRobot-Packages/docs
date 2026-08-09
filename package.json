@@ -23,7 +23,11 @@
     "generate:catalog": "bun run scripts/generate/catalog-cli.ts",
     "generate:readme": "bun run scripts/generate/readme-cli.ts",
     "generate:api": "bun run scripts/generate/api-cli.ts",
+    "generate": "bun run generate:catalog && bun run generate:readme && bun run generate:api",
+    "sync:action": "bun run scripts/sync/action-sync-cli.ts",
     "check:conventions": "bun run scripts/validation/check-conventions.ts",
+    "check:artifacts": "bun run scripts/validation/check-artifacts.ts",
+    "check:links": "bun run scripts/validation/check-links.ts",
     "check": "bun run check:conventions && bun run format:check && bun run lint && bun run typecheck && bun run test"
   },
   "dependencies": {
@@ -63,9 +67,11 @@
     "eslint": "^9.39.5",
     "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
+    "linkinator": "^8.0.3",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "6.0.3",
-    "typescript-eslint": "^8.66.0"
+    "typescript-eslint": "^8.66.0",
+    "yaml": "^2.9.0"
   }
 }

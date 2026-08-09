@@ -3,6 +3,10 @@
 ## Layout
 
 ```text
+.github/
+  actions/              # Local pinned toolchain setup shared by workflows
+  workflows/            # Read-only validation and explicit snapshot synchronization
+docs/                   # Contributor operations and future deployment plans
 scripts/
   sync/                 # The only network-aware subsystem
   generate/             # Snapshot-only catalog, README, and Doxygen generators
@@ -30,6 +34,8 @@ sources/                # Committed upstream snapshots; never hand-edit
   import the shared type instead of redefining a similar shape.
 - Intermediate output goes under ignored `.cache/` or `.doxygen/`. Only upstream inputs belong in
   `sources/`; final static output belongs in ignored `dist/`.
+- Workflow YAML only orchestrates repository commands. Event validation, synchronization behavior,
+  artifact inspection, and link checking remain testable scripts rather than embedded shell logic.
 - Tests mirror domain ownership and use `tests/fixtures/` for external formats.
 
 ## Naming

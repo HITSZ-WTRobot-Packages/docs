@@ -1,0 +1,83 @@
+name: Validation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validation-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Offline quality gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.3.0
+        with:
+          persist-credentials: false
+
+      - name: Set up documentation toolchain
+        uses: ./.github/actions/setup-docs-toolchain
+
+      - name: Check source and tests
+        run: bun run check
+
+      - name: Verify offline generators
+        run: bun run generate
+
+  site:
+    name: Site (${{ matrix.name }})
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: root
+            site_url: https://docs-root.example.invalid
+            base_path: /
+            browser: true
+          - name: docs
+            site_url: https://docs-subpath.example.invalid
+            base_path: /docs/
+            browser: false
+          - name: product
+            site_url: https://docs-product.example.invalid
+            base_path: /products/wtr/docs/
+            browser: true
+    env:
+      SITE_URL: ${{ matrix.site_url }}
+      BASE_PATH: ${{ matrix.base_path }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.3.0
+        with:
+          persist-credentials: false
+
+      - name: Set up documentation toolchain
+        uses: ./.github/actions/setup-docs-toolchain
+        with:
+          playwright: ${{ matrix.browser }}
+
+      - name: Build static site
+        run: bun run build
+
+      - name: Check static artifacts
+        run: bun run check:artifacts
+
+      - name: Check links and fragments
+        run: bun run check:links
+
+      - name: Run browser and accessibility checks
+        if: ${{ matrix.browser }}
+        run: bun run test:e2e

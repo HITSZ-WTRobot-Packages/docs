@@ -1,1 +1,5 @@
-{"_example": "Fill with {\"file\": \"<path>\", \"reason\": \"<why>\"}. Put spec/research files only — no code paths. Run `python3 .trellis/scripts/get_context.py --mode packages` to list available specs. Delete this line once real entries are added."}
+{"file":".trellis/spec/backend/quality-guidelines.md","reason":"Offline CI, explicit sync, least-privilege permissions, tool pinning, validation, and no-op commit contracts."}
+{"file":".trellis/spec/backend/directory-structure.md","reason":"Thin workflow orchestration and ownership of sync/validation logic in testable scripts."}
+{"file":".trellis/spec/backend/error-handling.md","reason":"Fail-fast event validation, preserved snapshots, bounded cleanup, and safe diagnostics."}
+{"file":".trellis/spec/frontend/quality-guidelines.md","reason":"Root/nested artifact, Linkinator, Pagefind, Playwright, and accessibility coverage."}
+{"file":".trellis/tasks/08-10-add-sync-and-validation-actions/research/actions-decisions.md","reason":"Verified Action pins, Doxygen checksum, workflow security model, and selected Linkinator behavior."}

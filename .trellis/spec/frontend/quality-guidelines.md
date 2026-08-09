@@ -12,6 +12,8 @@
   serious or critical violations.
 - Linkinator checks recursive clean URLs, fragments, and CSS references in each built base-path
   variant; external bot-protection skips are reported separately.
+- Artifact validation requires the generated 404, robots, sitemap, Pagefind entry point, favicon,
+  quality/search routes, per-page canonical URLs, and no duplicated deployment prefix.
 - Screenshot and layout assertions check for blank views, overlap, clipping, unexpected horizontal
   scrolling, and unstable fixed-format controls.
 - Manually inspect canvas screenshots after graph style/layout changes. Browser `scrollWidth`

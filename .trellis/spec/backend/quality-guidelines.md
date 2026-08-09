@@ -52,6 +52,17 @@
   HTML/LaTeX output, source ownership uniqueness, pinned revisions, and deterministic serialization.
 - The quality gate runs convention, format, lint, typecheck, unit, integration, generation, build,
   static-link, search, browser, screenshot, responsive, accessibility, and artifact checks.
+- Ordinary Actions use committed snapshots, `contents: read`, frozen Bun installs, and no sync
+  command. Root, `/docs/`, and `/products/wtr/docs/` builds run artifact and Linkinator checks;
+  root and product variants also run Playwright/axe.
+- Snapshot synchronization is limited to `workflow_dispatch` and the named `repository_dispatch`
+  type, uses serialized concurrency, and grants `contents: write` only there. Structured event
+  parsing must validate mode, module, dry-run, and commit before invoking the local sync CLI.
+- External Actions use immutable full commit SHAs. Downloaded Doxygen binaries must match both
+  `.doxygen-version` and the release asset SHA-256 before entering `PATH`.
+- A snapshot commit stages only `sources/`, uses a bot identity, runs only after the complete offline
+  gate succeeds, and is skipped when no source status exists. Change detection must include tracked
+  edits, deletions, and untracked additions. The sync workflow has no push trigger.
 
 ## Review Checklist
 

@@ -31,8 +31,8 @@ contact upstream repositories. Network access is isolated to an explicit synchro
 
 ## Command Contract
 
-The application scaffold will provide these Bun commands. CI and contributor documentation must call
-the same commands rather than duplicate their logic in shell scripts.
+The repository provides these Bun commands. CI and contributor documentation call the same commands
+rather than duplicate their logic in workflow shell.
 
 ```text
 bun install --frozen-lockfile
@@ -46,6 +46,8 @@ bun run lint
 bun run typecheck
 bun run test
 bun run test:e2e
+bun run check:artifacts
+bun run check:links
 bun run check
 bun run build
 ```
@@ -143,6 +145,16 @@ Pagefind is emitted by the production build, so verify search with `bun run buil
 retry command because it has no generated Pagefind index. Search query and filter state is encoded
 in the URL. All portal links, Pagefind assets, and graph links are derived from `BASE_PATH` and are
 covered at root and nested deployment prefixes by Playwright.
+
+## Automation
+
+`.github/workflows/validation.yml` runs the offline quality gate and static-site matrix from the
+committed snapshot. `.github/workflows/sync-snapshots.yml` is the only network-aware workflow: it is
+explicitly triggered, validates its event payload, calls the same `bun run sync` CLI used locally,
+and commits only `sources/` when requested and changed. Neither workflow deploys the site.
+
+See [docs/automation.md](docs/automation.md) for workflow inputs, repository-dispatch payloads,
+permissions, no-op behavior, pinned tooling, and failure semantics.
 
 ## Architecture Issues
 

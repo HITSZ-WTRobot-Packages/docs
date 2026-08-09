@@ -55,6 +55,8 @@ future `trellis update`.
 - Use Starlight's Pagefind integration for search, Cytoscape.js for dependency graph traversal and
   layout, Linkinator for static links, Playwright plus axe for browser/accessibility checks, and
   Astro Icon with the Lucide Iconify set for UI icons.
+- Keep GitHub Actions dependencies pinned to full commit SHAs. The local setup Action owns Bun,
+  frozen dependency installation, the exact Doxygen binary/checksum, and optional Chromium setup.
 
 ## Data And Network Boundaries
 
@@ -65,6 +67,9 @@ future `trellis update`.
   repository-owned code or documentation.
 - Only the synchronization CLI and its manually triggered GitHub Action may access upstream
   repositories. Never modify or push to an upstream module repository.
+- Validation CI has read-only contents permission and never invokes synchronization. Snapshot sync
+  has no push trigger, parses dispatch data through `sync:action`, stages only `sources/`, and may
+  push only after the complete offline validation path succeeds.
 - Parse TOML, Markdown, XML, schemas, Git output, search indexes, and dependency layouts with the
   selected maintained libraries. Do not add an ad hoc parser or layout algorithm.
 - Validate external input at the boundary before converting it into internal catalog types.
@@ -79,6 +84,8 @@ future `trellis update`.
   configured icon library instead of hand-authored UI SVGs.
 - Keep build artifacts, temporary clones, Git metadata, `.venv`, credentials, and unapproved source
   files out of `sources/` and the deployment artifact.
+- Run `bun run check:artifacts` and `bun run check:links` against every built site/base variant.
+  Workflow changes must also pass `tests/unit/workflows.test.ts`; use actionlint when available.
 
 ## Architecture Gate
 
