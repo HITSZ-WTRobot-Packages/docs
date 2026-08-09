@@ -22,6 +22,7 @@
     "sync": "bun run scripts/sync/sync-cli.ts",
     "generate:catalog": "bun run scripts/generate/catalog-cli.ts",
     "generate:readme": "bun run scripts/generate/readme-cli.ts",
+    "generate:api": "bun run scripts/generate/api-cli.ts",
     "check:conventions": "bun run scripts/validation/check-conventions.ts",
     "check": "bun run check:conventions && bun run format:check && bun run lint && bun run typecheck && bun run test"
   },
@@ -29,6 +30,9 @@
     "@astrojs/starlight": "^0.41.7",
     "astro": "^7.2.0",
     "commander": "^15.0.0",
+    "execa": "^10.0.1",
+    "fast-xml-parser": "^5.10.1",
+    "fast-xml-validator": "^1.4.1",
     "github-slugger": "^2.0.0",
     "mrmime": "^2.0.1",
     "rehype-parse": "^9.0.1",

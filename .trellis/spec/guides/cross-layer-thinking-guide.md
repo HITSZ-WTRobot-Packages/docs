@@ -175,3 +175,14 @@ Checklist when a CLI-tested loader becomes part of an Astro route:
 - [ ] Exercise the loader through `astro build`, not only through `bun test` or a Bun CLI.
 - [ ] Run both root and nested-base builds when the loader also creates routes or asset URLs.
 - [ ] Keep runtime-specific conveniences in the owning `scripts/` or test boundary.
+
+## External Process Configuration Boundary
+
+Passing a configuration string through a process wrapper's stdin can behave differently across the
+package-manager runtime, Node, and the child executable. For Doxygen, write the generated config to
+the ignored operating-system temporary directory and pass that exact file path through Execa.
+
+- [ ] Assert the child reads only the declared input files, not its working directory defaults.
+- [ ] Assert repository-root HTML/LaTeX directories are not created.
+- [ ] Keep the temporary config and generated XML under one `try`/`finally` cleanup root.
+- [ ] Pass argument arrays, exact tool versions, and bounded timeouts; never interpolate shell text.

@@ -1,0 +1,5 @@
+format_version = 1
+name = "HeaderOnly"
+pkgname = "Fixture::HeaderOnly"
+version = "3.0.0"
+dependencies = []

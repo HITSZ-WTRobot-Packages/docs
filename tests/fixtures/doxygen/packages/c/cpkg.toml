@@ -1,0 +1,5 @@
+format_version = 1
+name = "CExample"
+pkgname = "Fixture::CExample"
+version = "1.0.0"
+dependencies = []

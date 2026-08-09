@@ -1,0 +1,5 @@
+format_version = 1
+name = "Sparse"
+pkgname = "Fixture::Sparse"
+version = "5.0.0"
+dependencies = []

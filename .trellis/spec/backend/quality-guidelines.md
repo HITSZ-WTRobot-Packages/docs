@@ -4,7 +4,8 @@
 
 - Bun is the only JavaScript runtime and package manager; commit only `bun.lock`.
 - External formats are parsed with the selected maintained libraries and validated with Zod:
-  smol-toml for TOML, unified/remark/rehype for Markdown and HTML, and fast-xml-parser for XML.
+  smol-toml for TOML, unified/remark/rehype for Markdown and HTML, and fast-xml-validator plus
+  fast-xml-parser for XML.
 - Git operations use simple-git, Doxygen and other bounded processes use Execa, CLI options use
   Commander, and filesystem discovery uses tinyglobby.
 - Normal builds, generation, and validation are offline and consume only committed snapshots.
@@ -15,6 +16,14 @@
   rehype-raw, rewrites references in HAST, assigns GitHub-compatible heading slugs, sanitizes, then
   serializes. Reordering or bypassing this pipeline requires security and link fixture updates.
 - All generated ordering is explicit and covered by repeat-run tests.
+- Doxygen must match `.doxygen-version`. Each target receives a temporary Doxyfile containing only
+  checksum-verified owned inputs; HTML, source browsing, compilation, recursive input discovery,
+  and normal-build network access remain disabled.
+- A source belongs to the deepest package directory containing it. Every catalog package receives
+  an API reference, and source files outside all package roots receive a module-level reference.
+- Doxygen target failures become explicit `failed` references. No inputs, no public symbols, and
+  missing descriptions become `empty` or `sparse` quality states. Missing/mismatched tooling and
+  invalid snapshot bytes fail the complete generation before target isolation.
 
 ## Forbidden Patterns
 
@@ -39,6 +48,8 @@
 - Documentation fixtures cover cross-page headings, root/nested-base images and attachments, raw
   HTML sanitization, missing-README fallbacks, missing targets, and root escapes.
 - Doxygen fixtures cover C, C++, header-only, compiled, empty, and sparsely documented packages.
+- Doxygen integration checks assert exact version gating, target failure isolation, no repository
+  HTML/LaTeX output, source ownership uniqueness, pinned revisions, and deterministic serialization.
 - The quality gate runs convention, format, lint, typecheck, unit, integration, generation, build,
   static-link, search, browser, screenshot, responsive, accessibility, and artifact checks.
 

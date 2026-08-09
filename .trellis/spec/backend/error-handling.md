@@ -28,6 +28,8 @@ free-form error message to determine behavior.
 - A synchronization failure preserves the last successful snapshot and removes temporary state.
 - Doxygen failure is isolated per package and becomes a recorded API quality state unless the
   executable itself is unavailable or non-reproducible; that case triggers `issues.md`.
+- Doxygen input checksum failures are repository-data failures and remain global. Only failures
+  after a target's verified input set is established are converted to target-level quality states.
 - Missing package README content produces a catalog-derived fallback, not a hidden package.
 - Broken, unsafe, or escaping local references fail generation with the source path and target.
 - Do not catch an error unless adding context, converting it to a diagnostic, or providing a

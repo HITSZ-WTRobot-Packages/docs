@@ -40,6 +40,7 @@ bun run dev
 bun run sync [--module <name> | --changed] [--dry-run]
 bun run generate:catalog
 bun run generate:readme
+bun run generate:api
 bun run generate
 bun run lint
 bun run typecheck
@@ -103,6 +104,21 @@ index. Page and resource routes use the shared base-path helper, while upstream 
 pinned to the full module SHA. GFM and raw HTML pass through the unified/remark/rehype pipeline and
 an explicit sanitization schema. Missing, checksum-mismatched, or escaping local references fail
 generation with source context rather than producing a broken page.
+
+## Doxygen API Reference
+
+`bun run generate:api` verifies every synchronized C/C++ file, checks the installed Doxygen version
+against `.doxygen-version`, and generates XML in operating-system temporary storage. Doxygen is
+invoked once per package with an explicit temporary Doxyfile; files nested below multiple package
+paths belong to the deepest package, while unclaimed module sources receive a module-level
+reference. Generation does not compile firmware, emit Doxygen HTML, or create a source browser.
+
+The XML pipeline validates syntax with `fast-xml-validator`, parses with `fast-xml-parser`, and
+normalizes files, namespaces, classes and structs, functions, enums, typedefs, variables, defines,
+descriptions, locations, pinned source links, and symbol relationships into a versioned TypeScript
+catalog. Missing inputs and symbols are explicit empty states, missing comments are a sparse quality
+state, and a target-level extraction error does not suppress other packages. A missing or mismatched
+Doxygen executable is a global reproducibility error and must be resolved before generation.
 
 ## Architecture Issues
 

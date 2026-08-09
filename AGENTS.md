@@ -34,8 +34,9 @@ future `trellis update`.
 - Invoke third-party CLIs through `bun run <script>`, but do not force Astro, esbuild, ESLint, or
   Playwright onto Bun's runtime with `--bun`; respect their declared shebang/runtime while Bun
   remains the package manager and command entry point.
-- Use `bun run generate:catalog` and `bun run generate:readme` for the offline catalog and Markdown
-  checks. They must discover inputs from the committed snapshot rather than maintained indexes.
+- Use `bun run generate:catalog`, `bun run generate:readme`, and `bun run generate:api` for the
+  offline catalog, Markdown, and Doxygen checks. They must discover inputs from the committed
+  snapshot rather than maintained indexes.
 - Code under `src/` runs in Astro's declared Node runtime during build and must use portable Web or
   `node:` APIs, never Bun-only globals. Bun-specific APIs are limited to Bun-owned scripts/tests.
 - Keep `ASTRO_DEV_BACKGROUND=0` and `ASTRO_PREVIEW_BACKGROUND=0` in the package scripts. Astro 7
@@ -44,11 +45,13 @@ future `trellis update`.
 - When Python is required, use uv without relocating its project `.venv` or global cache.
 - Use Astro with Starlight in static-output mode. `SITE_URL` and `BASE_PATH` are the only supported
   deployment address inputs; route and asset code must go through the shared URL helper.
-- Use Doxygen only as a build-time producer of XML. The site consumes normalized TypeScript data,
-  not Doxygen HTML.
+- Use the exact Doxygen version in `.doxygen-version` only as a build-time producer of XML. Pass a
+  temporary Doxyfile path through Execa; the site consumes normalized TypeScript data, not Doxygen
+  HTML or source-browser output.
 - Use Zod for runtime schemas, smol-toml for `cpkg.toml`, unified/remark/rehype for Markdown and
-  sanitized HTML, fast-xml-parser for Doxygen XML, simple-git for Git operations, Execa for bounded
-  external processes, Commander for CLI arguments, and tinyglobby for input discovery.
+  sanitized HTML, fast-xml-parser plus fast-xml-validator for Doxygen XML, simple-git for Git
+  operations, Execa for bounded external processes, Commander for CLI arguments, and tinyglobby for
+  input discovery.
 - Use Starlight's Pagefind integration for search, Cytoscape.js for dependency graph traversal and
   layout, Linkinator for static links, Playwright plus axe for browser/accessibility checks, and
   Astro Icon with the Lucide Iconify set for UI icons.
