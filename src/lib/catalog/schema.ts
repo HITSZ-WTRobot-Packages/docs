@@ -63,6 +63,8 @@ export const ReverseDependencySchema = z
   })
   .strict();
 
+export type ReverseDependency = z.infer<typeof ReverseDependencySchema>;
+
 export const CatalogPackageSchema = z
   .object({
     name: z.string().regex(packageSegment),
@@ -97,6 +99,8 @@ export const CatalogModuleSchema = z
     warnings: z.array(SnapshotWarningSchema),
   })
   .strict();
+
+export type CatalogModule = z.infer<typeof CatalogModuleSchema>;
 
 export const PackageCatalogSchema = z
   .object({

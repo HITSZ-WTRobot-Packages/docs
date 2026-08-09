@@ -1,0 +1,180 @@
+---
+import { Icon } from "astro-icon/components";
+
+import DocumentationContent from "../../components/documentation/DocumentationContent.astro";
+import Breadcrumbs from "../../components/portal/Breadcrumbs.astro";
+import PagefindMetadata from "../../components/portal/PagefindMetadata.astro";
+import PortalPage from "../../components/portal/PortalPage.astro";
+import StatusBadge from "../../components/portal/StatusBadge.astro";
+import type { CatalogModule, CatalogPackage } from "../../lib/catalog/schema";
+import type { ApiReference } from "../../lib/doxygen/schema";
+import type { DocumentationPage } from "../../lib/markdown/documentation-schema";
+import { sitePath } from "../../lib/paths/site-config";
+import { buildPortalSidebar } from "../../lib/site/navigation";
+import { loadPortalData } from "../../lib/site/portal-data";
+import { apiStatusLabel, apiStatusTone } from "../../lib/site/view-models";
+
+interface Props {
+  module: CatalogModule;
+  packages: CatalogPackage[];
+  documentation: DocumentationPage;
+  api: ApiReference | null;
+}
+
+export async function getStaticPaths() {
+  const data = await loadPortalData();
+  return data.catalog.modules.map((module) => {
+    const documentation = data.documentation.pages.find(
+      (page) => page.kind === "module" && page.moduleId === module.id,
+    );
+    if (!documentation) throw new Error(`Missing module documentation: ${module.id}`);
+    return {
+      params: { module: module.slug },
+      props: {
+        module,
+        packages: data.catalog.packages.filter((entry) => entry.moduleId === module.id),
+        documentation,
+        api:
+          data.api.references.find(
+            (reference) => reference.targetKind === "module" && reference.moduleId === module.id,
+          ) ?? null,
+      },
+    };
+  });
+}
+
+const { module, packages, documentation, api } = Astro.props;
+const data = await loadPortalData();
+const sidebar = buildPortalSidebar(data.catalog);
+---
+
+<PortalPage
+  title={module.displayName}
+  description={`${module.displayName} snapshot ${module.shortSha} and package documentation.`}
+  sidebar={sidebar}
+>
+  <PagefindMetadata module={module.id} resultTypes={["module", "readme"]} />
+  <Breadcrumbs
+    items={[
+      { label: "Catalog", href: sitePath(data.config.basePath) },
+      { label: module.displayName },
+    ]}
+  />
+
+  <section class="wtr-module-summary" aria-label="Module snapshot">
+    <dl class="wtr-metadata-grid">
+      <div><dt>Revision</dt><dd><code>{module.shortSha}</code></dd></div>
+      <div><dt>Branch</dt><dd><code>{module.branch}</code></dd></div>
+      <div><dt>Packages</dt><dd>{packages.length}</dd></div>
+      <div>
+        <dt>Repository</dt><dd>
+          <a href={module.repository} target="_blank" rel="noreferrer"
+            >Upstream <Icon name="lucide:external-link" size="0.9rem" aria-hidden="true" /></a
+          >
+        </dd>
+      </div>
+    </dl>
+    <div class="wtr-heading-actions">
+      {
+        module.warnings.length === 0 ? (
+          <StatusBadge tone="success" label="Snapshot ready" />
+        ) : (
+          <StatusBadge tone="warning" label={`${module.warnings.length} snapshot warnings`} />
+        )
+      }
+      {
+        api && (
+          <a
+            class="wtr-command-link"
+            href={sitePath(data.config.basePath, "modules", module.slug, "api")}
+          >
+            <Icon name="lucide:code-2" size="1rem" aria-hidden="true" /> Module API
+          </a>
+        )
+      }
+    </div>
+  </section>
+
+  {
+    module.warnings.length > 0 && (
+      <ul class="wtr-quality-list">
+        {module.warnings.map((warning) => (
+          <li>
+            <strong>{warning.code}</strong>
+            <span>{warning.message}</span>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  <section aria-labelledby="module-packages-heading">
+    <div class="wtr-section-heading">
+      <div>
+        <p class="wtr-eyebrow">
+          <Icon name="lucide:package" size="1rem" aria-hidden="true" /> Packages
+        </p><h2 id="module-packages-heading">Package index</h2>
+      </div>
+    </div>
+    {
+      packages.length > 0 ? (
+        <div
+          class="table-scroll"
+          tabindex="0"
+          role="region"
+          aria-labelledby="module-packages-heading"
+        >
+          <table class="wtr-catalog-table">
+            <>
+              <caption class="sr-only">Packages in {module.displayName}</caption>
+              <thead>
+                <tr>
+                  <>
+                    <th scope="col">Package</th>
+                    <th scope="col">Version</th>
+                    <th scope="col">Dependencies</th>
+                    <th scope="col">API</th>
+                  </>
+                </tr>
+              </thead>
+              <tbody>
+                {packages.map((entry) => {
+                  const reference = data.api.references.find(
+                    (candidate) => candidate.packageSlug === entry.slug,
+                  );
+                  return (
+                    <tr>
+                      <th scope="row">
+                        <a href={sitePath(data.config.basePath, "packages", entry.slug)}>
+                          {entry.pkgname}
+                        </a>
+                      </th>
+                      <td>
+                        <code>{entry.version}</code>
+                      </td>
+                      <td>{entry.dependencies.length}</td>
+                      <td>
+                        {reference ? (
+                          <StatusBadge
+                            tone={apiStatusTone(reference.status)}
+                            label={apiStatusLabel(reference.status)}
+                          />
+                        ) : (
+                          "Unavailable"
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </>
+          </table>
+        </div>
+      ) : (
+        <p class="wtr-empty-state">This source-only module has no cpkg manifests.</p>
+      )
+    }
+  </section>
+
+  <DocumentationContent page={documentation} />
+</PortalPage>

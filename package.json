@@ -28,8 +28,11 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.7",
+    "@iconify-json/lucide": "^1.2.122",
     "astro": "^7.2.0",
+    "astro-icon": "^1.1.5",
     "commander": "^15.0.0",
+    "cytoscape": "^3.34.0",
     "execa": "^10.0.1",
     "fast-xml-parser": "^5.10.1",
     "fast-xml-validator": "^1.4.1",

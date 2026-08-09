@@ -1,0 +1,127 @@
+---
+import { Icon } from "astro-icon/components";
+
+import Breadcrumbs from "../../components/portal/Breadcrumbs.astro";
+import PagefindMetadata from "../../components/portal/PagefindMetadata.astro";
+import PortalPage from "../../components/portal/PortalPage.astro";
+import StatusBadge from "../../components/portal/StatusBadge.astro";
+import { sitePath } from "../../lib/paths/site-config";
+import { buildPortalSidebar } from "../../lib/site/navigation";
+import { loadPortalData } from "../../lib/site/portal-data";
+import { apiStatusLabel, apiStatusTone } from "../../lib/site/view-models";
+
+const data = await loadPortalData();
+const sidebar = buildPortalSidebar(data.catalog);
+const fallbackPages = data.documentation.pages.filter((page) => page.source.kind === "generated");
+const failedReferences = data.api.references.filter((reference) => reference.status === "failed");
+---
+
+<PortalPage
+  title="Documentation quality"
+  description="Snapshot, manual, and API extraction quality for every package target."
+  sidebar={sidebar}
+>
+  <PagefindMetadata resultTypes={["quality"]} />
+  <Breadcrumbs
+    items={[{ label: "Catalog", href: sitePath(data.config.basePath) }, { label: "Quality" }]}
+  />
+
+  <dl class="wtr-stat-band" aria-label="Quality totals">
+    <div>
+      <dt>Snapshot warnings</dt><dd>
+        {data.catalog.modules.reduce((sum, module) => sum + module.warnings.length, 0)}
+      </dd>
+    </div>
+    <div><dt>README fallbacks</dt><dd>{fallbackPages.length}</dd></div>
+    <div>
+      <dt>Sparse APIs</dt><dd>
+        {data.api.references.filter((reference) => reference.status === "sparse").length}
+      </dd>
+    </div>
+    <div><dt>Failed APIs</dt><dd>{failedReferences.length}</dd></div>
+  </dl>
+
+  <section aria-labelledby="snapshot-quality-heading">
+    <div class="wtr-section-heading">
+      <div>
+        <p class="wtr-eyebrow">
+          <Icon name="lucide:git-branch" size="1rem" aria-hidden="true" /> Snapshots
+        </p><h2 id="snapshot-quality-heading">Module inputs</h2>
+      </div>
+    </div>
+    <div class="wtr-quality-rows">
+      {
+        data.catalog.modules.map((module) => (
+          <article>
+            <div>
+              <>
+                <h3>
+                  <a href={sitePath(data.config.basePath, "modules", module.slug)}>
+                    {module.displayName}
+                  </a>
+                </h3>
+                <code>{module.shortSha}</code>
+              </>
+            </div>
+            {module.warnings.length === 0 ? (
+              <StatusBadge tone="success" label="Ready" />
+            ) : (
+              <StatusBadge tone="warning" label={`${module.warnings.length} warnings`} />
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section aria-labelledby="api-quality-heading">
+    <div class="wtr-section-heading">
+      <div>
+        <p class="wtr-eyebrow">
+          <Icon name="lucide:code-2" size="1rem" aria-hidden="true" /> Doxygen
+        </p><h2 id="api-quality-heading">API targets</h2>
+      </div>
+    </div>
+    <div class="table-scroll" tabindex="0" role="region" aria-labelledby="api-quality-heading">
+      <table class="wtr-catalog-table">
+        <caption class="sr-only">API targets</caption>
+        <thead
+          ><tr
+            ><th scope="col">Target</th><th scope="col">Module</th><th scope="col">Symbols</th><th
+              scope="col">Documented</th
+            ><th scope="col">State</th></tr
+          ></thead
+        ><tbody>
+          {
+            data.api.references.map((reference) => {
+              const module = data.catalog.modules.find((entry) => entry.id === reference.moduleId);
+              const href = reference.packageSlug
+                ? sitePath(data.config.basePath, "packages", reference.packageSlug, "api")
+                : module
+                  ? sitePath(data.config.basePath, "modules", module.slug, "api")
+                  : sitePath(data.config.basePath, "quality");
+              return (
+                <tr>
+                  <>
+                    <th scope="row">
+                      <a href={href}>{reference.displayName}</a>
+                    </th>
+                    <td>{reference.moduleId}</td>
+                    <td>{reference.symbolCount}</td>
+                    <td>{reference.documentedSymbolCount}</td>
+                    <td>
+                      <StatusBadge
+                        tone={apiStatusTone(reference.status)}
+                        label={apiStatusLabel(reference.status)}
+                      />
+                    </td>
+                  </>
+                </tr>
+              );
+            })
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+</PortalPage>

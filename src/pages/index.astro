@@ -1,0 +1,154 @@
+---
+import { Icon } from "astro-icon/components";
+
+import Breadcrumbs from "../components/portal/Breadcrumbs.astro";
+import PagefindMetadata from "../components/portal/PagefindMetadata.astro";
+import PortalPage from "../components/portal/PortalPage.astro";
+import StatusBadge from "../components/portal/StatusBadge.astro";
+import { sitePath } from "../lib/paths/site-config";
+import { buildPortalSidebar } from "../lib/site/navigation";
+import { loadPortalData } from "../lib/site/portal-data";
+import { apiStatusLabel, apiStatusTone } from "../lib/site/view-models";
+
+const data = await loadPortalData();
+const sidebar = buildPortalSidebar(data.catalog);
+const apiByPackage = new Map<string, (typeof data.api.references)[number]>();
+for (const reference of data.api.references) {
+  if (reference.packageSlug) apiByPackage.set(reference.packageSlug, reference);
+}
+const packageCountByModule = new Map<string, number>();
+for (const entry of data.catalog.packages) {
+  packageCountByModule.set(entry.moduleId, (packageCountByModule.get(entry.moduleId) ?? 0) + 1);
+}
+const dependencyCount = data.catalog.packages.reduce(
+  (total, entry) => total + entry.dependencies.length,
+  0,
+);
+---
+
+<PortalPage
+  title="Package catalog"
+  description="Revision-pinned STM32 package manuals, dependency data, and C/C++ API reference."
+  sidebar={sidebar}
+>
+  <PagefindMetadata resultTypes={["catalog"]} />
+  <Breadcrumbs items={[{ label: "Catalog" }]} />
+
+  <section class="wtr-catalog-intro" aria-label="Catalog summary">
+    <p>
+      Reproducible documentation for reusable STM32 packages maintained by HITSZ Wentian Robotics
+      Team.
+    </p>
+    <a class="wtr-primary-command" href={sitePath(data.config.basePath, "search")}>
+      <Icon name="lucide:search" size="1rem" aria-hidden="true" /> Search documentation
+    </a>
+  </section>
+
+  <dl class="wtr-stat-band" aria-label="Catalog totals">
+    <div><dt>Modules</dt><dd>{data.catalog.modules.length}</dd></div>
+    <div><dt>Packages</dt><dd>{data.catalog.packages.length}</dd></div>
+    <div><dt>Dependencies</dt><dd>{dependencyCount}</dd></div>
+    <div>
+      <dt>API symbols</dt><dd>
+        {data.api.references.reduce((sum, item) => sum + item.symbolCount, 0)}
+      </dd>
+    </div>
+  </dl>
+
+  <section aria-labelledby="modules-heading">
+    <div class="wtr-section-heading">
+      <div>
+        <p class="wtr-eyebrow">
+          <Icon name="lucide:boxes" size="1rem" aria-hidden="true" /> Sources
+        </p>
+        <h2 id="modules-heading">Modules</h2>
+      </div>
+    </div>
+    <div class="wtr-module-list">
+      {
+        data.catalog.modules.map((module) => (
+          <article>
+            <div>
+              <h3>
+                <a href={sitePath(data.config.basePath, "modules", module.slug)}>
+                  {module.displayName}
+                </a>
+              </h3>
+              <code>{module.shortSha}</code>
+            </div>
+            <dl>
+              <div>
+                <>
+                  <dt>Packages</dt>
+                  <dd>{packageCountByModule.get(module.id) ?? 0}</dd>
+                </>
+              </div>
+              <div>
+                <>
+                  <dt>Snapshot</dt>
+                  <dd>
+                    {module.warnings.length === 0 ? "Ready" : `${module.warnings.length} warnings`}
+                  </dd>
+                </>
+              </div>
+            </dl>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section aria-labelledby="packages-heading">
+    <div class="wtr-section-heading">
+      <div>
+        <p class="wtr-eyebrow">
+          <Icon name="lucide:package" size="1rem" aria-hidden="true" /> Catalog
+        </p>
+        <h2 id="packages-heading">Packages</h2>
+      </div>
+    </div>
+    <div class="table-scroll" tabindex="0" role="region" aria-labelledby="packages-heading">
+      <table class="wtr-catalog-table">
+        <caption class="sr-only">Packages</caption>
+        <thead
+          ><tr
+            ><th scope="col">Package</th><th scope="col">Module</th><th scope="col">Revision</th><th
+              scope="col">Dependencies</th
+            ><th scope="col">API</th></tr
+          ></thead
+        >
+        <tbody>
+          {
+            data.catalog.packages.map((entry) => {
+              const api = apiByPackage.get(entry.slug);
+              return (
+                <tr>
+                  <th scope="row">
+                    <a href={sitePath(data.config.basePath, "packages", entry.slug)}>
+                      {entry.pkgname}
+                    </a>
+                  </th>
+                  <td>{entry.moduleId}</td>
+                  <td>
+                    <code>{entry.revisionLabel}</code>
+                  </td>
+                  <td>{entry.dependencies.length}</td>
+                  <td>
+                    {api ? (
+                      <StatusBadge
+                        tone={apiStatusTone(api.status)}
+                        label={apiStatusLabel(api.status)}
+                      />
+                    ) : (
+                      "Unavailable"
+                    )}
+                  </td>
+                </tr>
+              );
+            })
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+</PortalPage>

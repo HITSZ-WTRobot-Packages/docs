@@ -1,0 +1,67 @@
+---
+import { Icon } from "astro-icon/components";
+
+import type { CatalogDependency, ReverseDependency } from "../../lib/catalog/schema";
+import { sitePath } from "../../lib/paths/site-config";
+
+interface Props {
+  basePath: string;
+  dependencies: CatalogDependency[];
+  reverseDependencies: ReverseDependency[];
+}
+
+const { basePath, dependencies, reverseDependencies } = Astro.props;
+---
+
+<div class="wtr-dependency-columns">
+  <section aria-labelledby="direct-dependencies">
+    <h2 id="direct-dependencies">Direct dependencies</h2>
+    {
+      dependencies.length > 0 ? (
+        <ul class="wtr-link-list">
+          {dependencies.map((dependency) => (
+            <li>
+              <Icon
+                name={dependency.kind === "internal" ? "lucide:package" : "lucide:external-link"}
+                size="1rem"
+                aria-hidden="true"
+              />
+              {dependency.kind === "internal" ? (
+                <a href={sitePath(basePath, "packages", dependency.slug)}>{dependency.name}</a>
+              ) : (
+                <span>{dependency.name}</span>
+              )}
+              <span
+                class:list={[
+                  "wtr-dependency-kind",
+                  dependency.kind === "external" && "is-external",
+                ]}
+              >
+                {dependency.kind}
+              </span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="wtr-empty-state">No declared dependencies.</p>
+      )
+    }
+  </section>
+  <section aria-labelledby="reverse-dependencies">
+    <h2 id="reverse-dependencies">Used by</h2>
+    {
+      reverseDependencies.length > 0 ? (
+        <ul class="wtr-link-list">
+          {reverseDependencies.map((dependency) => (
+            <li>
+              <Icon name="lucide:git-branch" size="1rem" aria-hidden="true" />
+              <a href={sitePath(basePath, "packages", dependency.slug)}>{dependency.name}</a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="wtr-empty-state">No packages depend on this package.</p>
+      )
+    }
+  </section>
+</div>

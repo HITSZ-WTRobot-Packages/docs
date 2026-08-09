@@ -1,0 +1,22 @@
+---
+import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+
+import type { PortalSidebar } from "../../lib/site/navigation";
+
+interface Props {
+  title: string;
+  description: string;
+  sidebar: PortalSidebar;
+  pagefind?: boolean;
+}
+
+const { title, description, sidebar, pagefind = true } = Astro.props;
+---
+
+<StarlightPage
+  frontmatter={{ title, description, pagefind, editUrl: false, tableOfContents: false }}
+  sidebar={sidebar}
+  hasSidebar={true}
+>
+  <slot />
+</StarlightPage>

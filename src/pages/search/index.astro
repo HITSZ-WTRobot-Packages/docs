@@ -1,0 +1,29 @@
+---
+import Breadcrumbs from "../../components/portal/Breadcrumbs.astro";
+import PortalPage from "../../components/portal/PortalPage.astro";
+import PortalSearch from "../../components/search/PortalSearch.astro";
+import { sitePath } from "../../lib/paths/site-config";
+import { buildPortalSidebar } from "../../lib/site/navigation";
+import { loadPortalData } from "../../lib/site/portal-data";
+import { referenceNamespaces } from "../../lib/site/view-models";
+
+const data = await loadPortalData();
+const sidebar = buildPortalSidebar(data.catalog);
+const namespaces = [...new Set(data.api.references.flatMap(referenceNamespaces))].sort();
+---
+
+<PortalPage
+  title="Search documentation"
+  description="Search package manuals and C/C++ symbols with catalog filters."
+  sidebar={sidebar}
+  pagefind={false}
+>
+  <Breadcrumbs
+    items={[{ label: "Catalog", href: sitePath(data.config.basePath) }, { label: "Search" }]}
+  />
+  <PortalSearch
+    basePath={data.config.basePath}
+    modules={data.catalog.modules.map((module) => module.id)}
+    namespaces={namespaces}
+  />
+</PortalPage>

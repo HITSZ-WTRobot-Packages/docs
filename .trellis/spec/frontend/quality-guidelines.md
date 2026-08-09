@@ -14,6 +14,10 @@
   variant; external bot-protection skips are reported separately.
 - Screenshot and layout assertions check for blank views, overlap, clipping, unexpected horizontal
   scrolling, and unstable fixed-format controls.
+- Manually inspect canvas screenshots after graph style/layout changes. Browser `scrollWidth`
+  assertions and axe cannot detect a Cytoscape label clipped within an otherwise valid canvas.
+- Prefer wrapped API signatures over horizontally scrollable `pre` regions. If scrolling is
+  unavoidable, the region must be keyboard-focusable and have an accessible name.
 
 ## Page Requirements
 
@@ -37,6 +41,8 @@
 
 - Verify the longest module/package names at both mobile and desktop widths.
 - Verify root and nested base builds after any link, asset, search, or routing change.
+- Inspect built HTML for duplicated base segments such as `/docs/docs/`, and click at least one
+  Starlight-owned sidebar link in the nested-base browser suite.
 - Inspect both the hydrated and no-JavaScript page.
 - Confirm focus order, accessible names, contrast, and reduced-motion behavior.
 

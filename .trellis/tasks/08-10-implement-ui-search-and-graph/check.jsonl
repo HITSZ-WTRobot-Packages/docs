@@ -1,1 +1,5 @@
-{"_example": "Fill with {\"file\": \"<path>\", \"reason\": \"<why>\"}. Put spec/research files only — no code paths. Run `python3 .trellis/scripts/get_context.py --mode packages` to list available specs. Delete this line once real entries are added."}
+{"file":".trellis/spec/frontend/quality-guidelines.md","reason":"Required root/nested builds, browser matrix, axe threshold, link behavior, and screenshot review."}
+{"file":".trellis/spec/frontend/component-guidelines.md","reason":"Verify semantic controls, Lucide icons, progressive enhancement, and graph canvas accessibility mirror."}
+{"file":".trellis/spec/frontend/state-management.md","reason":"Verify search and graph state round-trip through URLs and retry resets cached failures."}
+{"file":".trellis/tasks/08-10-implement-ui-search-and-graph/research/canvas-label-clipping-analysis.md","reason":"Check the prevention measures for canvas text that DOM layout assertions cannot observe."}
+{"file":".trellis/tasks/08-10-implement-ui-search-and-graph/research/starlight-sidebar-base-analysis.md","reason":"Verify site-relative sidebar inputs and exactly one rendered deployment prefix."}

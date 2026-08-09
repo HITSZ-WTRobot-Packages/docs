@@ -1,0 +1,359 @@
+---
+import { Icon } from "astro-icon/components";
+
+import type { PackageCatalog } from "../../lib/catalog/schema";
+import { sitePath } from "../../lib/paths/site-config";
+
+interface Props {
+  catalog: PackageCatalog;
+  rootSlug: string;
+  basePath: string;
+}
+
+const { catalog, rootSlug, basePath } = Astro.props;
+const externalNames = [
+  ...new Set(
+    catalog.packages.flatMap((entry) =>
+      entry.dependencies.flatMap((dependency) =>
+        dependency.kind === "external" ? [dependency.name] : [],
+      ),
+    ),
+  ),
+].sort();
+const graphModel = {
+  root: rootSlug,
+  nodes: [
+    ...catalog.packages.map((entry) => ({
+      id: entry.slug,
+      label: entry.pkgname,
+      kind: "internal",
+      href: sitePath(basePath, "packages", entry.slug),
+    })),
+    ...externalNames.map((name) => ({
+      id: `external:${name}`,
+      label: name,
+      kind: "external",
+      href: null,
+    })),
+  ],
+  edges: catalog.packages.flatMap((entry) =>
+    entry.dependencies.map((dependency) => ({
+      source: entry.slug,
+      target: dependency.kind === "internal" ? dependency.slug : `external:${dependency.name}`,
+    })),
+  ),
+};
+const serializedModel = JSON.stringify(graphModel).replaceAll("<", "\\u003c");
+---
+
+<dependency-graph class="wtr-dependency-graph">
+  <details>
+    <summary>
+      <Icon name="lucide:network" size="1.1rem" aria-hidden="true" />
+      Dependency explorer
+      <Icon class="wtr-summary-chevron" name="lucide:chevron-down" size="1rem" aria-hidden="true" />
+    </summary>
+    <div class="wtr-graph-toolbar" aria-label="Dependency graph mode">
+      <button type="button" aria-pressed="true" data-graph-mode="direct">Direct</button>
+      <button type="button" aria-pressed="false" data-graph-mode="transitive">Transitive</button>
+      <button type="button" aria-pressed="false" data-graph-mode="reverse">Reverse</button>
+    </div>
+    <p class="wtr-graph-status" aria-live="polite" data-graph-status>Graph not loaded.</p>
+    <div
+      class="wtr-graph-canvas"
+      role="img"
+      aria-label="Interactive package dependency graph"
+      data-graph-canvas
+    >
+    </div>
+    <div class="wtr-graph-node-list" aria-label="Visible graph nodes" data-graph-node-list></div>
+  </details>
+  <script is:inline type="application/json" data-graph-model set:html={serializedModel} />
+</dependency-graph>
+
+<script>
+  import type { Core, ElementDefinition } from "cytoscape";
+
+  type GraphNode = {
+    id: string;
+    label: string;
+    kind: "internal" | "external";
+    href: string | null;
+  };
+  type GraphEdge = { source: string; target: string };
+  type GraphModel = { root: string; nodes: GraphNode[]; edges: GraphEdge[] };
+  type GraphMode = "direct" | "transitive" | "reverse";
+
+  function isRecord(value: unknown): value is Record<string, unknown> {
+    return typeof value === "object" && value !== null && !Array.isArray(value);
+  }
+
+  function isGraphModel(value: unknown): value is GraphModel {
+    return (
+      isRecord(value) &&
+      typeof value.root === "string" &&
+      Array.isArray(value.nodes) &&
+      value.nodes.every(
+        (node) =>
+          isRecord(node) &&
+          typeof node.id === "string" &&
+          typeof node.label === "string" &&
+          (node.kind === "internal" || node.kind === "external") &&
+          (typeof node.href === "string" || node.href === null),
+      ) &&
+      Array.isArray(value.edges) &&
+      value.edges.every(
+        (edge) =>
+          isRecord(edge) && typeof edge.source === "string" && typeof edge.target === "string",
+      )
+    );
+  }
+
+  function visibleNodeIds(model: GraphModel, mode: GraphMode): Set<string> {
+    const visible = new Set([model.root]);
+    const outgoing = new Map<string, string[]>();
+    const incoming = new Map<string, string[]>();
+    for (const edge of model.edges) {
+      outgoing.set(edge.source, [...(outgoing.get(edge.source) ?? []), edge.target]);
+      incoming.set(edge.target, [...(incoming.get(edge.target) ?? []), edge.source]);
+    }
+    const adjacency = mode === "reverse" ? incoming : outgoing;
+    const queue = [model.root];
+    while (queue.length > 0) {
+      const current = queue.shift();
+      if (!current) continue;
+      for (const neighbor of adjacency.get(current) ?? []) {
+        if (visible.has(neighbor)) continue;
+        visible.add(neighbor);
+        if (mode !== "direct") queue.push(neighbor);
+      }
+    }
+    return visible;
+  }
+
+  function nodeElement(node: GraphNode, root: string): ElementDefinition {
+    const textWidth = Math.min(196, Math.max(80, node.label.length * 7));
+    const lineCount = Math.ceil((node.label.length * 7) / textWidth);
+    return {
+      group: "nodes",
+      data: {
+        id: node.id,
+        label: node.label,
+        nodeWidth: textWidth + 24,
+        nodeHeight: lineCount > 1 ? 58 : 46,
+        textWidth,
+      },
+      classes: [node.id === root ? "root" : "", node.kind].filter(Boolean).join(" "),
+    };
+  }
+
+  function edgeElement(edge: GraphEdge, index: number): ElementDefinition {
+    return {
+      group: "edges",
+      data: { id: `edge-${index}-${edge.source}-${edge.target}`, ...edge },
+    };
+  }
+
+  class WtrDependencyGraph extends HTMLElement {
+    private graph: Core | undefined;
+    private model: GraphModel | undefined;
+    private mode: GraphMode = "direct";
+    private initialized = false;
+
+    connectedCallback() {
+      const requestedMode = new URL(window.location.href).searchParams.get("graph");
+      if (
+        requestedMode === "direct" ||
+        requestedMode === "transitive" ||
+        requestedMode === "reverse"
+      ) {
+        this.mode = requestedMode;
+      }
+      this.updateModeControls();
+      const details = this.querySelector("details");
+      details?.addEventListener("toggle", () => {
+        if (details.open) void this.initialize();
+      });
+      for (const button of this.querySelectorAll<HTMLButtonElement>("[data-graph-mode]")) {
+        button.addEventListener("click", () => {
+          const mode = button.dataset.graphMode;
+          if (mode !== "direct" && mode !== "transitive" && mode !== "reverse") return;
+          this.mode = mode;
+          this.updateModeControls();
+          this.updateModeUrl();
+          this.render();
+        });
+      }
+    }
+
+    disconnectedCallback() {
+      this.graph?.destroy();
+      this.graph = undefined;
+    }
+
+    private updateModeControls() {
+      for (const control of this.querySelectorAll<HTMLButtonElement>("[data-graph-mode]")) {
+        control.setAttribute("aria-pressed", String(control.dataset.graphMode === this.mode));
+      }
+    }
+
+    private updateModeUrl() {
+      const url = new URL(window.location.href);
+      if (this.mode === "direct") url.searchParams.delete("graph");
+      else url.searchParams.set("graph", this.mode);
+      window.history.replaceState(window.history.state, "", url);
+    }
+
+    private async initialize() {
+      if (this.initialized) {
+        this.graph?.resize();
+        return;
+      }
+      this.initialized = true;
+      const modelElement = this.querySelector<HTMLScriptElement>("[data-graph-model]");
+      const status = this.querySelector<HTMLElement>("[data-graph-status]");
+      if (!modelElement || !status) return;
+      let parsed: unknown;
+      try {
+        parsed = JSON.parse(modelElement.textContent || "");
+      } catch {
+        status.textContent = "Dependency data could not be read.";
+        return;
+      }
+      if (!isGraphModel(parsed)) {
+        status.textContent = "Dependency data is invalid.";
+        return;
+      }
+      this.model = parsed;
+      status.textContent = "Loading dependency graph.";
+      try {
+        const { default: cytoscape } = await import("cytoscape");
+        const container = this.querySelector<HTMLElement>("[data-graph-canvas]");
+        if (!container) return;
+        this.graph = cytoscape({
+          container,
+          elements: [],
+          minZoom: 0.45,
+          maxZoom: 2.2,
+          wheelSensitivity: 0.2,
+          style: [
+            {
+              selector: "node",
+              style: {
+                "background-color": "#1261a0",
+                color: "#ffffff",
+                label: "data(label)",
+                "font-size": 11,
+                "text-wrap": "wrap",
+                "text-overflow-wrap": "anywhere",
+                "text-max-width": "data(textWidth)",
+                "text-valign": "center",
+                "text-halign": "center",
+                width: "data(nodeWidth)",
+                height: "data(nodeHeight)",
+                shape: "round-rectangle",
+              },
+            },
+            {
+              selector: "node.root",
+              style: { "background-color": "#147d64" },
+            },
+            {
+              selector: "node.external",
+              style: {
+                "background-color": "#626c76",
+                "border-style": "dashed",
+                "border-width": 2,
+                "border-color": "#e6aa58",
+              },
+            },
+            { selector: "node:selected", style: { "border-width": 4, "border-color": "#e6aa58" } },
+            {
+              selector: "edge",
+              style: {
+                width: 1.5,
+                "line-color": "#8b98a5",
+                "target-arrow-color": "#8b98a5",
+                "target-arrow-shape": "triangle",
+                "curve-style": "bezier",
+              },
+            },
+          ],
+        });
+        this.graph.on("tap", "node", (event) => {
+          const id = event.target.id();
+          const node = this.model?.nodes.find((entry) => entry.id === id);
+          if (node) this.updateStatus(`Selected ${node.label}.`);
+        });
+        this.render();
+      } catch {
+        status.textContent =
+          "Dependency graph failed to load. The dependency lists remain available.";
+      }
+    }
+
+    private updateStatus(message: string) {
+      const status = this.querySelector<HTMLElement>("[data-graph-status]");
+      if (status) status.textContent = message;
+    }
+
+    private render() {
+      if (!this.graph || !this.model) return;
+      const visible = visibleNodeIds(this.model, this.mode);
+      const nodes = this.model.nodes.filter((node) => visible.has(node.id));
+      const edges = this.model.edges.filter(
+        (edge) => visible.has(edge.source) && visible.has(edge.target),
+      );
+      this.graph.elements().remove();
+      const elements = [
+        ...nodes.map((node) => nodeElement(node, this.model?.root ?? "")),
+        ...edges.map(edgeElement),
+      ];
+      this.graph.add(elements);
+      this.graph
+        .layout({
+          name: this.mode === "transitive" ? "cose" : "breadthfirst",
+          directed: true,
+          padding: 28,
+          animate: false,
+          fit: true,
+        })
+        .run();
+      this.renderNodeList(nodes);
+      this.updateStatus(`${nodes.length} packages shown in ${this.mode} mode.`);
+    }
+
+    private renderNodeList(nodes: GraphNode[]) {
+      const container = this.querySelector<HTMLElement>("[data-graph-node-list]");
+      if (!container) return;
+      container.replaceChildren();
+      for (const node of nodes) {
+        const row = document.createElement("div");
+        const select = document.createElement("button");
+        select.type = "button";
+        select.textContent = node.label;
+        select.addEventListener("click", () => {
+          this.graph?.nodes().unselect();
+          this.graph?.getElementById(node.id).select();
+          this.updateStatus(`Selected ${node.label}.`);
+        });
+        row.append(select);
+        if (node.href) {
+          const link = document.createElement("a");
+          link.href = node.href;
+          link.textContent = "Open";
+          row.append(link);
+        } else {
+          const kind = document.createElement("span");
+          kind.textContent = "External";
+          row.append(kind);
+        }
+        container.append(row);
+      }
+    }
+  }
+
+  if (!customElements.get("dependency-graph")) {
+    customElements.define("dependency-graph", WtrDependencyGraph);
+  }
+</script>

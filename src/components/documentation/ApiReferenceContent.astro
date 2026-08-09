@@ -1,0 +1,107 @@
+---
+import { Icon } from "astro-icon/components";
+
+import type { ApiReference, ApiSymbolKind } from "../../lib/doxygen/schema";
+import { apiStatusLabel, apiStatusTone } from "../../lib/site/view-models";
+import StatusBadge from "../portal/StatusBadge.astro";
+
+interface Props {
+  reference: ApiReference;
+}
+
+const { reference } = Astro.props;
+const kindOrder: ApiSymbolKind[] = [
+  "namespace",
+  "class",
+  "struct",
+  "union",
+  "function",
+  "enum",
+  "typedef",
+  "variable",
+  "define",
+  "file",
+];
+const groups = kindOrder.flatMap((kind) => {
+  const symbols = reference.symbols.filter((symbol) => symbol.kind === kind);
+  return symbols.length > 0 ? [{ kind, symbols }] : [];
+});
+---
+
+<section class="wtr-api-overview" aria-label="API extraction status">
+  <StatusBadge tone={apiStatusTone(reference.status)} label={apiStatusLabel(reference.status)} />
+  <dl class="wtr-inline-stats">
+    <div><dt>Symbols</dt><dd>{reference.symbolCount}</dd></div>
+    <div><dt>Documented</dt><dd>{reference.documentedSymbolCount}</dd></div>
+    <div><dt>Revision</dt><dd><code>{reference.revisionLabel}</code></dd></div>
+  </dl>
+  {reference.warnings.map((warning) => <p class="wtr-quality-note">{warning.message}</p>)}
+</section>
+
+{
+  groups.length > 0 ? (
+    <div class="wtr-api-groups">
+      {groups.map(({ kind, symbols }) => (
+        <section aria-labelledby={`api-kind-${kind}`}>
+          <div class="wtr-section-heading wtr-section-heading--compact">
+            <h2 id={`api-kind-${kind}`}>{kind}</h2>
+            <span>{symbols.length}</span>
+          </div>
+          <div class="wtr-symbol-list">
+            {symbols.map((symbol) => (
+              <article class="wtr-symbol" id={symbol.anchor}>
+                <header>
+                  <Icon
+                    name={kind === "file" ? "lucide:file-code-2" : "lucide:code-2"}
+                    size="1rem"
+                    aria-hidden="true"
+                  />
+                  <h3>{symbol.qualifiedName}</h3>
+                </header>
+                {symbol.signature && (
+                  <pre>
+                    <code>{symbol.signature}</code>
+                  </pre>
+                )}
+                {symbol.description ? (
+                  <p>{symbol.description}</p>
+                ) : (
+                  <p class="wtr-muted">No upstream description.</p>
+                )}
+                {symbol.enumValues.length > 0 && (
+                  <dl class="wtr-enum-values">
+                    {symbol.enumValues.map((value) => (
+                      <div>
+                        <dt>
+                          <code>
+                            {value.name}
+                            {value.initializer ? ` ${value.initializer}` : ""}
+                          </code>
+                        </dt>
+                        <dd>{value.description || "No upstream description."}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
+                {symbol.location && (
+                  <a
+                    class="wtr-source-location"
+                    href={symbol.location.sourceUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {symbol.location.path}
+                    {symbol.location.line ? `:${symbol.location.line}` : ""}
+                    <Icon name="lucide:external-link" size="0.9rem" aria-hidden="true" />
+                  </a>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  ) : (
+    <p class="wtr-empty-state">No public C or C++ symbols are available for this target.</p>
+  )
+}

@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon/components";
+
+import type { QualityTone } from "../../lib/site/view-models";
+
+interface Props {
+  tone: QualityTone;
+  label: string;
+}
+
+const { tone, label } = Astro.props;
+const icon =
+  tone === "success"
+    ? "lucide:circle-check"
+    : tone === "neutral"
+      ? "lucide:info"
+      : "lucide:triangle-alert";
+---
+
+<span class:list={["wtr-status", `wtr-status--${tone}`]}>
+  <Icon name={icon} size="1rem" aria-hidden="true" />
+  <span>{label}</span>
+</span>

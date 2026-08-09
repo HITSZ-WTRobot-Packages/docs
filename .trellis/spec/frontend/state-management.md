@@ -14,6 +14,8 @@
 - Derive reverse dependencies and transitive graph subsets from the shared catalog; do not maintain
   duplicate indexes in components.
 - Update query parameters with the History API while preserving `BASE_PATH` and unrelated values.
+- Search owns `q`, `module`, `namespace`, and `resultType`. The graph owns `graph`, omits it for
+  direct mode, and accepts `transitive` or `reverse`; both controls restore state on page load.
 - Progressive enhancement is required: package content and direct dependency lists remain available
   when client JavaScript fails.
 - Persist user preferences only when they are meaningful across pages and do not duplicate
@@ -21,8 +23,9 @@
 
 ## Server State
 
-There is no server state. Pagefind and graph data are immutable build artifacts. A failed asset load
-shows a bounded error state with a retry action and does not hide static documentation.
+There is no server state. Pagefind and graph data are immutable build artifacts. A failed Pagefind
+load shows a bounded error state with a retry action. Retrying must clear both the cached API and a
+rejected load promise before initializing again, and the failure must not hide static documentation.
 
 ## Common Mistakes
 

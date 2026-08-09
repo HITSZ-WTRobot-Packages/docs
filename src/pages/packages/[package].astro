@@ -1,0 +1,88 @@
+---
+import { Icon } from "astro-icon/components";
+
+import DependencyGraph from "../../components/dependency-graph/DependencyGraph.astro";
+import DependencyList from "../../components/documentation/DependencyList.astro";
+import DocumentationContent from "../../components/documentation/DocumentationContent.astro";
+import PackageMetadata from "../../components/documentation/PackageMetadata.astro";
+import Breadcrumbs from "../../components/portal/Breadcrumbs.astro";
+import PagefindMetadata from "../../components/portal/PagefindMetadata.astro";
+import PortalPage from "../../components/portal/PortalPage.astro";
+import StatusBadge from "../../components/portal/StatusBadge.astro";
+import type { CatalogPackage } from "../../lib/catalog/schema";
+import type { ApiReference } from "../../lib/doxygen/schema";
+import type { DocumentationPage } from "../../lib/markdown/documentation-schema";
+import { sitePath } from "../../lib/paths/site-config";
+import { buildPortalSidebar } from "../../lib/site/navigation";
+import { loadPortalData } from "../../lib/site/portal-data";
+import { apiStatusLabel, apiStatusTone } from "../../lib/site/view-models";
+
+interface Props {
+  packageEntry: CatalogPackage;
+  documentation: DocumentationPage;
+  api: ApiReference;
+}
+
+export async function getStaticPaths() {
+  const data = await loadPortalData();
+  return data.catalog.packages.map((packageEntry) => {
+    const documentation = data.documentation.pages.find(
+      (page) => page.kind === "package" && page.packageSlug === packageEntry.slug,
+    );
+    const api = data.api.references.find(
+      (reference) => reference.packageSlug === packageEntry.slug,
+    );
+    if (!documentation || !api)
+      throw new Error(`Missing generated package data: ${packageEntry.pkgname}`);
+    return { params: { package: packageEntry.slug }, props: { packageEntry, documentation, api } };
+  });
+}
+
+const { packageEntry, documentation, api } = Astro.props;
+const data = await loadPortalData();
+const sidebar = buildPortalSidebar(data.catalog);
+const moduleEntry = data.catalog.modules.find((module) => module.id === packageEntry.moduleId);
+if (!moduleEntry) throw new Error(`Missing package module: ${packageEntry.moduleId}`);
+---
+
+<PortalPage
+  title={packageEntry.pkgname}
+  description={`${packageEntry.pkgname} ${packageEntry.revisionLabel} package manual and dependency reference.`}
+  sidebar={sidebar}
+>
+  <PagefindMetadata module={packageEntry.moduleId} resultTypes={["package", "readme"]} />
+  <Breadcrumbs
+    items={[
+      { label: "Catalog", href: sitePath(data.config.basePath) },
+      {
+        label: moduleEntry.displayName,
+        href: sitePath(data.config.basePath, "modules", moduleEntry.slug),
+      },
+      { label: packageEntry.pkgname },
+    ]}
+  />
+
+  <div class="wtr-page-actions">
+    <StatusBadge tone={apiStatusTone(api.status)} label={apiStatusLabel(api.status)} />
+    <a
+      class="wtr-primary-command"
+      href={sitePath(data.config.basePath, "packages", packageEntry.slug, "api")}
+      ><Icon name="lucide:code-2" size="1rem" aria-hidden="true" /> API reference</a
+    >
+  </div>
+  <PackageMetadata
+    packageEntry={packageEntry}
+    moduleHref={sitePath(data.config.basePath, "modules", moduleEntry.slug)}
+  />
+  <DependencyList
+    basePath={data.config.basePath}
+    dependencies={packageEntry.dependencies}
+    reverseDependencies={packageEntry.reverseDependencies}
+  />
+  <DependencyGraph
+    catalog={data.catalog}
+    rootSlug={packageEntry.slug}
+    basePath={data.config.basePath}
+  />
+  <DocumentationContent page={documentation} />
+</PortalPage>

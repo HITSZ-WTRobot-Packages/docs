@@ -1,0 +1,61 @@
+---
+import ApiReferenceContent from "../../../components/documentation/ApiReferenceContent.astro";
+import Breadcrumbs from "../../../components/portal/Breadcrumbs.astro";
+import PagefindMetadata from "../../../components/portal/PagefindMetadata.astro";
+import PortalPage from "../../../components/portal/PortalPage.astro";
+import type { CatalogPackage } from "../../../lib/catalog/schema";
+import type { ApiReference } from "../../../lib/doxygen/schema";
+import { sitePath } from "../../../lib/paths/site-config";
+import { buildPortalSidebar } from "../../../lib/site/navigation";
+import { loadPortalData } from "../../../lib/site/portal-data";
+import { referenceNamespaces } from "../../../lib/site/view-models";
+
+interface Props {
+  packageEntry: CatalogPackage;
+  reference: ApiReference;
+}
+
+export async function getStaticPaths() {
+  const data = await loadPortalData();
+  return data.catalog.packages.map((packageEntry) => {
+    const reference = data.api.references.find(
+      (candidate) => candidate.packageSlug === packageEntry.slug,
+    );
+    if (!reference) throw new Error(`Missing package API reference: ${packageEntry.pkgname}`);
+    return { params: { package: packageEntry.slug }, props: { packageEntry, reference } };
+  });
+}
+
+const { packageEntry, reference } = Astro.props;
+const data = await loadPortalData();
+const sidebar = buildPortalSidebar(data.catalog);
+const moduleEntry = data.catalog.modules.find((module) => module.id === packageEntry.moduleId);
+if (!moduleEntry) throw new Error(`Missing package module: ${packageEntry.moduleId}`);
+---
+
+<PortalPage
+  title={`${packageEntry.pkgname} API`}
+  description={`C and C++ API symbols for ${packageEntry.pkgname} at ${packageEntry.revisionLabel}.`}
+  sidebar={sidebar}
+>
+  <PagefindMetadata
+    module={packageEntry.moduleId}
+    namespaces={referenceNamespaces(reference)}
+    resultTypes={["api"]}
+  />
+  <Breadcrumbs
+    items={[
+      { label: "Catalog", href: sitePath(data.config.basePath) },
+      {
+        label: moduleEntry.displayName,
+        href: sitePath(data.config.basePath, "modules", moduleEntry.slug),
+      },
+      {
+        label: packageEntry.pkgname,
+        href: sitePath(data.config.basePath, "packages", packageEntry.slug),
+      },
+      { label: "API" },
+    ]}
+  />
+  <ApiReferenceContent reference={reference} />
+</PortalPage>

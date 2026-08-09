@@ -1,0 +1,259 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  basePath: string;
+  modules: string[];
+  namespaces: string[];
+}
+
+const { basePath, modules, namespaces } = Astro.props;
+---
+
+<portal-search class="wtr-search" data-base-path={basePath} data-pagefind-ignore>
+  <form class="wtr-search-form" role="search">
+    <label class="wtr-search-query-label" for="portal-search-query">
+      Search packages and APIs
+    </label>
+    <div class="wtr-search-input-wrap">
+      <Icon name="lucide:search" size="1.1rem" aria-hidden="true" />
+      <input
+        id="portal-search-query"
+        type="search"
+        name="q"
+        autocomplete="off"
+        placeholder="Package, symbol, or manual text"
+      />
+    </div>
+    <div class="wtr-search-filters">
+      <div>
+        <label for="portal-search-module">Module</label>
+        <select id="portal-search-module" name="module">
+          <option value="">All modules</option>
+          {modules.map((module) => <option value={module}>{module}</option>)}
+        </select>
+      </div>
+      <div>
+        <label for="portal-search-namespace">Namespace</label>
+        <select id="portal-search-namespace" name="namespace">
+          <option value="">All namespaces</option>
+          {namespaces.map((namespace) => <option value={namespace}>{namespace}</option>)}
+        </select>
+      </div>
+      <div>
+        <label for="portal-search-result-type">Result type</label>
+        <select id="portal-search-result-type" name="resultType">
+          <option value="">All types</option>
+          <option value="module">Module</option>
+          <option value="package">Package</option>
+          <option value="readme">README</option>
+          <option value="api">API</option>
+        </select>
+      </div>
+    </div>
+  </form>
+  <div class="wtr-search-feedback">
+    <p class="wtr-search-status" aria-live="polite" data-search-status>
+      Enter a term or choose a filter.
+    </p>
+    <button type="button" class="wtr-search-retry" data-search-retry hidden>
+      <Icon name="lucide:refresh-cw" size="1rem" aria-hidden="true" />
+      Retry
+    </button>
+  </div>
+  <ol class="wtr-search-results" data-search-results></ol>
+</portal-search>
+
+<script>
+  type ResultHandle = { data: () => Promise<unknown> };
+  type PagefindApi = {
+    init: () => Promise<unknown>;
+    filters: () => Promise<unknown>;
+    search: (
+      query: string | null,
+      options: { filters: Record<string, string> },
+    ) => Promise<unknown>;
+  };
+  type ResultData = {
+    url: string;
+    title: string;
+    excerpt: string;
+    type: string;
+    module: string;
+  };
+
+  function isRecord(value: unknown): value is Record<string, unknown> {
+    return typeof value === "object" && value !== null && !Array.isArray(value);
+  }
+
+  function isPagefindApi(value: unknown): value is PagefindApi {
+    return (
+      isRecord(value) &&
+      typeof value.init === "function" &&
+      typeof value.filters === "function" &&
+      typeof value.search === "function"
+    );
+  }
+
+  function resultHandles(value: unknown): ResultHandle[] {
+    if (!isRecord(value) || !Array.isArray(value.results)) return [];
+    return value.results.filter(
+      (result): result is ResultHandle => isRecord(result) && typeof result.data === "function",
+    );
+  }
+
+  function resultData(value: unknown): ResultData | null {
+    if (!isRecord(value) || typeof value.url !== "string") return null;
+    const meta = isRecord(value.meta) ? value.meta : {};
+    return {
+      url: value.url,
+      title: typeof meta.title === "string" ? meta.title : value.url,
+      excerpt: typeof value.plain_excerpt === "string" ? value.plain_excerpt : "",
+      type: typeof meta.resultType === "string" ? meta.resultType : "Documentation",
+      module: typeof meta.module === "string" ? meta.module : "",
+    };
+  }
+
+  class WtrPortalSearch extends HTMLElement {
+    private api: PagefindApi | undefined;
+    private loadPromise: Promise<PagefindApi> | undefined;
+    private sequence = 0;
+    private timer: number | undefined;
+
+    connectedCallback() {
+      const form = this.querySelector<HTMLFormElement>("form");
+      const input = this.querySelector<HTMLInputElement>('input[name="q"]');
+      const retry = this.querySelector<HTMLButtonElement>("[data-search-retry]");
+      if (!form || !input) return;
+      this.restoreState(form);
+      input.addEventListener("focus", () => void this.load());
+      form.addEventListener("input", () => this.schedule(form));
+      form.addEventListener("change", () => void this.run(form));
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        void this.run(form);
+      });
+      retry?.addEventListener("click", () => {
+        this.api = undefined;
+        this.loadPromise = undefined;
+        this.setRetryVisible(false);
+        void this.run(form);
+      });
+      if ([...new FormData(form).values()].some(Boolean)) void this.run(form);
+    }
+
+    private restoreState(form: HTMLFormElement) {
+      const parameters = new URLSearchParams(window.location.search);
+      for (const name of ["q", "module", "namespace", "resultType"]) {
+        const control = form.elements.namedItem(name);
+        const value = parameters.get(name);
+        if (
+          value !== null &&
+          (control instanceof HTMLInputElement || control instanceof HTMLSelectElement)
+        ) {
+          control.value = value;
+        }
+      }
+    }
+
+    private schedule(form: HTMLFormElement) {
+      if (this.timer !== undefined) window.clearTimeout(this.timer);
+      this.timer = window.setTimeout(() => void this.run(form), 160);
+    }
+
+    private async load(): Promise<PagefindApi> {
+      if (this.api) return this.api;
+      if (this.loadPromise) return this.loadPromise;
+      this.loadPromise = (async () => {
+        const basePath = this.dataset.basePath || "/";
+        const bundleUrl = `${basePath}pagefind/pagefind.js`;
+        const imported: unknown = await import(/* @vite-ignore */ bundleUrl);
+        if (!isPagefindApi(imported)) throw new Error("Pagefind API is unavailable.");
+        await imported.init();
+        await imported.filters();
+        this.api = imported;
+        return imported;
+      })();
+      return this.loadPromise;
+    }
+
+    private async run(form: HTMLFormElement) {
+      const currentSequence = ++this.sequence;
+      const data = new FormData(form);
+      const query = String(data.get("q") ?? "").trim();
+      const filters: Record<string, string> = {};
+      for (const name of ["module", "namespace", "resultType"]) {
+        const value = String(data.get(name) ?? "").trim();
+        if (value) filters[name] = value;
+      }
+      this.updateUrl(query, filters);
+      this.setStatus("Searching.");
+      try {
+        const api = await this.load();
+        const response = await api.search(query || null, { filters });
+        if (currentSequence !== this.sequence) return;
+        const handles = resultHandles(response).slice(0, 40);
+        const loaded = await Promise.all(handles.map((handle) => handle.data()));
+        const results = loaded.flatMap((value) => {
+          const result = resultData(value);
+          return result ? [result] : [];
+        });
+        this.renderResults(results);
+        this.setRetryVisible(false);
+        this.setStatus(
+          results.length === 0
+            ? "No matching documentation found."
+            : `${results.length} result${results.length === 1 ? "" : "s"}.`,
+        );
+      } catch {
+        if (currentSequence !== this.sequence) return;
+        this.renderResults([]);
+        this.setRetryVisible(true);
+        this.setStatus(
+          "Search index is unavailable in the development server. Use a production preview.",
+        );
+      }
+    }
+
+    private updateUrl(query: string, filters: Record<string, string>) {
+      const url = new URL(window.location.href);
+      for (const name of ["q", "module", "namespace", "resultType"]) url.searchParams.delete(name);
+      if (query) url.searchParams.set("q", query);
+      for (const [name, value] of Object.entries(filters)) url.searchParams.set(name, value);
+      history.replaceState(null, "", url);
+    }
+
+    private setStatus(message: string) {
+      const status = this.querySelector<HTMLElement>("[data-search-status]");
+      if (status) status.textContent = message;
+    }
+
+    private setRetryVisible(visible: boolean) {
+      const retry = this.querySelector<HTMLButtonElement>("[data-search-retry]");
+      if (retry) retry.hidden = !visible;
+    }
+
+    private renderResults(results: ResultData[]) {
+      const list = this.querySelector<HTMLOListElement>("[data-search-results]");
+      if (!list) return;
+      list.replaceChildren();
+      for (const result of results) {
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = result.url;
+        link.textContent = result.title;
+        const metadata = document.createElement("p");
+        metadata.className = "wtr-search-result-meta";
+        metadata.textContent = [result.type, result.module].filter(Boolean).join(" · ");
+        const excerpt = document.createElement("p");
+        excerpt.textContent = result.excerpt;
+        item.append(link, metadata, excerpt);
+        list.append(item);
+      }
+    }
+  }
+
+  if (!customElements.get("portal-search")) {
+    customElements.define("portal-search", WtrPortalSearch);
+  }
+</script>

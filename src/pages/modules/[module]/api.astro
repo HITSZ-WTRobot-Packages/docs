@@ -1,0 +1,51 @@
+---
+import ApiReferenceContent from "../../../components/documentation/ApiReferenceContent.astro";
+import Breadcrumbs from "../../../components/portal/Breadcrumbs.astro";
+import PagefindMetadata from "../../../components/portal/PagefindMetadata.astro";
+import PortalPage from "../../../components/portal/PortalPage.astro";
+import type { CatalogModule } from "../../../lib/catalog/schema";
+import type { ApiReference } from "../../../lib/doxygen/schema";
+import { sitePath } from "../../../lib/paths/site-config";
+import { buildPortalSidebar } from "../../../lib/site/navigation";
+import { loadPortalData } from "../../../lib/site/portal-data";
+import { referenceNamespaces } from "../../../lib/site/view-models";
+
+interface Props {
+  module: CatalogModule;
+  reference: ApiReference;
+}
+
+export async function getStaticPaths() {
+  const data = await loadPortalData();
+  return data.api.references.flatMap((reference) => {
+    if (reference.targetKind !== "module") return [];
+    const module = data.catalog.modules.find((candidate) => candidate.id === reference.moduleId);
+    if (!module) throw new Error(`Missing API module: ${reference.moduleId}`);
+    return [{ params: { module: module.slug }, props: { module, reference } }];
+  });
+}
+
+const { module, reference } = Astro.props;
+const data = await loadPortalData();
+const sidebar = buildPortalSidebar(data.catalog);
+---
+
+<PortalPage
+  title={`${module.displayName} API`}
+  description={`Module-level C and C++ symbols at ${reference.revisionLabel}.`}
+  sidebar={sidebar}
+>
+  <PagefindMetadata
+    module={module.id}
+    namespaces={referenceNamespaces(reference)}
+    resultTypes={["api"]}
+  />
+  <Breadcrumbs
+    items={[
+      { label: "Catalog", href: sitePath(data.config.basePath) },
+      { label: module.displayName, href: sitePath(data.config.basePath, "modules", module.slug) },
+      { label: "API" },
+    ]}
+  />
+  <ApiReferenceContent reference={reference} />
+</PortalPage>

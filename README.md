@@ -120,6 +120,30 @@ catalog. Missing inputs and symbols are explicit empty states, missing comments 
 state, and a target-level extraction error does not suppress other packages. A missing or mismatched
 Doxygen executable is a global reproducibility error and must be resolved before generation.
 
+## Documentation Portal
+
+The production build joins the package catalog, rendered Markdown, and normalized Doxygen data into
+static Astro routes. The main route families are:
+
+| Route                   | Content                                                                 |
+| ----------------------- | ----------------------------------------------------------------------- |
+| `/`                     | Module summaries and the complete package catalog                       |
+| `/modules/<module>/`    | Module README, packages, and module-level API status                    |
+| `/packages/<slug>/`     | Revision, install command, source, manual, dependencies, and API status |
+| `/packages/<slug>/api/` | Namespaced Doxygen symbols and pinned source locations                  |
+| `/search/`              | Pagefind search with module, namespace, and result-type filters         |
+| `/quality/`             | Snapshot and API documentation quality states                           |
+
+Package pages expose a lazy Cytoscape dependency explorer in direct, transitive, and reverse modes.
+The selected non-default mode is shareable as `?graph=transitive` or `?graph=reverse`; static direct
+and reverse dependency lists remain available when JavaScript is disabled.
+
+Pagefind is emitted by the production build, so verify search with `bun run build` followed by
+`bun run preview`. The development server deliberately shows a bounded unavailable state with a
+retry command because it has no generated Pagefind index. Search query and filter state is encoded
+in the URL. All portal links, Pagefind assets, and graph links are derived from `BASE_PATH` and are
+covered at root and nested deployment prefixes by Playwright.
+
 ## Architecture Issues
 
 If snapshot size, licensing, cross-root references, unavailable Doxygen tooling, GitHub Actions

@@ -1,1 +1,6 @@
-{"_example": "Fill with {\"file\": \"<path>\", \"reason\": \"<why>\"}. Put spec/research files only — no code paths. Run `python3 .trellis/scripts/get_context.py --mode packages` to list available specs. Delete this line once real entries are added."}
+{"file":".trellis/spec/frontend/component-guidelines.md","reason":"Static Astro composition, lazy Cytoscape loading, accessible graph controls, and label sizing rules."}
+{"file":".trellis/spec/frontend/state-management.md","reason":"URL-owned Pagefind filters and dependency graph mode, plus retryable immutable asset state."}
+{"file":".trellis/spec/frontend/type-safety.md","reason":"Strict validation boundaries for embedded graph JSON and Pagefind's runtime API/results."}
+{"file":".trellis/spec/guides/cross-layer-thinking-guide.md","reason":"Shared catalog, Markdown, API, source URL, and base-path contracts consumed by Astro routes."}
+{"file":".trellis/tasks/08-10-implement-ui-search-and-graph/research/canvas-label-clipping-analysis.md","reason":"Regression analysis for canvas-only text clipping found during screenshot inspection."}
+{"file":".trellis/tasks/08-10-implement-ui-search-and-graph/research/starlight-sidebar-base-analysis.md","reason":"Boundary contract preventing Starlight from applying nested deployment prefixes twice."}

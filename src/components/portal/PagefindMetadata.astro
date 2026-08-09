@@ -1,0 +1,22 @@
+---
+interface Props {
+  module?: string | undefined;
+  namespaces?: string[] | undefined;
+  resultTypes: string[];
+}
+
+const { module, namespaces = [], resultTypes } = Astro.props;
+---
+
+<div class="sr-only" data-pagefind-ignore aria-hidden="true">
+  {
+    module && (
+      <span data-pagefind-filter="module" data-pagefind-meta="module">
+        {module}
+      </span>
+    )
+  }
+  {namespaces.map((namespace) => <span data-pagefind-filter="namespace">{namespace}</span>)}
+  {resultTypes.map((resultType) => <span data-pagefind-filter="resultType">{resultType}</span>)}
+  {resultTypes[0] && <span data-pagefind-meta="resultType">{resultTypes[0]}</span>}
+</div>

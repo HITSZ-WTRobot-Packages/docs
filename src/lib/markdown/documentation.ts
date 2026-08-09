@@ -106,6 +106,15 @@ const rewriteReferences: Plugin<[RewriteContext], Root> = (context) => (tree) =>
   });
 };
 
+const shiftHeadings: Plugin<[], Root> = () => (tree) => {
+  visit(tree, "element", (node: Element) => {
+    if (/^h[1-5]$/u.test(node.tagName)) {
+      const level = Number(node.tagName.slice(1)) + 1;
+      node.tagName = `h${level}`;
+    }
+  });
+};
+
 export async function renderSnapshotMarkdown(
   markdown: string,
   context: RewriteContext,
@@ -116,6 +125,7 @@ export async function renderSnapshotMarkdown(
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rewriteReferences, context)
+    .use(shiftHeadings)
     .use(rehypeSlug)
     .use(rehypeSanitize, sanitizationSchema)
     .use(rehypeStringify)

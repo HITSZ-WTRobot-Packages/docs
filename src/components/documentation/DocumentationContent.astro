@@ -1,0 +1,29 @@
+---
+import { Icon } from "astro-icon/components";
+
+import type { DocumentationPage } from "../../lib/markdown/documentation-schema";
+import StatusBadge from "../portal/StatusBadge.astro";
+
+interface Props {
+  page: DocumentationPage;
+}
+
+const { page } = Astro.props;
+const isFallback = page.source.kind === "generated";
+---
+
+<section class="wtr-documentation" aria-label="Manual">
+  <div class="wtr-section-heading">
+    <p class="wtr-eyebrow">
+      <Icon name="lucide:book-open" size="1rem" aria-hidden="true" /> Documentation
+    </p>
+    <div class="wtr-heading-actions">
+      {isFallback && <StatusBadge tone="warning" label="Generated fallback" />}
+      <a class="wtr-icon-link" href={page.source.upstreamUrl} target="_blank" rel="noreferrer">
+        <Icon name="lucide:external-link" size="1rem" aria-hidden="true" />
+        Source
+      </a>
+    </div>
+  </div>
+  <div class="wtr-manual-content" set:html={page.html} />
+</section>

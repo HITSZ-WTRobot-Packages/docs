@@ -6,6 +6,11 @@ Use Astro components for content, navigation, metadata, and layouts. Introduce a
 for stateful search filtering or dependency-graph interaction. Select the lightest hydration mode
 that preserves the workflow; do not hydrate an entire page.
 
+The portal uses small autonomous custom elements for search and graph interaction. Keep their
+validated data in inert HTML/JSON and import heavy browser libraries only when the interaction is
+requested. In particular, Cytoscape loads when the dependency explorer opens, not on every package
+page visit.
+
 ```astro
 ---
 interface Props {
@@ -26,6 +31,10 @@ const { revision, sourceUrl } = Astro.props;
 - Prefer slots and small semantic components over boolean prop matrices.
 - Keep route and URL construction outside display components unless the component calls the shared
   helper directly.
+- `StarlightPage` sidebar entries are site-relative slugs such as `/search/`; Starlight applies
+  Astro's `base` when rendering them. Application-owned anchors, Pagefind assets, resources, and
+  graph links use the shared helper with `BASE_PATH`. Do not pass an already-prefixed link into
+  Starlight or nested deployments will receive the prefix twice.
 
 ## Visual Rules
 
@@ -46,6 +55,11 @@ const { revision, sourceUrl } = Astro.props;
 - Focus is visible, headings remain hierarchical, landmarks are named, and status changes are
   announced when needed.
 - Motion is optional and disabled under `prefers-reduced-motion`.
+- A graph canvas is visual enhancement, not the only interface. Mirror visible nodes as native
+  buttons and links, announce mode/selection changes, and keep static dependency lists outside it.
+- Size Cytoscape nodes from label content with a bounded maximum and character wrapping. DOM
+  overflow assertions cannot detect text clipped inside canvas rendering, so inspect graph
+  screenshots at desktop and mobile widths.
 
 ## Common Mistakes
 
