@@ -16,12 +16,11 @@ Turn module/package README files and their relative-reference closure into safe,
 
 ## Acceptance Criteria
 
-- [ ] Existing relative README-to-README links resolve inside the generated site.
-- [ ] Images and attachments work under root and nested base paths.
-- [ ] Missing README packages remain discoverable with clear fallback content.
-- [ ] Broken or unsafe references produce actionable build diagnostics.
+- [x] Existing relative README-to-README links resolve inside the generated site.
+- [x] Images and attachments work under root and nested base paths.
+- [x] Missing README packages remain discoverable with clear fallback content.
+- [x] Broken or unsafe references produce actionable build diagnostics.
 
 ## Dependencies
 
 Requires the typed cpkg catalog and committed snapshots.
-

@@ -8,6 +8,7 @@ import {
   type SnapshotFile,
   type SourceManifest,
 } from "../sources/manifest";
+import { pinnedUpstreamUrl } from "../sources/upstream-url";
 import { CatalogDiagnostic } from "./diagnostic";
 import {
   CpkgManifestSchema,
@@ -64,23 +65,6 @@ function parseManifest(document: CpkgDocument) {
     );
   }
   return result.data;
-}
-
-function sourceUrl(module: ModuleSnapshot, packagePath: string): string {
-  const repository = new URL(module.repository);
-  if (!/^https?:$/u.test(repository.protocol) || repository.username || repository.password) {
-    throw new CatalogDiagnostic(
-      "CATALOG_REPOSITORY_INVALID",
-      `Module repository is not a public HTTP(S) URL: ${module.id}`,
-      { module: module.id },
-    );
-  }
-  const repositoryPath = repository.pathname.replace(/\.git$/u, "").replace(/\/$/u, "");
-  const encodedPackagePath = packagePath.split("/").map(encodeURIComponent).join("/");
-  repository.pathname = `${repositoryPath}/tree/${module.sha}/${encodedPackagePath}`;
-  repository.search = "";
-  repository.hash = "";
-  return repository.href;
 }
 
 function expectedManifestFiles(manifest: SourceManifest): Array<{
@@ -176,7 +160,7 @@ export function buildPackageCatalog(
       moduleShortSha: module.shortSha,
       manifestPath: file.path,
       packagePath,
-      sourceUrl: sourceUrl(module, packagePath),
+      sourceUrl: pinnedUpstreamUrl(module, "tree", packagePath),
       dependencyNames: [...cpkg.dependencies].sort(compareStrings),
     });
   }

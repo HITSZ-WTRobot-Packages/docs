@@ -39,6 +39,7 @@ bun install --frozen-lockfile
 bun run dev
 bun run sync [--module <name> | --changed] [--dry-run]
 bun run generate:catalog
+bun run generate:readme
 bun run generate
 bun run lint
 bun run typecheck
@@ -90,6 +91,18 @@ and paths. Internal dependencies resolve to stable package slugs and reverse-dep
 exact approved external set is `FreeRTOS`, `stm32cubemx`, and `VelocityProfile::SCurve`. Duplicate
 names/slugs and any other unresolved dependency fail generation. Source links are pinned to the
 module's full snapshot SHA and displayed revisions use `<version>+<short-sha>`.
+
+## README Documentation
+
+`bun run generate:readme` validates and renders module, package, and README-linked supplemental
+Markdown entirely from the committed snapshot. Module and package README files become their primary
+pages; packages without README content receive deterministic cpkg-derived fallback content.
+
+Relative Markdown pages, headings, images, and attachments are resolved through the snapshot file
+index. Page and resource routes use the shared base-path helper, while upstream source links are
+pinned to the full module SHA. GFM and raw HTML pass through the unified/remark/rehype pipeline and
+an explicit sanitization schema. Missing, checksum-mismatched, or escaping local references fail
+generation with source context rather than producing a broken page.
 
 ## Architecture Issues
 

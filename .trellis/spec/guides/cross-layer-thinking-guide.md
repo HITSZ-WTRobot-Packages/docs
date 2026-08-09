@@ -160,3 +160,18 @@ Create detailed flow docs when:
 - Multiple teams are involved
 - Data format is complex
 - Feature has caused bugs before
+
+---
+
+## Package Manager vs Build Runtime
+
+Using Bun as the package manager and command entry point does not mean every imported module runs on
+Bun. Astro, ESLint, Playwright, and esbuild keep their declared runtimes. Shared application code
+under `src/` must therefore use portable Web or `node:` APIs.
+
+Checklist when a CLI-tested loader becomes part of an Astro route:
+
+- [ ] Search the complete import graph for Bun-only globals and runtime-specific module APIs.
+- [ ] Exercise the loader through `astro build`, not only through `bun test` or a Bun CLI.
+- [ ] Run both root and nested-base builds when the loader also creates routes or asset URLs.
+- [ ] Keep runtime-specific conveniences in the owning `scripts/` or test boundary.

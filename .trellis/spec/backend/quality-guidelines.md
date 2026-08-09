@@ -8,7 +8,12 @@
 - Git operations use simple-git, Doxygen and other bounded processes use Execa, CLI options use
   Commander, and filesystem discovery uses tinyglobby.
 - Normal builds, generation, and validation are offline and consume only committed snapshots.
+- Shared code under `src/` is imported by Astro's Node prerender runtime and must not use Bun-only
+  globals. Use portable Web APIs or `node:` modules; convention checks reject `Bun.*` in `src/`.
 - Shared URL, safe-path, checksum, slug, and dependency helpers are the single sources of truth.
+- README rendering uses remark-parse + remark-gfm + remark-rehype, expands raw HTML through
+  rehype-raw, rewrites references in HAST, assigns GitHub-compatible heading slugs, sanitizes, then
+  serializes. Reordering or bypassing this pipeline requires security and link fixture updates.
 - All generated ordering is explicit and covered by repeat-run tests.
 
 ## Forbidden Patterns
@@ -31,6 +36,8 @@
   rollback on failure, and deterministic manifest output.
 - Catalog fixtures cover optional `format_version`, duplicates, invalid paths, unresolved internal
   dependencies, and approved external dependencies.
+- Documentation fixtures cover cross-page headings, root/nested-base images and attachments, raw
+  HTML sanitization, missing-README fallbacks, missing targets, and root escapes.
 - Doxygen fixtures cover C, C++, header-only, compiled, empty, and sparsely documented packages.
 - The quality gate runs convention, format, lint, typecheck, unit, integration, generation, build,
   static-link, search, browser, screenshot, responsive, accessibility, and artifact checks.
@@ -102,6 +109,8 @@ generation and build commands make zero upstream network requests.
 - Synchronizer integration tests hash the previous tree before injected failures and assert exact
   equality afterward; unchanged reruns assert an empty Git diff.
 - Offline build tests deny network and assert successful root and nested-base artifacts.
+- At least one production build must import each shared snapshot loader through an Astro route;
+  passing only Bun unit/CLI tests does not prove runtime compatibility.
 - Browser and static-link tests assert canonical URLs, Pagefind assets, Markdown resources, and deep
   links under each configured base.
 - A Playwright run with no pre-existing server must start, await, and stop its configured web server

@@ -1,4 +1,4 @@
-import { exists } from "node:fs/promises";
+import { exists, readFile } from "node:fs/promises";
 import path from "node:path";
 
 import { glob } from "tinyglobby";
@@ -50,6 +50,17 @@ const unexpectedGitDirectories = await glob(["sources/**/.git", "dist/**/.git"],
 });
 for (const directory of unexpectedGitDirectories) {
   errors.push(`embedded Git metadata is forbidden: ${directory}`);
+}
+
+const sharedRuntimeFiles = await glob(["src/**/*.{astro,js,mjs,ts}"], {
+  cwd: repositoryRoot,
+  onlyFiles: true,
+});
+for (const file of sharedRuntimeFiles) {
+  const contents = await readFile(path.join(repositoryRoot, file), "utf8");
+  if (/\bBun\./u.test(contents)) {
+    errors.push(`shared Astro code must not use Bun-only runtime APIs: ${file}`);
+  }
 }
 
 if (errors.length > 0) {

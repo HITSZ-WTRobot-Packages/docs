@@ -1,3 +1,4 @@
+import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 import { z } from "zod";
@@ -174,20 +175,30 @@ export function serializeSourceManifest(manifest: SourceManifest): string {
 
 export async function readSourceManifest(sourcesRoot: string): Promise<SourceManifest> {
   const manifestPath = path.join(sourcesRoot, "manifest.json");
-  const file = Bun.file(manifestPath);
-  if (!(await file.exists())) {
-    return EMPTY_SOURCE_MANIFEST;
+  let contents: string;
+  try {
+    contents = await readFile(manifestPath, "utf8");
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return EMPTY_SOURCE_MANIFEST;
+    }
+    throw new SyncDiagnostic(
+      "SNAPSHOT_MANIFEST_UNREADABLE",
+      "Unable to read sources/manifest.json.",
+      { path: "sources/manifest.json" },
+      { cause: error },
+    );
   }
 
   try {
-    return normalizeSourceManifest(SourceManifestSchema.parse(await file.json()));
+    return normalizeSourceManifest(SourceManifestSchema.parse(JSON.parse(contents)));
   } catch (error) {
     throw new SyncDiagnostic(
       "SNAPSHOT_MANIFEST_INVALID",
       "sources/manifest.json does not satisfy the versioned snapshot schema.",
       {
         path: "sources/manifest.json",
-        hint: "Repair or restore the committed manifest before synchronizing.",
+        hint: "Repair the manifest or run synchronization to restore the committed snapshot.",
       },
       { cause: error },
     );
