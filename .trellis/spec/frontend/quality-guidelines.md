@@ -14,6 +14,9 @@
   variant; external bot-protection skips are reported separately.
 - Artifact validation requires the generated 404, robots, sitemap, Pagefind entry point, favicon,
   quality/search routes, per-page canonical URLs, and no duplicated deployment prefix.
+- The release artifact check must prove every module/package and API route carries its validated
+  revision, README or explicit fallback, dependencies, and API quality state. Pagefind's parsed page
+  count must cover at least all module and package/API pages.
 - Screenshot and layout assertions check for blank views, overlap, clipping, unexpected horizontal
   scrolling, and unstable fixed-format controls.
 - Manually inspect canvas screenshots after graph style/layout changes. Browser `scrollWidth`
@@ -47,6 +50,9 @@
   Starlight-owned sidebar link in the nested-base browser suite.
 - Inspect both the hydrated and no-JavaScript page.
 - Confirm focus order, accessible names, contrast, and reduced-motion behavior.
+- Never reuse a static artifact under a different origin/base pair. Repeat the build, artifact,
+  links, browser, search, screenshot, responsive, and axe checks after a production-address or
+  custom-domain change.
 
 ## Astro Server Process Ownership
 
@@ -56,3 +62,8 @@ supported runtime. Package scripts set `ASTRO_DEV_BACKGROUND=0` and
 non-empty and therefore disables automatic agent-environment backgrounding. Do not remove these
 sentinels or add `--bun` to Astro commands without repeating production build and fresh-server
 Playwright checks.
+
+Playwright standalone mode builds before preview. Once a release workflow has validated `dist/`, set
+`PLAYWRIGHT_REUSE_ARTIFACT=1` so its web server starts preview only and the browser/axe suite covers
+the exact artifact that will be uploaded. The build, artifact, link, and browser steps must share
+the same `SITE_URL` and `BASE_PATH`.

@@ -1,1 +1,4 @@
-{"_example": "Fill with {\"file\": \"<path>\", \"reason\": \"<why>\"}. Put spec/research files only — no code paths. Run `python3 .trellis/scripts/get_context.py --mode packages` to list available specs. Delete this line once real entries are added."}
+{"file":".trellis/spec/backend/directory-structure.md","reason":"Place release validation with the existing script/domain ownership boundaries."}
+{"file":".trellis/spec/backend/quality-guidelines.md","reason":"Preserve offline builds, exact deployment inputs, artifact safety, and the complete quality gate."}
+{"file":".trellis/spec/frontend/quality-guidelines.md","reason":"Cover all base variants, Pagefind, browser, screenshot, responsive, and accessibility behavior."}
+{"file":".trellis/tasks/08-10-release-readiness-and-deployment-plan/research/deployment-decisions.md","reason":"Apply the selected Pages target, permissions, domain, rollback, and artifact decisions."}

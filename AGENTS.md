@@ -42,6 +42,9 @@ future `trellis update`.
 - Keep `ASTRO_DEV_BACKGROUND=0` and `ASTRO_PREVIEW_BACKGROUND=0` in the package scripts. Astro 7
   otherwise auto-backgrounds servers in detected agent environments, breaking process ownership in
   Playwright and CI.
+- Set `PLAYWRIGHT_REUSE_ARTIFACT=1` when a workflow has already built and statically validated
+  `dist/`; this makes browser tests preview those exact bytes. Omit it for standalone E2E runs that
+  must build their own artifact.
 - When Python is required, use uv without relocating its project `.venv` or global cache.
 - Use Astro with Starlight in static-output mode. `SITE_URL` and `BASE_PATH` are the only supported
   deployment address inputs; route and asset code must go through the shared URL helper.
@@ -86,6 +89,13 @@ future `trellis update`.
   files out of `sources/` and the deployment artifact.
 - Run `bun run check:artifacts` and `bun run check:links` against every built site/base variant.
   Workflow changes must also pass `tests/unit/workflows.test.ts`; use actionlint when available.
+- Treat `bun run check:artifacts` as the release boundary: every catalog package and API route must
+  match its revision/documentation/dependency/status model, Pagefind must cover the portal, and the
+  artifact must contain no symlinks, temporary/source directories, credentials, or resources outside
+  the generated allowlist.
+- Formal deployment is a separate administrator-approved task. The future Pages build uses the exact
+  address pair documented in `docs/deployment.md`; deployment never synchronizes or rebuilds bytes
+  after artifact validation.
 
 ## Architecture Gate
 

@@ -14,7 +14,8 @@ unit/integration tests, and all catalog/README/Doxygen generators. The site matr
 `/docs/`, and `/products/wtr/docs/` against distinct example origins. Every variant verifies
 canonical URLs, robots, sitemap, Pagefind, required assets, duplicated base paths, recursive clean
 URLs, fragments, and CSS references. Root and product variants also run desktop/mobile Playwright
-and axe checks.
+and axe checks. `PLAYWRIGHT_REUSE_ARTIFACT=1` makes those browser jobs preview the already checked
+`dist/` instead of replacing it with a second build.
 
 ## Snapshot Synchronization
 

@@ -107,6 +107,7 @@ jobs:
         env:
           SITE_URL: https://snapshot-validation.example.invalid
           BASE_PATH: /products/wtr/docs/
+          PLAYWRIGHT_REUSE_ARTIFACT: "1"
         run: bun run test:e2e
 
       - name: Commit validated snapshots

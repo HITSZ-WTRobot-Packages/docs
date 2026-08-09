@@ -126,6 +126,22 @@ test("API and quality routes expose revision-pinned status", async ({ page }, te
   await expectAccessible(page);
 });
 
+test("upstream Chinese documentation remains readable and stable", async ({ page }, testInfo) => {
+  await page.goto("packages/chassis--steering4/");
+  await expect(page.getByRole("heading", { level: 1, name: "Chassis::Steering4" })).toBeVisible();
+  const chineseSection = page.getByRole("heading", { level: 3, name: "适用场景" });
+  await expect(chineseSection).toBeVisible();
+  await expect(page.getByText("四个轮组都同时具备驱动轴和舵向轴。")).toBeVisible();
+  await expectStableLayout(page);
+  await expectAccessible(page);
+  await chineseSection.scrollIntoViewIfNeeded();
+  await page.screenshot({
+    path: testInfo.outputPath("chinese-readme.png"),
+    fullPage: false,
+    animations: "disabled",
+  });
+});
+
 test("Pagefind search finds API symbols and restores URL filters", async ({ page }, testInfo) => {
   await page.goto("search/?q=Quaternion&module=BasicComponents&resultType=api");
   const query = page.getByRole("searchbox", { name: "Search packages and APIs" });

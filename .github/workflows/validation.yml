@@ -80,4 +80,6 @@ jobs:
 
       - name: Run browser and accessibility checks
         if: ${{ matrix.browser }}
+        env:
+          PLAYWRIGHT_REUSE_ARTIFACT: "1"
         run: bun run test:e2e

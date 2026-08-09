@@ -7,6 +7,7 @@ import { z } from "zod";
 const StepSchema = z.looseObject({
   uses: z.string().optional(),
   run: z.string().optional(),
+  env: z.record(z.string(), z.unknown()).optional(),
   with: z.record(z.string(), z.unknown()).optional(),
 });
 
@@ -50,6 +51,9 @@ describe("GitHub Actions contracts", () => {
     expect(serialized).not.toMatch(/pages|deploy/i);
     expect(serialized).toContain("/docs/");
     expect(serialized).toContain("/products/wtr/docs/");
+    const browserSteps = allSteps(workflow).filter((step) => step.run === "bun run test:e2e");
+    expect(browserSteps).toHaveLength(1);
+    expect(browserSteps[0]?.env?.PLAYWRIGHT_REUSE_ARTIFACT).toBe("1");
     for (const step of allSteps(workflow).filter((entry) => entry.uses?.includes("checkout"))) {
       expect(step.with?.["persist-credentials"]).toBe(false);
     }
@@ -66,6 +70,8 @@ describe("GitHub Actions contracts", () => {
     expect(serialized).toContain("git add -- sources/");
     expect(serialized).toContain("git diff --cached --quiet && exit 0");
     expect(serialized).toContain("steps.request.outputs.commit == 'true'");
+    const browserStep = allSteps(workflow).find((step) => step.run === "bun run test:e2e");
+    expect(browserStep?.env?.PLAYWRIGHT_REUSE_ARTIFACT).toBe("1");
     expect(serialized).not.toMatch(/pages|deploy/i);
     for (const step of allSteps(workflow)) {
       expect(step.run ?? "").not.toContain("${{ github.event.client_payload");

@@ -63,6 +63,13 @@
 - A snapshot commit stages only `sources/`, uses a bot identity, runs only after the complete offline
   gate succeeds, and is skipped when no source status exists. Change detection must include tracked
   edits, deletions, and untracked additions. The sync workflow has no push trigger.
+- Release artifact validation joins generated HTML back to the catalog, documentation, and API
+  models for every module/package route. It rejects missing revision/dependency/status content,
+  inadequate Pagefind coverage, symbolic links, temporary/source paths, credential files or
+  signatures, and resources outside the generated documentation allowlist.
+- A Pages deployment is a later administrator-approved change. Build once for the exact production
+  `SITE_URL`/`BASE_PATH`, validate those bytes, retain a digest-addressed rollback artifact, and give
+  only the separate protected deployment job `pages: write` plus `id-token: write`.
 
 ## Review Checklist
 
@@ -86,6 +93,8 @@ network-dependent and keeps synchronization behavior identical locally and in Ac
 bun run sync [--module <allowlisted-name> | --changed] [--dry-run]
 bun run generate
 SITE_URL=<absolute-http-url> BASE_PATH=<absolute-path> bun run build
+SITE_URL=<same-build-origin> BASE_PATH=<same-build-path> bun run check:artifacts
+SITE_URL=<same-build-origin> BASE_PATH=<same-build-path> PLAYWRIGHT_REUSE_ARTIFACT=1 bun run test:e2e
 ASTRO_DEV_BACKGROUND=0 bun run dev
 ASTRO_PREVIEW_BACKGROUND=0 bun run preview
 ```
@@ -100,6 +109,8 @@ allowlisted module. `--dry-run` composes with all modes and performs no reposito
 | Synchronization | Allowlist, mode, optional module, current manifest, upstream Git repositories | Atomically replaced module directories plus deterministic `sources/manifest.json` |
 | Generation | Valid committed `sources/` tree and manifest | Versioned in-memory or ignored generated catalogs; no snapshot mutation |
 | Build | `SITE_URL` absolute `http:`/`https:` URL; normalized absolute `BASE_PATH` | Static `dist/` whose internal routes and assets include the configured base |
+| Artifact check | The built `dist/`, the same address pair, and validated portal data | Release summary with module/package/API/HTML/Pagefind/file counts; no writes |
+| Release browser check | Validated `dist/`, same address pair, `PLAYWRIGHT_REUSE_ARTIFACT=1` | Local preview and browser/axe results without rebuilding `dist/` |
 | Local server | The same site/base inputs and an Astro foreground sentinel | A foreground process owned and terminated by the invoking terminal or Playwright worker |
 
 `BASE_PATH` defaults to `/`, starts and ends with `/`, and contains no `.` or `..` segment. Normal
@@ -115,15 +126,22 @@ generation and build commands make zero upstream network requests.
 | Unchanged SHA in changed mode | Report skipped; write nothing |
 | Identical full synchronization | Exit zero and leave the worktree byte-identical |
 | Network attempt during generation/build | Test failure; no fallback fetch |
+| Missing package/API route or mismatched revision, documentation, dependency, or status | Artifact check fails with the affected route/package; do not upload |
+| Symlink, temporary/source path, credential signal, or non-allowlisted resource in `dist/` | Artifact check fails with the relative path; do not upload |
+| Artifact address differs from deployment origin/base | Reject the artifact and rebuild; static artifacts are not address-portable |
+| Release E2E omits `PLAYWRIGHT_REUSE_ARTIFACT=1` | Invalid artifact handoff; Playwright's standalone mode rebuilds and replaces `dist/` |
 | Astro server command exits while its server remains alive | Invalid process ownership; restore the foreground sentinel in the package script |
 
 ### 5. Good / Base / Bad Cases
 
 - Good: `SITE_URL=https://docs.example.org BASE_PATH=/products/wtr/docs/ bun run build`
-  produces base-aware canonical, asset, search, and content links.
+  followed by the same environment for `bun run check:artifacts` produces and validates base-aware
+  canonical, asset, search, and content links.
 - Base: `BASE_PATH=/ bun run build` builds from committed snapshots with network disabled.
 - Local: `bun run dev` stays in the foreground even when Astro detects an agent environment.
 - Bad: `BASE_PATH=../../docs bun run build` fails before Astro emits output.
+- Bad: building with `BASE_PATH=/` and uploading those bytes under `/docs/` is rejected even when
+  every file exists, because canonical URLs and static asset paths are already compiled.
 
 ### 6. Tests Required
 
@@ -135,6 +153,11 @@ generation and build commands make zero upstream network requests.
   passing only Bun unit/CLI tests does not prove runtime compatibility.
 - Browser and static-link tests assert canonical URLs, Pagefind assets, Markdown resources, and deep
   links under each configured base.
+- Artifact tests map every catalog module/package and API reference to built HTML, assert revision,
+  README/fallback, dependency, and status text, parse Pagefind's page count, compare resource output
+  with the generated allowlist, and inject representative unsafe paths/credential signatures.
+- Workflow contract tests require release browser steps to set `PLAYWRIGHT_REUSE_ARTIFACT=1`; run at
+  least one root and nested E2E suite against a prebuilt artifact.
 - A Playwright run with no pre-existing server must start, await, and stop its configured web server
   without leaving an Astro background process.
 
@@ -146,6 +169,16 @@ const packageUrl = `/packages/${slug}/`;
 
 // Correct: every internal path crosses the shared base-aware helper.
 const packageUrl = sitePath("packages", slug);
+```
+
+```text
+# Wrong: validate root bytes and deploy them as a repository-path site.
+SITE_URL=https://example.invalid BASE_PATH=/ bun run build
+# upload dist/ to https://example.invalid/docs/
+
+# Correct: build and validate the exact deployment address pair before upload.
+SITE_URL=https://example.invalid BASE_PATH=/docs/ bun run build
+SITE_URL=https://example.invalid BASE_PATH=/docs/ bun run check:artifacts
 ```
 
 ```jsonc

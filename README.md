@@ -146,6 +146,10 @@ retry command because it has no generated Pagefind index. Search query and filte
 in the URL. All portal links, Pagefind assets, and graph links are derived from `BASE_PATH` and are
 covered at root and nested deployment prefixes by Playwright.
 
+After a release artifact has already passed `check:artifacts` and `check:links`, run
+`PLAYWRIGHT_REUSE_ARTIFACT=1 bun run test:e2e` to test those exact bytes. Without the flag,
+Playwright performs its normal standalone build before previewing.
+
 ## Automation
 
 `.github/workflows/validation.yml` runs the offline quality gate and static-site matrix from the
@@ -155,6 +159,21 @@ and commits only `sources/` when requested and changed. Neither workflow deploys
 
 See [docs/automation.md](docs/automation.md) for workflow inputs, repository-dispatch payloads,
 permissions, no-op behavior, pinned tooling, and failure semantics.
+
+## Deployment Readiness
+
+`bun run check:artifacts` is the executable release-artifact contract. In addition to canonical,
+robots, sitemap, 404, and Pagefind assets, it verifies every module/package route against the
+catalog, README/fallback, revision, dependency, and API data. It rejects temporary paths, raw
+snapshots, Git metadata, virtual environments, credentials, symbolic links, and upstream resources
+outside the generated allowlist.
+
+The selected future target is the GitHub Pages project site built with
+`SITE_URL=https://hitsz-wtrobot-packages.github.io` and `BASE_PATH=/docs/`. A custom domain requires
+a new root-base build; production artifacts are not portable between address pairs. No deployment
+workflow is enabled in this repository. See [docs/deployment.md](docs/deployment.md) for the exact
+permissions, environment protection, custom-domain procedure, retained-artifact rollback, rollout
+drills, stop conditions, and post-deployment checklist.
 
 ## Architecture Issues
 

@@ -22,6 +22,26 @@ Additional context and resolution notes.
 
 ## Open Issues
 
+## DEPLOYMENT-001: GitHub Pages administrative state is not yet approved
+
+- Status: open
+- Scope: deployment
+- Owner: `HITSZ-WTRobot-Packages/docs` repository administrators
+- Evidence: The repository remote identifies `HITSZ-WTRobot-Packages/docs`, but a read-only GitHub
+  API repository/Pages-state probe returned HTTP 404 from the current environment on 2026-08-10. No
+  deployment workflow or `CNAME` exists in the repository.
+- Impact: The artifact can be built and fully validated for the default project-site address, but a
+  production deployment cannot be enabled until an administrator confirms Pages source, target
+  domain, Actions policy, protected `github-pages` environment, reviewers, and `main` branch rules.
+  This does not change the static snapshot or base-path architecture.
+- Workaround: Keep deployment disabled, use
+  `SITE_URL=https://hitsz-wtrobot-packages.github.io BASE_PATH=/docs/` as the default release
+  contract, and follow `docs/deployment.md` in the later deployment task.
+- Close condition: An administrator records the selected domain/address pair, enables GitHub Actions
+  as the Pages source, configures branch/environment protections and required permissions, and the
+  first/repeat/rollback drills plus post-deployment checklist pass.
+- Last verified: 2026-08-10
+
 ## UPSTREAM-001: ArmController has no package manifest, README, or license file
 
 - Status: open
