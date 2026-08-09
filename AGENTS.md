@@ -53,6 +53,9 @@ future `trellis update`.
 
 - `sources/` is a committed, deterministic snapshot. Ordinary build, generation, test, and preview
   commands must work without contacting upstream module repositories.
+- Preserve synchronized files byte-for-byte so their manifest SHA-256 values remain valid. The
+  `sources/**` Git whitespace exemption applies only to upstream bytes; do not extend it to
+  repository-owned code or documentation.
 - Only the synchronization CLI and its manually triggered GitHub Action may access upstream
   repositories. Never modify or push to an upstream module repository.
 - Parse TOML, Markdown, XML, schemas, Git output, search indexes, and dependency layouts with the
