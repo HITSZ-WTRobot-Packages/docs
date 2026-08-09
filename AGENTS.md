@@ -31,6 +31,12 @@ Managed by Trellis. Edits outside this block are preserved; edits inside may be 
   deployment address inputs; route and asset code must go through the shared URL helper.
 - Use Doxygen only as a build-time producer of XML. The site consumes normalized TypeScript data,
   not Doxygen HTML.
+- Use Zod for runtime schemas, smol-toml for `cpkg.toml`, unified/remark/rehype for Markdown and
+  sanitized HTML, fast-xml-parser for Doxygen XML, simple-git for Git operations, Execa for bounded
+  external processes, Commander for CLI arguments, and tinyglobby for input discovery.
+- Use Starlight's Pagefind integration for search, Cytoscape.js for dependency graph traversal and
+  layout, Linkinator for static links, Playwright plus axe for browser/accessibility checks, and
+  Astro Icon with the Lucide Iconify set for UI icons.
 
 ## Data And Network Boundaries
 

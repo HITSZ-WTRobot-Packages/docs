@@ -3,7 +3,10 @@
 ## Required Patterns
 
 - Bun is the only JavaScript runtime and package manager; commit only `bun.lock`.
-- External formats are parsed with the selected maintained libraries and validated with Zod.
+- External formats are parsed with the selected maintained libraries and validated with Zod:
+  smol-toml for TOML, unified/remark/rehype for Markdown and HTML, and fast-xml-parser for XML.
+- Git operations use simple-git, Doxygen and other bounded processes use Execa, CLI options use
+  Commander, and filesystem discovery uses tinyglobby.
 - Normal builds, generation, and validation are offline and consume only committed snapshots.
 - Shared URL, safe-path, checksum, slug, and dependency helpers are the single sources of truth.
 - All generated ordering is explicit and covered by repeat-run tests.
@@ -17,6 +20,8 @@
   library.
 - `any`, unchecked type assertions, silent schema coercion, or unchecked path joins.
 - Hand-edited files under `sources/`.
+- Alternate foundational parsers, Git/process wrappers, CLI parsers, or glob libraries without an
+  updated research decision and compatibility proof.
 
 ## Tests
 

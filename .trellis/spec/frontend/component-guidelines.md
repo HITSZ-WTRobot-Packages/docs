@@ -35,6 +35,8 @@ const { revision, sourceUrl } = Astro.props;
 - Use stable grid tracks, min/max widths, and aspect ratios for catalog rows and graph controls.
 - Letter spacing is `0`; typography never scales directly with viewport width.
 - Use the selected icon library for UI actions. Do not draw custom SVG icons.
+- The selected icon stack is Astro Icon with `@iconify-json/lucide`; import individual icons so the
+  deployed site does not ship a complete icon set.
 
 ## Accessibility
 
@@ -51,3 +53,4 @@ const { revision, sourceUrl } = Astro.props;
 - Nesting cards, clipping long identifiers, or using color as the only quality indicator.
 - Linking to an internal route with a raw leading slash.
 - Showing an internal dependency as external because components reclassify catalog data.
+- Replacing Cytoscape's graph semantics/layout or Starlight's Pagefind engine with custom code.

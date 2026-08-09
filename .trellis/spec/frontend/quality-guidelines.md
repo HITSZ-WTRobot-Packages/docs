@@ -8,8 +8,10 @@
   robots, 404 behavior, and Pagefind assets.
 - Playwright covers desktop and mobile navigation, search, dependency graph keyboard/pointer use,
   deep links, long Chinese/English text, and reduced motion.
-- Automated accessibility checks run on each major page type and report zero serious or critical
-  violations.
+- Automated accessibility checks use `@axe-core/playwright` on each major page type and report zero
+  serious or critical violations.
+- Linkinator checks recursive clean URLs, fragments, and CSS references in each built base-path
+  variant; external bot-protection skips are reported separately.
 - Screenshot and layout assertions check for blank views, overlap, clipping, unexpected horizontal
   scrolling, and unstable fixed-format controls.
 
