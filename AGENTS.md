@@ -1,0 +1,62 @@
+<!-- TRELLIS:START -->
+# Trellis Instructions
+
+These instructions are for AI assistants working in this project.
+
+This project is managed by Trellis. The working knowledge you need lives under `.trellis/`:
+
+- `.trellis/workflow.md` — development phases, when to create tasks, skill routing
+- `.trellis/spec/` — package- and layer-scoped coding guidelines (read before writing code in a given layer)
+- `.trellis/workspace/` — per-developer journals and session traces
+- `.trellis/tasks/` — active and archived tasks (PRDs, research, jsonl context)
+
+If a Trellis command is available on your platform (e.g. `/trellis:finish-work`, `/trellis:continue`), prefer it over manual steps. Not every platform exposes every command.
+
+If you're using Codex or another agent-capable tool, additional project-scoped helpers may live in:
+- `.agents/skills/` — reusable Trellis skills
+- `.codex/agents/` — optional custom subagents
+
+Managed by Trellis. Edits outside this block are preserved; edits inside may be overwritten by a future `trellis update`.
+
+<!-- TRELLIS:END -->
+
+# Project Engineering Contract
+
+## Toolchain
+
+- Use Bun for every JavaScript/TypeScript command and dependency change. The only allowed lockfile
+  is `bun.lock`; never use npm, pnpm, or Yarn commands.
+- When Python is required, use uv without relocating its project `.venv` or global cache.
+- Use Astro with Starlight in static-output mode. `SITE_URL` and `BASE_PATH` are the only supported
+  deployment address inputs; route and asset code must go through the shared URL helper.
+- Use Doxygen only as a build-time producer of XML. The site consumes normalized TypeScript data,
+  not Doxygen HTML.
+
+## Data And Network Boundaries
+
+- `sources/` is a committed, deterministic snapshot. Ordinary build, generation, test, and preview
+  commands must work without contacting upstream module repositories.
+- Only the synchronization CLI and its manually triggered GitHub Action may access upstream
+  repositories. Never modify or push to an upstream module repository.
+- Parse TOML, Markdown, XML, schemas, Git output, search indexes, and dependency layouts with the
+  selected maintained libraries. Do not add an ad hoc parser or layout algorithm.
+- Validate external input at the boundary before converting it into internal catalog types.
+
+## Required Quality
+
+- Run the repository's convention, formatting, lint, typecheck, unit, integration, link, search,
+  browser, screenshot, responsive, and accessibility checks in proportion to the changed surface.
+- Synchronization must support full, per-module, changed-only, and dry-run operation; preserve the
+  last valid snapshot on failure; and leave no diff when upstream revisions are unchanged.
+- New UI must be keyboard accessible, respect reduced motion, avoid text overlap, and use the
+  configured icon library instead of hand-authored UI SVGs.
+- Keep build artifacts, temporary clones, Git metadata, `.venv`, credentials, and unapproved source
+  files out of `sources/` and the deployment artifact.
+
+## Architecture Gate
+
+Record problems in `issues.md` with evidence, impact, workaround, owner, and close condition. Pause
+for user input if snapshot size, licensing, cross-root references, Doxygen availability, Actions
+write permissions, library availability, or static base-path behavior would force a different
+architecture. Routine upstream-content deficiencies should be recorded and handled with explicit
+quality states.

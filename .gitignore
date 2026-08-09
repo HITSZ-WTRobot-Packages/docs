@@ -1,0 +1,40 @@
+# Bun and Astro
+node_modules/
+.astro/
+.cache/
+dist/
+
+# Test and quality output
+coverage/
+playwright-report/
+test-results/
+*.lcov
+
+# Generated API intermediates
+.doxygen/
+
+# Python through uv
+.venv/
+__pycache__/
+*.py[cod]
+
+# Synchronizer temporary data
+.sync-tmp/
+*.tmp
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.local
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# Forbidden package-manager lockfiles are ignored locally and rejected by the convention check.
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+npm-shrinkwrap.json
