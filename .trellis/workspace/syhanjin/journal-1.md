@@ -221,3 +221,37 @@ Added repository-owned Netlify configuration, shared pinned Doxygen installation
 ### Next Steps
 
 - None - task complete
+
+
+## Session 7: Persist generated documentation snapshots
+
+**Date**: 2026-08-10
+**Task**: Persist generated documentation snapshots
+**Branch**: `main`
+
+### Summary
+
+Moved package and Doxygen API production into synchronization, migrated sources to deterministic documentation and normalized JSON artifacts, configured a pinned synchronization-only Doxygen Action, and verified offline root/nested builds plus full quality gates.
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `accd08d` | (see git log) |
+| `9d3c635` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete

@@ -8,7 +8,7 @@
 
 <!-- @@@auto:current-status -->
 - **Active File**: `journal-1.md`
-- **Total Sessions**: 6
+- **Total Sessions**: 7
 - **Last Active**: 2026-08-10
 <!-- @@@/auto:current-status -->
 
@@ -19,7 +19,7 @@
 <!-- @@@auto:active-documents -->
 | File | Lines | Status |
 |------|-------|--------|
-| `journal-1.md` | ~223 | Active |
+| `journal-1.md` | ~257 | Active |
 <!-- @@@/auto:active-documents -->
 
 ---
@@ -29,6 +29,7 @@
 <!-- @@@auto:session-history -->
 | # | Date | Title | Commits | Branch |
 |---|------|-------|---------|--------|
+| 7 | 2026-08-10 | Persist generated documentation snapshots | `accd08d`, `9d3c635` | `main` |
 | 6 | 2026-08-10 | 回退 Netlify 支持并降级 Doxygen | `51420f8`, `29ee2c1` | `main` |
 | 5 | 2026-08-10 | Add Netlify deployment support | `b56a8a7` | `main` |
 | 4 | 2026-08-10 | Make Validation manually triggered | `9519e8b`, `385f4b2` | `main` |
