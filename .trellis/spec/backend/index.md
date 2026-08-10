@@ -1,8 +1,8 @@
 # Build Pipeline Guidelines
 
-The backend layer in this repository is build-time TypeScript: synchronization, validation,
-catalog generation, Markdown transformation, and Doxygen XML normalization. There is no server,
-database, or runtime API.
+The backend layer in this repository is build-time TypeScript: synchronization, persisted catalog
+validation, Markdown transformation, and synchronization-time Doxygen XML normalization. There is
+no server, database, or runtime API.
 
 ## Pre-Development Checklist
 

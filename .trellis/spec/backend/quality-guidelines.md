@@ -16,14 +16,18 @@
   rehype-raw, rewrites references in HAST, assigns GitHub-compatible heading slugs, sanitizes, then
   serializes. Reordering or bypassing this pipeline requires security and link fixture updates.
 - All generated ordering is explicit and covered by repeat-run tests.
-- Doxygen must match `.doxygen-version`. Each target receives a temporary Doxyfile containing only
-  checksum-verified owned inputs; HTML, source browsing, compilation, recursive input discovery,
-  and normal-build network access remain disabled.
+- During synchronization, Doxygen must match `.doxygen-version`. Each target receives a temporary
+  Doxyfile containing only explicitly owned inputs from the temporary clone; HTML, source browsing,
+  compilation, recursive input discovery, and normal-build network access remain disabled.
+- Ordinary generation, build, validation, preview, and deployment load the committed per-module
+  package/API artifacts after checksum and schema validation. They never require `cpkg.toml`, source
+  files, Doxygen XML, or a Doxygen executable.
 - A source belongs to the deepest package directory containing it. Every catalog package receives
   an API reference, and source files outside all package roots receive a module-level reference.
 - Doxygen target failures become explicit `failed` references. No inputs, no public symbols, and
-  missing descriptions become `empty` or `sparse` quality states. Missing/mismatched tooling and
-  invalid snapshot bytes fail the complete generation before target isolation.
+  missing descriptions become `empty` or `sparse` quality states. Missing/mismatched tooling fails
+  synchronization before target isolation. Invalid committed artifact bytes fail ordinary
+  generation/build without attempting regeneration.
 
 ## Forbidden Patterns
 
@@ -33,7 +37,7 @@
 - Shelling out with interpolated commands; pass argument arrays through the selected process/Git
   library.
 - `any`, unchecked type assertions, silent schema coercion, or unchecked path joins.
-- Hand-edited files under `sources/`.
+- Hand-edited files under `sources/`, or committed raw source/package-manifest/XML data.
 - Alternate foundational parsers, Git/process wrappers, CLI parsers, or glob libraries without an
   updated research decision and compatibility proof.
 
@@ -49,7 +53,8 @@
   HTML sanitization, missing-README fallbacks, missing targets, and root escapes.
 - Doxygen fixtures cover C, C++, header-only, compiled, empty, and sparsely documented packages.
 - Doxygen integration checks assert exact version gating, target failure isolation, no repository
-  HTML/LaTeX output, source ownership uniqueness, pinned revisions, and deterministic serialization.
+  XML/HTML/LaTeX output, source ownership uniqueness, pinned revisions, and deterministic
+  serialization. Snapshot loader tests prove the site consumes committed artifacts without source.
 - The quality gate runs convention, format, lint, typecheck, unit, integration, generation, build,
   static-link, search, browser, screenshot, responsive, accessibility, and artifact checks.
 - Validation Actions use committed snapshots, are triggered only by `workflow_dispatch`, use
@@ -59,8 +64,8 @@
 - Snapshot synchronization is limited to `workflow_dispatch` and the named `repository_dispatch`
   type, uses serialized concurrency, and grants `contents: write` only there. Structured event
   parsing must validate mode, module, dry-run, and commit before invoking the local sync CLI.
-- External Actions use immutable full commit SHAs. Downloaded Doxygen binaries must match both
-  `.doxygen-version` and the release asset SHA-256 before entering `PATH`.
+- External Actions use immutable full commit SHAs. Only synchronization uses the pinned dedicated
+  Doxygen setup Action; the sync CLI verifies its version against `.doxygen-version` before cloning.
 - A snapshot commit stages only `sources/`, uses a bot identity, runs only after the complete offline
   gate succeeds, and is skipped when no source status exists. Change detection must include tracked
   edits, deletions, and untracked additions. The sync workflow has no push trigger.
@@ -84,8 +89,8 @@
 
 ### 1. Scope / Trigger
 
-Apply this contract whenever changing `.doxygen-version`, the pinned Doxygen archive, or the
-generator's tool-version gate. Official Doxygen release binaries may append their release commit to
+Apply this contract whenever changing `.doxygen-version`, the pinned synchronization Doxygen Action,
+or the producer's tool-version gate. Official Doxygen release binaries may append their release commit to
 `--version`, while distribution packages may report only the semantic version.
 
 ### 2. Signatures
@@ -100,7 +105,7 @@ ApiCatalog.doxygenVersion: X.Y.Z
 
 - Parse the complete trimmed stdout, not a line prefix or whitespace-delimited token.
 - Accept only the two declared formats and compare the normalized `X.Y.Z` with the repository lock.
-- Store only the normalized semantic version in the API catalog.
+- Store only the normalized semantic version in each module API catalog.
 - Preserve the complete reported stdout in `DOXYGEN_VERSION_MISMATCH` diagnostics.
 
 ### 4. Validation & Error Matrix
@@ -115,15 +120,16 @@ ApiCatalog.doxygenVersion: X.Y.Z
 
 ### 5. Good / Base / Bad Cases
 
-- Good: official `1.9.8 (c2fe5c3e4986974eb2a97608b24086683502f07f)` normalizes to `1.9.8`.
-- Base: distribution package output `1.9.8` remains `1.9.8`.
-- Bad: `1.9.8-dev`, `1.9.8 extra`, or `1.9.9` cannot satisfy a `1.9.8` lock.
+- Good: official `1.16.1 (<40-character lowercase release commit>)` normalizes to `1.16.1`.
+- Base: distribution package output `1.16.1` remains `1.16.1`.
+- Bad: `1.16.1-dev`, `1.16.1 extra`, or `1.16.0` cannot satisfy a `1.16.1` lock.
 
 ### 6. Tests Required
 
 - Integration fixtures cover both accepted output forms and assert the normalized catalog version.
 - Version mismatch tests assert the stable diagnostic code and expected version context.
-- A real pinned release binary runs the snapshot generator before updating its Action checksum.
+- A real locked release binary runs synchronization fixtures and a snapshot generation before the
+  workflow version is updated.
 
 ### 7. Wrong vs Correct
 
@@ -156,6 +162,12 @@ SITE_URL=<same-build-origin> BASE_PATH=<same-build-path> PLAYWRIGHT_REUSE_ARTIFA
 ASTRO_DEV_BACKGROUND=0 bun run dev
 ASTRO_PREVIEW_BACKGROUND=0 bun run preview
 Validation workflow trigger: workflow_dispatch
+
+sources/manifest.json: formatVersion = 2
+sources/modules/<module>/content/<upstream-doc-path>
+sources/modules/<module>/package-catalog.json
+sources/modules/<module>/api-catalog.json
+ModuleSnapshot.producerFingerprint: 64 lowercase hexadecimal SHA-256 characters
 ```
 
 `--module` and `--changed` are mutually exclusive. With neither, synchronization processes every
@@ -165,8 +177,8 @@ allowlisted module. `--dry-run` composes with all modes and performs no reposito
 
 | Boundary | Input | Output |
 | --- | --- | --- |
-| Synchronization | Allowlist, mode, optional module, current manifest, upstream Git repositories | Atomically replaced module directories plus deterministic `sources/manifest.json` |
-| Generation | Valid committed `sources/` tree and manifest | Versioned in-memory or ignored generated catalogs; no snapshot mutation |
+| Synchronization | Allowlist, mode, optional module, current manifest, upstream Git repositories, locked Doxygen | Atomically replaced content plus per-module package/API artifacts and deterministic `sources/manifest.json` |
+| Generation | Valid committed `sources/` content, package/API artifacts, and manifest | Validated aggregate in-memory catalogs; no Doxygen, network, or snapshot mutation |
 | Build | `SITE_URL` absolute `http:`/`https:` URL; normalized absolute `BASE_PATH` | Static `dist/` whose internal routes and assets include the configured base |
 | Artifact check | The built `dist/`, the same address pair, and validated portal data | Release summary with module/package/API/HTML/Pagefind/file counts; no writes |
 | Release browser check | Validated `dist/`, same address pair, `PLAYWRIGHT_REUSE_ARTIFACT=1` | Local preview and browser/axe results without rebuilding `dist/` |
@@ -182,10 +194,13 @@ generation and build commands make zero upstream network requests.
 | --- | --- |
 | Unknown module or incompatible flags | Exit non-zero with `CLI_INVALID_ARGUMENT`; write nothing |
 | Invalid origin or base path | Exit non-zero with `CONFIG_INVALID_URL`; do not start a build |
-| Clone, reference, license, size, or checksum failure | Exit non-zero; retain the prior snapshot |
-| Unchanged SHA in changed mode | Report skipped; write nothing |
+| Clone, reference, license, Doxygen, catalog, size, or checksum failure | Exit non-zero; retain the prior snapshot |
+| Unchanged SHA and producer fingerprint in changed mode | Report skipped; write nothing |
+| Unchanged SHA but changed Doxygen version or producer fingerprint | Regenerate the module artifacts |
 | Identical full synchronization | Exit zero and leave the worktree byte-identical |
 | Network attempt during generation/build | Test failure; no fallback fetch |
+| Missing, corrupt, or revision-mismatched persisted package/API artifact | Fail with a catalog/Doxygen diagnostic; do not run a producer fallback |
+| Persisted API artifact Doxygen version differs from `.doxygen-version` | Fail with `DOXYGEN_VERSION_MISMATCH`; synchronize all invalidated modules |
 | Missing package/API route or mismatched revision, documentation, dependency, or status | Artifact check fails with the affected route/package; do not upload |
 | Symlink, temporary/source path, credential signal, or non-allowlisted resource in `dist/` | Artifact check fails with the relative path; do not upload |
 | Artifact address differs from deployment origin/base | Reject the artifact and rebuild; static artifacts are not address-portable |
@@ -201,9 +216,12 @@ generation and build commands make zero upstream network requests.
 - Good: an operator dispatches Validation for the intended ref and records the resolved commit from
   the successful run.
 - Base: `BASE_PATH=/ bun run build` builds from committed snapshots with network disabled.
+- Base: `bun run generate` succeeds on a host with no Doxygen executable because it validates the
+  committed package/API artifacts.
 - Local: `bun run dev` stays in the foreground even when Astro detects an agent environment.
 - Bad: `BASE_PATH=../../docs bun run build` fails before Astro emits output.
 - Bad: a pull request or push to `main` starts Validation without an explicit dispatch.
+- Bad: an ordinary build scans `cpkg.toml`, invokes Doxygen, or regenerates a missing artifact.
 - Bad: building with `BASE_PATH=/` and uploading those bytes under `/docs/` is rejected even when
   every file exists, because canonical URLs and static asset paths are already compiled.
 
@@ -211,7 +229,9 @@ generation and build commands make zero upstream network requests.
 
 - CLI unit tests assert flag exclusivity, allowlist validation, diagnostic code, and no writes.
 - Synchronizer integration tests hash the previous tree before injected failures and assert exact
-  equality afterward; unchanged reruns assert an empty Git diff.
+  equality afterward; unchanged reruns assert an empty Git diff; producer changes force regeneration.
+- Snapshot integration tests assert that `sources/` contains no C/C++ source, `cpkg.toml`, or XML;
+  every module has checksum-verified package/API artifacts at its manifest revision.
 - Offline build tests deny network and assert successful root and nested-base artifacts.
 - At least one production build must import each shared snapshot loader through an Astro route;
   passing only Bun unit/CLI tests does not prove runtime compatibility.
@@ -253,6 +273,14 @@ SITE_URL=https://example.invalid BASE_PATH=/docs/ bun run check:artifacts
 
 // Correct: Bun owns script/package resolution and Astro uses its declared runtime.
 { "build": "astro build", "dev": "ASTRO_DEV_BACKGROUND=0 astro dev" }
+```
+
+```ts
+// Wrong: deployment silently becomes an API producer and requires host Doxygen.
+const api = await generateApiCatalogFromSource();
+
+// Correct: synchronization already produced the artifact; builds verify and consume it.
+const api = await loadApiCatalog();
 ```
 
 ```yaml

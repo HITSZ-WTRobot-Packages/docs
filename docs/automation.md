@@ -8,7 +8,7 @@
 Actions 中选择要验证的 ref；推送到 `main`、拉取请求和快照机器人提交都不会自动启动它。工作流只有
 `contents: read` 权限，检出时不保留凭据，并且从不调用同步命令或访问上游模块仓库。
 
-离线质量作业执行冻结依赖安装、约定检查、格式检查、lint、Astro 类型检查、单元/集成测试，以及全部目录、README 和 Doxygen 生成器。站点矩阵分别使用不同的示例源站构建
+离线质量作业执行冻结依赖安装、约定检查、格式检查、lint、Astro 类型检查、单元/集成测试，以及已提交的软件包目录、README 和 API 目录验证。它不安装或运行 Doxygen。站点矩阵分别使用不同的示例源站构建
 `/`、`/docs/` 和 `/products/wtr/docs/`。每个变体都会验证 canonical
 URL、robots、sitemap、Pagefind、必需资源、重复 base path、递归 clean
 URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/移动 Playwright 与 axe 检查。`PLAYWRIGHT_REUSE_ARTIFACT=1`
@@ -52,8 +52,9 @@ URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/�
 }
 ```
 
-事件适配器使用参数数组调用
-`bun run sync`，不会把工作流表达式插值到命令中。变更检测包括已跟踪修改、删除和新的未跟踪快照文件。无变化的运行报告 no-op 且不创建提交。有变化的运行必须通过完整离线门禁、嵌套站点构建、产物/链接检查以及 Playwright/axe，之后才允许执行可选提交。该提交只暂存
+事件适配器使用参数数组调用 `bun run sync`，不会把工作流表达式插值到命令中。同步在临时克隆内发现
+`cpkg.toml`
+和源码，使用锁定的 Doxygen 生成规范化目录，并只将文档、资源、许可证和目录 JSON 写入快照。变更检测包括已跟踪修改、删除和新的未跟踪快照文件。无变化的运行报告 no-op 且不创建提交。有变化的运行必须通过完整离线门禁、嵌套站点构建、产物/链接检查以及 Playwright/axe，之后才允许执行可选提交。该提交只暂存
 `sources/`，使用 GitHub Actions 机器人身份，并在提交消息中包含
 `[snapshot-sync]`。工作流没有 push 触发器，因此机器人提交不会递归启动另一次同步，也不会自动启动
 `Validation`；需要验证该提交时，操作者必须为对应 ref 手动运行 `Validation`。
@@ -64,9 +65,9 @@ URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/�
 ## 固定工具链
 
 外部 Actions 均引用完整提交 SHA。本地 setup Action 根据软件包契约安装 Bun 1.3.14，执行
-`bun install --frozen-lockfile`，并下载官方 Doxygen 1.9.8
-Linux 产物。提取前验证其 SHA-256，版本必须等于
-`.doxygen-version`。只有运行 Playwright 的作业会安装 Chromium。
+`bun install --frozen-lockfile`，并按需安装 Chromium。只有同步作业通过固定到完整提交 SHA 的
+`ssciwr/doxygen-install` Action 安装 `.doxygen-version` 指定的 Doxygen
+1.16.1；同步 CLI 会在读取上游前再次验证其完整版本输出。验证、构建和部署作业均不安装 Doxygen。
 
 修改工作流结构时运行：
 

@@ -2,7 +2,7 @@
 
 ## State Categories
 
-- Build state: validated snapshot and generated catalogs; immutable during a deployed build.
+- Build state: validated content plus persisted package/API catalogs; immutable during a deployed build.
 - Route state: module, package, symbol, and supplemental-page slugs in the URL.
 - Filter state: search text, module, namespace, result type, graph direction, and depth. Store
   shareable values in URL query parameters.

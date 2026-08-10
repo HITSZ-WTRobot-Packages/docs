@@ -21,7 +21,7 @@
 | ---------------- | ---------------------------------------------------- |
 | `src/`           | Astro 页面、组件、构建期加载器和共享 TypeScript 契约 |
 | `scripts/`       | 用于同步、生成和验证的 Bun CLI                       |
-| `sources/`       | 纳入版本控制的上游快照及其清单                       |
+| `sources/`       | 纳入版本控制的文档、资源和规范化目录快照             |
 | `tests/`         | 单元、集成、浏览器、无障碍和夹具测试                 |
 | `public/`        | 本仓库拥有的静态资源                                 |
 | `docs/`          | 运维和部署文档                                       |
@@ -64,16 +64,21 @@ bun run sync --changed               # 跳过 SHA 完整且未变化的模块
 bun run sync --changed --dry-run     # 只验证和报告，不写入 sources/
 ```
 
-同步闭包包含可用的 `cpkg.toml`、README、README 传递引用的 Markdown/资源、C/C++
-Doxygen 输入和许可证文件。本地 Markdown 引用必须留在所属模块内；符号链接、缺失目标、不安全路径或超出配置大小限制都会导致操作失败。缺失软件包清单、README 或许可证会作为明确的上游质量警告保留，使纯源码模块仍具有可复现快照。
+同步过程在临时克隆中读取 `cpkg.toml`
+和 C/C++ 源码，运行 Doxygen，并只把 README、README 传递引用的 Markdown/资源、许可证，以及规范化的软件包/API
+JSON 目录写入快照。原始 `cpkg.toml`、C/C++ 源码和 Doxygen XML 不会进入
+`sources/`。本地 Markdown 引用必须留在所属模块内；指向未缓存源码或清单的链接会记录为固定修订版本的上游引用。符号链接、缺失文档目标、不安全路径或超出配置大小限制都会导致操作失败。缺失软件包清单、README 或许可证会作为明确的上游质量警告保留，使纯源码模块仍具有可复现快照。
 
-每次成功同步的快照保存在 `sources/modules/<module>/`。`sources/manifest.json` 使用
-`formatVersion: 1`，记录模块仓库、分支、完整及缩写 SHA、总字节数、警告、许可证路径，以及每个选中文件的路径、类型、字节数和 SHA-256。所有数组均稳定排序，清单不含时间戳，因此相同输入再次运行后工作树逐字节不变。试运行或验证失败时保留最后一份完整快照。
+每次成功同步的快照保存在 `sources/modules/<module>/`。文档和资源位于 `content/`，模块根目录保存
+`package-catalog.json` 与 `api-catalog.json`。`sources/manifest.json` 使用
+`formatVersion: 2`，记录模块仓库、分支、完整及缩写 SHA、生产器指纹、总字节数、警告、未缓存引用，以及全部内容和目录产物的路径、类型、字节数与 SHA-256。所有数组均稳定排序，清单不含时间戳；只要上游 SHA、Doxygen 版本和相关生产器代码不变，`--changed`
+会跳过模块，相同输入的完整同步也会逐字节产生相同结果。试运行或任一目录验证失败时保留最后一份完整快照。
 
 ## 软件包目录
 
-`bun run generate:catalog` 验证所有已同步的
-`cpkg.toml`，并在不访问网络、不产生已跟踪输出的情况下在内存中构建共享目录。软件包发现以快照清单为准，因此同步后会自动纳入新增的上游软件包。
+`bun run generate:catalog` 验证每个模块已提交的 `package-catalog.json`
+及其清单校验和，并在不访问网络、不产生已跟踪输出的情况下合并共享目录。同步阶段从临时克隆自动发现
+`cpkg.toml`，因此上游新增的软件包会在下一次同步后进入目录。
 
 目录接受省略 `format_version` 或使用 `format_version = 1`
 的当前清单，并严格验证软件包标识、语义版本格式、依赖名称、快照校验和与路径。内部依赖解析为稳定的软件包 slug 和反向依赖项；允许的外部依赖集合严格限定为
@@ -90,12 +95,12 @@ Doxygen 输入和许可证文件。本地 Markdown 引用必须留在所属模�
 
 ## Doxygen API 参考
 
-`bun run generate:api` 验证所有已同步的 C/C++ 文件，检查已安装 Doxygen 版本是否与 `.doxygen-version`
-一致，并在操作系统临时目录中生成 XML。每个软件包使用显式临时 Doxyfile 调用一次 Doxygen；同时位于多个软件包路径下的文件归属最深的软件包，未被软件包认领的模块源码生成模块级参考。生成过程不会编译固件、输出 Doxygen
+`bun run generate:api` 只验证每个模块已提交的 `api-catalog.json`、清单校验和、模块修订和
+`.doxygen-version`，不会启动 Doxygen。Doxygen 只在同步时运行：临时克隆中的每个软件包使用显式临时 Doxyfile 调用一次；同时位于多个软件包路径下的文件归属最深的软件包，未被软件包认领的模块源码生成模块级参考。同步不会编译固件、输出 Doxygen
 HTML 或创建源码浏览器。
 
-XML 管线使用 `fast-xml-validator` 验证语法、`fast-xml-parser`
-解析，并将文件、命名空间、类和结构体、函数、枚举、类型定义、变量、宏定义、说明、位置、固定版本源码链接和符号关系规范化为带版本的 TypeScript 目录。缺失输入或符号会成为明确的空状态，缺失注释会成为文档稀疏状态，单个目标提取失败不会屏蔽其他软件包。Doxygen 可执行文件缺失或版本不匹配属于全局可复现性错误，必须先解决才能生成。
+同步时的 XML 管线使用 `fast-xml-validator` 验证语法、`fast-xml-parser`
+解析，并将文件、命名空间、类和结构体、函数、枚举、类型定义、变量、宏定义、说明、位置、固定版本源码链接和符号关系规范化为带版本的 JSON 目录。缺失输入或符号会成为明确的空状态，缺失注释会成为文档稀疏状态，单个目标提取失败不会屏蔽其他软件包。同步环境缺少锁定的 Doxygen 版本属于全局可复现性错误；普通构建环境不需要安装 Doxygen。
 
 ## 文档门户
 
@@ -125,8 +130,9 @@ Pagefind 由生产构建生成，因此应依次执行 `bun run build` 和 `bun 
 
 `.github/workflows/validation.yml`
 基于已提交快照运行离线质量门禁和静态站点矩阵。`.github/workflows/sync-snapshots.yml`
-是唯一允许访问网络的工作流：它必须显式触发、验证事件载荷、调用本地使用的同一个 `bun run sync`
-CLI，并且仅在请求提交且内容发生变化时提交 `sources/`。两个工作流都不会部署站点。
+是唯一允许访问上游模块仓库的工作流：它必须显式触发、验证事件载荷、安装锁定的 Doxygen、调用本地使用的同一个
+`bun run sync` CLI，并且仅在请求提交且内容发生变化时提交
+`sources/`。普通验证和部署构建只消费这些已生成产物，两个工作流都不会部署站点。
 
 工作流输入、`repository_dispatch` 载荷、权限、无变更行为、固定工具链和失败语义详见
 [docs/automation.md](docs/automation.md)。

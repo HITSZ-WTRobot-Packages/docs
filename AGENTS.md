@@ -35,8 +35,8 @@ future `trellis update`.
   Playwright onto Bun's runtime with `--bun`; respect their declared shebang/runtime while Bun
   remains the package manager and command entry point.
 - Use `bun run generate:catalog`, `bun run generate:readme`, and `bun run generate:api` for the
-  offline catalog, Markdown, and Doxygen checks. They must discover inputs from the committed
-  snapshot rather than maintained indexes.
+  offline package-catalog, Markdown, and API-catalog checks. They must read and validate the
+  committed per-module artifacts rather than rescan transient upstream inputs.
 - Code under `src/` runs in Astro's declared Node runtime during build and must use portable Web or
   `node:` APIs, never Bun-only globals. Bun-specific APIs are limited to Bun-owned scripts/tests.
 - Keep `ASTRO_DEV_BACKGROUND=0` and `ASTRO_PREVIEW_BACKGROUND=0` in the package scripts. Astro 7
@@ -48,11 +48,13 @@ future `trellis update`.
 - When Python is required, use uv without relocating its project `.venv` or global cache.
 - Use Astro with Starlight in static-output mode. `SITE_URL` and `BASE_PATH` are the only supported
   deployment address inputs; route and asset code must go through the shared URL helper.
-- Use the exact Doxygen version in `.doxygen-version` only as a build-time producer of XML. Pass a
-  temporary Doxyfile path through Execa; the site consumes normalized TypeScript data, not Doxygen
-  HTML or source-browser output. Normalize `doxygen --version` only from an exact semantic version
-  or the official `X.Y.Z (<40-hex release commit>)` form; reject every other suffix while preserving
-  the raw output in mismatch diagnostics.
+- Use the exact Doxygen version in `.doxygen-version` only during synchronization to produce
+  transient XML and committed normalized API JSON. Pass a temporary Doxyfile path through Execa;
+  ordinary generation, build, validation, and deployment consume the JSON and never run Doxygen.
+  Never commit Doxygen XML, HTML, source-browser output, or upstream source code. Normalize
+  `doxygen --version` only from an exact semantic version or the official
+  `X.Y.Z (<40-hex release commit>)` form; reject every other suffix while preserving the raw output
+  in mismatch diagnostics.
 - Use Zod for runtime schemas, smol-toml for `cpkg.toml`, unified/remark/rehype for Markdown and
   sanitized HTML, fast-xml-parser plus fast-xml-validator for Doxygen XML, simple-git for Git
   operations, Execa for bounded external processes, Commander for CLI arguments, and tinyglobby for
@@ -61,7 +63,8 @@ future `trellis update`.
   layout, Linkinator for static links, Playwright plus axe for browser/accessibility checks, and
   Astro Icon with the Lucide Iconify set for UI icons.
 - Keep GitHub Actions dependencies pinned to full commit SHAs. The local setup Action owns Bun,
-  frozen dependency installation, the exact Doxygen binary/checksum, and optional Chromium setup.
+  frozen dependency installation, and optional Chromium setup. The synchronization workflow alone
+  installs `.doxygen-version` through its pinned dedicated Doxygen Action.
 
 ## Data And Network Boundaries
 
@@ -71,11 +74,13 @@ future `trellis update`.
 - Use the exact brand names `哈尔滨工业大学（深圳）南工问天` in Chinese, `HITSZ WTRobot` in English,
   and `HITSZ-WTRobot-Packages` for the project. Do not abbreviate or substitute these names in
   repository-owned documentation or interface copy.
-- `sources/` is a committed, deterministic snapshot. Ordinary build, generation, test, and preview
-  commands must work without contacting upstream module repositories.
-- Preserve synchronized files byte-for-byte so their manifest SHA-256 values remain valid. The
-  `sources/**` Git whitespace exemption applies only to upstream bytes; do not extend it to
-  repository-owned code or documentation.
+- `sources/` is a committed, deterministic snapshot of documentation/resources/licenses plus
+  per-module package and API catalogs. Ordinary build, generation, test, and preview commands must
+  work without contacting upstream module repositories or requiring Doxygen/source files.
+- Preserve synchronized upstream content files byte-for-byte so their manifest SHA-256 values remain
+  valid. Repository-owned normalized JSON must use deterministic serialization. The `sources/**` Git
+  whitespace exemption applies only to upstream content bytes; do not extend it to repository-owned
+  code or documentation.
 - Only the synchronization CLI and its manually triggered GitHub Action may access upstream
   repositories. Never modify or push to an upstream module repository.
 - Validation CI is manually triggered only through `workflow_dispatch`, has read-only contents
@@ -91,11 +96,12 @@ future `trellis update`.
 - Run the repository's convention, formatting, lint, typecheck, unit, integration, link, search,
   browser, screenshot, responsive, and accessibility checks in proportion to the changed surface.
 - Synchronization must support full, per-module, changed-only, and dry-run operation; preserve the
-  last valid snapshot on failure; and leave no diff when upstream revisions are unchanged.
+  last valid snapshot on failure; regenerate when the upstream revision, Doxygen version, or
+  producer fingerprint changes; and leave no diff for identical inputs.
 - New UI must be keyboard accessible, respect reduced motion, avoid text overlap, and use the
   configured icon library instead of hand-authored UI SVGs.
-- Keep build artifacts, temporary clones, Git metadata, `.venv`, credentials, and unapproved source
-  files out of `sources/` and the deployment artifact.
+- Keep build artifacts, temporary clones, raw package manifests/source/XML, Git metadata, `.venv`,
+  credentials, and unapproved files out of `sources/` and the deployment artifact.
 - Run `bun run check:artifacts` and `bun run check:links` against every built site/base variant.
   Workflow changes must also pass `tests/unit/workflows.test.ts`; use actionlint when available.
 - Treat `bun run check:artifacts` as the release boundary: every catalog package and API route must

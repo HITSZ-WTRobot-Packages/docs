@@ -9,20 +9,20 @@
 docs/                   # Contributor operations and future deployment plans
 scripts/
   sync/                 # The only network-aware subsystem
-  generate/             # Snapshot-only catalog, README, and Doxygen generators
+  generate/             # Snapshot-only package, README, and API artifact validators
   validation/           # Convention, link, artifact, and snapshot checks
 src/
   content/              # Astro content collections and generated-content adapters
   lib/
-    catalog/            # cpkg discovery, schemas, dependency indexes, slugs
-    doxygen/            # XML-to-domain normalization
+    catalog/            # Sync-time cpkg normalization plus persisted catalog loaders
+    doxygen/            # Sync-time XML normalization plus persisted API loaders
     markdown/           # README AST transforms and route/resource resolution
     paths/              # SITE_URL/BASE_PATH and safe snapshot path helpers
     sources/            # Read-only manifest and snapshot contracts
 tests/
   fixtures/             # Small synthetic repositories and parser inputs
   integration/          # Cross-layer build and generation tests
-sources/                # Committed upstream snapshots; never hand-edit
+sources/                # Committed content plus normalized package/API snapshots; never hand-edit
 ```
 
 ## Ownership Rules
@@ -32,8 +32,9 @@ sources/                # Committed upstream snapshots; never hand-edit
   import them.
 - Runtime-validated domain types are defined next to their schema and inferred from it. Consumers
   import the shared type instead of redefining a similar shape.
-- Intermediate output goes under ignored `.cache/` or `.doxygen/`. Only upstream inputs belong in
-  `sources/`; final static output belongs in ignored `dist/`.
+- Intermediate output goes under operating-system temporary directories or ignored `.cache/` and
+  `.doxygen/`. `sources/` contains only selected upstream documentation/resources/licenses and
+  deterministic per-module package/API JSON; final static output belongs in ignored `dist/`.
 - Workflow YAML only orchestrates repository commands. Event validation, synchronization behavior,
   artifact inspection, and link checking remain testable scripts rather than embedded shell logic.
 - Tests mirror domain ownership and use `tests/fixtures/` for external formats.
@@ -50,5 +51,6 @@ sources/                # Committed upstream snapshots; never hand-edit
 
 - Do not place network calls in Astro pages, content loaders, or components.
 - Do not import from `scripts/` into `src/`.
-- Do not store generated catalogs beside upstream files under `sources/`.
+- Do not store raw `cpkg.toml`, source code, Doxygen XML/HTML, or transient generator output under
+  `sources/`; only the schema-validated normalized catalog artifacts are allowed.
 - Do not introduce a second implementation of URL, slug, checksum, or safe-path logic.

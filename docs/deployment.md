@@ -51,7 +51,7 @@ URL、sitemap 条目、robots 指令、导航、Pagefind 资源、Markdown 资�
 
 1. 从 `main` 检出显式提交，并通过 `.github/actions/setup-docs-toolchain`
    使用冻结依赖和 Chromium 完成安装。
-2. 基于已提交快照运行 `bun run check` 和 `bun run generate`，不得执行同步。
+2. 基于已提交快照运行 `bun run check` 和 `bun run generate`，不得执行同步或安装 Doxygen。
 3. 使用选定的生产 `SITE_URL` 和 `BASE_PATH` 只构建一次。
 4. 对同一地址配置运行 `bun run check:artifacts`、`bun run check:links` 和
    `PLAYWRIGHT_REUSE_ARTIFACT=1 bun run test:e2e`。该变量使 Playwright 预览已有
@@ -62,7 +62,7 @@ URL、sitemap 条目、robots 指令、导航、Pagefind 资源、Markdown 资�
 6. 在独立的受保护作业中部署已经验证的 Pages 产物。部署作业不得重新构建。
 
 Pages 产物必须满足 GitHub 的格式和大小契约：一个小于 10
-GB 的 gzip 压缩 tar 归档，且不含符号链接或硬链接。保留发布产物至少 30 天，使回滚演练能使用上一版本的确切字节。Action 和 Doxygen 固定版本必须遵循与验证 CI 相同的校验和策略。
+GB 的 gzip 压缩 tar 归档，且不含符号链接或硬链接。保留发布产物至少 30 天，使回滚演练能使用上一版本的确切字节。部署使用的外部 Action 必须固定到完整提交 SHA；Doxygen 只属于同步生产阶段，不是部署工具链的一部分。
 
 初始工作流应支持使用显式提交 SHA 手动 dispatch。只有首次、重复和回滚演练通过后，才能启用 `main`
 自动部署。启用后，只能部署具有同一提交成功记录的 `main` 提交；该记录必须来自手动 dispatch 的
