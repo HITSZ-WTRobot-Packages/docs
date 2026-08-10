@@ -27,7 +27,7 @@ URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/�
 | `mode`    | `changed`、`all`、`module` | `changed` | 映射到本地同步 CLI 模式        |
 | `module`  | manifest 中已有的模块名    | 空        | 仅在 `module` 模式下必填       |
 | `dry_run` | 布尔值                     | `true`    | 验证但不写入 `sources/`        |
-| `commit`  | 布尔值                     | `false`   | 将验证通过的变更提交到默认分支 |
+| `commit`  | 布尔值                     | `false`   | 将同步产生的变更提交到默认分支 |
 
 `dry_run: true` 与 `commit: true`
 同时出现、模块不在已提交索引中、模式未知或模块输入冲突时，必须在同步前失败。`repository_dispatch`
@@ -44,20 +44,20 @@ URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/�
 ```
 
 接收端只接受 `HITSZ-WTRobot-Packages/<module>`，从仓库名推导模块 ID，并自行构造 GitHub HTTPS clone
-URL。载荷不能提供任意 URL、同步模式或提交开关；合法事件固定映射为一次非试运行的单仓库同步并在验证后提交。首次成功同步会把仓库加入
+URL。载荷不能提供任意 URL、同步模式或提交开关；合法事件固定映射为一次非试运行的单仓库同步并在成功后提交。首次成功同步会把仓库加入
 `sources/manifest.json`，失败则不留下索引、目录或部分快照。后续全量、changed-only 和单模块同步都从该 manifest 还原仓库配置，不枚举 GitHub 组织，也不读取代码中的仓库名单。
 
 事件适配器使用参数数组调用 `bun run sync`，不会把工作流表达式插值到命令中。同步在临时克隆内发现
 `cpkg.toml`
-和源码，使用锁定的 Doxygen 生成规范化目录，并只将文档、资源、许可证和目录 JSON 写入快照。变更检测包括已跟踪修改、删除和新的未跟踪快照文件。无变化的运行报告 no-op 且不创建提交。有变化的运行必须通过完整离线门禁、嵌套站点构建、产物/链接检查以及 Playwright/axe，之后才允许执行可选提交。该提交只暂存
-`sources/`，使用 GitHub Actions 机器人身份，并在提交消息中包含
-`[snapshot-sync]`。工作流没有 push 触发器，因此机器人提交不会递归启动另一次同步，也不会自动启动
+和源码，使用锁定的 Doxygen 生成规范化目录，并只将文档、资源、许可证和目录 JSON 写入快照。同步 CLI 在写入前完成输入、schema、模块图、校验和、Doxygen 版本和跨模块依赖校验，并原子替换成功候选。workflow 不再运行离线质量门禁、站点构建、产物/链接检查或 Playwright/axe；这些检查只由手动
+`Validation` 承担。可选提交只暂存 `sources/`，使用 GitHub Actions 机器人身份，并在提交消息中包含
+`[snapshot-sync]`，暂存后无差异时直接退出。工作流没有 push 触发器，因此机器人提交不会递归启动另一次同步，也不会自动启动
 `Validation`；需要验证该提交时，操作者必须为对应 ref 手动运行 `Validation`。
 
 所有 workflow 的仓库 `GITHUB_TOKEN` 都保持
-`contents: read`。同步 workflow 只有在已验证 diff 需要提交时，才在该步骤通过 `GH_TOKEN` 使用
+`contents: read`。同步 workflow 只有在同步输出需要提交时，才在该步骤通过 `GH_TOKEN` 使用
 `DOCS_SYNC_TOKEN`
-配置 Git 凭据并 push；checkout 不持久化凭据。仓库或分支规则仍可能阻止其推送；该失败会保留远程分支不变，并由提交步骤报告。不提交的运行只在 runner 生命周期内保留其已验证差异。
+配置 Git 凭据并 push；checkout 不持久化凭据。仓库或分支规则仍可能阻止其推送；该失败会保留远程分支不变，并由提交步骤报告。不提交的运行只在 runner 生命周期内保留其同步差异。
 
 ## 驱动仓库接入
 
@@ -90,7 +90,7 @@ jobs:
 
 被调用工作流从调用方 `github.repository`
 和默认分支构造 discovery 事件，并在非默认分支运行时跳过 dispatch，调用仓库不能覆盖目标模块。调用方在 GitHub
-API 接受事件后即成功，不等待 docs 的同步结果；克隆、Doxygen、质量门禁和提交结果在 docs 的
+API 接受事件后即成功，不等待 docs 的同步结果；克隆、Doxygen、同步校验和提交结果在 docs 的
 `Synchronize snapshots`
 运行中查看。重复 push 会被 docs 的串行同步组依次处理，相同上游修订最终成为 no-op。
 
@@ -103,10 +103,11 @@ commit；无变化时不会 push，也就没有新的默认分支 commit 可供�
 ## 固定工具链
 
 外部第三方 Actions 均引用完整提交 SHA；组织内的 dispatch reusable workflow 按上述中央更新契约使用
-`@main`。本地 setup Action 根据软件包契约安装 Bun 1.3.14，执行
-`bun install --frozen-lockfile`，并按需安装 Chromium。只有同步作业通过固定到完整提交 SHA 的
-`ssciwr/doxygen-install` Action 安装 `.doxygen-version` 指定的 Doxygen
-1.16.1；同步 CLI 会在读取上游前再次验证其完整版本输出。验证、构建和部署作业均不安装 Doxygen。
+`@main`。本地 setup Action 根据 runner、Bun 1.3.14 和 `bun.lock` 恢复 `~/.bun/install/cache`，执行
+`bun install --frozen-lockfile --prefer-offline`，在未精确命中时保存缓存，并按需安装 Chromium。同步作业按 runner、`.doxygen-version`
+和安装 Action SHA 恢复 Doxygen 可执行文件缓存；仅在未命中时调用固定到完整提交 SHA 的
+`ssciwr/doxygen-install` 安装 Doxygen
+1.16.1。同步 CLI 会在读取上游前再次验证缓存或新安装程序的完整版本输出。验证、构建和部署作业均不安装 Doxygen。
 
 修改工作流结构时运行：
 

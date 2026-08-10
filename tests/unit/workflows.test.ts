@@ -5,6 +5,7 @@ import { parse } from "yaml";
 import { z } from "zod";
 
 const StepSchema = z.looseObject({
+  id: z.string().optional(),
   name: z.string().optional(),
   if: z.string().optional(),
   uses: z.string().optional(),
@@ -62,30 +63,51 @@ describe("GitHub Actions contracts", () => {
     }
   });
 
-  test("snapshot synchronization is explicit, serialized, and PAT-push scoped", async () => {
+  test("snapshot synchronization is minimal, cached, serialized, and PAT-push scoped", async () => {
     const workflow = WorkflowSchema.parse(await readYaml(".github/workflows/sync-snapshots.yml"));
     expect(Object.keys(workflow.on).sort()).toEqual(["repository_dispatch", "workflow_dispatch"]);
     expect(workflow.permissions).toEqual({ contents: "read" });
     expect(workflow.concurrency["cancel-in-progress"]).toBe(false);
     const serialized = JSON.stringify(workflow);
     expect(serialized).toContain("bun run sync:action");
-    expect(serialized).toContain("git status --porcelain --untracked-files=all -- sources/");
+    expect(serialized).not.toContain("git status --porcelain");
     expect(serialized).toContain("git add -- sources/");
     expect(serialized).toContain("git diff --cached --quiet && exit 0");
     expect(serialized).toContain("steps.request.outputs.commit == 'true'");
+    for (const command of [
+      "bun run check",
+      "bun run generate",
+      "bun run build",
+      "bun run check:artifacts",
+      "bun run check:links",
+      "bun run test:e2e",
+      "playwright install",
+    ]) {
+      expect(serialized).not.toContain(command);
+    }
     const checkoutStep = allSteps(workflow).find((step) => step.uses?.includes("checkout"));
     expect(checkoutStep?.with?.["persist-credentials"]).toBe(false);
+    expect(checkoutStep?.with?.["fetch-depth"]).toBeUndefined();
     expect(checkoutStep?.with?.token).toBeUndefined();
     const patSteps = allSteps(workflow).filter(
       (step) => step.env?.GH_TOKEN === "${{ secrets.DOCS_SYNC_TOKEN }}",
     );
     expect(patSteps).toHaveLength(1);
-    const commitStep = patSteps.find((step) => step.name === "Commit validated snapshots");
-    expect(commitStep?.if).toContain("steps.snapshot.outputs.changed == 'true'");
-    expect(commitStep?.if).toContain("steps.request.outputs.commit == 'true'");
+    const commitStep = patSteps.find((step) => step.name === "Commit synchronized snapshots");
+    expect(commitStep?.if).toBe("${{ steps.request.outputs.commit == 'true' }}");
     expect(commitStep?.run).toContain("gh auth setup-git");
-    const browserStep = allSteps(workflow).find((step) => step.run === "bun run test:e2e");
-    expect(browserStep?.env?.PLAYWRIGHT_REUSE_ARTIFACT).toBe("1");
+    expect(allSteps(workflow).some((step) => step.name?.startsWith("Report "))).toBe(false);
+
+    const doxygenCache = allSteps(workflow).find((step) => step.id === "doxygen-cache");
+    expect(doxygenCache?.uses).toBe(
+      "actions/cache/restore@1bd1e32a3bdc45362d1e726936510720a7c30a57",
+    );
+    expect(doxygenCache?.with?.path).toContain("steps.doxygen-version.outputs.version");
+    expect(doxygenCache?.with?.key).toContain("runner.arch");
+    expect(doxygenCache?.with?.key).toContain("b5b80f5a60852f72d3c33f47fee9ddfb84a25929");
+    const doxygenSave = allSteps(workflow).find((step) => step.name === "Save Doxygen cache");
+    expect(doxygenSave?.uses).toBe("actions/cache/save@1bd1e32a3bdc45362d1e726936510720a7c30a57");
+    expect(doxygenSave?.if).toContain("doxygen-cache.outputs.cache-hit != 'true'");
     expect(serialized).not.toMatch(/pages|deploy/i);
     for (const step of allSteps(workflow)) {
       expect(step.run ?? "").not.toContain("${{ github.event.client_payload");
@@ -148,6 +170,7 @@ describe("GitHub Actions contracts", () => {
       step.uses?.startsWith("ssciwr/doxygen-install@"),
     );
     expect(synchronizationDoxygen).toHaveLength(1);
+    expect(synchronizationDoxygen[0]?.if).toContain("doxygen-cache.outputs.cache-hit != 'true'");
     expect(synchronizationDoxygen[0]?.with?.version).toBe(
       "${{ steps.doxygen-version.outputs.version }}",
     );
@@ -155,5 +178,16 @@ describe("GitHub Actions contracts", () => {
     expect(JSON.stringify(validation)).not.toContain("doxygen-install");
     expect(JSON.stringify(toolchain)).not.toContain("doxygen");
     expect((await readFile(".doxygen-version", "utf8")).trim()).toBe("1.16.1");
+
+    const bunRestore = toolchain.runs.steps.find((step) => step.id === "bun-cache");
+    expect(bunRestore?.uses).toBe("actions/cache/restore@1bd1e32a3bdc45362d1e726936510720a7c30a57");
+    expect(bunRestore?.with?.path).toBe("~/.bun/install/cache");
+    expect(bunRestore?.with?.key).toContain("hashFiles('bun.lock')");
+    const bunInstall = toolchain.runs.steps.find(
+      (step) => step.name === "Install locked dependencies",
+    );
+    expect(bunInstall?.run).toBe("bun install --frozen-lockfile --prefer-offline");
+    const bunSave = toolchain.runs.steps.find((step) => step.name === "Save Bun package cache");
+    expect(bunSave?.uses).toBe("actions/cache/save@1bd1e32a3bdc45362d1e726936510720a7c30a57");
   });
 });

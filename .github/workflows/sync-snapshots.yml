@@ -22,7 +22,7 @@ on:
         default: true
         type: boolean
       commit:
-        description: Commit validated source changes to the default branch.
+        description: Commit synchronized source changes to the default branch.
         required: true
         default: false
         type: boolean
@@ -39,7 +39,7 @@ concurrency:
 
 jobs:
   synchronize:
-    name: Synchronize and validate
+    name: Synchronize snapshots
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     steps:
@@ -47,7 +47,6 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.3.0
         with:
           ref: ${{ github.event.repository.default_branch }}
-          fetch-depth: 0
           persist-credentials: false
 
       - name: Set up documentation toolchain
@@ -58,72 +57,52 @@ jobs:
         shell: bash
         run: echo "version=$(tr -d '[:space:]' < .doxygen-version)" >> "${GITHUB_OUTPUT}"
 
+      - name: Restore Doxygen cache
+        id: doxygen-cache
+        uses: actions/cache/restore@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+        with:
+          path: ~/.cache/wtr-doxygen/${{ steps.doxygen-version.outputs.version }}
+          key: >-
+            ${{ runner.os }}-${{ runner.arch }}-doxygen-${{ steps.doxygen-version.outputs.version
+            }}-b5b80f5a60852f72d3c33f47fee9ddfb84a25929
+
       - name: Set up Doxygen
+        if: ${{ steps.doxygen-cache.outputs.cache-hit != 'true' }}
         uses: ssciwr/doxygen-install@b5b80f5a60852f72d3c33f47fee9ddfb84a25929 # v2
         with:
           version: ${{ steps.doxygen-version.outputs.version }}
+
+      - name: Populate Doxygen cache
+        if: ${{ steps.doxygen-cache.outputs.cache-hit != 'true' }}
+        shell: bash
+        env:
+          DOXYGEN_VERSION: ${{ steps.doxygen-version.outputs.version }}
+        run: |
+          set -euo pipefail
+          cache_bin="${HOME}/.cache/wtr-doxygen/${DOXYGEN_VERSION}/bin"
+          mkdir -p "${cache_bin}"
+          cp "$(command -v doxygen)" "${cache_bin}/doxygen"
+          chmod +x "${cache_bin}/doxygen"
+
+      - name: Save Doxygen cache
+        if: ${{ steps.doxygen-cache.outputs.cache-hit != 'true' }}
+        uses: actions/cache/save@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+        with:
+          path: ~/.cache/wtr-doxygen/${{ steps.doxygen-version.outputs.version }}
+          key: ${{ steps.doxygen-cache.outputs.cache-primary-key }}
+
+      - name: Add cached Doxygen to PATH
+        shell: bash
+        env:
+          DOXYGEN_VERSION: ${{ steps.doxygen-version.outputs.version }}
+        run: echo "${HOME}/.cache/wtr-doxygen/${DOXYGEN_VERSION}/bin" >> "${GITHUB_PATH}"
 
       - name: Synchronize through the repository CLI
         id: request
         run: bun run sync:action
 
-      - name: Detect snapshot changes
-        id: snapshot
-        shell: bash
-        run: |
-          set -euo pipefail
-          snapshot_status="$(git status --porcelain --untracked-files=all -- sources/)"
-          if [[ -z "${snapshot_status}" ]]; then
-            echo "changed=false" >> "${GITHUB_OUTPUT}"
-          else
-            echo "changed=true" >> "${GITHUB_OUTPUT}"
-            printf '%s\n' "${snapshot_status}"
-          fi
-
-      - name: Run offline quality gate
-        if: ${{ steps.snapshot.outputs.changed == 'true' }}
-        run: bun run check
-
-      - name: Verify offline generators
-        if: ${{ steps.snapshot.outputs.changed == 'true' }}
-        run: bun run generate
-
-      - name: Build validation site
-        if: ${{ steps.snapshot.outputs.changed == 'true' }}
-        env:
-          SITE_URL: https://snapshot-validation.example.invalid
-          BASE_PATH: /products/wtr/docs/
-        run: bun run build
-
-      - name: Check validation artifacts
-        if: ${{ steps.snapshot.outputs.changed == 'true' }}
-        env:
-          SITE_URL: https://snapshot-validation.example.invalid
-          BASE_PATH: /products/wtr/docs/
-        run: bun run check:artifacts
-
-      - name: Check validation links
-        if: ${{ steps.snapshot.outputs.changed == 'true' }}
-        env:
-          SITE_URL: https://snapshot-validation.example.invalid
-          BASE_PATH: /products/wtr/docs/
-        run: bun run check:links
-
-      - name: Install Chromium for snapshot validation
-        if: ${{ steps.snapshot.outputs.changed == 'true' }}
-        run: bunx playwright install --with-deps chromium
-
-      - name: Run browser and accessibility checks
-        if: ${{ steps.snapshot.outputs.changed == 'true' }}
-        env:
-          SITE_URL: https://snapshot-validation.example.invalid
-          BASE_PATH: /products/wtr/docs/
-          PLAYWRIGHT_REUSE_ARTIFACT: "1"
-        run: bun run test:e2e
-
-      - name: Commit validated snapshots
-        if: >-
-          steps.snapshot.outputs.changed == 'true' && steps.request.outputs.commit == 'true'
+      - name: Commit synchronized snapshots
+        if: ${{ steps.request.outputs.commit == 'true' }}
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.DOCS_SYNC_TOKEN }}
@@ -137,16 +116,3 @@ jobs:
           git commit -m "chore(sources): synchronize package snapshots [snapshot-sync]"
           gh auth setup-git
           git push origin "HEAD:${TARGET_BRANCH}"
-
-      - name: Report validated uncommitted changes
-        if: >-
-          steps.snapshot.outputs.changed == 'true' && steps.request.outputs.commit != 'true'
-        shell: bash
-        run: |
-          echo "Validated snapshot changes were not committed by request." >> "${GITHUB_STEP_SUMMARY}"
-          git diff --stat -- sources/
-
-      - name: Report no changes
-        if: ${{ steps.snapshot.outputs.changed != 'true' }}
-        shell: bash
-        run: echo "Synchronization produced no source changes." >> "${GITHUB_STEP_SUMMARY}"
