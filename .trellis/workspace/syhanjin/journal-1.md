@@ -86,3 +86,37 @@ Completed and archived the full 08-10-packages-docs-portal task tree: bootstrapp
 ### Next Steps
 
 - None - task complete
+
+
+## Session 3: 软件包详情页右侧栏
+
+**Date**: 2026-08-10
+**Task**: 软件包详情页右侧栏
+**Branch**: `main`
+
+### Summary
+
+将软件包补充信息迁移到 Starlight 原生右侧栏，保留面包屑并将 cpkg add 安装提示放在正文之前；补齐响应式、打印、无障碍和多部署路径验证。
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `79ff116` | (see git log) |
+| `a00b8c1` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete
