@@ -1,6 +1,7 @@
 # 自动化
 
-本仓库将允许访问网络的快照同步与常规离线验证分离。两个工作流都不会部署站点或启用 GitHub Pages。
+本仓库将允许访问网络的快照同步、跨仓库请求和常规离线验证分离。这些工作流都不会部署站点或启用 GitHub
+Pages。
 
 ## 验证工作流
 
@@ -24,33 +25,27 @@ URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/�
 | 输入      | 可选值                     | 默认值    | 约定                           |
 | --------- | -------------------------- | --------- | ------------------------------ |
 | `mode`    | `changed`、`all`、`module` | `changed` | 映射到本地同步 CLI 模式        |
-| `module`  | 允许列表中的一个模块名     | 空        | 仅在 `module` 模式下必填       |
+| `module`  | manifest 中已有的模块名    | 空        | 仅在 `module` 模式下必填       |
 | `dry_run` | 布尔值                     | `true`    | 验证但不写入 `sources/`        |
 | `commit`  | 布尔值                     | `false`   | 将验证通过的变更提交到默认分支 |
 
 `dry_run: true` 与 `commit: true`
-同时出现、模块不在允许列表中、模式未知或模块输入冲突时，必须在同步前失败。默认仓库 dispatch 是仅检查变更的试运行：
-
-```json
-{
-  "event_type": "sync-snapshots",
-  "client_payload": {}
-}
-```
-
-允许提交的显式单模块更新如下：
+同时出现、模块不在已提交索引中、模式未知或模块输入冲突时，必须在同步前失败。`repository_dispatch`
+不复用这些手动输入；它只接受由调用仓库上下文产生的 discovery 载荷：
 
 ```json
 {
   "event_type": "sync-snapshots",
   "client_payload": {
-    "mode": "module",
-    "module": "Sensors",
-    "dry_run": false,
-    "commit": true
+    "source_repository": "HITSZ-WTRobot-Packages/Sensors",
+    "source_default_branch": "main"
   }
 }
 ```
+
+接收端只接受 `HITSZ-WTRobot-Packages/<module>`，从仓库名推导模块 ID，并自行构造 GitHub HTTPS clone
+URL。载荷不能提供任意 URL、同步模式或提交开关；合法事件固定映射为一次非试运行的单仓库同步并在验证后提交。首次成功同步会把仓库加入
+`sources/manifest.json`，失败则不留下索引、目录或部分快照。后续全量、changed-only 和单模块同步都从该 manifest 还原仓库配置，不枚举 GitHub 组织，也不读取代码中的仓库名单。
 
 事件适配器使用参数数组调用 `bun run sync`，不会把工作流表达式插值到命令中。同步在临时克隆内发现
 `cpkg.toml`
@@ -62,9 +57,42 @@ URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/�
 同步工作流是唯一拥有 `contents: write`
 的工作流。仓库或分支规则仍可能阻止其推送；该失败会保留远程分支不变，并由提交步骤报告。不提交的运行只在 runner 生命周期内保留其已验证差异。
 
+## 驱动仓库接入
+
+`.github/workflows/request-docs-sync.yml` 是供同一组织驱动仓库引用的 reusable
+workflow。组织管理员创建 `DOCS_SYNC_TOKEN` Actions secret：使用 fine-grained personal access
+token，仅授权 `HITSZ-WTRobot-Packages/docs` 的
+`Contents: write`，并只向获准初始化文档的驱动仓库开放。调用方自带的 `GITHUB_TOKEN`
+仅对调用方仓库有效，不能替代该 token。
+
+每个驱动仓库添加以下薄工作流，并把占位符替换为包含该 reusable workflow 的完整 40 位 docs 提交 SHA：
+
+```yaml
+name: Update package documentation
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  documentation:
+    uses: HITSZ-WTRobot-Packages/docs/.github/workflows/request-docs-sync.yml@<DOCS_WORKFLOW_COMMIT_SHA>
+    secrets: inherit
+```
+
+被调用工作流从调用方 `github.repository`
+和默认分支构造 discovery 事件，并在非默认分支运行时跳过 dispatch，调用仓库不能覆盖目标模块。调用方在 GitHub
+API 接受事件后即成功，不等待 docs 的同步结果；克隆、Doxygen、质量门禁和提交结果在 docs 的
+`Synchronize snapshots`
+运行中查看。重复 push 会被 docs 的串行同步组依次处理，相同上游修订最终成为 no-op。
+
 ## 固定工具链
 
-外部 Actions 均引用完整提交 SHA。本地 setup Action 根据软件包契约安装 Bun 1.3.14，执行
+外部 Actions 和跨仓库 reusable workflow 均引用完整提交 SHA。本地 setup Action 根据软件包契约安装 Bun
+1.3.14，执行
 `bun install --frozen-lockfile`，并按需安装 Chromium。只有同步作业通过固定到完整提交 SHA 的
 `ssciwr/doxygen-install` Action 安装 `.doxygen-version` 指定的 Doxygen
 1.16.1；同步 CLI 会在读取上游前再次验证其完整版本输出。验证、构建和部署作业均不安装 Doxygen。

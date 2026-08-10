@@ -81,12 +81,16 @@ future `trellis update`.
   valid. Repository-owned normalized JSON must use deterministic serialization. The `sources/**` Git
   whitespace exemption applies only to upstream content bytes; do not extend it to repository-owned
   code or documentation.
-- Only the synchronization CLI and its manually triggered GitHub Action may access upstream
-  repositories. Never modify or push to an upstream module repository.
+- Only the synchronization CLI and snapshot synchronization workflow may access upstream
+  repositories. An indexed module comes from the committed manifest; a new
+  `HITSZ-WTRobot-Packages/*` repository may enter that index only through a validated discovery
+  dispatch and a fully successful atomic synchronization. Never modify or push to an upstream module
+  repository.
 - Validation CI is manually triggered only through `workflow_dispatch`, has read-only contents
-  permission, and never invokes synchronization. Snapshot sync has no push trigger, parses dispatch
-  data through `sync:action`, stages only `sources/`, and may push only after the complete offline
-  validation path succeeds.
+  permission, and never invokes synchronization. Snapshot sync has no push trigger, parses manual or
+  repository-discovery dispatch data through `sync:action`, stages only `sources/`, and may push
+  only after the complete offline validation path succeeds. The reusable caller workflow derives
+  repository identity from its caller and requires the organization-scoped `DOCS_SYNC_TOKEN`.
 - Parse TOML, Markdown, XML, schemas, Git output, search indexes, and dependency layouts with the
   selected maintained libraries. Do not add an ad hoc parser or layout algorithm.
 - Validate external input at the boundary before converting it into internal catalog types.
@@ -95,9 +99,10 @@ future `trellis update`.
 
 - Run the repository's convention, formatting, lint, typecheck, unit, integration, link, search,
   browser, screenshot, responsive, and accessibility checks in proportion to the changed surface.
-- Synchronization must support full, per-module, changed-only, and dry-run operation; preserve the
-  last valid snapshot on failure; regenerate when the upstream revision, Doxygen version, or
-  producer fingerprint changes; and leave no diff for identical inputs.
+- Synchronization must support full, per-module, changed-only, dry-run, and first-discovery
+  operation; derive indexed modules from the committed manifest; preserve the last valid snapshot on
+  failure; regenerate when the upstream revision, Doxygen version, or producer fingerprint changes;
+  and leave no diff for identical inputs.
 - New UI must be keyboard accessible, respect reduced motion, avoid text overlap, and use the
   configured icon library instead of hand-authored UI SVGs.
 - Keep build artifacts, temporary clones, raw package manifests/source/XML, Git metadata, `.venv`,

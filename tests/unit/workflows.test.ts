@@ -19,6 +19,7 @@ const WorkflowSchema = z.looseObject({
   jobs: z.record(
     z.string(),
     z.looseObject({
+      if: z.string().optional(),
       steps: z.array(StepSchema),
     }),
   ),
@@ -79,17 +80,46 @@ describe("GitHub Actions contracts", () => {
     }
   });
 
+  test("repository callers use a read-only reusable discovery workflow", async () => {
+    const workflow = WorkflowSchema.parse(
+      await readYaml(".github/workflows/request-docs-sync.yml"),
+    );
+    expect(Object.keys(workflow.on)).toEqual(["workflow_call"]);
+    expect(workflow.permissions).toEqual({ contents: "read" });
+    expect(workflow.concurrency["cancel-in-progress"]).toBe(false);
+    expect(workflow.jobs.dispatch?.if).toBe(
+      "${{ github.ref_name == github.event.repository.default_branch }}",
+    );
+
+    const serialized = JSON.stringify(workflow);
+    expect(serialized).toContain("DOCS_SYNC_TOKEN");
+    expect(serialized).toContain("repos/HITSZ-WTRobot-Packages/docs/dispatches");
+    expect(serialized).toContain("client_payload[source_repository]");
+    expect(serialized).toContain("client_payload[source_default_branch]");
+    expect(serialized).toContain("sync-snapshots");
+    expect(serialized).not.toContain("actions/checkout");
+    expect(serialized).not.toContain("bun run sync");
+
+    for (const step of allSteps(workflow)) {
+      expect(step.run ?? "").not.toContain("${{ github.repository }}");
+      expect(step.run ?? "").not.toContain("${{ github.event.repository.default_branch }}");
+      expect(step.run ?? "").not.toContain("${{ secrets.DOCS_SYNC_TOKEN }}");
+    }
+  });
+
   test("external actions are immutable and Doxygen is synchronization-only", async () => {
     const validation = WorkflowSchema.parse(await readYaml(".github/workflows/validation.yml"));
     const synchronization = WorkflowSchema.parse(
       await readYaml(".github/workflows/sync-snapshots.yml"),
     );
+    const request = WorkflowSchema.parse(await readYaml(".github/workflows/request-docs-sync.yml"));
     const toolchain = ActionSchema.parse(
       await readYaml(".github/actions/setup-docs-toolchain/action.yml"),
     );
     const uses = externalUses([
       ...allSteps(validation),
       ...allSteps(synchronization),
+      ...allSteps(request),
       ...toolchain.runs.steps,
     ]);
     expect(uses.length).toBeGreaterThan(0);

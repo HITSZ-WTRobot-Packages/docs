@@ -47,7 +47,11 @@ import {
   type SnapshotArtifactKind,
   type SourceManifest,
 } from "../../src/lib/sources/manifest";
-import { findModule, MODULES, type ModuleConfig } from "../../src/lib/sources/modules";
+import {
+  findModule,
+  moduleConfigFromSnapshot,
+  type ModuleConfig,
+} from "../../src/lib/sources/modules";
 import { SyncDiagnostic, toSyncDiagnostic } from "../../src/lib/sources/diagnostic";
 import { SimpleGitClient, type GitClient } from "./git-client";
 
@@ -56,6 +60,7 @@ export type SyncMode = "all" | "changed" | "module";
 export type SyncRequest = {
   mode: SyncMode;
   module?: string | undefined;
+  discovery?: ModuleConfig | undefined;
   dryRun: boolean;
 };
 
@@ -236,12 +241,12 @@ function mergeManifest(
     });
   }
   const replacements = new Map(
-    candidates.map((candidate) => [candidate.module.id, candidate.snapshot]),
+    candidates.map((candidate) => [normalizedModuleId(candidate.module.id), candidate.snapshot]),
   );
   return normalizeSourceManifest({
     formatVersion: 2,
     modules: existing.modules
-      .filter((module) => !replacements.has(module.id))
+      .filter((module) => !replacements.has(normalizedModuleId(module.id)))
       .concat([...replacements.values()]),
   });
 }
@@ -341,6 +346,59 @@ function selectModules(
   return [selected];
 }
 
+function normalizedModuleId(value: string): string {
+  return value.toLocaleLowerCase("en-US");
+}
+
+function normalizedRepository(value: string): string {
+  return value.toLocaleLowerCase("en-US");
+}
+
+function modulesForRequest(
+  request: SyncRequest,
+  indexedModules: readonly ModuleConfig[],
+): readonly ModuleConfig[] {
+  if (!request.discovery) return indexedModules;
+
+  const discovered = request.discovery;
+  const id = normalizedModuleId(discovered.id);
+  if (request.mode !== "module" || !request.module || normalizedModuleId(request.module) !== id) {
+    throw new SyncDiagnostic(
+      "SYNC_DISCOVERY_INVALID",
+      "Repository discovery must select the matching module.",
+      { module: discovered.id },
+    );
+  }
+  const repository = normalizedRepository(discovered.repository);
+  const existingById = indexedModules.find((module) => normalizedModuleId(module.id) === id);
+  if (existingById && normalizedRepository(existingById.repository) !== repository) {
+    throw new SyncDiagnostic(
+      "SYNC_MODULE_CONFLICT",
+      `Module ${discovered.id} is already indexed from another repository.`,
+      { module: discovered.id },
+    );
+  }
+
+  const existingByRepository = indexedModules.find(
+    (module) => normalizedRepository(module.repository) === repository,
+  );
+  if (existingByRepository && normalizedModuleId(existingByRepository.id) !== id) {
+    throw new SyncDiagnostic(
+      "SYNC_MODULE_CONFLICT",
+      `Repository ${discovered.repository} is already indexed as ${existingByRepository.id}.`,
+      { module: discovered.id },
+    );
+  }
+
+  return existingById
+    ? indexedModules.map((module) =>
+        normalizedModuleId(module.id) === id
+          ? { ...existingById, branch: discovered.branch }
+          : module,
+      )
+    : [...indexedModules, discovered];
+}
+
 async function readPackageDocuments(
   cloneRoot: string,
   moduleId: string,
@@ -435,7 +493,6 @@ export async function synchronize(
     options.repositoryRoot ?? path.join(import.meta.dirname, "../.."),
   );
   const sourcesRoot = path.join(repositoryRoot, "sources");
-  const modules = options.modules ?? MODULES;
   const gitClient = options.gitClient ?? new SimpleGitClient();
   const limits = options.limits ?? DEFAULT_SNAPSHOT_LIMITS;
   const executable = options.doxygenExecutable ?? "doxygen";
@@ -444,7 +501,12 @@ export async function synchronize(
     assertDoxygenVersion(repositoryRoot, executable),
   ]);
   const fingerprint = await producerFingerprint(repositoryRoot, doxygenVersion);
-  const existingById = new Map(existingManifest.modules.map((module) => [module.id, module]));
+  const existingById = new Map(
+    existingManifest.modules.map((module) => [normalizedModuleId(module.id), module]),
+  );
+  const indexedModules =
+    options.modules ?? existingManifest.modules.map((module) => moduleConfigFromSnapshot(module));
+  const modules = modulesForRequest(request, indexedModules);
   const selectedModules = selectModules(request, modules);
   const runRoot = await mkdtemp(path.join(tmpdir(), "wtr-docs-sync-"));
   const candidates: CandidateSnapshot[] = [];
@@ -452,7 +514,7 @@ export async function synchronize(
 
   try {
     for (const module of selectedModules) {
-      const existing = existingById.get(module.id);
+      const existing = existingById.get(normalizedModuleId(module.id));
       if (request.mode === "changed") {
         const remoteSha = await gitClient.resolveRevision(module);
         if (
@@ -554,7 +616,7 @@ export async function synchronize(
         );
       }
       candidate.apiCatalog = apiCatalog;
-      const existing = existingById.get(candidate.module.id);
+      const existing = existingById.get(normalizedModuleId(candidate.module.id));
       candidate.changed =
         !moduleEquals(existing, candidate.snapshot) ||
         !(await currentSnapshotMatches(sourcesRoot, candidate.snapshot));

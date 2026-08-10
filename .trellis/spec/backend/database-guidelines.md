@@ -7,6 +7,11 @@ The committed `sources/` tree and `sources/manifest.json` are the reproducible i
 and API catalogs are produced during synchronization and committed per module; builds only validate
 and aggregate those artifacts.
 
+`sources/manifest.json` is also the only persistent repository index. Production code contains no
+static module-repository list. Existing synchronization modes reconstruct module configuration from
+the manifest; a new organization repository enters it only when its first discovery candidate and
+the complete cross-module graph validate successfully.
+
 ## Snapshot Contract
 
 - During synchronization, discover packages and source ownership from the temporary upstream clone;
@@ -25,6 +30,8 @@ and aggregate those artifacts.
 - A configured module may legitimately contain no package manifest, README, or source files. Record
   `PACKAGE_MANIFEST_MISSING`, `README_MISSING`, or `LICENSE_MISSING` warnings and persist valid empty
   catalog states instead of dropping the module or aborting unrelated synchronization.
+- A missing manifest represents an empty index. Discovery installs the first module directory and
+  manifest atomically; dry-run or any discovery failure leaves the index empty.
 
 ## Atomic Replacement
 

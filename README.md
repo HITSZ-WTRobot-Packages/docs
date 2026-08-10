@@ -34,7 +34,8 @@
 ```text
 bun install --frozen-lockfile
 bun run dev
-bun run sync [--module <name> | --changed] [--dry-run]
+bun run sync [--module <indexed-name> | --changed] [--dry-run]
+bun run sync --repository HITSZ-WTRobot-Packages/<name> --branch <name> [--dry-run]
 bun run generate:catalog
 bun run generate:readme
 bun run generate:api
@@ -54,14 +55,17 @@ bun run build
 
 ## 源码同步
 
-`bun run sync`
-是仓库中唯一允许访问网络的命令。它将六个允许同步的模块仓库浅克隆到操作系统临时目录，将各分支解析为完整提交 SHA，并在修改已跟踪文件前验证完整候选快照。
+`bun run sync` 是仓库中唯一允许访问网络的命令。生产同步不维护静态仓库名单，而是从已提交的
+`sources/manifest.json`
+还原已经发现的模块，将相应仓库浅克隆到操作系统临时目录，将各分支解析为完整提交 SHA，并在修改已跟踪文件前验证完整候选快照。
 
 ```text
-bun run sync                         # 刷新所有允许同步的模块
+bun run sync                         # 刷新 manifest 中全部已发现模块
 bun run sync --module MotorDrivers   # 刷新单个模块
 bun run sync --changed               # 跳过 SHA 完整且未变化的模块
 bun run sync --changed --dry-run     # 只验证和报告，不写入 sources/
+bun run sync --repository HITSZ-WTRobot-Packages/NewDriver --branch main
+                                     # 首次验证并发现一个组织仓库
 ```
 
 同步过程在临时克隆中读取 `cpkg.toml`
@@ -71,7 +75,7 @@ JSON 目录写入快照。原始 `cpkg.toml`、C/C++ 源码和 Doxygen XML 不�
 
 每次成功同步的快照保存在 `sources/modules/<module>/`。文档和资源位于 `content/`，模块根目录保存
 `package-catalog.json` 与 `api-catalog.json`。`sources/manifest.json` 使用
-`formatVersion: 2`，记录模块仓库、分支、完整及缩写 SHA、生产器指纹、总字节数、警告、未缓存引用，以及全部内容和目录产物的路径、类型、字节数与 SHA-256。所有数组均稳定排序，清单不含时间戳；只要上游 SHA、Doxygen 版本和相关生产器代码不变，`--changed`
+`formatVersion: 2`，同时作为成功发现的仓库索引，记录模块仓库、分支、完整及缩写 SHA、生产器指纹、总字节数、警告、未缓存引用，以及全部内容和目录产物的路径、类型、字节数与 SHA-256。全新的空清单可通过首次仓库 dispatch 自举；只有候选模块及完整跨模块目录验证成功后，模块目录和索引才会在同一事务中安装。所有数组均稳定排序，清单不含时间戳；只要上游 SHA、Doxygen 版本和相关生产器代码不变，`--changed`
 会跳过模块，相同输入的完整同步也会逐字节产生相同结果。试运行或任一目录验证失败时保留最后一份完整快照。
 
 ## 软件包目录
@@ -130,8 +134,10 @@ Pagefind 由生产构建生成，因此应依次执行 `bun run build` 和 `bun 
 
 `.github/workflows/validation.yml`
 基于已提交快照运行离线质量门禁和静态站点矩阵。`.github/workflows/sync-snapshots.yml`
-是唯一允许访问上游模块仓库的工作流：它必须显式触发、验证事件载荷、安装锁定的 Doxygen、调用本地使用的同一个
-`bun run sync` CLI，并且仅在请求提交且内容发生变化时提交
+是唯一允许访问上游模块仓库的工作流：它可由操作者手动触发，或接收驱动仓库通过
+`.github/workflows/request-docs-sync.yml`
+发出的受限 discovery 事件；它验证事件载荷、安装锁定的 Doxygen、调用本地使用的同一个 `bun run sync`
+CLI，并且仅在请求提交且内容发生变化时提交
 `sources/`。普通验证和部署构建只消费这些已生成产物，两个工作流都不会部署站点。
 
 工作流输入、`repository_dispatch` 载荷、权限、无变更行为、固定工具链和失败语义详见

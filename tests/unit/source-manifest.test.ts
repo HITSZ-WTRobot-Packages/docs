@@ -102,13 +102,24 @@ describe("source manifest", () => {
     expect(SourceManifestSchema.safeParse(manifest).success).toBe(false);
   });
 
-  test("rejects duplicate module identifiers", () => {
+  test("rejects duplicate module identities case-insensitively", () => {
     const manifest = validManifest();
     const module = manifest.modules[0];
     if (!module) {
       throw new Error("Fixture module is missing.");
     }
-    manifest.modules.push(structuredClone(module));
+    const duplicate = structuredClone(module);
+    duplicate.id = "fixturemodule";
+    manifest.modules.push(duplicate);
+
+    expect(SourceManifestSchema.safeParse(manifest).success).toBe(false);
+  });
+
+  test("rejects one repository indexed under multiple module identifiers", () => {
+    const manifest = validManifest();
+    const module = manifest.modules[0];
+    if (!module) throw new Error("Fixture module is missing.");
+    manifest.modules.push({ ...structuredClone(module), id: "OtherModule" });
 
     expect(SourceManifestSchema.safeParse(manifest).success).toBe(false);
   });

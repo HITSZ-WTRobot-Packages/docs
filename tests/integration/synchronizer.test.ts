@@ -108,6 +108,96 @@ afterEach(async () => {
 });
 
 describe("source synchronizer", () => {
+  test("discovers the first module and uses the manifest for later synchronization", async () => {
+    const upstream = await createFixtureRepository();
+    const repositoryRoot = await createProjectRoot();
+    const discovery = fixtureModule("DiscoveredModule", upstream);
+
+    const first = await synchronize(
+      {
+        mode: "module",
+        module: discovery.id,
+        discovery,
+        dryRun: false,
+      },
+      { repositoryRoot, gitClient: fixtureGitClient },
+    );
+    expect(first.modules.map((module) => module.id)).toEqual(["DiscoveredModule"]);
+
+    const manifest = await Bun.file(path.join(repositoryRoot, "sources/manifest.json")).json();
+    expect(manifest.modules.map((module: { id: string }) => module.id)).toEqual([
+      "DiscoveredModule",
+    ]);
+
+    const changed = await synchronize(
+      { mode: "changed", dryRun: false },
+      { repositoryRoot, gitClient: fixtureGitClient },
+    );
+    expect(changed.changed).toBe(0);
+    expect(changed.skipped).toBe(1);
+
+    const updatedBranch = {
+      ...discovery,
+      id: discovery.id.toLocaleLowerCase("en-US"),
+      displayName: discovery.displayName.toLocaleLowerCase("en-US"),
+      branch: "stable",
+    };
+    const branchUpdate = await synchronize(
+      {
+        mode: "module",
+        module: updatedBranch.id,
+        discovery: updatedBranch,
+        dryRun: false,
+      },
+      { repositoryRoot, gitClient: fixtureGitClient },
+    );
+    expect(branchUpdate.changed).toBe(1);
+    const updatedManifest = await Bun.file(
+      path.join(repositoryRoot, "sources/manifest.json"),
+    ).json();
+    expect(updatedManifest.modules[0].id).toBe("DiscoveredModule");
+    expect(updatedManifest.modules[0].branch).toBe("stable");
+  });
+
+  test("validates discovery conflicts before touching the persisted index", async () => {
+    const upstream = await createFixtureRepository();
+    const otherUpstream = await createFixtureRepository("OtherDemo");
+    const repositoryRoot = await createProjectRoot();
+    const discovery = fixtureModule("DiscoveredModule", upstream);
+    await synchronize(
+      { mode: "module", module: discovery.id, discovery, dryRun: false },
+      { repositoryRoot, gitClient: fixtureGitClient },
+    );
+    const sourcesRoot = path.join(repositoryRoot, "sources");
+    const before = await treeDigest(sourcesRoot);
+    const conflictingRepository = fixtureModule("OtherRepository", otherUpstream);
+    const conflict = {
+      ...conflictingRepository,
+      id: "DiscoveredModule",
+      displayName: "DiscoveredModule",
+    };
+
+    expect(
+      await captureRejection(
+        synchronize(
+          { mode: "module", module: conflict.id, discovery: conflict, dryRun: false },
+          { repositoryRoot, gitClient: fixtureGitClient },
+        ),
+      ),
+    ).toMatchObject({ code: "SYNC_MODULE_CONFLICT" });
+    expect(await treeDigest(sourcesRoot)).toBe(before);
+
+    expect(
+      await captureRejection(
+        synchronize(
+          { mode: "changed", discovery, dryRun: false },
+          { repositoryRoot, gitClient: fixtureGitClient },
+        ),
+      ),
+    ).toMatchObject({ code: "SYNC_DISCOVERY_INVALID" });
+    expect(await treeDigest(sourcesRoot)).toBe(before);
+  });
+
   test("full sync selects the documented closure and is idempotent", async () => {
     const upstream = await createFixtureRepository();
     const secondUpstream = await createFixtureRepository("SecondDemo");
@@ -213,13 +303,10 @@ describe("source synchronizer", () => {
     const upstream = await createFixtureRepository();
     const repositoryRoot = await createProjectRoot();
 
+    const discovery = fixtureModule("FixtureModule", upstream);
     const result = await synchronize(
-      { mode: "all", dryRun: true },
-      {
-        repositoryRoot,
-        modules: [fixtureModule("FixtureModule", upstream)],
-        gitClient: fixtureGitClient,
-      },
+      { mode: "module", module: discovery.id, discovery, dryRun: true },
+      { repositoryRoot, gitClient: fixtureGitClient },
     );
     expect(result.modules[0]?.status).toBe("would-change");
     expect(await Bun.file(path.join(repositoryRoot, "sources/manifest.json")).exists()).toBe(false);
@@ -260,14 +347,19 @@ describe("source synchronizer", () => {
     const upstream = await createFixtureRepository();
     const repositoryRoot = await createProjectRoot();
     await mkdir(repositoryRoot, { recursive: true });
+    const discovery = fixtureModule("FixtureModule", upstream);
 
     expect(
       await captureRejection(
         synchronize(
-          { mode: "all", dryRun: false },
+          {
+            mode: "module",
+            module: discovery.id,
+            discovery,
+            dryRun: false,
+          },
           {
             repositoryRoot,
-            modules: [fixtureModule("FixtureModule", upstream)],
             gitClient: fixtureGitClient,
             limits: { maxFileBytes: 8, maxModuleBytes: 128, maxFiles: 100 },
           },

@@ -1,0 +1,33 @@
+name: Request documentation synchronization
+
+on:
+  workflow_call:
+    secrets:
+      DOCS_SYNC_TOKEN:
+        description: Fine-grained token with Contents write access to the docs repository.
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-sync-request-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    name: Dispatch repository discovery
+    if: ${{ github.ref_name == github.event.repository.default_branch }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Request an incremental documentation sync
+        env:
+          GH_TOKEN: ${{ secrets.DOCS_SYNC_TOKEN }}
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          SOURCE_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: >-
+          gh api --method POST repos/HITSZ-WTRobot-Packages/docs/dispatches --header
+          "X-GitHub-Api-Version: 2022-11-28" --raw-field event_type=sync-snapshots --raw-field
+          "client_payload[source_repository]=${SOURCE_REPOSITORY}" --raw-field
+          "client_payload[source_default_branch]=${SOURCE_DEFAULT_BRANCH}" --silent

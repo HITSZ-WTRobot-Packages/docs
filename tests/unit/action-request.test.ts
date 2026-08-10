@@ -9,17 +9,42 @@ describe("GitHub synchronization request", () => {
     });
     expect(request).toEqual({
       mode: "module",
-      module: "Sensors",
+      module: "sensors",
       dryRun: false,
       commit: true,
     });
-    expect(syncArguments(request)).toEqual(["--module", "Sensors"]);
+    expect(syncArguments(request)).toEqual(["--module", "sensors"]);
+
+    expect(
+      resolveActionSyncRequest("workflow_dispatch", {
+        inputs: { mode: "changed", module: "", dry_run: "true", commit: "false" },
+      }),
+    ).toEqual({ mode: "changed", dryRun: true, commit: false });
   });
 
-  test("defaults repository dispatch to a changed-only dry run", () => {
-    const request = resolveActionSyncRequest("repository_dispatch", { client_payload: {} });
-    expect(request).toEqual({ mode: "changed", dryRun: true, commit: false });
-    expect(syncArguments(request)).toEqual(["--changed", "--dry-run"]);
+  test("maps repository dispatch to one discovered module and an automatic commit", () => {
+    const request = resolveActionSyncRequest("repository_dispatch", {
+      client_payload: {
+        source_repository: "HITSZ-WTRobot-Packages/NewDriver",
+        source_default_branch: "main",
+      },
+    });
+    expect(request).toEqual({
+      mode: "module",
+      module: "NewDriver",
+      dryRun: false,
+      commit: true,
+      discovery: {
+        repositoryFullName: "HITSZ-WTRobot-Packages/NewDriver",
+        branch: "main",
+      },
+    });
+    expect(syncArguments(request)).toEqual([
+      "--repository",
+      "HITSZ-WTRobot-Packages/NewDriver",
+      "--branch",
+      "main",
+    ]);
   });
 
   test("rejects ambiguous, unsafe, and unknown requests", () => {
@@ -30,9 +55,21 @@ describe("GitHub synchronization request", () => {
     ).toThrow("module is only valid");
     expect(() =>
       resolveActionSyncRequest("repository_dispatch", {
-        client_payload: { mode: "module", module: "not-allowlisted" },
+        client_payload: {
+          source_repository: "another-owner/UnknownDriver",
+          source_default_branch: "main",
+        },
       }),
-    ).toThrow("Unknown synchronization module");
+    ).toThrow();
+    expect(() =>
+      resolveActionSyncRequest("repository_dispatch", {
+        client_payload: {
+          source_repository: "HITSZ-WTRobot-Packages/Sensors",
+          source_default_branch: "main",
+          commit: false,
+        },
+      }),
+    ).toThrow();
     expect(() =>
       resolveActionSyncRequest("workflow_dispatch", {
         inputs: { mode: "changed", dry_run: true, commit: true },

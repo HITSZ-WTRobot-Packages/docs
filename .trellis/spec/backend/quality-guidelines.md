@@ -45,8 +45,9 @@
 
 - Unit tests cover schemas, path containment, URL/base handling, Markdown references, dependency
   classification, slugs, checksums, and Doxygen normalization.
-- Synchronizer integration tests cover full, one-module, changed-only, dry-run, identical rerun,
-  rollback on failure, and deterministic manifest output.
+- Synchronizer integration tests cover empty-index discovery, full, one-module, changed-only,
+  dry-run, identical rerun, repository/identity conflicts, rollback on failure, and deterministic
+  manifest output.
 - Catalog fixtures cover optional `format_version`, duplicates, invalid paths, unresolved internal
   dependencies, and approved external dependencies.
 - Documentation fixtures cover cross-page headings, root/nested-base images and attachments, raw
@@ -62,8 +63,13 @@
   and `/products/wtr/docs/` builds run artifact and Linkinator checks; root and product variants
   also run Playwright/axe.
 - Snapshot synchronization is limited to `workflow_dispatch` and the named `repository_dispatch`
-  type, uses serialized concurrency, and grants `contents: write` only there. Structured event
-  parsing must validate mode, module, dry-run, and commit before invoking the local sync CLI.
+  type, uses serialized concurrency, and grants `contents: write` only there. Manual event parsing
+  validates mode, indexed module, dry-run, and commit. Repository dispatch accepts only a caller
+  repository identity/default branch, derives a single committing discovery request, and rejects
+  arbitrary owners, URLs, modes, and extra fields before invoking the local sync CLI.
+- The reusable request workflow reads repository identity from its caller context, has read-only
+  `GITHUB_TOKEN` permissions, requires the organization-scoped `DOCS_SYNC_TOKEN`, and performs no
+  checkout. Callers pin it to a full commit SHA.
 - External Actions use immutable full commit SHAs. Only synchronization uses the pinned dedicated
   Doxygen setup Action; the sync CLI verifies its version against `.doxygen-version` before cloning.
 - A snapshot commit stages only `sources/`, uses a bot identity, runs only after the complete offline
@@ -154,7 +160,8 @@ locally and in Actions, and prevents Validation from silently becoming an automa
 ### 2. Signatures
 
 ```text
-bun run sync [--module <allowlisted-name> | --changed] [--dry-run]
+bun run sync [--module <indexed-name> | --changed] [--dry-run]
+bun run sync --repository HITSZ-WTRobot-Packages/<name> --branch <name> [--dry-run]
 bun run generate
 SITE_URL=<absolute-http-url> BASE_PATH=<absolute-path> bun run build
 SITE_URL=<same-build-origin> BASE_PATH=<same-build-path> bun run check:artifacts
@@ -162,6 +169,9 @@ SITE_URL=<same-build-origin> BASE_PATH=<same-build-path> PLAYWRIGHT_REUSE_ARTIFA
 ASTRO_DEV_BACKGROUND=0 bun run dev
 ASTRO_PREVIEW_BACKGROUND=0 bun run preview
 Validation workflow trigger: workflow_dispatch
+Reusable request trigger: workflow_call; required secret: DOCS_SYNC_TOKEN
+Discovery event: repository_dispatch(sync-snapshots)
+Discovery payload: { source_repository: "HITSZ-WTRobot-Packages/<name>", source_default_branch: "<branch>" }
 
 sources/manifest.json: formatVersion = 2
 sources/modules/<module>/content/<upstream-doc-path>
@@ -171,28 +181,38 @@ ModuleSnapshot.producerFingerprint: 64 lowercase hexadecimal SHA-256 characters
 ```
 
 `--module` and `--changed` are mutually exclusive. With neither, synchronization processes every
-allowlisted module. `--dry-run` composes with all modes and performs no repository writes.
+module indexed by the committed manifest. `--repository` and `--branch` must appear together and
+cannot compose with those selectors; they validate and discover one organization repository.
+`--dry-run` composes with all modes and performs no repository writes.
 
 ### 3. Contracts
 
 | Boundary | Input | Output |
 | --- | --- | --- |
-| Synchronization | Allowlist, mode, optional module, current manifest, upstream Git repositories, locked Doxygen | Atomically replaced content plus per-module package/API artifacts and deterministic `sources/manifest.json` |
+| Synchronization | Manifest index, mode, optional indexed/discovery module, upstream Git repositories, locked Doxygen | Atomically replaced content plus per-module package/API artifacts and deterministic `sources/manifest.json` |
 | Generation | Valid committed `sources/` content, package/API artifacts, and manifest | Validated aggregate in-memory catalogs; no Doxygen, network, or snapshot mutation |
 | Build | `SITE_URL` absolute `http:`/`https:` URL; normalized absolute `BASE_PATH` | Static `dist/` whose internal routes and assets include the configured base |
 | Artifact check | The built `dist/`, the same address pair, and validated portal data | Release summary with module/package/API/HTML/Pagefind/file counts; no writes |
 | Release browser check | Validated `dist/`, same address pair, `PLAYWRIGHT_REUSE_ARTIFACT=1` | Local preview and browser/axe results without rebuilding `dist/` |
 | Local server | The same site/base inputs and an Astro foreground sentinel | A foreground process owned and terminated by the invoking terminal or Playwright worker |
 | Validation workflow | Manually dispatched repository ref and committed `sources/` | Read-only offline quality and site-matrix result for the resolved commit |
+| Reusable discovery request | Caller `github.repository`, caller default branch, organization-scoped `DOCS_SYNC_TOKEN` | One `sync-snapshots` dispatch to the docs repository; no checkout or upstream access |
+| Discovery dispatch | Strict source repository/default-branch payload for `HITSZ-WTRobot-Packages/*` | One non-dry-run module request whose successful snapshot atomically joins the manifest index |
 
 `BASE_PATH` defaults to `/`, starts and ends with `/`, and contains no `.` or `..` segment. Normal
 generation and build commands make zero upstream network requests.
+
+Optional `workflow_dispatch` string inputs arrive as empty strings. Normalize an empty optional
+`module` to `undefined` before applying the module-ID regex; otherwise the default `changed` request
+is incorrectly rejected before mode validation.
 
 ### 4. Validation & Error Matrix
 
 | Condition | Required result |
 | --- | --- |
-| Unknown module or incompatible flags | Exit non-zero with `CLI_INVALID_ARGUMENT`; write nothing |
+| Unknown indexed module, invalid discovery identity, repository collision, or incompatible flags | Exit non-zero with a stable CLI/sync diagnostic; write nothing |
+| Discovery payload has another owner, an arbitrary URL/mode, a missing field, or an extra field | Reject before cloning; leave the manifest unchanged |
+| First discovery fails clone, content, Doxygen, dependency, or size validation | Leave the index empty and create no module directory |
 | Invalid origin or base path | Exit non-zero with `CONFIG_INVALID_URL`; do not start a build |
 | Clone, reference, license, Doxygen, catalog, size, or checksum failure | Exit non-zero; retain the prior snapshot |
 | Unchanged SHA and producer fingerprint in changed mode | Report skipped; write nothing |
@@ -215,19 +235,26 @@ generation and build commands make zero upstream network requests.
   canonical, asset, search, and content links.
 - Good: an operator dispatches Validation for the intended ref and records the resolved commit from
   the successful run.
+- Good: an organization repository calls the pinned reusable workflow; the receiver derives its
+  module ID and clone URL and adds it only after complete validation.
 - Base: `BASE_PATH=/ bun run build` builds from committed snapshots with network disabled.
+- Base: a manual `changed` dispatch supplies `module: ""`; the adapter normalizes it to an absent
+  module and invokes `bun run sync --changed --dry-run`.
 - Base: `bun run generate` succeeds on a host with no Doxygen executable because it validates the
   committed package/API artifacts.
 - Local: `bun run dev` stays in the foreground even when Astro detects an agent environment.
 - Bad: `BASE_PATH=../../docs bun run build` fails before Astro emits output.
 - Bad: a pull request or push to `main` starts Validation without an explicit dispatch.
+- Bad: a caller supplies a repository URL, module name, commit flag, or repository outside
+  `HITSZ-WTRobot-Packages` in a discovery payload.
 - Bad: an ordinary build scans `cpkg.toml`, invokes Doxygen, or regenerates a missing artifact.
 - Bad: building with `BASE_PATH=/` and uploading those bytes under `/docs/` is rejected even when
   every file exists, because canonical URLs and static asset paths are already compiled.
 
 ### 6. Tests Required
 
-- CLI unit tests assert flag exclusivity, allowlist validation, diagnostic code, and no writes.
+- CLI unit tests assert flag exclusivity, organization discovery validation, diagnostic code, and no
+  writes.
 - Synchronizer integration tests hash the previous tree before injected failures and assert exact
   equality afterward; unchanged reruns assert an empty Git diff; producer changes force regeneration.
 - Snapshot integration tests assert that `sources/` contains no C/C++ source, `cpkg.toml`, or XML;
@@ -244,10 +271,37 @@ generation and build commands make zero upstream network requests.
   least one root and nested E2E suite against a prebuilt artifact.
 - Workflow contract tests assert that Validation's event keys equal exactly `workflow_dispatch` and
   that its read-only permissions and existing site matrix remain unchanged.
+- Action request tests assert strict discovery fields, fixed committing module mode, organization
+  ownership, and empty optional manual-input normalization. Reusable workflow tests assert caller
+  context crosses through environment values rather than direct shell interpolation.
 - A Playwright run with no pre-existing server must start, await, and stop its configured web server
   without leaving an Astro background process.
 
 ### 7. Wrong vs Correct
+
+```ts
+// Wrong: the optional workflow input is regex-validated while it is still an empty string.
+const module = z.string().trim().regex(MODULE_ID_PATTERN).optional();
+
+// Correct: normalize GitHub's empty optional input before validating a present identifier.
+const module = z
+  .string()
+  .trim()
+  .optional()
+  .transform((value) => value || undefined)
+  .pipe(z.string().regex(MODULE_ID_PATTERN).optional());
+```
+
+```jsonc
+// Wrong: caller controls synchronization behavior or a clone URL.
+{ "module": "Sensors", "repository": "https://example.invalid/repo", "commit": true }
+
+// Correct: caller identity is the complete discovery contract; the receiver derives behavior.
+{
+  "source_repository": "HITSZ-WTRobot-Packages/Sensors",
+  "source_default_branch": "main"
+}
+```
 
 ```ts
 // Wrong: bypasses the shared configuration and breaks nested deployments.

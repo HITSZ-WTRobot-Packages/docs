@@ -13,7 +13,7 @@ on:
           - all
           - module
       module:
-        description: Allowlisted module name; required only in module mode.
+        description: Indexed module name; required only in module mode.
         required: false
         type: string
       dry_run:

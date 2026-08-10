@@ -4,6 +4,7 @@ import path from "node:path";
 import { z } from "zod";
 
 import { SyncDiagnostic } from "./diagnostic";
+import { MODULE_ID_PATTERN, ModuleConfigSchema } from "./modules";
 
 function isSafeSnapshotPath(value: string): boolean {
   return (
@@ -70,10 +71,10 @@ export const SnapshotWarningSchema = z
 
 export const ModuleSnapshotSchema = z
   .object({
-    id: z.string().regex(/^[A-Za-z][A-Za-z0-9-]*$/u),
+    id: z.string().regex(MODULE_ID_PATTERN),
     displayName: z.string().min(1),
-    repository: z.url(),
-    branch: z.string().min(1),
+    repository: z.url({ protocol: /^https?$/ }),
+    branch: ModuleConfigSchema.shape.branch,
     sha: z.string().regex(/^[a-f0-9]{40}$/u),
     shortSha: z.string().regex(/^[a-f0-9]{12}$/u),
     producerFingerprint: Sha256Schema,
@@ -199,15 +200,27 @@ export const SourceManifestSchema = z
   .strict()
   .superRefine((manifest, context) => {
     const moduleIds = new Set<string>();
+    const repositories = new Set<string>();
     for (const [index, module] of manifest.modules.entries()) {
-      if (moduleIds.has(module.id)) {
+      const moduleId = module.id.toLocaleLowerCase("en-US");
+      if (moduleIds.has(moduleId)) {
         context.addIssue({
           code: "custom",
           path: ["modules", index, "id"],
           message: `Duplicate module id: ${module.id}`,
         });
       }
-      moduleIds.add(module.id);
+      moduleIds.add(moduleId);
+
+      const repository = module.repository.toLocaleLowerCase("en-US");
+      if (repositories.has(repository)) {
+        context.addIssue({
+          code: "custom",
+          path: ["modules", index, "repository"],
+          message: `Duplicate module repository: ${module.repository}`,
+        });
+      }
+      repositories.add(repository);
     }
   });
 export type SourceManifest = z.infer<typeof SourceManifestSchema>;

@@ -37,7 +37,8 @@ URL、sitemap 条目、robots 指令、导航、Pagefind 资源、Markdown 资�
   Action。所有外部 Action 必须固定到完整提交 SHA。
 - 保护 `main`，并将针对目标 ref 手动运行且成功的 `Validation` 记录作为发布前置证据。
 - 保护 `github-pages` 环境，仅允许 `main` 使用，并为首次部署、域名变更和回滚运行配置审核者。
-- 同步保持手动触发。部署构建只消费已提交的 `sources/`，永不调用 `bun run sync`。
+- 同步与部署保持分离；同步可由手动请求或驱动仓库 discovery dispatch 启动。部署构建只消费已提交的
+  `sources/`，永不调用 `bun run sync`。
 - 在 `issues.md` 中使用选定域名、Pages 设置、环境审核者和分支规则解决 `DEPLOYMENT-001`。
 
 构建作业只需要 `contents: read`。独立的部署作业只需要 `pages: write` 和
