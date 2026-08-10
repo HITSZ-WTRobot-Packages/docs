@@ -1,0 +1,124 @@
+---
+import DefaultPageSidebar from "@astrojs/starlight/components/PageSidebar.astro";
+import { Icon } from "astro-icon/components";
+
+import type { CatalogModule, CatalogPackage } from "../../lib/catalog/schema";
+import type { ApiReference } from "../../lib/doxygen/schema";
+import { sitePath } from "../../lib/paths/site-config";
+import { loadPortalData, type PortalData } from "../../lib/site/portal-data";
+import { apiStatusLabel, apiStatusTone } from "../../lib/site/view-models";
+import DependencyGraph from "../dependency-graph/DependencyGraph.astro";
+import DependencyList from "../documentation/DependencyList.astro";
+import PackageMetadata from "../documentation/PackageMetadata.astro";
+import StatusBadge from "./StatusBadge.astro";
+
+const packageRoute = /^packages\/([^/]+)$/u.exec(Astro.locals.starlightRoute.id);
+let portalData: PortalData | undefined;
+let packageEntry: CatalogPackage | undefined;
+let moduleEntry: CatalogModule | undefined;
+let apiReference: ApiReference | undefined;
+
+if (packageRoute) {
+  const packageSlug = packageRoute[1];
+  const data = await loadPortalData();
+  const resolvedPackage = data.catalog.packages.find((entry) => entry.slug === packageSlug);
+  if (!resolvedPackage) throw new Error(`Missing package sidebar data: ${packageSlug}`);
+
+  const resolvedModule = data.catalog.modules.find(
+    (module) => module.id === resolvedPackage.moduleId,
+  );
+  if (!resolvedModule)
+    throw new Error(`Missing package sidebar module: ${resolvedPackage.moduleId}`);
+
+  const resolvedApi = data.api.references.find(
+    (reference) => reference.packageSlug === resolvedPackage.slug,
+  );
+  if (!resolvedApi) throw new Error(`Missing package sidebar API: ${resolvedPackage.pkgname}`);
+
+  portalData = data;
+  packageEntry = resolvedPackage;
+  moduleEntry = resolvedModule;
+  apiReference = resolvedApi;
+}
+---
+
+{
+  portalData && packageEntry && moduleEntry && apiReference ? (
+    <package-info-sidebar class="wtr-package-info-sidebar">
+      <h2 class="wtr-package-info-sidebar__heading">软件包信息</h2>
+      <details class="wtr-package-info-disclosure" open>
+        <summary>软件包信息</summary>
+        <div class="wtr-package-info-content">
+          <div class="wtr-page-actions">
+            <StatusBadge
+              tone={apiStatusTone(apiReference.status)}
+              label={apiStatusLabel(apiReference.status)}
+            />
+            <a
+              class="wtr-primary-command"
+              href={sitePath(portalData.config.basePath, "packages", packageEntry.slug, "api")}
+            >
+              <Icon name="lucide:code-2" size="1rem" aria-hidden="true" /> API 参考
+            </a>
+          </div>
+          <PackageMetadata
+            packageEntry={packageEntry}
+            moduleHref={sitePath(portalData.config.basePath, "modules", moduleEntry.slug)}
+          />
+          <DependencyList
+            basePath={portalData.config.basePath}
+            dependencies={packageEntry.dependencies}
+            reverseDependencies={packageEntry.reverseDependencies}
+          />
+          <DependencyGraph
+            catalog={portalData.catalog}
+            rootSlug={packageEntry.slug}
+            basePath={portalData.config.basePath}
+          />
+        </div>
+      </details>
+    </package-info-sidebar>
+  ) : (
+    <DefaultPageSidebar />
+  )
+}
+
+<script>
+  class PackageInfoSidebarElement extends HTMLElement {
+    private readonly wideLayout = window.matchMedia("(min-width: 72rem)");
+    private disclosure: HTMLDetailsElement | null = null;
+    private openBeforePrint = false;
+
+    private readonly syncLayout = () => {
+      if (this.disclosure) this.disclosure.open = this.wideLayout.matches;
+    };
+
+    private readonly preparePrint = () => {
+      if (!this.disclosure) return;
+      this.openBeforePrint = this.disclosure.open;
+      this.disclosure.open = true;
+    };
+
+    private readonly restoreAfterPrint = () => {
+      if (this.disclosure) this.disclosure.open = this.openBeforePrint;
+    };
+
+    connectedCallback() {
+      this.disclosure = this.querySelector(":scope > details");
+      this.syncLayout();
+      this.wideLayout.addEventListener("change", this.syncLayout);
+      window.addEventListener("beforeprint", this.preparePrint);
+      window.addEventListener("afterprint", this.restoreAfterPrint);
+    }
+
+    disconnectedCallback() {
+      this.wideLayout.removeEventListener("change", this.syncLayout);
+      window.removeEventListener("beforeprint", this.preparePrint);
+      window.removeEventListener("afterprint", this.restoreAfterPrint);
+    }
+  }
+
+  if (!customElements.get("package-info-sidebar")) {
+    customElements.define("package-info-sidebar", PackageInfoSidebarElement);
+  }
+</script>

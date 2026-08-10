@@ -36,6 +36,33 @@ const { revision, sourceUrl } = Astro.props;
   graph links use the shared helper with `BASE_PATH`. Do not pass an already-prefixed link into
   Starlight or nested deployments will receive the prefix twice.
 
+## Starlight Right Sidebar Contract
+
+Starlight renders `PageSidebar` only when the route has a table-of-contents state. Portal routes
+that provide custom right-sidebar content must activate that state through the shared page wrapper,
+and the configured `PageSidebar` override must fall back to Starlight's default component for every
+route it does not own.
+
+```astro
+<!-- Exact route owner: /packages/<slug>/, excluding /packages/<slug>/api/. -->
+<PortalPage rightSidebar={true} ... />
+```
+
+- Match route IDs exactly and resolve display data from the validated cached catalog. A route that
+  should have sidebar data but cannot resolve it fails the build instead of silently omitting it.
+- Keep page-level navigation context such as breadcrumbs in `main`. The primary package install
+  prompt also belongs in `main`, immediately before the documentation content; custom right
+  sidebars own supplemental route-specific information panels, not the document hierarchy or its
+  primary action.
+- Custom mobile sidebar content precedes `main`. Reset `--sl-mobile-toc-height` below Starlight's
+  `72rem` breakpoint when the default mobile TOC control is replaced, or the empty TOC reservation
+  leaves a blank band below the header.
+- Critical sidebar information is expanded in server-rendered HTML. If narrow screens should start collapsed,
+  use a bounded custom element to synchronize the native `<details>` state, clean up media/print
+  listeners on disconnect, and expand it for printing. Do not duplicate the information DOM.
+- Browser tests assert desktop landmark order, mobile collapsed/expanded behavior, print visibility,
+  overflow, axe results, and an adjacent route that must not receive the custom sidebar.
+
 ## Visual Rules
 
 - Follow Starlight tokens first and add a restrained project palette with neutral surfaces, blue

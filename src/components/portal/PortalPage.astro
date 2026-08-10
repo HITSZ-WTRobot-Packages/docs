@@ -8,13 +8,14 @@ interface Props {
   description: string;
   sidebar: PortalSidebar;
   pagefind?: boolean;
+  rightSidebar?: boolean;
 }
 
-const { title, description, sidebar, pagefind = true } = Astro.props;
+const { title, description, sidebar, pagefind = true, rightSidebar = false } = Astro.props;
 ---
 
 <StarlightPage
-  frontmatter={{ title, description, pagefind, editUrl: false, tableOfContents: false }}
+  frontmatter={{ title, description, pagefind, editUrl: false, tableOfContents: rightSidebar }}
   sidebar={sidebar}
   hasSidebar={true}
 >

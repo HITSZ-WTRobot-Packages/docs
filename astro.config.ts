@@ -47,6 +47,9 @@ export default defineConfig({
         },
       },
       pagefind: true,
+      components: {
+        PageSidebar: "./src/components/portal/PackageInfoSidebar.astro",
+      },
       social: [
         {
           icon: "github",

@@ -9,7 +9,6 @@ interface Props {
 }
 
 const { packageEntry, moduleHref } = Astro.props;
-const installCommand = `cpkg add ${packageEntry.pkgname}`;
 ---
 
 <section class="wtr-package-summary" aria-label="软件包元数据">
@@ -31,41 +30,8 @@ const installCommand = `cpkg add ${packageEntry.pkgname}`;
       <dd><code>{packageEntry.manifestPath}</code></dd>
     </div>
   </dl>
-  <div class="wtr-install-row">
-    <Icon name="lucide:terminal" size="1.1rem" aria-hidden="true" />
-    <code>{installCommand}</code>
-    <button
-      type="button"
-      class="wtr-icon-button"
-      aria-label="复制安装命令"
-      title="复制安装命令"
-      data-copy-value={installCommand}
-    >
-      <Icon name="lucide:clipboard" size="1rem" aria-hidden="true" />
-    </button>
-    <span class="sr-only" aria-live="polite" data-copy-status></span>
-  </div>
   <a class="wtr-command-link" href={packageEntry.sourceUrl} target="_blank" rel="noreferrer">
     <Icon name="lucide:external-link" size="1rem" aria-hidden="true" />
     固定版本源码
   </a>
 </section>
-
-<script>
-  for (const button of document.querySelectorAll<HTMLButtonElement>("[data-copy-value]")) {
-    if (button.dataset.copyReady === "true") continue;
-    button.dataset.copyReady = "true";
-    button.addEventListener("click", async () => {
-      const value = button.dataset.copyValue;
-      const status = button.parentElement?.querySelector<HTMLElement>("[data-copy-status]");
-      if (!value || !status) return;
-      try {
-        await navigator.clipboard.writeText(value);
-        status.textContent = "已复制安装命令。";
-        button.title = "已复制";
-      } catch {
-        status.textContent = "复制失败，请改为选择命令文本。";
-      }
-    });
-  }
-</script>

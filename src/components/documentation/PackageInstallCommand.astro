@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  packageName: string;
+}
+
+const { packageName } = Astro.props;
+const installCommand = `cpkg add ${packageName}`;
+---
+
+<section class="wtr-package-install-prompt" aria-label="安装软件包">
+  <div class="wtr-install-row">
+    <Icon name="lucide:terminal" size="1.1rem" aria-hidden="true" />
+    <code>{installCommand}</code>
+    <button
+      type="button"
+      class="wtr-icon-button"
+      aria-label="复制安装命令"
+      title="复制安装命令"
+      data-copy-install-command={installCommand}
+    >
+      <Icon name="lucide:clipboard" size="1rem" aria-hidden="true" />
+    </button>
+    <span class="sr-only" aria-live="polite" data-copy-status></span>
+  </div>
+</section>
+
+<script>
+  for (const button of document.querySelectorAll<HTMLButtonElement>(
+    "[data-copy-install-command]",
+  )) {
+    if (button.dataset.copyReady === "true") continue;
+    button.dataset.copyReady = "true";
+    button.addEventListener("click", async () => {
+      const value = button.dataset.copyInstallCommand;
+      const status = button.parentElement?.querySelector<HTMLElement>("[data-copy-status]");
+      if (!value || !status) return;
+      try {
+        await navigator.clipboard.writeText(value);
+        status.textContent = "已复制安装命令。";
+        button.title = "已复制";
+      } catch {
+        status.textContent = "复制失败，请改为选择命令文本。";
+      }
+    });
+  }
+</script>
