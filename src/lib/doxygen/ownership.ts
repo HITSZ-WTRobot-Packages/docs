@@ -11,7 +11,7 @@ export type ApiTarget = {
   displayName: string;
   module: ModuleSnapshot;
   packageSlug: string | null;
-  revisionLabel: string;
+  projectNumber: string;
   inputPaths: string[];
 };
 
@@ -47,7 +47,7 @@ export function buildModuleApiTargets(
     displayName: entry.pkgname,
     module,
     packageSlug: entry.slug,
-    revisionLabel: entry.revisionLabel,
+    projectNumber: entry.version,
     inputPaths: sourcePaths
       .filter((sourcePath) => selectOwner(modulePackages, sourcePath) === entry)
       .sort(compareStrings),
@@ -62,7 +62,7 @@ export function buildModuleApiTargets(
       displayName: module.displayName,
       module,
       packageSlug: null,
-      revisionLabel: module.shortSha,
+      projectNumber: module.branch,
       inputPaths: unowned,
     });
   }

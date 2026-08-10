@@ -33,9 +33,9 @@ free-form error message to determine behavior.
   target-level quality states.
 - Missing package README content produces a catalog-derived fallback, not a hidden package.
 - Broken, unsafe, or escaping local references fail synchronization with the source path and target.
-- Missing, corrupt, revision-mismatched, or wrong-version committed package/API artifacts fail
-  generation and build with a stable diagnostic; never invoke Doxygen or fetch upstream as a
-  fallback.
+- Missing or corrupt committed package/API artifacts, revision-mismatched package artifacts,
+  source-branch-mismatched API artifacts, and wrong Doxygen versions fail generation and build with
+  a stable diagnostic; never invoke Doxygen or fetch upstream as a fallback.
 - Do not catch an error unless adding context, converting it to a diagnostic, or providing a
   documented fallback.
 

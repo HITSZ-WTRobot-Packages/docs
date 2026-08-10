@@ -1,5 +1,5 @@
 {
-  "formatVersion": 1,
+  "formatVersion": 2,
   "doxygenVersion": "1.16.1",
   "references": [
     {
@@ -8,8 +8,7 @@
       "displayName": "ArmController",
       "moduleId": "ArmController",
       "packageSlug": null,
-      "moduleSha": "967f6e0c5a1e211ffc45b7af80efece89252f685",
-      "revisionLabel": "967f6e0c5a1e",
+      "sourceBranch": "main",
       "inputPaths": [
         "Core/arm_controller.cpp",
         "Core/arm_controller.hpp",
@@ -39,7 +38,7 @@
             "path": "Core/arm_controller.cpp",
             "line": 9,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.cpp#L9"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.cpp#L9"
           },
           "parentId": null,
           "references": [
@@ -69,7 +68,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 8,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L8"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L8"
           },
           "parentId": null,
           "references": [
@@ -134,7 +133,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 14,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L14"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L14"
           },
           "parentId": null,
           "references": [
@@ -178,7 +177,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 29,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L29"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L29"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -196,7 +195,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 30,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L30"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L30"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -214,7 +213,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 31,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L31"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L31"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -232,7 +231,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 36,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L36"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L36"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -250,7 +249,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 52,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L52"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L52"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -268,7 +267,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 53,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L53"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L53"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -286,7 +285,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 54,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L54"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L54"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -304,7 +303,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 39,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L39"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L39"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -322,7 +321,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 16,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L16"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L16"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -340,7 +339,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 17,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L17"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L17"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -358,7 +357,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 18,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L18"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L18"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -376,7 +375,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 20,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L20"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L20"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -394,7 +393,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 21,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L21"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L21"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -412,7 +411,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 22,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L22"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L22"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -430,7 +429,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 35,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L35"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L35"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -448,7 +447,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 24,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L24"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L24"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -466,7 +465,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 25,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L25"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L25"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -484,7 +483,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 26,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L26"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L26"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -502,7 +501,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 34,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L34"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L34"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -520,7 +519,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 47,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L47"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L47"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -538,7 +537,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 48,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L48"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L48"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -556,7 +555,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 49,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L49"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L49"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -574,7 +573,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 42,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L42"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L42"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -592,7 +591,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 43,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L43"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L43"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -610,7 +609,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 44,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L44"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L44"
           },
           "parentId": "api-struct-a11c702810742332",
           "references": [],
@@ -628,7 +627,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 64,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L64"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L64"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [
@@ -649,7 +648,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 224,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L224"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L224"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -667,7 +666,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 225,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L225"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L225"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -685,7 +684,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 226,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L226"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L226"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -703,7 +702,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 228,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L228"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L228"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -721,7 +720,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 229,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L229"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L229"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -739,7 +738,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 230,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L230"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L230"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -757,7 +756,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 164,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L164"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L164"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -775,7 +774,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 149,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L149"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L149"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -793,7 +792,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 187,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L187"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L187"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -811,7 +810,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 204,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L204"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L204"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [
@@ -831,7 +830,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 232,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L232"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L232"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -849,7 +848,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 214,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L214"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L214"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -867,7 +866,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 206,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L206"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L206"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -885,7 +884,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 210,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L210"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L210"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -903,7 +902,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 215,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L215"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L215"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -921,7 +920,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 207,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L207"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L207"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -939,7 +938,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 211,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L211"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L211"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -957,7 +956,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 216,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L216"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L216"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -975,7 +974,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 208,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L208"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L208"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -993,7 +992,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 212,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L212"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L212"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1011,7 +1010,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 108,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L108"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L108"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [
@@ -1031,7 +1030,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 116,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L116"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L116"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [
@@ -1052,7 +1051,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 124,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L124"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L124"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [
@@ -1073,7 +1072,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 132,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L132"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L132"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1091,7 +1090,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 72,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L72"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L72"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [
@@ -1111,7 +1110,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 134,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L134"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L134"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1129,7 +1128,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 198,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L198"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L198"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1147,7 +1146,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 200,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L200"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L200"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [
@@ -1167,7 +1166,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 201,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L201"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L201"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [
@@ -1187,7 +1186,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 202,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L202"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L202"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [
@@ -1207,7 +1206,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 197,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L197"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L197"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1225,7 +1224,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 220,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L220"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L220"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1243,7 +1242,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 221,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L221"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L221"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1261,7 +1260,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 222,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L222"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L222"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1279,7 +1278,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 234,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L234"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L234"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1297,7 +1296,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 94,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L94"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L94"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1315,7 +1314,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 86,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L86"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L86"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1333,7 +1332,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 237,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L237"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L237"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1351,7 +1350,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 236,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L236"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L236"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1369,7 +1368,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 218,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L218"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L218"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1387,7 +1386,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 233,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L233"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L233"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [],
@@ -1405,7 +1404,7 @@
             "path": "Core/arm_controller.hpp",
             "line": 100,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L100"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L100"
           },
           "parentId": "api-class-6d4f6825750b2b12",
           "references": [
@@ -1426,7 +1425,7 @@
             "path": "Core/arm_controller.cpp",
             "line": 12,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.cpp#L12"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.cpp#L12"
           },
           "parentId": "api-namespace-91a0e8e93b7eb85f",
           "references": [
@@ -1450,7 +1449,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 162,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L162"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L162"
           },
           "parentId": null,
           "references": [
@@ -1494,7 +1493,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 169,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L169"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L169"
           },
           "parentId": "api-class-faa62adbb0547bd2",
           "references": [
@@ -1514,7 +1513,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 178,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L178"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L178"
           },
           "parentId": "api-class-faa62adbb0547bd2",
           "references": [],
@@ -1532,7 +1531,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 176,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L176"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L176"
           },
           "parentId": "api-class-faa62adbb0547bd2",
           "references": [],
@@ -1550,7 +1549,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 179,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L179"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L179"
           },
           "parentId": "api-class-faa62adbb0547bd2",
           "references": [],
@@ -1568,7 +1567,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 171,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L171"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L171"
           },
           "parentId": "api-class-faa62adbb0547bd2",
           "references": [
@@ -1597,7 +1596,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 182,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L182"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L182"
           },
           "parentId": null,
           "references": [
@@ -1641,7 +1640,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 188,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L188"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L188"
           },
           "parentId": "api-class-0c7d919111cf3f2e",
           "references": [
@@ -1661,7 +1660,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 191,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L191"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L191"
           },
           "parentId": "api-class-0c7d919111cf3f2e",
           "references": [
@@ -1681,7 +1680,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 195,
             "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L195"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L195"
           },
           "parentId": "api-class-0c7d919111cf3f2e",
           "references": [],
@@ -1699,7 +1698,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 190,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L190"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L190"
           },
           "parentId": "api-class-0c7d919111cf3f2e",
           "references": [],
@@ -1717,7 +1716,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 192,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L192"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L192"
           },
           "parentId": "api-class-0c7d919111cf3f2e",
           "references": [
@@ -1743,7 +1742,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 32,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L32"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L32"
           },
           "parentId": null,
           "references": [
@@ -1797,7 +1796,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 110,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L110"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L110"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -1818,7 +1817,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 53,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L53"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L53"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -1838,7 +1837,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 46,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L46"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L46"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -1856,7 +1855,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 37,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L37"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L37"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -1877,7 +1876,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 118,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L118"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L118"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -1900,7 +1899,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 82,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L82"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L82"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -1921,7 +1920,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 91,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L91"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L91"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -1942,7 +1941,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 154,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L154"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L154"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -1960,7 +1959,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 152,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L152"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L152"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -1978,7 +1977,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 100,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L100"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L100"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -1999,7 +1998,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 70,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L70"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L70"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2017,7 +2016,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 108,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L108"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L108"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -2037,7 +2036,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 143,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L143"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L143"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -2059,7 +2058,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 150,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L150"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L150"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2077,7 +2076,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 151,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L151"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L151"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2095,7 +2094,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 142,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L142"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L142"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -2117,7 +2116,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 149,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L149"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L149"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2135,7 +2134,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 55,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L55"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L55"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2153,7 +2152,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 155,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L155"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L155"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2171,7 +2170,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 144,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L144"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L144"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -2192,7 +2191,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 146,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L146"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L146"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -2213,7 +2212,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 145,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L145"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L145"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -2234,7 +2233,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 157,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L157"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L157"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2252,7 +2251,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 159,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L159"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L159"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2270,7 +2269,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 158,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L158"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L158"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2288,7 +2287,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 77,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L77"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L77"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [
@@ -2309,7 +2308,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 76,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L76"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L76"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2327,7 +2326,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 35,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L35"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L35"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
           "references": [],
@@ -2345,7 +2344,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 14,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L14"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L14"
           },
           "parentId": null,
           "references": [
@@ -2386,7 +2385,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 39,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L39"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L39"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [
@@ -2406,7 +2405,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 1,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L1"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L1"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2424,7 +2423,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 89,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L89"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L89"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2442,7 +2441,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 52,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L52"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L52"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2460,7 +2459,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 91,
             "column": 49,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L91"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L91"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [
@@ -2480,7 +2479,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 97,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L97"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L97"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2498,7 +2497,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 77,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L77"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L77"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2516,7 +2515,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 98,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L98"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L98"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2534,7 +2533,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 101,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L101"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L101"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2552,7 +2551,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 83,
             "column": 29,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L83"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L83"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2570,7 +2569,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 103,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L103"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L103"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2588,7 +2587,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 94,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L94"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L94"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2606,7 +2605,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 95,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L95"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L95"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2624,7 +2623,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 100,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L100"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L100"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2642,7 +2641,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 47,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L47"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L47"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2660,7 +2659,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 92,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L92"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L92"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2678,7 +2677,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 105,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L105"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L105"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2696,7 +2695,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 64,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L64"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L64"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2714,7 +2713,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 58,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L58"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L58"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2732,7 +2731,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 104,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L104"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L104"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2750,7 +2749,7 @@
             "path": "controller/arm_slave.hpp",
             "line": 71,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L71"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L71"
           },
           "parentId": "api-class-28226dce511ae065",
           "references": [],
@@ -2768,7 +2767,7 @@
             "path": "controller/arm_slave.cpp",
             "line": 8,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L8"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L8"
           },
           "parentId": null,
           "references": [
@@ -2792,7 +2791,7 @@
             "path": "controller/arm_slave.cpp",
             "line": 13,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L13"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L13"
           },
           "parentId": null,
           "references": [
@@ -2815,7 +2814,7 @@
             "path": "controller/arm_slave.cpp",
             "line": 17,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L17"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L17"
           },
           "parentId": "api-struct-c8c5775956803001",
           "references": [
@@ -2835,7 +2834,7 @@
             "path": "controller/arm_slave.cpp",
             "line": 16,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L16"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L16"
           },
           "parentId": "api-struct-c8c5775956803001",
           "references": [
@@ -2855,7 +2854,7 @@
             "path": "controller/arm_slave.cpp",
             "line": 15,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L15"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L15"
           },
           "parentId": "api-struct-c8c5775956803001",
           "references": [
@@ -2875,7 +2874,7 @@
             "path": "controller/arm_slave.cpp",
             "line": 11,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L11"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L11"
           },
           "parentId": "api-namespace-2e9062cdff6e4010",
           "references": [],
@@ -2893,7 +2892,7 @@
             "path": "controller/arm_slave.cpp",
             "line": 10,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L10"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L10"
           },
           "parentId": "api-namespace-2e9062cdff6e4010",
           "references": [],
@@ -2911,7 +2910,7 @@
             "path": "controller/arm_slave.cpp",
             "line": 20,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L20"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L20"
           },
           "parentId": "api-namespace-2e9062cdff6e4010",
           "references": [
@@ -2934,7 +2933,7 @@
             "path": "Core/arm_controller.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.cpp"
           },
           "parentId": null,
           "references": [
@@ -2956,7 +2955,7 @@
             "path": "Core/arm_controller.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp"
           },
           "parentId": null,
           "references": [
@@ -2982,7 +2981,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp"
           },
           "parentId": null,
           "references": [
@@ -3012,7 +3011,7 @@
             "path": "Core/arm_motor_mit_dji.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit_dji.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit_dji.cpp"
           },
           "parentId": null,
           "references": [
@@ -3033,7 +3032,7 @@
             "path": "Core/arm_motor_mit_dm.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit_dm.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit_dm.cpp"
           },
           "parentId": null,
           "references": [
@@ -3054,7 +3053,7 @@
             "path": "Core/arm_controller.cpp",
             "line": 6,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.cpp#L6"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.cpp#L6"
           },
           "parentId": "api-file-b58f42d23456684d",
           "references": [],
@@ -3072,7 +3071,7 @@
             "path": "controller/arm_slave.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp"
           },
           "parentId": null,
           "references": [
@@ -3097,7 +3096,7 @@
             "path": "controller/arm_slave.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp"
           },
           "parentId": null,
           "references": [
@@ -3134,7 +3133,7 @@
             "path": "Core/arm_motor_mit.hpp",
             "line": 9,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L9"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L9"
           },
           "parentId": null,
           "references": [],

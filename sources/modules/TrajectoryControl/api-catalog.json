@@ -1,5 +1,5 @@
 {
-  "formatVersion": 1,
+  "formatVersion": 2,
   "doxygenVersion": "1.16.1",
   "references": [
     {
@@ -8,8 +8,7 @@
       "displayName": "Trajectory::HomingMotorTrajectory",
       "moduleId": "TrajectoryControl",
       "packageSlug": "trajectory--homingmotortrajectory",
-      "moduleSha": "29bd084ccf5d278db2df734fcf6c6841593e28af",
-      "revisionLabel": "0.1.0+29bd084ccf5d",
+      "sourceBranch": "main",
       "inputPaths": [
         "HomingMotorTrajectory/homing_motor_trajectory.hpp"
       ],
@@ -33,7 +32,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp"
           },
           "parentId": null,
           "references": [
@@ -56,7 +55,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 16,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L16"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L16"
           },
           "parentId": null,
           "references": [
@@ -77,7 +76,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 37,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L37"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L37"
           },
           "parentId": null,
           "references": [
@@ -117,7 +116,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 46,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L46"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L46"
           },
           "parentId": null,
           "references": [
@@ -142,7 +141,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 56,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L56"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L56"
           },
           "parentId": "api-struct-6c17def96a879179",
           "references": [],
@@ -160,7 +159,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 49,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L49"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L49"
           },
           "parentId": "api-struct-6c17def96a879179",
           "references": [],
@@ -178,7 +177,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 50,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L50"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L50"
           },
           "parentId": "api-struct-6c17def96a879179",
           "references": [],
@@ -196,7 +195,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 52,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L52"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L52"
           },
           "parentId": "api-struct-6c17def96a879179",
           "references": [],
@@ -214,7 +213,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 48,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L48"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L48"
           },
           "parentId": "api-struct-6c17def96a879179",
           "references": [],
@@ -232,7 +231,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 54,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L54"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L54"
           },
           "parentId": "api-struct-6c17def96a879179",
           "references": [],
@@ -250,7 +249,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 188,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L188"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L188"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -289,7 +288,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 59,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L59"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L59"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [
@@ -309,7 +308,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 41,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L41"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L41"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -327,7 +326,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 44,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L44"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L44"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -345,7 +344,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 198,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L198"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L198"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -363,7 +362,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 196,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L196"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L196"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [
@@ -383,7 +382,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 99,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L99"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L99"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [
@@ -403,7 +402,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 66,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L66"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L66"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [
@@ -423,7 +422,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 97,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L97"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L97"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -441,7 +440,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 185,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L185"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L185"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [
@@ -461,7 +460,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 202,
             "column": 16,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L202"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L202"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [
@@ -481,7 +480,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 95,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L95"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L95"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -499,7 +498,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 175,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L175"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L175"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -517,7 +516,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 176,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L176"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L176"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -535,7 +534,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 171,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L171"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L171"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [
@@ -556,7 +555,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 180,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L180"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L180"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [
@@ -576,7 +575,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 68,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L68"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L68"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -594,7 +593,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 70,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L70"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L70"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -612,7 +611,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 200,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L200"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L200"
           },
           "parentId": "api-class-941f63a9ede0d358",
           "references": [],
@@ -630,7 +629,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 19,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L19"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L19"
           },
           "parentId": null,
           "references": [
@@ -655,7 +654,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 21,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L21"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L21"
           },
           "parentId": "api-struct-3a4311530a2b9149",
           "references": [],
@@ -689,7 +688,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 30,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L30"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L30"
           },
           "parentId": "api-struct-3a4311530a2b9149",
           "references": [],
@@ -707,7 +706,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 34,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L34"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L34"
           },
           "parentId": "api-struct-3a4311530a2b9149",
           "references": [],
@@ -725,7 +724,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 33,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L33"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L33"
           },
           "parentId": "api-struct-3a4311530a2b9149",
           "references": [],
@@ -743,7 +742,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 32,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L32"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L32"
           },
           "parentId": "api-struct-3a4311530a2b9149",
           "references": [],
@@ -761,7 +760,7 @@
             "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
             "line": 28,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L28"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/HomingMotorTrajectory/homing_motor_trajectory.hpp#L28"
           },
           "parentId": "api-struct-3a4311530a2b9149",
           "references": [
@@ -779,8 +778,7 @@
       "displayName": "Trajectory::MotorTrajectory",
       "moduleId": "TrajectoryControl",
       "packageSlug": "trajectory--motortrajectory",
-      "moduleSha": "29bd084ccf5d278db2df734fcf6c6841593e28af",
-      "revisionLabel": "0.1.0+29bd084ccf5d",
+      "sourceBranch": "main",
       "inputPaths": [
         "MotorTrajectory/motor_trajectory.hpp",
         "MotorTrajectory/motor_trajectory_slave.hpp"
@@ -805,7 +803,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 20,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L20"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L20"
           },
           "parentId": "api-file-efb127fee3c824df",
           "references": [
@@ -826,7 +824,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp"
           },
           "parentId": null,
           "references": [
@@ -849,7 +847,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp"
           },
           "parentId": null,
           "references": [
@@ -872,7 +870,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 22,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L22"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L22"
           },
           "parentId": null,
           "references": [
@@ -893,7 +891,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 25,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L25"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L25"
           },
           "parentId": "api-namespace-58e89ae7e891b472",
           "references": [],
@@ -922,7 +920,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 31,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L31"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L31"
           },
           "parentId": null,
           "references": [
@@ -982,7 +980,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 66,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L66"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L66"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1003,7 +1001,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 36,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L36"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L36"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1024,7 +1022,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 51,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L51"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L51"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1045,7 +1043,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 34,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L34"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L34"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1063,7 +1061,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 107,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L107"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L107"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1084,7 +1082,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 303,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L303"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L303"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1115,7 +1113,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 313,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L313"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L313"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1135,7 +1133,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 281,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L281"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L281"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1156,7 +1154,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 263,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L263"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L263"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1177,7 +1175,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 292,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L292"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L292"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1202,7 +1200,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 306,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L306"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L306"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1220,7 +1218,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 95,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L95"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L95"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1242,7 +1240,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 309,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L309"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L309"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1260,7 +1258,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 228,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L228"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L228"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1284,7 +1282,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 236,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L236"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L236"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1305,7 +1303,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 245,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L245"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L245"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1325,7 +1323,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 251,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L251"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L251"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1345,7 +1343,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 256,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L256"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L256"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1363,7 +1361,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 294,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L294"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L294"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1383,7 +1381,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 258,
             "column": 57,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L258"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L258"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1401,7 +1399,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 316,
             "column": 50,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L316"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L316"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1419,7 +1417,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 322,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L322"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L322"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1437,7 +1435,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 318,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L318"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L318"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1455,7 +1453,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 311,
             "column": 8,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L311"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L311"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1473,7 +1471,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 79,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L79"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L79"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1495,7 +1493,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 314,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L314"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L314"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1513,7 +1511,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 300,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L300"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L300"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1533,7 +1531,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 215,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L215"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L215"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1553,7 +1551,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 219,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L219"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L219"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1574,7 +1572,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 193,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L193"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L193"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1601,7 +1599,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 223,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L223"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L223"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1622,7 +1620,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 180,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L180"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L180"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1642,7 +1640,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 184,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L184"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L184"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1663,7 +1661,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 123,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L123"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L123"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1691,7 +1689,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 188,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L188"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L188"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1712,7 +1710,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 115,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L115"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L115"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [
@@ -1733,7 +1731,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 307,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L307"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L307"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1751,7 +1749,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 319,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L319"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L319"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1769,7 +1767,7 @@
             "path": "MotorTrajectory/motor_trajectory.hpp",
             "line": 320,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L320"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L320"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "references": [],
@@ -1787,7 +1785,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 20,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L20"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L20"
           },
           "parentId": null,
           "references": [
@@ -1840,7 +1838,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 54,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L54"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L54"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -1860,7 +1858,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 33,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L33"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L33"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -1880,7 +1878,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 43,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L43"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L43"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -1900,7 +1898,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 253,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L253"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L253"
           },
           "parentId": null,
           "references": [],
@@ -1918,7 +1916,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 27,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L27"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L27"
           },
           "parentId": null,
           "references": [
@@ -1939,7 +1937,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 30,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L30"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L30"
           },
           "parentId": "api-struct-231eeeaaaecc6af0",
           "references": [],
@@ -1957,7 +1955,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 29,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L29"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L29"
           },
           "parentId": "api-struct-231eeeaaaecc6af0",
           "references": [],
@@ -1975,7 +1973,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 238,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L238"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L238"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [],
@@ -1993,7 +1991,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 193,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L193"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L193"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2013,7 +2011,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 259,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L259"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L259"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2033,7 +2031,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 111,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L111"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L111"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2055,7 +2053,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 231,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L231"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L231"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2085,7 +2083,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 163,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L163"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L163"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2107,7 +2105,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 236,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L236"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L236"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [],
@@ -2125,7 +2123,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 138,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L138"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L138"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2147,7 +2145,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 177,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L177"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L177"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2170,7 +2168,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 244,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L244"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L244"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [],
@@ -2188,7 +2186,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 99,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L99"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L99"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2210,7 +2208,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 202,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L202"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L202"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2231,7 +2229,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 210,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L210"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L210"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2251,7 +2249,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 219,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L219"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L219"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2271,7 +2269,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 225,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L225"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L225"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2291,7 +2289,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 179,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L179"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L179"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2315,7 +2313,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 245,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L245"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L245"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [],
@@ -2333,7 +2331,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 189,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L189"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L189"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2355,7 +2353,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 248,
             "column": 8,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L248"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L248"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [],
@@ -2373,7 +2371,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 70,
             "column": 27,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L70"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L70"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2396,7 +2394,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 92,
             "column": 27,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L92"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L92"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2417,7 +2415,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 86,
             "column": 27,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L86"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L86"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2437,7 +2435,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 61,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L61"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L61"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2458,7 +2456,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 120,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L120"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L120"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2482,7 +2480,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 246,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L246"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L246"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [],
@@ -2500,7 +2498,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 191,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L191"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L191"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2521,7 +2519,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 250,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L250"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L250"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [
@@ -2541,7 +2539,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 184,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L184"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L184"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [],
@@ -2559,7 +2557,7 @@
             "path": "MotorTrajectory/motor_trajectory_slave.hpp",
             "line": 233,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L233"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory_slave.hpp#L233"
           },
           "parentId": "api-class-575b2cf50e3d7e38",
           "references": [

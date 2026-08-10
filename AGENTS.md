@@ -65,8 +65,9 @@ future `trellis update`.
 - Keep third-party GitHub Actions dependencies pinned to full commit SHAs. Driver repositories
   intentionally reference the organization-owned dispatch reusable workflow at `@main` so its
   centrally maintained contract rolls forward without per-repository edits. The local setup Action
-  owns Bun, frozen dependency installation, and optional Chromium setup. The synchronization
-  workflow alone installs `.doxygen-version` through its pinned dedicated Doxygen Action.
+  owns Bun, the lockfile-keyed package cache, frozen dependency installation, and optional Chromium
+  setup. The synchronization workflow restores a version-keyed Doxygen executable cache and invokes
+  its pinned dedicated Doxygen Action only on a cache miss.
 
 ## Data And Network Boundaries
 
@@ -90,11 +91,12 @@ future `trellis update`.
   repository.
 - Validation CI is manually triggered only through `workflow_dispatch`, has read-only contents
   permission, and never invokes synchronization. Snapshot sync has no push trigger, parses manual or
-  repository-discovery dispatch data through `sync:action`, stages only `sources/`, and may push
-  only after the complete offline validation path succeeds. Its `GITHUB_TOKEN` remains read-only;
-  only the conditional commit step uses the organization-scoped `DOCS_SYNC_TOKEN`, allowing the
-  resulting default-branch push to be observed by the external build service. The callable-only
-  reusable workflow derives repository identity from its caller and requires the same secret.
+  repository-discovery dispatch data through `sync:action`, relies on the sync CLI's schema, graph,
+  checksum, tool-version, and atomic-write gates, and stages only `sources/`. It does not run the
+  offline/site/browser validation path. Its `GITHUB_TOKEN` remains read-only; only the conditional
+  commit step uses the organization-scoped `DOCS_SYNC_TOKEN`, allowing the resulting default-branch
+  push to be observed by the external build service. The callable-only reusable workflow derives
+  repository identity from its caller and requires the same secret.
 - Parse TOML, Markdown, XML, schemas, Git output, search indexes, and dependency layouts with the
   selected maintained libraries. Do not add an ad hoc parser or layout algorithm.
 - Validate external input at the boundary before converting it into internal catalog types.

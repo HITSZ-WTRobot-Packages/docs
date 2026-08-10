@@ -8,14 +8,14 @@
       "branch": "main",
       "sha": "967f6e0c5a1e211ffc45b7af80efece89252f685",
       "shortSha": "967f6e0c5a1e",
-      "producerFingerprint": "bbd46e1877ad46071fb920a02fd7219f7dd03512e5c0057ccaf6c32e43a7764e",
-      "totalBytes": 131532,
+      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
+      "totalBytes": 125988,
       "files": [],
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 131399,
-          "sha256": "73500bccc1f672c5e813cc0153c8afe0cc52f00f7e3bd83f1dfa2427b4c2546c",
+          "bytes": 125855,
+          "sha256": "7ecbe73b526c7a991c1c1b630fc040f2751c439df9c2719bb91feb21dbac3655",
           "kind": "api-catalog"
         },
         {
@@ -49,8 +49,8 @@
       "branch": "main",
       "sha": "855c407f828e683889760f2be3577a1ea1dcdc28",
       "shortSha": "855c407f828e",
-      "producerFingerprint": "bbd46e1877ad46071fb920a02fd7219f7dd03512e5c0057ccaf6c32e43a7764e",
-      "totalBytes": 712836,
+      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
+      "totalBytes": 685428,
       "files": [
         {
           "path": "LICENSE",
@@ -80,8 +80,8 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 664668,
-          "sha256": "87ab8491f470523c68cd7f7df36cf3ff17290b69f1dbe6fc7cff77b446254551",
+          "bytes": 637260,
+          "sha256": "629874aa6638e0eae13250be9585076e173003ffe70b99d0a17d7d3e66971cca",
           "kind": "api-catalog"
         },
         {
@@ -102,10 +102,10 @@
       "displayName": "ChassisController",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/ChassisController.git",
       "branch": "main",
-      "sha": "825f1408280d1b511ac10a73653800d0185bce3a",
-      "shortSha": "825f1408280d",
-      "producerFingerprint": "bbd46e1877ad46071fb920a02fd7219f7dd03512e5c0057ccaf6c32e43a7764e",
-      "totalBytes": 479678,
+      "sha": "725be59228a4c0aa62c1b04c01fdadee257a4feb",
+      "shortSha": "725be59228a4",
+      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
+      "totalBytes": 464510,
       "files": [
         {
           "path": "Chassis/Steering4/README.md",
@@ -147,14 +147,14 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 391187,
-          "sha256": "0ab03ff062aa233c7637c3717025940004a7c8e2980ca61d3327bda4e7285be2",
+          "bytes": 376019,
+          "sha256": "82ad017192e21350c5ca2405e6e22fbb91894eeff5df754b31b9d796705358bc",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
           "bytes": 2542,
-          "sha256": "1c55460bd13a0003ab187b3a2e5bc4bba17e31db8cdb18c968e339fcf03235f4",
+          "sha256": "23880dc4ef3f3a30e787cd93da9cc57d085cbc60787a5edaf12faa531870801a",
           "kind": "package-catalog"
         }
       ],
@@ -184,8 +184,8 @@
       "branch": "main",
       "sha": "d8ebbce805b2c870943659f572493f45c100330e",
       "shortSha": "d8ebbce805b2",
-      "producerFingerprint": "bbd46e1877ad46071fb920a02fd7219f7dd03512e5c0057ccaf6c32e43a7764e",
-      "totalBytes": 442943,
+      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
+      "totalBytes": 428111,
       "files": [
         {
           "path": "LICENSE",
@@ -227,8 +227,8 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 367790,
-          "sha256": "398e692b31b99be65582f8f2bb1da3151641c8faacbf3fa883b5c41c758533f0",
+          "bytes": 352958,
+          "sha256": "587c1164477331bed8fafca217130218e7a3b32e04e66647512247cc7d1cd46f",
           "kind": "api-catalog"
         },
         {
@@ -251,8 +251,8 @@
       "branch": "main",
       "sha": "cea60a9e62e200c18e2d53db2e79766618aa0ecb",
       "shortSha": "cea60a9e62e2",
-      "producerFingerprint": "bbd46e1877ad46071fb920a02fd7219f7dd03512e5c0057ccaf6c32e43a7764e",
-      "totalBytes": 327514,
+      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
+      "totalBytes": 314914,
       "files": [
         {
           "path": "LICENSE",
@@ -270,8 +270,8 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 290553,
-          "sha256": "caa1adf028292ea3c59b3860519cd0ac970d999ddb1081af8e90f7aaaf8b4a2a",
+          "bytes": 277953,
+          "sha256": "d01ade7ea1adf33d6abcfba3b7fb0129c13b15fe4781b6c987408971d04fc6e6",
           "kind": "api-catalog"
         },
         {
@@ -294,8 +294,8 @@
       "branch": "main",
       "sha": "29bd084ccf5d278db2df734fcf6c6841593e28af",
       "shortSha": "29bd084ccf5d",
-      "producerFingerprint": "bbd46e1877ad46071fb920a02fd7219f7dd03512e5c0057ccaf6c32e43a7764e",
-      "totalBytes": 151587,
+      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
+      "totalBytes": 147183,
       "files": [
         {
           "path": "LICENSE",
@@ -313,8 +313,8 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 115480,
-          "sha256": "4e1502579152567f1aead88d10b3f140ab5667b6066a8f30e75c22a087d0baaa",
+          "bytes": 111076,
+          "sha256": "48d6dacf4d8040e6f945a503ed1bfeb467914309264bb232d3d448b5a9f7cd19",
           "kind": "api-catalog"
         },
         {

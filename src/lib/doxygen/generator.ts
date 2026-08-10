@@ -29,7 +29,7 @@ function buildDoxyfile(target: ApiTarget, outputRoot: string, moduleRoot: string
   return [
     "DOXYFILE_ENCODING = UTF-8",
     `PROJECT_NAME = ${doxyfileValue(target.displayName)}`,
-    `PROJECT_NUMBER = ${doxyfileValue(target.revisionLabel)}`,
+    `PROJECT_NUMBER = ${doxyfileValue(target.projectNumber)}`,
     `OUTPUT_DIRECTORY = ${doxyfileValue(outputRoot)}`,
     "CREATE_SUBDIRS = NO",
     "ALLOW_UNICODE_NAMES = YES",
@@ -119,8 +119,7 @@ function failedReference(target: ApiTarget, error: unknown): ApiReference {
     displayName: target.displayName,
     moduleId: target.module.id,
     packageSlug: target.packageSlug,
-    moduleSha: target.module.sha,
-    revisionLabel: target.revisionLabel,
+    sourceBranch: target.module.branch,
     inputPaths: target.inputPaths,
     status: "failed",
     warnings: [
@@ -142,8 +141,7 @@ function noInputReference(target: ApiTarget): ApiReference {
     displayName: target.displayName,
     moduleId: target.module.id,
     packageSlug: target.packageSlug,
-    moduleSha: target.module.sha,
-    revisionLabel: target.revisionLabel,
+    sourceBranch: target.module.branch,
     inputPaths: [],
     status: "empty",
     warnings: [
@@ -299,7 +297,7 @@ export async function generateModuleApiCatalog(
     await rm(temporaryRoot, { recursive: true, force: true });
   }
   return ApiCatalogSchema.parse({
-    formatVersion: 1,
+    formatVersion: 2,
     doxygenVersion,
     references: references.sort(
       (left, right) =>

@@ -81,8 +81,7 @@ export const ApiReferenceSchema = z
     displayName: z.string().min(1),
     moduleId: z.string().min(1),
     packageSlug: z.string().min(1).nullable(),
-    moduleSha: z.string().regex(/^[a-f0-9]{40}$/u),
-    revisionLabel: z.string().min(1),
+    sourceBranch: z.string().min(1),
     inputPaths: z.array(z.string().regex(snapshotPath)),
     status: z.enum(["complete", "sparse", "empty", "failed"]),
     warnings: z.array(ApiWarningSchema),
@@ -126,7 +125,7 @@ export type ApiReference = z.infer<typeof ApiReferenceSchema>;
 
 export const ApiCatalogSchema = z
   .object({
-    formatVersion: z.literal(1),
+    formatVersion: z.literal(2),
     doxygenVersion: z.string().regex(/^\d+\.\d+\.\d+$/u),
     references: z.array(ApiReferenceSchema),
   })

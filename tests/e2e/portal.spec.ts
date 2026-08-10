@@ -215,12 +215,14 @@ test("package workflow keeps primary context in main and package information in 
   });
 });
 
-test("API and quality routes expose revision-pinned status", async ({ page }, testInfo) => {
+test("API and quality routes expose branch-based source status", async ({ page }, testInfo) => {
   await page.goto("packages/math--geometry/api/");
   await expectChineseDocument(page);
   await expect(page.getByRole("heading", { level: 1, name: "Math::Geometry API" })).toBeVisible();
   await expect(page.locator(".wtr-package-info-sidebar")).toHaveCount(0);
   await expect(page.locator("html")).not.toHaveAttribute("data-has-toc", "");
+  await expect(page.getByText("源码分支", { exact: true })).toBeVisible();
+  await expect(page.getByText("main", { exact: true })).toBeVisible();
   await expect(page.getByText("math::Quaternion", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("文档稀疏", { exact: true })).toBeVisible();
   await expectStableLayout(page);

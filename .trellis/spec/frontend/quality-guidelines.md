@@ -16,9 +16,10 @@
   variant; external bot-protection skips are reported separately.
 - Artifact validation requires the generated 404, robots, sitemap, Pagefind entry point, favicon,
   quality/search routes, per-page canonical URLs, and no duplicated deployment prefix.
-- The release artifact check must prove every module/package and API route carries its validated
-  revision, README or explicit fallback, dependencies, and API quality state. Pagefind's parsed page
-  count must cover at least all module and package/API pages.
+- The release artifact check must prove every module/package route carries its validated revision,
+  README or explicit fallback, and dependencies, while every API route carries the configured source
+  branch and API quality state. Pagefind's parsed page count must cover at least all module and
+  package/API pages.
 - Screenshot and layout assertions check for blank views, overlap, clipping, unexpected horizontal
   scrolling, and unstable fixed-format controls.
 - Manually inspect canvas screenshots after graph style/layout changes. Browser `scrollWidth`

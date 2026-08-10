@@ -1,5 +1,5 @@
 {
-  "formatVersion": 1,
+  "formatVersion": 2,
   "doxygenVersion": "1.16.1",
   "references": [
     {
@@ -8,8 +8,7 @@
       "displayName": "SensorGyro::HWT101CT",
       "moduleId": "Sensors",
       "packageSlug": "sensorgyro--hwt101ct",
-      "moduleSha": "cea60a9e62e200c18e2d53db2e79766618aa0ecb",
-      "revisionLabel": "0.1.0+cea60a9e62e2",
+      "sourceBranch": "main",
       "inputPaths": [
         "gyro/HWT101CT/HWT101CT.cpp",
         "gyro/HWT101CT/HWT101CT.hpp"
@@ -34,7 +33,7 @@
             "path": "gyro/HWT101CT/HWT101CT.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.cpp"
           },
           "parentId": null,
           "references": [
@@ -56,7 +55,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp"
           },
           "parentId": null,
           "references": [
@@ -92,7 +91,7 @@
             "path": "gyro/HWT101CT/HWT101CT.cpp",
             "line": 13,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.cpp#L13"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.cpp#L13"
           },
           "parentId": null,
           "references": [
@@ -112,7 +111,7 @@
             "path": "gyro/HWT101CT/HWT101CT.cpp",
             "line": 13,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.cpp#L13"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.cpp#L13"
           },
           "parentId": null,
           "references": [
@@ -133,7 +132,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 17,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L17"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L17"
           },
           "parentId": null,
           "references": [
@@ -167,7 +166,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 39,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L39"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L39"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -185,7 +184,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 23,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L23"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L23"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -264,7 +263,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 55,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L55"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L55"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -282,7 +281,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 75,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L75"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L75"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [
@@ -302,7 +301,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 81,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L81"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L81"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -320,7 +319,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 63,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L63"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L63"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -338,7 +337,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 59,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L59"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L59"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -356,7 +355,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 69,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L69"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L69"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -374,7 +373,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 47,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L47"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L47"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -392,7 +391,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 82,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L82"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L82"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -410,7 +409,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 57,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L57"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L57"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [
@@ -430,7 +429,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 84,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L84"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L84"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -448,7 +447,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 79,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L79"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L79"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -466,7 +465,7 @@
             "path": "gyro/HWT101CT/HWT101CT.hpp",
             "line": 78,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.hpp#L78"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L78"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "references": [],
@@ -484,7 +483,7 @@
             "path": "gyro/HWT101CT/HWT101CT.cpp",
             "line": 16,
             "column": 16,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/HWT101CT/HWT101CT.cpp#L16"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.cpp#L16"
           },
           "parentId": "api-namespace-701e9f1f01fe7f9c",
           "references": [
@@ -502,8 +501,7 @@
       "displayName": "SensorGyro::JY901S",
       "moduleId": "Sensors",
       "packageSlug": "sensorgyro--jy901s",
-      "moduleSha": "cea60a9e62e200c18e2d53db2e79766618aa0ecb",
-      "revisionLabel": "0.1.0+cea60a9e62e2",
+      "sourceBranch": "main",
       "inputPaths": [
         "gyro/JY901S/JY901S.cpp",
         "gyro/JY901S/JY901S.hpp"
@@ -528,7 +526,7 @@
             "path": "gyro/JY901S/JY901S.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.cpp"
           },
           "parentId": null,
           "references": [
@@ -550,7 +548,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp"
           },
           "parentId": null,
           "references": [
@@ -590,7 +588,7 @@
             "path": "gyro/JY901S/JY901S.cpp",
             "line": 11,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.cpp#L11"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.cpp#L11"
           },
           "parentId": null,
           "references": [
@@ -610,7 +608,7 @@
             "path": "gyro/JY901S/JY901S.cpp",
             "line": 11,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.cpp#L11"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.cpp#L11"
           },
           "parentId": null,
           "references": [
@@ -633,7 +631,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 18,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L18"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L18"
           },
           "parentId": null,
           "references": [
@@ -710,7 +708,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 69,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L69"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L69"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -749,7 +747,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 76,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L76"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L76"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -778,7 +776,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 21,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L21"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L21"
           },
           "parentId": null,
           "references": [
@@ -803,7 +801,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 24,
             "column": 25,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L24"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L24"
           },
           "parentId": "api-struct-17cc3c87f0be6c20",
           "references": [],
@@ -821,7 +819,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 28,
             "column": 25,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L28"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L28"
           },
           "parentId": "api-struct-17cc3c87f0be6c20",
           "references": [],
@@ -839,7 +837,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 26,
             "column": 25,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L26"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L26"
           },
           "parentId": "api-struct-17cc3c87f0be6c20",
           "references": [],
@@ -857,7 +855,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 25,
             "column": 25,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L25"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L25"
           },
           "parentId": "api-struct-17cc3c87f0be6c20",
           "references": [],
@@ -875,7 +873,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 27,
             "column": 25,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L27"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L27"
           },
           "parentId": "api-struct-17cc3c87f0be6c20",
           "references": [],
@@ -893,7 +891,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 23,
             "column": 25,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L23"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L23"
           },
           "parentId": "api-struct-17cc3c87f0be6c20",
           "references": [],
@@ -911,7 +909,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 97,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L97"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L97"
           },
           "parentId": null,
           "references": [
@@ -937,7 +935,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 101,
             "column": 20,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L101"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L101"
           },
           "parentId": "api-struct-4c3b41387c344eb6",
           "references": [
@@ -957,7 +955,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 99,
             "column": 20,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L99"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L99"
           },
           "parentId": "api-struct-4c3b41387c344eb6",
           "references": [
@@ -978,7 +976,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 100,
             "column": 20,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L100"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L100"
           },
           "parentId": "api-struct-4c3b41387c344eb6",
           "references": [
@@ -998,7 +996,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 52,
             "column": 33,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L52"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L52"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -1022,7 +1020,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 119,
             "column": 33,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L119"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L119"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -1043,7 +1041,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 105,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L105"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L105"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -1061,7 +1059,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 104,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L104"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L104"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -1082,7 +1080,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 134,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L134"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L134"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -1100,7 +1098,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 136,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L136"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L136"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -1118,7 +1116,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 135,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L135"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L135"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -1136,7 +1134,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 137,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L137"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L137"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -1154,7 +1152,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 37,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L37"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L37"
           },
           "parentId": null,
           "references": [
@@ -1187,7 +1185,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 41,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L41"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L41"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1207,7 +1205,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 43,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L43"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L43"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1228,7 +1226,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 50,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L50"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L50"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1248,7 +1246,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 47,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L47"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L47"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1268,7 +1266,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 42,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L42"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L42"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1288,7 +1286,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 44,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L44"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L44"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1308,7 +1306,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 39,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L39"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L39"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1328,7 +1326,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 45,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L45"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L45"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1348,7 +1346,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 46,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L46"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L46"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1368,7 +1366,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 49,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L49"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L49"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1389,7 +1387,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 40,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L40"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L40"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1409,7 +1407,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 48,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L48"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L48"
           },
           "parentId": "api-struct-c350f81aca45c66e",
           "references": [
@@ -1429,7 +1427,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 36,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L36"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L36"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -1447,7 +1445,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 54,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L54"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L54"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -1526,7 +1524,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 141,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L141"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L141"
           },
           "parentId": null,
           "references": [
@@ -1646,7 +1644,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 175,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L175"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L175"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1664,7 +1662,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 168,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L168"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L168"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1682,7 +1680,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 227,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L227"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L227"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1700,7 +1698,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 223,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L223"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L223"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1718,7 +1716,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 182,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L182"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L182"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1736,7 +1734,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 148,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L148"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L148"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1754,7 +1752,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 171,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L171"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L171"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1772,7 +1770,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 183,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L183"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L183"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1790,7 +1788,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 149,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L149"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L149"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1808,7 +1806,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 184,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L184"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L184"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1826,7 +1824,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 150,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L150"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L150"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1844,7 +1842,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 166,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L166"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L166"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1862,7 +1860,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 222,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L222"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L222"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1880,7 +1878,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 147,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L147"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L147"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1898,7 +1896,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 144,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L144"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L144"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1916,7 +1914,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 157,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L157"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L157"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1934,7 +1932,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 195,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L195"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L195"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1952,7 +1950,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 158,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L158"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L158"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1970,7 +1968,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 196,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L196"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L196"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -1988,7 +1986,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 159,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L159"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L159"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2006,7 +2004,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 197,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L197"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L197"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2024,7 +2022,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 160,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L160"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L160"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2042,7 +2040,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 198,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L198"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L198"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2060,7 +2058,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 179,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L179"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L179"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2078,7 +2076,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 219,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L219"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L219"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2096,7 +2094,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 172,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L172"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L172"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2114,7 +2112,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 173,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L173"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L173"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2132,7 +2130,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 207,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L207"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L207"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2150,7 +2148,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 210,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L210"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L210"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2168,7 +2166,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 209,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L209"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L209"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2186,7 +2184,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 208,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L208"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L208"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2204,7 +2202,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 185,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L185"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L185"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2222,7 +2220,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 151,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L151"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L151"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2240,7 +2238,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 186,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L186"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L186"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2258,7 +2256,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 152,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L152"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L152"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2276,7 +2274,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 226,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L226"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L226"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2294,7 +2292,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 228,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L228"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L228"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2312,7 +2310,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 167,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L167"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L167"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2330,7 +2328,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 187,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L187"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L187"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2348,7 +2346,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 153,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L153"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L153"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2366,7 +2364,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 217,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L217"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L217"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2384,7 +2382,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 202,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L202"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L202"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2402,7 +2400,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 201,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L201"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L201"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2420,7 +2418,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 188,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L188"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L188"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2438,7 +2436,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 154,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L154"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L154"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2456,7 +2454,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 189,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L189"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L189"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2474,7 +2472,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 155,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L155"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L155"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2492,7 +2490,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 190,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L190"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L190"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2510,7 +2508,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 156,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L156"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L156"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2528,7 +2526,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 161,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L161"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L161"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2546,7 +2544,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 230,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L230"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L230"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2564,7 +2562,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 206,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L206"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L206"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2582,7 +2580,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 205,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L205"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L205"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2600,7 +2598,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 162,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L162"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L162"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2618,7 +2616,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 204,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L204"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L204"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2636,7 +2634,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 203,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L203"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L203"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2654,7 +2652,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 163,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L163"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L163"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2672,7 +2670,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 164,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L164"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L164"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2690,7 +2688,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 165,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L165"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L165"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2708,7 +2706,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 180,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L180"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L180"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2726,7 +2724,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 235,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L235"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L235"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2744,7 +2742,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 181,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L181"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L181"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2762,7 +2760,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 238,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L238"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L238"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2780,7 +2778,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 239,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L239"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L239"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2798,7 +2796,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 240,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L240"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L240"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2816,7 +2814,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 241,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L241"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L241"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2834,7 +2832,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 242,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L242"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L242"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2852,7 +2850,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 243,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L243"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L243"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2870,7 +2868,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 170,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L170"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L170"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2888,7 +2886,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 216,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L216"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L216"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2906,7 +2904,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 192,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L192"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L192"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2924,7 +2922,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 176,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L176"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L176"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2942,7 +2940,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 200,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L200"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L200"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2960,7 +2958,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 199,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L199"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L199"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2978,7 +2976,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 211,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L211"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L211"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -2996,7 +2994,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 212,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L212"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L212"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3014,7 +3012,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 213,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L213"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L213"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3032,7 +3030,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 214,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L214"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L214"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3050,7 +3048,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 146,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L146"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L146"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3068,7 +3066,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 145,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L145"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L145"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3086,7 +3084,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 174,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L174"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L174"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3104,7 +3102,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 191,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L191"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L191"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3122,7 +3120,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 143,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L143"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L143"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3140,7 +3138,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 169,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L169"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L169"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3158,7 +3156,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 215,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L215"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L215"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3176,7 +3174,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 194,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L194"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L194"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3194,7 +3192,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 232,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L232"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L232"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3212,7 +3210,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 229,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L229"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L229"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3230,7 +3228,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 218,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L218"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L218"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3248,7 +3246,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 177,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L177"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L177"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3266,7 +3264,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 231,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L231"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L231"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3284,7 +3282,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 234,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L234"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L234"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3302,7 +3300,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 233,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L233"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L233"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3320,7 +3318,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 221,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L221"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L221"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3338,7 +3336,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 220,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L220"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L220"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3356,7 +3354,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 236,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L236"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L236"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3374,7 +3372,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 225,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L225"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L225"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3392,7 +3390,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 224,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L224"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L224"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3410,7 +3408,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 237,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L237"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L237"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3428,7 +3426,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 193,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L193"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L193"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3446,7 +3444,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 178,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L178"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L178"
           },
           "parentId": "api-struct-9b7c481644abfe90",
           "references": [],
@@ -3464,7 +3462,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 31,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L31"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L31"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -3484,7 +3482,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 281,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L281"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L281"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3502,7 +3500,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 271,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L271"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L271"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3520,7 +3518,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 264,
             "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L264"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L264"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3538,7 +3536,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 265,
             "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L265"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L265"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3556,7 +3554,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 267,
             "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L267"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L267"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3574,7 +3572,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 111,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L111"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L111"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -3594,7 +3592,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 108,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L108"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L108"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3612,7 +3610,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 109,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L109"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L109"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3630,7 +3628,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 246,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L246"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L246"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -3650,7 +3648,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 123,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L123"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L123"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -3674,7 +3672,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 285,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L285"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L285"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3692,7 +3690,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 258,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L258"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L258"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3710,7 +3708,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 272,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L272"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L272"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3728,7 +3726,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 133,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L133"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L133"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3746,7 +3744,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 271,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L271"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L271"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3764,7 +3762,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 266,
             "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L266"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L266"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3782,7 +3780,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 121,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L121"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L121"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -3802,7 +3800,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 107,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L107"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L107"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3820,7 +3818,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 255,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L255"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L255"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3838,7 +3836,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 271,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L271"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L271"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3856,7 +3854,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 263,
             "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L263"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L263"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3874,7 +3872,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 113,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L113"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L113"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -3894,7 +3892,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 115,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L115"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L115"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -3914,7 +3912,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 116,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L116"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L116"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -3934,7 +3932,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 283,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L283"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L283"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3952,7 +3950,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 284,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L284"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L284"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -3970,7 +3968,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 277,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L277"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L277"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -3990,7 +3988,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 279,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L279"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L279"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -4008,7 +4006,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 257,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L257"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L257"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -4026,7 +4024,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 248,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L248"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L248"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [
@@ -4046,7 +4044,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 254,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L254"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L254"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -4064,7 +4062,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 282,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L282"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L282"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -4082,7 +4080,7 @@
             "path": "gyro/JY901S/JY901S.hpp",
             "line": 139,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.hpp#L139"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L139"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "references": [],
@@ -4100,7 +4098,7 @@
             "path": "gyro/JY901S/JY901S.cpp",
             "line": 14,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.cpp#L14"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.cpp#L14"
           },
           "parentId": "api-namespace-64564b0eeb2dc59d",
           "references": [
@@ -4121,7 +4119,7 @@
             "path": "gyro/JY901S/JY901S.cpp",
             "line": 50,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.cpp#L50"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.cpp#L50"
           },
           "parentId": "api-namespace-64564b0eeb2dc59d",
           "references": [
@@ -4141,7 +4139,7 @@
             "path": "gyro/JY901S/JY901S.cpp",
             "line": 45,
             "column": 16,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/gyro/JY901S/JY901S.cpp#L45"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.cpp#L45"
           },
           "parentId": "api-namespace-64564b0eeb2dc59d",
           "references": [
@@ -4159,8 +4157,7 @@
       "displayName": "SensorLaser::DT35",
       "moduleId": "Sensors",
       "packageSlug": "sensorlaser--dt35",
-      "moduleSha": "cea60a9e62e200c18e2d53db2e79766618aa0ecb",
-      "revisionLabel": "0.1.0+cea60a9e62e2",
+      "sourceBranch": "main",
       "inputPaths": [
         "laser/dt35/DT35.cpp",
         "laser/dt35/DT35.hpp"
@@ -4185,7 +4182,7 @@
             "path": "laser/dt35/DT35.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.cpp"
           },
           "parentId": null,
           "references": [
@@ -4207,7 +4204,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp"
           },
           "parentId": null,
           "references": [
@@ -4245,7 +4242,7 @@
             "path": "laser/dt35/DT35.cpp",
             "line": 8,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.cpp#L8"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.cpp#L8"
           },
           "parentId": null,
           "references": [
@@ -4265,7 +4262,7 @@
             "path": "laser/dt35/DT35.cpp",
             "line": 8,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.cpp#L8"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.cpp#L8"
           },
           "parentId": null,
           "references": [
@@ -4287,7 +4284,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 18,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L18"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L18"
           },
           "parentId": null,
           "references": [
@@ -4317,7 +4314,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 21,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L21"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L21"
           },
           "parentId": null,
           "references": [
@@ -4341,7 +4338,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 26,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L26"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L26"
           },
           "parentId": "api-struct-f2230fad6c786b82",
           "references": [],
@@ -4359,7 +4356,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 27,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L27"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L27"
           },
           "parentId": "api-struct-f2230fad6c786b82",
           "references": [],
@@ -4377,7 +4374,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 33,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L33"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L33"
           },
           "parentId": "api-struct-f2230fad6c786b82",
           "references": [],
@@ -4395,7 +4392,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 27,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L27"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L27"
           },
           "parentId": "api-struct-f2230fad6c786b82",
           "references": [],
@@ -4413,7 +4410,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 25,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L25"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L25"
           },
           "parentId": "api-struct-f2230fad6c786b82",
           "references": [],
@@ -4431,7 +4428,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 35,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L35"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L35"
           },
           "parentId": "api-class-88a0a6b0c8a41f60",
           "references": [
@@ -4451,7 +4448,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 55,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L55"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L55"
           },
           "parentId": "api-class-88a0a6b0c8a41f60",
           "references": [
@@ -4471,7 +4468,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 51,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L51"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L51"
           },
           "parentId": "api-class-88a0a6b0c8a41f60",
           "references": [],
@@ -4489,7 +4486,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 46,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L46"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L46"
           },
           "parentId": "api-class-88a0a6b0c8a41f60",
           "references": [],
@@ -4507,7 +4504,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 53,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L53"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L53"
           },
           "parentId": "api-class-88a0a6b0c8a41f60",
           "references": [],
@@ -4525,7 +4522,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 37,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L37"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L37"
           },
           "parentId": "api-class-88a0a6b0c8a41f60",
           "references": [],
@@ -4543,7 +4540,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 51,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L51"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L51"
           },
           "parentId": "api-class-88a0a6b0c8a41f60",
           "references": [],
@@ -4561,7 +4558,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 52,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L52"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L52"
           },
           "parentId": "api-class-88a0a6b0c8a41f60",
           "references": [],
@@ -4579,7 +4576,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 42,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L42"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L42"
           },
           "parentId": "api-class-88a0a6b0c8a41f60",
           "references": [
@@ -4599,7 +4596,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 45,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L45"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L45"
           },
           "parentId": "api-class-88a0a6b0c8a41f60",
           "references": [],
@@ -4617,7 +4614,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 58,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L58"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L58"
           },
           "parentId": null,
           "references": [
@@ -4645,7 +4642,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 61,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L61"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L61"
           },
           "parentId": "api-class-c6c088eadec08b0d",
           "references": [],
@@ -4663,7 +4660,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 75,
             "column": 33,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L75"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L75"
           },
           "parentId": "api-class-c6c088eadec08b0d",
           "references": [],
@@ -4681,7 +4678,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 77,
             "column": 16,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L77"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L77"
           },
           "parentId": "api-class-c6c088eadec08b0d",
           "references": [
@@ -4701,7 +4698,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 72,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L72"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L72"
           },
           "parentId": "api-class-c6c088eadec08b0d",
           "references": [
@@ -4721,7 +4718,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 67,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L67"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L67"
           },
           "parentId": "api-class-c6c088eadec08b0d",
           "references": [],
@@ -4739,7 +4736,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 63,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L63"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L63"
           },
           "parentId": "api-class-c6c088eadec08b0d",
           "references": [
@@ -4759,7 +4756,7 @@
             "path": "laser/dt35/DT35.hpp",
             "line": 64,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.hpp#L64"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.hpp#L64"
           },
           "parentId": "api-class-c6c088eadec08b0d",
           "references": [
@@ -4779,7 +4776,7 @@
             "path": "laser/dt35/DT35.cpp",
             "line": 60,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/dt35/DT35.cpp#L60"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/dt35/DT35.cpp#L60"
           },
           "parentId": "api-namespace-be70f27d9cf31809",
           "references": [
@@ -4797,8 +4794,7 @@
       "displayName": "SensorLaser::STP23L",
       "moduleId": "Sensors",
       "packageSlug": "sensorlaser--stp23l",
-      "moduleSha": "cea60a9e62e200c18e2d53db2e79766618aa0ecb",
-      "revisionLabel": "0.1.0+cea60a9e62e2",
+      "sourceBranch": "main",
       "inputPaths": [
         "laser/stp23l/STP23L.cpp",
         "laser/stp23l/STP23L.hpp"
@@ -4823,7 +4819,7 @@
             "path": "laser/stp23l/STP23L.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.cpp"
           },
           "parentId": null,
           "references": [
@@ -4845,7 +4841,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp"
           },
           "parentId": null,
           "references": [
@@ -4882,7 +4878,7 @@
             "path": "laser/stp23l/STP23L.cpp",
             "line": 12,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.cpp#L12"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.cpp#L12"
           },
           "parentId": null,
           "references": [
@@ -4902,7 +4898,7 @@
             "path": "laser/stp23l/STP23L.cpp",
             "line": 12,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.cpp#L12"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.cpp#L12"
           },
           "parentId": null,
           "references": [
@@ -4923,7 +4919,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 17,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L17"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L17"
           },
           "parentId": null,
           "references": [
@@ -4954,7 +4950,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 36,
             "column": 33,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L36"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L36"
           },
           "parentId": "api-class-f0f174961a441b88",
           "references": [],
@@ -4972,7 +4968,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 40,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L40"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L40"
           },
           "parentId": null,
           "references": [
@@ -4997,7 +4993,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 45,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L45"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L45"
           },
           "parentId": "api-struct-664b1796f775a40d",
           "references": [],
@@ -5015,7 +5011,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 42,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L42"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L42"
           },
           "parentId": "api-struct-664b1796f775a40d",
           "references": [],
@@ -5033,7 +5029,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 46,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L46"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L46"
           },
           "parentId": "api-struct-664b1796f775a40d",
           "references": [],
@@ -5051,7 +5047,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 43,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L43"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L43"
           },
           "parentId": "api-struct-664b1796f775a40d",
           "references": [],
@@ -5069,7 +5065,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 44,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L44"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L44"
           },
           "parentId": "api-struct-664b1796f775a40d",
           "references": [],
@@ -5087,7 +5083,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 47,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L47"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L47"
           },
           "parentId": "api-struct-664b1796f775a40d",
           "references": [],
@@ -5105,7 +5101,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 38,
             "column": 40,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L38"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L38"
           },
           "parentId": "api-class-f0f174961a441b88",
           "references": [],
@@ -5123,7 +5119,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 38,
             "column": 29,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L38"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L38"
           },
           "parentId": "api-class-f0f174961a441b88",
           "references": [],
@@ -5141,7 +5137,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 20,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L20"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L20"
           },
           "parentId": "api-class-f0f174961a441b88",
           "references": [],
@@ -5159,7 +5155,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 33,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L33"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L33"
           },
           "parentId": "api-class-f0f174961a441b88",
           "references": [
@@ -5180,7 +5176,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 51,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L51"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L51"
           },
           "parentId": "api-class-f0f174961a441b88",
           "references": [],
@@ -5198,7 +5194,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 22,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L22"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L22"
           },
           "parentId": "api-class-f0f174961a441b88",
           "references": [],
@@ -5216,7 +5212,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 28,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L28"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L28"
           },
           "parentId": "api-class-f0f174961a441b88",
           "references": [],
@@ -5234,7 +5230,7 @@
             "path": "laser/stp23l/STP23L.hpp",
             "line": 50,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.hpp#L50"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.hpp#L50"
           },
           "parentId": "api-class-f0f174961a441b88",
           "references": [],
@@ -5252,7 +5248,7 @@
             "path": "laser/stp23l/STP23L.cpp",
             "line": 15,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.cpp#L15"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.cpp#L15"
           },
           "parentId": "api-namespace-ecc468245818c7f1",
           "references": [
@@ -5272,7 +5268,7 @@
             "path": "laser/stp23l/STP23L.cpp",
             "line": 21,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/laser/stp23l/STP23L.cpp#L21"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/laser/stp23l/STP23L.cpp#L21"
           },
           "parentId": "api-namespace-ecc468245818c7f1",
           "references": [
@@ -5290,8 +5286,7 @@
       "displayName": "SensorOPS::ActionOPS",
       "moduleId": "Sensors",
       "packageSlug": "sensorops--actionops",
-      "moduleSha": "cea60a9e62e200c18e2d53db2e79766618aa0ecb",
-      "revisionLabel": "0.1.0+cea60a9e62e2",
+      "sourceBranch": "main",
       "inputPaths": [
         "ops/ActionOPS/ActionOPS.cpp",
         "ops/ActionOPS/ActionOPS.hpp"
@@ -5316,7 +5311,7 @@
             "path": "ops/ActionOPS/ActionOPS.cpp",
             "line": 10,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.cpp#L10"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.cpp#L10"
           },
           "parentId": "api-file-78cd16f6c3dc7158",
           "references": [
@@ -5337,7 +5332,7 @@
             "path": "ops/ActionOPS/ActionOPS.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.cpp"
           },
           "parentId": null,
           "references": [
@@ -5361,7 +5356,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp"
           },
           "parentId": null,
           "references": [
@@ -5400,7 +5395,7 @@
             "path": "ops/ActionOPS/ActionOPS.cpp",
             "line": 12,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.cpp#L12"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.cpp#L12"
           },
           "parentId": null,
           "references": [
@@ -5420,7 +5415,7 @@
             "path": "ops/ActionOPS/ActionOPS.cpp",
             "line": 12,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.cpp#L12"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.cpp#L12"
           },
           "parentId": null,
           "references": [
@@ -5440,7 +5435,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 66,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L66"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L66"
           },
           "parentId": null,
           "references": [
@@ -5500,7 +5495,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 83,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L83"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L83"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [
@@ -5523,7 +5518,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 69,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L69"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L69"
           },
           "parentId": null,
           "references": [
@@ -5546,7 +5541,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 71,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L71"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L71"
           },
           "parentId": "api-struct-6f7a39b2d3f840de",
           "references": [],
@@ -5564,7 +5559,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 72,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L72"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L72"
           },
           "parentId": "api-struct-6f7a39b2d3f840de",
           "references": [],
@@ -5582,7 +5577,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 75,
             "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L75"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L75"
           },
           "parentId": "api-struct-6f7a39b2d3f840de",
           "references": [],
@@ -5600,7 +5595,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 73,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L73"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L73"
           },
           "parentId": "api-struct-6f7a39b2d3f840de",
           "references": [],
@@ -5618,7 +5613,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 78,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L78"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L78"
           },
           "parentId": null,
           "references": [
@@ -5640,7 +5635,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 80,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L80"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L80"
           },
           "parentId": "api-struct-761a0390cf0d6fe1",
           "references": [],
@@ -5658,7 +5653,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 80,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L80"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L80"
           },
           "parentId": "api-struct-761a0390cf0d6fe1",
           "references": [],
@@ -5676,7 +5671,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 80,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L80"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L80"
           },
           "parentId": "api-struct-761a0390cf0d6fe1",
           "references": [],
@@ -5694,7 +5689,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 161,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L161"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L161"
           },
           "parentId": null,
           "references": [
@@ -5715,7 +5710,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 163,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L163"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L163"
           },
           "parentId": "api-struct-7972a2ed8f96ecbf",
           "references": [],
@@ -5733,7 +5728,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 164,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L164"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L164"
           },
           "parentId": "api-struct-7972a2ed8f96ecbf",
           "references": [],
@@ -5751,7 +5746,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 184,
             "column": 7,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L184"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L184"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5769,7 +5764,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 198,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L198"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L198"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5787,7 +5782,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 199,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L199"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L199"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5805,7 +5800,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 200,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L200"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L200"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5823,7 +5818,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 122,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L122"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L122"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5841,7 +5836,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 107,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L107"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L107"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5859,7 +5854,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 176,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L176"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L176"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5877,7 +5872,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 94,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L94"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L94"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5895,7 +5890,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 96,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L96"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L96"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5913,7 +5908,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 98,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L98"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L98"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5931,7 +5926,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 196,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L196"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L196"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5949,7 +5944,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 195,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L195"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L195"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5967,7 +5962,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 101,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L101"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L101"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -5985,7 +5980,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 167,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L167"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L167"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6003,7 +5998,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 182,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L182"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L182"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6021,7 +6016,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 182,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L182"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L182"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6039,7 +6034,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 170,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L170"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L170"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6057,7 +6052,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 171,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L171"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L171"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6075,7 +6070,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 88,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L88"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L88"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [
@@ -6095,7 +6090,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 92,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L92"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L92"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [
@@ -6119,7 +6114,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 116,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L116"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L116"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6137,7 +6132,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 193,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L193"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L193"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6155,7 +6150,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 186,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L186"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L186"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6173,7 +6168,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 158,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L158"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L158"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6191,7 +6186,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 140,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L140"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L140"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6209,7 +6204,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 153,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L153"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L153"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6227,7 +6222,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 146,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L146"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L146"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6245,7 +6240,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 134,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L134"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L134"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6263,7 +6258,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 175,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L175"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L175"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6281,7 +6276,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 180,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L180"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L180"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [
@@ -6302,7 +6297,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 173,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L173"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L173"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6320,7 +6315,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 181,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L181"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L181"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [
@@ -6341,7 +6336,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 174,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L174"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L174"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6359,7 +6354,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 192,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L192"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L192"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [
@@ -6380,7 +6375,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 172,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L172"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L172"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6398,7 +6393,7 @@
             "path": "ops/ActionOPS/ActionOPS.hpp",
             "line": 128,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/ops/ActionOPS/ActionOPS.hpp#L128"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ops/ActionOPS/ActionOPS.hpp#L128"
           },
           "parentId": "api-class-20f463c797405b6a",
           "references": [],
@@ -6414,8 +6409,7 @@
       "displayName": "SensorPressure::XGZP6847D",
       "moduleId": "Sensors",
       "packageSlug": "sensorpressure--xgzp6847d",
-      "moduleSha": "cea60a9e62e200c18e2d53db2e79766618aa0ecb",
-      "revisionLabel": "0.1.0+cea60a9e62e2",
+      "sourceBranch": "main",
       "inputPaths": [
         "pressure/XGZP6847D/XGZP6847DDevice.cpp",
         "pressure/XGZP6847D/XGZP6847DDevice.hpp"
@@ -6435,7 +6429,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 35,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L35"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L35"
           },
           "parentId": null,
           "references": [
@@ -6480,7 +6474,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 130,
             "column": 31,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L130"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L130"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6498,7 +6492,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 131,
             "column": 31,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L131"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L131"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6516,7 +6510,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 127,
             "column": 31,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L127"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L127"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6534,7 +6528,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 129,
             "column": 31,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L129"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L129"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6552,7 +6546,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 128,
             "column": 31,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L128"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L128"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6570,7 +6564,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 41,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L41"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L41"
           },
           "parentId": null,
           "references": [
@@ -6596,7 +6590,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 43,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L43"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L43"
           },
           "parentId": "api-struct-1d15af2cf65179c6",
           "references": [
@@ -6617,7 +6611,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 44,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L44"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L44"
           },
           "parentId": "api-struct-1d15af2cf65179c6",
           "references": [
@@ -6637,7 +6631,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 45,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L45"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L45"
           },
           "parentId": "api-struct-1d15af2cf65179c6",
           "references": [
@@ -6657,7 +6651,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 46,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L46"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L46"
           },
           "parentId": "api-struct-1d15af2cf65179c6",
           "references": [
@@ -6678,7 +6672,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 55,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L55"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L55"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6696,7 +6690,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 151,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L151"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L151"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6714,7 +6708,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 69,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L69"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L69"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6732,7 +6726,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 148,
             "column": 26,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L148"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L148"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6750,7 +6744,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 139,
             "column": 20,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L139"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L139"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6768,7 +6762,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 107,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L107"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L107"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6786,7 +6780,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 92,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L92"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L92"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [
@@ -6807,7 +6801,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 80,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L80"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L80"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6825,7 +6819,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 149,
             "column": 26,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L149"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L149"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6843,7 +6837,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 61,
             "column": 16,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L61"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L61"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6861,7 +6855,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 124,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L124"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L124"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [
@@ -6881,7 +6875,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 119,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L119"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L119"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [
@@ -6904,7 +6898,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 101,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L101"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L101"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6922,7 +6916,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 150,
             "column": 16,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L150"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L150"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [
@@ -6942,7 +6936,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 146,
             "column": 20,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L146"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L146"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [],
@@ -6960,7 +6954,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": 86,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp#L86"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp#L86"
           },
           "parentId": "api-class-d2e315faf8801828",
           "references": [
@@ -6981,7 +6975,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.cpp"
           },
           "parentId": null,
           "references": [
@@ -7001,7 +6995,7 @@
             "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/cea60a9e62e200c18e2d53db2e79766618aa0ecb/pressure/XGZP6847D/XGZP6847DDevice.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/pressure/XGZP6847D/XGZP6847DDevice.hpp"
           },
           "parentId": null,
           "references": [

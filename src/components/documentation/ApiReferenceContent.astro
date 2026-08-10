@@ -38,7 +38,7 @@ const groups = kindOrder.flatMap((kind) => {
   <dl class="wtr-inline-stats">
     <div><dt>符号</dt><dd>{reference.symbolCount}</dd></div>
     <div><dt>已记录</dt><dd>{reference.documentedSymbolCount}</dd></div>
-    <div><dt>修订版本</dt><dd><code>{reference.revisionLabel}</code></dd></div>
+    <div><dt>源码分支</dt><dd><code>{reference.sourceBranch}</code></dd></div>
   </dl>
   {
     reference.warnings.map((warning) => (

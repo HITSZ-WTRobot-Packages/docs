@@ -4,7 +4,7 @@ import path from "node:path";
 import { XMLParser } from "fast-xml-parser";
 import { SyntaxValidator } from "fast-xml-validator";
 
-import { pinnedUpstreamUrl } from "../sources/upstream-url";
+import { branchUpstreamUrl } from "../sources/upstream-url";
 import { DoxygenDiagnostic } from "./diagnostic";
 import type { ApiTarget } from "./ownership";
 import {
@@ -189,7 +189,7 @@ function location(value: unknown, target: ApiTarget, moduleRoot: string): ApiLoc
   }
   const line = positiveInteger(attribute(record, "line"));
   const column = positiveInteger(attribute(record, "column"));
-  const sourceUrl = `${pinnedUpstreamUrl(target.module, "blob", sourcePath)}${line ? `#L${line}` : ""}`;
+  const sourceUrl = `${branchUpstreamUrl(target.module, "blob", sourcePath)}${line ? `#L${line}` : ""}`;
   return { path: sourcePath, line, column, sourceUrl };
 }
 
@@ -477,8 +477,7 @@ export function normalizeDoxygenXml(
     displayName: target.displayName,
     moduleId: target.module.id,
     packageSlug: target.packageSlug,
-    moduleSha: target.module.sha,
-    revisionLabel: target.revisionLabel,
+    sourceBranch: target.module.branch,
     inputPaths: target.inputPaths,
     status,
     warnings,

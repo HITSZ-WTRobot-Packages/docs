@@ -90,7 +90,13 @@ describe("Doxygen API generation", () => {
     expect(await exists(path.join(fixture.repositoryRoot, "html"))).toBe(false);
     expect(await exists(path.join(fixture.repositoryRoot, "latex"))).toBe(false);
     expect(serializeApiCatalog(second)).toBe(serializeApiCatalog(first));
-    expect(first.references.every((reference) => reference.moduleSha === SHA)).toBe(true);
+    expect(first.formatVersion).toBe(2);
+    expect(first.references.every((reference) => reference.sourceBranch === "main")).toBe(true);
+    expect(
+      first.references
+        .flatMap((reference) => reference.symbols)
+        .every((symbol) => !symbol.location || symbol.location.sourceUrl.includes("/blob/main/")),
+    ).toBe(true);
     expect(
       first.references
         .filter((reference) => reference.status === "failed")
@@ -143,6 +149,16 @@ describe("Doxygen API generation", () => {
     expect(emptyReference?.warnings[0]?.code).toBe("API_SYMBOLS_MISSING");
     expect(sparseReference?.status).toBe("sparse");
     expect(sparseReference?.warnings[0]?.code).toBe("API_DOCUMENTATION_SPARSE");
+
+    const revisionOnlyChange = await generateModuleApiCatalog({
+      ...options,
+      module: {
+        ...fixture.module,
+        sha: "0123456789abcdef0123456789abcdef01234567",
+        shortSha: "0123456789ab",
+      },
+    });
+    expect(serializeApiCatalog(revisionOnlyChange)).toBe(serializeApiCatalog(first));
   });
 
   test("treats a missing executable as a reproducibility gate", async () => {

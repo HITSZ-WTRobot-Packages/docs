@@ -5,7 +5,7 @@ import { loadPackageCatalog } from "../../src/lib/catalog/loader";
 import { loadApiCatalog } from "../../src/lib/doxygen/loader";
 
 describe("real snapshot Doxygen API", () => {
-  test("covers every package and unclaimed source at its pinned revision", async () => {
+  test("covers every package and unclaimed source on its configured branch", async () => {
     const [apiCatalog, packageCatalog] = await Promise.all([
       loadApiCatalog(),
       loadPackageCatalog(),
@@ -22,8 +22,8 @@ describe("real snapshot Doxygen API", () => {
     for (const entry of packageCatalog.packages) {
       const reference = packageReferences.get(entry.slug);
       expect(reference?.moduleId).toBe(entry.moduleId);
-      expect(reference?.moduleSha).toBe(entry.moduleSha);
-      expect(reference?.revisionLabel).toBe(entry.revisionLabel);
+      const module = packageCatalog.modules.find((candidate) => candidate.id === entry.moduleId);
+      expect(reference?.sourceBranch).toBe(module?.branch);
     }
 
     const ownedSources = apiCatalog.references.flatMap((reference) =>

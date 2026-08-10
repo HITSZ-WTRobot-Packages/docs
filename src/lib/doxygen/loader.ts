@@ -28,10 +28,10 @@ export async function loadModuleApiCatalog(
     const catalog = ApiCatalogSchema.parse(parsed);
     if (
       catalog.references.some(
-        (reference) => reference.moduleId !== module.id || reference.moduleSha !== module.sha,
+        (reference) => reference.moduleId !== module.id || reference.sourceBranch !== module.branch,
       )
     ) {
-      throw new Error("Module API catalog revision metadata does not match its manifest.");
+      throw new Error("Module API catalog source metadata does not match its manifest.");
     }
     return catalog;
   } catch (error) {
@@ -67,7 +67,7 @@ export async function loadApiCatalog(
     }
   }
   return ApiCatalogSchema.parse({
-    formatVersion: 1,
+    formatVersion: 2,
     doxygenVersion: expectedVersion,
     references: moduleCatalogs
       .flatMap((catalog) => catalog.references)

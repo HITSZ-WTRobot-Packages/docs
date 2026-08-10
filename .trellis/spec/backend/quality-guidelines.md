@@ -54,8 +54,9 @@
   HTML sanitization, missing-README fallbacks, missing targets, and root escapes.
 - Doxygen fixtures cover C, C++, header-only, compiled, empty, and sparsely documented packages.
 - Doxygen integration checks assert exact version gating, target failure isolation, no repository
-  XML/HTML/LaTeX output, source ownership uniqueness, pinned revisions, and deterministic
-  serialization. Snapshot loader tests prove the site consumes committed artifacts without source.
+  XML/HTML/LaTeX output, source ownership uniqueness, branch-based source links, revision-independent
+  API serialization, and deterministic output. Snapshot loader tests prove the site consumes
+  committed artifacts without source and rejects source-branch mismatches.
 - The quality gate runs convention, format, lint, typecheck, unit, integration, generation, build,
   static-link, search, browser, screenshot, responsive, accessibility, and artifact checks.
 - Validation Actions use committed snapshots, are triggered only by `workflow_dispatch`, use
@@ -74,13 +75,15 @@
   checkout. Its only trigger is `workflow_call`; driver callers intentionally use the rolling
   organization-owned `@main` ref so centralized fixes propagate without per-repository edits.
 - Third-party Actions use immutable full commit SHAs. Only synchronization uses the pinned
-  dedicated Doxygen setup Action; the sync CLI verifies its version against `.doxygen-version`
-  before cloning.
-- A snapshot commit stages only `sources/`, uses a bot identity, runs only after the complete offline
-  gate succeeds, and is skipped when no source status exists. Change detection must include tracked
-  edits, deletions, and untracked additions. Checkout does not persist credentials; the commit step
-  configures Git through `GH_TOKEN` immediately before pushing. The sync workflow has no push
-  trigger.
+  dedicated Doxygen setup Action on a cache miss; the sync CLI verifies the restored or installed
+  executable against `.doxygen-version` before cloning. The shared setup Action restores and saves
+  Bun's global package cache around a frozen, prefer-offline install; cache keys include the runner,
+  tool version, and lockfile or Doxygen version inputs.
+- A snapshot commit stages only `sources/`, uses a bot identity, and is skipped by
+  `git diff --cached --quiet` when synchronization is a no-op. The sync workflow does not run the
+  offline/site/browser validation gate; that remains the manually dispatched Validation workflow.
+  Checkout does not persist credentials, and the commit step configures Git through `GH_TOKEN`
+  immediately before pushing. The sync workflow has no push trigger.
 - Validation remains manual-only and no local commit/push build workflow is added for snapshot
   commits. A repository-external service owns rebuilds based on the resulting default-branch commit.
 - Release artifact validation joins generated HTML back to the catalog, documentation, and API
@@ -186,7 +189,13 @@ sources/manifest.json: formatVersion = 2
 sources/modules/<module>/content/<upstream-doc-path>
 sources/modules/<module>/package-catalog.json
 sources/modules/<module>/api-catalog.json
+ApiCatalog.formatVersion = 2
+ApiReference.sourceBranch = ModuleSnapshot.branch
 ModuleSnapshot.producerFingerprint: 64 lowercase hexadecimal SHA-256 characters
+Bun cache path: ~/.bun/install/cache
+Bun cache key: <runner-os>-<runner-arch>-bun-1.3.14-<bun-lock-sha256>
+Doxygen cache path: ~/.cache/wtr-doxygen/<doxygen-version>
+Doxygen cache key: <runner-os>-<runner-arch>-doxygen-<version>-<install-action-sha>
 ```
 
 `--module` and `--changed` are mutually exclusive. With neither, synchronization processes every
@@ -199,15 +208,18 @@ cannot compose with those selectors; they validate and discover one organization
 | Boundary | Input | Output |
 | --- | --- | --- |
 | Synchronization | Manifest index, mode, optional indexed/discovery module, upstream Git repositories, locked Doxygen | Atomically replaced content plus per-module package/API artifacts and deterministic `sources/manifest.json` |
+| API artifact | Doxygen XML, owned input paths, module ID/default branch, package version | Format-version-2 references with `sourceBranch`; branch-based source URLs and no module SHA/revision label |
 | Generation | Valid committed `sources/` content, package/API artifacts, and manifest | Validated aggregate in-memory catalogs; no Doxygen, network, or snapshot mutation |
 | Build | `SITE_URL` absolute `http:`/`https:` URL; normalized absolute `BASE_PATH` | Static `dist/` whose internal routes and assets include the configured base |
 | Artifact check | The built `dist/`, the same address pair, and validated portal data | Release summary with module/package/API/HTML/Pagefind/file counts; no writes |
 | Release browser check | Validated `dist/`, same address pair, `PLAYWRIGHT_REUSE_ARTIFACT=1` | Local preview and browser/axe results without rebuilding `dist/` |
 | Local server | The same site/base inputs and an Astro foreground sentinel | A foreground process owned and terminated by the invoking terminal or Playwright worker |
 | Validation workflow | Manually dispatched repository ref and committed `sources/` | Read-only offline quality and site-matrix result for the resolved commit |
+| Shared toolchain setup | Runner OS/architecture, Bun 1.3.14, `bun.lock`, optional `playwright` input | Restored Bun download cache, frozen prefer-offline install, and optional Chromium runtime |
+| Synchronization Doxygen setup | Runner OS/architecture, `.doxygen-version`, pinned install Action SHA | Restored executable, or one install/copy/save sequence on a cache miss; cached `bin` added to `PATH` |
 | Reusable discovery request | Caller `github.repository`, caller default branch, organization-scoped `DOCS_SYNC_TOKEN`, rolling docs `@main` ref | One `sync-snapshots` dispatch to the docs repository; no checkout or upstream access |
 | Discovery dispatch | Strict source repository/default-branch payload for `HITSZ-WTRobot-Packages/*` | One non-dry-run module request whose successful snapshot atomically joins the manifest index |
-| Snapshot commit | Validated non-empty `sources/` diff and docs-scoped `DOCS_SYNC_TOKEN` | One default-branch push observable by external build automation; no push for a no-op |
+| Snapshot commit | Sync-validated `sources/` output and docs-scoped `DOCS_SYNC_TOKEN` | One default-branch push observable by external build automation; staged no-op exits without a push |
 
 `BASE_PATH` defaults to `/`, starts and ends with `/`, and contains no `.` or `..` segment. Normal
 generation and build commands make zero upstream network requests.
@@ -228,11 +240,13 @@ is incorrectly rejected before mode validation.
 | Unchanged SHA and producer fingerprint in changed mode | Report skipped; write nothing |
 | Missing/invalid `DOCS_SYNC_TOKEN` when a snapshot commit is requested | Push fails non-zero after local commit; remote default branch remains unchanged |
 | Unchanged SHA but changed Doxygen version or producer fingerprint | Regenerate the module artifacts |
+| Module SHA changes while branch, package version, source, and normalized Doxygen input remain identical | Serialize the API catalog byte-identically; update exact revision metadata outside the API artifact |
 | Identical full synchronization | Exit zero and leave the worktree byte-identical |
 | Network attempt during generation/build | Test failure; no fallback fetch |
-| Missing, corrupt, or revision-mismatched persisted package/API artifact | Fail with a catalog/Doxygen diagnostic; do not run a producer fallback |
+| Missing, corrupt, revision-mismatched package artifact, or source-branch-mismatched API artifact | Fail with a catalog/Doxygen diagnostic; do not run a producer fallback |
 | Persisted API artifact Doxygen version differs from `.doxygen-version` | Fail with `DOXYGEN_VERSION_MISMATCH`; synchronize all invalidated modules |
-| Missing package/API route or mismatched revision, documentation, dependency, or status | Artifact check fails with the affected route/package; do not upload |
+| Restored Doxygen executable is missing, corrupt, or reports another version | Sync CLI exits before cloning; do not accept or rewrite a snapshot |
+| Missing package/API route, mismatched package revision or API source branch, documentation, dependency, or status | Artifact check fails with the affected route/package; do not upload |
 | Symlink, temporary/source path, credential signal, or non-allowlisted resource in `dist/` | Artifact check fails with the relative path; do not upload |
 | Artifact address differs from deployment origin/base | Reject the artifact and rebuild; static artifacts are not address-portable |
 | Release E2E omits `PLAYWRIGHT_REUSE_ARTIFACT=1` | Invalid artifact handoff; Playwright's standalone mode rebuilds and replaces `dist/` |
@@ -247,10 +261,17 @@ is incorrectly rejected before mode validation.
 - Good: an operator dispatches Validation for the intended ref and records the resolved commit from
   the successful run.
 - Good: an organization repository calls the reusable workflow at `@main`; the receiver derives its
-  module ID and clone URL and adds it only after complete validation.
+  module ID and clone URL and adds it only after the sync CLI validates and atomically writes the
+  candidate snapshot.
 - Good: a changed discovery run pushes one `sources/` commit with `DOCS_SYNC_TOKEN`; an identical
   rerun produces no commit for the external build service to observe.
+- Good: a Doxygen cache hit skips `ssciwr/doxygen-install`, adds the cached versioned `bin` directory
+  to `PATH`, and the sync CLI verifies the executable before cloning.
+- Good: changing only a module SHA leaves its serialized API catalog unchanged because API references
+  and source URLs use the manifest default branch.
 - Base: `BASE_PATH=/ bun run build` builds from committed snapshots with network disabled.
+- Base: a Doxygen cache miss runs the pinned installer once, copies the executable into its
+  version/action-scoped cache, saves it, and then runs synchronization.
 - Base: a manual `changed` dispatch supplies `module: ""`; the adapter normalizes it to an absent
   module and invokes `bun run sync --changed --dry-run`.
 - Base: `bun run generate` succeeds on a host with no Doxygen executable because it validates the
@@ -263,6 +284,8 @@ is incorrectly rejected before mode validation.
 - Bad: a caller supplies a repository URL, module name, commit flag, or repository outside
   `HITSZ-WTRobot-Packages` in a discovery payload.
 - Bad: an ordinary build scans `cpkg.toml`, invokes Doxygen, or regenerates a missing artifact.
+- Bad: an API reference persists `moduleSha`, constructs `blob/<sha>` source URLs, or uses a
+  SHA-derived Doxygen project number; revision-only synchronization then rewrites the large artifact.
 - Bad: building with `BASE_PATH=/` and uploading those bytes under `/docs/` is rejected even when
   every file exists, because canonical URLs and static asset paths are already compiled.
 
@@ -273,19 +296,25 @@ is incorrectly rejected before mode validation.
 - Synchronizer integration tests hash the previous tree before injected failures and assert exact
   equality afterward; unchanged reruns assert an empty Git diff; producer changes force regeneration.
 - Snapshot integration tests assert that `sources/` contains no C/C++ source, `cpkg.toml`, or XML;
-  every module has checksum-verified package/API artifacts at its manifest revision.
+  every module has checksum-verified package artifacts at its manifest revision and API artifacts
+  for its configured source branch.
+- Doxygen integration tests generate the same inputs under two module SHAs and assert exact serialized
+  API catalog equality; loader tests reject a `sourceBranch` that differs from the manifest.
 - Offline build tests deny network and assert successful root and nested-base artifacts.
 - At least one production build must import each shared snapshot loader through an Astro route;
   passing only Bun unit/CLI tests does not prove runtime compatibility.
 - Browser and static-link tests assert canonical URLs, Pagefind assets, Markdown resources, and deep
   links under each configured base.
-- Artifact tests map every catalog module/package and API reference to built HTML, assert revision,
-  README/fallback, dependency, and status text, parse Pagefind's page count, compare resource output
-  with the generated allowlist, and inject representative unsafe paths/credential signatures.
+- Artifact tests map every catalog module/package and API reference to built HTML, assert package
+  revision, API source branch, README/fallback, dependency, and status text, parse Pagefind's page
+  count, compare resource output with the generated allowlist, and inject representative unsafe
+  paths/credential signatures.
 - Workflow contract tests require release browser steps to set `PLAYWRIGHT_REUSE_ARTIFACT=1`; run at
   least one root and nested E2E suite against a prebuilt artifact.
 - Workflow contract tests assert that Validation's event keys equal exactly `workflow_dispatch` and
-  that its read-only permissions and existing site matrix remain unchanged.
+  that its read-only permissions and existing site matrix remain unchanged. Synchronization workflow
+  tests reject site/build/browser commands, require immutable Bun/Doxygen cache Actions and complete
+  cache-key inputs, and require the Doxygen installer to run only on a cache miss.
 - Action request tests assert strict discovery fields, fixed committing module mode, organization
   ownership, and empty optional manual-input normalization. Reusable workflow tests assert caller
   context crosses through environment values rather than direct shell interpolation, the requester
@@ -354,6 +383,14 @@ const api = await generateApiCatalogFromSource();
 const api = await loadApiCatalog();
 ```
 
+```jsonc
+// Wrong: a revision-only update rewrites every API reference and source URL.
+{ "formatVersion": 1, "moduleSha": "<40-hex>", "revisionLabel": "1.0.0+<short-sha>" }
+
+// Correct: exact revision ownership stays in the manifest/package catalog; API links follow branch.
+{ "formatVersion": 2, "sourceBranch": "main" }
+```
+
 ```yaml
 # Wrong: Validation runs automatically for branch activity.
 on:
@@ -385,7 +422,7 @@ uses: HITSZ-WTRobot-Packages/docs/.github/workflows/request-docs-sync.yml@main
 - uses: actions/checkout@<full-commit-sha>
   with:
     persist-credentials: false
-- name: Commit validated snapshots
+- name: Commit synchronized snapshots
   env:
     GH_TOKEN: ${{ secrets.DOCS_SYNC_TOKEN }}
   run: |

@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "ChassisController",
-  "moduleSha": "825f1408280d1b511ac10a73653800d0185bce3a",
+  "moduleSha": "725be59228a4c0aa62c1b04c01fdadee257a4feb",
   "packages": [
     {
       "name": "ControllerMaster",

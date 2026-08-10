@@ -3,8 +3,9 @@ import { SyncDiagnostic } from "./diagnostic";
 
 export type UpstreamView = "blob" | "tree";
 
-export function pinnedUpstreamUrl(
+function upstreamUrl(
   module: ModuleSnapshot,
+  revision: string,
   view: UpstreamView,
   snapshotPath?: string,
 ): string {
@@ -20,8 +21,24 @@ export function pinnedUpstreamUrl(
   const encodedPath = snapshotPath
     ? `/${snapshotPath.split("/").map(encodeURIComponent).join("/")}`
     : "";
-  repository.pathname = `${repositoryPath}/${view}/${module.sha}${encodedPath}`;
+  repository.pathname = `${repositoryPath}/${view}/${revision}${encodedPath}`;
   repository.search = "";
   repository.hash = "";
   return repository.href;
+}
+
+export function pinnedUpstreamUrl(
+  module: ModuleSnapshot,
+  view: UpstreamView,
+  snapshotPath?: string,
+): string {
+  return upstreamUrl(module, module.sha, view, snapshotPath);
+}
+
+export function branchUpstreamUrl(
+  module: ModuleSnapshot,
+  view: UpstreamView,
+  snapshotPath?: string,
+): string {
+  return upstreamUrl(module, module.branch, view, snapshotPath);
 }

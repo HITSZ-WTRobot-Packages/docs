@@ -448,7 +448,7 @@ function validateApiCatalogs(
   doxygenVersion: string,
 ): void {
   const references = ApiCatalogSchema.parse({
-    formatVersion: 1,
+    formatVersion: 2,
     doxygenVersion,
     references: moduleCatalogs.flatMap((catalog) => {
       if (catalog.doxygenVersion !== doxygenVersion) {
@@ -465,7 +465,7 @@ function validateApiCatalogs(
   for (const reference of references) {
     const module = moduleById.get(reference.moduleId);
     const key = `${reference.targetKind}:${reference.targetId}`;
-    if (!module || module.sha !== reference.moduleSha || targetKeys.has(key)) {
+    if (!module || module.branch !== reference.sourceBranch || targetKeys.has(key)) {
       throw new SyncDiagnostic(
         "DOXYGEN_OUTPUT_INVALID",
         `API reference does not match the synchronized module graph: ${key}.`,

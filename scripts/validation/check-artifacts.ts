@@ -183,11 +183,9 @@ async function main(): Promise<void> {
     if (!documentation || !api) {
       throw new Error(`Package release data is incomplete: ${packageEntry.pkgname}`);
     }
-    if (
-      api.moduleSha !== packageEntry.moduleSha ||
-      api.revisionLabel !== packageEntry.revisionLabel
-    ) {
-      throw new Error(`Package revision metadata is inconsistent: ${packageEntry.pkgname}`);
+    const module = data.catalog.modules.find((entry) => entry.id === packageEntry.moduleId);
+    if (!module || api.moduleId !== packageEntry.moduleId || api.sourceBranch !== module.branch) {
+      throw new Error(`Package API source metadata is inconsistent: ${packageEntry.pkgname}`);
     }
 
     const packagePath = `packages/${packageEntry.slug}/index.html`;
@@ -211,7 +209,7 @@ async function main(): Promise<void> {
     const apiPage = parsedHtml.get(apiPath);
     if (!apiPage) throw new Error(`Missing stable package API route: ${packageEntry.pkgname}`);
     requireText(apiPage, `${packageEntry.pkgname} API`, apiPath);
-    requireText(apiPage, packageEntry.revisionLabel, apiPath);
+    requireText(apiPage, api.sourceBranch, apiPath);
     requireText(apiPage, apiStatusLabel(api.status), apiPath);
   }
 
