@@ -41,9 +41,9 @@ function externalUses(steps: z.infer<typeof StepSchema>[]): string[] {
 }
 
 describe("GitHub Actions contracts", () => {
-  test("validation is snapshot-only, read-only, and covers all site variants", async () => {
+  test("validation is manual-only, snapshot-only, read-only, and covers all site variants", async () => {
     const workflow = WorkflowSchema.parse(await readYaml(".github/workflows/validation.yml"));
-    expect(Object.keys(workflow.on).sort()).toEqual(["pull_request", "push", "workflow_dispatch"]);
+    expect(Object.keys(workflow.on)).toEqual(["workflow_dispatch"]);
     expect(workflow.permissions).toEqual({ contents: "read" });
     expect(workflow.concurrency["cancel-in-progress"]).toBe(true);
     const serialized = JSON.stringify(workflow);

@@ -76,9 +76,10 @@ future `trellis update`.
   repository-owned code or documentation.
 - Only the synchronization CLI and its manually triggered GitHub Action may access upstream
   repositories. Never modify or push to an upstream module repository.
-- Validation CI has read-only contents permission and never invokes synchronization. Snapshot sync
-  has no push trigger, parses dispatch data through `sync:action`, stages only `sources/`, and may
-  push only after the complete offline validation path succeeds.
+- Validation CI is manually triggered only through `workflow_dispatch`, has read-only contents
+  permission, and never invokes synchronization. Snapshot sync has no push trigger, parses dispatch
+  data through `sync:action`, stages only `sources/`, and may push only after the complete offline
+  validation path succeeds.
 - Parse TOML, Markdown, XML, schemas, Git output, search indexes, and dependency layouts with the
   selected maintained libraries. Do not add an ad hoc parser or layout algorithm.
 - Validate external input at the boundary before converting it into internal catalog types.

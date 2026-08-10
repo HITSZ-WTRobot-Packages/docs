@@ -52,9 +52,10 @@
   HTML/LaTeX output, source ownership uniqueness, pinned revisions, and deterministic serialization.
 - The quality gate runs convention, format, lint, typecheck, unit, integration, generation, build,
   static-link, search, browser, screenshot, responsive, accessibility, and artifact checks.
-- Ordinary Actions use committed snapshots, `contents: read`, frozen Bun installs, and no sync
-  command. Root, `/docs/`, and `/products/wtr/docs/` builds run artifact and Linkinator checks;
-  root and product variants also run Playwright/axe.
+- Validation Actions use committed snapshots, are triggered only by `workflow_dispatch`, use
+  `contents: read`, install frozen Bun dependencies, and never run a sync command. Root, `/docs/`,
+  and `/products/wtr/docs/` builds run artifact and Linkinator checks; root and product variants
+  also run Playwright/axe.
 - Snapshot synchronization is limited to `workflow_dispatch` and the named `repository_dispatch`
   type, uses serialized concurrency, and grants `contents: write` only there. Structured event
   parsing must validate mode, module, dry-run, and commit before invoking the local sync CLI.
@@ -84,8 +85,9 @@
 ### 1. Scope / Trigger
 
 Apply this contract whenever a command reads upstream repositories, writes `sources/`, produces
-catalog/API/search data, or constructs a deployable URL. It prevents a normal build from becoming
-network-dependent and keeps synchronization behavior identical locally and in Actions.
+catalog/API/search data, constructs a deployable URL, or changes a GitHub Actions trigger. It
+prevents a normal build from becoming network-dependent, keeps synchronization behavior identical
+locally and in Actions, and prevents Validation from silently becoming an automatic branch gate.
 
 ### 2. Signatures
 
@@ -97,6 +99,7 @@ SITE_URL=<same-build-origin> BASE_PATH=<same-build-path> bun run check:artifacts
 SITE_URL=<same-build-origin> BASE_PATH=<same-build-path> PLAYWRIGHT_REUSE_ARTIFACT=1 bun run test:e2e
 ASTRO_DEV_BACKGROUND=0 bun run dev
 ASTRO_PREVIEW_BACKGROUND=0 bun run preview
+Validation workflow trigger: workflow_dispatch
 ```
 
 `--module` and `--changed` are mutually exclusive. With neither, synchronization processes every
@@ -112,6 +115,7 @@ allowlisted module. `--dry-run` composes with all modes and performs no reposito
 | Artifact check | The built `dist/`, the same address pair, and validated portal data | Release summary with module/package/API/HTML/Pagefind/file counts; no writes |
 | Release browser check | Validated `dist/`, same address pair, `PLAYWRIGHT_REUSE_ARTIFACT=1` | Local preview and browser/axe results without rebuilding `dist/` |
 | Local server | The same site/base inputs and an Astro foreground sentinel | A foreground process owned and terminated by the invoking terminal or Playwright worker |
+| Validation workflow | Manually dispatched repository ref and committed `sources/` | Read-only offline quality and site-matrix result for the resolved commit |
 
 `BASE_PATH` defaults to `/`, starts and ends with `/`, and contains no `.` or `..` segment. Normal
 generation and build commands make zero upstream network requests.
@@ -131,15 +135,19 @@ generation and build commands make zero upstream network requests.
 | Artifact address differs from deployment origin/base | Reject the artifact and rebuild; static artifacts are not address-portable |
 | Release E2E omits `PLAYWRIGHT_REUSE_ARTIFACT=1` | Invalid artifact handoff; Playwright's standalone mode rebuilds and replaces `dist/` |
 | Astro server command exits while its server remains alive | Invalid process ownership; restore the foreground sentinel in the package script |
+| Validation declares `push`, `pull_request`, `schedule`, or another automatic trigger | Workflow contract test fails; retain only `workflow_dispatch` |
 
 ### 5. Good / Base / Bad Cases
 
 - Good: `SITE_URL=https://docs.example.org BASE_PATH=/products/wtr/docs/ bun run build`
   followed by the same environment for `bun run check:artifacts` produces and validates base-aware
   canonical, asset, search, and content links.
+- Good: an operator dispatches Validation for the intended ref and records the resolved commit from
+  the successful run.
 - Base: `BASE_PATH=/ bun run build` builds from committed snapshots with network disabled.
 - Local: `bun run dev` stays in the foreground even when Astro detects an agent environment.
 - Bad: `BASE_PATH=../../docs bun run build` fails before Astro emits output.
+- Bad: a pull request or push to `main` starts Validation without an explicit dispatch.
 - Bad: building with `BASE_PATH=/` and uploading those bytes under `/docs/` is rejected even when
   every file exists, because canonical URLs and static asset paths are already compiled.
 
@@ -158,6 +166,8 @@ generation and build commands make zero upstream network requests.
   with the generated allowlist, and inject representative unsafe paths/credential signatures.
 - Workflow contract tests require release browser steps to set `PLAYWRIGHT_REUSE_ARTIFACT=1`; run at
   least one root and nested E2E suite against a prebuilt artifact.
+- Workflow contract tests assert that Validation's event keys equal exactly `workflow_dispatch` and
+  that its read-only permissions and existing site matrix remain unchanged.
 - A Playwright run with no pre-existing server must start, await, and stop its configured web server
   without leaving an Astro background process.
 
@@ -187,4 +197,17 @@ SITE_URL=https://example.invalid BASE_PATH=/docs/ bun run check:artifacts
 
 // Correct: Bun owns script/package resolution and Astro uses its declared runtime.
 { "build": "astro build", "dev": "ASTRO_DEV_BACKGROUND=0 astro dev" }
+```
+
+```yaml
+# Wrong: Validation runs automatically for branch activity.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Correct: an operator must explicitly select a ref and dispatch Validation.
+on:
+  workflow_dispatch:
 ```

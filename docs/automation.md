@@ -4,7 +4,8 @@
 
 ## 验证工作流
 
-`.github/workflows/validation.yml` 在推送到 `main`、拉取请求和手动触发时运行。它只有
+`.github/workflows/validation.yml` 只能通过 `workflow_dispatch` 手动运行。操作者必须在 GitHub
+Actions 中选择要验证的 ref；推送到 `main`、拉取请求和快照机器人提交都不会自动启动它。工作流只有
 `contents: read` 权限，检出时不保留凭据，并且从不调用同步命令或访问上游模块仓库。
 
 离线质量作业执行冻结依赖安装、约定检查、格式检查、lint、Astro 类型检查、单元/集成测试，以及全部目录、README 和 Doxygen 生成器。站点矩阵分别使用不同的示例源站构建
@@ -54,7 +55,8 @@ URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/�
 事件适配器使用参数数组调用
 `bun run sync`，不会把工作流表达式插值到命令中。变更检测包括已跟踪修改、删除和新的未跟踪快照文件。无变化的运行报告 no-op 且不创建提交。有变化的运行必须通过完整离线门禁、嵌套站点构建、产物/链接检查以及 Playwright/axe，之后才允许执行可选提交。该提交只暂存
 `sources/`，使用 GitHub Actions 机器人身份，并在提交消息中包含
-`[snapshot-sync]`。工作流没有 push 触发器，因此机器人提交不会递归启动另一次同步。
+`[snapshot-sync]`。工作流没有 push 触发器，因此机器人提交不会递归启动另一次同步，也不会自动启动
+`Validation`；需要验证该提交时，操作者必须为对应 ref 手动运行 `Validation`。
 
 同步工作流是唯一拥有 `contents: write`
 的工作流。仓库或分支规则仍可能阻止其推送；该失败会保留远程分支不变，并由提交步骤报告。不提交的运行只在 runner 生命周期内保留其已验证差异。

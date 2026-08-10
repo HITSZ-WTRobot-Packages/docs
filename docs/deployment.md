@@ -35,7 +35,7 @@ URL、sitemap 条目、robots 指令、导航、Pagefind 资源、Markdown 资�
 - 将 Pages 的 **Build and deployment > Source** 设置为 GitHub Actions。
 - 确认 Actions 可使用所需的官方 Actions 和仓库本地 setup
   Action。所有外部 Action 必须固定到完整提交 SHA。
-- 保护 `main`，并要求合并前通过现有 `Validation` 工作流。
+- 保护 `main`，并将针对目标 ref 手动运行且成功的 `Validation` 记录作为发布前置证据。
 - 保护 `github-pages` 环境，仅允许 `main` 使用，并为首次部署、域名变更和回滚运行配置审核者。
 - 同步保持手动触发。部署构建只消费已提交的 `sources/`，永不调用 `bun run sync`。
 - 在 `issues.md` 中使用选定域名、Pages 设置、环境审核者和分支规则解决 `DEPLOYMENT-001`。
@@ -65,8 +65,8 @@ Pages 产物必须满足 GitHub 的格式和大小契约：一个小于 10
 GB 的 gzip 压缩 tar 归档，且不含符号链接或硬链接。保留发布产物至少 30 天，使回滚演练能使用上一版本的确切字节。Action 和 Doxygen 固定版本必须遵循与验证 CI 相同的校验和策略。
 
 初始工作流应支持使用显式提交 SHA 手动 dispatch。只有首次、重复和回滚演练通过后，才能启用 `main`
-自动部署。启用后，只能部署其 `Validation` 工作流成功的 `main`
-提交；快照机器人提交遵循相同验证路径，不享受部署例外。
+自动部署。启用后，只能部署具有同一提交成功记录的 `main` 提交；该记录必须来自手动 dispatch 的
+`Validation`。快照机器人提交遵循相同的手动验证路径，不享受部署例外。
 
 ## 部署前门禁
 
@@ -101,8 +101,9 @@ URL 和 Pagefind 结果必须保持不变，新的部署不得创建同步提交
 
 ### 快照更新
 
-使用 `commit: true` 运行手动同步。确认机器人提交只修改 `sources/`，常规 `Validation`
-工作流基于已提交快照通过，且部署重新构建使用机器人提交而不访问上游仓库。验证受影响的软件包修订版本和固定源码链接已更新，未受影响的稳定路由仍然有效。
+使用 `commit: true` 运行手动同步。确认机器人提交只修改 `sources/`，随后手动运行对应 ref 的
+`Validation`
+并确认通过。部署重新构建必须使用同一机器人提交且不访问上游仓库。验证受影响的软件包修订版本和固定源码链接已更新，未受影响的稳定路由仍然有效。
 
 ### 旧产物回滚
 
