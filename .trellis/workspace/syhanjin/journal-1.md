@@ -255,3 +255,36 @@ Moved package and Doxygen API production into synchronization, migrated sources 
 ### Next Steps
 
 - None - task complete
+
+
+## Session 8: Dispatch repository auto-discovery
+
+**Date**: 2026-08-11
+**Task**: Dispatch repository auto-discovery
+**Branch**: `main`
+
+### Summary
+
+Added a reusable caller workflow and strict repository dispatch boundary, replaced the static module list with the committed manifest index, preserved atomic first discovery, and documented and tested the cross-repository flow.
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `cbc43d9` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete
