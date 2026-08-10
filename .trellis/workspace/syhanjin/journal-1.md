@@ -187,3 +187,37 @@ Added repository-owned Netlify configuration, shared pinned Doxygen installation
 ### Next Steps
 
 - None - task complete
+
+
+## Session 6: 回退 Netlify 支持并降级 Doxygen
+
+**Date**: 2026-08-10
+**Task**: 回退 Netlify 支持并降级 Doxygen
+**Branch**: `main`
+
+### Summary
+
+完整撤销 Netlify 部署支持，将 Doxygen 锁定到 1.9.8，兼容官方发行包版本后缀，并通过完整本地构建与浏览器验证矩阵。
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `51420f8` | (see git log) |
+| `29ee2c1` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete
