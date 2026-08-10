@@ -50,7 +50,9 @@ future `trellis update`.
   deployment address inputs; route and asset code must go through the shared URL helper.
 - Use the exact Doxygen version in `.doxygen-version` only as a build-time producer of XML. Pass a
   temporary Doxyfile path through Execa; the site consumes normalized TypeScript data, not Doxygen
-  HTML or source-browser output.
+  HTML or source-browser output. Normalize `doxygen --version` only from an exact semantic version
+  or the official `X.Y.Z (<40-hex release commit>)` form; reject every other suffix while preserving
+  the raw output in mismatch diagnostics.
 - Use Zod for runtime schemas, smol-toml for `cpkg.toml`, unified/remark/rehype for Markdown and
   sanitized HTML, fast-xml-parser plus fast-xml-validator for Doxygen XML, simple-git for Git
   operations, Execa for bounded external processes, Commander for CLI arguments, and tinyglobby for

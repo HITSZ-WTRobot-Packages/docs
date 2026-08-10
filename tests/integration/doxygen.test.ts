@@ -154,12 +154,27 @@ describe("Doxygen API generation", () => {
     });
   });
 
+  test("accepts the official release commit suffix", async () => {
+    const repositoryRoot = await createDoxygenRepository();
+    const executable = path.join(repositoryRoot, "fixture-doxygen");
+    await writeFile(
+      executable,
+      '#!/bin/sh\nif [ "$1" = "--version" ]; then\n  echo "1.9.8 (c2fe5c3e4986974eb2a97608b24086683502f07f)"\n  exit 0\nfi\nexit 7\n',
+      "utf8",
+    );
+    await chmod(executable, 0o755);
+
+    const catalog = await loadApiCatalog({ repositoryRoot, executable });
+    expect(catalog.doxygenVersion).toBe("1.9.8");
+    expect(catalog.references.every((reference) => reference.status === "failed")).toBe(true);
+  });
+
   test("isolates invocation failures to each package reference", async () => {
     const repositoryRoot = await createDoxygenRepository();
     const executable = path.join(repositoryRoot, "fixture-doxygen");
     await writeFile(
       executable,
-      '#!/bin/sh\nif [ "$1" = "--version" ]; then\n  echo 1.16.1\n  exit 0\nfi\nexit 7\n',
+      '#!/bin/sh\nif [ "$1" = "--version" ]; then\n  echo 1.9.8\n  exit 0\nfi\nexit 7\n',
       "utf8",
     );
     await chmod(executable, 0o755);

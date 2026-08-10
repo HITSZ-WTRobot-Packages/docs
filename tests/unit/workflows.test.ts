@@ -97,7 +97,10 @@ describe("GitHub Actions contracts", () => {
 
     const doxygenStep = toolchain.runs.steps.find((step) => step.run?.includes("DOXYGEN_SHA256"));
     expect(doxygenStep?.run).toContain("sha256sum --check --strict");
-    expect(JSON.stringify(toolchain)).toContain("1.16.1");
-    expect((await readFile(".doxygen-version", "utf8")).trim()).toBe("1.16.1");
+    expect(doxygenStep?.env?.DOXYGEN_SHA256).toBe(
+      "dda773bdc62384b7d796fe8b6c5029daad72483e4c8ad4abf6ee9fb98b649388",
+    );
+    expect(JSON.stringify(toolchain)).toContain("1.9.8");
+    expect((await readFile(".doxygen-version", "utf8")).trim()).toBe("1.9.8");
   });
 });

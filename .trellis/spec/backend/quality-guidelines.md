@@ -80,6 +80,62 @@
 - Can any failure partially replace a valid snapshot?
 - Are root and nested base paths exercised where URLs changed?
 
+## Scenario: Pinned Doxygen Version Identification
+
+### 1. Scope / Trigger
+
+Apply this contract whenever changing `.doxygen-version`, the pinned Doxygen archive, or the
+generator's tool-version gate. Official Doxygen release binaries may append their release commit to
+`--version`, while distribution packages may report only the semantic version.
+
+### 2. Signatures
+
+```text
+.doxygen-version: X.Y.Z
+doxygen --version: X.Y.Z | X.Y.Z (<40 lowercase hexadecimal characters>)
+ApiCatalog.doxygenVersion: X.Y.Z
+```
+
+### 3. Contracts
+
+- Parse the complete trimmed stdout, not a line prefix or whitespace-delimited token.
+- Accept only the two declared formats and compare the normalized `X.Y.Z` with the repository lock.
+- Store only the normalized semantic version in the API catalog.
+- Preserve the complete reported stdout in `DOXYGEN_VERSION_MISMATCH` diagnostics.
+
+### 4. Validation & Error Matrix
+
+| Reported value | Required result |
+| --- | --- |
+| Exact locked `X.Y.Z` | Accept and store `X.Y.Z` |
+| Locked `X.Y.Z` plus a 40-character lowercase hexadecimal commit | Accept and store `X.Y.Z` |
+| Different semantic version in either accepted form | Fail with `DOXYGEN_VERSION_MISMATCH` |
+| Empty output, development suffix, uppercase/non-hex commit, extra lines, or arbitrary text | Fail with `DOXYGEN_VERSION_MISMATCH` and retain the raw value |
+| Process invocation failure or timeout | Fail with `DOXYGEN_TOOL_UNAVAILABLE` |
+
+### 5. Good / Base / Bad Cases
+
+- Good: official `1.9.8 (c2fe5c3e4986974eb2a97608b24086683502f07f)` normalizes to `1.9.8`.
+- Base: distribution package output `1.9.8` remains `1.9.8`.
+- Bad: `1.9.8-dev`, `1.9.8 extra`, or `1.9.9` cannot satisfy a `1.9.8` lock.
+
+### 6. Tests Required
+
+- Integration fixtures cover both accepted output forms and assert the normalized catalog version.
+- Version mismatch tests assert the stable diagnostic code and expected version context.
+- A real pinned release binary runs the snapshot generator before updating its Action checksum.
+
+### 7. Wrong vs Correct
+
+```ts
+// Wrong: rejects an official release binary that appends its source commit.
+if (stdout.trim() !== expectedVersion) throw mismatch();
+
+// Correct: validate the complete supported shape, then compare its normalized semantic version.
+const actualVersion = /^(\d+\.\d+\.\d+)(?: \([0-9a-f]{40}\))?$/u.exec(stdout.trim())?.[1];
+if (actualVersion !== expectedVersion) throw mismatch();
+```
+
 ## Scenario: Offline Snapshot Build Boundary
 
 ### 1. Scope / Trigger

@@ -184,13 +184,13 @@ async function readDoxygenVersionLock(repositoryRoot: string): Promise<string> {
 
 async function assertDoxygenVersion(repositoryRoot: string, executable: string): Promise<string> {
   const expectedVersion = await readDoxygenVersionLock(repositoryRoot);
-  let actualVersion: string;
+  let reportedVersion: string;
   try {
     const result = await execa(executable, ["--version"], {
       cwd: repositoryRoot,
       timeout: DOXYGEN_TIMEOUT_MS,
     });
-    actualVersion = result.stdout.trim();
+    reportedVersion = result.stdout.trim();
   } catch (error) {
     throw new DoxygenDiagnostic(
       "DOXYGEN_TOOL_UNAVAILABLE",
@@ -202,13 +202,14 @@ async function assertDoxygenVersion(repositoryRoot: string, executable: string):
       { cause: error },
     );
   }
+  const actualVersion = /^(\d+\.\d+\.\d+)(?: \([0-9a-f]{40}\))?$/u.exec(reportedVersion)?.[1];
   if (actualVersion !== expectedVersion) {
     throw new DoxygenDiagnostic(
       "DOXYGEN_VERSION_MISMATCH",
-      `Doxygen ${expectedVersion} is required, but ${actualVersion || "an unknown version"} was found.`,
+      `Doxygen ${expectedVersion} is required, but ${reportedVersion || "an unknown version"} was found.`,
       {
         expectedVersion,
-        actualVersion,
+        actualVersion: reportedVersion,
         hint: "Use the exact version recorded in .doxygen-version locally and in CI.",
       },
     );

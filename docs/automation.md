@@ -64,7 +64,7 @@ URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/�
 ## 固定工具链
 
 外部 Actions 均引用完整提交 SHA。本地 setup Action 根据软件包契约安装 Bun 1.3.14，执行
-`bun install --frozen-lockfile`，并下载官方 Doxygen 1.16.1
+`bun install --frozen-lockfile`，并下载官方 Doxygen 1.9.8
 Linux 产物。提取前验证其 SHA-256，版本必须等于
 `.doxygen-version`。只有运行 Playwright 的作业会安装 Chromium。
 
