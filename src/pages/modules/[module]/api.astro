@@ -32,7 +32,7 @@ const sidebar = buildPortalSidebar(data.catalog);
 
 <PortalPage
   title={`${module.displayName} API`}
-  description={`Module-level C and C++ symbols at ${reference.revisionLabel}.`}
+  description={`${reference.revisionLabel} 修订版本的模块级 C/C++ 符号。`}
   sidebar={sidebar}
 >
   <PagefindMetadata
@@ -42,7 +42,7 @@ const sidebar = buildPortalSidebar(data.catalog);
   />
   <Breadcrumbs
     items={[
-      { label: "Catalog", href: sitePath(data.config.basePath) },
+      { label: "目录", href: sitePath(data.config.basePath) },
       { label: module.displayName, href: sitePath(data.config.basePath, "modules", module.slug) },
       { label: "API" },
     ]}

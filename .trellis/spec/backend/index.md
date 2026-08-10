@@ -24,5 +24,6 @@ database, or runtime API.
 | [Logging](./logging-guidelines.md) | Human and CI output without secret leakage |
 | [Quality](./quality-guidelines.md) | Offline, idempotency, fixture, and integration gates |
 
-All project documentation and code comments are written in English. Upstream README content keeps
-its original language.
+Repository-owned documentation and user-facing interface copy are written in Simplified Chinese.
+Code comments remain in English, while synchronized upstream README content keeps its original
+language.

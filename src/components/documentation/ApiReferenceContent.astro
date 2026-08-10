@@ -2,7 +2,12 @@
 import { Icon } from "astro-icon/components";
 
 import type { ApiReference, ApiSymbolKind } from "../../lib/doxygen/schema";
-import { apiStatusLabel, apiStatusTone } from "../../lib/site/view-models";
+import {
+  apiStatusLabel,
+  apiStatusTone,
+  apiSymbolKindLabel,
+  apiWarningMessage,
+} from "../../lib/site/view-models";
 import StatusBadge from "../portal/StatusBadge.astro";
 
 interface Props {
@@ -28,14 +33,18 @@ const groups = kindOrder.flatMap((kind) => {
 });
 ---
 
-<section class="wtr-api-overview" aria-label="API extraction status">
+<section class="wtr-api-overview" aria-label="API 提取状态">
   <StatusBadge tone={apiStatusTone(reference.status)} label={apiStatusLabel(reference.status)} />
   <dl class="wtr-inline-stats">
-    <div><dt>Symbols</dt><dd>{reference.symbolCount}</dd></div>
-    <div><dt>Documented</dt><dd>{reference.documentedSymbolCount}</dd></div>
-    <div><dt>Revision</dt><dd><code>{reference.revisionLabel}</code></dd></div>
+    <div><dt>符号</dt><dd>{reference.symbolCount}</dd></div>
+    <div><dt>已记录</dt><dd>{reference.documentedSymbolCount}</dd></div>
+    <div><dt>修订版本</dt><dd><code>{reference.revisionLabel}</code></dd></div>
   </dl>
-  {reference.warnings.map((warning) => <p class="wtr-quality-note">{warning.message}</p>)}
+  {
+    reference.warnings.map((warning) => (
+      <p class="wtr-quality-note">{apiWarningMessage(reference, warning)}</p>
+    ))
+  }
 </section>
 
 {
@@ -44,7 +53,7 @@ const groups = kindOrder.flatMap((kind) => {
       {groups.map(({ kind, symbols }) => (
         <section aria-labelledby={`api-kind-${kind}`}>
           <div class="wtr-section-heading wtr-section-heading--compact">
-            <h2 id={`api-kind-${kind}`}>{kind}</h2>
+            <h2 id={`api-kind-${kind}`}>{apiSymbolKindLabel(kind)}</h2>
             <span>{symbols.length}</span>
           </div>
           <div class="wtr-symbol-list">
@@ -66,7 +75,7 @@ const groups = kindOrder.flatMap((kind) => {
                 {symbol.description ? (
                   <p>{symbol.description}</p>
                 ) : (
-                  <p class="wtr-muted">No upstream description.</p>
+                  <p class="wtr-muted">上游未提供说明。</p>
                 )}
                 {symbol.enumValues.length > 0 && (
                   <dl class="wtr-enum-values">
@@ -78,7 +87,7 @@ const groups = kindOrder.flatMap((kind) => {
                             {value.initializer ? ` ${value.initializer}` : ""}
                           </code>
                         </dt>
-                        <dd>{value.description || "No upstream description."}</dd>
+                        <dd>{value.description || "上游未提供说明。"}</dd>
                       </div>
                     ))}
                   </dl>
@@ -102,6 +111,6 @@ const groups = kindOrder.flatMap((kind) => {
       ))}
     </div>
   ) : (
-    <p class="wtr-empty-state">No public C or C++ symbols are available for this target.</p>
+    <p class="wtr-empty-state">此目标没有可用的公开 C/C++ 符号。</p>
   )
 }

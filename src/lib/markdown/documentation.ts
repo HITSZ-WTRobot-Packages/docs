@@ -143,15 +143,15 @@ function supplementalRoute(basePath: string, moduleSlug: string, snapshotPath: s
 function moduleFallback(module: ModuleSnapshot, packages: readonly CatalogPackage[]): string {
   const packageLines = packages.length
     ? packages.map((entry) => `- \`${entry.pkgname}\` (${entry.revisionLabel})`).join("\n")
-    : "- No cpkg package manifests are present in this snapshot.";
-  return `# ${module.displayName}\n\nNo upstream README is present at revision \`${module.shortSha}\`.\n\n## Packages\n\n${packageLines}\n`;
+    : "- 此快照中没有 cpkg 软件包清单。";
+  return `# ${module.displayName}\n\n修订版本 \`${module.shortSha}\` 中没有上游 README。\n\n## 软件包\n\n${packageLines}\n`;
 }
 
 function packageFallback(entry: CatalogPackage): string {
   const dependencyLines = entry.dependencies.length
     ? entry.dependencies.map((dependency) => `- \`${dependency.name}\``).join("\n")
-    : "- No declared dependencies.";
-  return `# ${entry.pkgname}\n\nNo package README is present in the synchronized snapshot.\n\n- Version: \`${entry.revisionLabel}\`\n- Module: \`${entry.moduleId}\`\n- Manifest: \`${entry.manifestPath}\`\n\n## Dependencies\n\n${dependencyLines}\n`;
+    : "- 没有声明依赖项。";
+  return `# ${entry.pkgname}\n\n同步快照中没有此软件包的 README。\n\n- 版本：\`${entry.revisionLabel}\`\n- 模块：\`${entry.moduleId}\`\n- 清单：\`${entry.manifestPath}\`\n\n## 依赖项\n\n${dependencyLines}\n`;
 }
 
 function selectReadme(files: readonly SnapshotFile[], directory: string): SnapshotFile | undefined {

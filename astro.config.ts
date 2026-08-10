@@ -37,14 +37,20 @@ export default defineConfig({
       },
     }),
     starlight({
-      title: "HITSZ WTR Packages",
-      description: "STM32 driver package reference for the HITSZ Wentian Robotics Team.",
+      title: "HITSZ-WTRobot-Packages",
+      description: "哈尔滨工业大学（深圳）南工问天（HITSZ WTRobot）维护的 STM32 驱动包参考文档。",
       customCss: ["./src/styles/global.css"],
+      locales: {
+        root: {
+          label: "简体中文",
+          lang: "zh-CN",
+        },
+      },
       pagefind: true,
       social: [
         {
           icon: "github",
-          label: "HITSZ WTR Packages on GitHub",
+          label: "HITSZ-WTRobot-Packages GitHub 组织",
           href: "https://github.com/HITSZ-WTRobot-Packages",
         },
       ],

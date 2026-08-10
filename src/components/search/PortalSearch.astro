@@ -12,9 +12,7 @@ const { basePath, modules, namespaces } = Astro.props;
 
 <portal-search class="wtr-search" data-base-path={basePath} data-pagefind-ignore>
   <form class="wtr-search-form" role="search">
-    <label class="wtr-search-query-label" for="portal-search-query">
-      Search packages and APIs
-    </label>
+    <label class="wtr-search-query-label" for="portal-search-query"> 搜索软件包和 API </label>
     <div class="wtr-search-input-wrap">
       <Icon name="lucide:search" size="1.1rem" aria-hidden="true" />
       <input
@@ -22,30 +20,34 @@ const { basePath, modules, namespaces } = Astro.props;
         type="search"
         name="q"
         autocomplete="off"
-        placeholder="Package, symbol, or manual text"
+        placeholder="软件包、符号或手册文本"
       />
     </div>
     <div class="wtr-search-filters">
       <div>
-        <label for="portal-search-module">Module</label>
+        <label for="portal-search-module">模块</label>
         <select id="portal-search-module" name="module">
-          <option value="">All modules</option>
+          <option value="">所有模块</option>
           {modules.map((module) => <option value={module}>{module}</option>)}
         </select>
       </div>
       <div>
-        <label for="portal-search-namespace">Namespace</label>
+        <label for="portal-search-namespace">命名空间</label>
         <select id="portal-search-namespace" name="namespace">
-          <option value="">All namespaces</option>
-          {namespaces.map((namespace) => <option value={namespace}>{namespace}</option>)}
+          <option value="">所有命名空间</option>
+          {
+            namespaces.map((namespace) => (
+              <option value={namespace}>{namespace === "(global)" ? "（全局）" : namespace}</option>
+            ))
+          }
         </select>
       </div>
       <div>
-        <label for="portal-search-result-type">Result type</label>
+        <label for="portal-search-result-type">结果类型</label>
         <select id="portal-search-result-type" name="resultType">
-          <option value="">All types</option>
-          <option value="module">Module</option>
-          <option value="package">Package</option>
+          <option value="">所有类型</option>
+          <option value="module">模块</option>
+          <option value="package">软件包</option>
           <option value="readme">README</option>
           <option value="api">API</option>
         </select>
@@ -54,11 +56,11 @@ const { basePath, modules, namespaces } = Astro.props;
   </form>
   <div class="wtr-search-feedback">
     <p class="wtr-search-status" aria-live="polite" data-search-status>
-      Enter a term or choose a filter.
+      输入搜索词或选择筛选条件。
     </p>
     <button type="button" class="wtr-search-retry" data-search-retry hidden>
       <Icon name="lucide:refresh-cw" size="1rem" aria-hidden="true" />
-      Retry
+      重试
     </button>
   </div>
   <ol class="wtr-search-results" data-search-results></ol>
@@ -81,6 +83,25 @@ const { basePath, modules, namespaces } = Astro.props;
     type: string;
     module: string;
   };
+
+  function resultTypeLabel(resultType: string): string {
+    switch (resultType) {
+      case "catalog":
+        return "目录";
+      case "module":
+        return "模块";
+      case "package":
+        return "软件包";
+      case "readme":
+        return "README";
+      case "api":
+        return "API";
+      case "quality":
+        return "质量";
+      default:
+        return "文档";
+    }
+  }
 
   function isRecord(value: unknown): value is Record<string, unknown> {
     return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -109,7 +130,7 @@ const { basePath, modules, namespaces } = Astro.props;
       url: value.url,
       title: typeof meta.title === "string" ? meta.title : value.url,
       excerpt: typeof value.plain_excerpt === "string" ? value.plain_excerpt : "",
-      type: typeof meta.resultType === "string" ? meta.resultType : "Documentation",
+      type: typeof meta.resultType === "string" ? meta.resultType : "documentation",
       module: typeof meta.module === "string" ? meta.module : "",
     };
   }
@@ -187,7 +208,7 @@ const { basePath, modules, namespaces } = Astro.props;
         if (value) filters[name] = value;
       }
       this.updateUrl(query, filters);
-      this.setStatus("Searching.");
+      this.setStatus("正在搜索。");
       try {
         const api = await this.load();
         const response = await api.search(query || null, { filters });
@@ -201,17 +222,13 @@ const { basePath, modules, namespaces } = Astro.props;
         this.renderResults(results);
         this.setRetryVisible(false);
         this.setStatus(
-          results.length === 0
-            ? "No matching documentation found."
-            : `${results.length} result${results.length === 1 ? "" : "s"}.`,
+          results.length === 0 ? "未找到匹配的文档。" : `找到 ${results.length} 条结果。`,
         );
       } catch {
         if (currentSequence !== this.sequence) return;
         this.renderResults([]);
         this.setRetryVisible(true);
-        this.setStatus(
-          "Search index is unavailable in the development server. Use a production preview.",
-        );
+        this.setStatus("开发服务器中没有搜索索引，请使用生产预览。");
       }
     }
 
@@ -244,7 +261,9 @@ const { basePath, modules, namespaces } = Astro.props;
         link.textContent = result.title;
         const metadata = document.createElement("p");
         metadata.className = "wtr-search-result-meta";
-        metadata.textContent = [result.type, result.module].filter(Boolean).join(" · ");
+        metadata.textContent = [resultTypeLabel(result.type), result.module]
+          .filter(Boolean)
+          .join(" · ");
         const excerpt = document.createElement("p");
         excerpt.textContent = result.excerpt;
         item.append(link, metadata, excerpt);

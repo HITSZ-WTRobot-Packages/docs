@@ -1,61 +1,53 @@
-# Project Issues
+# 项目问题记录
 
-This file records architectural gates and upstream documentation deficiencies. An open issue only
-blocks implementation when its impact says that it changes an architectural choice.
+本文档记录架构门禁和上游文档缺陷。只有当开放问题的“影响”明确指出其会改变架构选择时，该问题才会阻塞实施。
 
-## Issue Template
+## 问题模板
 
 ```markdown
-## ISSUE-ID: Short title
+## ISSUE-ID：简短标题
 
-- Status: open | monitoring | resolved | accepted
-- Scope: architecture | upstream-content | tooling | deployment
-- Owner: GitHub handle or role
-- Evidence: Reproducible command, URL, file path, and observed result
-- Impact: What cannot be completed or what architectural decision would change
-- Workaround: Current bounded workaround, or `none`
-- Close condition: Objective evidence required to close the issue
-- Last verified: YYYY-MM-DD
+- 状态：open | monitoring | resolved | accepted
+- 范围：architecture | upstream-content | tooling | deployment
+- 负责人：GitHub 用户名或角色
+- 证据：可复现命令、URL、文件路径和观察结果
+- 影响：无法完成的事项或将发生变化的架构决策
+- 规避措施：当前有边界的规避措施，或 `none`
+- 关闭条件：关闭问题所需的客观证据
+- 最近验证：YYYY-MM-DD
 
-Additional context and resolution notes.
+补充上下文和解决记录。
 ```
 
-## Open Issues
+## 开放问题
 
-## DEPLOYMENT-001: GitHub Pages administrative state is not yet approved
+## DEPLOYMENT-001：GitHub Pages 管理状态尚未获批
 
-- Status: open
-- Scope: deployment
-- Owner: `HITSZ-WTRobot-Packages/docs` repository administrators
-- Evidence: The repository remote identifies `HITSZ-WTRobot-Packages/docs`, but a read-only GitHub
-  API repository/Pages-state probe returned HTTP 404 from the current environment on 2026-08-10. No
-  deployment workflow or `CNAME` exists in the repository.
-- Impact: The artifact can be built and fully validated for the default project-site address, but a
-  production deployment cannot be enabled until an administrator confirms Pages source, target
-  domain, Actions policy, protected `github-pages` environment, reviewers, and `main` branch rules.
-  This does not change the static snapshot or base-path architecture.
-- Workaround: Keep deployment disabled, use
-  `SITE_URL=https://hitsz-wtrobot-packages.github.io BASE_PATH=/docs/` as the default release
-  contract, and follow `docs/deployment.md` in the later deployment task.
-- Close condition: An administrator records the selected domain/address pair, enables GitHub Actions
-  as the Pages source, configures branch/environment protections and required permissions, and the
-  first/repeat/rollback drills plus post-deployment checklist pass.
-- Last verified: 2026-08-10
+- 状态：open
+- 范围：deployment
+- 负责人：`HITSZ-WTRobot-Packages/docs` 仓库管理员
+- 证据：仓库远程地址指向
+  `HITSZ-WTRobot-Packages/docs`，但当前环境在 2026-08-10 对 GitHub 仓库/Pages 状态执行只读 API 探测时返回 HTTP
+  404。仓库中不存在部署工作流或 `CNAME`。
+- 影响：可以为默认项目站点地址构建并完整验证产物，但在管理员确认 Pages 来源、目标域名、Actions 策略、受保护的
+  `github-pages` 环境、审核者和 `main`
+  分支规则之前，无法启用生产部署。该问题不改变静态快照或 base-path 架构。
+- 规避措施：保持部署禁用，以 `SITE_URL=https://hitsz-wtrobot-packages.github.io BASE_PATH=/docs/`
+  作为默认发布契约，并在后续部署任务中遵循 `docs/deployment.md`。
+- 关闭条件：管理员记录选定的域名/地址组合，启用 GitHub
+  Actions 作为 Pages 来源，配置分支/环境保护及所需权限，并且首次、重复、回滚演练和部署后检查清单全部通过。
+- 最近验证：2026-08-10
 
-## UPSTREAM-001: ArmController has no package manifest, README, or license file
+## UPSTREAM-001：ArmController 缺少软件包清单、README 和许可证文件
 
-- Status: open
-- Scope: upstream-content
-- Owner: ArmController maintainers
-- Evidence: `bun run sync --module ArmController --dry-run` at upstream commit
-  `967f6e0c5a1e211ffc45b7af80efece89252f685` selects seven C/C++ files and reports
-  `PACKAGE_MANIFEST_MISSING`, `README_MISSING`, and `LICENSE_MISSING`.
-- Impact: The portal can generate a source API view for the module, but cannot discover a cpkg
-  package, render upstream usage guidance, or state a source license. This does not change the
-  snapshot architecture; the source and documentation repositories have the same organization owner,
-  and the portal must present the missing license as unknown rather than infer one.
-- Workaround: Retain the validated source-only snapshot, surface all three warnings, and generate a
-  module-level fallback instead of inventing package or README metadata.
-- Close condition: A later synchronized ArmController revision contains at least one `cpkg.toml`, a
-  README, and a license file, and the three manifest warnings disappear.
-- Last verified: 2026-08-10
+- 状态：open
+- 范围：upstream-content
+- 负责人：ArmController 维护者
+- 证据：在上游提交 `967f6e0c5a1e211ffc45b7af80efece89252f685` 执行
+  `bun run sync --module ArmController --dry-run` 时，选中七个 C/C++ 文件，并报告
+  `PACKAGE_MANIFEST_MISSING`、`README_MISSING` 和 `LICENSE_MISSING`。
+- 影响：门户可以为该模块生成源码 API 视图，但无法发现 cpkg 软件包、渲染上游使用说明或声明源码许可证。该问题不改变快照架构；源码仓库和文档仓库属于同一组织所有者，门户必须将缺失许可证显示为未知，而不能自行推断。
+- 规避措施：保留已验证的纯源码快照，显示全部三项警告，并生成模块级降级内容，不虚构软件包或 README 元数据。
+- 关闭条件：后续同步的 ArmController 修订版本至少包含一个
+  `cpkg.toml`、一个 README 和一个许可证文件，且三个清单警告全部消失。
+- 最近验证：2026-08-10

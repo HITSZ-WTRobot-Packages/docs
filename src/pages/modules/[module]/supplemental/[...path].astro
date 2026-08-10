@@ -40,13 +40,13 @@ const sidebar = buildPortalSidebar(data.catalog);
 
 <PortalPage
   title={documentation.title}
-  description={`Supplemental documentation from ${module.displayName}.`}
+  description={`来自 ${module.displayName} 的补充文档。`}
   sidebar={sidebar}
 >
   <PagefindMetadata module={module.id} resultTypes={["readme"]} />
   <Breadcrumbs
     items={[
-      { label: "Catalog", href: sitePath(data.config.basePath) },
+      { label: "目录", href: sitePath(data.config.basePath) },
       { label: module.displayName, href: sitePath(data.config.basePath, "modules", module.slug) },
       { label: documentation.title },
     ]}

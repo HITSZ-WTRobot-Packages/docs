@@ -17,36 +17,36 @@ const failedReferences = data.api.references.filter((reference) => reference.sta
 ---
 
 <PortalPage
-  title="Documentation quality"
-  description="Snapshot, manual, and API extraction quality for every package target."
+  title="文档质量"
+  description="各软件包目标的快照、手册和 API 提取质量。"
   sidebar={sidebar}
 >
   <PagefindMetadata resultTypes={["quality"]} />
   <Breadcrumbs
-    items={[{ label: "Catalog", href: sitePath(data.config.basePath) }, { label: "Quality" }]}
+    items={[{ label: "目录", href: sitePath(data.config.basePath) }, { label: "质量" }]}
   />
 
-  <dl class="wtr-stat-band" aria-label="Quality totals">
+  <dl class="wtr-stat-band" aria-label="质量统计">
     <div>
-      <dt>Snapshot warnings</dt><dd>
+      <dt>快照警告</dt><dd>
         {data.catalog.modules.reduce((sum, module) => sum + module.warnings.length, 0)}
       </dd>
     </div>
-    <div><dt>README fallbacks</dt><dd>{fallbackPages.length}</dd></div>
+    <div><dt>README 降级页</dt><dd>{fallbackPages.length}</dd></div>
     <div>
-      <dt>Sparse APIs</dt><dd>
+      <dt>稀疏 API</dt><dd>
         {data.api.references.filter((reference) => reference.status === "sparse").length}
       </dd>
     </div>
-    <div><dt>Failed APIs</dt><dd>{failedReferences.length}</dd></div>
+    <div><dt>失败 API</dt><dd>{failedReferences.length}</dd></div>
   </dl>
 
   <section aria-labelledby="snapshot-quality-heading">
     <div class="wtr-section-heading">
       <div>
         <p class="wtr-eyebrow">
-          <Icon name="lucide:git-branch" size="1rem" aria-hidden="true" /> Snapshots
-        </p><h2 id="snapshot-quality-heading">Module inputs</h2>
+          <Icon name="lucide:git-branch" size="1rem" aria-hidden="true" /> 快照
+        </p><h2 id="snapshot-quality-heading">模块输入</h2>
       </div>
     </div>
     <div class="wtr-quality-rows">
@@ -64,9 +64,9 @@ const failedReferences = data.api.references.filter((reference) => reference.sta
               </>
             </div>
             {module.warnings.length === 0 ? (
-              <StatusBadge tone="success" label="Ready" />
+              <StatusBadge tone="success" label="就绪" />
             ) : (
-              <StatusBadge tone="warning" label={`${module.warnings.length} warnings`} />
+              <StatusBadge tone="warning" label={`${module.warnings.length} 项警告`} />
             )}
           </article>
         ))
@@ -79,17 +79,17 @@ const failedReferences = data.api.references.filter((reference) => reference.sta
       <div>
         <p class="wtr-eyebrow">
           <Icon name="lucide:code-2" size="1rem" aria-hidden="true" /> Doxygen
-        </p><h2 id="api-quality-heading">API targets</h2>
+        </p><h2 id="api-quality-heading">API 目标</h2>
       </div>
     </div>
     <div class="table-scroll" tabindex="0" role="region" aria-labelledby="api-quality-heading">
       <table class="wtr-catalog-table">
-        <caption class="sr-only">API targets</caption>
+        <caption class="sr-only">API 目标</caption>
         <thead
           ><tr
-            ><th scope="col">Target</th><th scope="col">Module</th><th scope="col">Symbols</th><th
-              scope="col">Documented</th
-            ><th scope="col">State</th></tr
+            ><th scope="col">目标</th><th scope="col">模块</th><th scope="col">符号</th><th
+              scope="col">已记录</th
+            ><th scope="col">状态</th></tr
           ></thead
         ><tbody>
           {

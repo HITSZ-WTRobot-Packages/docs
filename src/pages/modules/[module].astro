@@ -12,7 +12,7 @@ import type { DocumentationPage } from "../../lib/markdown/documentation-schema"
 import { sitePath } from "../../lib/paths/site-config";
 import { buildPortalSidebar } from "../../lib/site/navigation";
 import { loadPortalData } from "../../lib/site/portal-data";
-import { apiStatusLabel, apiStatusTone } from "../../lib/site/view-models";
+import { apiStatusLabel, apiStatusTone, snapshotWarningMessage } from "../../lib/site/view-models";
 
 interface Props {
   module: CatalogModule;
@@ -50,26 +50,23 @@ const sidebar = buildPortalSidebar(data.catalog);
 
 <PortalPage
   title={module.displayName}
-  description={`${module.displayName} snapshot ${module.shortSha} and package documentation.`}
+  description={`${module.displayName} 快照 ${module.shortSha} 与软件包文档。`}
   sidebar={sidebar}
 >
   <PagefindMetadata module={module.id} resultTypes={["module", "readme"]} />
   <Breadcrumbs
-    items={[
-      { label: "Catalog", href: sitePath(data.config.basePath) },
-      { label: module.displayName },
-    ]}
+    items={[{ label: "目录", href: sitePath(data.config.basePath) }, { label: module.displayName }]}
   />
 
-  <section class="wtr-module-summary" aria-label="Module snapshot">
+  <section class="wtr-module-summary" aria-label="模块快照">
     <dl class="wtr-metadata-grid">
-      <div><dt>Revision</dt><dd><code>{module.shortSha}</code></dd></div>
-      <div><dt>Branch</dt><dd><code>{module.branch}</code></dd></div>
-      <div><dt>Packages</dt><dd>{packages.length}</dd></div>
+      <div><dt>修订版本</dt><dd><code>{module.shortSha}</code></dd></div>
+      <div><dt>分支</dt><dd><code>{module.branch}</code></dd></div>
+      <div><dt>软件包</dt><dd>{packages.length}</dd></div>
       <div>
-        <dt>Repository</dt><dd>
+        <dt>仓库</dt><dd>
           <a href={module.repository} target="_blank" rel="noreferrer"
-            >Upstream <Icon name="lucide:external-link" size="0.9rem" aria-hidden="true" /></a
+            >上游仓库 <Icon name="lucide:external-link" size="0.9rem" aria-hidden="true" /></a
           >
         </dd>
       </div>
@@ -77,9 +74,9 @@ const sidebar = buildPortalSidebar(data.catalog);
     <div class="wtr-heading-actions">
       {
         module.warnings.length === 0 ? (
-          <StatusBadge tone="success" label="Snapshot ready" />
+          <StatusBadge tone="success" label="快照就绪" />
         ) : (
-          <StatusBadge tone="warning" label={`${module.warnings.length} snapshot warnings`} />
+          <StatusBadge tone="warning" label={`${module.warnings.length} 项快照警告`} />
         )
       }
       {
@@ -88,7 +85,7 @@ const sidebar = buildPortalSidebar(data.catalog);
             class="wtr-command-link"
             href={sitePath(data.config.basePath, "modules", module.slug, "api")}
           >
-            <Icon name="lucide:code-2" size="1rem" aria-hidden="true" /> Module API
+            <Icon name="lucide:code-2" size="1rem" aria-hidden="true" /> 模块 API
           </a>
         )
       }
@@ -101,7 +98,7 @@ const sidebar = buildPortalSidebar(data.catalog);
         {module.warnings.map((warning) => (
           <li>
             <strong>{warning.code}</strong>
-            <span>{warning.message}</span>
+            <span>{snapshotWarningMessage(warning)}</span>
           </li>
         ))}
       </ul>
@@ -112,8 +109,8 @@ const sidebar = buildPortalSidebar(data.catalog);
     <div class="wtr-section-heading">
       <div>
         <p class="wtr-eyebrow">
-          <Icon name="lucide:package" size="1rem" aria-hidden="true" /> Packages
-        </p><h2 id="module-packages-heading">Package index</h2>
+          <Icon name="lucide:package" size="1rem" aria-hidden="true" /> 软件包
+        </p><h2 id="module-packages-heading">软件包索引</h2>
       </div>
     </div>
     {
@@ -126,13 +123,13 @@ const sidebar = buildPortalSidebar(data.catalog);
         >
           <table class="wtr-catalog-table">
             <>
-              <caption class="sr-only">Packages in {module.displayName}</caption>
+              <caption class="sr-only">{module.displayName} 中的软件包</caption>
               <thead>
                 <tr>
                   <>
-                    <th scope="col">Package</th>
-                    <th scope="col">Version</th>
-                    <th scope="col">Dependencies</th>
+                    <th scope="col">软件包</th>
+                    <th scope="col">版本</th>
+                    <th scope="col">依赖项</th>
                     <th scope="col">API</th>
                   </>
                 </tr>
@@ -160,7 +157,7 @@ const sidebar = buildPortalSidebar(data.catalog);
                             label={apiStatusLabel(reference.status)}
                           />
                         ) : (
-                          "Unavailable"
+                          "不可用"
                         )}
                       </td>
                     </tr>
@@ -171,7 +168,7 @@ const sidebar = buildPortalSidebar(data.catalog);
           </table>
         </div>
       ) : (
-        <p class="wtr-empty-state">This source-only module has no cpkg manifests.</p>
+        <p class="wtr-empty-state">此纯源码模块没有 cpkg 软件包清单。</p>
       )
     }
   </section>

@@ -13,13 +13,13 @@ const namespaces = [...new Set(data.api.references.flatMap(referenceNamespaces))
 ---
 
 <PortalPage
-  title="Search documentation"
-  description="Search package manuals and C/C++ symbols with catalog filters."
+  title="搜索文档"
+  description="使用目录筛选条件搜索软件包手册和 C/C++ 符号。"
   sidebar={sidebar}
   pagefind={false}
 >
   <Breadcrumbs
-    items={[{ label: "Catalog", href: sitePath(data.config.basePath) }, { label: "Search" }]}
+    items={[{ label: "目录", href: sitePath(data.config.basePath) }, { label: "搜索" }]}
   />
   <PortalSearch
     basePath={data.config.basePath}

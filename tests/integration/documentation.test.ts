@@ -156,6 +156,8 @@ describe("README documentation generation", () => {
     });
     expect(packagePage?.html).toContain("Fixture::Demo");
     expect(packagePage?.html).toContain("0.1.0+1234567890ab");
+    expect(packagePage?.html).toContain("同步快照中没有此软件包的 README。");
+    expect(packagePage?.html).toContain("依赖项");
     expect(serializeDocumentationBundle(JSON.parse(serializeDocumentationBundle(bundle)))).toBe(
       serializeDocumentationBundle(bundle),
     );

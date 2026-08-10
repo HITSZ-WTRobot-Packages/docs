@@ -12,16 +12,16 @@ const { page } = Astro.props;
 const isFallback = page.source.kind === "generated";
 ---
 
-<section class="wtr-documentation" aria-label="Manual">
+<section class="wtr-documentation" aria-label="手册">
   <div class="wtr-section-heading">
     <p class="wtr-eyebrow">
-      <Icon name="lucide:book-open" size="1rem" aria-hidden="true" /> Documentation
+      <Icon name="lucide:book-open" size="1rem" aria-hidden="true" /> 文档
     </p>
     <div class="wtr-heading-actions">
-      {isFallback && <StatusBadge tone="warning" label="Generated fallback" />}
+      {isFallback && <StatusBadge tone="warning" label="生成式降级内容" />}
       <a class="wtr-icon-link" href={page.source.upstreamUrl} target="_blank" rel="noreferrer">
         <Icon name="lucide:external-link" size="1rem" aria-hidden="true" />
-        Source
+        来源
       </a>
     </div>
   </div>

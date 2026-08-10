@@ -1,173 +1,142 @@
-# Deployment Plan
+# 部署计划
 
-This repository is release-ready but intentionally does not contain an enabled deployment workflow.
-The first production deployment is a separate, administrator-approved change. This plan selects
-GitHub Pages with a custom Actions workflow as the target and defines the checks that change must
-implement.
+本仓库已具备发布条件，但有意不包含已启用的部署工作流。首次生产部署是一项独立且需要管理员批准的变更。本计划选定使用自定义 Actions 工作流的 GitHub
+Pages 作为目标，并定义该变更必须执行的检查。
 
-## Address Contract
+## 地址契约
 
-The repository remote is `HITSZ-WTRobot-Packages/docs`. Until an organization-owned custom domain is
-approved, the deployment target is the GitHub Pages project-site address:
+仓库远程地址为 `HITSZ-WTRobot-Packages/docs`。在组织自有域名获批前，部署目标是 GitHub
+Pages 项目站点地址：
 
-| Target               | `SITE_URL`                                 | `BASE_PATH` |
-| -------------------- | ------------------------------------------ | ----------- |
-| Default project site | `https://hitsz-wtrobot-packages.github.io` | `/docs/`    |
-| Future custom domain | Approved HTTPS origin, without a path      | `/`         |
+| 目标           | `SITE_URL`                                 | `BASE_PATH` |
+| -------------- | ------------------------------------------ | ----------- |
+| 默认项目站点   | `https://hitsz-wtrobot-packages.github.io` | `/docs/`    |
+| 未来自定义域名 | 获批且不带路径的 HTTPS 源站                | `/`         |
 
-`SITE_URL` and `BASE_PATH` are build inputs, not runtime settings. Canonical URLs, sitemap entries,
-robots directives, navigation, Pagefind assets, Markdown resources, and graph links are compiled for
-that exact pair. Never deploy an artifact under a different origin or path from the values used to
-build and validate it.
+`SITE_URL` 和 `BASE_PATH` 是构建输入，不是运行时设置。canonical
+URL、sitemap 条目、robots 指令、导航、Pagefind 资源、Markdown 资源和依赖图链接都针对该确切组合编译。不得将产物部署到与构建和验证时所用值不同的源站或路径。
 
-For an Actions-published Pages site, configure the custom domain in repository Pages settings and at
-the DNS provider. GitHub does not require or use a `CNAME` file from the uploaded Actions artifact.
-Add the custom domain in Pages settings before changing DNS, verify the organization domain, avoid
-wildcard DNS, wait for certificate provisioning, and enable HTTPS enforcement before switching
-`SITE_URL` to the custom origin. A subdomain CNAME points to `HITSZ-WTRobot-Packages.github.io`,
-without `/docs`.
+对于由 Actions 发布的 Pages 站点，应在仓库 Pages 设置和 DNS 提供商处配置自定义域名。GitHub 不需要也不会使用上传的 Actions 产物中的
+`CNAME`
+文件。更改 DNS 前先在 Pages 设置中添加自定义域名，验证组织域名，避免通配符 DNS，等待证书签发并启用 HTTPS 强制跳转，然后再将
+`SITE_URL` 切换到自定义源站。子域名 CNAME 指向 `HITSZ-WTRobot-Packages.github.io`，不包含 `/docs`。
 
-References:
+参考资料：
 
-- [GitHub Pages custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
-- [GitHub Pages custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+- [GitHub Pages 自定义工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+- [GitHub Pages 自定义域名](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 - [GitHub Pages HTTPS](https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https)
-- [Astro deployment to GitHub Pages](https://docs.astro.build/en/guides/deploy/github/)
+- [Astro 部署到 GitHub Pages](https://docs.astro.build/en/guides/deploy/github/)
 
-## Administrative Preconditions
+## 管理前置条件
 
-An organization or repository administrator must complete and record these choices before adding the
-deployment workflow:
+添加部署工作流前，组织或仓库管理员必须完成并记录以下选择：
 
-- Set Pages **Build and deployment > Source** to GitHub Actions.
-- Confirm Actions is allowed to use the required official Actions and the repository-local setup
-  Action. Pin every external Action to a full commit SHA.
-- Protect `main` and require the existing `Validation` workflow before merge.
-- Protect the `github-pages` environment, restrict it to `main`, and require a reviewer for the
-  first deploy, domain changes, and rollback runs.
-- Keep synchronization manual. A deploy build consumes committed `sources/` and never calls
-  `bun run sync`.
-- Resolve `DEPLOYMENT-001` in `issues.md` with the selected domain, Pages setting, environment
-  reviewers, and branch rules.
+- 将 Pages 的 **Build and deployment > Source** 设置为 GitHub Actions。
+- 确认 Actions 可使用所需的官方 Actions 和仓库本地 setup
+  Action。所有外部 Action 必须固定到完整提交 SHA。
+- 保护 `main`，并要求合并前通过现有 `Validation` 工作流。
+- 保护 `github-pages` 环境，仅允许 `main` 使用，并为首次部署、域名变更和回滚运行配置审核者。
+- 同步保持手动触发。部署构建只消费已提交的 `sources/`，永不调用 `bun run sync`。
+- 在 `issues.md` 中使用选定域名、Pages 设置、环境审核者和分支规则解决 `DEPLOYMENT-001`。
 
-The build job needs only `contents: read`. A separate deployment job needs only `pages: write` and
-`id-token: write`, depends on the successful build job, and targets the protected `github-pages`
-environment. No checkout credentials, repository write token, upstream token, or deployment secret
-is required. Use one `pages` concurrency group with `cancel-in-progress: false` so an in-progress
-deployment is not interrupted by a newer run.
+构建作业只需要 `contents: read`。独立的部署作业只需要 `pages: write` 和
+`id-token: write`，依赖成功的构建作业，并以受保护的 `github-pages`
+环境为目标。不需要检出凭据、仓库写入令牌、上游令牌或部署密钥。使用单一 `pages` 并发组和
+`cancel-in-progress: false`，避免新运行中断正在进行的部署。
 
-## Future Workflow Contract
+## 未来工作流契约
 
-The later deployment task must keep build, retained release artifact, and deployment
-responsibilities separate:
+后续部署任务必须分离构建、保留发布产物和部署职责：
 
-1. Check out an explicit commit from `main` and install through
-   `.github/actions/setup-docs-toolchain` with frozen dependencies and Chromium.
-2. Run `bun run check` and `bun run generate` from the committed snapshot with no synchronization.
-3. Build once with the selected production `SITE_URL` and `BASE_PATH`.
-4. Run `bun run check:artifacts`, `bun run check:links`, and
-   `PLAYWRIGHT_REUSE_ARTIFACT=1 bun run test:e2e` against that same address configuration. The flag
-   makes Playwright preview the existing `dist/` instead of rebuilding it.
-5. Package the validated `dist/` without symbolic or hard links. Upload the Pages artifact and a
-   second retention artifact named with the source commit and address-contract hash. Store its
-   SHA-256, source commit, `SITE_URL`, and `BASE_PATH` beside, but outside, the deployed files.
-6. Deploy the already validated Pages artifact in a separate protected job. Do not rebuild in the
-   deployment job.
+1. 从 `main` 检出显式提交，并通过 `.github/actions/setup-docs-toolchain`
+   使用冻结依赖和 Chromium 完成安装。
+2. 基于已提交快照运行 `bun run check` 和 `bun run generate`，不得执行同步。
+3. 使用选定的生产 `SITE_URL` 和 `BASE_PATH` 只构建一次。
+4. 对同一地址配置运行 `bun run check:artifacts`、`bun run check:links` 和
+   `PLAYWRIGHT_REUSE_ARTIFACT=1 bun run test:e2e`。该变量使 Playwright 预览已有
+   `dist/`，而不是重新构建。
+5. 在不包含符号链接或硬链接的前提下打包已验证的
+   `dist/`。上传 Pages 产物，并上传第二份以源码提交和地址契约哈希命名的保留产物。将其 SHA-256、源码提交、`SITE_URL`
+   和 `BASE_PATH` 保存在部署文件旁边但不放入部署文件中。
+6. 在独立的受保护作业中部署已经验证的 Pages 产物。部署作业不得重新构建。
 
-The Pages artifact must satisfy GitHub's format and size contract: one gzip-compressed tar archive,
-less than 10 GB, with no symbolic or hard links. Keep the retained release artifact for at least 30
-days so the rollback drill can use the exact previous bytes. Action and Doxygen pins must follow the
-same checksum policy as validation CI.
+Pages 产物必须满足 GitHub 的格式和大小契约：一个小于 10
+GB 的 gzip 压缩 tar 归档，且不含符号链接或硬链接。保留发布产物至少 30 天，使回滚演练能使用上一版本的确切字节。Action 和 Doxygen 固定版本必须遵循与验证 CI 相同的校验和策略。
 
-The initial workflow should support manual dispatch with an explicit commit SHA. Automatic main
-deployment may be enabled only after the first, repeat, and rollback drills pass. When enabled, it
-must deploy only a `main` commit whose `Validation` workflow succeeded; a snapshot bot commit
-follows the same validation path and receives no deployment exception.
+初始工作流应支持使用显式提交 SHA 手动 dispatch。只有首次、重复和回滚演练通过后，才能启用 `main`
+自动部署。启用后，只能部署其 `Validation` 工作流成功的 `main`
+提交；快照机器人提交遵循相同验证路径，不享受部署例外。
 
-## Pre-Deployment Gate
+## 部署前门禁
 
-Run this matrix from a clean commit. Builds and generators must complete while upstream network
-access is unavailable; only Linkinator's local preview and Playwright's loopback server are used.
+从干净提交运行以下矩阵。构建和生成器必须在无法访问上游网络时完成；只有 Linkinator 的本地预览和 Playwright 的回环服务器可以使用网络。
 
-| Variant          | `SITE_URL`                                 | `BASE_PATH`           | Required checks                                           |
-| ---------------- | ------------------------------------------ | --------------------- | --------------------------------------------------------- |
-| Root             | `https://release-root.example.invalid`     | `/`                   | Build, artifact, links, desktop/mobile Playwright and axe |
-| Repository path  | `https://hitsz-wtrobot-packages.github.io` | `/docs/`              | Build, artifact, links                                    |
-| Deep custom path | `https://release-nested.example.invalid`   | `/products/wtr/docs/` | Build, artifact, links, desktop/mobile Playwright and axe |
+| 变体           | `SITE_URL`                                 | `BASE_PATH`           | 必需检查                                      |
+| -------------- | ------------------------------------------ | --------------------- | --------------------------------------------- |
+| 根路径         | `https://release-root.example.invalid`     | `/`                   | 构建、产物、链接、桌面/移动 Playwright 和 axe |
+| 仓库路径       | `https://hitsz-wtrobot-packages.github.io` | `/docs/`              | 构建、产物、链接                              |
+| 深层自定义路径 | `https://release-nested.example.invalid`   | `/products/wtr/docs/` | 构建、产物、链接、桌面/移动 Playwright 和 axe |
 
-Before the matrix, run `bun install --frozen-lockfile`, `bun run check`, and `bun run generate`.
-`bun run check:artifacts` must report every module, package, and API reference; validate README or
-fallback content, revision metadata, dependencies, stable package/API routes, Pagefind coverage,
-canonical/robots/sitemap/404 assets, and reject temporary paths, Git metadata, virtual environments,
-credentials, symbolic links, raw `sources/`, or unapproved upstream resources.
+运行矩阵前，执行 `bun install --frozen-lockfile`、`bun run check` 和
+`bun run generate`。`bun run check:artifacts`
+必须报告每个模块、软件包和 API 参考；验证 README 或降级内容、修订元数据、依赖项、稳定的软件包/API 路由和 Pagefind 覆盖范围；拒绝临时路径、Git 元数据、虚拟环境、凭据、符号链接、原始
+`sources/` 或未获批准的上游资源。
 
-Retain the final production-address `dist/` until the Pages artifact is uploaded. Record the commit,
-address pair, file count, byte size, Pagefind page count, SHA-256, and validation run URL in the
-release record.
+在上传 Pages 产物前保留最终生产地址对应的
+`dist/`。在发布记录中保存提交、地址组合、文件数、字节大小、Pagefind 页面数、SHA-256 和验证运行 URL。
 
-## Rollout Drills
+## 发布演练
 
-### First Deployment
+### 首次部署
 
-1. Require environment approval and deploy a validated artifact from the selected `main` commit.
-2. Run every post-deployment test below before removing the approval hold.
-3. Record the Pages deployment ID, workflow run, source commit, artifact digest, address pair, DNS
-   state, and tester.
+1. 要求环境批准，并部署选定 `main` 提交的已验证产物。
+2. 在解除批准保留前运行以下全部部署后测试。
+3. 记录 Pages 部署 ID、工作流运行、源码提交、产物摘要、地址组合、DNS 状态和测试人员。
 
-### Repeated Deployment
+### 重复部署
 
-Redeploy the same commit and address pair. The generated file set and retained artifact digest must
-match the first run. Canonical URLs and Pagefind results must remain unchanged, and the new
-deployment must not create a synchronization commit.
+重新部署相同提交和地址组合。生成文件集合及保留产物摘要必须与首次运行一致。canonical
+URL 和 Pagefind 结果必须保持不变，新的部署不得创建同步提交。
 
-### Snapshot Update
+### 快照更新
 
-Run manual synchronization with `commit: true`. Confirm the bot commit changes only `sources/`, the
-ordinary `Validation` workflow passes from the committed snapshot, and the deployment rebuild uses
-the bot commit without contacting upstream repositories. Verify affected package revisions and
-pinned source links changed while unaffected stable routes remain valid.
+使用 `commit: true` 运行手动同步。确认机器人提交只修改 `sources/`，常规 `Validation`
+工作流基于已提交快照通过，且部署重新构建使用机器人提交而不访问上游仓库。验证受影响的软件包修订版本和固定源码链接已更新，未受影响的稳定路由仍然有效。
 
-### Prior-Artifact Rollback
+### 旧产物回滚
 
-1. Select the last known-good retained artifact by deployment record, not by filename alone.
-2. Verify its SHA-256, source commit, `SITE_URL`, and `BASE_PATH`; reject a configuration mismatch.
-3. In a new protected manual workflow run, download that exact artifact, rerun artifact and link
-   checks from its matching source commit, wrap it as the current run's Pages artifact, and deploy.
-4. Run all post-deployment tests and record the rollback deployment ID.
+1. 根据部署记录而非仅凭文件名选择最后一个已知正常的保留产物。
+2. 验证其 SHA-256、源码提交、`SITE_URL` 和 `BASE_PATH`；配置不匹配时拒绝使用。
+3. 在新的受保护手动工作流运行中下载该确切产物，基于匹配的源码提交重新运行产物和链接检查，将其包装为当前运行的 Pages 产物并部署。
+4. 运行全部部署后测试并记录回滚部署 ID。
 
-If the retained artifact expired or fails verification, check out the last known-good commit,
-rebuild it offline with the recorded address pair, pass the full matrix, and deploy the newly
-verified bytes. Unpublishing is an emergency availability action, not a rollback; a successful new
-deployment is required to restore the site.
+如果保留产物已过期或验证失败，检出最后一个已知正常提交，使用记录的地址组合离线重建，通过完整矩阵后部署新验证的字节。取消发布是紧急可用性操作，不等同于回滚；必须成功执行新部署才能恢复站点。
 
-## Post-Deployment Tests
+## 部署后测试
 
-Run the checklist against the deployed HTTPS URL after first deploy, repeat deploy, rollback, domain
-change, and any snapshot update.
+在首次部署、重复部署、回滚、域名变更和任何快照更新后，对已部署的 HTTPS URL 运行以下检查清单。
 
-| Area           | Test                                                                                                                                                                     |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Transport      | HTTP redirects to HTTPS; certificate matches the host; no mixed-content request occurs.                                                                                  |
-| Metadata       | Home and deep pages have the selected canonical origin/base; `robots.txt` names the deployed sitemap; every sitemap URL returns success.                                 |
-| Error handling | An unknown route returns the custom 404; a direct package, API anchor, and supplemental-page refresh succeeds.                                                           |
-| Paths          | Root or configured nested navigation, Astro assets, favicon, Markdown resources, and all sidebar links retain exactly one base prefix.                                   |
-| Search         | Pagefind worker, WASM, metadata, fragments, and indexes return success; desktop/mobile symbol search restores query and filters after refresh.                           |
-| Packages       | Sample packages from every module show the expected revision, install command, README/fallback, dependencies, reverse dependencies, API status, and pinned source links. |
-| API            | Direct API URLs and symbol anchors resolve; Chinese and long C/C++ identifiers wrap without clipping.                                                                    |
-| Graph          | Direct, transitive, and reverse modes render nonblank on desktop/mobile and retain keyboard operation and URL state.                                                     |
-| Accessibility  | Keyboard focus order and names remain valid; axe reports no serious or critical violations; reduced-motion behavior is stable.                                           |
-| External links | A sampled upstream source/license link resolves to the exact pinned revision; failures remain external and do not break internal navigation.                             |
-| Operations     | Deployment history points to the expected commit and environment; no synchronization loop or unexpected bot commit occurred.                                             |
+| 范围     | 测试                                                                                                              |
+| -------- | ----------------------------------------------------------------------------------------------------------------- |
+| 传输     | HTTP 重定向到 HTTPS；证书与主机匹配；不发生混合内容请求。                                                         |
+| 元数据   | 首页和深层页面使用选定的 canonical 源站/base；`robots.txt` 指向已部署 sitemap；每个 sitemap URL 均成功响应。      |
+| 错误处理 | 未知路由返回自定义 404；直接刷新软件包、API 锚点和补充文档页面成功。                                              |
+| 路径     | 根路径或配置的嵌套导航、Astro 资源、favicon、Markdown 资源和所有侧边栏链接恰好保留一个 base 前缀。                |
+| 搜索     | Pagefind worker、WASM、元数据、片段和索引均成功响应；桌面/移动符号搜索在刷新后恢复搜索词和筛选条件。              |
+| 软件包   | 从每个模块抽样的软件包显示预期修订版本、安装命令、README/降级内容、依赖项、反向依赖、API 状态和固定版本源码链接。 |
+| API      | 直接 API URL 和符号锚点可访问；中文及超长 C/C++ 标识符换行且不被裁切。                                            |
+| 依赖图   | 直接、传递和反向模式在桌面/移动端均非空，保持键盘操作和 URL 状态。                                                |
+| 无障碍   | 键盘焦点顺序和名称有效；axe 不报告严重或关键问题；减少动态效果行为稳定。                                          |
+| 外部链接 | 抽样的上游源码/许可证链接指向确切的固定修订版本；外部失败不破坏内部导航。                                         |
+| 运维     | 部署历史指向预期提交和环境；没有同步循环或意外机器人提交。                                                        |
 
-At minimum, probe `/`, `/search/`, `/quality/`, one module, one package, one package API page, one
-API anchor, `/robots.txt`, `/sitemap-index.xml`, `/pagefind/pagefind-worker.js`, and an unknown
-route. Use the configured base prefix for every path. Save desktop/mobile screenshots for the
-catalog, search, package graph, and API page with the release record.
+至少探测
+`/`、`/search/`、`/quality/`、一个模块、一个软件包、一个软件包 API 页面、一个 API 锚点、`/robots.txt`、`/sitemap-index.xml`、`/pagefind/pagefind-worker.js`
+和一个未知路由。每个路径都使用配置的 base 前缀。将目录、搜索、软件包依赖图和 API 页面的桌面/移动截图与发布记录一同保存。
 
-## Stop Conditions
+## 停止条件
 
-Do not deploy when any quality job fails, the artifact or address metadata is missing, a retained
-artifact digest does not match, the target commit is outside protected `main`, Pages permissions are
-broader than specified, the custom domain is unverified, HTTPS is unavailable, or DNS differs from
-the approved record. Record the evidence in `issues.md`, leave the last good deployment active, and
-resolve the condition before retrying.
+如果任何质量作业失败、缺少产物或地址元数据、保留产物摘要不匹配、目标提交不在受保护的 `main`
+中、Pages 权限超出规定、自定义域名未验证、HTTPS 不可用或 DNS 与批准记录不同，则不得部署。将证据记录到
+`issues.md`，保持最后一个正常部署继续运行，并在重试前解决问题。

@@ -47,13 +47,13 @@ if (!moduleEntry) throw new Error(`Missing package module: ${packageEntry.module
 
 <PortalPage
   title={packageEntry.pkgname}
-  description={`${packageEntry.pkgname} ${packageEntry.revisionLabel} package manual and dependency reference.`}
+  description={`${packageEntry.pkgname} ${packageEntry.revisionLabel} 软件包手册与依赖参考。`}
   sidebar={sidebar}
 >
   <PagefindMetadata module={packageEntry.moduleId} resultTypes={["package", "readme"]} />
   <Breadcrumbs
     items={[
-      { label: "Catalog", href: sitePath(data.config.basePath) },
+      { label: "目录", href: sitePath(data.config.basePath) },
       {
         label: moduleEntry.displayName,
         href: sitePath(data.config.basePath, "modules", moduleEntry.slug),
@@ -67,7 +67,7 @@ if (!moduleEntry) throw new Error(`Missing package module: ${packageEntry.module
     <a
       class="wtr-primary-command"
       href={sitePath(data.config.basePath, "packages", packageEntry.slug, "api")}
-      ><Icon name="lucide:code-2" size="1rem" aria-hidden="true" /> API reference</a
+      ><Icon name="lucide:code-2" size="1rem" aria-hidden="true" /> API 参考</a
     >
   </div>
   <PackageMetadata

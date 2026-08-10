@@ -4,6 +4,8 @@
 
 - Formatting, lint, Astro check, strict TypeScript, and unit tests run through Bun.
 - Production builds cover `/`, `/docs/`, and `/products/wtr/docs/` with more than one `SITE_URL`.
+- Built root and deep pages declare `lang="zh-CN"`; repository-owned visible and accessibility copy
+  is Simplified Chinese, while synchronized upstream documentation keeps its original language.
 - Static link checks include routes, fragments, Markdown resources, images, canonical URLs, sitemap,
   robots, 404 behavior, and Pagefind assets.
 - Playwright covers desktop and mobile navigation, search, dependency graph keyboard/pointer use,
@@ -33,6 +35,47 @@
   type filters.
 - External dependencies are visually and semantically distinct and never link to a missing internal
   route.
+
+## Simplified Chinese Display Contract
+
+The root route is the only locale and uses `zh-CN`; do not add a `/zh-CN/` prefix or a language
+switcher. Starlight owns framework translations and document language metadata, while the project
+i18n collection supplies missing Pagefind, heading-anchor, and Expressive Code strings.
+
+Brand copy uses these exact names: `哈尔滨工业大学（深圳）南工问天` for the team in Chinese,
+`HITSZ WTRobot` for the team in English, and `HITSZ-WTRobot-Packages` for the project. Treat spacing,
+punctuation, capitalization, and hyphens as part of the public contract.
+
+```ts
+starlight({
+  locales: { root: { label: "简体中文", lang: "zh-CN" } },
+});
+```
+
+Repository-owned page copy, accessibility names, client status messages, and generated README
+fallbacks are Simplified Chinese. Package/module names, API symbols, diagnostic codes, paths,
+commands, query parameters, and serialized enum/filter values remain unchanged. Translate stable
+domain values only at the view boundary:
+
+```ts
+// Stable value used in generated data and filters.
+const status = "sparse";
+
+// Chinese label rendered by Astro or a client component.
+const label = apiStatusLabel(status); // "文档稀疏"
+```
+
+Synchronized Markdown and its resources remain byte-for-byte unchanged under `sources/` and render
+in their original language. Never translate upstream descriptions during synchronization or
+generation. Artifact validation must parse every emitted HTML document and require `lang="zh-CN"`,
+then require Pagefind's language map to contain only `zh-cn`. Playwright must assert the root and a
+deep route language tag, representative Chinese controls and status updates, stable URL/filter
+values after reload, and unchanged upstream content.
+
+Wrong: change `data-graph-mode="transitive"` to a Chinese value or rewrite an upstream README.
+
+Correct: retain `transitive` in data/URL state, render `传递`, and map snapshot/API warning codes to
+Chinese messages in the project-owned view model.
 
 ## Forbidden Patterns
 

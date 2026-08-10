@@ -24,3 +24,7 @@ fetching, and application-wide client state are out of scope.
 | [State](./state-management.md) | URL/local state and derived catalog data |
 | [Type Safety](./type-safety.md) | Strict TypeScript and validated content contracts |
 | [Quality](./quality-guidelines.md) | Rendering, search, browser, and accessibility checks |
+
+The portal uses Simplified Chinese at the root locale with the `zh-CN` language tag. Translate all
+repository-owned visible and accessibility copy while preserving routes, stable data values,
+technical identifiers, and synchronized upstream documentation.

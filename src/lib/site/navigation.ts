@@ -17,18 +17,18 @@ export function buildPortalSidebar(catalog: PackageCatalog): PortalSidebar {
   }
   return [
     {
-      label: "Browse",
+      label: "浏览",
       items: [
-        { label: "Package catalog", link: sitePath("/") },
-        { label: "Search", link: sitePath("/", "search") },
-        { label: "Quality", link: sitePath("/", "quality") },
+        { label: "软件包目录", link: sitePath("/") },
+        { label: "搜索", link: sitePath("/", "search") },
+        { label: "质量", link: sitePath("/", "quality") },
       ],
     },
     ...catalog.modules.map((module) => ({
       label: module.displayName,
       collapsed: true,
       items: [
-        { label: "Module overview", link: sitePath("/", "modules", module.slug) },
+        { label: "模块概览", link: sitePath("/", "modules", module.slug) },
         ...(packagesByModule.get(module.id) ?? [])
           .toSorted((left, right) => compareStrings(left.pkgname, right.pkgname))
           .map((entry) => ({

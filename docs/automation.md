@@ -1,38 +1,34 @@
-# Automation
+# 自动化
 
-The repository separates network-aware snapshot synchronization from ordinary offline validation.
-Neither workflow deploys the site or enables GitHub Pages.
+本仓库将允许访问网络的快照同步与常规离线验证分离。两个工作流都不会部署站点或启用 GitHub Pages。
 
-## Validation Workflow
+## 验证工作流
 
-`.github/workflows/validation.yml` runs on pushes to `main`, pull requests, and manual dispatch. It
-has `contents: read` permission, checks out without persisted credentials, and never calls a sync
-command or an upstream module repository.
+`.github/workflows/validation.yml` 在推送到 `main`、拉取请求和手动触发时运行。它只有
+`contents: read` 权限，检出时不保留凭据，并且从不调用同步命令或访问上游模块仓库。
 
-The offline quality job runs frozen installation, conventions, formatting, lint, Astro type checks,
-unit/integration tests, and all catalog/README/Doxygen generators. The site matrix builds `/`,
-`/docs/`, and `/products/wtr/docs/` against distinct example origins. Every variant verifies
-canonical URLs, robots, sitemap, Pagefind, required assets, duplicated base paths, recursive clean
-URLs, fragments, and CSS references. Root and product variants also run desktop/mobile Playwright
-and axe checks. `PLAYWRIGHT_REUSE_ARTIFACT=1` makes those browser jobs preview the already checked
-`dist/` instead of replacing it with a second build.
+离线质量作业执行冻结依赖安装、约定检查、格式检查、lint、Astro 类型检查、单元/集成测试，以及全部目录、README 和 Doxygen 生成器。站点矩阵分别使用不同的示例源站构建
+`/`、`/docs/` 和 `/products/wtr/docs/`。每个变体都会验证 canonical
+URL、robots、sitemap、Pagefind、必需资源、重复 base path、递归 clean
+URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/移动 Playwright 与 axe 检查。`PLAYWRIGHT_REUSE_ARTIFACT=1`
+使这些浏览器作业预览已经检查过的 `dist/`，而不是用第二次构建替换它。
 
-## Snapshot Synchronization
+## 快照同步
 
-`.github/workflows/sync-snapshots.yml` has no push or scheduled trigger. Runs are serialized and may
-be started by `workflow_dispatch` or a `repository_dispatch` event of type `sync-snapshots`.
+`.github/workflows/sync-snapshots.yml` 没有 push 或定时触发器。运行会被串行化，只能通过
+`workflow_dispatch` 或类型为 `sync-snapshots` 的 `repository_dispatch` 事件启动。
 
-Manual inputs are:
+手动输入如下：
 
-| Input     | Values                      | Default   | Contract                                        |
-| --------- | --------------------------- | --------- | ----------------------------------------------- |
-| `mode`    | `changed`, `all`, `module`  | `changed` | Maps to the local sync CLI mode                 |
-| `module`  | One allowlisted module name | empty     | Required only for `module` mode                 |
-| `dry_run` | boolean                     | `true`    | Validates without writing `sources/`            |
-| `commit`  | boolean                     | `false`   | Commits validated changes to the default branch |
+| 输入      | 可选值                     | 默认值    | 约定                           |
+| --------- | -------------------------- | --------- | ------------------------------ |
+| `mode`    | `changed`、`all`、`module` | `changed` | 映射到本地同步 CLI 模式        |
+| `module`  | 允许列表中的一个模块名     | 空        | 仅在 `module` 模式下必填       |
+| `dry_run` | 布尔值                     | `true`    | 验证但不写入 `sources/`        |
+| `commit`  | 布尔值                     | `false`   | 将验证通过的变更提交到默认分支 |
 
-`dry_run: true` with `commit: true`, a module outside the allowlist, an unknown mode, or conflicting
-module input fails before synchronization. A default repository dispatch is a changed-only dry run:
+`dry_run: true` 与 `commit: true`
+同时出现、模块不在允许列表中、模式未知或模块输入冲突时，必须在同步前失败。默认仓库 dispatch 是仅检查变更的试运行：
 
 ```json
 {
@@ -41,7 +37,7 @@ module input fails before synchronization. A default repository dispatch is a ch
 }
 ```
 
-An explicit module update that is allowed to commit uses:
+允许提交的显式单模块更新如下：
 
 ```json
 {
@@ -55,26 +51,22 @@ An explicit module update that is allowed to commit uses:
 }
 ```
 
-The event adapter invokes `bun run sync` with an argument array; workflow expressions are not
-interpolated into that command. Change detection includes tracked edits, deletions, and new
-untracked snapshot files. An unchanged run reports a no-op and creates no commit. A changed run must
-pass the complete offline gate, nested site build, artifact/link checks, and Playwright/axe before
-the optional commit. The commit stages only `sources/`, uses the GitHub Actions bot identity, and
-includes `[snapshot-sync]` in its message. The workflow has no push trigger, so its bot commit
-cannot recursively start another synchronization run.
+事件适配器使用参数数组调用
+`bun run sync`，不会把工作流表达式插值到命令中。变更检测包括已跟踪修改、删除和新的未跟踪快照文件。无变化的运行报告 no-op 且不创建提交。有变化的运行必须通过完整离线门禁、嵌套站点构建、产物/链接检查以及 Playwright/axe，之后才允许执行可选提交。该提交只暂存
+`sources/`，使用 GitHub Actions 机器人身份，并在提交消息中包含
+`[snapshot-sync]`。工作流没有 push 触发器，因此机器人提交不会递归启动另一次同步。
 
-The synchronization workflow is the only workflow with `contents: write`. Repository and branch
-rules may still block its push; that failure leaves the remote branch unchanged and is reported by
-the commit step. A non-committing run keeps its validated diff only for the lifetime of the runner.
+同步工作流是唯一拥有 `contents: write`
+的工作流。仓库或分支规则仍可能阻止其推送；该失败会保留远程分支不变，并由提交步骤报告。不提交的运行只在 runner 生命周期内保留其已验证差异。
 
-## Pinned Tooling
+## 固定工具链
 
-External Actions are referenced by full commit SHA. The local setup Action installs Bun 1.3.14 from
-the package contract, uses `bun install --frozen-lockfile`, and downloads the official Doxygen
-1.16.1 Linux asset. Its SHA-256 is verified before extraction and its version must equal
-`.doxygen-version`. Chromium is installed only for jobs that run Playwright.
+外部 Actions 均引用完整提交 SHA。本地 setup Action 根据软件包契约安装 Bun 1.3.14，执行
+`bun install --frozen-lockfile`，并下载官方 Doxygen 1.16.1
+Linux 产物。提取前验证其 SHA-256，版本必须等于
+`.doxygen-version`。只有运行 Playwright 的作业会安装 Chromium。
 
-When changing workflow structure, run:
+修改工作流结构时运行：
 
 ```text
 bun test tests/unit/action-request.test.ts tests/unit/workflows.test.ts
@@ -82,6 +74,5 @@ bun run typecheck
 bun run check
 ```
 
-Run actionlint when available. Update the Action SHA comments, release-asset checksum, tests, this
-document, and the applicable `AGENTS.md` in the same change when a pinned workflow dependency or
-automation contract changes.
+在可用时运行 actionlint。修改固定工作流依赖或自动化契约时，必须在同一变更中更新 Action
+SHA 注释、发布产物校验和、测试、本文档和适用的 `AGENTS.md`。

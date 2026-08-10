@@ -63,6 +63,12 @@ future `trellis update`.
 
 ## Data And Network Boundaries
 
+- Repository-owned documentation and user-facing interface copy use Simplified Chinese with the
+  `zh-CN` language tag. Preserve synchronized upstream documentation in its original language, and
+  keep technical identifiers, commands, paths, URLs, and stable data values unchanged.
+- Use the exact brand names `哈尔滨工业大学（深圳）南工问天` in Chinese, `HITSZ WTRobot` in English,
+  and `HITSZ-WTRobot-Packages` for the project. Do not abbreviate or substitute these names in
+  repository-owned documentation or interface copy.
 - `sources/` is a committed, deterministic snapshot. Ordinary build, generation, test, and preview
   commands must work without contacting upstream module repositories.
 - Preserve synchronized files byte-for-byte so their manifest SHA-256 values remain valid. The

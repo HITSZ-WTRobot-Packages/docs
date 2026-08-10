@@ -15,7 +15,7 @@ const { basePath, dependencies, reverseDependencies } = Astro.props;
 
 <div class="wtr-dependency-columns">
   <section aria-labelledby="direct-dependencies">
-    <h2 id="direct-dependencies">Direct dependencies</h2>
+    <h2 id="direct-dependencies">直接依赖</h2>
     {
       dependencies.length > 0 ? (
         <ul class="wtr-link-list">
@@ -37,18 +37,18 @@ const { basePath, dependencies, reverseDependencies } = Astro.props;
                   dependency.kind === "external" && "is-external",
                 ]}
               >
-                {dependency.kind}
+                {dependency.kind === "internal" ? "内部" : "外部"}
               </span>
             </li>
           ))}
         </ul>
       ) : (
-        <p class="wtr-empty-state">No declared dependencies.</p>
+        <p class="wtr-empty-state">没有声明依赖项。</p>
       )
     }
   </section>
   <section aria-labelledby="reverse-dependencies">
-    <h2 id="reverse-dependencies">Used by</h2>
+    <h2 id="reverse-dependencies">被以下软件包依赖</h2>
     {
       reverseDependencies.length > 0 ? (
         <ul class="wtr-link-list">
@@ -60,7 +60,7 @@ const { basePath, dependencies, reverseDependencies } = Astro.props;
           ))}
         </ul>
       ) : (
-        <p class="wtr-empty-state">No packages depend on this package.</p>
+        <p class="wtr-empty-state">没有软件包依赖此软件包。</p>
       )
     }
   </section>

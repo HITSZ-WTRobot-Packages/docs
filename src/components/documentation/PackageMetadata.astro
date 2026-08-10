@@ -12,22 +12,22 @@ const { packageEntry, moduleHref } = Astro.props;
 const installCommand = `cpkg add ${packageEntry.pkgname}`;
 ---
 
-<section class="wtr-package-summary" aria-label="Package metadata">
+<section class="wtr-package-summary" aria-label="软件包元数据">
   <dl class="wtr-metadata-grid">
     <div>
-      <dt>Package</dt>
+      <dt>软件包</dt>
       <dd><code>{packageEntry.pkgname}</code></dd>
     </div>
     <div>
-      <dt>Revision</dt>
+      <dt>修订版本</dt>
       <dd><code>{packageEntry.revisionLabel}</code></dd>
     </div>
     <div>
-      <dt>Module</dt>
+      <dt>模块</dt>
       <dd><a href={moduleHref}>{packageEntry.moduleId}</a></dd>
     </div>
     <div>
-      <dt>Manifest</dt>
+      <dt>清单</dt>
       <dd><code>{packageEntry.manifestPath}</code></dd>
     </div>
   </dl>
@@ -37,8 +37,8 @@ const installCommand = `cpkg add ${packageEntry.pkgname}`;
     <button
       type="button"
       class="wtr-icon-button"
-      aria-label="Copy install command"
-      title="Copy install command"
+      aria-label="复制安装命令"
+      title="复制安装命令"
       data-copy-value={installCommand}
     >
       <Icon name="lucide:clipboard" size="1rem" aria-hidden="true" />
@@ -47,7 +47,7 @@ const installCommand = `cpkg add ${packageEntry.pkgname}`;
   </div>
   <a class="wtr-command-link" href={packageEntry.sourceUrl} target="_blank" rel="noreferrer">
     <Icon name="lucide:external-link" size="1rem" aria-hidden="true" />
-    Pinned source
+    固定版本源码
   </a>
 </section>
 
@@ -61,10 +61,10 @@ const installCommand = `cpkg add ${packageEntry.pkgname}`;
       if (!value || !status) return;
       try {
         await navigator.clipboard.writeText(value);
-        status.textContent = "Install command copied.";
-        button.title = "Copied";
+        status.textContent = "已复制安装命令。";
+        button.title = "已复制";
       } catch {
-        status.textContent = "Copy failed. Select the command text instead.";
+        status.textContent = "复制失败，请改为选择命令文本。";
       }
     });
   }

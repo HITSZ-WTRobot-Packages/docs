@@ -27,29 +27,29 @@ const dependencyCount = data.catalog.packages.reduce(
 ---
 
 <PortalPage
-  title="Package catalog"
-  description="Revision-pinned STM32 package manuals, dependency data, and C/C++ API reference."
+  title="软件包目录"
+  description="固定修订版本的 STM32 软件包手册、依赖数据和 C/C++ API 参考。"
   sidebar={sidebar}
 >
   <PagefindMetadata resultTypes={["catalog"]} />
-  <Breadcrumbs items={[{ label: "Catalog" }]} />
+  <Breadcrumbs items={[{ label: "目录" }]} />
 
-  <section class="wtr-catalog-intro" aria-label="Catalog summary">
+  <section class="wtr-catalog-intro" aria-label="目录摘要">
     <p>
-      Reproducible documentation for reusable STM32 packages maintained by HITSZ Wentian Robotics
-      Team.
+      HITSZ-WTRobot-Packages 收录哈尔滨工业大学（深圳）南工问天（HITSZ WTRobot）维护的可复用 STM32
+      软件包可复现文档。
     </p>
     <a class="wtr-primary-command" href={sitePath(data.config.basePath, "search")}>
-      <Icon name="lucide:search" size="1rem" aria-hidden="true" /> Search documentation
+      <Icon name="lucide:search" size="1rem" aria-hidden="true" /> 搜索文档
     </a>
   </section>
 
-  <dl class="wtr-stat-band" aria-label="Catalog totals">
-    <div><dt>Modules</dt><dd>{data.catalog.modules.length}</dd></div>
-    <div><dt>Packages</dt><dd>{data.catalog.packages.length}</dd></div>
-    <div><dt>Dependencies</dt><dd>{dependencyCount}</dd></div>
+  <dl class="wtr-stat-band" aria-label="目录统计">
+    <div><dt>模块</dt><dd>{data.catalog.modules.length}</dd></div>
+    <div><dt>软件包</dt><dd>{data.catalog.packages.length}</dd></div>
+    <div><dt>依赖项</dt><dd>{dependencyCount}</dd></div>
     <div>
-      <dt>API symbols</dt><dd>
+      <dt>API 符号</dt><dd>
         {data.api.references.reduce((sum, item) => sum + item.symbolCount, 0)}
       </dd>
     </div>
@@ -59,9 +59,9 @@ const dependencyCount = data.catalog.packages.reduce(
     <div class="wtr-section-heading">
       <div>
         <p class="wtr-eyebrow">
-          <Icon name="lucide:boxes" size="1rem" aria-hidden="true" /> Sources
+          <Icon name="lucide:boxes" size="1rem" aria-hidden="true" /> 来源
         </p>
-        <h2 id="modules-heading">Modules</h2>
+        <h2 id="modules-heading">模块</h2>
       </div>
     </div>
     <div class="wtr-module-list">
@@ -79,15 +79,15 @@ const dependencyCount = data.catalog.packages.reduce(
             <dl>
               <div>
                 <>
-                  <dt>Packages</dt>
+                  <dt>软件包</dt>
                   <dd>{packageCountByModule.get(module.id) ?? 0}</dd>
                 </>
               </div>
               <div>
                 <>
-                  <dt>Snapshot</dt>
+                  <dt>快照</dt>
                   <dd>
-                    {module.warnings.length === 0 ? "Ready" : `${module.warnings.length} warnings`}
+                    {module.warnings.length === 0 ? "就绪" : `${module.warnings.length} 项警告`}
                   </dd>
                 </>
               </div>
@@ -102,18 +102,18 @@ const dependencyCount = data.catalog.packages.reduce(
     <div class="wtr-section-heading">
       <div>
         <p class="wtr-eyebrow">
-          <Icon name="lucide:package" size="1rem" aria-hidden="true" /> Catalog
+          <Icon name="lucide:package" size="1rem" aria-hidden="true" /> 目录
         </p>
-        <h2 id="packages-heading">Packages</h2>
+        <h2 id="packages-heading">软件包</h2>
       </div>
     </div>
     <div class="table-scroll" tabindex="0" role="region" aria-labelledby="packages-heading">
       <table class="wtr-catalog-table">
-        <caption class="sr-only">Packages</caption>
+        <caption class="sr-only">软件包</caption>
         <thead
           ><tr
-            ><th scope="col">Package</th><th scope="col">Module</th><th scope="col">Revision</th><th
-              scope="col">Dependencies</th
+            ><th scope="col">软件包</th><th scope="col">模块</th><th scope="col">修订版本</th><th
+              scope="col">依赖项</th
             ><th scope="col">API</th></tr
           ></thead
         >
@@ -140,7 +140,7 @@ const dependencyCount = data.catalog.packages.reduce(
                         label={apiStatusLabel(api.status)}
                       />
                     ) : (
-                      "Unavailable"
+                      "不可用"
                     )}
                   </td>
                 </tr>

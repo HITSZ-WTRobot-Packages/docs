@@ -51,6 +51,16 @@ function canonicalUrl(tree: Root): string | undefined {
   return canonical;
 }
 
+function documentLanguage(tree: Root): string | undefined {
+  let language: string | undefined;
+  visit(tree, "element", (node: Element) => {
+    if (node.tagName === "html" && typeof node.properties.lang === "string") {
+      language = node.properties.lang;
+    }
+  });
+  return language;
+}
+
 async function requireFile(relativePath: string): Promise<void> {
   await access(path.join(outputRoot, relativePath));
 }
@@ -127,6 +137,9 @@ async function main(): Promise<void> {
     const contents = await readFile(path.join(outputRoot, relativePath), "utf8");
     const tree = unified().use(rehypeParse).parse(contents) as Root;
     parsedHtml.set(relativePath, { contents, tree, text: documentText(tree) });
+    if (documentLanguage(tree) !== "zh-CN") {
+      throw new Error(`Document language is not zh-CN: ${relativePath}`);
+    }
     const canonical = canonicalUrl(tree);
     if (!canonical) throw new Error(`Missing canonical URL: ${relativePath}`);
     const url = new URL(canonical);
@@ -137,6 +150,12 @@ async function main(): Promise<void> {
       throw new Error(`Duplicated BASE_PATH found in ${relativePath}: ${duplicateBase}`);
     }
   }
+
+  const catalogPage = parsedHtml.get("index.html");
+  if (!catalogPage) throw new Error("Missing catalog route: index.html");
+  requireText(catalogPage, "HITSZ-WTRobot-Packages", "index.html");
+  requireText(catalogPage, "哈尔滨工业大学（深圳）南工问天", "index.html");
+  requireText(catalogPage, "HITSZ WTRobot", "index.html");
 
   for (const documentation of data.documentation.pages) {
     const relativePath = pageArtifactPath(documentation.route, config.basePath);
@@ -185,7 +204,7 @@ async function main(): Promise<void> {
       requireText(packagePage, expected, packagePath);
     }
     if (documentation.source.kind === "generated") {
-      requireText(packagePage, "Generated fallback", packagePath);
+      requireText(packagePage, "生成式降级内容", packagePath);
     }
 
     const apiPath = `packages/${packageEntry.slug}/api/index.html`;
@@ -232,10 +251,14 @@ async function main(): Promise<void> {
   const pagefindEntry = PagefindEntrySchema.parse(
     JSON.parse(await readFile(path.join(outputRoot, "pagefind/pagefind-entry.json"), "utf8")),
   );
-  const indexedPages = Object.values(pagefindEntry.languages).reduce(
-    (total, language) => total + language.page_count,
-    0,
-  );
+  const pagefindLanguages = Object.keys(pagefindEntry.languages);
+  const chineseIndex = pagefindEntry.languages["zh-cn"];
+  if (!chineseIndex || pagefindLanguages.some((language) => language !== "zh-cn")) {
+    throw new Error(
+      `Pagefind languages must contain only zh-cn; received: ${pagefindLanguages.join(", ") || "none"}.`,
+    );
+  }
+  const indexedPages = chineseIndex.page_count;
   const minimumIndexedPages = data.catalog.packages.length * 2 + data.catalog.modules.length;
   if (indexedPages < minimumIndexedPages) {
     throw new Error(

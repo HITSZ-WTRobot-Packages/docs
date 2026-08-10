@@ -50,23 +50,18 @@ const serializedModel = JSON.stringify(graphModel).replaceAll("<", "\\u003c");
   <details>
     <summary>
       <Icon name="lucide:network" size="1.1rem" aria-hidden="true" />
-      Dependency explorer
+      依赖关系浏览器
       <Icon class="wtr-summary-chevron" name="lucide:chevron-down" size="1rem" aria-hidden="true" />
     </summary>
-    <div class="wtr-graph-toolbar" aria-label="Dependency graph mode">
-      <button type="button" aria-pressed="true" data-graph-mode="direct">Direct</button>
-      <button type="button" aria-pressed="false" data-graph-mode="transitive">Transitive</button>
-      <button type="button" aria-pressed="false" data-graph-mode="reverse">Reverse</button>
+    <div class="wtr-graph-toolbar" aria-label="依赖图模式">
+      <button type="button" aria-pressed="true" data-graph-mode="direct">直接</button>
+      <button type="button" aria-pressed="false" data-graph-mode="transitive">传递</button>
+      <button type="button" aria-pressed="false" data-graph-mode="reverse">反向</button>
     </div>
-    <p class="wtr-graph-status" aria-live="polite" data-graph-status>Graph not loaded.</p>
-    <div
-      class="wtr-graph-canvas"
-      role="img"
-      aria-label="Interactive package dependency graph"
-      data-graph-canvas
-    >
+    <p class="wtr-graph-status" aria-live="polite" data-graph-status>依赖图尚未加载。</p>
+    <div class="wtr-graph-canvas" role="img" aria-label="交互式软件包依赖图" data-graph-canvas>
     </div>
-    <div class="wtr-graph-node-list" aria-label="Visible graph nodes" data-graph-node-list></div>
+    <div class="wtr-graph-node-list" aria-label="可见的依赖图节点" data-graph-node-list></div>
   </details>
   <script is:inline type="application/json" data-graph-model set:html={serializedModel} />
 </dependency-graph>
@@ -83,6 +78,17 @@ const serializedModel = JSON.stringify(graphModel).replaceAll("<", "\\u003c");
   type GraphEdge = { source: string; target: string };
   type GraphModel = { root: string; nodes: GraphNode[]; edges: GraphEdge[] };
   type GraphMode = "direct" | "transitive" | "reverse";
+
+  function graphModeLabel(mode: GraphMode): string {
+    switch (mode) {
+      case "direct":
+        return "直接";
+      case "transitive":
+        return "传递";
+      case "reverse":
+        return "反向";
+    }
+  }
 
   function isRecord(value: unknown): value is Record<string, unknown> {
     return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -217,15 +223,15 @@ const serializedModel = JSON.stringify(graphModel).replaceAll("<", "\\u003c");
       try {
         parsed = JSON.parse(modelElement.textContent || "");
       } catch {
-        status.textContent = "Dependency data could not be read.";
+        status.textContent = "无法读取依赖数据。";
         return;
       }
       if (!isGraphModel(parsed)) {
-        status.textContent = "Dependency data is invalid.";
+        status.textContent = "依赖数据无效。";
         return;
       }
       this.model = parsed;
-      status.textContent = "Loading dependency graph.";
+      status.textContent = "正在加载依赖图。";
       try {
         const { default: cytoscape } = await import("cytoscape");
         const container = this.querySelector<HTMLElement>("[data-graph-canvas]");
@@ -283,12 +289,11 @@ const serializedModel = JSON.stringify(graphModel).replaceAll("<", "\\u003c");
         this.graph.on("tap", "node", (event) => {
           const id = event.target.id();
           const node = this.model?.nodes.find((entry) => entry.id === id);
-          if (node) this.updateStatus(`Selected ${node.label}.`);
+          if (node) this.updateStatus(`已选择 ${node.label}。`);
         });
         this.render();
       } catch {
-        status.textContent =
-          "Dependency graph failed to load. The dependency lists remain available.";
+        status.textContent = "依赖图加载失败，依赖项列表仍可使用。";
       }
     }
 
@@ -320,7 +325,7 @@ const serializedModel = JSON.stringify(graphModel).replaceAll("<", "\\u003c");
         })
         .run();
       this.renderNodeList(nodes);
-      this.updateStatus(`${nodes.length} packages shown in ${this.mode} mode.`);
+      this.updateStatus(`${graphModeLabel(this.mode)}模式下显示 ${nodes.length} 个软件包。`);
     }
 
     private renderNodeList(nodes: GraphNode[]) {
@@ -335,17 +340,17 @@ const serializedModel = JSON.stringify(graphModel).replaceAll("<", "\\u003c");
         select.addEventListener("click", () => {
           this.graph?.nodes().unselect();
           this.graph?.getElementById(node.id).select();
-          this.updateStatus(`Selected ${node.label}.`);
+          this.updateStatus(`已选择 ${node.label}。`);
         });
         row.append(select);
         if (node.href) {
           const link = document.createElement("a");
           link.href = node.href;
-          link.textContent = "Open";
+          link.textContent = "打开";
           row.append(link);
         } else {
           const kind = document.createElement("span");
-          kind.textContent = "External";
+          kind.textContent = "外部";
           row.append(kind);
         }
         container.append(row);

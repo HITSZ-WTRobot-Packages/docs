@@ -35,7 +35,7 @@ if (!moduleEntry) throw new Error(`Missing package module: ${packageEntry.module
 
 <PortalPage
   title={`${packageEntry.pkgname} API`}
-  description={`C and C++ API symbols for ${packageEntry.pkgname} at ${packageEntry.revisionLabel}.`}
+  description={`${packageEntry.pkgname} 在 ${packageEntry.revisionLabel} 修订版本的 C/C++ API 符号。`}
   sidebar={sidebar}
 >
   <PagefindMetadata
@@ -45,7 +45,7 @@ if (!moduleEntry) throw new Error(`Missing package module: ${packageEntry.module
   />
   <Breadcrumbs
     items={[
-      { label: "Catalog", href: sitePath(data.config.basePath) },
+      { label: "目录", href: sitePath(data.config.basePath) },
       {
         label: moduleEntry.displayName,
         href: sitePath(data.config.basePath, "modules", moduleEntry.slug),

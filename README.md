@@ -1,38 +1,35 @@
-# HITSZ WTR Packages Documentation
+# HITSZ-WTRobot-Packages 文档
 
-Static, searchable documentation for the reusable STM32 packages maintained by
-`HITSZ-WTRobot-Packages`.
+`HITSZ-WTRobot-Packages` 为哈尔滨工业大学（深圳）南工问天（英文名
+`HITSZ WTRobot`）维护的可复用 STM32 软件包提供静态、可搜索的文档。
 
-The site is built from committed files under `sources/`. Normal builds, tests, and previews do not
-contact upstream repositories. Network access is isolated to an explicit synchronization command.
+站点从 `sources/`
+下已提交的文件构建。常规构建、测试和预览不会访问上游仓库；网络访问仅限显式执行的同步命令。
 
-## Project Contract
+## 项目约定
 
-- Bun is the only JavaScript runtime and package manager. Commit `bun.lock`; do not create npm,
-  pnpm, or Yarn lockfiles.
-- Astro and Starlight produce a static site. `SITE_URL` and `BASE_PATH` are the only deployment
-  address inputs.
-- When Python is necessary, use uv with its normal project `.venv` and global cache behavior.
-- Prefer maintained libraries to custom parsers, renderers, search indexes, or graph layout code.
-- Never edit upstream module repositories from this repository.
-- Record upstream or architectural problems in `issues.md`.
+- Bun 是唯一的 JavaScript 运行时和软件包管理器。提交 `bun.lock`，不要创建 npm、pnpm 或 Yarn 锁文件。
+- Astro 和 Starlight 生成静态站点。`SITE_URL` 和 `BASE_PATH` 是仅有的部署地址输入。
+- 需要 Python 时，使用 uv，并保持其默认项目 `.venv` 和全局缓存行为。
+- 优先使用维护良好的库，不要自行实现解析器、渲染器、搜索索引或图布局算法。
+- 不得从本仓库修改任何上游模块仓库。
+- 将上游内容或架构问题记录到 `issues.md`。
 
-## Repository Layout
+## 仓库结构
 
-| Path             | Purpose                                                                      |
-| ---------------- | ---------------------------------------------------------------------------- |
-| `src/`           | Astro pages, components, build-time loaders, and shared TypeScript contracts |
-| `scripts/`       | Bun CLIs for synchronization, generation, and validation                     |
-| `sources/`       | Tracked upstream snapshots and their manifest                                |
-| `tests/`         | Unit, integration, browser, accessibility, and fixture coverage              |
-| `public/`        | Static assets owned by this repository                                       |
-| `docs/`          | Operational and deployment documentation                                     |
-| `.trellis/spec/` | Executable conventions for contributors and agents                           |
+| 路径             | 用途                                                 |
+| ---------------- | ---------------------------------------------------- |
+| `src/`           | Astro 页面、组件、构建期加载器和共享 TypeScript 契约 |
+| `scripts/`       | 用于同步、生成和验证的 Bun CLI                       |
+| `sources/`       | 纳入版本控制的上游快照及其清单                       |
+| `tests/`         | 单元、集成、浏览器、无障碍和夹具测试                 |
+| `public/`        | 本仓库拥有的静态资源                                 |
+| `docs/`          | 运维和部署文档                                       |
+| `.trellis/spec/` | 面向贡献者和智能体的可执行约定                       |
 
-## Command Contract
+## 命令约定
 
-The repository provides these Bun commands. CI and contributor documentation call the same commands
-rather than duplicate their logic in workflow shell.
+仓库提供以下 Bun 命令。CI 和贡献者文档调用相同命令，不在工作流 Shell 中重复实现其逻辑。
 
 ```text
 bun install --frozen-lockfile
@@ -52,132 +49,100 @@ bun run check
 bun run build
 ```
 
-Use `SITE_URL=https://example.invalid` and `BASE_PATH=/` for a root build. `BASE_PATH` may also be a
-nested path such as `/products/wtr/docs/`; code must not contain a repository-specific deployment
-prefix.
+根路径构建使用 `SITE_URL=https://example.invalid` 和 `BASE_PATH=/`。`BASE_PATH` 也可以是
+`/products/wtr/docs/` 等嵌套路径；代码中不得包含仓库专用的部署前缀。
 
-## Source Synchronization
+## 源码同步
 
-`bun run sync` is the repository's only network-aware command. It shallow-clones the six allowlisted
-module repositories into operating-system temporary storage, resolves each branch to a full commit
-SHA, and validates the complete candidate before changing tracked files.
+`bun run sync`
+是仓库中唯一允许访问网络的命令。它将六个允许同步的模块仓库浅克隆到操作系统临时目录，将各分支解析为完整提交 SHA，并在修改已跟踪文件前验证完整候选快照。
 
 ```text
-bun run sync                         # refresh every allowlisted module
-bun run sync --module MotorDrivers   # refresh one module
-bun run sync --changed               # skip modules at an intact, unchanged SHA
-bun run sync --changed --dry-run     # validate and report without writing sources/
+bun run sync                         # 刷新所有允许同步的模块
+bun run sync --module MotorDrivers   # 刷新单个模块
+bun run sync --changed               # 跳过 SHA 完整且未变化的模块
+bun run sync --changed --dry-run     # 只验证和报告，不写入 sources/
 ```
 
-The synchronized closure contains available `cpkg.toml`, README and transitively referenced
-Markdown/assets, C/C++ Doxygen inputs, and license files. Local Markdown references must remain
-inside their module; symlinks, missing targets, unsafe paths, and configured size-limit violations
-fail the operation. Missing package manifests, README content, or licenses are retained as explicit
-upstream-quality warnings so source-only modules still have reproducible snapshots.
+同步闭包包含可用的 `cpkg.toml`、README、README 传递引用的 Markdown/资源、C/C++
+Doxygen 输入和许可证文件。本地 Markdown 引用必须留在所属模块内；符号链接、缺失目标、不安全路径或超出配置大小限制都会导致操作失败。缺失软件包清单、README 或许可证会作为明确的上游质量警告保留，使纯源码模块仍具有可复现快照。
 
-Each successful snapshot is stored under `sources/modules/<module>/`. `sources/manifest.json` has
-`formatVersion: 1` and records the module repository, branch, full and abbreviated SHAs, aggregate
-byte count, warnings, license paths, and every selected file's path, kind, byte count, and SHA-256.
-All arrays use stable ordering and the manifest contains no timestamp, so an identical rerun leaves
-the worktree byte-for-byte unchanged. A dry-run or failed validation preserves the last complete
-snapshot.
+每次成功同步的快照保存在 `sources/modules/<module>/`。`sources/manifest.json` 使用
+`formatVersion: 1`，记录模块仓库、分支、完整及缩写 SHA、总字节数、警告、许可证路径，以及每个选中文件的路径、类型、字节数和 SHA-256。所有数组均稳定排序，清单不含时间戳，因此相同输入再次运行后工作树逐字节不变。试运行或验证失败时保留最后一份完整快照。
 
-## Package Catalog
+## 软件包目录
 
-`bun run generate:catalog` verifies every synchronized `cpkg.toml` and builds the shared catalog in
-memory without network access or tracked output. Package discovery uses the snapshot manifest, so a
-new upstream package is included automatically after synchronization.
+`bun run generate:catalog` 验证所有已同步的
+`cpkg.toml`，并在不访问网络、不产生已跟踪输出的情况下在内存中构建共享目录。软件包发现以快照清单为准，因此同步后会自动纳入新增的上游软件包。
 
-The catalog accepts current manifests with an omitted `format_version` or `format_version = 1` and
-strictly validates package identity, semantic version shape, dependency names, snapshot checksums,
-and paths. Internal dependencies resolve to stable package slugs and reverse-dependency entries; the
-exact approved external set is `FreeRTOS`, `stm32cubemx`, and `VelocityProfile::SCurve`. Duplicate
-names/slugs and any other unresolved dependency fail generation. Source links are pinned to the
-module's full snapshot SHA and displayed revisions use `<version>+<short-sha>`.
+目录接受省略 `format_version` 或使用 `format_version = 1`
+的当前清单，并严格验证软件包标识、语义版本格式、依赖名称、快照校验和与路径。内部依赖解析为稳定的软件包 slug 和反向依赖项；允许的外部依赖集合严格限定为
+`FreeRTOS`、`stm32cubemx` 和
+`VelocityProfile::SCurve`。名称或 slug 重复以及其他未解析依赖都会导致生成失败。源码链接固定到模块快照的完整 SHA，显示的修订版本采用
+`<version>+<short-sha>`。
 
-## README Documentation
+## README 文档
 
-`bun run generate:readme` validates and renders module, package, and README-linked supplemental
-Markdown entirely from the committed snapshot. Module and package README files become their primary
-pages; packages without README content receive deterministic cpkg-derived fallback content.
+`bun run generate:readme`
+完全基于已提交快照验证和渲染模块、软件包以及 README 引用的补充 Markdown。模块和软件包 README 构成其主页面；缺少 README 的软件包使用由 cpkg 数据确定性生成的降级内容。
 
-Relative Markdown pages, headings, images, and attachments are resolved through the snapshot file
-index. Page and resource routes use the shared base-path helper, while upstream source links are
-pinned to the full module SHA. GFM and raw HTML pass through the unified/remark/rehype pipeline and
-an explicit sanitization schema. Missing, checksum-mismatched, or escaping local references fail
-generation with source context rather than producing a broken page.
+相对 Markdown 页面、标题、图片和附件通过快照文件索引解析。页面与资源路由使用共享 base-path 辅助函数，上游源码链接固定到完整模块 SHA。GFM 和原始 HTML 通过 unified/remark/rehype 管线及显式净化 Schema 处理。引用缺失、校验和不匹配或越出模块根目录会携带源码上下文使生成失败，而不会产生损坏页面。
 
-## Doxygen API Reference
+## Doxygen API 参考
 
-`bun run generate:api` verifies every synchronized C/C++ file, checks the installed Doxygen version
-against `.doxygen-version`, and generates XML in operating-system temporary storage. Doxygen is
-invoked once per package with an explicit temporary Doxyfile; files nested below multiple package
-paths belong to the deepest package, while unclaimed module sources receive a module-level
-reference. Generation does not compile firmware, emit Doxygen HTML, or create a source browser.
+`bun run generate:api` 验证所有已同步的 C/C++ 文件，检查已安装 Doxygen 版本是否与 `.doxygen-version`
+一致，并在操作系统临时目录中生成 XML。每个软件包使用显式临时 Doxyfile 调用一次 Doxygen；同时位于多个软件包路径下的文件归属最深的软件包，未被软件包认领的模块源码生成模块级参考。生成过程不会编译固件、输出 Doxygen
+HTML 或创建源码浏览器。
 
-The XML pipeline validates syntax with `fast-xml-validator`, parses with `fast-xml-parser`, and
-normalizes files, namespaces, classes and structs, functions, enums, typedefs, variables, defines,
-descriptions, locations, pinned source links, and symbol relationships into a versioned TypeScript
-catalog. Missing inputs and symbols are explicit empty states, missing comments are a sparse quality
-state, and a target-level extraction error does not suppress other packages. A missing or mismatched
-Doxygen executable is a global reproducibility error and must be resolved before generation.
+XML 管线使用 `fast-xml-validator` 验证语法、`fast-xml-parser`
+解析，并将文件、命名空间、类和结构体、函数、枚举、类型定义、变量、宏定义、说明、位置、固定版本源码链接和符号关系规范化为带版本的 TypeScript 目录。缺失输入或符号会成为明确的空状态，缺失注释会成为文档稀疏状态，单个目标提取失败不会屏蔽其他软件包。Doxygen 可执行文件缺失或版本不匹配属于全局可复现性错误，必须先解决才能生成。
 
-## Documentation Portal
+## 文档门户
 
-The production build joins the package catalog, rendered Markdown, and normalized Doxygen data into
-static Astro routes. The main route families are:
+生产构建将软件包目录、渲染后的 Markdown 和规范化 Doxygen 数据组合为静态 Astro 路由。主要路由如下：
 
-| Route                   | Content                                                                 |
-| ----------------------- | ----------------------------------------------------------------------- |
-| `/`                     | Module summaries and the complete package catalog                       |
-| `/modules/<module>/`    | Module README, packages, and module-level API status                    |
-| `/packages/<slug>/`     | Revision, install command, source, manual, dependencies, and API status |
-| `/packages/<slug>/api/` | Namespaced Doxygen symbols and pinned source locations                  |
-| `/search/`              | Pagefind search with module, namespace, and result-type filters         |
-| `/quality/`             | Snapshot and API documentation quality states                           |
+| 路由                    | 内容                                               |
+| ----------------------- | -------------------------------------------------- |
+| `/`                     | 模块摘要和完整软件包目录                           |
+| `/modules/<module>/`    | 模块 README、软件包和模块级 API 状态               |
+| `/packages/<slug>/`     | 修订版本、安装命令、源码、手册、依赖项和 API 状态  |
+| `/packages/<slug>/api/` | 按命名空间组织的 Doxygen 符号和固定版本源码位置    |
+| `/search/`              | 带模块、命名空间和结果类型筛选条件的 Pagefind 搜索 |
+| `/quality/`             | 快照和 API 文档质量状态                            |
 
-Package pages expose a lazy Cytoscape dependency explorer in direct, transitive, and reverse modes.
-The selected non-default mode is shareable as `?graph=transitive` or `?graph=reverse`; static direct
-and reverse dependency lists remain available when JavaScript is disabled.
+软件包页面提供延迟加载的 Cytoscape 依赖关系浏览器，支持直接、传递和反向模式。非默认模式可通过
+`?graph=transitive` 或 `?graph=reverse` 分享；禁用 JavaScript 时仍可使用静态的直接和反向依赖列表。
 
-Pagefind is emitted by the production build, so verify search with `bun run build` followed by
-`bun run preview`. The development server deliberately shows a bounded unavailable state with a
-retry command because it has no generated Pagefind index. Search query and filter state is encoded
-in the URL. All portal links, Pagefind assets, and graph links are derived from `BASE_PATH` and are
-covered at root and nested deployment prefixes by Playwright.
+Pagefind 由生产构建生成，因此应依次执行 `bun run build` 和 `bun run preview`
+验证搜索。开发服务器没有生成后的 Pagefind 索引，会显示范围明确的不可用状态和重试命令。搜索词与筛选状态编码在 URL 中。所有门户链接、Pagefind 资源和依赖图链接均由
+`BASE_PATH` 派生，并通过 Playwright 覆盖根路径和嵌套部署前缀。
 
-After a release artifact has already passed `check:artifacts` and `check:links`, run
-`PLAYWRIGHT_REUSE_ARTIFACT=1 bun run test:e2e` to test those exact bytes. Without the flag,
-Playwright performs its normal standalone build before previewing.
+发布产物通过 `check:artifacts` 和 `check:links` 后，运行
+`PLAYWRIGHT_REUSE_ARTIFACT=1 bun run test:e2e`
+测试这些确切字节。省略该变量时，Playwright 会执行常规独立构建后再预览。
 
-## Automation
+## 自动化
 
-`.github/workflows/validation.yml` runs the offline quality gate and static-site matrix from the
-committed snapshot. `.github/workflows/sync-snapshots.yml` is the only network-aware workflow: it is
-explicitly triggered, validates its event payload, calls the same `bun run sync` CLI used locally,
-and commits only `sources/` when requested and changed. Neither workflow deploys the site.
+`.github/workflows/validation.yml`
+基于已提交快照运行离线质量门禁和静态站点矩阵。`.github/workflows/sync-snapshots.yml`
+是唯一允许访问网络的工作流：它必须显式触发、验证事件载荷、调用本地使用的同一个 `bun run sync`
+CLI，并且仅在请求提交且内容发生变化时提交 `sources/`。两个工作流都不会部署站点。
 
-See [docs/automation.md](docs/automation.md) for workflow inputs, repository-dispatch payloads,
-permissions, no-op behavior, pinned tooling, and failure semantics.
+工作流输入、`repository_dispatch` 载荷、权限、无变更行为、固定工具链和失败语义详见
+[docs/automation.md](docs/automation.md)。
 
-## Deployment Readiness
+## 部署准备状态
 
-`bun run check:artifacts` is the executable release-artifact contract. In addition to canonical,
-robots, sitemap, 404, and Pagefind assets, it verifies every module/package route against the
-catalog, README/fallback, revision, dependency, and API data. It rejects temporary paths, raw
-snapshots, Git metadata, virtual environments, credentials, symbolic links, and upstream resources
-outside the generated allowlist.
+`bun run check:artifacts`
+是可执行的发布产物契约。除 canonical、robots、sitemap、404 和 Pagefind 资源外，它还会依据目录、README/降级内容、修订版本、依赖项和 API 数据验证每个模块/软件包路由，并拒绝临时路径、原始快照、Git 元数据、虚拟环境、凭据、符号链接以及生成允许列表之外的上游资源。
 
-The selected future target is the GitHub Pages project site built with
-`SITE_URL=https://hitsz-wtrobot-packages.github.io` and `BASE_PATH=/docs/`. A custom domain requires
-a new root-base build; production artifacts are not portable between address pairs. No deployment
-workflow is enabled in this repository. See [docs/deployment.md](docs/deployment.md) for the exact
-permissions, environment protection, custom-domain procedure, retained-artifact rollback, rollout
-drills, stop conditions, and post-deployment checklist.
+未来选定的目标是使用 `SITE_URL=https://hitsz-wtrobot-packages.github.io` 和 `BASE_PATH=/docs/`
+构建的 GitHub
+Pages 项目站点。自定义域名需要新的根路径构建；不同地址组合之间不能复用生产产物。本仓库当前没有启用部署工作流。确切权限、环境保护、自定义域名流程、保留产物回滚、发布演练、停止条件和部署后检查清单见
+[docs/deployment.md](docs/deployment.md)。
 
-## Architecture Issues
+## 架构问题
 
-If snapshot size, licensing, cross-root references, unavailable Doxygen tooling, GitHub Actions
-permissions, library availability, or static base-path behavior would change the architecture,
-record the evidence in `issues.md` and pause that decision. Routine upstream documentation gaps do
-not block unrelated work.
+如果快照大小、许可证、跨根目录引用、Doxygen 工具可用性、GitHub
+Actions 权限、库可用性或静态 base-path 行为会改变架构，请在 `issues.md`
+中记录证据并暂停该决策。常规上游文档缺陷不会阻塞无关工作。
