@@ -355,3 +355,36 @@ Kept the dispatch requester callable-only and Validation manual-only, switched d
 ### Next Steps
 
 - None - task complete
+
+
+## Session 11: Retain publication-equivalent snapshots
+
+**Date**: 2026-08-11
+**Task**: Retain publication-equivalent snapshots
+**Branch**: `main`
+
+### Summary
+
+Changed synchronization to retain an existing published snapshot when normalized documentation, package, API, and quality output is equivalent; logged observed and published SHAs separately; added regression coverage and updated repository contracts.
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `c01e8d7` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete
