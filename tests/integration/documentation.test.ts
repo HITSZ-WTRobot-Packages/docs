@@ -5,6 +5,7 @@ import path from "node:path";
 
 import { afterEach, describe, expect, test } from "bun:test";
 
+import { serializeModulePackageCatalog } from "../../src/lib/catalog/catalog";
 import {
   loadDocumentationBundle,
   serializeDocumentationBundle,
@@ -31,6 +32,7 @@ const moduleReadme = `
 [Guide](./docs/guide.md#Details)
 ![Diagram](./assets/diagram.svg)
 [Manual](./attachments/manual.pdf)
+[Source](./include/demo.hpp#L1)
 [External](https://example.com/reference)
 
 <a href="javascript:alert(1)" onclick="alert(1)">Unsafe link</a>
@@ -41,6 +43,7 @@ async function createDocumentationFixture(readme = moduleReadme): Promise<string
   const repositoryRoot = await mkdtemp(path.join(tmpdir(), "wtr-docs-documentation-"));
   temporaryRoots.push(repositoryRoot);
   const moduleRoot = path.join(repositoryRoot, "sources/modules/FixtureModule");
+  const contentRoot = path.join(moduleRoot, "content");
   const files: FixtureFile[] = [
     { path: "README.md", contents: readme, kind: "readme" },
     {
@@ -48,12 +51,6 @@ async function createDocumentationFixture(readme = moduleReadme): Promise<string
       contents:
         '# Details\n\n[Back](../README.md#Overview)\n<img src="../assets/diagram.svg" onerror="alert(1)">\n',
       kind: "markdown",
-    },
-    {
-      path: "packages/Demo/cpkg.toml",
-      contents:
-        'format_version = 1\nname = "Demo"\npkgname = "Fixture::Demo"\nversion = "0.1.0"\ndependencies = ["FreeRTOS"]\n',
-      kind: "manifest",
     },
     {
       path: "assets/diagram.svg",
@@ -66,7 +63,7 @@ async function createDocumentationFixture(readme = moduleReadme): Promise<string
   const snapshotFiles = [];
   let totalBytes = 0;
   for (const file of files) {
-    const destination = path.join(moduleRoot, ...file.path.split("/"));
+    const destination = path.join(contentRoot, ...file.path.split("/"));
     await mkdir(path.dirname(destination), { recursive: true });
     await writeFile(destination, file.contents, "utf8");
     const bytes = Buffer.byteLength(file.contents);
@@ -79,8 +76,43 @@ async function createDocumentationFixture(readme = moduleReadme): Promise<string
     });
   }
 
-  const manifest: SourceManifest = {
+  const packageContents = serializeModulePackageCatalog({
     formatVersion: 1,
+    moduleId: "FixtureModule",
+    moduleSha: SHA,
+    packages: [
+      {
+        name: "Demo",
+        pkgname: "Fixture::Demo",
+        version: "0.1.0",
+        manifestPath: "packages/Demo/cpkg.toml",
+        packagePath: "packages/Demo",
+        dependencyNames: ["FreeRTOS"],
+      },
+    ],
+  });
+  const apiContents =
+    '{\n  "formatVersion": 1,\n  "doxygenVersion": "1.16.1",\n  "references": []\n}\n';
+  await writeFile(path.join(moduleRoot, "package-catalog.json"), packageContents, "utf8");
+  await writeFile(path.join(moduleRoot, "api-catalog.json"), apiContents, "utf8");
+  const artifacts = [
+    {
+      path: "api-catalog.json" as const,
+      bytes: Buffer.byteLength(apiContents),
+      sha256: createHash("sha256").update(apiContents).digest("hex"),
+      kind: "api-catalog" as const,
+    },
+    {
+      path: "package-catalog.json" as const,
+      bytes: Buffer.byteLength(packageContents),
+      sha256: createHash("sha256").update(packageContents).digest("hex"),
+      kind: "package-catalog" as const,
+    },
+  ];
+  totalBytes += artifacts.reduce((total, artifact) => total + artifact.bytes, 0);
+
+  const manifest: SourceManifest = {
+    formatVersion: 2,
     modules: [
       {
         id: "FixtureModule",
@@ -89,8 +121,11 @@ async function createDocumentationFixture(readme = moduleReadme): Promise<string
         branch: "main",
         sha: SHA,
         shortSha: SHA.slice(0, 12),
+        producerFingerprint: "f".repeat(64),
         totalBytes,
         files: snapshotFiles,
+        artifacts,
+        references: [{ path: "include/demo.hpp" }],
         licenseFiles: [],
         warnings: [],
       },
@@ -143,6 +178,9 @@ describe("README documentation generation", () => {
       'href="/products/wtr/docs/resources/fixturemodule/1234567890ab/attachments/manual.pdf"',
     );
     expect(modulePage?.html).toContain('href="https://example.com/reference"');
+    expect(modulePage?.html).toContain(
+      `href="https://github.com/example/fixture/blob/${SHA}/include/demo.hpp#L1"`,
+    );
     expect(modulePage?.html).not.toContain("javascript:");
     expect(modulePage?.html).not.toContain("onclick");
     expect(modulePage?.html).not.toContain("<script");

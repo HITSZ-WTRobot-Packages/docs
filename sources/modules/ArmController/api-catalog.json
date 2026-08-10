@@ -1,0 +1,3148 @@
+{
+  "formatVersion": 1,
+  "doxygenVersion": "1.16.1",
+  "references": [
+    {
+      "targetKind": "module",
+      "targetId": "armcontroller",
+      "displayName": "ArmController",
+      "moduleId": "ArmController",
+      "packageSlug": null,
+      "moduleSha": "967f6e0c5a1e211ffc45b7af80efece89252f685",
+      "revisionLabel": "967f6e0c5a1e",
+      "inputPaths": [
+        "Core/arm_controller.cpp",
+        "Core/arm_controller.hpp",
+        "Core/arm_motor_mit.hpp",
+        "Core/arm_motor_mit_dji.cpp",
+        "Core/arm_motor_mit_dm.cpp",
+        "controller/arm_slave.cpp",
+        "controller/arm_slave.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "115 of 146 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-namespace-91a0e8e93b7eb85f",
+          "anchor": "api-namespace-91a0e8e93b7eb85f",
+          "kind": "namespace",
+          "name": "Arm",
+          "qualifiedName": "Arm",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.cpp",
+            "line": 9,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.cpp#L9"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-0c7d919111cf3f2e",
+            "api-class-28226dce511ae065",
+            "api-class-6d4f6825750b2b12",
+            "api-class-920ee224b7ca1ed8",
+            "api-class-faa62adbb0547bd2",
+            "api-define-12a5f050d482f571",
+            "api-function-2242038eccbbcecf",
+            "api-function-36ff2f9453c80362",
+            "api-function-68ab6eba42f49d64",
+            "api-function-771be4f9863c7f54",
+            "api-namespace-2e9062cdff6e4010"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-6d4f6825750b2b12",
+          "anchor": "api-class-6d4f6825750b2b12",
+          "kind": "class",
+          "name": "Arm::Controller",
+          "qualifiedName": "Arm::Controller",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 8,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L8"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-920ee224b7ca1ed8",
+            "api-function-1a18ab0c154f5ae2",
+            "api-function-2242038eccbbcecf",
+            "api-function-36ff2f9453c80362",
+            "api-function-6265daf4434f7318",
+            "api-function-638ac305fbc09e30",
+            "api-function-68ab6eba42f49d64",
+            "api-function-6d37be18e6f514ea",
+            "api-function-73553f1791601824",
+            "api-function-771be4f9863c7f54",
+            "api-function-9a865b6dab5cc451",
+            "api-function-bc4bece0f0970324",
+            "api-function-d4b368fe7a619cbf",
+            "api-function-dd47f7ba25b4957b",
+            "api-struct-a11c702810742332",
+            "api-variable-0418ee33baf7ca09",
+            "api-variable-07b7778a9eb0233b",
+            "api-variable-098f6c8d78bb16e3",
+            "api-variable-19c515b000df4651",
+            "api-variable-2544d28338e0d08b",
+            "api-variable-4aa03dc6656bc15a",
+            "api-variable-54c62a8b1a1cb5fa",
+            "api-variable-581e50ac7cc18373",
+            "api-variable-63e5a78452867d90",
+            "api-variable-747eb2f82ff54119",
+            "api-variable-7e1fc5daee0f9d8c",
+            "api-variable-7eab0e64c51c7820",
+            "api-variable-805be99705672fc2",
+            "api-variable-845984d88c8033bb",
+            "api-variable-8dc60f53513e606d",
+            "api-variable-97c21d8ff6c01c6f",
+            "api-variable-9e415fdf2536e20e",
+            "api-variable-9ef75d09e44e1a16",
+            "api-variable-a04e1c465f745b61",
+            "api-variable-a15508af1b38eb31",
+            "api-variable-b66a275f846b7abd",
+            "api-variable-b69454b3041e7903",
+            "api-variable-bc7aac84c89b2ba5",
+            "api-variable-c93735bc89dee6f7",
+            "api-variable-e1f5907caa31b700",
+            "api-variable-e3866f5cd6810d6f",
+            "api-variable-e6cb108be4af9f5d",
+            "api-variable-e761f4c7ceffca65",
+            "api-variable-f2cc7081b9b21d4f",
+            "api-variable-fc6d9786c0f3c9a8",
+            "api-variable-ff6d2ce8e82555a5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-a11c702810742332",
+          "anchor": "api-struct-a11c702810742332",
+          "kind": "struct",
+          "name": "Arm::Controller::Config",
+          "qualifiedName": "Arm::Controller::Config",
+          "signature": "",
+          "description": "机械臂参数配置",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 14,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L14"
+          },
+          "parentId": null,
+          "references": [
+            "api-variable-0907324b540e8e66",
+            "api-variable-1b5972a2589b77a7",
+            "api-variable-248b4ed430fae030",
+            "api-variable-3b221aa63e424494",
+            "api-variable-400852c709ce113b",
+            "api-variable-548f93d6fd64a54f",
+            "api-variable-5baee9046c724c34",
+            "api-variable-5d2c9aad3eb6357c",
+            "api-variable-5f13358e2bcfda05",
+            "api-variable-605f9ebd6da2c792",
+            "api-variable-62bf165a1420054e",
+            "api-variable-66812087a14bb9f3",
+            "api-variable-7d5c72edf8882510",
+            "api-variable-7f5b873fbd2b5066",
+            "api-variable-a07d86406c378852",
+            "api-variable-a2ed6486bb7d1f47",
+            "api-variable-a309231d31dd22b9",
+            "api-variable-b6dc72e19145433a",
+            "api-variable-b8bf6c304f13008e",
+            "api-variable-bacc55531300070b",
+            "api-variable-c295f27f363d8c54",
+            "api-variable-cdcc0bbdbc476b60",
+            "api-variable-da5ba4d1c6d28597",
+            "api-variable-f29b034096d6b266",
+            "api-variable-fd05cdc840fa8679"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b6dc72e19145433a",
+          "anchor": "api-variable-b6dc72e19145433a",
+          "kind": "variable",
+          "name": "I1",
+          "qualifiedName": "Arm::Controller::Config::I1",
+          "signature": "float Arm::Controller::Config::I1",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 29,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L29"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f29b034096d6b266",
+          "anchor": "api-variable-f29b034096d6b266",
+          "kind": "variable",
+          "name": "I2",
+          "qualifiedName": "Arm::Controller::Config::I2",
+          "signature": "float Arm::Controller::Config::I2",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 30,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L30"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-248b4ed430fae030",
+          "anchor": "api-variable-248b4ed430fae030",
+          "kind": "variable",
+          "name": "I3",
+          "qualifiedName": "Arm::Controller::Config::I3",
+          "signature": "float Arm::Controller::Config::I3",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 31,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L31"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-400852c709ce113b",
+          "anchor": "api-variable-400852c709ce113b",
+          "kind": "variable",
+          "name": "I_payload",
+          "qualifiedName": "Arm::Controller::Config::I_payload",
+          "signature": "float Arm::Controller::Config::I_payload",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 36,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L36"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-548f93d6fd64a54f",
+          "anchor": "api-variable-548f93d6fd64a54f",
+          "kind": "variable",
+          "name": "backlash_1",
+          "qualifiedName": "Arm::Controller::Config::backlash_1",
+          "signature": "float Arm::Controller::Config::backlash_1",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 52,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L52"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3b221aa63e424494",
+          "anchor": "api-variable-3b221aa63e424494",
+          "kind": "variable",
+          "name": "backlash_2",
+          "qualifiedName": "Arm::Controller::Config::backlash_2",
+          "signature": "float Arm::Controller::Config::backlash_2",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 53,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L53"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-1b5972a2589b77a7",
+          "anchor": "api-variable-1b5972a2589b77a7",
+          "kind": "variable",
+          "name": "backlash_3",
+          "qualifiedName": "Arm::Controller::Config::backlash_3",
+          "signature": "float Arm::Controller::Config::backlash_3",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 54,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L54"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-62bf165a1420054e",
+          "anchor": "api-variable-62bf165a1420054e",
+          "kind": "variable",
+          "name": "g",
+          "qualifiedName": "Arm::Controller::Config::g",
+          "signature": "float Arm::Controller::Config::g",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 39,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L39"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0907324b540e8e66",
+          "anchor": "api-variable-0907324b540e8e66",
+          "kind": "variable",
+          "name": "l1",
+          "qualifiedName": "Arm::Controller::Config::l1",
+          "signature": "float Arm::Controller::Config::l1",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 16,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L16"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a309231d31dd22b9",
+          "anchor": "api-variable-a309231d31dd22b9",
+          "kind": "variable",
+          "name": "l2",
+          "qualifiedName": "Arm::Controller::Config::l2",
+          "signature": "float Arm::Controller::Config::l2",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 17,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L17"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5baee9046c724c34",
+          "anchor": "api-variable-5baee9046c724c34",
+          "kind": "variable",
+          "name": "l3",
+          "qualifiedName": "Arm::Controller::Config::l3",
+          "signature": "float Arm::Controller::Config::l3",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 18,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L18"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7f5b873fbd2b5066",
+          "anchor": "api-variable-7f5b873fbd2b5066",
+          "kind": "variable",
+          "name": "lc1",
+          "qualifiedName": "Arm::Controller::Config::lc1",
+          "signature": "float Arm::Controller::Config::lc1",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 20,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L20"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b8bf6c304f13008e",
+          "anchor": "api-variable-b8bf6c304f13008e",
+          "kind": "variable",
+          "name": "lc2",
+          "qualifiedName": "Arm::Controller::Config::lc2",
+          "signature": "float Arm::Controller::Config::lc2",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 21,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L21"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-da5ba4d1c6d28597",
+          "anchor": "api-variable-da5ba4d1c6d28597",
+          "kind": "variable",
+          "name": "lc3",
+          "qualifiedName": "Arm::Controller::Config::lc3",
+          "signature": "float Arm::Controller::Config::lc3",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 22,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L22"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5f13358e2bcfda05",
+          "anchor": "api-variable-5f13358e2bcfda05",
+          "kind": "variable",
+          "name": "lc_payload",
+          "qualifiedName": "Arm::Controller::Config::lc_payload",
+          "signature": "float Arm::Controller::Config::lc_payload",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 35,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L35"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a07d86406c378852",
+          "anchor": "api-variable-a07d86406c378852",
+          "kind": "variable",
+          "name": "m1",
+          "qualifiedName": "Arm::Controller::Config::m1",
+          "signature": "float Arm::Controller::Config::m1",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 24,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L24"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c295f27f363d8c54",
+          "anchor": "api-variable-c295f27f363d8c54",
+          "kind": "variable",
+          "name": "m2",
+          "qualifiedName": "Arm::Controller::Config::m2",
+          "signature": "float Arm::Controller::Config::m2",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 25,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L25"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a2ed6486bb7d1f47",
+          "anchor": "api-variable-a2ed6486bb7d1f47",
+          "kind": "variable",
+          "name": "m3",
+          "qualifiedName": "Arm::Controller::Config::m3",
+          "signature": "float Arm::Controller::Config::m3",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 26,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L26"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5d2c9aad3eb6357c",
+          "anchor": "api-variable-5d2c9aad3eb6357c",
+          "kind": "variable",
+          "name": "m_payload",
+          "qualifiedName": "Arm::Controller::Config::m_payload",
+          "signature": "float Arm::Controller::Config::m_payload",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 34,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L34"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-605f9ebd6da2c792",
+          "anchor": "api-variable-605f9ebd6da2c792",
+          "kind": "variable",
+          "name": "offset_1",
+          "qualifiedName": "Arm::Controller::Config::offset_1",
+          "signature": "float Arm::Controller::Config::offset_1",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 47,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L47"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-fd05cdc840fa8679",
+          "anchor": "api-variable-fd05cdc840fa8679",
+          "kind": "variable",
+          "name": "offset_2",
+          "qualifiedName": "Arm::Controller::Config::offset_2",
+          "signature": "float Arm::Controller::Config::offset_2",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 48,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L48"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7d5c72edf8882510",
+          "anchor": "api-variable-7d5c72edf8882510",
+          "kind": "variable",
+          "name": "offset_3",
+          "qualifiedName": "Arm::Controller::Config::offset_3",
+          "signature": "float Arm::Controller::Config::offset_3",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 49,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L49"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-cdcc0bbdbc476b60",
+          "anchor": "api-variable-cdcc0bbdbc476b60",
+          "kind": "variable",
+          "name": "reduction_1",
+          "qualifiedName": "Arm::Controller::Config::reduction_1",
+          "signature": "float Arm::Controller::Config::reduction_1",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 42,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L42"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-66812087a14bb9f3",
+          "anchor": "api-variable-66812087a14bb9f3",
+          "kind": "variable",
+          "name": "reduction_2",
+          "qualifiedName": "Arm::Controller::Config::reduction_2",
+          "signature": "float Arm::Controller::Config::reduction_2",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 43,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L43"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-bacc55531300070b",
+          "anchor": "api-variable-bacc55531300070b",
+          "kind": "variable",
+          "name": "reduction_3",
+          "qualifiedName": "Arm::Controller::Config::reduction_3",
+          "signature": "float Arm::Controller::Config::reduction_3",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 44,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L44"
+          },
+          "parentId": "api-struct-a11c702810742332",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-6265daf4434f7318",
+          "anchor": "api-function-6265daf4434f7318",
+          "kind": "function",
+          "name": "Controller",
+          "qualifiedName": "Arm::Controller::Controller",
+          "signature": "Arm::Controller::Controller (MITMotorCtrl &joint1, MITMotorCtrl &joint2, MITMotorCtrl &joint3, const Config &config)",
+          "description": "构造控制器\n\njoint1 关节1电机 joint2 关节2电机 joint3 关节3电机 config 机械臂参数",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 64,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L64"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [
+            "api-class-920ee224b7ca1ed8",
+            "api-struct-a11c702810742332"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b66a275f846b7abd",
+          "anchor": "api-variable-b66a275f846b7abd",
+          "kind": "variable",
+          "name": "G1_",
+          "qualifiedName": "Arm::Controller::G1_",
+          "signature": "float Arm::Controller::G1_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 224,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L224"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-54c62a8b1a1cb5fa",
+          "anchor": "api-variable-54c62a8b1a1cb5fa",
+          "kind": "variable",
+          "name": "G2_",
+          "qualifiedName": "Arm::Controller::G2_",
+          "signature": "float Arm::Controller::G2_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 225,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L225"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-07b7778a9eb0233b",
+          "anchor": "api-variable-07b7778a9eb0233b",
+          "kind": "variable",
+          "name": "G3_",
+          "qualifiedName": "Arm::Controller::G3_",
+          "signature": "float Arm::Controller::G3_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 226,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L226"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b69454b3041e7903",
+          "anchor": "api-variable-b69454b3041e7903",
+          "kind": "variable",
+          "name": "G_payload_factor_1_",
+          "qualifiedName": "Arm::Controller::G_payload_factor_1_",
+          "signature": "float Arm::Controller::G_payload_factor_1_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 228,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L228"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e1f5907caa31b700",
+          "anchor": "api-variable-e1f5907caa31b700",
+          "kind": "variable",
+          "name": "G_payload_factor_2_",
+          "qualifiedName": "Arm::Controller::G_payload_factor_2_",
+          "signature": "float Arm::Controller::G_payload_factor_2_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 229,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L229"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-97c21d8ff6c01c6f",
+          "anchor": "api-variable-97c21d8ff6c01c6f",
+          "kind": "variable",
+          "name": "G_payload_factor_3_",
+          "qualifiedName": "Arm::Controller::G_payload_factor_3_",
+          "signature": "float Arm::Controller::G_payload_factor_3_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 230,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L230"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-1a18ab0c154f5ae2",
+          "anchor": "api-function-1a18ab0c154f5ae2",
+          "kind": "function",
+          "name": "calculateCoriolisComp",
+          "qualifiedName": "Arm::Controller::calculateCoriolisComp",
+          "signature": "void Arm::Controller::calculateCoriolisComp (float q1, float q2, float q3, float dq1, float dq2, float dq3, float &tau1, float &tau2, float &tau3)",
+          "description": "计算科里奥利/离心补偿力矩 基于平面 3R 刚体模型：tau_c = C(q, dq) * dq\n\nq1 关节1角度(弧度) q2 关节2角度(弧度) q3 关节3角度(弧度) dq1 关节1角速度(弧度/s) dq2 关节2角速度(弧度/s) dq3 关节3角速度(弧度/s) tau1 关节1力矩输出 tau2 关节2力矩输出 tau3 关节3力矩输出",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 164,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L164"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-638ac305fbc09e30",
+          "anchor": "api-function-638ac305fbc09e30",
+          "kind": "function",
+          "name": "calculateGravityComp",
+          "qualifiedName": "Arm::Controller::calculateGravityComp",
+          "signature": "void Arm::Controller::calculateGravityComp (float q1, float q2, float q3, float &tau1, float &tau2, float &tau3)",
+          "description": "计算重力补偿力矩\n\nq1 关节1角度(弧度) q2 关节2角度(弧度) q3 关节3角度(弧度) tau1 关节1力矩输出 tau2 关节2力矩输出 tau3 关节3力矩输出",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 149,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L149"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-6d37be18e6f514ea",
+          "anchor": "api-function-6d37be18e6f514ea",
+          "kind": "function",
+          "name": "calculateInertiaComp",
+          "qualifiedName": "Arm::Controller::calculateInertiaComp",
+          "signature": "void Arm::Controller::calculateInertiaComp (float q1, float q2, float q3, float ddq1, float ddq2, float ddq3, float &tau1, float &tau2, float &tau3)",
+          "description": "计算转动惯量补偿力矩 基于平面 3R 刚体模型：tau_i = M(q) * ddq\n\nq1 关节1角度(弧度) q2 关节2角度(弧度) q3 关节3角度(弧度) ddq1 关节1角加速度(弧度/s^2) ddq2 关节2角加速度(弧度/s^2) ddq3 关节3角加速度(弧度/s^2) tau1 关节1力矩输出 tau2 关节2力矩输出 tau3 关节3力矩输出",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 187,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L187"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-747eb2f82ff54119",
+          "anchor": "api-variable-747eb2f82ff54119",
+          "kind": "variable",
+          "name": "config_",
+          "qualifiedName": "Arm::Controller::config_",
+          "signature": "Config Arm::Controller::config_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 204,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L204"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [
+            "api-struct-a11c702810742332"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-845984d88c8033bb",
+          "anchor": "api-variable-845984d88c8033bb",
+          "kind": "variable",
+          "name": "current_payload_mass_",
+          "qualifiedName": "Arm::Controller::current_payload_mass_",
+          "signature": "float Arm::Controller::current_payload_mass_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 232,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L232"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7e1fc5daee0f9d8c",
+          "anchor": "api-variable-7e1fc5daee0f9d8c",
+          "kind": "variable",
+          "name": "current_q1_acc_ref_",
+          "qualifiedName": "Arm::Controller::current_q1_acc_ref_",
+          "signature": "float Arm::Controller::current_q1_acc_ref_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 214,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L214"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-bc7aac84c89b2ba5",
+          "anchor": "api-variable-bc7aac84c89b2ba5",
+          "kind": "variable",
+          "name": "current_q1_ref_",
+          "qualifiedName": "Arm::Controller::current_q1_ref_",
+          "signature": "float Arm::Controller::current_q1_ref_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 206,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L206"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9e415fdf2536e20e",
+          "anchor": "api-variable-9e415fdf2536e20e",
+          "kind": "variable",
+          "name": "current_q1_vel_ref_",
+          "qualifiedName": "Arm::Controller::current_q1_vel_ref_",
+          "signature": "float Arm::Controller::current_q1_vel_ref_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 210,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L210"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7eab0e64c51c7820",
+          "anchor": "api-variable-7eab0e64c51c7820",
+          "kind": "variable",
+          "name": "current_q2_acc_ref_",
+          "qualifiedName": "Arm::Controller::current_q2_acc_ref_",
+          "signature": "float Arm::Controller::current_q2_acc_ref_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 215,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L215"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9ef75d09e44e1a16",
+          "anchor": "api-variable-9ef75d09e44e1a16",
+          "kind": "variable",
+          "name": "current_q2_ref_",
+          "qualifiedName": "Arm::Controller::current_q2_ref_",
+          "signature": "float Arm::Controller::current_q2_ref_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 207,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L207"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-805be99705672fc2",
+          "anchor": "api-variable-805be99705672fc2",
+          "kind": "variable",
+          "name": "current_q2_vel_ref_",
+          "qualifiedName": "Arm::Controller::current_q2_vel_ref_",
+          "signature": "float Arm::Controller::current_q2_vel_ref_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 211,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L211"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f2cc7081b9b21d4f",
+          "anchor": "api-variable-f2cc7081b9b21d4f",
+          "kind": "variable",
+          "name": "current_q3_acc_ref_",
+          "qualifiedName": "Arm::Controller::current_q3_acc_ref_",
+          "signature": "float Arm::Controller::current_q3_acc_ref_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 216,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L216"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-63e5a78452867d90",
+          "anchor": "api-variable-63e5a78452867d90",
+          "kind": "variable",
+          "name": "current_q3_ref_",
+          "qualifiedName": "Arm::Controller::current_q3_ref_",
+          "signature": "float Arm::Controller::current_q3_ref_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 208,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L208"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-8dc60f53513e606d",
+          "anchor": "api-variable-8dc60f53513e606d",
+          "kind": "variable",
+          "name": "current_q3_vel_ref_",
+          "qualifiedName": "Arm::Controller::current_q3_vel_ref_",
+          "signature": "float Arm::Controller::current_q3_vel_ref_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 212,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L212"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2242038eccbbcecf",
+          "anchor": "api-function-2242038eccbbcecf",
+          "kind": "function",
+          "name": "getEndEffectorPose",
+          "qualifiedName": "Arm::Controller::getEndEffectorPose",
+          "signature": "void Arm::Controller::getEndEffectorPose (float &x, float &y, float &phi) const",
+          "description": "获取末端位姿\n\nx 末端x y 末端y phi 末端姿态角",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 108,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L108"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [
+            "api-variable-4aa03dc6656bc15a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d4b368fe7a619cbf",
+          "anchor": "api-function-d4b368fe7a619cbf",
+          "kind": "function",
+          "name": "getJointAngles",
+          "qualifiedName": "Arm::Controller::getJointAngles",
+          "signature": "void Arm::Controller::getJointAngles (float &q1, float &q2, float &q3) const",
+          "description": "获取关节角\n\nq1 关节1角度(度) q2 关节2角度(度) q3 关节3角度(度)",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 116,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L116"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [
+            "api-function-68ab6eba42f49d64",
+            "api-function-771be4f9863c7f54"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-68ab6eba42f49d64",
+          "anchor": "api-function-68ab6eba42f49d64",
+          "kind": "function",
+          "name": "getJointAnglesComp",
+          "qualifiedName": "Arm::Controller::getJointAnglesComp",
+          "signature": "void Arm::Controller::getJointAnglesComp (float &q1, float &q2, float &q3)",
+          "description": "获取补偿回程差后的关节角（与目标语义一致）\n\nq1 关节1角度(度) q2 关节2角度(度) q3 关节3角度(度)",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 124,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L124"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [
+            "api-function-d4b368fe7a619cbf",
+            "api-variable-4aa03dc6656bc15a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-bc4bece0f0970324",
+          "anchor": "api-function-bc4bece0f0970324",
+          "kind": "function",
+          "name": "getJointVelocities",
+          "qualifiedName": "Arm::Controller::getJointVelocities",
+          "signature": "void Arm::Controller::getJointVelocities (float &dq1, float &dq2, float &dq3) const",
+          "description": "获取关节角速度\n\ndq1 关节1角速度(度/s) dq2 关节2角速度(度/s) dq3 关节3角速度(度/s)",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 132,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L132"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-36ff2f9453c80362",
+          "anchor": "api-function-36ff2f9453c80362",
+          "kind": "function",
+          "name": "init",
+          "qualifiedName": "Arm::Controller::init",
+          "signature": "void Arm::Controller::init ()",
+          "description": "初始化电机与内部参考值",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 72,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L72"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [
+            "api-variable-4aa03dc6656bc15a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-dd47f7ba25b4957b",
+          "anchor": "api-function-dd47f7ba25b4957b",
+          "kind": "function",
+          "name": "isEnabled",
+          "qualifiedName": "Arm::Controller::isEnabled",
+          "signature": "bool Arm::Controller::isEnabled ()",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 134,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L134"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e6cb108be4af9f5d",
+          "anchor": "api-variable-e6cb108be4af9f5d",
+          "kind": "variable",
+          "name": "is_init_",
+          "qualifiedName": "Arm::Controller::is_init_",
+          "signature": "bool Arm::Controller::is_init_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 198,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L198"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a04e1c465f745b61",
+          "anchor": "api-variable-a04e1c465f745b61",
+          "kind": "variable",
+          "name": "joint1_",
+          "qualifiedName": "Arm::Controller::joint1_",
+          "signature": "MITMotorCtrl& Arm::Controller::joint1_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 200,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L200"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [
+            "api-class-920ee224b7ca1ed8"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-ff6d2ce8e82555a5",
+          "anchor": "api-variable-ff6d2ce8e82555a5",
+          "kind": "variable",
+          "name": "joint2_",
+          "qualifiedName": "Arm::Controller::joint2_",
+          "signature": "MITMotorCtrl& Arm::Controller::joint2_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 201,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L201"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [
+            "api-class-920ee224b7ca1ed8"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-581e50ac7cc18373",
+          "anchor": "api-variable-581e50ac7cc18373",
+          "kind": "variable",
+          "name": "joint3_",
+          "qualifiedName": "Arm::Controller::joint3_",
+          "signature": "MITMotorCtrl& Arm::Controller::joint3_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 202,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L202"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [
+            "api-class-920ee224b7ca1ed8"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e761f4c7ceffca65",
+          "anchor": "api-variable-e761f4c7ceffca65",
+          "kind": "variable",
+          "name": "last_connected_",
+          "qualifiedName": "Arm::Controller::last_connected_",
+          "signature": "bool Arm::Controller::last_connected_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 197,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L197"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2544d28338e0d08b",
+          "anchor": "api-variable-2544d28338e0d08b",
+          "kind": "variable",
+          "name": "motor1_init_pos_",
+          "qualifiedName": "Arm::Controller::motor1_init_pos_",
+          "signature": "float Arm::Controller::motor1_init_pos_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 220,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L220"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e3866f5cd6810d6f",
+          "anchor": "api-variable-e3866f5cd6810d6f",
+          "kind": "variable",
+          "name": "motor2_init_pos_",
+          "qualifiedName": "Arm::Controller::motor2_init_pos_",
+          "signature": "float Arm::Controller::motor2_init_pos_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 221,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L221"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c93735bc89dee6f7",
+          "anchor": "api-variable-c93735bc89dee6f7",
+          "kind": "variable",
+          "name": "motor3_init_pos_",
+          "qualifiedName": "Arm::Controller::motor3_init_pos_",
+          "signature": "float Arm::Controller::motor3_init_pos_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 222,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L222"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-fc6d9786c0f3c9a8",
+          "anchor": "api-variable-fc6d9786c0f3c9a8",
+          "kind": "variable",
+          "name": "payload_ramp_rate_",
+          "qualifiedName": "Arm::Controller::payload_ramp_rate_",
+          "signature": "float Arm::Controller::payload_ramp_rate_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 234,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L234"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-73553f1791601824",
+          "anchor": "api-function-73553f1791601824",
+          "kind": "function",
+          "name": "setPayload",
+          "qualifiedName": "Arm::Controller::setPayload",
+          "signature": "void Arm::Controller::setPayload (float mass, float ramp_time=0.5f)",
+          "description": "设置负载质量\n\nmass 负载质量 ramp_time 质量变化平滑时间",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 94,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L94"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-9a865b6dab5cc451",
+          "anchor": "api-function-9a865b6dab5cc451",
+          "kind": "function",
+          "name": "setStreamingTarget",
+          "qualifiedName": "Arm::Controller::setStreamingTarget",
+          "signature": "void Arm::Controller::setStreamingTarget (float q1, float q2, float q3, float dq1, float dq2, float dq3, float ddq1, float ddq2, float ddq3)",
+          "description": "设置流式目标\n\nq1 关节1角度(度) q2 关节2角度(度) q3 关节3角度(度) dq1 关节1角速度(度/s) dq2 关节2角速度(度/s) dq3 关节3角速度(度/s) ddq1 关节1角加速度(度/s^2) ddq2 关节2角加速度(度/s^2) ddq3 关节3角加速度(度/s^2)",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 86,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L86"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0418ee33baf7ca09",
+          "anchor": "api-variable-0418ee33baf7ca09",
+          "kind": "variable",
+          "name": "soft_start_duration_",
+          "qualifiedName": "Arm::Controller::soft_start_duration_",
+          "signature": "float Arm::Controller::soft_start_duration_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 237,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L237"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a15508af1b38eb31",
+          "anchor": "api-variable-a15508af1b38eb31",
+          "kind": "variable",
+          "name": "soft_start_scale_",
+          "qualifiedName": "Arm::Controller::soft_start_scale_",
+          "signature": "float Arm::Controller::soft_start_scale_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 236,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L236"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-098f6c8d78bb16e3",
+          "anchor": "api-variable-098f6c8d78bb16e3",
+          "kind": "variable",
+          "name": "streaming_enabled_",
+          "qualifiedName": "Arm::Controller::streaming_enabled_",
+          "signature": "bool Arm::Controller::streaming_enabled_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 218,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L218"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-19c515b000df4651",
+          "anchor": "api-variable-19c515b000df4651",
+          "kind": "variable",
+          "name": "target_payload_mass_",
+          "qualifiedName": "Arm::Controller::target_payload_mass_",
+          "signature": "float Arm::Controller::target_payload_mass_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 233,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L233"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-771be4f9863c7f54",
+          "anchor": "api-function-771be4f9863c7f54",
+          "kind": "function",
+          "name": "update",
+          "qualifiedName": "Arm::Controller::update",
+          "signature": "void Arm::Controller::update (float dt)",
+          "description": "执行一次控制周期\n\ndt 周期时间(s)",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": 100,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp#L100"
+          },
+          "parentId": "api-class-6d4f6825750b2b12",
+          "references": [
+            "api-function-d4b368fe7a619cbf",
+            "api-variable-4aa03dc6656bc15a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-4aa03dc6656bc15a",
+          "anchor": "api-variable-4aa03dc6656bc15a",
+          "kind": "variable",
+          "name": "DEG_TO_RAD",
+          "qualifiedName": "Arm::DEG_TO_RAD",
+          "signature": "float Arm::DEG_TO_RAD",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.cpp",
+            "line": 12,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.cpp#L12"
+          },
+          "parentId": "api-namespace-91a0e8e93b7eb85f",
+          "references": [
+            "api-define-12a5f050d482f571",
+            "api-function-2242038eccbbcecf",
+            "api-function-36ff2f9453c80362",
+            "api-function-68ab6eba42f49d64",
+            "api-function-771be4f9863c7f54"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-faa62adbb0547bd2",
+          "anchor": "api-class-faa62adbb0547bd2",
+          "kind": "class",
+          "name": "Arm::DJIMITMotorCtrl",
+          "qualifiedName": "Arm::DJIMITMotorCtrl",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 162,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L162"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-920ee224b7ca1ed8",
+            "api-function-084f49bc2fe92a12",
+            "api-function-0bf1111b218d3e56",
+            "api-function-2fe37c16ca96ee79",
+            "api-function-369a5d14ea9c529a",
+            "api-function-4950c282bb32f7ee",
+            "api-function-5211d141dbd63399",
+            "api-function-5e8dffb92b3efe7f",
+            "api-function-5ff023b66e7050f6",
+            "api-function-71dd695b1ed5c26d",
+            "api-function-7e352b73f404d1df",
+            "api-function-81be19ca17dc7bf0",
+            "api-function-98b190ddf41e22f0",
+            "api-function-a73b35a1d19c906e",
+            "api-function-aefd987876b83a76",
+            "api-function-c69d2fbf12c330e5",
+            "api-function-deea8052189f7fe6",
+            "api-function-e0834551543d0227",
+            "api-function-e5004fa9ec2c941c",
+            "api-function-e701214d8714795d",
+            "api-function-edcead0603c5d961",
+            "api-function-f030e274cafce12e",
+            "api-variable-bcd57cc7f889c66b",
+            "api-variable-c302ec4d940e69a1",
+            "api-variable-f36496457803f2e2"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-81be19ca17dc7bf0",
+          "anchor": "api-function-81be19ca17dc7bf0",
+          "kind": "function",
+          "name": "DJIMITMotorCtrl",
+          "qualifiedName": "Arm::DJIMITMotorCtrl::DJIMITMotorCtrl",
+          "signature": "Arm::DJIMITMotorCtrl::DJIMITMotorCtrl (motors::DJIMotor *driver, float torque_ratio)",
+          "description": "torque_ratio DJI 不支持原生 MIT 五元组，因此这里在 MCU 侧做 MIT 风格控制， 再通过把期望力矩换成驱动电流命令。",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 169,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L169"
+          },
+          "parentId": "api-class-faa62adbb0547bd2",
+          "references": [
+            "api-function-e701214d8714795d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c302ec4d940e69a1",
+          "anchor": "api-variable-c302ec4d940e69a1",
+          "kind": "variable",
+          "name": "dji_",
+          "qualifiedName": "Arm::DJIMITMotorCtrl::dji_",
+          "signature": "motors::DJIMotor* Arm::DJIMITMotorCtrl::dji_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 178,
+            "column": 22,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L178"
+          },
+          "parentId": "api-class-faa62adbb0547bd2",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-7e352b73f404d1df",
+          "anchor": "api-function-7e352b73f404d1df",
+          "kind": "function",
+          "name": "outputControl",
+          "qualifiedName": "Arm::DJIMITMotorCtrl::outputControl",
+          "signature": "void Arm::DJIMITMotorCtrl::outputControl (float torque_nm)",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 176,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L176"
+          },
+          "parentId": "api-class-faa62adbb0547bd2",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f36496457803f2e2",
+          "anchor": "api-variable-f36496457803f2e2",
+          "kind": "variable",
+          "name": "torque_ratio_",
+          "qualifiedName": "Arm::DJIMITMotorCtrl::torque_ratio_",
+          "signature": "float Arm::DJIMITMotorCtrl::torque_ratio_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 179,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L179"
+          },
+          "parentId": "api-class-faa62adbb0547bd2",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c69d2fbf12c330e5",
+          "anchor": "api-function-c69d2fbf12c330e5",
+          "kind": "function",
+          "name": "update",
+          "qualifiedName": "Arm::DJIMITMotorCtrl::update",
+          "signature": "void Arm::DJIMITMotorCtrl::update (float dt) override",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 171,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L171"
+          },
+          "parentId": "api-class-faa62adbb0547bd2",
+          "references": [
+            "api-function-084f49bc2fe92a12",
+            "api-function-2fe37c16ca96ee79",
+            "api-function-369a5d14ea9c529a",
+            "api-function-4950c282bb32f7ee",
+            "api-function-5211d141dbd63399",
+            "api-function-5e8dffb92b3efe7f",
+            "api-function-71dd695b1ed5c26d",
+            "api-function-98b190ddf41e22f0",
+            "api-function-aefd987876b83a76",
+            "api-function-edcead0603c5d961"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-0c7d919111cf3f2e",
+          "anchor": "api-class-0c7d919111cf3f2e",
+          "kind": "class",
+          "name": "Arm::DMMITMotorCtrl",
+          "qualifiedName": "Arm::DMMITMotorCtrl",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 182,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L182"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-920ee224b7ca1ed8",
+            "api-function-084f49bc2fe92a12",
+            "api-function-0bf1111b218d3e56",
+            "api-function-2a8bd5b6a943db10",
+            "api-function-2fe37c16ca96ee79",
+            "api-function-369a5d14ea9c529a",
+            "api-function-4950c282bb32f7ee",
+            "api-function-5211d141dbd63399",
+            "api-function-5e8dffb92b3efe7f",
+            "api-function-5ff023b66e7050f6",
+            "api-function-6b2802ac7acbeda2",
+            "api-function-71dd695b1ed5c26d",
+            "api-function-760790371b37c814",
+            "api-function-98b190ddf41e22f0",
+            "api-function-a73b35a1d19c906e",
+            "api-function-aefd987876b83a76",
+            "api-function-d1175fb1fdfdf387",
+            "api-function-deea8052189f7fe6",
+            "api-function-e0834551543d0227",
+            "api-function-e5004fa9ec2c941c",
+            "api-function-e701214d8714795d",
+            "api-function-edcead0603c5d961",
+            "api-function-f030e274cafce12e",
+            "api-variable-6cbd1cdf8deb928d",
+            "api-variable-bcd57cc7f889c66b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-760790371b37c814",
+          "anchor": "api-function-760790371b37c814",
+          "kind": "function",
+          "name": "DMMITMotorCtrl",
+          "qualifiedName": "Arm::DMMITMotorCtrl::DMMITMotorCtrl",
+          "signature": "Arm::DMMITMotorCtrl::DMMITMotorCtrl (motors::DMMotor *driver)",
+          "description": "DM 原生支持 MIT 接口，因此这里只需要维护公共状态并直接下发。",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 188,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L188"
+          },
+          "parentId": "api-class-0c7d919111cf3f2e",
+          "references": [
+            "api-function-e701214d8714795d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2a8bd5b6a943db10",
+          "anchor": "api-function-2a8bd5b6a943db10",
+          "kind": "function",
+          "name": "disable",
+          "qualifiedName": "Arm::DMMITMotorCtrl::disable",
+          "signature": "void Arm::DMMITMotorCtrl::disable () override",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 191,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L191"
+          },
+          "parentId": "api-class-0c7d919111cf3f2e",
+          "references": [
+            "api-function-deea8052189f7fe6"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6cbd1cdf8deb928d",
+          "anchor": "api-variable-6cbd1cdf8deb928d",
+          "kind": "variable",
+          "name": "dm_",
+          "qualifiedName": "Arm::DMMITMotorCtrl::dm_",
+          "signature": "motors::DMMotor* Arm::DMMITMotorCtrl::dm_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 195,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L195"
+          },
+          "parentId": "api-class-0c7d919111cf3f2e",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d1175fb1fdfdf387",
+          "anchor": "api-function-d1175fb1fdfdf387",
+          "kind": "function",
+          "name": "enable",
+          "qualifiedName": "Arm::DMMITMotorCtrl::enable",
+          "signature": "bool Arm::DMMITMotorCtrl::enable () override",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 190,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L190"
+          },
+          "parentId": "api-class-0c7d919111cf3f2e",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-6b2802ac7acbeda2",
+          "anchor": "api-function-6b2802ac7acbeda2",
+          "kind": "function",
+          "name": "update",
+          "qualifiedName": "Arm::DMMITMotorCtrl::update",
+          "signature": "void Arm::DMMITMotorCtrl::update (float dt) override",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 192,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L192"
+          },
+          "parentId": "api-class-0c7d919111cf3f2e",
+          "references": [
+            "api-function-084f49bc2fe92a12",
+            "api-function-369a5d14ea9c529a",
+            "api-function-4950c282bb32f7ee",
+            "api-function-5211d141dbd63399",
+            "api-function-98b190ddf41e22f0",
+            "api-function-aefd987876b83a76",
+            "api-function-edcead0603c5d961"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-920ee224b7ca1ed8",
+          "anchor": "api-class-920ee224b7ca1ed8",
+          "kind": "class",
+          "name": "Arm::MITMotorCtrl",
+          "qualifiedName": "Arm::MITMotorCtrl",
+          "signature": "",
+          "description": "MIT 控制抽象基类：\n\n管理 MIT 参数、目标值、积分项 getMotor() 统一通过读取角度 / 速度 / 在线状态 派生类只处理具体驱动的命令下发差异 角度：deg 角速度：deg/s 前馈力矩：Nm 单位约定： IMotor::getVelocity() 注意底层的统一单位是 rpm， 这里对外统一换算成 deg/s，方便机械臂控制层直接使用。",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 32,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L32"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-0c7d919111cf3f2e",
+            "api-class-faa62adbb0547bd2",
+            "api-function-084f49bc2fe92a12",
+            "api-function-0bf1111b218d3e56",
+            "api-function-2a8bd5b6a943db10",
+            "api-function-2fe37c16ca96ee79",
+            "api-function-369a5d14ea9c529a",
+            "api-function-4950c282bb32f7ee",
+            "api-function-5211d141dbd63399",
+            "api-function-5e8dffb92b3efe7f",
+            "api-function-5ff023b66e7050f6",
+            "api-function-6b2802ac7acbeda2",
+            "api-function-71dd695b1ed5c26d",
+            "api-function-760790371b37c814",
+            "api-function-81be19ca17dc7bf0",
+            "api-function-98b190ddf41e22f0",
+            "api-function-a73b35a1d19c906e",
+            "api-function-aefd987876b83a76",
+            "api-function-c69d2fbf12c330e5",
+            "api-function-deea8052189f7fe6",
+            "api-function-e0834551543d0227",
+            "api-function-e5004fa9ec2c941c",
+            "api-function-e701214d8714795d",
+            "api-function-edcead0603c5d961",
+            "api-function-f030e274cafce12e",
+            "api-variable-0a8550fc7e8ad46e",
+            "api-variable-2808af2efb9fc233",
+            "api-variable-2af5fa8f7e926e64",
+            "api-variable-32dd62d8eaaf223b",
+            "api-variable-3666cdbf882afc4c",
+            "api-variable-3715c37254ce6f83",
+            "api-variable-4c653874a5573be7",
+            "api-variable-bcd57cc7f889c66b",
+            "api-variable-d4707012abfec958",
+            "api-variable-f69fb81c1555bb76"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e701214d8714795d",
+          "anchor": "api-function-e701214d8714795d",
+          "kind": "function",
+          "name": "MITMotorCtrl",
+          "qualifiedName": "Arm::MITMotorCtrl::MITMotorCtrl",
+          "signature": "Arm::MITMotorCtrl::MITMotorCtrl (motors::IMotor *motor, controllers::ControlMode ctrl_mode)",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 110,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L110"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-760790371b37c814",
+            "api-function-81be19ca17dc7bf0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-deea8052189f7fe6",
+          "anchor": "api-function-deea8052189f7fe6",
+          "kind": "function",
+          "name": "ResetIntegral",
+          "qualifiedName": "Arm::MITMotorCtrl::ResetIntegral",
+          "signature": "void Arm::MITMotorCtrl::ResetIntegral ()",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 53,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L53"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-2a8bd5b6a943db10"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5ff023b66e7050f6",
+          "anchor": "api-function-5ff023b66e7050f6",
+          "kind": "function",
+          "name": "SetIntegralEnable",
+          "qualifiedName": "Arm::MITMotorCtrl::SetIntegralEnable",
+          "signature": "void Arm::MITMotorCtrl::SetIntegralEnable (bool enable)",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 46,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L46"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e5004fa9ec2c941c",
+          "anchor": "api-function-e5004fa9ec2c941c",
+          "kind": "function",
+          "name": "SetMitParams",
+          "qualifiedName": "Arm::MITMotorCtrl::SetMitParams",
+          "signature": "void Arm::MITMotorCtrl::SetMitParams (float kp, float kd, float ki, float i_limit)",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 37,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L37"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-5211d141dbd63399",
+            "api-function-edcead0603c5d961"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-aefd987876b83a76",
+          "anchor": "api-function-aefd987876b83a76",
+          "kind": "function",
+          "name": "calcIntegralTorque",
+          "qualifiedName": "Arm::MITMotorCtrl::calcIntegralTorque",
+          "signature": "float Arm::MITMotorCtrl::calcIntegralTorque (float dt)",
+          "description": "计算位置误差积分项，返回值的物理意义是附加前馈力矩（Nm）。",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 118,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L118"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-2fe37c16ca96ee79",
+            "api-function-6b2802ac7acbeda2",
+            "api-function-71dd695b1ed5c26d",
+            "api-function-c69d2fbf12c330e5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2fe37c16ca96ee79",
+          "anchor": "api-function-2fe37c16ca96ee79",
+          "kind": "function",
+          "name": "getAngle",
+          "qualifiedName": "Arm::MITMotorCtrl::getAngle",
+          "signature": "float Arm::MITMotorCtrl::getAngle () const",
+          "description": "获取输出轴角度，单位 deg。",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 82,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L82"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-aefd987876b83a76",
+            "api-function-c69d2fbf12c330e5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5e8dffb92b3efe7f",
+          "anchor": "api-function-5e8dffb92b3efe7f",
+          "kind": "function",
+          "name": "getVelocity",
+          "qualifiedName": "Arm::MITMotorCtrl::getVelocity",
+          "signature": "float Arm::MITMotorCtrl::getVelocity () const",
+          "description": "获取输出轴角速度，单位 deg/s。",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 91,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L91"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-c69d2fbf12c330e5",
+            "api-variable-bcd57cc7f889c66b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3715c37254ce6f83",
+          "anchor": "api-variable-3715c37254ce6f83",
+          "kind": "variable",
+          "name": "i_enable_",
+          "qualifiedName": "Arm::MITMotorCtrl::i_enable_",
+          "signature": "bool Arm::MITMotorCtrl::i_enable_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 154,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L154"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2af5fa8f7e926e64",
+          "anchor": "api-variable-2af5fa8f7e926e64",
+          "kind": "variable",
+          "name": "i_limit_",
+          "qualifiedName": "Arm::MITMotorCtrl::i_limit_",
+          "signature": "float Arm::MITMotorCtrl::i_limit_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 152,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L152"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-71dd695b1ed5c26d",
+          "anchor": "api-function-71dd695b1ed5c26d",
+          "kind": "function",
+          "name": "isConnected",
+          "qualifiedName": "Arm::MITMotorCtrl::isConnected",
+          "signature": "bool Arm::MITMotorCtrl::isConnected () const",
+          "description": "电机当前是否在线。",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 100,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L100"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-aefd987876b83a76",
+            "api-function-c69d2fbf12c330e5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0bf1111b218d3e56",
+          "anchor": "api-function-0bf1111b218d3e56",
+          "kind": "function",
+          "name": "isEnabled",
+          "qualifiedName": "Arm::MITMotorCtrl::isEnabled",
+          "signature": "bool Arm::MITMotorCtrl::isEnabled () const",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 70,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L70"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-bcd57cc7f889c66b",
+          "anchor": "api-variable-bcd57cc7f889c66b",
+          "kind": "variable",
+          "name": "kRpmToDegPerSec",
+          "qualifiedName": "Arm::MITMotorCtrl::kRpmToDegPerSec",
+          "signature": "float Arm::MITMotorCtrl::kRpmToDegPerSec",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 108,
+            "column": 28,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L108"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-5e8dffb92b3efe7f"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-edcead0603c5d961",
+          "anchor": "api-function-edcead0603c5d961",
+          "kind": "function",
+          "name": "kd",
+          "qualifiedName": "Arm::MITMotorCtrl::kd",
+          "signature": "float Arm::MITMotorCtrl::kd () const",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 143,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L143"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-6b2802ac7acbeda2",
+            "api-function-c69d2fbf12c330e5",
+            "api-function-e5004fa9ec2c941c"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3666cdbf882afc4c",
+          "anchor": "api-variable-3666cdbf882afc4c",
+          "kind": "variable",
+          "name": "kd_",
+          "qualifiedName": "Arm::MITMotorCtrl::kd_",
+          "signature": "float Arm::MITMotorCtrl::kd_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 150,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L150"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d4707012abfec958",
+          "anchor": "api-variable-d4707012abfec958",
+          "kind": "variable",
+          "name": "ki_",
+          "qualifiedName": "Arm::MITMotorCtrl::ki_",
+          "signature": "float Arm::MITMotorCtrl::ki_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 151,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L151"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5211d141dbd63399",
+          "anchor": "api-function-5211d141dbd63399",
+          "kind": "function",
+          "name": "kp",
+          "qualifiedName": "Arm::MITMotorCtrl::kp",
+          "signature": "float Arm::MITMotorCtrl::kp () const",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 142,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L142"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-6b2802ac7acbeda2",
+            "api-function-c69d2fbf12c330e5",
+            "api-function-e5004fa9ec2c941c"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-4c653874a5573be7",
+          "anchor": "api-variable-4c653874a5573be7",
+          "kind": "variable",
+          "name": "kp_",
+          "qualifiedName": "Arm::MITMotorCtrl::kp_",
+          "signature": "float Arm::MITMotorCtrl::kp_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 149,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L149"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e0834551543d0227",
+          "anchor": "api-function-e0834551543d0227",
+          "kind": "function",
+          "name": "setTarget",
+          "qualifiedName": "Arm::MITMotorCtrl::setTarget",
+          "signature": "void Arm::MITMotorCtrl::setTarget (float angle_ref, float velocity_ref, float torque_ff)",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 55,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L55"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f69fb81c1555bb76",
+          "anchor": "api-variable-f69fb81c1555bb76",
+          "kind": "variable",
+          "name": "sum_err_",
+          "qualifiedName": "Arm::MITMotorCtrl::sum_err_",
+          "signature": "float Arm::MITMotorCtrl::sum_err_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 155,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L155"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-369a5d14ea9c529a",
+          "anchor": "api-function-369a5d14ea9c529a",
+          "kind": "function",
+          "name": "targetAngle",
+          "qualifiedName": "Arm::MITMotorCtrl::targetAngle",
+          "signature": "float Arm::MITMotorCtrl::targetAngle () const",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 144,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L144"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-6b2802ac7acbeda2",
+            "api-function-c69d2fbf12c330e5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-98b190ddf41e22f0",
+          "anchor": "api-function-98b190ddf41e22f0",
+          "kind": "function",
+          "name": "targetTorqueFF",
+          "qualifiedName": "Arm::MITMotorCtrl::targetTorqueFF",
+          "signature": "float Arm::MITMotorCtrl::targetTorqueFF () const",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 146,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L146"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-6b2802ac7acbeda2",
+            "api-function-c69d2fbf12c330e5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-4950c282bb32f7ee",
+          "anchor": "api-function-4950c282bb32f7ee",
+          "kind": "function",
+          "name": "targetVelocity",
+          "qualifiedName": "Arm::MITMotorCtrl::targetVelocity",
+          "signature": "float Arm::MITMotorCtrl::targetVelocity () const",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 145,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L145"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-6b2802ac7acbeda2",
+            "api-function-c69d2fbf12c330e5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0a8550fc7e8ad46e",
+          "anchor": "api-variable-0a8550fc7e8ad46e",
+          "kind": "variable",
+          "name": "target_angle_",
+          "qualifiedName": "Arm::MITMotorCtrl::target_angle_",
+          "signature": "float Arm::MITMotorCtrl::target_angle_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 157,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L157"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2808af2efb9fc233",
+          "anchor": "api-variable-2808af2efb9fc233",
+          "kind": "variable",
+          "name": "target_torque_ff_",
+          "qualifiedName": "Arm::MITMotorCtrl::target_torque_ff_",
+          "signature": "float Arm::MITMotorCtrl::target_torque_ff_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 159,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L159"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-32dd62d8eaaf223b",
+          "anchor": "api-variable-32dd62d8eaaf223b",
+          "kind": "variable",
+          "name": "target_velocity_",
+          "qualifiedName": "Arm::MITMotorCtrl::target_velocity_",
+          "signature": "float Arm::MITMotorCtrl::target_velocity_",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 158,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L158"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-084f49bc2fe92a12",
+          "anchor": "api-function-084f49bc2fe92a12",
+          "kind": "function",
+          "name": "update",
+          "qualifiedName": "Arm::MITMotorCtrl::update",
+          "signature": "virtual void Arm::MITMotorCtrl::update (float dt)=0",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 77,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L77"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [
+            "api-function-6b2802ac7acbeda2",
+            "api-function-c69d2fbf12c330e5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-a73b35a1d19c906e",
+          "anchor": "api-function-a73b35a1d19c906e",
+          "kind": "function",
+          "name": "update",
+          "qualifiedName": "Arm::MITMotorCtrl::update",
+          "signature": "void Arm::MITMotorCtrl::update () override",
+          "description": "无 dt 版本仅作为 IController 适配入口使用。 机械臂控制链路里通常应调用带 dt 的版本。",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 76,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L76"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f030e274cafce12e",
+          "anchor": "api-function-f030e274cafce12e",
+          "kind": "function",
+          "name": "~MITMotorCtrl",
+          "qualifiedName": "Arm::MITMotorCtrl::~MITMotorCtrl",
+          "signature": "Arm::MITMotorCtrl::~MITMotorCtrl () override=default",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 35,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L35"
+          },
+          "parentId": "api-class-920ee224b7ca1ed8",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-28226dce511ae065",
+          "anchor": "api-class-28226dce511ae065",
+          "kind": "class",
+          "name": "Arm::Slave",
+          "qualifiedName": "Arm::Slave",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 14,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L14"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-6d4f6825750b2b12",
+            "api-function-03aa78d02d0a8099",
+            "api-function-39860cc0f7a4f6ac",
+            "api-function-7dfd60724ba85c30",
+            "api-function-917d25c16977829a",
+            "api-function-978102483b1ea42d",
+            "api-function-9f286111b5b243a8",
+            "api-function-c942d3c9ab8f6c14",
+            "api-function-d66c00822284749a",
+            "api-function-f680df13b448b170",
+            "api-variable-15619e4b54f8c80d",
+            "api-variable-21b2a398b9c0d2c5",
+            "api-variable-248473e70fe430f7",
+            "api-variable-291fc7fe4c28ceee",
+            "api-variable-3c1148bb5deee892",
+            "api-variable-4e5d4a4b6f8d55d2",
+            "api-variable-4fc32333504b2a19",
+            "api-variable-5bdae49bd8188c37",
+            "api-variable-85dd6fbf69d5c885",
+            "api-variable-9784db1cc2ef537f",
+            "api-variable-cab54925e2ea3ecc",
+            "api-variable-ef6bc95d62886ff8"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-39860cc0f7a4f6ac",
+          "anchor": "api-function-39860cc0f7a4f6ac",
+          "kind": "function",
+          "name": "Slave",
+          "qualifiedName": "Arm::Slave::Slave",
+          "signature": "Arm::Slave::Slave (Controller &controller)",
+          "description": "构造从机控制器\n\ncontroller 机械臂控制器",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 39,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L39"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [
+            "api-class-6d4f6825750b2b12"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d66c00822284749a",
+          "anchor": "api-function-d66c00822284749a",
+          "kind": "function",
+          "name": "__attribute__",
+          "qualifiedName": "Arm::Slave::__attribute__",
+          "signature": "struct Arm::Slave::__attribute__ ((packed)) TrajPoint",
+          "description": "轨迹点",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 1,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L1"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-978102483b1ea42d",
+          "anchor": "api-function-978102483b1ea42d",
+          "kind": "function",
+          "name": "applyPoint",
+          "qualifiedName": "Arm::Slave::applyPoint",
+          "signature": "void Arm::Slave::applyPoint (const TrajPoint &point)",
+          "description": "应用轨迹点\n\npoint 轨迹点",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 89,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L89"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-03aa78d02d0a8099",
+          "anchor": "api-function-03aa78d02d0a8099",
+          "kind": "function",
+          "name": "clear",
+          "qualifiedName": "Arm::Slave::clear",
+          "signature": "void Arm::Slave::clear ()",
+          "description": "清空轨迹缓存",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 52,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L52"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-248473e70fe430f7",
+          "anchor": "api-variable-248473e70fe430f7",
+          "kind": "variable",
+          "name": "controller_",
+          "qualifiedName": "Arm::Slave::controller_",
+          "signature": "Controller& Arm::Slave::controller_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 91,
+            "column": 49,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L91"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [
+            "api-class-6d4f6825750b2b12"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-15619e4b54f8c80d",
+          "anchor": "api-variable-15619e4b54f8c80d",
+          "kind": "variable",
+          "name": "current_point_",
+          "qualifiedName": "Arm::Slave::current_point_",
+          "signature": "TrajPoint Arm::Slave::current_point_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 97,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L97"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-7dfd60724ba85c30",
+          "anchor": "api-function-7dfd60724ba85c30",
+          "kind": "function",
+          "name": "hasActiveTrajectory",
+          "qualifiedName": "Arm::Slave::hasActiveTrajectory",
+          "signature": "bool Arm::Slave::hasActiveTrajectory () const",
+          "description": "是否有有效轨迹\n\n有轨迹则为true",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 77,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L77"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-cab54925e2ea3ecc",
+          "anchor": "api-variable-cab54925e2ea3ecc",
+          "kind": "variable",
+          "name": "has_active_",
+          "qualifiedName": "Arm::Slave::has_active_",
+          "signature": "bool Arm::Slave::has_active_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 98,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L98"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-291fc7fe4c28ceee",
+          "anchor": "api-variable-291fc7fe4c28ceee",
+          "kind": "variable",
+          "name": "has_prev_",
+          "qualifiedName": "Arm::Slave::has_prev_",
+          "signature": "bool Arm::Slave::has_prev_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 101,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L101"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3c1148bb5deee892",
+          "anchor": "api-variable-3c1148bb5deee892",
+          "kind": "variable",
+          "name": "kBufferCapacity",
+          "qualifiedName": "Arm::Slave::kBufferCapacity",
+          "signature": "size_t Arm::Slave::kBufferCapacity",
+          "description": "轨迹点队列容量",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 83,
+            "column": 29,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L83"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-4fc32333504b2a19",
+          "anchor": "api-variable-4fc32333504b2a19",
+          "kind": "variable",
+          "name": "last_rx_ms_",
+          "qualifiedName": "Arm::Slave::last_rx_ms_",
+          "signature": "uint32_t Arm::Slave::last_rx_ms_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 103,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L103"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-4e5d4a4b6f8d55d2",
+          "anchor": "api-variable-4e5d4a4b6f8d55d2",
+          "kind": "variable",
+          "name": "next_point_",
+          "qualifiedName": "Arm::Slave::next_point_",
+          "signature": "TrajPoint Arm::Slave::next_point_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 94,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L94"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-85dd6fbf69d5c885",
+          "anchor": "api-variable-85dd6fbf69d5c885",
+          "kind": "variable",
+          "name": "next_valid_",
+          "qualifiedName": "Arm::Slave::next_valid_",
+          "signature": "bool Arm::Slave::next_valid_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 95,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L95"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-ef6bc95d62886ff8",
+          "anchor": "api-variable-ef6bc95d62886ff8",
+          "kind": "variable",
+          "name": "prev_point_",
+          "qualifiedName": "Arm::Slave::prev_point_",
+          "signature": "TrajPoint Arm::Slave::prev_point_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 100,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L100"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-917d25c16977829a",
+          "anchor": "api-function-917d25c16977829a",
+          "kind": "function",
+          "name": "pushPoint",
+          "qualifiedName": "Arm::Slave::pushPoint",
+          "signature": "bool Arm::Slave::pushPoint (const TrajPoint &point, uint32_t rx_time_ms)",
+          "description": "推入轨迹点\n\npoint 轨迹点 rx_time_ms 接收时间戳 是否推入成功",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 47,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L47"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9784db1cc2ef537f",
+          "anchor": "api-variable-9784db1cc2ef537f",
+          "kind": "variable",
+          "name": "queue_",
+          "qualifiedName": "Arm::Slave::queue_",
+          "signature": "libs::RingBuffer<TrajPoint, kBufferCapacity> Arm::Slave::queue_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 92,
+            "column": 22,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L92"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5bdae49bd8188c37",
+          "anchor": "api-variable-5bdae49bd8188c37",
+          "kind": "variable",
+          "name": "rx_period_ms_",
+          "qualifiedName": "Arm::Slave::rx_period_ms_",
+          "signature": "uint32_t Arm::Slave::rx_period_ms_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 105,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L105"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-9f286111b5b243a8",
+          "anchor": "api-function-9f286111b5b243a8",
+          "kind": "function",
+          "name": "setRxPeriodMs",
+          "qualifiedName": "Arm::Slave::setRxPeriodMs",
+          "signature": "void Arm::Slave::setRxPeriodMs (uint32_t period_ms)",
+          "description": "设置上位机轨迹点周期\n\nperiod_ms 轨迹点周期(ms)",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 64,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L64"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f680df13b448b170",
+          "anchor": "api-function-f680df13b448b170",
+          "kind": "function",
+          "name": "setTimeoutMs",
+          "qualifiedName": "Arm::Slave::setTimeoutMs",
+          "signature": "void Arm::Slave::setTimeoutMs (uint32_t timeout_ms)",
+          "description": "设置超时时间\n\ntimeout_ms 超时(ms)",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 58,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L58"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-21b2a398b9c0d2c5",
+          "anchor": "api-variable-21b2a398b9c0d2c5",
+          "kind": "variable",
+          "name": "timeout_ms_",
+          "qualifiedName": "Arm::Slave::timeout_ms_",
+          "signature": "uint32_t Arm::Slave::timeout_ms_",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 104,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L104"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c942d3c9ab8f6c14",
+          "anchor": "api-function-c942d3c9ab8f6c14",
+          "kind": "function",
+          "name": "update",
+          "qualifiedName": "Arm::Slave::update",
+          "signature": "void Arm::Slave::update (uint32_t now_ms, float dt)",
+          "description": "执行轨迹队列\n\nnow_ms 当前时间戳 dt 控制周期(s)",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": 71,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp#L71"
+          },
+          "parentId": "api-class-28226dce511ae065",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-2e9062cdff6e4010",
+          "anchor": "api-namespace-2e9062cdff6e4010",
+          "kind": "namespace",
+          "name": "Arm::anonymous_namespace{arm_slave.cpp}",
+          "qualifiedName": "Arm::anonymous_namespace{arm_slave.cpp}",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.cpp",
+            "line": 8,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L8"
+          },
+          "parentId": null,
+          "references": [
+            "api-function-f255e82ecee9b5a5",
+            "api-struct-c8c5775956803001",
+            "api-variable-2f037599e900b11d",
+            "api-variable-5a467494061e636a",
+            "api-variable-bcc921567c3e6fcc"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-c8c5775956803001",
+          "anchor": "api-struct-c8c5775956803001",
+          "kind": "struct",
+          "name": "Arm::anonymous_namespace{arm_slave.cpp}::HermiteResult",
+          "qualifiedName": "Arm::anonymous_namespace{arm_slave.cpp}::HermiteResult",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.cpp",
+            "line": 13,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L13"
+          },
+          "parentId": null,
+          "references": [
+            "api-function-f255e82ecee9b5a5",
+            "api-variable-2f037599e900b11d",
+            "api-variable-5a467494061e636a",
+            "api-variable-bcc921567c3e6fcc"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5a467494061e636a",
+          "anchor": "api-variable-5a467494061e636a",
+          "kind": "variable",
+          "name": "ddq",
+          "qualifiedName": "Arm::anonymous_namespace{arm_slave.cpp}::HermiteResult::ddq",
+          "signature": "float Arm::anonymous_namespace{arm_slave.cpp}::HermiteResult::ddq",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.cpp",
+            "line": 17,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L17"
+          },
+          "parentId": "api-struct-c8c5775956803001",
+          "references": [
+            "api-function-f255e82ecee9b5a5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-bcc921567c3e6fcc",
+          "anchor": "api-variable-bcc921567c3e6fcc",
+          "kind": "variable",
+          "name": "dq",
+          "qualifiedName": "Arm::anonymous_namespace{arm_slave.cpp}::HermiteResult::dq",
+          "signature": "float Arm::anonymous_namespace{arm_slave.cpp}::HermiteResult::dq",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.cpp",
+            "line": 16,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L16"
+          },
+          "parentId": "api-struct-c8c5775956803001",
+          "references": [
+            "api-function-f255e82ecee9b5a5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2f037599e900b11d",
+          "anchor": "api-variable-2f037599e900b11d",
+          "kind": "variable",
+          "name": "q",
+          "qualifiedName": "Arm::anonymous_namespace{arm_slave.cpp}::HermiteResult::q",
+          "signature": "float Arm::anonymous_namespace{arm_slave.cpp}::HermiteResult::q",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.cpp",
+            "line": 15,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L15"
+          },
+          "parentId": "api-struct-c8c5775956803001",
+          "references": [
+            "api-function-f255e82ecee9b5a5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-59eefbcd5a32ac43",
+          "anchor": "api-variable-59eefbcd5a32ac43",
+          "kind": "variable",
+          "name": "kFlagComp",
+          "qualifiedName": "Arm::anonymous_namespace{arm_slave.cpp}::kFlagComp",
+          "signature": "uint8_t Arm::anonymous_namespace{arm_slave.cpp}::kFlagComp",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.cpp",
+            "line": 11,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L11"
+          },
+          "parentId": "api-namespace-2e9062cdff6e4010",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f77abc433369c0b0",
+          "anchor": "api-variable-f77abc433369c0b0",
+          "kind": "variable",
+          "name": "kFlagVacuum",
+          "qualifiedName": "Arm::anonymous_namespace{arm_slave.cpp}::kFlagVacuum",
+          "signature": "uint8_t Arm::anonymous_namespace{arm_slave.cpp}::kFlagVacuum",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.cpp",
+            "line": 10,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L10"
+          },
+          "parentId": "api-namespace-2e9062cdff6e4010",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f255e82ecee9b5a5",
+          "anchor": "api-function-f255e82ecee9b5a5",
+          "kind": "function",
+          "name": "quintic",
+          "qualifiedName": "Arm::anonymous_namespace{arm_slave.cpp}::quintic",
+          "signature": "static HermiteResult Arm::anonymous_namespace{arm_slave.cpp}::quintic (float p0, float v0, float a0, float p1, float v1, float a1, float T, float t)",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.cpp",
+            "line": 20,
+            "column": 22,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp#L20"
+          },
+          "parentId": "api-namespace-2e9062cdff6e4010",
+          "references": [
+            "api-struct-c8c5775956803001",
+            "api-variable-2f037599e900b11d",
+            "api-variable-5a467494061e636a",
+            "api-variable-bcc921567c3e6fcc"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-b58f42d23456684d",
+          "anchor": "api-file-b58f42d23456684d",
+          "kind": "file",
+          "name": "Core/arm_controller.cpp",
+          "qualifiedName": "Core/arm_controller.cpp",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.cpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.cpp"
+          },
+          "parentId": null,
+          "references": [
+            "api-file-4784da45de95575a",
+            "api-file-996bcd411b7ec60b",
+            "api-namespace-91a0e8e93b7eb85f"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-4784da45de95575a",
+          "anchor": "api-file-4784da45de95575a",
+          "kind": "file",
+          "name": "Core/arm_controller.hpp",
+          "qualifiedName": "Core/arm_controller.hpp",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.hpp"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-6d4f6825750b2b12",
+            "api-file-19d721b2b84124c5",
+            "api-file-996bcd411b7ec60b",
+            "api-file-b58f42d23456684d",
+            "api-file-b7aec208a0bd871b",
+            "api-namespace-91a0e8e93b7eb85f",
+            "api-struct-a11c702810742332"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-996bcd411b7ec60b",
+          "anchor": "api-file-996bcd411b7ec60b",
+          "kind": "file",
+          "name": "Core/arm_motor_mit.hpp",
+          "qualifiedName": "Core/arm_motor_mit.hpp",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-0c7d919111cf3f2e",
+            "api-class-920ee224b7ca1ed8",
+            "api-class-faa62adbb0547bd2",
+            "api-file-14b1a6224ef939e7",
+            "api-file-19d721b2b84124c5",
+            "api-file-311f724c41500a91",
+            "api-file-4784da45de95575a",
+            "api-file-b58f42d23456684d",
+            "api-file-b7aec208a0bd871b",
+            "api-namespace-91a0e8e93b7eb85f",
+            "api-namespace-e87731f6bab4f695"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-14b1a6224ef939e7",
+          "anchor": "api-file-14b1a6224ef939e7",
+          "kind": "file",
+          "name": "Core/arm_motor_mit_dji.cpp",
+          "qualifiedName": "Core/arm_motor_mit_dji.cpp",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit_dji.cpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit_dji.cpp"
+          },
+          "parentId": null,
+          "references": [
+            "api-file-996bcd411b7ec60b",
+            "api-namespace-91a0e8e93b7eb85f"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-311f724c41500a91",
+          "anchor": "api-file-311f724c41500a91",
+          "kind": "file",
+          "name": "Core/arm_motor_mit_dm.cpp",
+          "qualifiedName": "Core/arm_motor_mit_dm.cpp",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit_dm.cpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit_dm.cpp"
+          },
+          "parentId": null,
+          "references": [
+            "api-file-996bcd411b7ec60b",
+            "api-namespace-91a0e8e93b7eb85f"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-define-12a5f050d482f571",
+          "anchor": "api-define-12a5f050d482f571",
+          "kind": "define",
+          "name": "M_PI",
+          "qualifiedName": "M_PI",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_controller.cpp",
+            "line": 6,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_controller.cpp#L6"
+          },
+          "parentId": "api-file-b58f42d23456684d",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-19d721b2b84124c5",
+          "anchor": "api-file-19d721b2b84124c5",
+          "kind": "file",
+          "name": "controller/arm_slave.cpp",
+          "qualifiedName": "controller/arm_slave.cpp",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "controller/arm_slave.cpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.cpp"
+          },
+          "parentId": null,
+          "references": [
+            "api-file-4784da45de95575a",
+            "api-file-996bcd411b7ec60b",
+            "api-file-b7aec208a0bd871b",
+            "api-namespace-2e9062cdff6e4010",
+            "api-namespace-91a0e8e93b7eb85f",
+            "api-struct-c8c5775956803001"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-b7aec208a0bd871b",
+          "anchor": "api-file-b7aec208a0bd871b",
+          "kind": "file",
+          "name": "controller/arm_slave.hpp",
+          "qualifiedName": "controller/arm_slave.hpp",
+          "signature": "",
+          "description": "机械臂轨迹从机控制器",
+          "location": {
+            "path": "controller/arm_slave.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/controller/arm_slave.hpp"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-28226dce511ae065",
+            "api-file-19d721b2b84124c5",
+            "api-file-4784da45de95575a",
+            "api-file-996bcd411b7ec60b",
+            "api-namespace-91a0e8e93b7eb85f"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-7dc15e0b2b14b1fb",
+          "anchor": "api-namespace-7dc15e0b2b14b1fb",
+          "kind": "namespace",
+          "name": "controllers",
+          "qualifiedName": "controllers",
+          "signature": "",
+          "description": "",
+          "location": null,
+          "parentId": null,
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-e87731f6bab4f695",
+          "anchor": "api-namespace-e87731f6bab4f695",
+          "kind": "namespace",
+          "name": "motors",
+          "qualifiedName": "motors",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/arm_motor_mit.hpp",
+            "line": 9,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/967f6e0c5a1e211ffc45b7af80efece89252f685/Core/arm_motor_mit.hpp#L9"
+          },
+          "parentId": null,
+          "references": [],
+          "enumValues": []
+        }
+      ],
+      "symbolCount": 153,
+      "documentedSymbolCount": 32
+    }
+  ]
+}

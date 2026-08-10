@@ -1,5 +1,5 @@
 import { DoxygenDiagnostic } from "../../src/lib/doxygen/diagnostic";
-import { loadApiCatalog } from "../../src/lib/doxygen/generator";
+import { loadApiCatalog } from "../../src/lib/doxygen/loader";
 
 try {
   const catalog = await loadApiCatalog();
@@ -15,7 +15,7 @@ try {
   );
   console.log(
     `API: ${catalog.references.length} references, ${symbolCount} symbols ` +
-      `(${counts.complete} complete, ${counts.sparse} sparse, ${counts.empty} empty, ${counts.failed} failed) with Doxygen ${catalog.doxygenVersion}.`,
+      `(${counts.complete} complete, ${counts.sparse} sparse, ${counts.empty} empty, ${counts.failed} failed), produced with Doxygen ${catalog.doxygenVersion}.`,
   );
 } catch (error) {
   if (error instanceof DoxygenDiagnostic) {
@@ -23,7 +23,7 @@ try {
   } else if (error instanceof Error) {
     console.error(error.message);
   } else {
-    console.error("Doxygen API generation failed with an unknown error.");
+    console.error("API catalog validation failed with an unknown error.");
   }
   process.exitCode = 1;
 }

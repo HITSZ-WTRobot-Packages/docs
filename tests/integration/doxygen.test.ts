@@ -1,4 +1,3 @@
-import { createHash } from "node:crypto";
 import { chmod, cp, exists, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -6,17 +5,22 @@ import path from "node:path";
 import { afterEach, describe, expect, test } from "bun:test";
 import { glob } from "tinyglobby";
 
-import { loadApiCatalog, serializeApiCatalog } from "../../src/lib/doxygen/generator";
-import { serializeSourceManifest, type SourceManifest } from "../../src/lib/sources/manifest";
+import {
+  buildModulePackageCatalog,
+  buildPackageCatalogFromModules,
+  type CpkgDocument,
+} from "../../src/lib/catalog/catalog";
+import { generateModuleApiCatalog, serializeApiCatalog } from "../../src/lib/doxygen/generator";
+import type { ModuleSnapshot, SourceManifest } from "../../src/lib/sources/manifest";
 
 const SHA = "abcdef1234567890abcdef1234567890abcdef12";
 const temporaryRoots: string[] = [];
 
-async function createDoxygenRepository(): Promise<string> {
+async function createDoxygenRepository() {
   const repositoryRoot = await mkdtemp(path.join(tmpdir(), "wtr-docs-api-"));
   temporaryRoots.push(repositoryRoot);
   const fixtureRoot = path.resolve(import.meta.dirname, "../fixtures/doxygen");
-  const moduleRoot = path.join(repositoryRoot, "sources/modules/FixtureModule");
+  const moduleRoot = path.join(repositoryRoot, "upstream");
   await mkdir(moduleRoot, { recursive: true });
   await cp(fixtureRoot, moduleRoot, { recursive: true });
   await writeFile(
@@ -25,46 +29,45 @@ async function createDoxygenRepository(): Promise<string> {
     "utf8",
   );
 
-  const paths = await glob(["**/cpkg.toml", "**/*.{c,cpp,h,hpp}"], {
-    cwd: moduleRoot,
-    onlyFiles: true,
-  });
-  const files = [];
-  let totalBytes = 0;
-  for (const filePath of paths.sort()) {
-    const contents = await readFile(path.join(moduleRoot, filePath));
-    totalBytes += contents.byteLength;
-    files.push({
-      path: filePath,
-      bytes: contents.byteLength,
-      sha256: createHash("sha256").update(contents).digest("hex"),
-      kind: filePath.endsWith("cpkg.toml") ? ("manifest" as const) : ("source" as const),
-    });
-  }
-  const manifest: SourceManifest = {
-    formatVersion: 1,
-    modules: [
+  const manifestPaths = await glob("**/cpkg.toml", { cwd: moduleRoot, onlyFiles: true });
+  const sourcePaths = (
+    await glob("**/*.{c,cpp,h,hpp}", { cwd: moduleRoot, onlyFiles: true })
+  ).sort();
+  const module: ModuleSnapshot = {
+    id: "FixtureModule",
+    displayName: "Fixture Module",
+    repository: "https://github.com/example/fixture.git",
+    branch: "main",
+    sha: SHA,
+    shortSha: SHA.slice(0, 12),
+    producerFingerprint: "f".repeat(64),
+    totalBytes: 0,
+    files: [],
+    artifacts: [
+      { path: "api-catalog.json", bytes: 0, sha256: "a".repeat(64), kind: "api-catalog" },
       {
-        id: "FixtureModule",
-        displayName: "Fixture Module",
-        repository: "https://github.com/example/fixture.git",
-        branch: "main",
-        sha: SHA,
-        shortSha: SHA.slice(0, 12),
-        totalBytes,
-        files,
-        licenseFiles: [],
-        warnings: [],
+        path: "package-catalog.json",
+        bytes: 0,
+        sha256: "b".repeat(64),
+        kind: "package-catalog",
       },
     ],
+    references: [],
+    licenseFiles: [],
+    warnings: [],
   };
-  await mkdir(path.join(repositoryRoot, "sources"), { recursive: true });
-  await writeFile(
-    path.join(repositoryRoot, "sources/manifest.json"),
-    serializeSourceManifest(manifest),
-    "utf8",
+  const documents: CpkgDocument[] = await Promise.all(
+    manifestPaths.sort().map(async (filePath) => ({
+      moduleId: module.id,
+      filePath,
+      contents: await readFile(path.join(moduleRoot, filePath), "utf8"),
+    })),
   );
-  return repositoryRoot;
+  const sourceManifest: SourceManifest = { formatVersion: 2, modules: [module] };
+  const packageCatalog = buildPackageCatalogFromModules(sourceManifest, [
+    buildModulePackageCatalog(module, documents),
+  ]);
+  return { repositoryRoot, moduleRoot, module, packageCatalog, sourcePaths };
 }
 
 afterEach(async () => {
@@ -75,13 +78,17 @@ afterEach(async () => {
 
 describe("Doxygen API generation", () => {
   test("normalizes C, C++, compiled, header-only, empty, and sparse package APIs", async () => {
-    const repositoryRoot = await createDoxygenRepository();
-    const first = await loadApiCatalog({ repositoryRoot });
-    const second = await loadApiCatalog({ repositoryRoot });
+    const fixture = await createDoxygenRepository();
+    const options = {
+      ...fixture,
+      packageCatalog: fixture.packageCatalog,
+    };
+    const first = await generateModuleApiCatalog(options);
+    const second = await generateModuleApiCatalog(options);
 
     expect(first.references).toHaveLength(5);
-    expect(await exists(path.join(repositoryRoot, "html"))).toBe(false);
-    expect(await exists(path.join(repositoryRoot, "latex"))).toBe(false);
+    expect(await exists(path.join(fixture.repositoryRoot, "html"))).toBe(false);
+    expect(await exists(path.join(fixture.repositoryRoot, "latex"))).toBe(false);
     expect(serializeApiCatalog(second)).toBe(serializeApiCatalog(first));
     expect(first.references.every((reference) => reference.moduleSha === SHA)).toBe(true);
     expect(
@@ -139,47 +146,50 @@ describe("Doxygen API generation", () => {
   });
 
   test("treats a missing executable as a reproducibility gate", async () => {
-    const repositoryRoot = await createDoxygenRepository();
+    const fixture = await createDoxygenRepository();
     expect(
-      loadApiCatalog({ repositoryRoot, executable: "missing-wtr-doxygen-executable" }),
+      generateModuleApiCatalog({
+        ...fixture,
+        executable: "missing-wtr-doxygen-executable",
+      }),
     ).rejects.toMatchObject({ code: "DOXYGEN_TOOL_UNAVAILABLE" });
   });
 
   test("rejects a Doxygen version that differs from the repository lock", async () => {
-    const repositoryRoot = await createDoxygenRepository();
-    await writeFile(path.join(repositoryRoot, ".doxygen-version"), "0.0.0\n", "utf8");
-    expect(loadApiCatalog({ repositoryRoot })).rejects.toMatchObject({
+    const fixture = await createDoxygenRepository();
+    await writeFile(path.join(fixture.repositoryRoot, ".doxygen-version"), "0.0.0\n", "utf8");
+    expect(generateModuleApiCatalog(fixture)).rejects.toMatchObject({
       code: "DOXYGEN_VERSION_MISMATCH",
       context: { expectedVersion: "0.0.0" },
     });
   });
 
   test("accepts the official release commit suffix", async () => {
-    const repositoryRoot = await createDoxygenRepository();
-    const executable = path.join(repositoryRoot, "fixture-doxygen");
+    const fixture = await createDoxygenRepository();
+    const executable = path.join(fixture.repositoryRoot, "fixture-doxygen");
     await writeFile(
       executable,
-      '#!/bin/sh\nif [ "$1" = "--version" ]; then\n  echo "1.9.8 (c2fe5c3e4986974eb2a97608b24086683502f07f)"\n  exit 0\nfi\nexit 7\n',
+      '#!/bin/sh\nif [ "$1" = "--version" ]; then\n  echo "1.16.1 (c2fe5c3e4986974eb2a97608b24086683502f07f)"\n  exit 0\nfi\nexit 7\n',
       "utf8",
     );
     await chmod(executable, 0o755);
 
-    const catalog = await loadApiCatalog({ repositoryRoot, executable });
-    expect(catalog.doxygenVersion).toBe("1.9.8");
+    const catalog = await generateModuleApiCatalog({ ...fixture, executable });
+    expect(catalog.doxygenVersion).toBe("1.16.1");
     expect(catalog.references.every((reference) => reference.status === "failed")).toBe(true);
   });
 
   test("isolates invocation failures to each package reference", async () => {
-    const repositoryRoot = await createDoxygenRepository();
-    const executable = path.join(repositoryRoot, "fixture-doxygen");
+    const fixture = await createDoxygenRepository();
+    const executable = path.join(fixture.repositoryRoot, "fixture-doxygen");
     await writeFile(
       executable,
-      '#!/bin/sh\nif [ "$1" = "--version" ]; then\n  echo 1.9.8\n  exit 0\nfi\nexit 7\n',
+      '#!/bin/sh\nif [ "$1" = "--version" ]; then\n  echo 1.16.1\n  exit 0\nfi\nexit 7\n',
       "utf8",
     );
     await chmod(executable, 0o755);
 
-    const catalog = await loadApiCatalog({ repositoryRoot, executable });
+    const catalog = await generateModuleApiCatalog({ ...fixture, executable });
     expect(catalog.references).toHaveLength(5);
     expect(catalog.references.every((reference) => reference.status === "failed")).toBe(true);
     expect(

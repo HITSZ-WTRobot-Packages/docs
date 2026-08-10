@@ -32,6 +32,30 @@ export const CpkgManifestSchema = z
 
 export type CpkgManifest = z.infer<typeof CpkgManifestSchema>;
 
+export const ModulePackageSchema = z
+  .object({
+    name: z.string().regex(packageSegment),
+    pkgname: z.string().regex(packageName),
+    version: z.string().regex(packageVersion),
+    manifestPath: z.string().regex(snapshotPath),
+    packagePath: z.string().regex(snapshotPath),
+    dependencyNames: z.array(z.string().regex(packageName)),
+  })
+  .strict();
+
+export type ModulePackage = z.infer<typeof ModulePackageSchema>;
+
+export const ModulePackageCatalogSchema = z
+  .object({
+    formatVersion: z.literal(1),
+    moduleId: z.string().min(1),
+    moduleSha: z.string().regex(/^[a-f0-9]{40}$/u),
+    packages: z.array(ModulePackageSchema),
+  })
+  .strict();
+
+export type ModulePackageCatalog = z.infer<typeof ModulePackageCatalogSchema>;
+
 export const InternalDependencySchema = z
   .object({
     kind: z.literal("internal"),

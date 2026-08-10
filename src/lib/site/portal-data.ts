@@ -3,7 +3,7 @@ import path from "node:path";
 import type { PackageCatalog } from "../catalog/schema";
 import { loadPackageCatalog } from "../catalog/loader";
 import type { ApiCatalog } from "../doxygen/schema";
-import { loadApiCatalog } from "../doxygen/generator";
+import { loadApiCatalog } from "../doxygen/loader";
 import type { DocumentationBundle } from "../markdown/documentation-schema";
 import { loadDocumentationBundle } from "../markdown/documentation";
 import { readSiteConfig, type SiteConfig } from "../paths/site-config";

@@ -1,0 +1,76 @@
+{
+  "formatVersion": 1,
+  "moduleId": "MotorDrivers",
+  "moduleSha": "d8ebbce805b2c870943659f572493f45c100330e",
+  "packages": [
+    {
+      "name": "Controller",
+      "pkgname": "MotorDrivers::Controller",
+      "version": "0.1.0",
+      "manifestPath": "controllers/cpkg.toml",
+      "packagePath": "controllers",
+      "dependencyNames": [
+        "MotorDrivers::Core",
+        "libs::PIDMotor"
+      ]
+    },
+    {
+      "name": "Core",
+      "pkgname": "MotorDrivers::Core",
+      "version": "0.1.0",
+      "manifestPath": "core/cpkg.toml",
+      "packagePath": "core",
+      "dependencyNames": []
+    },
+    {
+      "name": "DJI",
+      "pkgname": "MotorDrivers::DJI",
+      "version": "0.1.0",
+      "manifestPath": "motors/DJI/cpkg.toml",
+      "packagePath": "motors/DJI",
+      "dependencyNames": [
+        "MotorDrivers::Core",
+        "bsp::CANDriver",
+        "services::Watchdog"
+      ]
+    },
+    {
+      "name": "DM",
+      "pkgname": "MotorDrivers::DM",
+      "version": "0.1.0",
+      "manifestPath": "motors/DM/cpkg.toml",
+      "packagePath": "motors/DM",
+      "dependencyNames": [
+        "MotorDrivers::Core",
+        "bsp::CANDriver",
+        "libs::FixedMap",
+        "services::Watchdog"
+      ]
+    },
+    {
+      "name": "MIMotor",
+      "pkgname": "MotorDrivers::MIMotor",
+      "version": "0.2.0",
+      "manifestPath": "motors/MI/cpkg.toml",
+      "packagePath": "motors/MI",
+      "dependencyNames": [
+        "MotorDrivers::Core",
+        "libs::FixedMap",
+        "services::Watchdog"
+      ]
+    },
+    {
+      "name": "VESC",
+      "pkgname": "MotorDrivers::VESC",
+      "version": "0.1.0",
+      "manifestPath": "motors/VESC/cpkg.toml",
+      "packagePath": "motors/VESC",
+      "dependencyNames": [
+        "MotorDrivers::Core",
+        "bsp::CANDriver",
+        "libs::FixedMap",
+        "services::Watchdog"
+      ]
+    }
+  ]
+}

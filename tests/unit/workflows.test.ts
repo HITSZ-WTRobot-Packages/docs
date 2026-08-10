@@ -79,7 +79,7 @@ describe("GitHub Actions contracts", () => {
     }
   });
 
-  test("external actions are immutable and the Doxygen release is checksum-pinned", async () => {
+  test("external actions are immutable and Doxygen is synchronization-only", async () => {
     const validation = WorkflowSchema.parse(await readYaml(".github/workflows/validation.yml"));
     const synchronization = WorkflowSchema.parse(
       await readYaml(".github/workflows/sync-snapshots.yml"),
@@ -95,12 +95,16 @@ describe("GitHub Actions contracts", () => {
     expect(uses.length).toBeGreaterThan(0);
     expect(uses.every((value) => /@[0-9a-f]{40}$/u.test(value))).toBe(true);
 
-    const doxygenStep = toolchain.runs.steps.find((step) => step.run?.includes("DOXYGEN_SHA256"));
-    expect(doxygenStep?.run).toContain("sha256sum --check --strict");
-    expect(doxygenStep?.env?.DOXYGEN_SHA256).toBe(
-      "dda773bdc62384b7d796fe8b6c5029daad72483e4c8ad4abf6ee9fb98b649388",
+    const synchronizationDoxygen = allSteps(synchronization).filter((step) =>
+      step.uses?.startsWith("ssciwr/doxygen-install@"),
     );
-    expect(JSON.stringify(toolchain)).toContain("1.9.8");
-    expect((await readFile(".doxygen-version", "utf8")).trim()).toBe("1.9.8");
+    expect(synchronizationDoxygen).toHaveLength(1);
+    expect(synchronizationDoxygen[0]?.with?.version).toBe(
+      "${{ steps.doxygen-version.outputs.version }}",
+    );
+    expect(JSON.stringify(synchronization)).toContain(".doxygen-version");
+    expect(JSON.stringify(validation)).not.toContain("doxygen-install");
+    expect(JSON.stringify(toolchain)).not.toContain("doxygen");
+    expect((await readFile(".doxygen-version", "utf8")).trim()).toBe("1.16.1");
   });
 });

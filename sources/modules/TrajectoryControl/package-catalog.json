@@ -1,0 +1,32 @@
+{
+  "formatVersion": 1,
+  "moduleId": "TrajectoryControl",
+  "moduleSha": "29bd084ccf5d278db2df734fcf6c6841593e28af",
+  "packages": [
+    {
+      "name": "HomingMotorTrajectory",
+      "pkgname": "Trajectory::HomingMotorTrajectory",
+      "version": "0.1.0",
+      "manifestPath": "HomingMotorTrajectory/cpkg.toml",
+      "packagePath": "HomingMotorTrajectory",
+      "dependencyNames": [
+        "MotorDrivers::Controller",
+        "Trajectory::MotorTrajectory",
+        "stm32cubemx"
+      ]
+    },
+    {
+      "name": "MotorTrajectory",
+      "pkgname": "Trajectory::MotorTrajectory",
+      "version": "0.1.0",
+      "manifestPath": "MotorTrajectory/cpkg.toml",
+      "packagePath": "MotorTrajectory",
+      "dependencyNames": [
+        "MotorDrivers::Controller",
+        "VelocityProfile::SCurve",
+        "libs::PID_PD",
+        "utils"
+      ]
+    }
+  ]
+}

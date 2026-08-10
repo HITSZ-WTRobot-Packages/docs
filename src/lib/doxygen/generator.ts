@@ -4,12 +4,12 @@ import path from "node:path";
 
 import { execa } from "execa";
 
-import { loadPackageCatalog } from "../catalog/loader";
-import { readSourceManifest } from "../sources/manifest";
-import { readVerifiedSnapshotFile } from "../sources/reader";
+import type { PackageCatalog } from "../catalog/schema";
+import type { ModuleSnapshot } from "../sources/manifest";
 import { DoxygenDiagnostic } from "./diagnostic";
-import { absoluteSnapshotInput, buildApiTargets, type ApiTarget } from "./ownership";
+import { absoluteModuleInput, buildModuleApiTargets, type ApiTarget } from "./ownership";
 import { ApiCatalogSchema, ApiReferenceSchema, type ApiCatalog, type ApiReference } from "./schema";
+import { normalizeReportedDoxygenVersion, readDoxygenVersionLock } from "./version";
 import { normalizeDoxygenXml, parseDoxygenIndex } from "./xml";
 
 const DOXYGEN_TIMEOUT_MS = 120_000;
@@ -22,10 +22,9 @@ function doxyfileValue(value: string): string {
   return `"${value.replaceAll("\\", "/").replaceAll('"', '\\"')}"`;
 }
 
-function buildDoxyfile(target: ApiTarget, outputRoot: string, sourcesRoot: string): string {
-  const moduleRoot = path.resolve(sourcesRoot, "modules", target.module.id);
+function buildDoxyfile(target: ApiTarget, outputRoot: string, moduleRoot: string): string {
   const inputs = target.inputPaths.map((inputPath) =>
-    doxyfileValue(absoluteSnapshotInput(sourcesRoot, target, inputPath)),
+    doxyfileValue(absoluteModuleInput(moduleRoot, target, inputPath)),
   );
   return [
     "DOXYFILE_ENCODING = UTF-8",
@@ -39,7 +38,7 @@ function buildDoxyfile(target: ApiTarget, outputRoot: string, sourcesRoot: strin
     "REPEAT_BRIEF = NO",
     "ALWAYS_DETAILED_SEC = NO",
     "FULL_PATH_NAMES = YES",
-    `STRIP_FROM_PATH = ${doxyfileValue(moduleRoot)}`,
+    `STRIP_FROM_PATH = ${doxyfileValue(path.resolve(moduleRoot))}`,
     "JAVADOC_AUTOBRIEF = YES",
     "QT_AUTOBRIEF = YES",
     "MULTILINE_CPP_IS_BRIEF = YES",
@@ -61,7 +60,7 @@ function buildDoxyfile(target: ApiTarget, outputRoot: string, sourcesRoot: strin
     "SORT_MEMBERS_CTORS_1ST = NO",
     `INPUT = ${inputs.join(" ")}`,
     "INPUT_ENCODING = UTF-8",
-    "FILE_PATTERNS = *.c *.cc *.cpp *.cxx *.h *.hh *.hpp *.hxx",
+    "FILE_PATTERNS = *.c *.cc *.cpp *.cxx *.h *.hh *.hpp *.hxx *.inl *.ipp",
     "RECURSIVE = NO",
     "EXCLUDE_SYMLINKS = YES",
     "SOURCE_BROWSER = NO",
@@ -159,30 +158,10 @@ function noInputReference(target: ApiTarget): ApiReference {
   });
 }
 
-async function readDoxygenVersionLock(repositoryRoot: string): Promise<string> {
-  const versionPath = path.join(repositoryRoot, ".doxygen-version");
-  let version: string;
-  try {
-    version = (await readFile(versionPath, "utf8")).trim();
-  } catch (error) {
-    throw new DoxygenDiagnostic(
-      "DOXYGEN_VERSION_LOCK_MISSING",
-      "The repository Doxygen version lock is missing or unreadable.",
-      { path: ".doxygen-version" },
-      { cause: error },
-    );
-  }
-  if (!/^\d+\.\d+\.\d+$/u.test(version)) {
-    throw new DoxygenDiagnostic(
-      "DOXYGEN_VERSION_LOCK_INVALID",
-      "The repository Doxygen version lock must contain an exact semantic version.",
-      { path: ".doxygen-version" },
-    );
-  }
-  return version;
-}
-
-async function assertDoxygenVersion(repositoryRoot: string, executable: string): Promise<string> {
+export async function assertDoxygenVersion(
+  repositoryRoot: string,
+  executable = "doxygen",
+): Promise<string> {
   const expectedVersion = await readDoxygenVersionLock(repositoryRoot);
   let reportedVersion: string;
   try {
@@ -197,12 +176,12 @@ async function assertDoxygenVersion(repositoryRoot: string, executable: string):
       `Doxygen ${expectedVersion} is required but the executable could not be invoked.`,
       {
         expectedVersion,
-        hint: "Install the exact version recorded in .doxygen-version and retry generation.",
+        hint: "Install the exact version recorded in .doxygen-version and retry synchronization.",
       },
       { cause: error },
     );
   }
-  const actualVersion = /^(\d+\.\d+\.\d+)(?: \([0-9a-f]{40}\))?$/u.exec(reportedVersion)?.[1];
+  const actualVersion = normalizeReportedDoxygenVersion(reportedVersion);
   if (actualVersion !== expectedVersion) {
     throw new DoxygenDiagnostic(
       "DOXYGEN_VERSION_MISMATCH",
@@ -210,7 +189,7 @@ async function assertDoxygenVersion(repositoryRoot: string, executable: string):
       {
         expectedVersion,
         actualVersion: reportedVersion,
-        hint: "Use the exact version recorded in .doxygen-version locally and in CI.",
+        hint: "Use the exact version recorded in .doxygen-version locally and in synchronization CI.",
       },
     );
   }
@@ -219,26 +198,21 @@ async function assertDoxygenVersion(repositoryRoot: string, executable: string):
 
 async function runDoxygenTarget(
   repositoryRoot: string,
-  sourcesRoot: string,
+  moduleRoot: string,
   temporaryRoot: string,
   executable: string,
   target: ApiTarget,
 ): Promise<ApiReference> {
-  if (target.inputPaths.length === 0) {
-    return noInputReference(target);
-  }
+  if (target.inputPaths.length === 0) return noInputReference(target);
   const targetDirectory = path.join(
     temporaryRoot,
     `${target.targetKind}-${target.module.id}-${target.targetId}`,
   );
   await mkdir(targetDirectory, { recursive: true });
   const configPath = path.join(targetDirectory, "Doxyfile");
-  await writeFile(configPath, buildDoxyfile(target, targetDirectory, sourcesRoot), "utf8");
+  await writeFile(configPath, buildDoxyfile(target, targetDirectory, moduleRoot), "utf8");
   try {
-    await execa(executable, [configPath], {
-      cwd: repositoryRoot,
-      timeout: DOXYGEN_TIMEOUT_MS,
-    });
+    await execa(executable, [configPath], { cwd: repositoryRoot, timeout: DOXYGEN_TIMEOUT_MS });
   } catch (error) {
     throw new DoxygenDiagnostic(
       "DOXYGEN_PROCESS_FAILED",
@@ -279,41 +253,43 @@ async function runDoxygenTarget(
       );
     }
   }
-  const moduleRoot = path.resolve(sourcesRoot, "modules", target.module.id);
-  return normalizeDoxygenXml(target, moduleRoot, { indexXml, compounds });
+  return normalizeDoxygenXml(target, path.resolve(moduleRoot), { indexXml, compounds });
 }
 
-export type LoadApiCatalogOptions = {
-  repositoryRoot?: string;
+export type GenerateModuleApiCatalogOptions = {
+  repositoryRoot: string;
+  moduleRoot: string;
+  module: ModuleSnapshot;
+  packageCatalog: PackageCatalog;
+  sourcePaths: readonly string[];
   executable?: string;
+  doxygenVersion?: string;
 };
 
-export async function loadApiCatalog(options: LoadApiCatalogOptions = {}): Promise<ApiCatalog> {
-  const repositoryRoot = options.repositoryRoot ?? path.resolve(import.meta.dirname, "../../..");
+export async function generateModuleApiCatalog(
+  options: GenerateModuleApiCatalogOptions,
+): Promise<ApiCatalog> {
   const executable = options.executable ?? "doxygen";
-  const sourcesRoot = path.join(repositoryRoot, "sources");
-  const [doxygenVersion, sourceManifest, packageCatalog] = await Promise.all([
-    assertDoxygenVersion(repositoryRoot, executable),
-    readSourceManifest(sourcesRoot),
-    loadPackageCatalog(repositoryRoot),
-  ]);
-
-  await Promise.all(
-    sourceManifest.modules.flatMap((module) =>
-      module.files
-        .filter((file) => file.kind === "source")
-        .map((file) => readVerifiedSnapshotFile(sourcesRoot, module, file)),
-    ),
+  const doxygenVersion =
+    options.doxygenVersion ?? (await assertDoxygenVersion(options.repositoryRoot, executable));
+  const targets = buildModuleApiTargets(
+    options.module,
+    options.packageCatalog,
+    options.sourcePaths,
   );
-
-  const targets = buildApiTargets(sourceManifest, packageCatalog);
   const temporaryRoot = await mkdtemp(path.join(tmpdir(), "wtr-docs-doxygen-"));
   const references: ApiReference[] = [];
   try {
     for (const target of targets) {
       try {
         references.push(
-          await runDoxygenTarget(repositoryRoot, sourcesRoot, temporaryRoot, executable, target),
+          await runDoxygenTarget(
+            options.repositoryRoot,
+            options.moduleRoot,
+            temporaryRoot,
+            executable,
+            target,
+          ),
         );
       } catch (error) {
         references.push(failedReference(target, error));
@@ -322,13 +298,11 @@ export async function loadApiCatalog(options: LoadApiCatalogOptions = {}): Promi
   } finally {
     await rm(temporaryRoot, { recursive: true, force: true });
   }
-
   return ApiCatalogSchema.parse({
     formatVersion: 1,
     doxygenVersion,
     references: references.sort(
       (left, right) =>
-        compareStrings(left.moduleId, right.moduleId) ||
         compareStrings(left.targetKind, right.targetKind) ||
         compareStrings(left.targetId, right.targetId),
     ),

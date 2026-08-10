@@ -35,63 +35,61 @@ function selectOwner(packages: readonly CatalogPackage[], sourcePath: string) {
     )[0];
 }
 
+export function buildModuleApiTargets(
+  module: ModuleSnapshot,
+  packageCatalog: PackageCatalog,
+  sourcePaths: readonly string[],
+): ApiTarget[] {
+  const modulePackages = packageCatalog.packages.filter((entry) => entry.moduleId === module.id);
+  const targets: ApiTarget[] = modulePackages.map((entry) => ({
+    targetKind: "package",
+    targetId: entry.slug,
+    displayName: entry.pkgname,
+    module,
+    packageSlug: entry.slug,
+    revisionLabel: entry.revisionLabel,
+    inputPaths: sourcePaths
+      .filter((sourcePath) => selectOwner(modulePackages, sourcePath) === entry)
+      .sort(compareStrings),
+  }));
+  const unowned = sourcePaths
+    .filter((sourcePath) => !selectOwner(modulePackages, sourcePath))
+    .sort(compareStrings);
+  if (unowned.length > 0) {
+    targets.push({
+      targetKind: "module",
+      targetId: catalogSlug(module.id),
+      displayName: module.displayName,
+      module,
+      packageSlug: null,
+      revisionLabel: module.shortSha,
+      inputPaths: unowned,
+    });
+  }
+  return targets.sort(
+    (left, right) =>
+      compareStrings(left.targetKind, right.targetKind) ||
+      compareStrings(left.targetId, right.targetId),
+  );
+}
+
 export function buildApiTargets(
   sourceManifest: SourceManifest,
   packageCatalog: PackageCatalog,
+  sourcePathsByModule: ReadonlyMap<string, readonly string[]>,
 ): ApiTarget[] {
-  const moduleById = new Map(sourceManifest.modules.map((module) => [module.id, module]));
-  const packagesByModule = new Map<string, CatalogPackage[]>();
-  for (const entry of packageCatalog.packages) {
-    const entries = packagesByModule.get(entry.moduleId) ?? [];
-    entries.push(entry);
-    packagesByModule.set(entry.moduleId, entries);
-  }
-
   const targets: ApiTarget[] = [];
-  for (const entry of packageCatalog.packages) {
-    const module = moduleById.get(entry.moduleId);
-    if (!module) {
+  for (const module of sourceManifest.modules) {
+    const sourcePaths = sourcePathsByModule.get(module.id);
+    if (!sourcePaths) {
       throw new DoxygenDiagnostic(
         "DOXYGEN_MODULE_MISSING",
-        `Catalog package references an unknown snapshot module: ${entry.pkgname}`,
-        { module: entry.moduleId, package: entry.pkgname },
+        `Doxygen source input index is missing for module: ${module.id}`,
+        { module: module.id },
       );
     }
-    const modulePackages = packagesByModule.get(module.id) ?? [];
-    const inputPaths = module.files
-      .filter((file) => file.kind === "source" && selectOwner(modulePackages, file.path) === entry)
-      .map((file) => file.path)
-      .sort(compareStrings);
-    targets.push({
-      targetKind: "package",
-      targetId: entry.slug,
-      displayName: entry.pkgname,
-      module,
-      packageSlug: entry.slug,
-      revisionLabel: entry.revisionLabel,
-      inputPaths,
-    });
+    targets.push(...buildModuleApiTargets(module, packageCatalog, sourcePaths));
   }
-
-  for (const module of sourceManifest.modules) {
-    const modulePackages = packagesByModule.get(module.id) ?? [];
-    const inputPaths = module.files
-      .filter((file) => file.kind === "source" && !selectOwner(modulePackages, file.path))
-      .map((file) => file.path)
-      .sort(compareStrings);
-    if (inputPaths.length > 0) {
-      targets.push({
-        targetKind: "module",
-        targetId: catalogSlug(module.id),
-        displayName: module.displayName,
-        module,
-        packageSlug: null,
-        revisionLabel: module.shortSha,
-        inputPaths,
-      });
-    }
-  }
-
   return targets.sort(
     (left, right) =>
       compareStrings(left.module.id, right.module.id) ||
@@ -100,14 +98,14 @@ export function buildApiTargets(
   );
 }
 
-export function absoluteSnapshotInput(
-  sourcesRoot: string,
+export function absoluteModuleInput(
+  moduleRoot: string,
   target: ApiTarget,
   inputPath: string,
 ): string {
-  const moduleRoot = path.resolve(sourcesRoot, "modules", target.module.id);
-  const resolved = path.resolve(moduleRoot, ...inputPath.split("/"));
-  if (!resolved.startsWith(`${moduleRoot}${path.sep}`)) {
+  const root = path.resolve(moduleRoot);
+  const resolved = path.resolve(root, ...inputPath.split("/"));
+  if (!resolved.startsWith(`${root}${path.sep}`)) {
     throw new DoxygenDiagnostic("DOXYGEN_INPUT_ESCAPE", "Doxygen input escapes its module root.", {
       module: target.module.id,
       package: target.displayName,

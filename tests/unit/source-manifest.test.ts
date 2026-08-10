@@ -10,7 +10,7 @@ const SHA = "1234567890abcdef1234567890abcdef12345678";
 
 function validManifest(): SourceManifest {
   return {
-    formatVersion: 1,
+    formatVersion: 2,
     modules: [
       {
         id: "FixtureModule",
@@ -19,6 +19,7 @@ function validManifest(): SourceManifest {
         branch: "main",
         sha: SHA,
         shortSha: SHA.slice(0, 12),
+        producerFingerprint: "f".repeat(64),
         totalBytes: 8,
         files: [
           {
@@ -34,6 +35,21 @@ function validManifest(): SourceManifest {
             kind: "license",
           },
         ],
+        artifacts: [
+          {
+            path: "api-catalog.json",
+            bytes: 0,
+            sha256: "c".repeat(64),
+            kind: "api-catalog",
+          },
+          {
+            path: "package-catalog.json",
+            bytes: 0,
+            sha256: "d".repeat(64),
+            kind: "package-catalog",
+          },
+        ],
+        references: [{ path: "include/demo.hpp" }],
         licenseFiles: ["LICENSE"],
         warnings: [],
       },

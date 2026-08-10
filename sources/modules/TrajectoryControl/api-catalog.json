@@ -1,0 +1,2578 @@
+{
+  "formatVersion": 1,
+  "doxygenVersion": "1.16.1",
+  "references": [
+    {
+      "targetKind": "package",
+      "targetId": "trajectory--homingmotortrajectory",
+      "displayName": "Trajectory::HomingMotorTrajectory",
+      "moduleId": "TrajectoryControl",
+      "packageSlug": "trajectory--homingmotortrajectory",
+      "moduleSha": "29bd084ccf5d278db2df734fcf6c6841593e28af",
+      "revisionLabel": "0.1.0+29bd084ccf5d",
+      "inputPaths": [
+        "HomingMotorTrajectory/homing_motor_trajectory.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "29 of 35 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-file-1635f8ef6127e96d",
+          "anchor": "api-file-1635f8ef6127e96d",
+          "kind": "file",
+          "name": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+          "qualifiedName": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+          "signature": "",
+          "description": "syhanjin 2026-04-17",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-941f63a9ede0d358",
+            "api-namespace-765adbcd4ca99561",
+            "api-struct-3a4311530a2b9149",
+            "api-struct-6c17def96a879179"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-765adbcd4ca99561",
+          "anchor": "api-namespace-765adbcd4ca99561",
+          "kind": "namespace",
+          "name": "trajectory",
+          "qualifiedName": "trajectory",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 16,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L16"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-941f63a9ede0d358",
+            "api-struct-3a4311530a2b9149"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-941f63a9ede0d358",
+          "anchor": "api-class-941f63a9ede0d358",
+          "kind": "class",
+          "name": "trajectory::HomingMotorTrajectory",
+          "qualifiedName": "trajectory::HomingMotorTrajectory",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 37,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L37"
+          },
+          "parentId": null,
+          "references": [
+            "api-enum-7d378691461e248f",
+            "api-function-0269af26fb267d41",
+            "api-function-10e08142fe7129f3",
+            "api-function-2c962eb19981119a",
+            "api-function-33a6901fecb29afa",
+            "api-function-3a43dbe96b235e40",
+            "api-function-527dbcfc866f8b8a",
+            "api-function-54b34e3ac05d7bf4",
+            "api-function-686d436dfe7eacdf",
+            "api-function-8f0957147cf6d032",
+            "api-function-aa17c57f69088ce8",
+            "api-function-f033e88394863aaa",
+            "api-function-f2f56ef6dce7fc12",
+            "api-struct-3a4311530a2b9149",
+            "api-struct-6c17def96a879179",
+            "api-typedef-a779a4792ede7937",
+            "api-typedef-da8591c497938fcf",
+            "api-variable-0929d87cdd592d14",
+            "api-variable-51913da16e5fd007",
+            "api-variable-65e00399427014fe",
+            "api-variable-66bba5c6566e7b5d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-6c17def96a879179",
+          "anchor": "api-struct-6c17def96a879179",
+          "kind": "struct",
+          "name": "trajectory::HomingMotorTrajectory::CalibrationConfig",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::CalibrationConfig",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 46,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L46"
+          },
+          "parentId": null,
+          "references": [
+            "api-variable-1614b6a14c92e759",
+            "api-variable-4d240f133ee98334",
+            "api-variable-8fb6a9e548fdde42",
+            "api-variable-abc27d88ff66af6d",
+            "api-variable-b9560562116e58dc",
+            "api-variable-e0862ebdc6c35af1"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b9560562116e58dc",
+          "anchor": "api-variable-b9560562116e58dc",
+          "kind": "variable",
+          "name": "dead_angle",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::CalibrationConfig::dead_angle",
+          "signature": "float trajectory::HomingMotorTrajectory< MotorNum >::CalibrationConfig::dead_angle",
+          "description": "堵转检测过程允许的角度误差，单位 deg",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 56,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L56"
+          },
+          "parentId": "api-struct-6c17def96a879179",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-8fb6a9e548fdde42",
+          "anchor": "api-variable-8fb6a9e548fdde42",
+          "kind": "variable",
+          "name": "max_current",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::CalibrationConfig::max_current",
+          "signature": "float trajectory::HomingMotorTrajectory< MotorNum >::CalibrationConfig::max_current",
+          "description": "堵转寻点时速度环输出上限",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 49,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L49"
+          },
+          "parentId": "api-struct-6c17def96a879179",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e0862ebdc6c35af1",
+          "anchor": "api-variable-e0862ebdc6c35af1",
+          "kind": "variable",
+          "name": "min_ticks",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::CalibrationConfig::min_ticks",
+          "signature": "uint32_t trajectory::HomingMotorTrajectory< MotorNum >::CalibrationConfig::min_ticks",
+          "description": "堵转最小持续时间，单位 ms",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 50,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L50"
+          },
+          "parentId": "api-struct-6c17def96a879179",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-abc27d88ff66af6d",
+          "anchor": "api-variable-abc27d88ff66af6d",
+          "kind": "variable",
+          "name": "offset",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::CalibrationConfig::offset",
+          "signature": "float trajectory::HomingMotorTrajectory< MotorNum >::CalibrationConfig::offset",
+          "description": "逻辑零点相对于堵转位置的偏移",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 52,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L52"
+          },
+          "parentId": "api-struct-6c17def96a879179",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-1614b6a14c92e759",
+          "anchor": "api-variable-1614b6a14c92e759",
+          "kind": "variable",
+          "name": "speed",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::CalibrationConfig::speed",
+          "signature": "float trajectory::HomingMotorTrajectory< MotorNum >::CalibrationConfig::speed",
+          "description": "堵转寻点速度，单位跟 MotorVelController::setRef 保持一致",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 48,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L48"
+          },
+          "parentId": "api-struct-6c17def96a879179",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-4d240f133ee98334",
+          "anchor": "api-variable-4d240f133ee98334",
+          "kind": "variable",
+          "name": "target_after_homing",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::CalibrationConfig::target_after_homing",
+          "signature": "float trajectory::HomingMotorTrajectory< MotorNum >::CalibrationConfig::target_after_homing",
+          "description": "寻零完成后自动回到的逻辑目标位置",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 54,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L54"
+          },
+          "parentId": "api-struct-6c17def96a879179",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-7d378691461e248f",
+          "anchor": "api-enum-7d378691461e248f",
+          "kind": "enum",
+          "name": "CalibrationState",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::CalibrationState",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 188,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L188"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": [
+            {
+              "name": "Done",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "Idle",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "MotorFinding",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "MovingToTarget",
+              "initializer": "",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-function-f033e88394863aaa",
+          "anchor": "api-function-f033e88394863aaa",
+          "kind": "function",
+          "name": "HomingMotorTrajectory",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::HomingMotorTrajectory",
+          "signature": "trajectory::HomingMotorTrajectory< MotorNum >::HomingMotorTrajectory (MotorTrajectory< MotorNum > &&trajectory, const CalibrationConfig &calibration_config)",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 59,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L59"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [
+            "api-struct-6c17def96a879179"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-typedef-da8591c497938fcf",
+          "anchor": "api-typedef-da8591c497938fcf",
+          "kind": "typedef",
+          "name": "Parent",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::Parent",
+          "signature": "using trajectory::HomingMotorTrajectory< MotorNum >::Parent = MotorTrajectory<MotorNum>",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 41,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L41"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-typedef-a779a4792ede7937",
+          "anchor": "api-typedef-a779a4792ede7937",
+          "kind": "typedef",
+          "name": "ProfileConfig",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::ProfileConfig",
+          "signature": "using trajectory::HomingMotorTrajectory< MotorNum >::ProfileConfig = typename Parent::ProfileConfig",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 44,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L44"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-65e00399427014fe",
+          "anchor": "api-variable-65e00399427014fe",
+          "kind": "variable",
+          "name": "calibration_target_",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::calibration_target_",
+          "signature": "float trajectory::HomingMotorTrajectory< MotorNum >::calibration_target_",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 198,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L198"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-66bba5c6566e7b5d",
+          "anchor": "api-variable-66bba5c6566e7b5d",
+          "kind": "variable",
+          "name": "cfg_",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::cfg_",
+          "signature": "CalibrationConfig trajectory::HomingMotorTrajectory< MotorNum >::cfg_",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 196,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L196"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [
+            "api-struct-6c17def96a879179"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-527dbcfc866f8b8a",
+          "anchor": "api-function-527dbcfc866f8b8a",
+          "kind": "function",
+          "name": "controllerUpdate",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::controllerUpdate",
+          "signature": "void trajectory::HomingMotorTrajectory< MotorNum >::controllerUpdate ()",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 99,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L99"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [
+            "api-function-54b34e3ac05d7bf4"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0269af26fb267d41",
+          "anchor": "api-function-0269af26fb267d41",
+          "kind": "function",
+          "name": "enabled",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::enabled",
+          "signature": "bool trajectory::HomingMotorTrajectory< MotorNum >::enabled () const",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 66,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L66"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [
+            "api-function-8f0957147cf6d032"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-33a6901fecb29afa",
+          "anchor": "api-function-33a6901fecb29afa",
+          "kind": "function",
+          "name": "errorUpdate",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::errorUpdate",
+          "signature": "void trajectory::HomingMotorTrajectory< MotorNum >::errorUpdate ()",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 97,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L97"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-8f0957147cf6d032",
+          "anchor": "api-function-8f0957147cf6d032",
+          "kind": "function",
+          "name": "isCalibrated",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::isCalibrated",
+          "signature": "bool trajectory::HomingMotorTrajectory< MotorNum >::isCalibrated () const",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 185,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L185"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [
+            "api-function-0269af26fb267d41"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0929d87cdd592d14",
+          "anchor": "api-variable-0929d87cdd592d14",
+          "kind": "variable",
+          "name": "motor_calib_",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::motor_calib_",
+          "signature": "std::array<MotorCalibration, MotorNum> trajectory::HomingMotorTrajectory< MotorNum >::motor_calib_",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 202,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L202"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [
+            "api-struct-3a4311530a2b9149"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2c962eb19981119a",
+          "anchor": "api-function-2c962eb19981119a",
+          "kind": "function",
+          "name": "profileUpdate",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::profileUpdate",
+          "signature": "void trajectory::HomingMotorTrajectory< MotorNum >::profileUpdate (const float dt)",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 95,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L95"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-686d436dfe7eacdf",
+          "anchor": "api-function-686d436dfe7eacdf",
+          "kind": "function",
+          "name": "setTarget",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::setTarget",
+          "signature": "bool trajectory::HomingMotorTrajectory< MotorNum >::setTarget (const float target)",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 175,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L175"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-aa17c57f69088ce8",
+          "anchor": "api-function-aa17c57f69088ce8",
+          "kind": "function",
+          "name": "setTarget",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::setTarget",
+          "signature": "bool trajectory::HomingMotorTrajectory< MotorNum >::setTarget (const float target, const LinkMode link_mode)",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 176,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L176"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-54b34e3ac05d7bf4",
+          "anchor": "api-function-54b34e3ac05d7bf4",
+          "kind": "function",
+          "name": "setTarget",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::setTarget",
+          "signature": "bool trajectory::HomingMotorTrajectory< MotorNum >::setTarget (const float target, const LinkMode link_mode, const ProfileConfig &config)",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 171,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L171"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [
+            "api-function-527dbcfc866f8b8a",
+            "api-typedef-a779a4792ede7937"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-10e08142fe7129f3",
+          "anchor": "api-function-10e08142fe7129f3",
+          "kind": "function",
+          "name": "setTarget",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::setTarget",
+          "signature": "bool trajectory::HomingMotorTrajectory< MotorNum >::setTarget (const float target, const ProfileConfig &config)",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 180,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L180"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [
+            "api-typedef-a779a4792ede7937"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-3a43dbe96b235e40",
+          "anchor": "api-function-3a43dbe96b235e40",
+          "kind": "function",
+          "name": "startCalibration",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::startCalibration",
+          "signature": "void trajectory::HomingMotorTrajectory< MotorNum >::startCalibration ()",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 68,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L68"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f2f56ef6dce7fc12",
+          "anchor": "api-function-f2f56ef6dce7fc12",
+          "kind": "function",
+          "name": "startCalibration",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::startCalibration",
+          "signature": "void trajectory::HomingMotorTrajectory< MotorNum >::startCalibration (const float target_after_homing)",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 70,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L70"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-51913da16e5fd007",
+          "anchor": "api-variable-51913da16e5fd007",
+          "kind": "variable",
+          "name": "state_",
+          "qualifiedName": "trajectory::HomingMotorTrajectory::state_",
+          "signature": "CalibrationState trajectory::HomingMotorTrajectory< MotorNum >::state_",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 200,
+            "column": 22,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L200"
+          },
+          "parentId": "api-class-941f63a9ede0d358",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-3a4311530a2b9149",
+          "anchor": "api-struct-3a4311530a2b9149",
+          "kind": "struct",
+          "name": "trajectory::MotorCalibration",
+          "qualifiedName": "trajectory::MotorCalibration",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 19,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L19"
+          },
+          "parentId": null,
+          "references": [
+            "api-enum-5f38134de63c9d4d",
+            "api-variable-16cce77379d722ce",
+            "api-variable-6a963bfc9b0d8235",
+            "api-variable-76700f746643ecee",
+            "api-variable-8791cd5d7085efc9",
+            "api-variable-965191281c611cfe"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-5f38134de63c9d4d",
+          "anchor": "api-enum-5f38134de63c9d4d",
+          "kind": "enum",
+          "name": "State",
+          "qualifiedName": "trajectory::MotorCalibration::State",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 21,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L21"
+          },
+          "parentId": "api-struct-3a4311530a2b9149",
+          "references": [],
+          "enumValues": [
+            {
+              "name": "Done",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "Finding",
+              "initializer": "",
+              "description": "检测堵转位置"
+            },
+            {
+              "name": "Idle",
+              "initializer": "",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-variable-6a963bfc9b0d8235",
+          "anchor": "api-variable-6a963bfc9b0d8235",
+          "kind": "variable",
+          "name": "max_current_on_working",
+          "qualifiedName": "trajectory::MotorCalibration::max_current_on_working",
+          "signature": "float trajectory::MotorCalibration::max_current_on_working",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 30,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L30"
+          },
+          "parentId": "api-struct-3a4311530a2b9149",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-965191281c611cfe",
+          "anchor": "api-variable-965191281c611cfe",
+          "kind": "variable",
+          "name": "stall_angle",
+          "qualifiedName": "trajectory::MotorCalibration::stall_angle",
+          "signature": "float trajectory::MotorCalibration::stall_angle",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 34,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L34"
+          },
+          "parentId": "api-struct-3a4311530a2b9149",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-16cce77379d722ce",
+          "anchor": "api-variable-16cce77379d722ce",
+          "kind": "variable",
+          "name": "stall_start_tick",
+          "qualifiedName": "trajectory::MotorCalibration::stall_start_tick",
+          "signature": "uint32_t trajectory::MotorCalibration::stall_start_tick",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 33,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L33"
+          },
+          "parentId": "api-struct-3a4311530a2b9149",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-76700f746643ecee",
+          "anchor": "api-variable-76700f746643ecee",
+          "kind": "variable",
+          "name": "stalling",
+          "qualifiedName": "trajectory::MotorCalibration::stalling",
+          "signature": "bool trajectory::MotorCalibration::stalling",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 32,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L32"
+          },
+          "parentId": "api-struct-3a4311530a2b9149",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-8791cd5d7085efc9",
+          "anchor": "api-variable-8791cd5d7085efc9",
+          "kind": "variable",
+          "name": "state",
+          "qualifiedName": "trajectory::MotorCalibration::state",
+          "signature": "State trajectory::MotorCalibration::state",
+          "description": "",
+          "location": {
+            "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp",
+            "line": 28,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/HomingMotorTrajectory/homing_motor_trajectory.hpp#L28"
+          },
+          "parentId": "api-struct-3a4311530a2b9149",
+          "references": [
+            "api-enum-5f38134de63c9d4d"
+          ],
+          "enumValues": []
+        }
+      ],
+      "symbolCount": 36,
+      "documentedSymbolCount": 7
+    },
+    {
+      "targetKind": "package",
+      "targetId": "trajectory--motortrajectory",
+      "displayName": "Trajectory::MotorTrajectory",
+      "moduleId": "TrajectoryControl",
+      "packageSlug": "trajectory--motortrajectory",
+      "moduleSha": "29bd084ccf5d278db2df734fcf6c6841593e28af",
+      "revisionLabel": "0.1.0+29bd084ccf5d",
+      "inputPaths": [
+        "MotorTrajectory/motor_trajectory.hpp",
+        "MotorTrajectory/motor_trajectory_slave.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "72 of 80 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-define-ca96efdace93b67f",
+          "anchor": "api-define-ca96efdace93b67f",
+          "kind": "define",
+          "name": "DPS2RPM",
+          "qualifiedName": "DPS2RPM",
+          "signature": "",
+          "description": "deg/s 转为 rpm\n\n__DEG_PER_SEC__ deg/s",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 20,
+            "column": 9,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L20"
+          },
+          "parentId": "api-file-efb127fee3c824df",
+          "references": [
+            "api-function-2e86bb71069a72e5",
+            "api-function-c4ce986373854721"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-efb127fee3c824df",
+          "anchor": "api-file-efb127fee3c824df",
+          "kind": "file",
+          "name": "MotorTrajectory/motor_trajectory.hpp",
+          "qualifiedName": "MotorTrajectory/motor_trajectory.hpp",
+          "signature": "",
+          "description": "syhanjin 2026-01-29",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-bea01b2c6aa0c326",
+            "api-function-2e86bb71069a72e5",
+            "api-function-c4ce986373854721",
+            "api-namespace-58e89ae7e891b472"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-89f22e15b7451843",
+          "anchor": "api-file-89f22e15b7451843",
+          "kind": "file",
+          "name": "MotorTrajectory/motor_trajectory_slave.hpp",
+          "qualifiedName": "MotorTrajectory/motor_trajectory_slave.hpp",
+          "signature": "",
+          "description": "syhanjin 2026-06-08",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-575b2cf50e3d7e38",
+            "api-namespace-58e89ae7e891b472",
+            "api-struct-231eeeaaaecc6af0",
+            "api-struct-5dcad8ed9faf69a7"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-58e89ae7e891b472",
+          "anchor": "api-namespace-58e89ae7e891b472",
+          "kind": "namespace",
+          "name": "trajectory",
+          "qualifiedName": "trajectory",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 22,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L22"
+          },
+          "parentId": null,
+          "references": [
+            "api-class-575b2cf50e3d7e38",
+            "api-class-bea01b2c6aa0c326"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-a0afac75980a31ed",
+          "anchor": "api-enum-a0afac75980a31ed",
+          "kind": "enum",
+          "name": "LinkMode",
+          "qualifiedName": "trajectory::LinkMode",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 25,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L25"
+          },
+          "parentId": "api-namespace-58e89ae7e891b472",
+          "references": [],
+          "enumValues": [
+            {
+              "name": "CurrentState",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "PreviousCurve",
+              "initializer": "",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-class-bea01b2c6aa0c326",
+          "anchor": "api-class-bea01b2c6aa0c326",
+          "kind": "class",
+          "name": "trajectory::MotorTrajectory",
+          "qualifiedName": "trajectory::MotorTrajectory",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 31,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L31"
+          },
+          "parentId": null,
+          "references": [
+            "api-define-ca96efdace93b67f",
+            "api-enum-a0afac75980a31ed",
+            "api-function-0daefbf2307a2368",
+            "api-function-0dc60baf887c02a7",
+            "api-function-1bbbc7cc615f87cd",
+            "api-function-1c76da672463e240",
+            "api-function-2c98f1c63d7a1cbf",
+            "api-function-2e86bb71069a72e5",
+            "api-function-2f597f1b56101d6f",
+            "api-function-39fd42d5b7c24d9b",
+            "api-function-3a8072cd5cf7a28b",
+            "api-function-3bb7c501be788826",
+            "api-function-49ca08f7e392162c",
+            "api-function-5792870db0e448fb",
+            "api-function-9fe37bb065c7051f",
+            "api-function-a47e2f00efbecfe5",
+            "api-function-a80c8b2489e305a8",
+            "api-function-b42da7ab1c749e75",
+            "api-function-b58fca546bad2776",
+            "api-function-c0ffbb9bf11a61a8",
+            "api-function-c4ce986373854721",
+            "api-function-c50a965207e0418a",
+            "api-function-d2f50ea19f5c9d10",
+            "api-function-e4ce39dd6c18cc86",
+            "api-function-e9cb511f372d5f58",
+            "api-function-e9dabe3eb77565ba",
+            "api-function-f4550cbff4352f85",
+            "api-function-fb503bda8015bdd0",
+            "api-typedef-16e4ebb9e62a72aa",
+            "api-variable-004ee6a71926ee1b",
+            "api-variable-00703e585f4c5adf",
+            "api-variable-011d72a7a43b5875",
+            "api-variable-066fe1764f60f269",
+            "api-variable-234a7324b0e65fbc",
+            "api-variable-87059682cbea20fd",
+            "api-variable-9ba89907cc3eb8a8",
+            "api-variable-b75b4458170b4998",
+            "api-variable-ba493efcd86cd3c4",
+            "api-variable-d7902ba3c878f1ec",
+            "api-variable-e5721258d334d4b0",
+            "api-variable-f25d23f8cf9006f3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-1bbbc7cc615f87cd",
+          "anchor": "api-function-1bbbc7cc615f87cd",
+          "kind": "function",
+          "name": "MotorTrajectory",
+          "qualifiedName": "trajectory::MotorTrajectory::MotorTrajectory",
+          "signature": "trajectory::MotorTrajectory< MotorNum >::MotorTrajectory (controllers::MotorVelController *motor_controller, const ProfileConfig &profile_cfg, const PD::Config &error_pd_cfg, const float finish_threshold=2.0)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 66,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L66"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-typedef-16e4ebb9e62a72aa",
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-49ca08f7e392162c",
+          "anchor": "api-function-49ca08f7e392162c",
+          "kind": "function",
+          "name": "MotorTrajectory",
+          "qualifiedName": "trajectory::MotorTrajectory::MotorTrajectory",
+          "signature": "trajectory::MotorTrajectory< MotorNum >::MotorTrajectory (controllers::MotorVelController *motor_controllers[MotorNum], const ProfileConfig &profile_cfg, const PD::Config &error_pd_cfg, const float finish_threshold=2.0)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 36,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L36"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-typedef-16e4ebb9e62a72aa",
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0dc60baf887c02a7",
+          "anchor": "api-function-0dc60baf887c02a7",
+          "kind": "function",
+          "name": "MotorTrajectory",
+          "qualifiedName": "trajectory::MotorTrajectory::MotorTrajectory",
+          "signature": "trajectory::MotorTrajectory< MotorNum >::MotorTrajectory (controllers::MotorVelController(&motors)[MotorNum], ProfileConfig profile_cfg, const PD::Config &error_pd_cfg, const float finish_threshold=2.0)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 51,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L51"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-typedef-16e4ebb9e62a72aa",
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-typedef-16e4ebb9e62a72aa",
+          "anchor": "api-typedef-16e4ebb9e62a72aa",
+          "kind": "typedef",
+          "name": "ProfileConfig",
+          "qualifiedName": "trajectory::MotorTrajectory::ProfileConfig",
+          "signature": "using trajectory::MotorTrajectory< MotorNum >::ProfileConfig = velocity_profile::SCurveProfile::Config",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 34,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L34"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-a47e2f00efbecfe5",
+          "anchor": "api-function-a47e2f00efbecfe5",
+          "kind": "function",
+          "name": "controllerUpdate",
+          "qualifiedName": "trajectory::MotorTrajectory::controllerUpdate",
+          "signature": "void trajectory::MotorTrajectory< MotorNum >::controllerUpdate ()",
+          "description": "更新速度环",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 107,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L107"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-e9dabe3eb77565ba",
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-004ee6a71926ee1b",
+          "anchor": "api-variable-004ee6a71926ee1b",
+          "kind": "variable",
+          "name": "ctrl_",
+          "qualifiedName": "trajectory::MotorTrajectory::ctrl_",
+          "signature": "controllers::MotorVelController* trajectory::MotorTrajectory< MotorNum >::ctrl_[MotorNum] [MotorNum]",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 303,
+            "column": 37,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L303"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-0daefbf2307a2368",
+            "api-function-0dc60baf887c02a7",
+            "api-function-1bbbc7cc615f87cd",
+            "api-function-1c76da672463e240",
+            "api-function-2e86bb71069a72e5",
+            "api-function-49ca08f7e392162c",
+            "api-function-9fe37bb065c7051f",
+            "api-function-a47e2f00efbecfe5",
+            "api-function-b42da7ab1c749e75",
+            "api-function-c4ce986373854721",
+            "api-function-c50a965207e0418a",
+            "api-function-e4ce39dd6c18cc86"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f25d23f8cf9006f3",
+          "anchor": "api-variable-f25d23f8cf9006f3",
+          "kind": "variable",
+          "name": "default_profile_cfg_",
+          "qualifiedName": "trajectory::MotorTrajectory::default_profile_cfg_",
+          "signature": "ProfileConfig trajectory::MotorTrajectory< MotorNum >::default_profile_cfg_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 313,
+            "column": 37,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L313"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-typedef-16e4ebb9e62a72aa"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0daefbf2307a2368",
+          "anchor": "api-function-0daefbf2307a2368",
+          "kind": "function",
+          "name": "disable",
+          "qualifiedName": "trajectory::MotorTrajectory::disable",
+          "signature": "void trajectory::MotorTrajectory< MotorNum >::disable ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 281,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L281"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-2f597f1b56101d6f",
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-9fe37bb065c7051f",
+          "anchor": "api-function-9fe37bb065c7051f",
+          "kind": "function",
+          "name": "enable",
+          "qualifiedName": "trajectory::MotorTrajectory::enable",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::enable ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 263,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L263"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-e9dabe3eb77565ba",
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e9dabe3eb77565ba",
+          "anchor": "api-function-e9dabe3eb77565ba",
+          "kind": "function",
+          "name": "enabled",
+          "qualifiedName": "trajectory::MotorTrajectory::enabled",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::enabled () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 292,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L292"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-2c98f1c63d7a1cbf",
+            "api-function-2e86bb71069a72e5",
+            "api-function-9fe37bb065c7051f",
+            "api-function-a47e2f00efbecfe5",
+            "api-function-c4ce986373854721",
+            "api-function-d2f50ea19f5c9d10"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-066fe1764f60f269",
+          "anchor": "api-variable-066fe1764f60f269",
+          "kind": "variable",
+          "name": "enabled_",
+          "qualifiedName": "trajectory::MotorTrajectory::enabled_",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::enabled_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 306,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L306"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c4ce986373854721",
+          "anchor": "api-function-c4ce986373854721",
+          "kind": "function",
+          "name": "errorUpdate",
+          "qualifiedName": "trajectory::MotorTrajectory::errorUpdate",
+          "signature": "void trajectory::MotorTrajectory< MotorNum >::errorUpdate ()",
+          "description": "更新误差补偿",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 95,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L95"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-define-ca96efdace93b67f",
+            "api-function-e9dabe3eb77565ba",
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-ba493efcd86cd3c4",
+          "anchor": "api-variable-ba493efcd86cd3c4",
+          "kind": "variable",
+          "name": "finish_threshold_",
+          "qualifiedName": "trajectory::MotorTrajectory::finish_threshold_",
+          "signature": "float trajectory::MotorTrajectory< MotorNum >::finish_threshold_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 309,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L309"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b42da7ab1c749e75",
+          "anchor": "api-function-b42da7ab1c749e75",
+          "kind": "function",
+          "name": "getCurrentAvePosition",
+          "qualifiedName": "trajectory::MotorTrajectory::getCurrentAvePosition",
+          "signature": "float trajectory::MotorTrajectory< MotorNum >::getCurrentAvePosition () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 228,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L228"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-2c98f1c63d7a1cbf",
+            "api-function-2f597f1b56101d6f",
+            "api-function-39fd42d5b7c24d9b",
+            "api-function-d2f50ea19f5c9d10",
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c50a965207e0418a",
+          "anchor": "api-function-c50a965207e0418a",
+          "kind": "function",
+          "name": "getCurrentAveVelocity",
+          "qualifiedName": "trajectory::MotorTrajectory::getCurrentAveVelocity",
+          "signature": "float trajectory::MotorTrajectory< MotorNum >::getCurrentAveVelocity () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 236,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L236"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-2c98f1c63d7a1cbf",
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e4ce39dd6c18cc86",
+          "anchor": "api-function-e4ce39dd6c18cc86",
+          "kind": "function",
+          "name": "getCurrentPosition",
+          "qualifiedName": "trajectory::MotorTrajectory::getCurrentPosition",
+          "signature": "float trajectory::MotorTrajectory< MotorNum >::getCurrentPosition () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 245,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L245"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-1c76da672463e240",
+          "anchor": "api-function-1c76da672463e240",
+          "kind": "function",
+          "name": "getCurrentVelocity",
+          "qualifiedName": "trajectory::MotorTrajectory::getCurrentVelocity",
+          "signature": "float trajectory::MotorTrajectory< MotorNum >::getCurrentVelocity () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 251,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L251"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f4550cbff4352f85",
+          "anchor": "api-function-f4550cbff4352f85",
+          "kind": "function",
+          "name": "getTotalTime",
+          "qualifiedName": "trajectory::MotorTrajectory::getTotalTime",
+          "signature": "float trajectory::MotorTrajectory< MotorNum >::getTotalTime () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 256,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L256"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-39fd42d5b7c24d9b",
+          "anchor": "api-function-39fd42d5b7c24d9b",
+          "kind": "function",
+          "name": "isFinished",
+          "qualifiedName": "trajectory::MotorTrajectory::isFinished",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::isFinished () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 294,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L294"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-b42da7ab1c749e75"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b58fca546bad2776",
+          "anchor": "api-function-b58fca546bad2776",
+          "kind": "function",
+          "name": "lastFailureInfo",
+          "qualifiedName": "trajectory::MotorTrajectory::lastFailureInfo",
+          "signature": "const velocity_profile::SCurveProfile::FailureInfo & trajectory::MotorTrajectory< MotorNum >::lastFailureInfo () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 258,
+            "column": 57,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L258"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e5721258d334d4b0",
+          "anchor": "api-variable-e5721258d334d4b0",
+          "kind": "variable",
+          "name": "last_failure_info_",
+          "qualifiedName": "trajectory::MotorTrajectory::last_failure_info_",
+          "signature": "velocity_profile::SCurveProfile::FailureInfo trajectory::MotorTrajectory< MotorNum >::last_failure_info_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 316,
+            "column": 50,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L316"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9ba89907cc3eb8a8",
+          "anchor": "api-variable-9ba89907cc3eb8a8",
+          "kind": "variable",
+          "name": "now_",
+          "qualifiedName": "trajectory::MotorTrajectory::now_",
+          "signature": "float trajectory::MotorTrajectory< MotorNum >::now_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 322,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L322"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-87059682cbea20fd",
+          "anchor": "api-variable-87059682cbea20fd",
+          "kind": "variable",
+          "name": "p_ref_curr_",
+          "qualifiedName": "trajectory::MotorTrajectory::p_ref_curr_",
+          "signature": "float trajectory::MotorTrajectory< MotorNum >::p_ref_curr_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 318,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L318"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-00703e585f4c5adf",
+          "anchor": "api-variable-00703e585f4c5adf",
+          "kind": "variable",
+          "name": "pd_",
+          "qualifiedName": "trajectory::MotorTrajectory::pd_",
+          "signature": "PD trajectory::MotorTrajectory< MotorNum >::pd_[MotorNum] [MotorNum]",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 311,
+            "column": 8,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L311"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2e86bb71069a72e5",
+          "anchor": "api-function-2e86bb71069a72e5",
+          "kind": "function",
+          "name": "profileUpdate",
+          "qualifiedName": "trajectory::MotorTrajectory::profileUpdate",
+          "signature": "void trajectory::MotorTrajectory< MotorNum >::profileUpdate (const float dt)",
+          "description": "更新速度规划曲线\n\ndt 间隔时间 (unit: s)",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 79,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L79"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-define-ca96efdace93b67f",
+            "api-function-e9dabe3eb77565ba",
+            "api-variable-004ee6a71926ee1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b75b4458170b4998",
+          "anchor": "api-variable-b75b4458170b4998",
+          "kind": "variable",
+          "name": "profile_",
+          "qualifiedName": "trajectory::MotorTrajectory::profile_",
+          "signature": "velocity_profile::SCurveProfile trajectory::MotorTrajectory< MotorNum >::profile_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 314,
+            "column": 37,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L314"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-3a8072cd5cf7a28b",
+          "anchor": "api-function-3a8072cd5cf7a28b",
+          "kind": "function",
+          "name": "setDefaultProfileConfig",
+          "qualifiedName": "trajectory::MotorTrajectory::setDefaultProfileConfig",
+          "signature": "void trajectory::MotorTrajectory< MotorNum >::setDefaultProfileConfig (const ProfileConfig &cfg)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 300,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L300"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-typedef-16e4ebb9e62a72aa"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-fb503bda8015bdd0",
+          "anchor": "api-function-fb503bda8015bdd0",
+          "kind": "function",
+          "name": "setRelativeTarget",
+          "qualifiedName": "trajectory::MotorTrajectory::setRelativeTarget",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::setRelativeTarget (const float target)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 215,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L215"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-d2f50ea19f5c9d10"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c0ffbb9bf11a61a8",
+          "anchor": "api-function-c0ffbb9bf11a61a8",
+          "kind": "function",
+          "name": "setRelativeTarget",
+          "qualifiedName": "trajectory::MotorTrajectory::setRelativeTarget",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::setRelativeTarget (const float target, const LinkMode link_mode)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 219,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L219"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-enum-a0afac75980a31ed",
+            "api-function-d2f50ea19f5c9d10"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d2f50ea19f5c9d10",
+          "anchor": "api-function-d2f50ea19f5c9d10",
+          "kind": "function",
+          "name": "setRelativeTarget",
+          "qualifiedName": "trajectory::MotorTrajectory::setRelativeTarget",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::setRelativeTarget (const float target, const LinkMode link_mode, const ProfileConfig &config)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 193,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L193"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-enum-a0afac75980a31ed",
+            "api-function-2c98f1c63d7a1cbf",
+            "api-function-5792870db0e448fb",
+            "api-function-b42da7ab1c749e75",
+            "api-function-c0ffbb9bf11a61a8",
+            "api-function-e9dabe3eb77565ba",
+            "api-function-fb503bda8015bdd0",
+            "api-typedef-16e4ebb9e62a72aa"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5792870db0e448fb",
+          "anchor": "api-function-5792870db0e448fb",
+          "kind": "function",
+          "name": "setRelativeTarget",
+          "qualifiedName": "trajectory::MotorTrajectory::setRelativeTarget",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::setRelativeTarget (const float target, const ProfileConfig &config)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 223,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L223"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-d2f50ea19f5c9d10",
+            "api-typedef-16e4ebb9e62a72aa"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e9cb511f372d5f58",
+          "anchor": "api-function-e9cb511f372d5f58",
+          "kind": "function",
+          "name": "setTarget",
+          "qualifiedName": "trajectory::MotorTrajectory::setTarget",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::setTarget (const float target)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 180,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L180"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-2c98f1c63d7a1cbf"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-3bb7c501be788826",
+          "anchor": "api-function-3bb7c501be788826",
+          "kind": "function",
+          "name": "setTarget",
+          "qualifiedName": "trajectory::MotorTrajectory::setTarget",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::setTarget (const float target, const LinkMode link_mode)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 184,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L184"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-enum-a0afac75980a31ed",
+            "api-function-2c98f1c63d7a1cbf"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2c98f1c63d7a1cbf",
+          "anchor": "api-function-2c98f1c63d7a1cbf",
+          "kind": "function",
+          "name": "setTarget",
+          "qualifiedName": "trajectory::MotorTrajectory::setTarget",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::setTarget (const float target, const LinkMode link_mode, const ProfileConfig &config)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 123,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L123"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-enum-a0afac75980a31ed",
+            "api-function-3bb7c501be788826",
+            "api-function-a80c8b2489e305a8",
+            "api-function-b42da7ab1c749e75",
+            "api-function-c50a965207e0418a",
+            "api-function-d2f50ea19f5c9d10",
+            "api-function-e9cb511f372d5f58",
+            "api-function-e9dabe3eb77565ba",
+            "api-typedef-16e4ebb9e62a72aa"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-a80c8b2489e305a8",
+          "anchor": "api-function-a80c8b2489e305a8",
+          "kind": "function",
+          "name": "setTarget",
+          "qualifiedName": "trajectory::MotorTrajectory::setTarget",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::setTarget (const float target, const ProfileConfig &config)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 188,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L188"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-2c98f1c63d7a1cbf",
+            "api-typedef-16e4ebb9e62a72aa"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2f597f1b56101d6f",
+          "anchor": "api-function-2f597f1b56101d6f",
+          "kind": "function",
+          "name": "stop",
+          "qualifiedName": "trajectory::MotorTrajectory::stop",
+          "signature": "void trajectory::MotorTrajectory< MotorNum >::stop ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 115,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L115"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [
+            "api-function-0daefbf2307a2368",
+            "api-function-b42da7ab1c749e75"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-011d72a7a43b5875",
+          "anchor": "api-variable-011d72a7a43b5875",
+          "kind": "variable",
+          "name": "stopped_",
+          "qualifiedName": "trajectory::MotorTrajectory::stopped_",
+          "signature": "bool trajectory::MotorTrajectory< MotorNum >::stopped_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 307,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L307"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d7902ba3c878f1ec",
+          "anchor": "api-variable-d7902ba3c878f1ec",
+          "kind": "variable",
+          "name": "v_ref_curr_",
+          "qualifiedName": "trajectory::MotorTrajectory::v_ref_curr_",
+          "signature": "float trajectory::MotorTrajectory< MotorNum >::v_ref_curr_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 319,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L319"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-234a7324b0e65fbc",
+          "anchor": "api-variable-234a7324b0e65fbc",
+          "kind": "variable",
+          "name": "v_ref_curr_rpm_",
+          "qualifiedName": "trajectory::MotorTrajectory::v_ref_curr_rpm_",
+          "signature": "float trajectory::MotorTrajectory< MotorNum >::v_ref_curr_rpm_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory.hpp",
+            "line": 320,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory.hpp#L320"
+          },
+          "parentId": "api-class-bea01b2c6aa0c326",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-575b2cf50e3d7e38",
+          "anchor": "api-class-575b2cf50e3d7e38",
+          "kind": "class",
+          "name": "trajectory::MotorTrajectorySlave",
+          "qualifiedName": "trajectory::MotorTrajectorySlave",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 20,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L20"
+          },
+          "parentId": null,
+          "references": [
+            "api-function-07d720f65412dcf7",
+            "api-function-117da09c90888799",
+            "api-function-222561eaf31716e9",
+            "api-function-2b5daed4c09a26d4",
+            "api-function-2fea8a511ae89228",
+            "api-function-363fc8c3e4771432",
+            "api-function-486d37374d13a3c7",
+            "api-function-546641c35bcb8416",
+            "api-function-57b63662b4794e90",
+            "api-function-5f3f0bae35cadf7a",
+            "api-function-729b01500d1c1853",
+            "api-function-773fea85a33ac218",
+            "api-function-79f90f1ab46bc189",
+            "api-function-7f8e2efd15fedb82",
+            "api-function-86ea2f12003653fc",
+            "api-function-97411ef09dd69dfd",
+            "api-function-bd37693c316395da",
+            "api-function-cb857870e7d19059",
+            "api-function-ce232143724075f6",
+            "api-function-d1776a39ce955fee",
+            "api-function-e2d8ae4831142398",
+            "api-function-ed27a310d30666d4",
+            "api-function-f29ac88d79e1466c",
+            "api-function-fb331cde1c07f509",
+            "api-function-fdb32a4b855fc1ce",
+            "api-struct-231eeeaaaecc6af0",
+            "api-struct-5dcad8ed9faf69a7",
+            "api-variable-153f1d63238b92f7",
+            "api-variable-3584fa08b21edb2c",
+            "api-variable-359f86b890f4032d",
+            "api-variable-68eeb9b3ba3dce8e",
+            "api-variable-76997db6625bbc81",
+            "api-variable-9f6fa7ffdb584953",
+            "api-variable-fb0d197deff20180"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-57b63662b4794e90",
+          "anchor": "api-function-57b63662b4794e90",
+          "kind": "function",
+          "name": "MotorTrajectorySlave",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::MotorTrajectorySlave",
+          "signature": "trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::MotorTrajectorySlave (controllers::MotorVelController *motor_controller, const PD::Config &error_pd_cfg)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 54,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L54"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-07d720f65412dcf7",
+          "anchor": "api-function-07d720f65412dcf7",
+          "kind": "function",
+          "name": "MotorTrajectorySlave",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::MotorTrajectorySlave",
+          "signature": "trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::MotorTrajectorySlave (controllers::MotorVelController *motor_controllers[MotorNum], const PD::Config &error_pd_cfg)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 33,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L33"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2b5daed4c09a26d4",
+          "anchor": "api-function-2b5daed4c09a26d4",
+          "kind": "function",
+          "name": "MotorTrajectorySlave",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::MotorTrajectorySlave",
+          "signature": "trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::MotorTrajectorySlave (controllers::MotorVelController(&motors)[MotorNum], const PD::Config &error_pd_cfg)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 43,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L43"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-5dcad8ed9faf69a7",
+          "anchor": "api-struct-5dcad8ed9faf69a7",
+          "kind": "struct",
+          "name": "trajectory::MotorTrajectorySlave::NoBuffer",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::NoBuffer",
+          "signature": "",
+          "description": "当 Offline = true 时替代 RingBuffer 的空占位类型。",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 253,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L253"
+          },
+          "parentId": null,
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-231eeeaaaecc6af0",
+          "anchor": "api-struct-231eeeaaaecc6af0",
+          "kind": "struct",
+          "name": "trajectory::MotorTrajectorySlave::TargetPoint",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::TargetPoint",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 27,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L27"
+          },
+          "parentId": null,
+          "references": [
+            "api-variable-14f6e2abe7fb848f",
+            "api-variable-23e32dfb1a51d65d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-23e32dfb1a51d65d",
+          "anchor": "api-variable-23e32dfb1a51d65d",
+          "kind": "variable",
+          "name": "dq",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::TargetPoint::dq",
+          "signature": "float trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::TargetPoint::dq",
+          "description": "目标输出角度导数，单位 deg/s。",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 30,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L30"
+          },
+          "parentId": "api-struct-231eeeaaaecc6af0",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-14f6e2abe7fb848f",
+          "anchor": "api-variable-14f6e2abe7fb848f",
+          "kind": "variable",
+          "name": "q",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::TargetPoint::q",
+          "signature": "float trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::TargetPoint::q",
+          "description": "目标输出角度，单位 deg。",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 29,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L29"
+          },
+          "parentId": "api-struct-231eeeaaaecc6af0",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2fea8a511ae89228",
+          "anchor": "api-function-2fea8a511ae89228",
+          "kind": "function",
+          "name": "applyTargetWithLastError",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::applyTargetWithLastError",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::applyTargetWithLastError ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 238,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L238"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-bd37693c316395da",
+          "anchor": "api-function-bd37693c316395da",
+          "kind": "function",
+          "name": "clearTrajectory",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::clearTrajectory",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::clearTrajectory ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 193,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L193"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-773fea85a33ac218"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-359f86b890f4032d",
+          "anchor": "api-variable-359f86b890f4032d",
+          "kind": "variable",
+          "name": "cmd_buffer_",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::cmd_buffer_",
+          "signature": "std::conditional_t<Offline, NoBuffer, libs::RingBuffer<TargetPoint, BufferCapacity> > trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::cmd_buffer_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 259,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L259"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-struct-231eeeaaaecc6af0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d1776a39ce955fee",
+          "anchor": "api-function-d1776a39ce955fee",
+          "kind": "function",
+          "name": "controllerUpdate",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::controllerUpdate",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::controllerUpdate ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 111,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L111"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-117da09c90888799",
+            "api-function-7f8e2efd15fedb82",
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9f6fa7ffdb584953",
+          "anchor": "api-variable-9f6fa7ffdb584953",
+          "kind": "variable",
+          "name": "ctrl_",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::ctrl_",
+          "signature": "controllers::MotorVelController* trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::ctrl_[MotorNum] [MotorNum]",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 231,
+            "column": 37,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L231"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-07d720f65412dcf7",
+            "api-function-2b5daed4c09a26d4",
+            "api-function-57b63662b4794e90",
+            "api-function-5f3f0bae35cadf7a",
+            "api-function-729b01500d1c1853",
+            "api-function-97411ef09dd69dfd",
+            "api-function-d1776a39ce955fee",
+            "api-function-ed27a310d30666d4",
+            "api-function-f29ac88d79e1466c",
+            "api-function-fb331cde1c07f509",
+            "api-function-fdb32a4b855fc1ce"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ed27a310d30666d4",
+          "anchor": "api-function-ed27a310d30666d4",
+          "kind": "function",
+          "name": "disable",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::disable",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::disable ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 163,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L163"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-363fc8c3e4771432",
+            "api-function-773fea85a33ac218",
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-79f90f1ab46bc189",
+          "anchor": "api-function-79f90f1ab46bc189",
+          "kind": "function",
+          "name": "dps2rpm",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::dps2rpm",
+          "signature": "static constexpr float trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::dps2rpm (const float dps)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 236,
+            "column": 28,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L236"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-fb331cde1c07f509",
+          "anchor": "api-function-fb331cde1c07f509",
+          "kind": "function",
+          "name": "enable",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::enable",
+          "signature": "bool trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::enable ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 138,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L138"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-363fc8c3e4771432",
+            "api-function-773fea85a33ac218",
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-117da09c90888799",
+          "anchor": "api-function-117da09c90888799",
+          "kind": "function",
+          "name": "enabled",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::enabled",
+          "signature": "bool trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::enabled () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 177,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L177"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-363fc8c3e4771432",
+            "api-function-97411ef09dd69dfd",
+            "api-function-ce232143724075f6",
+            "api-function-d1776a39ce955fee"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-153f1d63238b92f7",
+          "anchor": "api-variable-153f1d63238b92f7",
+          "kind": "variable",
+          "name": "enabled_",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::enabled_",
+          "signature": "bool trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::enabled_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 244,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L244"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-97411ef09dd69dfd",
+          "anchor": "api-function-97411ef09dd69dfd",
+          "kind": "function",
+          "name": "errorUpdate",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::errorUpdate",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::errorUpdate ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 99,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L99"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-117da09c90888799",
+            "api-function-7f8e2efd15fedb82",
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-729b01500d1c1853",
+          "anchor": "api-function-729b01500d1c1853",
+          "kind": "function",
+          "name": "getCurrentAvePosition",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::getCurrentAvePosition",
+          "signature": "float trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::getCurrentAvePosition () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 202,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L202"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-363fc8c3e4771432",
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f29ac88d79e1466c",
+          "anchor": "api-function-f29ac88d79e1466c",
+          "kind": "function",
+          "name": "getCurrentAveVelocity",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::getCurrentAveVelocity",
+          "signature": "float trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::getCurrentAveVelocity () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 210,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L210"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-fdb32a4b855fc1ce",
+          "anchor": "api-function-fdb32a4b855fc1ce",
+          "kind": "function",
+          "name": "getCurrentPosition",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::getCurrentPosition",
+          "signature": "float trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::getCurrentPosition () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 219,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L219"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5f3f0bae35cadf7a",
+          "anchor": "api-function-5f3f0bae35cadf7a",
+          "kind": "function",
+          "name": "getCurrentVelocity",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::getCurrentVelocity",
+          "signature": "float trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::getCurrentVelocity () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 225,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L225"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-variable-9f6fa7ffdb584953"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-773fea85a33ac218",
+          "anchor": "api-function-773fea85a33ac218",
+          "kind": "function",
+          "name": "lock",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::lock",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::lock ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 179,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L179"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-363fc8c3e4771432",
+            "api-function-bd37693c316395da",
+            "api-function-cb857870e7d19059",
+            "api-function-ed27a310d30666d4",
+            "api-function-fb331cde1c07f509"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-76997db6625bbc81",
+          "anchor": "api-variable-76997db6625bbc81",
+          "kind": "variable",
+          "name": "lock_",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::lock_",
+          "signature": "bool trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::lock_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 245,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L245"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-7f8e2efd15fedb82",
+          "anchor": "api-function-7f8e2efd15fedb82",
+          "kind": "function",
+          "name": "locked",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::locked",
+          "signature": "bool trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::locked () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 189,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L189"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-97411ef09dd69dfd",
+            "api-function-ce232143724075f6",
+            "api-function-d1776a39ce955fee"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3584fa08b21edb2c",
+          "anchor": "api-variable-3584fa08b21edb2c",
+          "kind": "variable",
+          "name": "pd_",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::pd_",
+          "signature": "PD trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::pd_[MotorNum] [MotorNum]",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 248,
+            "column": 8,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L248"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ce232143724075f6",
+          "anchor": "api-function-ce232143724075f6",
+          "kind": "function",
+          "name": "profileUpdate",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::profileUpdate",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::profileUpdate ()",
+          "description": "从缓冲区取出一个外部轨迹点作为当前目标。",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 70,
+            "column": 27,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L70"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-117da09c90888799",
+            "api-function-222561eaf31716e9",
+            "api-function-486d37374d13a3c7",
+            "api-function-7f8e2efd15fedb82"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e2d8ae4831142398",
+          "anchor": "api-function-e2d8ae4831142398",
+          "kind": "function",
+          "name": "profileUpdate",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::profileUpdate",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::profileUpdate (const TargetPoint &point)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 92,
+            "column": 27,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L92"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-222561eaf31716e9",
+            "api-struct-231eeeaaaecc6af0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-486d37374d13a3c7",
+          "anchor": "api-function-486d37374d13a3c7",
+          "kind": "function",
+          "name": "profileUpdate",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::profileUpdate",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::profileUpdate (const float dt)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 86,
+            "column": 27,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L86"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-ce232143724075f6"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-cb857870e7d19059",
+          "anchor": "api-function-cb857870e7d19059",
+          "kind": "function",
+          "name": "pushTrajectoryPoint",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::pushTrajectoryPoint",
+          "signature": "bool trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::pushTrajectoryPoint (const TargetPoint &point)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 61,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L61"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-773fea85a33ac218",
+            "api-struct-231eeeaaaecc6af0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-363fc8c3e4771432",
+          "anchor": "api-function-363fc8c3e4771432",
+          "kind": "function",
+          "name": "stop",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::stop",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::stop ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 120,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L120"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-117da09c90888799",
+            "api-function-729b01500d1c1853",
+            "api-function-773fea85a33ac218",
+            "api-function-ed27a310d30666d4",
+            "api-function-fb331cde1c07f509"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-fb0d197deff20180",
+          "anchor": "api-variable-fb0d197deff20180",
+          "kind": "variable",
+          "name": "stopped_",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::stopped_",
+          "signature": "bool trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::stopped_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 246,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L246"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-546641c35bcb8416",
+          "anchor": "api-function-546641c35bcb8416",
+          "kind": "function",
+          "name": "target",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::target",
+          "signature": "TargetPoint trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::target () const",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 191,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L191"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-222561eaf31716e9",
+            "api-struct-231eeeaaaecc6af0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-68eeb9b3ba3dce8e",
+          "anchor": "api-variable-68eeb9b3ba3dce8e",
+          "kind": "variable",
+          "name": "target_",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::target_",
+          "signature": "TargetPoint trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::target_",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 250,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L250"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-struct-231eeeaaaecc6af0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-86ea2f12003653fc",
+          "anchor": "api-function-86ea2f12003653fc",
+          "kind": "function",
+          "name": "unlock",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::unlock",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::unlock ()",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 184,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L184"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-222561eaf31716e9",
+          "anchor": "api-function-222561eaf31716e9",
+          "kind": "function",
+          "name": "updateTarget",
+          "qualifiedName": "trajectory::MotorTrajectorySlave::updateTarget",
+          "signature": "void trajectory::MotorTrajectorySlave< MotorNum, BufferCapacity, Offline >::updateTarget (const TargetPoint &target)",
+          "description": "",
+          "location": {
+            "path": "MotorTrajectory/motor_trajectory_slave.hpp",
+            "line": 233,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/29bd084ccf5d278db2df734fcf6c6841593e28af/MotorTrajectory/motor_trajectory_slave.hpp#L233"
+          },
+          "parentId": "api-class-575b2cf50e3d7e38",
+          "references": [
+            "api-function-546641c35bcb8416",
+            "api-function-ce232143724075f6",
+            "api-function-e2d8ae4831142398",
+            "api-struct-231eeeaaaecc6af0"
+          ],
+          "enumValues": []
+        }
+      ],
+      "symbolCount": 82,
+      "documentedSymbolCount": 10
+    }
+  ]
+}

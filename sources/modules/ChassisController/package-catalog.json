@@ -1,0 +1,100 @@
+{
+  "formatVersion": 1,
+  "moduleId": "ChassisController",
+  "moduleSha": "825f1408280d1b511ac10a73653800d0185bce3a",
+  "packages": [
+    {
+      "name": "ControllerMaster",
+      "pkgname": "Chassis::ControllerMaster",
+      "version": "0.1.0",
+      "manifestPath": "Controller/Master/cpkg.toml",
+      "packagePath": "Controller/Master",
+      "dependencyNames": [
+        "Chassis::Core",
+        "VelocityProfile::SCurve",
+        "libs::PID_PD"
+      ]
+    },
+    {
+      "name": "ControllerSlave",
+      "pkgname": "Chassis::ControllerSlave",
+      "version": "0.1.0",
+      "manifestPath": "Controller/Slave/cpkg.toml",
+      "packagePath": "Controller/Slave",
+      "dependencyNames": [
+        "Chassis::Core",
+        "libs::PID_PD",
+        "libs::RingBuffer"
+      ]
+    },
+    {
+      "name": "Core",
+      "pkgname": "Chassis::Core",
+      "version": "0.1.0",
+      "manifestPath": "Core/cpkg.toml",
+      "packagePath": "Core",
+      "dependencyNames": [
+        "FreeRTOS",
+        "MotorDrivers::Controller"
+      ]
+    },
+    {
+      "name": "Mecanum4",
+      "pkgname": "Chassis::Mecanum4",
+      "version": "0.1.0",
+      "manifestPath": "Chassis/Mecanum4/cpkg.toml",
+      "packagePath": "Chassis/Mecanum4",
+      "dependencyNames": [
+        "Chassis::Core",
+        "FreeRTOS"
+      ]
+    },
+    {
+      "name": "Omni4",
+      "pkgname": "Chassis::Omni4",
+      "version": "0.1.0",
+      "manifestPath": "Chassis/Omni4/cpkg.toml",
+      "packagePath": "Chassis/Omni4",
+      "dependencyNames": [
+        "Chassis::Core",
+        "FreeRTOS"
+      ]
+    },
+    {
+      "name": "Steering4",
+      "pkgname": "Chassis::Steering4",
+      "version": "0.1.0",
+      "manifestPath": "Chassis/Steering4/cpkg.toml",
+      "packagePath": "Chassis/Steering4",
+      "dependencyNames": [
+        "Chassis::Core",
+        "FreeRTOS",
+        "bsp::GPIO_Driver"
+      ]
+    },
+    {
+      "name": "EKF",
+      "pkgname": "ChassisLocalization::EKF",
+      "version": "0.1.0",
+      "manifestPath": "Localization/EKF/cpkg.toml",
+      "packagePath": "Localization/EKF",
+      "dependencyNames": [
+        "Chassis::Core",
+        "Math::EKF",
+        "SensorGyro::HWT101CT",
+        "libs::Concurrency",
+        "libs::Deque"
+      ]
+    },
+    {
+      "name": "JustEncoder",
+      "pkgname": "ChassisLocalization::JustEncoder",
+      "version": "0.1.0",
+      "manifestPath": "Localization/JustEncoder/cpkg.toml",
+      "packagePath": "Localization/JustEncoder",
+      "dependencyNames": [
+        "Chassis::Core"
+      ]
+    }
+  ]
+}

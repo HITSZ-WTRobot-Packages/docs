@@ -1,0 +1,73 @@
+{
+  "formatVersion": 1,
+  "moduleId": "Sensors",
+  "moduleSha": "cea60a9e62e200c18e2d53db2e79766618aa0ecb",
+  "packages": [
+    {
+      "name": "HWT101CT",
+      "pkgname": "SensorGyro::HWT101CT",
+      "version": "0.1.0",
+      "manifestPath": "gyro/HWT101CT/cpkg.toml",
+      "packagePath": "gyro/HWT101CT",
+      "dependencyNames": [
+        "protocol::UartRxSync",
+        "utils"
+      ]
+    },
+    {
+      "name": "JY901S",
+      "pkgname": "SensorGyro::JY901S",
+      "version": "0.1.0",
+      "manifestPath": "gyro/JY901S/cpkg.toml",
+      "packagePath": "gyro/JY901S",
+      "dependencyNames": [
+        "FreeRTOS",
+        "Math::Geometry",
+        "protocol::UartRxSync",
+        "utils"
+      ]
+    },
+    {
+      "name": "DT35",
+      "pkgname": "SensorLaser::DT35",
+      "version": "0.1.0",
+      "manifestPath": "laser/dt35/cpkg.toml",
+      "packagePath": "laser/dt35",
+      "dependencyNames": [
+        "protocol::UartRxSync"
+      ]
+    },
+    {
+      "name": "STP23L",
+      "pkgname": "SensorLaser::STP23L",
+      "version": "0.1.0",
+      "manifestPath": "laser/stp23l/cpkg.toml",
+      "packagePath": "laser/stp23l",
+      "dependencyNames": [
+        "protocol::UartRxSync"
+      ]
+    },
+    {
+      "name": "ActionOPS",
+      "pkgname": "SensorOPS::ActionOPS",
+      "version": "0.1.0",
+      "manifestPath": "ops/ActionOPS/cpkg.toml",
+      "packagePath": "ops/ActionOPS",
+      "dependencyNames": [
+        "FreeRTOS",
+        "protocol::UartRxSync"
+      ]
+    },
+    {
+      "name": "XGZP6847D",
+      "pkgname": "SensorPressure::XGZP6847D",
+      "version": "0.1.0",
+      "manifestPath": "pressure/XGZP6847D/cpkg.toml",
+      "packagePath": "pressure/XGZP6847D",
+      "dependencyNames": [
+        "services::I2CUpdateManager",
+        "stm32cubemx"
+      ]
+    }
+  ]
+}

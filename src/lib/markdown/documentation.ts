@@ -39,6 +39,7 @@ type RewriteContext = {
   module: ModuleSnapshot;
   sourcePath: string;
   fileByPath: ReadonlyMap<string, SnapshotFile>;
+  uncachedReferencePaths: ReadonlySet<string>;
   pageRouteByPath: ReadonlyMap<string, string>;
   resourceRouteByPath: ReadonlyMap<string, string>;
 };
@@ -70,6 +71,16 @@ function rewriteReference(context: RewriteContext, reference: string, property: 
   }
   const file = context.fileByPath.get(resolved);
   if (!file) {
+    if (context.uncachedReferencePaths.has(resolved)) {
+      if (property !== "href") {
+        throw new CatalogDiagnostic(
+          "DOCUMENT_EMBED_TARGET_INVALID",
+          `Embedded documentation target is not cached as a resource: ${reference}`,
+          { module: context.module.id, path: context.sourcePath },
+        );
+      }
+      return `${pinnedUpstreamUrl(context.module, "blob", resolved)}${localSuffix(reference, false)}`;
+    }
     throw new CatalogDiagnostic(
       "DOCUMENT_REFERENCE_MISSING",
       `Documentation reference is not present in the snapshot: ${reference}`,
@@ -319,6 +330,9 @@ export async function loadDocumentationBundle(options: {
       module: definition.module,
       sourcePath,
       fileByPath,
+      uncachedReferencePaths: new Set(
+        definition.module.references.map((reference) => reference.path),
+      ),
       pageRouteByPath,
       resourceRouteByPath,
     });

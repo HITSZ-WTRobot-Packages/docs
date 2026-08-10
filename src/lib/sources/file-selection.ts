@@ -6,8 +6,7 @@ import { glob } from "tinyglobby";
 
 import { discoverMarkdownReferences } from "../markdown/references";
 import { SyncDiagnostic } from "./diagnostic";
-import type { ModuleSnapshot, SnapshotFileKind } from "./manifest";
-import type { ModuleConfig } from "./modules";
+import type { ModuleSnapshot, SnapshotFile, SnapshotFileKind } from "./manifest";
 import {
   isMarkdownPath,
   isReadmePath,
@@ -28,8 +27,17 @@ export const DEFAULT_SNAPSHOT_LIMITS: SnapshotLimits = {
 };
 
 export type SelectionResult = {
-  paths: string[];
+  contentPaths: string[];
+  packageManifestPaths: string[];
+  sourcePaths: string[];
+  references: string[];
   warnings: ModuleSnapshot["warnings"];
+};
+
+export type SnapshotContent = {
+  files: SnapshotFile[];
+  licenseFiles: string[];
+  totalBytes: number;
 };
 
 const SOURCE_PATTERN = "**/*.{c,cc,cpp,cxx,h,hh,hpp,hxx,inl,ipp}";
@@ -57,26 +65,14 @@ function isLicensePath(value: string): boolean {
   return /^(?:copying|licen[cs]e)(?:\..+)?$/iu.test(path.posix.basename(value));
 }
 
-function isSourcePath(value: string): boolean {
+export function isSourcePath(value: string): boolean {
   return /\.(?:c|cc|cpp|cxx|h|hh|hpp|hxx|inl|ipp)$/iu.test(value);
 }
 
-function classifyPath(value: string): SnapshotFileKind {
-  if (path.posix.basename(value) === "cpkg.toml") {
-    return "manifest";
-  }
-  if (isLicensePath(value)) {
-    return "license";
-  }
-  if (isReadmePath(value)) {
-    return "readme";
-  }
-  if (isMarkdownPath(value)) {
-    return "markdown";
-  }
-  if (isSourcePath(value)) {
-    return "source";
-  }
+function classifyContentPath(value: string): SnapshotFileKind {
+  if (isLicensePath(value)) return "license";
+  if (isReadmePath(value)) return "readme";
+  if (isMarkdownPath(value)) return "markdown";
   return "asset";
 }
 
@@ -105,21 +101,15 @@ async function resolveExistingReference(
     throw new SyncDiagnostic(
       "SNAPSHOT_SYMLINK_FORBIDDEN",
       `Snapshot references may not select symlinks: ${referencePath}`,
-      {
-        path: sourcePath,
-      },
+      { path: sourcePath },
     );
   }
-  if (stats.isFile()) {
-    return referencePath;
-  }
+  if (stats.isFile()) return referencePath;
   if (!stats.isDirectory()) {
     throw new SyncDiagnostic(
       "SNAPSHOT_REFERENCE_INVALID",
       `Markdown reference is not a regular file: ${referencePath}`,
-      {
-        path: sourcePath,
-      },
+      { path: sourcePath },
     );
   }
 
@@ -153,31 +143,29 @@ export async function discoverSnapshotFiles(cloneRoot: string): Promise<Selectio
     ignore: DISCOVERY_IGNORES,
   });
 
-  const selected = new Map<string, boolean>();
+  const contentPaths = new Set<string>();
+  const packageManifestPaths = new Set<string>();
+  const sourcePaths = new Set<string>();
+  const references = new Set<string>();
   const markdownQueue: string[] = [];
   const parsedMarkdown = new Set<string>();
 
   for (const discoveredPath of discovered) {
     const relativePath = normalizeSnapshotPath(discoveredPath);
     const basename = path.posix.basename(relativePath);
-    if (
-      basename === "cpkg.toml" ||
-      isReadmePath(relativePath) ||
-      isLicensePath(relativePath) ||
-      isSourcePath(relativePath)
-    ) {
-      selected.set(relativePath, false);
-      if (isReadmePath(relativePath) || isMarkdownPath(relativePath)) {
-        markdownQueue.push(relativePath);
-      }
+    if (basename === "cpkg.toml") {
+      packageManifestPaths.add(relativePath);
+    } else if (isSourcePath(relativePath)) {
+      sourcePaths.add(relativePath);
+    } else if (isReadmePath(relativePath) || isLicensePath(relativePath)) {
+      contentPaths.add(relativePath);
+      if (isReadmePath(relativePath)) markdownQueue.push(relativePath);
     }
   }
 
   while (markdownQueue.length > 0) {
     const markdownPath = markdownQueue.shift();
-    if (!markdownPath || parsedMarkdown.has(markdownPath)) {
-      continue;
-    }
+    if (!markdownPath || parsedMarkdown.has(markdownPath)) continue;
     parsedMarkdown.add(markdownPath);
 
     let markdown: string;
@@ -187,22 +175,20 @@ export async function discoverSnapshotFiles(cloneRoot: string): Promise<Selectio
       throw new SyncDiagnostic(
         "SNAPSHOT_MARKDOWN_INVALID",
         `Unable to read Markdown as UTF-8: ${markdownPath}`,
-        {
-          path: markdownPath,
-        },
+        { path: markdownPath },
         { cause: error },
       );
     }
 
     for (const reference of discoverMarkdownReferences(markdown)) {
       const resolved = resolveMarkdownReference(markdownPath, reference);
-      if (!resolved) {
+      if (!resolved) continue;
+      const referencePath = await resolveExistingReference(cloneRoot, markdownPath, resolved);
+      if (isSourcePath(referencePath) || path.posix.basename(referencePath) === "cpkg.toml") {
+        references.add(referencePath);
         continue;
       }
-      const referencePath = await resolveExistingReference(cloneRoot, markdownPath, resolved);
-      if (!selected.has(referencePath)) {
-        selected.set(referencePath, true);
-      }
+      contentPaths.add(referencePath);
       if (
         (isReadmePath(referencePath) || isMarkdownPath(referencePath)) &&
         !parsedMarkdown.has(referencePath)
@@ -212,101 +198,102 @@ export async function discoverSnapshotFiles(cloneRoot: string): Promise<Selectio
     }
   }
 
-  const paths = [...selected.keys()].sort(compareStrings);
   const warnings: ModuleSnapshot["warnings"] = [];
-  if (!paths.some((selectedPath) => path.posix.basename(selectedPath) === "cpkg.toml")) {
+  if (packageManifestPaths.size === 0) {
     warnings.push({
       code: "PACKAGE_MANIFEST_MISSING",
       message: "No cpkg.toml package manifest was found in the synchronized module.",
     });
   }
-  if (!paths.some(isReadmePath)) {
+  if (![...contentPaths].some(isReadmePath)) {
     warnings.push({
       code: "README_MISSING",
       message: "No upstream README was found in the synchronized module.",
     });
   }
-  if (!paths.some(isLicensePath)) {
+  if (![...contentPaths].some(isLicensePath)) {
     warnings.push({
       code: "LICENSE_MISSING",
       message: "No upstream license file was found in the synchronized module.",
     });
   }
   warnings.sort((left, right) => compareStrings(left.code, right.code));
-  return { paths, warnings };
+  return {
+    contentPaths: [...contentPaths].sort(compareStrings),
+    packageManifestPaths: [...packageManifestPaths].sort(compareStrings),
+    sourcePaths: [...sourcePaths].sort(compareStrings),
+    references: [...references].sort(compareStrings),
+    warnings,
+  };
 }
 
 export async function copySnapshotFiles(options: {
   cloneRoot: string;
   candidateRoot: string;
-  module: ModuleConfig;
-  sha: string;
   selection: SelectionResult;
   limits?: SnapshotLimits;
-}): Promise<ModuleSnapshot> {
+}): Promise<SnapshotContent> {
   const limits = options.limits ?? DEFAULT_SNAPSHOT_LIMITS;
-  if (options.selection.paths.length > limits.maxFiles) {
+  const allInputPaths = [
+    ...new Set([
+      ...options.selection.contentPaths,
+      ...options.selection.packageManifestPaths,
+      ...options.selection.sourcePaths,
+      ...options.selection.references,
+    ]),
+  ].sort(compareStrings);
+  if (allInputPaths.length > limits.maxFiles) {
     throw new SyncDiagnostic(
       "SNAPSHOT_SIZE_LIMIT",
-      `Module selects ${options.selection.paths.length} files, exceeding the limit of ${limits.maxFiles}.`,
-      { module: options.module.id },
+      `Module selects ${allInputPaths.length} files, exceeding the limit of ${limits.maxFiles}.`,
     );
   }
 
-  const files: ModuleSnapshot["files"] = [];
-  let totalBytes = 0;
-  for (const relativePath of options.selection.paths) {
-    const sourcePath = toNativePath(options.cloneRoot, relativePath);
-    const stats = await lstat(sourcePath);
+  for (const relativePath of allInputPaths) {
+    const stats = await lstat(toNativePath(options.cloneRoot, relativePath));
     if (stats.isSymbolicLink() || !stats.isFile()) {
       throw new SyncDiagnostic(
         "SNAPSHOT_SYMLINK_FORBIDDEN",
         `Snapshot input is not a regular file: ${relativePath}`,
-        {
-          module: options.module.id,
-          path: relativePath,
-        },
+        { path: relativePath },
       );
     }
     if (stats.size > limits.maxFileBytes) {
       throw new SyncDiagnostic(
         "SNAPSHOT_SIZE_LIMIT",
         `Snapshot file exceeds ${limits.maxFileBytes} bytes: ${relativePath}`,
-        { module: options.module.id, path: relativePath },
+        { path: relativePath },
       );
     }
-    totalBytes += stats.size;
+  }
+
+  const files: SnapshotFile[] = [];
+  let totalBytes = 0;
+  for (const relativePath of options.selection.contentPaths) {
+    const sourcePath = toNativePath(options.cloneRoot, relativePath);
+    const contents = await readFile(sourcePath);
+    totalBytes += contents.byteLength;
     if (totalBytes > limits.maxModuleBytes) {
       throw new SyncDiagnostic(
         "SNAPSHOT_SIZE_LIMIT",
         `Module snapshot exceeds ${limits.maxModuleBytes} bytes.`,
-        { module: options.module.id },
       );
     }
 
-    const destinationPath = toNativePath(options.candidateRoot, relativePath);
+    const destinationPath = toNativePath(path.join(options.candidateRoot, "content"), relativePath);
     await mkdir(path.dirname(destinationPath), { recursive: true });
     await copyFile(sourcePath, destinationPath);
-    const contents = await readFile(sourcePath);
     files.push({
       path: relativePath,
-      bytes: stats.size,
+      bytes: contents.byteLength,
       sha256: createHash("sha256").update(contents).digest("hex"),
-      kind: classifyPath(relativePath),
+      kind: classifyContentPath(relativePath),
     });
   }
 
-  const licenseFiles = files.filter((file) => file.kind === "license").map((file) => file.path);
   return {
-    id: options.module.id,
-    displayName: options.module.displayName,
-    repository: options.module.repository,
-    branch: options.module.branch,
-    sha: options.sha,
-    shortSha: options.sha.slice(0, 12),
-    totalBytes,
     files,
-    licenseFiles,
-    warnings: options.selection.warnings,
+    licenseFiles: files.filter((file) => file.kind === "license").map((file) => file.path),
+    totalBytes,
   };
 }

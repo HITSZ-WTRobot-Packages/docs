@@ -16,15 +16,35 @@ import path from "node:path";
 import { glob } from "tinyglobby";
 
 import {
+  buildModulePackageCatalog,
+  buildPackageCatalogFromModules,
+  serializeModulePackageCatalog,
+  type CpkgDocument,
+} from "../../src/lib/catalog/catalog";
+import { loadModulePackageCatalog } from "../../src/lib/catalog/loader";
+import type { ModulePackageCatalog, PackageCatalog } from "../../src/lib/catalog/schema";
+import {
+  assertDoxygenVersion,
+  generateModuleApiCatalog,
+  serializeApiCatalog,
+} from "../../src/lib/doxygen/generator";
+import { loadModuleApiCatalog } from "../../src/lib/doxygen/loader";
+import { ApiCatalogSchema, type ApiCatalog } from "../../src/lib/doxygen/schema";
+import {
   copySnapshotFiles,
+  DEFAULT_SNAPSHOT_LIMITS,
   discoverSnapshotFiles,
+  type SelectionResult,
   type SnapshotLimits,
 } from "../../src/lib/sources/file-selection";
 import {
-  type ModuleSnapshot,
+  ModuleSnapshotSchema,
   normalizeSourceManifest,
   readSourceManifest,
   serializeSourceManifest,
+  type ModuleSnapshot,
+  type SnapshotArtifact,
+  type SnapshotArtifactKind,
   type SourceManifest,
 } from "../../src/lib/sources/manifest";
 import { findModule, MODULES, type ModuleConfig } from "../../src/lib/sources/modules";
@@ -64,14 +84,28 @@ export type SynchronizerOptions = {
   modules?: readonly ModuleConfig[];
   gitClient?: GitClient;
   limits?: SnapshotLimits;
+  doxygenExecutable?: string;
 };
 
 type CandidateSnapshot = {
   module: ModuleConfig;
+  cloneRoot: string;
   root: string;
+  selection: SelectionResult;
   snapshot: ModuleSnapshot;
+  packageCatalog: ModulePackageCatalog;
+  apiCatalog?: ApiCatalog;
   changed: boolean;
 };
+
+const PRODUCER_INPUT_PATTERNS = [
+  ".doxygen-version",
+  "scripts/sync/**/*.ts",
+  "src/lib/catalog/**/*.ts",
+  "src/lib/doxygen/**/*.ts",
+  "src/lib/markdown/**/*.ts",
+  "src/lib/sources/**/*.ts",
+];
 
 function compareStrings(left: string, right: string): number {
   return left < right ? -1 : left > right ? 1 : 0;
@@ -85,15 +119,79 @@ function toNativePath(root: string, relativePath: string): string {
   return path.join(root, ...relativePath.split("/"));
 }
 
+function artifactPath(kind: SnapshotArtifactKind): SnapshotArtifact["path"] {
+  return `${kind}.json`;
+}
+
+function placeholderArtifact(kind: SnapshotArtifactKind): SnapshotArtifact {
+  return { kind, path: artifactPath(kind), bytes: 0, sha256: "0".repeat(64) };
+}
+
+function replaceArtifact(snapshot: ModuleSnapshot, artifact: SnapshotArtifact): ModuleSnapshot {
+  const artifacts = snapshot.artifacts.map((entry) =>
+    entry.kind === artifact.kind ? artifact : entry,
+  );
+  return ModuleSnapshotSchema.parse({
+    ...snapshot,
+    artifacts,
+    totalBytes:
+      snapshot.files.reduce((total, file) => total + file.bytes, 0) +
+      artifacts.reduce((total, entry) => total + entry.bytes, 0),
+  });
+}
+
+async function writeArtifact(options: {
+  candidateRoot: string;
+  kind: SnapshotArtifactKind;
+  contents: string;
+  limits: SnapshotLimits;
+}): Promise<SnapshotArtifact> {
+  const bytes = Buffer.byteLength(options.contents);
+  if (bytes > options.limits.maxFileBytes) {
+    throw new SyncDiagnostic(
+      "SNAPSHOT_SIZE_LIMIT",
+      `${options.kind} artifact exceeds ${options.limits.maxFileBytes} bytes.`,
+    );
+  }
+  const artifact: SnapshotArtifact = {
+    kind: options.kind,
+    path: artifactPath(options.kind),
+    bytes,
+    sha256: createHash("sha256").update(options.contents).digest("hex"),
+  };
+  await writeFile(path.join(options.candidateRoot, artifact.path), options.contents, "utf8");
+  return artifact;
+}
+
+async function producerFingerprint(
+  repositoryRoot: string,
+  doxygenVersion: string,
+): Promise<string> {
+  const paths = (
+    await glob(PRODUCER_INPUT_PATTERNS, {
+      cwd: repositoryRoot,
+      onlyFiles: true,
+      dot: true,
+      followSymbolicLinks: false,
+    })
+  ).sort(compareStrings);
+  const digest = createHash("sha256").update(`doxygen:${doxygenVersion}\0`);
+  for (const relativePath of paths) {
+    digest
+      .update(relativePath)
+      .update("\0")
+      .update(await readFile(path.join(repositoryRoot, relativePath)));
+  }
+  return digest.digest("hex");
+}
+
 async function currentSnapshotMatches(
   sourcesRoot: string,
   snapshot: ModuleSnapshot,
 ): Promise<boolean> {
   const moduleRoot = path.join(sourcesRoot, "modules", snapshot.id);
   try {
-    if (!(await lstat(moduleRoot)).isDirectory()) {
-      return false;
-    }
+    if (!(await lstat(moduleRoot)).isDirectory()) return false;
   } catch {
     return false;
   }
@@ -106,23 +204,22 @@ async function currentSnapshotMatches(
       followSymbolicLinks: false,
     })
   ).sort(compareStrings);
-  const expectedPaths = snapshot.files.map((file) => file.path).sort(compareStrings);
-  if (JSON.stringify(currentPaths) !== JSON.stringify(expectedPaths)) {
+  const expected = [
+    ...snapshot.files.map((file) => ({ ...file, storedPath: `content/${file.path}` })),
+    ...snapshot.artifacts.map((artifact) => ({ ...artifact, storedPath: artifact.path })),
+  ].sort((left, right) => compareStrings(left.storedPath, right.storedPath));
+  if (JSON.stringify(currentPaths) !== JSON.stringify(expected.map((entry) => entry.storedPath))) {
     return false;
   }
 
-  for (const file of snapshot.files) {
-    const nativePath = toNativePath(moduleRoot, file.path);
+  for (const file of expected) {
+    const nativePath = toNativePath(moduleRoot, file.storedPath);
     const stats = await lstat(nativePath);
-    if (!stats.isFile() || stats.isSymbolicLink() || stats.size !== file.bytes) {
-      return false;
-    }
+    if (!stats.isFile() || stats.isSymbolicLink() || stats.size !== file.bytes) return false;
     const digest = createHash("sha256")
       .update(await readFile(nativePath))
       .digest("hex");
-    if (digest !== file.sha256) {
-      return false;
-    }
+    if (digest !== file.sha256) return false;
   }
   return true;
 }
@@ -134,18 +231,19 @@ function mergeManifest(
 ): SourceManifest {
   if (request.mode === "all") {
     return normalizeSourceManifest({
-      formatVersion: 1,
+      formatVersion: 2,
       modules: candidates.map((candidate) => candidate.snapshot),
     });
   }
-
   const replacements = new Map(
     candidates.map((candidate) => [candidate.module.id, candidate.snapshot]),
   );
-  const modules = existing.modules
-    .filter((module) => !replacements.has(module.id))
-    .concat([...replacements.values()]);
-  return normalizeSourceManifest({ formatVersion: 1, modules });
+  return normalizeSourceManifest({
+    formatVersion: 2,
+    modules: existing.modules
+      .filter((module) => !replacements.has(module.id))
+      .concat([...replacements.values()]),
+  });
 }
 
 async function commitCandidates(
@@ -154,9 +252,7 @@ async function commitCandidates(
   manifest: SourceManifest,
 ): Promise<void> {
   const changedCandidates = candidates.filter((candidate) => candidate.changed);
-  if (changedCandidates.length === 0) {
-    return;
-  }
+  if (changedCandidates.length === 0) return;
 
   const transactionParent = path.join(sourcesRoot, ".sync-tmp");
   const transactionRoot = path.join(transactionParent, randomUUID());
@@ -194,9 +290,7 @@ async function commitCandidates(
           hadPrevious = true;
           await rename(target, backup);
         } catch (error) {
-          if ((error as NodeJS.ErrnoException).code !== "ENOENT") {
-            throw error;
-          }
+          if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
         }
         swapped.push({ target, backup, hadPrevious });
         await rename(path.join(stagedRoot, candidate.module.id), target);
@@ -207,24 +301,16 @@ async function commitCandidates(
         hadManifest = true;
         await rename(manifestPath, backupManifestPath);
       } catch (error) {
-        if ((error as NodeJS.ErrnoException).code !== "ENOENT") {
-          throw error;
-        }
+        if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
       }
       await rename(stagedManifestPath, manifestPath);
       manifestInstalled = true;
     } catch (error) {
-      if (manifestInstalled) {
-        await rm(manifestPath, { force: true });
-      }
-      if (hadManifest) {
-        await rename(backupManifestPath, manifestPath);
-      }
+      if (manifestInstalled) await rm(manifestPath, { force: true });
+      if (hadManifest) await rename(backupManifestPath, manifestPath);
       for (const swap of swapped.reverse()) {
         await rm(swap.target, { recursive: true, force: true });
-        if (swap.hadPrevious) {
-          await rename(swap.backup, swap.target);
-        }
+        if (swap.hadPrevious) await rename(swap.backup, swap.target);
       }
       throw error;
     }
@@ -242,9 +328,7 @@ function selectModules(
   request: SyncRequest,
   modules: readonly ModuleConfig[],
 ): readonly ModuleConfig[] {
-  if (request.mode !== "module") {
-    return modules;
-  }
+  if (request.mode !== "module") return modules;
   if (!request.module) {
     throw new SyncDiagnostic("CLI_INVALID_ARGUMENT", "Module mode requires --module <name>.");
   }
@@ -257,6 +341,92 @@ function selectModules(
   return [selected];
 }
 
+async function readPackageDocuments(
+  cloneRoot: string,
+  moduleId: string,
+  selection: SelectionResult,
+): Promise<CpkgDocument[]> {
+  return Promise.all(
+    selection.packageManifestPaths.map(async (filePath) => ({
+      moduleId,
+      filePath,
+      contents: await readFile(toNativePath(cloneRoot, filePath), "utf8"),
+    })),
+  );
+}
+
+async function collectModulePackageCatalogs(
+  sourcesRoot: string,
+  manifest: SourceManifest,
+  candidates: readonly CandidateSnapshot[],
+): Promise<ModulePackageCatalog[]> {
+  const byId = new Map(candidates.map((candidate) => [candidate.module.id, candidate]));
+  return Promise.all(
+    manifest.modules.map(async (module) => {
+      const candidate = byId.get(module.id);
+      return candidate?.packageCatalog ?? loadModulePackageCatalog(sourcesRoot, module);
+    }),
+  );
+}
+
+async function collectModuleApiCatalogs(
+  sourcesRoot: string,
+  manifest: SourceManifest,
+  candidates: readonly CandidateSnapshot[],
+): Promise<ApiCatalog[]> {
+  const byId = new Map(candidates.map((candidate) => [candidate.module.id, candidate]));
+  return Promise.all(
+    manifest.modules.map(async (module) => {
+      const candidate = byId.get(module.id);
+      return candidate?.apiCatalog ?? loadModuleApiCatalog(sourcesRoot, module);
+    }),
+  );
+}
+
+function validateApiCatalogs(
+  manifest: SourceManifest,
+  packageCatalog: PackageCatalog,
+  moduleCatalogs: readonly ApiCatalog[],
+  doxygenVersion: string,
+): void {
+  const references = ApiCatalogSchema.parse({
+    formatVersion: 1,
+    doxygenVersion,
+    references: moduleCatalogs.flatMap((catalog) => {
+      if (catalog.doxygenVersion !== doxygenVersion) {
+        throw new SyncDiagnostic(
+          "DOXYGEN_VERSION_MISMATCH",
+          `Module API data uses Doxygen ${catalog.doxygenVersion}; expected ${doxygenVersion}.`,
+        );
+      }
+      return catalog.references;
+    }),
+  }).references;
+  const moduleById = new Map(manifest.modules.map((module) => [module.id, module]));
+  const targetKeys = new Set<string>();
+  for (const reference of references) {
+    const module = moduleById.get(reference.moduleId);
+    const key = `${reference.targetKind}:${reference.targetId}`;
+    if (!module || module.sha !== reference.moduleSha || targetKeys.has(key)) {
+      throw new SyncDiagnostic(
+        "DOXYGEN_OUTPUT_INVALID",
+        `API reference does not match the synchronized module graph: ${key}.`,
+        { module: reference.moduleId },
+      );
+    }
+    targetKeys.add(key);
+  }
+  for (const entry of packageCatalog.packages) {
+    if (!targetKeys.has(`package:${entry.slug}`)) {
+      throw new SyncDiagnostic(
+        "DOXYGEN_OUTPUT_INVALID",
+        `Package API reference is missing: ${entry.pkgname}.`,
+        { module: entry.moduleId },
+      );
+    }
+  }
+}
+
 export async function synchronize(
   request: SyncRequest,
   options: SynchronizerOptions = {},
@@ -267,7 +437,13 @@ export async function synchronize(
   const sourcesRoot = path.join(repositoryRoot, "sources");
   const modules = options.modules ?? MODULES;
   const gitClient = options.gitClient ?? new SimpleGitClient();
-  const existingManifest = await readSourceManifest(sourcesRoot);
+  const limits = options.limits ?? DEFAULT_SNAPSHOT_LIMITS;
+  const executable = options.doxygenExecutable ?? "doxygen";
+  const [existingManifest, doxygenVersion] = await Promise.all([
+    readSourceManifest(sourcesRoot, { allowLegacyMigration: true }),
+    assertDoxygenVersion(repositoryRoot, executable),
+  ]);
+  const fingerprint = await producerFingerprint(repositoryRoot, doxygenVersion);
   const existingById = new Map(existingManifest.modules.map((module) => [module.id, module]));
   const selectedModules = selectModules(request, modules);
   const runRoot = await mkdtemp(path.join(tmpdir(), "wtr-docs-sync-"));
@@ -279,7 +455,11 @@ export async function synchronize(
       const existing = existingById.get(module.id);
       if (request.mode === "changed") {
         const remoteSha = await gitClient.resolveRevision(module);
-        if (existing?.sha === remoteSha && (await currentSnapshotMatches(sourcesRoot, existing))) {
+        if (
+          existing?.sha === remoteSha &&
+          existing.producerFingerprint === fingerprint &&
+          (await currentSnapshotMatches(sourcesRoot, existing))
+        ) {
           results.push({
             id: module.id,
             status: "skipped",
@@ -295,33 +475,103 @@ export async function synchronize(
       const cloneRoot = path.join(runRoot, "clones", module.id);
       const candidateRoot = path.join(runRoot, "candidates", module.id);
       await mkdir(path.dirname(cloneRoot), { recursive: true });
+      await mkdir(candidateRoot, { recursive: true });
       const sha = await gitClient.clone(module, cloneRoot);
       const selection = await discoverSnapshotFiles(cloneRoot);
-      const snapshot = await copySnapshotFiles({
+      const content = await copySnapshotFiles({
         cloneRoot,
         candidateRoot,
-        module,
-        sha,
         selection,
-        ...(options.limits ? { limits: options.limits } : {}),
+        limits,
       });
-      const changed =
-        !moduleEquals(existing, snapshot) || !(await currentSnapshotMatches(sourcesRoot, snapshot));
-      candidates.push({ module, root: candidateRoot, snapshot, changed });
-      results.push({
+      let snapshot: ModuleSnapshot = {
         id: module.id,
-        status: changed ? (request.dryRun ? "would-change" : "changed") : "unchanged",
+        displayName: module.displayName,
+        repository: module.repository,
+        branch: module.branch,
         sha,
-        files: snapshot.files.length,
-        bytes: snapshot.totalBytes,
-        warnings: snapshot.warnings,
+        shortSha: sha.slice(0, 12),
+        producerFingerprint: fingerprint,
+        totalBytes: content.totalBytes,
+        files: content.files,
+        artifacts: [placeholderArtifact("api-catalog"), placeholderArtifact("package-catalog")],
+        references: selection.references.map((referencePath) => ({ path: referencePath })),
+        licenseFiles: content.licenseFiles,
+        warnings: selection.warnings,
+      };
+      const packageCatalog = buildModulePackageCatalog(
+        snapshot,
+        await readPackageDocuments(cloneRoot, module.id, selection),
+      );
+      const packageArtifact = await writeArtifact({
+        candidateRoot,
+        kind: "package-catalog",
+        contents: serializeModulePackageCatalog(packageCatalog),
+        limits,
+      });
+      snapshot = replaceArtifact(snapshot, packageArtifact);
+      candidates.push({
+        module,
+        cloneRoot,
+        root: candidateRoot,
+        selection,
+        snapshot,
+        packageCatalog,
+        changed: false,
+      });
+    }
+
+    const packageManifest = mergeManifest(existingManifest, candidates, request);
+    const modulePackageCatalogs = await collectModulePackageCatalogs(
+      sourcesRoot,
+      packageManifest,
+      candidates,
+    );
+    const packageCatalog = buildPackageCatalogFromModules(packageManifest, modulePackageCatalogs);
+
+    for (const candidate of candidates) {
+      const apiCatalog = await generateModuleApiCatalog({
+        repositoryRoot,
+        moduleRoot: candidate.cloneRoot,
+        module: candidate.snapshot,
+        packageCatalog,
+        sourcePaths: candidate.selection.sourcePaths,
+        executable,
+        doxygenVersion,
+      });
+      const apiArtifact = await writeArtifact({
+        candidateRoot: candidate.root,
+        kind: "api-catalog",
+        contents: serializeApiCatalog(apiCatalog),
+        limits,
+      });
+      candidate.snapshot = replaceArtifact(candidate.snapshot, apiArtifact);
+      if (candidate.snapshot.totalBytes > limits.maxModuleBytes) {
+        throw new SyncDiagnostic(
+          "SNAPSHOT_SIZE_LIMIT",
+          `Module snapshot exceeds ${limits.maxModuleBytes} bytes after generated artifacts.`,
+          { module: candidate.module.id },
+        );
+      }
+      candidate.apiCatalog = apiCatalog;
+      const existing = existingById.get(candidate.module.id);
+      candidate.changed =
+        !moduleEquals(existing, candidate.snapshot) ||
+        !(await currentSnapshotMatches(sourcesRoot, candidate.snapshot));
+      results.push({
+        id: candidate.module.id,
+        status: candidate.changed ? (request.dryRun ? "would-change" : "changed") : "unchanged",
+        sha: candidate.snapshot.sha,
+        files: candidate.snapshot.files.length,
+        bytes: candidate.snapshot.totalBytes,
+        warnings: candidate.snapshot.warnings,
       });
     }
 
     const nextManifest = mergeManifest(existingManifest, candidates, request);
-    if (!request.dryRun) {
-      await commitCandidates(sourcesRoot, candidates, nextManifest);
-    }
+    const moduleApiCatalogs = await collectModuleApiCatalogs(sourcesRoot, nextManifest, candidates);
+    validateApiCatalogs(nextManifest, packageCatalog, moduleApiCatalogs, doxygenVersion);
+    if (!request.dryRun) await commitCandidates(sourcesRoot, candidates, nextManifest);
   } catch (error) {
     throw toSyncDiagnostic(
       error,
@@ -332,6 +582,7 @@ export async function synchronize(
     await rm(runRoot, { recursive: true, force: true });
   }
 
+  results.sort((left, right) => compareStrings(left.id, right.id));
   return {
     mode: request.mode,
     dryRun: request.dryRun,

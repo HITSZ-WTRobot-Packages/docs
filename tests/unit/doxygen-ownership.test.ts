@@ -9,7 +9,7 @@ const SHA = "1234567890abcdef1234567890abcdef12345678";
 describe("Doxygen source ownership", () => {
   test("assigns each source to the deepest package and retains unclaimed module sources", () => {
     const sourceManifest: SourceManifest = {
-      formatVersion: 1,
+      formatVersion: 2,
       modules: [
         {
           id: "Fixture",
@@ -18,17 +18,19 @@ describe("Doxygen source ownership", () => {
           branch: "main",
           sha: SHA,
           shortSha: SHA.slice(0, 12),
-          totalBytes: 3,
-          files: [
-            { path: "root.hpp", bytes: 1, sha256: "0".repeat(64), kind: "source" },
-            { path: "packages/base/base.hpp", bytes: 1, sha256: "1".repeat(64), kind: "source" },
+          producerFingerprint: "f".repeat(64),
+          totalBytes: 0,
+          files: [],
+          artifacts: [
+            { path: "api-catalog.json", bytes: 0, sha256: "a".repeat(64), kind: "api-catalog" },
             {
-              path: "packages/base/nested/nested.hpp",
-              bytes: 1,
-              sha256: "2".repeat(64),
-              kind: "source",
+              path: "package-catalog.json",
+              bytes: 0,
+              sha256: "b".repeat(64),
+              kind: "package-catalog",
             },
           ],
+          references: [],
           licenseFiles: [],
           warnings: [],
         },
@@ -82,7 +84,13 @@ describe("Doxygen source ownership", () => {
       ],
     };
 
-    const targets = buildApiTargets(sourceManifest, catalog);
+    const targets = buildApiTargets(
+      sourceManifest,
+      catalog,
+      new Map([
+        ["Fixture", ["root.hpp", "packages/base/base.hpp", "packages/base/nested/nested.hpp"]],
+      ]),
+    );
     expect(targets.find((target) => target.targetId === "fixture--base")?.inputPaths).toEqual([
       "packages/base/base.hpp",
     ]);

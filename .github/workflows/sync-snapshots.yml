@@ -52,6 +52,16 @@ jobs:
       - name: Set up documentation toolchain
         uses: ./.github/actions/setup-docs-toolchain
 
+      - name: Read locked Doxygen version
+        id: doxygen-version
+        shell: bash
+        run: echo "version=$(tr -d '[:space:]' < .doxygen-version)" >> "${GITHUB_OUTPUT}"
+
+      - name: Set up Doxygen
+        uses: ssciwr/doxygen-install@b5b80f5a60852f72d3c33f47fee9ddfb84a25929 # v2
+        with:
+          version: ${{ steps.doxygen-version.outputs.version }}
+
       - name: Synchronize through the repository CLI
         id: request
         run: bun run sync:action

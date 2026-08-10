@@ -1,5 +1,0 @@
-format_version = 1
-name = "MotorTrajectory"
-pkgname = "Trajectory::MotorTrajectory"
-version = "0.1.0"
-dependencies = ["MotorDrivers::Controller", "VelocityProfile::SCurve", "libs::PID_PD", "utils"]

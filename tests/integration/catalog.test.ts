@@ -7,7 +7,7 @@ import {
 import { loadPackageCatalog } from "../../src/lib/catalog/loader";
 
 describe("real snapshot catalog", () => {
-  test("discovers every manifest and resolves the complete dependency graph offline", async () => {
+  test("loads every persisted module catalog and resolves the dependency graph offline", async () => {
     const first = await loadPackageCatalog();
     const second = await loadPackageCatalog();
 

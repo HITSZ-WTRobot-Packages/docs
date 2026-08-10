@@ -1,20 +1,22 @@
 import path from "node:path";
 
 import { parse } from "smol-toml";
+import { z } from "zod";
 
 import {
   SourceManifestSchema,
   type ModuleSnapshot,
-  type SnapshotFile,
   type SourceManifest,
 } from "../sources/manifest";
 import { pinnedUpstreamUrl } from "../sources/upstream-url";
 import { CatalogDiagnostic } from "./diagnostic";
 import {
   CpkgManifestSchema,
+  ModulePackageCatalogSchema,
   PackageCatalogSchema,
   type CatalogDependency,
   type CatalogPackage,
+  type ModulePackageCatalog,
   type PackageCatalog,
 } from "./schema";
 import { catalogSlug } from "./slugs";
@@ -37,10 +39,6 @@ type PackageDraft = Omit<CatalogPackage, "dependencies" | "reverseDependencies">
 
 function compareStrings(left: string, right: string): number {
   return left < right ? -1 : left > right ? 1 : 0;
-}
-
-function documentKey(moduleId: string, filePath: string): string {
-  return `${moduleId}/${filePath}`;
 }
 
 function parseManifest(document: CpkgDocument) {
@@ -67,18 +65,79 @@ function parseManifest(document: CpkgDocument) {
   return result.data;
 }
 
-function expectedManifestFiles(manifest: SourceManifest): Array<{
-  module: ModuleSnapshot;
-  file: SnapshotFile;
-}> {
-  return manifest.modules.flatMap((module) =>
-    module.files.filter((file) => file.kind === "manifest").map((file) => ({ module, file })),
-  );
+export function buildModulePackageCatalog(
+  moduleInput: ModuleSnapshot,
+  documentsInput: readonly CpkgDocument[],
+): ModulePackageCatalog {
+  const moduleResult = z
+    .object({
+      id: z.string().min(1),
+      sha: z.string().regex(/^[a-f0-9]{40}$/u),
+    })
+    .safeParse(moduleInput);
+  if (!moduleResult.success) {
+    throw new CatalogDiagnostic(
+      "CATALOG_SOURCE_INVALID",
+      "The module snapshot does not satisfy the catalog input contract.",
+      { module: moduleInput.id },
+      { cause: moduleResult.error },
+    );
+  }
+  const module = moduleInput;
+  const paths = new Set<string>();
+  const packageNames = new Set<string>();
+  const packages = documentsInput.map((document) => {
+    if (document.moduleId !== module.id) {
+      throw new CatalogDiagnostic(
+        "CATALOG_DOCUMENT_SET_INVALID",
+        `cpkg document belongs to another module: ${document.moduleId}/${document.filePath}`,
+        { module: document.moduleId, path: document.filePath },
+      );
+    }
+    if (path.posix.basename(document.filePath) !== "cpkg.toml") {
+      throw new CatalogDiagnostic(
+        "CATALOG_PATH_INVALID",
+        `Package manifest is not named cpkg.toml: ${module.id}/${document.filePath}`,
+        { module: module.id, path: document.filePath },
+      );
+    }
+    if (paths.has(document.filePath)) {
+      throw new CatalogDiagnostic(
+        "CATALOG_DOCUMENT_DUPLICATE",
+        `Duplicate cpkg document: ${module.id}/${document.filePath}`,
+        { module: module.id, path: document.filePath },
+      );
+    }
+    paths.add(document.filePath);
+    const cpkg = parseManifest(document);
+    if (packageNames.has(cpkg.pkgname)) {
+      throw new CatalogDiagnostic(
+        "CATALOG_PACKAGE_DUPLICATE",
+        `Duplicate package name: ${cpkg.pkgname}`,
+        { module: module.id, package: cpkg.pkgname, path: document.filePath },
+      );
+    }
+    packageNames.add(cpkg.pkgname);
+    return {
+      name: cpkg.name,
+      pkgname: cpkg.pkgname,
+      version: cpkg.version,
+      manifestPath: document.filePath,
+      packagePath: path.posix.dirname(document.filePath),
+      dependencyNames: [...cpkg.dependencies].sort(compareStrings),
+    };
+  });
+  return ModulePackageCatalogSchema.parse({
+    formatVersion: 1,
+    moduleId: module.id,
+    moduleSha: module.sha,
+    packages: packages.sort((left, right) => compareStrings(left.pkgname, right.pkgname)),
+  });
 }
 
-export function buildPackageCatalog(
+export function buildPackageCatalogFromModules(
   sourceManifestInput: SourceManifest,
-  documentsInput: readonly CpkgDocument[],
+  moduleCatalogsInput: readonly ModulePackageCatalog[],
 ): PackageCatalog {
   const sourceResult = SourceManifestSchema.safeParse(sourceManifestInput);
   if (!sourceResult.success) {
@@ -90,79 +149,67 @@ export function buildPackageCatalog(
     );
   }
   const sourceManifest = sourceResult.data;
-  const expectedFiles = expectedManifestFiles(sourceManifest);
-  const documents = new Map<string, CpkgDocument>();
-  for (const document of documentsInput) {
-    const key = documentKey(document.moduleId, document.filePath);
-    if (documents.has(key)) {
-      throw new CatalogDiagnostic("CATALOG_DOCUMENT_DUPLICATE", `Duplicate cpkg document: ${key}`, {
-        module: document.moduleId,
-        path: document.filePath,
-      });
+  const moduleById = new Map(sourceManifest.modules.map((module) => [module.id, module]));
+  const catalogs = new Map<string, ModulePackageCatalog>();
+  for (const input of moduleCatalogsInput) {
+    const catalog = ModulePackageCatalogSchema.parse(input);
+    const module = moduleById.get(catalog.moduleId);
+    if (!module || module.sha !== catalog.moduleSha || catalogs.has(catalog.moduleId)) {
+      throw new CatalogDiagnostic(
+        "CATALOG_DOCUMENT_SET_INVALID",
+        `Module package catalog does not match the source manifest: ${catalog.moduleId}`,
+        { module: catalog.moduleId },
+      );
     }
-    documents.set(key, document);
+    catalogs.set(catalog.moduleId, catalog);
   }
-  if (documents.size !== expectedFiles.length) {
+  if (catalogs.size !== sourceManifest.modules.length) {
     throw new CatalogDiagnostic(
       "CATALOG_DOCUMENT_SET_INVALID",
-      `Expected ${expectedFiles.length} cpkg documents but received ${documents.size}.`,
+      `Expected ${sourceManifest.modules.length} module package catalogs but received ${catalogs.size}.`,
     );
   }
 
   const drafts: PackageDraft[] = [];
   const packageNames = new Set<string>();
   const packageSlugs = new Set<string>();
-  for (const { module, file } of expectedFiles) {
-    if (path.posix.basename(file.path) !== "cpkg.toml") {
-      throw new CatalogDiagnostic(
-        "CATALOG_PATH_INVALID",
-        `Manifest-kind snapshot file is not named cpkg.toml: ${module.id}/${file.path}`,
-        { module: module.id, path: file.path },
-      );
-    }
-    const document = documents.get(documentKey(module.id, file.path));
-    if (!document) {
-      throw new CatalogDiagnostic(
-        "CATALOG_DOCUMENT_MISSING",
-        `Missing cpkg document: ${module.id}/${file.path}`,
-        { module: module.id, path: file.path },
-      );
-    }
-    const cpkg = parseManifest(document);
-    const slug = catalogSlug(cpkg.pkgname);
-    if (packageNames.has(cpkg.pkgname)) {
-      throw new CatalogDiagnostic(
-        "CATALOG_PACKAGE_DUPLICATE",
-        `Duplicate package name: ${cpkg.pkgname}`,
-        { module: module.id, package: cpkg.pkgname, path: file.path },
-      );
-    }
-    if (packageSlugs.has(slug)) {
-      throw new CatalogDiagnostic("CATALOG_SLUG_DUPLICATE", `Duplicate package slug: ${slug}`, {
-        module: module.id,
-        package: cpkg.pkgname,
-        path: file.path,
+  for (const module of sourceManifest.modules) {
+    const catalog = catalogs.get(module.id);
+    if (!catalog) continue;
+    for (const entry of catalog.packages) {
+      const slug = catalogSlug(entry.pkgname);
+      if (packageNames.has(entry.pkgname)) {
+        throw new CatalogDiagnostic(
+          "CATALOG_PACKAGE_DUPLICATE",
+          `Duplicate package name: ${entry.pkgname}`,
+          { module: module.id, package: entry.pkgname, path: entry.manifestPath },
+        );
+      }
+      if (packageSlugs.has(slug)) {
+        throw new CatalogDiagnostic("CATALOG_SLUG_DUPLICATE", `Duplicate package slug: ${slug}`, {
+          module: module.id,
+          package: entry.pkgname,
+          path: entry.manifestPath,
+        });
+      }
+      packageNames.add(entry.pkgname);
+      packageSlugs.add(slug);
+      drafts.push({
+        name: entry.name,
+        pkgname: entry.pkgname,
+        version: entry.version,
+        revisionLabel: `${entry.version}+${module.shortSha}`,
+        slug,
+        moduleId: module.id,
+        moduleSlug: catalogSlug(module.id),
+        moduleSha: module.sha,
+        moduleShortSha: module.shortSha,
+        manifestPath: entry.manifestPath,
+        packagePath: entry.packagePath,
+        sourceUrl: pinnedUpstreamUrl(module, "tree", entry.packagePath),
+        dependencyNames: entry.dependencyNames,
       });
     }
-    packageNames.add(cpkg.pkgname);
-    packageSlugs.add(slug);
-
-    const packagePath = path.posix.dirname(file.path);
-    drafts.push({
-      name: cpkg.name,
-      pkgname: cpkg.pkgname,
-      version: cpkg.version,
-      revisionLabel: `${cpkg.version}+${module.shortSha}`,
-      slug,
-      moduleId: module.id,
-      moduleSlug: catalogSlug(module.id),
-      moduleSha: module.sha,
-      moduleShortSha: module.shortSha,
-      manifestPath: file.path,
-      packagePath,
-      sourceUrl: pinnedUpstreamUrl(module, "tree", packagePath),
-      dependencyNames: [...cpkg.dependencies].sort(compareStrings),
-    });
   }
 
   const draftByName = new Map(drafts.map((draft) => [draft.pkgname, draft]));
@@ -194,30 +241,28 @@ export function buildPackageCatalog(
   });
 
   const normalizedPackages = packages
-    .map(({ draft, dependencies }) => {
-      return {
-        name: draft.name,
-        pkgname: draft.pkgname,
-        version: draft.version,
-        revisionLabel: draft.revisionLabel,
-        slug: draft.slug,
-        moduleId: draft.moduleId,
-        moduleSlug: draft.moduleSlug,
-        moduleSha: draft.moduleSha,
-        moduleShortSha: draft.moduleShortSha,
-        manifestPath: draft.manifestPath,
-        packagePath: draft.packagePath,
-        sourceUrl: draft.sourceUrl,
-        dependencies,
-        reverseDependencies: (reverse.get(draft.pkgname) ?? [])
-          .map((dependent) => ({
-            name: dependent.pkgname,
-            slug: dependent.slug,
-            moduleId: dependent.moduleId,
-          }))
-          .sort((left, right) => compareStrings(left.name, right.name)),
-      };
-    })
+    .map(({ draft, dependencies }) => ({
+      name: draft.name,
+      pkgname: draft.pkgname,
+      version: draft.version,
+      revisionLabel: draft.revisionLabel,
+      slug: draft.slug,
+      moduleId: draft.moduleId,
+      moduleSlug: draft.moduleSlug,
+      moduleSha: draft.moduleSha,
+      moduleShortSha: draft.moduleShortSha,
+      manifestPath: draft.manifestPath,
+      packagePath: draft.packagePath,
+      sourceUrl: draft.sourceUrl,
+      dependencies,
+      reverseDependencies: (reverse.get(draft.pkgname) ?? [])
+        .map((dependent) => ({
+          name: dependent.pkgname,
+          slug: dependent.slug,
+          moduleId: dependent.moduleId,
+        }))
+        .sort((left, right) => compareStrings(left.name, right.name)),
+    }))
     .sort((left, right) => compareStrings(left.pkgname, right.pkgname));
 
   const packageSlugsByModule = new Map<string, string[]>();
@@ -243,6 +288,26 @@ export function buildPackageCatalog(
       .sort((left, right) => compareStrings(left.id, right.id)),
     packages: normalizedPackages,
   });
+}
+
+export function buildPackageCatalog(
+  sourceManifest: SourceManifest,
+  documents: readonly CpkgDocument[],
+): PackageCatalog {
+  const documentsByModule = new Map<string, CpkgDocument[]>();
+  for (const document of documents) {
+    const entries = documentsByModule.get(document.moduleId) ?? [];
+    entries.push(document);
+    documentsByModule.set(document.moduleId, entries);
+  }
+  const moduleCatalogs = sourceManifest.modules.map((module) =>
+    buildModulePackageCatalog(module, documentsByModule.get(module.id) ?? []),
+  );
+  return buildPackageCatalogFromModules(sourceManifest, moduleCatalogs);
+}
+
+export function serializeModulePackageCatalog(catalog: ModulePackageCatalog): string {
+  return `${JSON.stringify(ModulePackageCatalogSchema.parse(catalog), null, 2)}\n`;
 }
 
 export function serializePackageCatalog(catalog: PackageCatalog): string {

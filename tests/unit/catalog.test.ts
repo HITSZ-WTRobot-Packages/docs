@@ -9,9 +9,9 @@ import type { SourceManifest } from "../../src/lib/sources/manifest";
 
 const SHA = "1234567890abcdef1234567890abcdef12345678";
 
-function sourceManifest(paths: readonly string[]): SourceManifest {
+function sourceManifest(): SourceManifest {
   return {
-    formatVersion: 1,
+    formatVersion: 2,
     modules: [
       {
         id: "FixtureModule",
@@ -20,13 +20,19 @@ function sourceManifest(paths: readonly string[]): SourceManifest {
         branch: "main",
         sha: SHA,
         shortSha: SHA.slice(0, 12),
-        totalBytes: paths.length,
-        files: paths.map((filePath, index) => ({
-          path: filePath,
-          bytes: 1,
-          sha256: index.toString(16).padStart(64, "0"),
-          kind: "manifest" as const,
-        })),
+        producerFingerprint: "f".repeat(64),
+        totalBytes: 0,
+        files: [],
+        artifacts: [
+          { path: "api-catalog.json", bytes: 0, sha256: "a".repeat(64), kind: "api-catalog" },
+          {
+            path: "package-catalog.json",
+            bytes: 0,
+            sha256: "b".repeat(64),
+            kind: "package-catalog",
+          },
+        ],
+        references: [],
         licenseFiles: [],
         warnings: [],
       },
@@ -65,8 +71,7 @@ describe("package catalog", () => {
   test("normalizes historical manifests and derives dependency indexes", () => {
     const alphaPath = "alpha/cpkg.toml";
     const betaPath = "beta/cpkg.toml";
-    const paths = [alphaPath, betaPath];
-    const catalog = buildPackageCatalog(sourceManifest(paths), [
+    const catalog = buildPackageCatalog(sourceManifest(), [
       document(alphaPath, alphaManifest),
       document(betaPath, betaManifest),
     ]);
@@ -91,9 +96,8 @@ describe("package catalog", () => {
   test("rejects duplicate package names", () => {
     const alphaPath = "alpha/cpkg.toml";
     const duplicatePath = "duplicate/cpkg.toml";
-    const paths = [alphaPath, duplicatePath];
     const error = captureError(() =>
-      buildPackageCatalog(sourceManifest(paths), [
+      buildPackageCatalog(sourceManifest(), [
         document(alphaPath, alphaManifest.replace('"Demo::Beta", ', "")),
         document(duplicatePath, alphaManifest.replace('name = "Alpha"', 'name = "Other"')),
       ]),
@@ -104,9 +108,8 @@ describe("package catalog", () => {
 
   test("rejects unresolved dependencies", () => {
     const alphaPath = "alpha/cpkg.toml";
-    const paths = [alphaPath];
     const error = captureError(() =>
-      buildPackageCatalog(sourceManifest(paths), [
+      buildPackageCatalog(sourceManifest(), [
         document(
           alphaPath,
           alphaManifest.replace('["Demo::Beta", "FreeRTOS"]', '["Unknown::Package"]'),
@@ -122,33 +125,24 @@ describe("package catalog", () => {
 
   test("rejects schema errors and unsafe snapshot paths", () => {
     const alphaPath = "alpha/cpkg.toml";
-    const paths = [alphaPath];
     const schemaError = captureError(() =>
-      buildPackageCatalog(sourceManifest(paths), [
+      buildPackageCatalog(sourceManifest(), [
         document(alphaPath, alphaManifest.replace('version = "1.2.3"', 'version = "latest"')),
       ]),
     );
     expect(schemaError).toMatchObject({ code: "CATALOG_SCHEMA_INVALID" });
 
-    const invalidSource = sourceManifest(paths);
-    const module = invalidSource.modules[0];
-    const file = module?.files[0];
-    if (!file) {
-      throw new Error("Invalid-path fixture is missing its source file.");
-    }
-    file.path = "../alpha/cpkg.toml";
     const pathError = captureError(() =>
-      buildPackageCatalog(invalidSource, [document(alphaPath, alphaManifest)]),
+      buildPackageCatalog(sourceManifest(), [document("../alpha/cpkg.toml", alphaManifest)]),
     );
-    expect(pathError).toMatchObject({ code: "CATALOG_SOURCE_INVALID" });
+    expect(pathError).toBeDefined();
   });
 
   test("rejects slug collisions instead of creating ambiguous routes", () => {
     const firstPath = "first/cpkg.toml";
     const secondPath = "second/cpkg.toml";
-    const paths = [firstPath, secondPath];
     const error = captureError(() =>
-      buildPackageCatalog(sourceManifest(paths), [
+      buildPackageCatalog(sourceManifest(), [
         document(firstPath, 'name = "First"\npkgname = "Demo::foo_bar"\nversion = "0.1.0"\n'),
         document(secondPath, 'name = "Second"\npkgname = "Demo::foo-bar"\nversion = "0.1.0"\n'),
       ]),

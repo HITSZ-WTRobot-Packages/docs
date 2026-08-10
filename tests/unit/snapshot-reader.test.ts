@@ -15,7 +15,7 @@ async function fixture() {
   const root = await mkdtemp(path.join(tmpdir(), "wtr-docs-reader-"));
   temporaryRoots.push(root);
   const sourcesRoot = path.join(root, "sources");
-  const moduleRoot = path.join(sourcesRoot, "modules", "FixtureModule");
+  const moduleRoot = path.join(sourcesRoot, "modules", "FixtureModule", "content");
   await mkdir(moduleRoot, { recursive: true });
   const contents = "verified\n";
   await writeFile(path.join(moduleRoot, "README.md"), contents, "utf8");
@@ -32,8 +32,19 @@ async function fixture() {
     branch: "main",
     sha: SHA,
     shortSha: SHA.slice(0, 12),
+    producerFingerprint: "f".repeat(64),
     totalBytes: file.bytes,
     files: [file],
+    artifacts: [
+      { path: "api-catalog.json", bytes: 0, sha256: "a".repeat(64), kind: "api-catalog" },
+      {
+        path: "package-catalog.json",
+        bytes: 0,
+        sha256: "b".repeat(64),
+        kind: "package-catalog",
+      },
+    ],
+    references: [],
     licenseFiles: [],
     warnings: [],
   };
@@ -66,7 +77,7 @@ describe("snapshot reader", () => {
   test("rejects files that no longer match the manifest", async () => {
     const input = await fixture();
     await writeFile(
-      path.join(input.sourcesRoot, "modules", input.module.id, input.file.path),
+      path.join(input.sourcesRoot, "modules", input.module.id, "content", input.file.path),
       "tampered\n",
       "utf8",
     );
