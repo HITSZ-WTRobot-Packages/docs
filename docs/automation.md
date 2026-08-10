@@ -54,18 +54,23 @@ URL。载荷不能提供任意 URL、同步模式或提交开关；合法事件�
 `[snapshot-sync]`。工作流没有 push 触发器，因此机器人提交不会递归启动另一次同步，也不会自动启动
 `Validation`；需要验证该提交时，操作者必须为对应 ref 手动运行 `Validation`。
 
-同步工作流是唯一拥有 `contents: write`
-的工作流。仓库或分支规则仍可能阻止其推送；该失败会保留远程分支不变，并由提交步骤报告。不提交的运行只在 runner 生命周期内保留其已验证差异。
+所有 workflow 的仓库 `GITHUB_TOKEN` 都保持
+`contents: read`。同步 workflow 只有在已验证 diff 需要提交时，才在该步骤通过 `GH_TOKEN` 使用
+`DOCS_SYNC_TOKEN`
+配置 Git 凭据并 push；checkout 不持久化凭据。仓库或分支规则仍可能阻止其推送；该失败会保留远程分支不变，并由提交步骤报告。不提交的运行只在 runner 生命周期内保留其已验证差异。
 
 ## 驱动仓库接入
 
 `.github/workflows/request-docs-sync.yml` 是供同一组织驱动仓库引用的 reusable
 workflow。组织管理员创建 `DOCS_SYNC_TOKEN` Actions secret：使用 fine-grained personal access
 token，仅授权 `HITSZ-WTRobot-Packages/docs` 的
-`Contents: write`，并只向获准初始化文档的驱动仓库开放。调用方自带的 `GITHUB_TOKEN`
-仅对调用方仓库有效，不能替代该 token。
+`Contents: write`，并向 docs 仓库和获准初始化文档的驱动仓库开放。调用方自带的 `GITHUB_TOKEN`
+仅对调用方仓库有效，不能替代该 token；docs 同步也使用此 token 推送 snapshot
+commit，使该 push 能被仓库外部既有构建服务观察。
 
-每个驱动仓库添加以下薄工作流，并把占位符替换为包含该 reusable workflow 的完整 40 位 docs 提交 SHA：
+每个驱动仓库添加以下薄工作流。`@main`
+是有意选择的滚动引用：每次新运行都采用 docs 默认分支上的最新 reusable
+workflow，因此中央修正不需要逐仓库更新 SHA；相应地，docs 必须保持该调用契约向后兼容。
 
 ```yaml
 name: Update package documentation
@@ -79,7 +84,7 @@ permissions:
 
 jobs:
   documentation:
-    uses: HITSZ-WTRobot-Packages/docs/.github/workflows/request-docs-sync.yml@<DOCS_WORKFLOW_COMMIT_SHA>
+    uses: HITSZ-WTRobot-Packages/docs/.github/workflows/request-docs-sync.yml@main
     secrets: inherit
 ```
 
@@ -89,10 +94,16 @@ API 接受事件后即成功，不等待 docs 的同步结果；克隆、Doxygen
 `Synchronize snapshots`
 运行中查看。重复 push 会被 docs 的串行同步组依次处理，相同上游修订最终成为 no-op。
 
+docs 接收 workflow 只在 `sources/` 有变化时创建 snapshot
+commit；无变化时不会 push，也就没有新的默认分支 commit 可供外部构建服务观察。该 commit 使用
+`DOCS_SYNC_TOKEN` 推送，而不是会抑制派生 workflow/Pages 事件的仓库
+`GITHUB_TOKEN`。本仓库不为此启用本地 push build：`Validation` 保持纯
+`workflow_dispatch`，正式部署仍由独立流程管理。
+
 ## 固定工具链
 
-外部 Actions 和跨仓库 reusable workflow 均引用完整提交 SHA。本地 setup Action 根据软件包契约安装 Bun
-1.3.14，执行
+外部第三方 Actions 均引用完整提交 SHA；组织内的 dispatch reusable workflow 按上述中央更新契约使用
+`@main`。本地 setup Action 根据软件包契约安装 Bun 1.3.14，执行
 `bun install --frozen-lockfile`，并按需安装 Chromium。只有同步作业通过固定到完整提交 SHA 的
 `ssciwr/doxygen-install` Action 安装 `.doxygen-version` 指定的 Doxygen
 1.16.1；同步 CLI 会在读取上游前再次验证其完整版本输出。验证、构建和部署作业均不安装 Doxygen。

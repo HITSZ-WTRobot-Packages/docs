@@ -5,6 +5,8 @@ import { parse } from "yaml";
 import { z } from "zod";
 
 const StepSchema = z.looseObject({
+  name: z.string().optional(),
+  if: z.string().optional(),
   uses: z.string().optional(),
   run: z.string().optional(),
   env: z.record(z.string(), z.unknown()).optional(),
@@ -60,10 +62,10 @@ describe("GitHub Actions contracts", () => {
     }
   });
 
-  test("snapshot synchronization is explicit, serialized, and write-scoped", async () => {
+  test("snapshot synchronization is explicit, serialized, and PAT-push scoped", async () => {
     const workflow = WorkflowSchema.parse(await readYaml(".github/workflows/sync-snapshots.yml"));
     expect(Object.keys(workflow.on).sort()).toEqual(["repository_dispatch", "workflow_dispatch"]);
-    expect(workflow.permissions).toEqual({ contents: "write" });
+    expect(workflow.permissions).toEqual({ contents: "read" });
     expect(workflow.concurrency["cancel-in-progress"]).toBe(false);
     const serialized = JSON.stringify(workflow);
     expect(serialized).toContain("bun run sync:action");
@@ -71,6 +73,17 @@ describe("GitHub Actions contracts", () => {
     expect(serialized).toContain("git add -- sources/");
     expect(serialized).toContain("git diff --cached --quiet && exit 0");
     expect(serialized).toContain("steps.request.outputs.commit == 'true'");
+    const checkoutStep = allSteps(workflow).find((step) => step.uses?.includes("checkout"));
+    expect(checkoutStep?.with?.["persist-credentials"]).toBe(false);
+    expect(checkoutStep?.with?.token).toBeUndefined();
+    const patSteps = allSteps(workflow).filter(
+      (step) => step.env?.GH_TOKEN === "${{ secrets.DOCS_SYNC_TOKEN }}",
+    );
+    expect(patSteps).toHaveLength(1);
+    const commitStep = patSteps.find((step) => step.name === "Commit validated snapshots");
+    expect(commitStep?.if).toContain("steps.snapshot.outputs.changed == 'true'");
+    expect(commitStep?.if).toContain("steps.request.outputs.commit == 'true'");
+    expect(commitStep?.run).toContain("gh auth setup-git");
     const browserStep = allSteps(workflow).find((step) => step.run === "bun run test:e2e");
     expect(browserStep?.env?.PLAYWRIGHT_REUSE_ARTIFACT).toBe("1");
     expect(serialized).not.toMatch(/pages|deploy/i);
@@ -99,6 +112,12 @@ describe("GitHub Actions contracts", () => {
     expect(serialized).toContain("sync-snapshots");
     expect(serialized).not.toContain("actions/checkout");
     expect(serialized).not.toContain("bun run sync");
+
+    const automation = await readFile("docs/automation.md", "utf8");
+    expect(automation).toContain(
+      "HITSZ-WTRobot-Packages/docs/.github/workflows/request-docs-sync.yml@main",
+    );
+    expect(automation).not.toContain("<DOCS_WORKFLOW_COMMIT_SHA>");
 
     for (const step of allSteps(workflow)) {
       expect(step.run ?? "").not.toContain("${{ github.repository }}");

@@ -133,12 +133,14 @@ Pagefind 由生产构建生成，因此应依次执行 `bun run build` 和 `bun 
 ## 自动化
 
 `.github/workflows/validation.yml`
-基于已提交快照运行离线质量门禁和静态站点矩阵。`.github/workflows/sync-snapshots.yml`
+只在操作者手动 dispatch 时基于已提交快照运行离线质量门禁和静态站点矩阵。`.github/workflows/sync-snapshots.yml`
 是唯一允许访问上游模块仓库的工作流：它可由操作者手动触发，或接收驱动仓库通过
 `.github/workflows/request-docs-sync.yml`
 发出的受限 discovery 事件；它验证事件载荷、安装锁定的 Doxygen、调用本地使用的同一个 `bun run sync`
-CLI，并且仅在请求提交且内容发生变化时提交
-`sources/`。普通验证和部署构建只消费这些已生成产物，两个工作流都不会部署站点。
+CLI，并且仅在请求提交且内容发生变化时提交 `sources/`。驱动仓库以 `@main` 引用该 callable-only
+requester，从而自动跟随中央 workflow 更新。snapshot commit 使用限定到 docs 的 `DOCS_SYNC_TOKEN`
+推送，供仓库外部既有构建服务观察；本仓库不启用本地push
+build，普通验证和未来部署只消费这些已生成产物，两个现有工作流都不会部署站点。
 
 工作流输入、`repository_dispatch` 载荷、权限、无变更行为、固定工具链和失败语义详见
 [docs/automation.md](docs/automation.md)。

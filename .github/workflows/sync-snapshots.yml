@@ -31,7 +31,7 @@ on:
       - sync-snapshots
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: package-snapshot-sync
@@ -48,6 +48,7 @@ jobs:
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Set up documentation toolchain
         uses: ./.github/actions/setup-docs-toolchain
@@ -125,6 +126,7 @@ jobs:
           steps.snapshot.outputs.changed == 'true' && steps.request.outputs.commit == 'true'
         shell: bash
         env:
+          GH_TOKEN: ${{ secrets.DOCS_SYNC_TOKEN }}
           TARGET_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           set -euo pipefail
@@ -133,6 +135,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore(sources): synchronize package snapshots [snapshot-sync]"
+          gh auth setup-git
           git push origin "HEAD:${TARGET_BRANCH}"
 
       - name: Report validated uncommitted changes

@@ -62,9 +62,11 @@ future `trellis update`.
 - Use Starlight's Pagefind integration for search, Cytoscape.js for dependency graph traversal and
   layout, Linkinator for static links, Playwright plus axe for browser/accessibility checks, and
   Astro Icon with the Lucide Iconify set for UI icons.
-- Keep GitHub Actions dependencies pinned to full commit SHAs. The local setup Action owns Bun,
-  frozen dependency installation, and optional Chromium setup. The synchronization workflow alone
-  installs `.doxygen-version` through its pinned dedicated Doxygen Action.
+- Keep third-party GitHub Actions dependencies pinned to full commit SHAs. Driver repositories
+  intentionally reference the organization-owned dispatch reusable workflow at `@main` so its
+  centrally maintained contract rolls forward without per-repository edits. The local setup Action
+  owns Bun, frozen dependency installation, and optional Chromium setup. The synchronization
+  workflow alone installs `.doxygen-version` through its pinned dedicated Doxygen Action.
 
 ## Data And Network Boundaries
 
@@ -89,8 +91,10 @@ future `trellis update`.
 - Validation CI is manually triggered only through `workflow_dispatch`, has read-only contents
   permission, and never invokes synchronization. Snapshot sync has no push trigger, parses manual or
   repository-discovery dispatch data through `sync:action`, stages only `sources/`, and may push
-  only after the complete offline validation path succeeds. The reusable caller workflow derives
-  repository identity from its caller and requires the organization-scoped `DOCS_SYNC_TOKEN`.
+  only after the complete offline validation path succeeds. Its `GITHUB_TOKEN` remains read-only;
+  only the conditional commit step uses the organization-scoped `DOCS_SYNC_TOKEN`, allowing the
+  resulting default-branch push to be observed by the external build service. The callable-only
+  reusable workflow derives repository identity from its caller and requires the same secret.
 - Parse TOML, Markdown, XML, schemas, Git output, search indexes, and dependency layouts with the
   selected maintained libraries. Do not add an ad hoc parser or layout algorithm.
 - Validate external input at the boundary before converting it into internal catalog types.
@@ -116,6 +120,8 @@ future `trellis update`.
 - Formal deployment is a separate administrator-approved task. The future Pages build uses the exact
   address pair documented in `docs/deployment.md`; deployment never synchronizes or rebuilds bytes
   after artifact validation.
+- Do not add a local commit/push build trigger for snapshot commits. `Validation` remains manual;
+  repository-external build automation owns rebuilds initiated by the committed snapshot change.
 
 ## Architecture Gate
 
