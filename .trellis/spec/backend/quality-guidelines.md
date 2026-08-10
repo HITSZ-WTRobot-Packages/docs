@@ -80,7 +80,9 @@
   Bun's global package cache around a frozen, prefer-offline install; cache keys include the runner,
   tool version, and lockfile or Doxygen version inputs.
 - A snapshot commit stages only `sources/`, uses a bot identity, and is skipped by
-  `git diff --cached --quiet` when synchronization is a no-op. The sync workflow does not run the
+  `git diff --cached --quiet` when synchronization is a no-op. An observed revision or producer
+  fingerprint change regenerates and validates a candidate, but publication-equivalent candidates
+  retain the previous snapshot and produce no staged diff. The sync workflow does not run the
   offline/site/browser validation gate; that remains the manually dispatched Validation workflow.
   Checkout does not persist credentials, and the commit step configures Git through `GH_TOKEN`
   immediately before pushing. The sync workflow has no push trigger.
@@ -192,6 +194,9 @@ sources/modules/<module>/api-catalog.json
 ApiCatalog.formatVersion = 2
 ApiReference.sourceBranch = ModuleSnapshot.branch
 ModuleSnapshot.producerFingerprint: 64 lowercase hexadecimal SHA-256 characters
+ModuleSyncStatus: "changed" | "retained" | "unchanged" | "skipped" | "would-change"
+ModuleSyncResult.observedSha: validated upstream 40-hex SHA for this run
+ModuleSyncResult.publishedSha: 40-hex SHA retained or persisted in sources/manifest.json
 Bun cache path: ~/.bun/install/cache
 Bun cache key: <runner-os>-<runner-arch>-bun-1.3.14-<bun-lock-sha256>
 Doxygen cache path: ~/.cache/wtr-doxygen/<doxygen-version>
@@ -207,7 +212,7 @@ cannot compose with those selectors; they validate and discover one organization
 
 | Boundary | Input | Output |
 | --- | --- | --- |
-| Synchronization | Manifest index, mode, optional indexed/discovery module, upstream Git repositories, locked Doxygen | Atomically replaced content plus per-module package/API artifacts and deterministic `sources/manifest.json` |
+| Synchronization | Manifest index, mode, optional indexed/discovery module, upstream Git repositories, locked Doxygen | Atomically replace publication-changing or repaired modules; retain publication-equivalent snapshots; report observed/published SHAs |
 | API artifact | Doxygen XML, owned input paths, module ID/default branch, package version | Format-version-2 references with `sourceBranch`; branch-based source URLs and no module SHA/revision label |
 | Generation | Valid committed `sources/` content, package/API artifacts, and manifest | Validated aggregate in-memory catalogs; no Doxygen, network, or snapshot mutation |
 | Build | `SITE_URL` absolute `http:`/`https:` URL; normalized absolute `BASE_PATH` | Static `dist/` whose internal routes and assets include the configured base |
@@ -239,8 +244,9 @@ is incorrectly rejected before mode validation.
 | Clone, reference, license, Doxygen, catalog, size, or checksum failure | Exit non-zero; retain the prior snapshot |
 | Unchanged SHA and producer fingerprint in changed mode | Report skipped; write nothing |
 | Missing/invalid `DOCS_SYNC_TOKEN` when a snapshot commit is requested | Push fails non-zero after local commit; remote default branch remains unchanged |
-| Unchanged SHA but changed Doxygen version or producer fingerprint | Regenerate the module artifacts |
-| Module SHA changes while branch, package version, source, and normalized Doxygen input remain identical | Serialize the API catalog byte-identically; update exact revision metadata outside the API artifact |
+| Unchanged SHA but changed Doxygen version or producer fingerprint | Regenerate and validate the module artifacts; retain the old snapshot when the publication projection is identical |
+| Observed SHA changes while normalized content, package/API catalogs, and quality state remain identical | Report retained with observed/published SHAs; keep `sources/` byte-identical and create no commit |
+| Module publication projection changes | Atomically persist the candidate and advance its published SHA to the observed SHA |
 | Identical full synchronization | Exit zero and leave the worktree byte-identical |
 | Network attempt during generation/build | Test failure; no fallback fetch |
 | Missing, corrupt, revision-mismatched package artifact, or source-branch-mismatched API artifact | Fail with a catalog/Doxygen diagnostic; do not run a producer fallback |
@@ -263,12 +269,12 @@ is incorrectly rejected before mode validation.
 - Good: an organization repository calls the reusable workflow at `@main`; the receiver derives its
   module ID and clone URL and adds it only after the sync CLI validates and atomically writes the
   candidate snapshot.
-- Good: a changed discovery run pushes one `sources/` commit with `DOCS_SYNC_TOKEN`; an identical
-  rerun produces no commit for the external build service to observe.
+- Good: a changed discovery run pushes one `sources/` commit with `DOCS_SYNC_TOKEN`; an identical or
+  publication-equivalent rerun produces no commit for the external build service to observe.
 - Good: a Doxygen cache hit skips `ssciwr/doxygen-install`, adds the cached versioned `bin` directory
   to `PATH`, and the sync CLI verifies the executable before cloning.
-- Good: changing only a module SHA leaves its serialized API catalog unchanged because API references
-  and source URLs use the manifest default branch.
+- Good: changing only a module SHA leaves `sources/` unchanged, reports the new observed SHA in the
+  Actions log/summary, and retains the published SHA used by revision labels and pinned links.
 - Base: `BASE_PATH=/ bun run build` builds from committed snapshots with network disabled.
 - Base: a Doxygen cache miss runs the pinned installer once, copies the executable into its
   version/action-scoped cache, saves it, and then runs synchronization.
@@ -294,7 +300,8 @@ is incorrectly rejected before mode validation.
 - CLI unit tests assert flag exclusivity, organization discovery validation, diagnostic code, and no
   writes.
 - Synchronizer integration tests hash the previous tree before injected failures and assert exact
-  equality afterward; unchanged reruns assert an empty Git diff; producer changes force regeneration.
+  equality afterward; unchanged and publication-equivalent reruns assert an empty Git diff; producer
+  changes force regeneration but persist only changed output.
 - Snapshot integration tests assert that `sources/` contains no C/C++ source, `cpkg.toml`, or XML;
   every module has checksum-verified package artifacts at its manifest revision and API artifacts
   for its configured source branch.
@@ -387,8 +394,20 @@ const api = await loadApiCatalog();
 // Wrong: a revision-only update rewrites every API reference and source URL.
 { "formatVersion": 1, "moduleSha": "<40-hex>", "revisionLabel": "1.0.0+<short-sha>" }
 
-// Correct: exact revision ownership stays in the manifest/package catalog; API links follow branch.
+// Correct: published revision ownership stays in the manifest/package catalog; API links follow branch.
 { "formatVersion": 2, "sourceBranch": "main" }
+```
+
+```ts
+// Wrong: an observed revision advances the committed snapshot before publication comparison.
+candidate.snapshot.sha = observedSha;
+candidate.changed = candidate.snapshot.sha !== published.snapshot.sha;
+
+// Correct: equivalent normalized output retains the complete published snapshot.
+if (publicationEquals(published, candidate)) {
+  candidate.snapshot = published.snapshot;
+  candidate.retained = true;
+}
 ```
 
 ```yaml

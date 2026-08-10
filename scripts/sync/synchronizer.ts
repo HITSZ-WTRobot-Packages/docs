@@ -21,8 +21,10 @@ import {
   serializeModulePackageCatalog,
   type CpkgDocument,
 } from "../../src/lib/catalog/catalog";
+import { CatalogDiagnostic } from "../../src/lib/catalog/diagnostic";
 import { loadModulePackageCatalog } from "../../src/lib/catalog/loader";
 import type { ModulePackageCatalog, PackageCatalog } from "../../src/lib/catalog/schema";
+import { DoxygenDiagnostic } from "../../src/lib/doxygen/diagnostic";
 import {
   assertDoxygenVersion,
   generateModuleApiCatalog,
@@ -64,12 +66,13 @@ export type SyncRequest = {
   dryRun: boolean;
 };
 
-export type ModuleSyncStatus = "changed" | "unchanged" | "skipped" | "would-change";
+export type ModuleSyncStatus = "changed" | "retained" | "unchanged" | "skipped" | "would-change";
 
 export type ModuleSyncResult = {
   id: string;
   status: ModuleSyncStatus;
-  sha: string;
+  observedSha: string;
+  publishedSha: string;
   files: number;
   bytes: number;
   warnings: ModuleSnapshot["warnings"];
@@ -80,6 +83,7 @@ export type SyncResult = {
   dryRun: boolean;
   modules: ModuleSyncResult[];
   changed: number;
+  retained: number;
   unchanged: number;
   skipped: number;
 };
@@ -101,6 +105,14 @@ type CandidateSnapshot = {
   packageCatalog: ModulePackageCatalog;
   apiCatalog?: ApiCatalog;
   changed: boolean;
+  retained: boolean;
+  observedSha: string;
+};
+
+type PublishedModule = {
+  snapshot: ModuleSnapshot;
+  packageCatalog: ModulePackageCatalog;
+  apiCatalog: ApiCatalog;
 };
 
 const PRODUCER_INPUT_PATTERNS = [
@@ -118,6 +130,37 @@ function compareStrings(left: string, right: string): number {
 
 function moduleEquals(left: ModuleSnapshot | undefined, right: ModuleSnapshot): boolean {
   return left !== undefined && JSON.stringify(left) === JSON.stringify(right);
+}
+
+function snapshotPublication(module: ModuleSnapshot) {
+  return {
+    id: module.id,
+    displayName: module.displayName,
+    repository: module.repository,
+    branch: module.branch,
+    files: module.files,
+    references: module.references,
+    licenseFiles: module.licenseFiles,
+    warnings: module.warnings,
+  };
+}
+
+function packagePublication(catalog: ModulePackageCatalog) {
+  return {
+    formatVersion: catalog.formatVersion,
+    moduleId: catalog.moduleId,
+    packages: catalog.packages,
+  };
+}
+
+function publicationEquals(left: PublishedModule, right: PublishedModule): boolean {
+  return (
+    JSON.stringify(snapshotPublication(left.snapshot)) ===
+      JSON.stringify(snapshotPublication(right.snapshot)) &&
+    JSON.stringify(packagePublication(left.packageCatalog)) ===
+      JSON.stringify(packagePublication(right.packageCatalog)) &&
+    JSON.stringify(left.apiCatalog) === JSON.stringify(right.apiCatalog)
+  );
 }
 
 function toNativePath(root: string, relativePath: string): string {
@@ -217,16 +260,37 @@ async function currentSnapshotMatches(
     return false;
   }
 
-  for (const file of expected) {
-    const nativePath = toNativePath(moduleRoot, file.storedPath);
-    const stats = await lstat(nativePath);
-    if (!stats.isFile() || stats.isSymbolicLink() || stats.size !== file.bytes) return false;
-    const digest = createHash("sha256")
-      .update(await readFile(nativePath))
-      .digest("hex");
-    if (digest !== file.sha256) return false;
+  try {
+    for (const file of expected) {
+      const nativePath = toNativePath(moduleRoot, file.storedPath);
+      const stats = await lstat(nativePath);
+      if (!stats.isFile() || stats.isSymbolicLink() || stats.size !== file.bytes) return false;
+      const digest = createHash("sha256")
+        .update(await readFile(nativePath))
+        .digest("hex");
+      if (digest !== file.sha256) return false;
+    }
+  } catch {
+    return false;
   }
   return true;
+}
+
+async function loadPublishedModule(
+  sourcesRoot: string,
+  snapshot: ModuleSnapshot | undefined,
+): Promise<PublishedModule | undefined> {
+  if (!snapshot || !(await currentSnapshotMatches(sourcesRoot, snapshot))) return undefined;
+  try {
+    const [packageCatalog, apiCatalog] = await Promise.all([
+      loadModulePackageCatalog(sourcesRoot, snapshot),
+      loadModuleApiCatalog(sourcesRoot, snapshot),
+    ]);
+    return { snapshot, packageCatalog, apiCatalog };
+  } catch (error) {
+    if (error instanceof CatalogDiagnostic || error instanceof DoxygenDiagnostic) return undefined;
+    throw error;
+  }
 }
 
 function mergeManifest(
@@ -525,7 +589,8 @@ export async function synchronize(
           results.push({
             id: module.id,
             status: "skipped",
-            sha: remoteSha,
+            observedSha: remoteSha,
+            publishedSha: existing.sha,
             files: existing.files.length,
             bytes: existing.totalBytes,
             warnings: existing.warnings,
@@ -580,6 +645,8 @@ export async function synchronize(
         snapshot,
         packageCatalog,
         changed: false,
+        retained: false,
+        observedSha: sha,
       });
     }
 
@@ -617,13 +684,35 @@ export async function synchronize(
       }
       candidate.apiCatalog = apiCatalog;
       const existing = existingById.get(normalizedModuleId(candidate.module.id));
-      candidate.changed =
-        !moduleEquals(existing, candidate.snapshot) ||
-        !(await currentSnapshotMatches(sourcesRoot, candidate.snapshot));
+      const published = await loadPublishedModule(sourcesRoot, existing);
+      if (published && moduleEquals(existing, candidate.snapshot)) {
+        candidate.changed = false;
+      } else if (
+        published &&
+        publicationEquals(published, {
+          snapshot: candidate.snapshot,
+          packageCatalog: candidate.packageCatalog,
+          apiCatalog,
+        })
+      ) {
+        candidate.snapshot = published.snapshot;
+        candidate.packageCatalog = published.packageCatalog;
+        candidate.apiCatalog = published.apiCatalog;
+        candidate.retained = true;
+      } else {
+        candidate.changed = true;
+      }
       results.push({
         id: candidate.module.id,
-        status: candidate.changed ? (request.dryRun ? "would-change" : "changed") : "unchanged",
-        sha: candidate.snapshot.sha,
+        status: candidate.changed
+          ? request.dryRun
+            ? "would-change"
+            : "changed"
+          : candidate.retained
+            ? "retained"
+            : "unchanged",
+        observedSha: candidate.observedSha,
+        publishedSha: candidate.snapshot.sha,
         files: candidate.snapshot.files.length,
         bytes: candidate.snapshot.totalBytes,
         warnings: candidate.snapshot.warnings,
@@ -631,8 +720,17 @@ export async function synchronize(
     }
 
     const nextManifest = mergeManifest(existingManifest, candidates, request);
+    const finalModulePackageCatalogs = await collectModulePackageCatalogs(
+      sourcesRoot,
+      nextManifest,
+      candidates,
+    );
+    const finalPackageCatalog = buildPackageCatalogFromModules(
+      nextManifest,
+      finalModulePackageCatalogs,
+    );
     const moduleApiCatalogs = await collectModuleApiCatalogs(sourcesRoot, nextManifest, candidates);
-    validateApiCatalogs(nextManifest, packageCatalog, moduleApiCatalogs, doxygenVersion);
+    validateApiCatalogs(nextManifest, finalPackageCatalog, moduleApiCatalogs, doxygenVersion);
     if (!request.dryRun) await commitCandidates(sourcesRoot, candidates, nextManifest);
   } catch (error) {
     throw toSyncDiagnostic(
@@ -652,6 +750,7 @@ export async function synchronize(
     changed: results.filter(
       (result) => result.status === "changed" || result.status === "would-change",
     ).length,
+    retained: results.filter((result) => result.status === "retained").length,
     unchanged: results.filter((result) => result.status === "unchanged").length,
     skipped: results.filter((result) => result.status === "skipped").length,
   };

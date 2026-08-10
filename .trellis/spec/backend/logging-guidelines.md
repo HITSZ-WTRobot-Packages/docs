@@ -15,9 +15,10 @@ GitHub Actions output describe the same events.
 
 ## Required Context
 
-Synchronization messages include mode, module, repository, branch, and abbreviated SHA where
-known. Generation messages include package and snapshot-relative path. Summaries include changed,
-unchanged, skipped, warning, and failed counts.
+Synchronization messages include mode, module, repository, branch, and abbreviated observed and
+published SHAs where known. A retained module logs both revisions without persisting the observed
+SHA. Generation messages include package and snapshot-relative path. Summaries include changed,
+retained, unchanged, skipped, warning, and failed counts.
 
 ## Sensitive Data
 

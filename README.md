@@ -106,7 +106,9 @@ HTML 或创建源码浏览器。
 同步时的 XML 管线使用 `fast-xml-validator` 验证语法、`fast-xml-parser`
 解析，并将文件、命名空间、类和结构体、函数、枚举、类型定义、变量、宏定义、说明、位置、默认分支源码链接和符号关系规范化为 formatVersion
 2
-JSON 目录。API 目录不嵌入模块提交 SHA，因此只改变提交 revision 而不改变源码/API 输入时，大型目录保持字节稳定；精确同步 SHA 仍记录在 manifest 与软件包目录中。缺失输入或符号会成为明确的空状态，缺失注释会成为文档稀疏状态，单个目标提取失败不会屏蔽其他软件包。同步环境缺少锁定的 Doxygen 版本属于全局可复现性错误；普通构建环境不需要安装 Doxygen。
+JSON 目录。API 目录不嵌入模块提交 SHA；同步器会完整检查新的上游 revision，但当规范化文档、资源、软件包、API 和质量状态均未变化时保留现有发布 SHA，并且不改写
+`sources/`。新的 observed SHA 只记录在 Actions 日志和 Job
+Summary 中。缺失输入或符号会成为明确的空状态，缺失注释会成为文档稀疏状态，单个目标提取失败不会屏蔽其他软件包。同步环境缺少锁定的 Doxygen 版本属于全局可复现性错误；普通构建环境不需要安装 Doxygen。
 
 ## 文档门户
 
@@ -139,9 +141,9 @@ Pagefind 由生产构建生成，因此应依次执行 `bun run build` 和 `bun 
 是唯一允许访问上游模块仓库的工作流：它可由操作者手动触发，或接收驱动仓库通过
 `.github/workflows/request-docs-sync.yml`
 发出的受限 discovery 事件；它验证事件载荷、安装锁定的 Doxygen、调用本地使用的同一个 `bun run sync`
-CLI，并且仅在请求提交且内容发生变化时提交 `sources/`。驱动仓库以 `@main` 引用该 callable-only
-requester，从而自动跟随中央 workflow 更新。snapshot commit 使用限定到 docs 的 `DOCS_SYNC_TOKEN`
-推送，供仓库外部既有构建服务观察；本仓库不启用本地push
+CLI，并且仅在请求提交且规范化发布内容发生变化或快照需要修复时提交 `sources/`。驱动仓库以 `@main`
+引用该 callable-only requester，从而自动跟随中央 workflow 更新。snapshot commit 使用限定到 docs 的
+`DOCS_SYNC_TOKEN` 推送，供仓库外部既有构建服务观察；本仓库不启用本地push
 build，普通验证和未来部署只消费这些已生成产物，两个现有工作流都不会部署站点。
 
 工作流输入、`repository_dispatch` 载荷、权限、无变更行为、固定工具链和失败语义详见

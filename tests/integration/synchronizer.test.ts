@@ -274,6 +274,67 @@ describe("source synchronizer", () => {
     expect(changed.modules.find((module) => module.id === "SecondModule")?.status).toBe("changed");
   });
 
+  test("rebuilds final aggregation from retained and changed module publications", async () => {
+    const retainedUpstream = await createFixtureRepository();
+    const changedUpstream = await createFixtureRepository("SecondDemo");
+    const repositoryRoot = await createProjectRoot();
+    const modules = [
+      fixtureModule("RetainedModule", retainedUpstream),
+      fixtureModule("ChangedModule", changedUpstream),
+    ];
+    await synchronize(
+      { mode: "all", dryRun: false },
+      { repositoryRoot, modules, gitClient: fixtureGitClient },
+    );
+    const initialManifest = await Bun.file(
+      path.join(repositoryRoot, "sources/manifest.json"),
+    ).json();
+    const retainedPublishedSha = initialManifest.modules.find(
+      (module: { id: string }) => module.id === "RetainedModule",
+    ).sha as string;
+
+    await mkdir(path.join(retainedUpstream, ".github"), { recursive: true });
+    await writeFile(path.join(retainedUpstream, ".github/config.yml"), "enabled: true\n", "utf8");
+    const retainedGit = simpleGit(retainedUpstream);
+    await retainedGit.add(".github/config.yml");
+    await retainedGit.commit("ci: update repository configuration");
+
+    const changedReadme = path.join(changedUpstream, "README.md");
+    await writeFile(
+      changedReadme,
+      `${await readFile(changedReadme, "utf8")}\nChanged module documentation.\n`,
+      "utf8",
+    );
+    const changedGit = simpleGit(changedUpstream);
+    await changedGit.add("README.md");
+    await changedGit.commit("docs: update module documentation");
+
+    const result = await synchronize(
+      { mode: "all", dryRun: false },
+      { repositoryRoot, modules, gitClient: fixtureGitClient },
+    );
+    expect(result.retained).toBe(1);
+    expect(result.changed).toBe(1);
+    expect(result.modules.find((module) => module.id === "RetainedModule")).toMatchObject({
+      status: "retained",
+      publishedSha: retainedPublishedSha,
+    });
+    const changedObservedSha = (await changedGit.revparse(["HEAD"])).trim();
+    expect(result.modules.find((module) => module.id === "ChangedModule")).toMatchObject({
+      status: "changed",
+      observedSha: changedObservedSha,
+      publishedSha: changedObservedSha,
+    });
+
+    const finalManifest = await Bun.file(path.join(repositoryRoot, "sources/manifest.json")).json();
+    expect(
+      finalManifest.modules.find((module: { id: string }) => module.id === "RetainedModule").sha,
+    ).toBe(retainedPublishedSha);
+    expect(
+      finalManifest.modules.find((module: { id: string }) => module.id === "ChangedModule").sha,
+    ).toBe(changedObservedSha);
+  });
+
   test("changed-only regeneration includes the producer fingerprint", async () => {
     const upstream = await createFixtureRepository();
     const repositoryRoot = await createProjectRoot();
@@ -293,10 +354,132 @@ describe("source synchronizer", () => {
     );
     const after = await Bun.file(manifestPath).json();
 
-    expect(regenerated.changed).toBe(1);
+    expect(regenerated.changed).toBe(0);
+    expect(regenerated.retained).toBe(1);
     expect(regenerated.skipped).toBe(0);
     expect(after.modules[0].sha).toBe(before.modules[0].sha);
-    expect(after.modules[0].producerFingerprint).not.toBe(before.modules[0].producerFingerprint);
+    expect(after.modules[0].producerFingerprint).toBe(before.modules[0].producerFingerprint);
+  });
+
+  test("retains the published revision until normalized publication content changes", async () => {
+    const upstream = await createFixtureRepository();
+    const repositoryRoot = await createProjectRoot();
+    const modules = [fixtureModule("FixtureModule", upstream)];
+    await synchronize(
+      { mode: "all", dryRun: false },
+      { repositoryRoot, modules, gitClient: fixtureGitClient },
+    );
+
+    const sourcesRoot = path.join(repositoryRoot, "sources");
+    const initialDigest = await treeDigest(sourcesRoot);
+    const initialManifest = await Bun.file(path.join(sourcesRoot, "manifest.json")).json();
+    const publishedSha = initialManifest.modules[0].sha as string;
+    const git = simpleGit(upstream);
+
+    await mkdir(path.join(upstream, ".github/workflows"), { recursive: true });
+    await writeFile(
+      path.join(upstream, ".github/workflows/ci.yml"),
+      "name: CI\non: [push]\n",
+      "utf8",
+    );
+    await git.add(".github/workflows/ci.yml");
+    await git.commit("ci: add workflow");
+
+    const ciDryRun = await synchronize(
+      { mode: "changed", dryRun: true },
+      { repositoryRoot, modules, gitClient: fixtureGitClient },
+    );
+    expect(ciDryRun.modules[0]?.status).toBe("retained");
+    expect(await treeDigest(sourcesRoot)).toBe(initialDigest);
+
+    const ciOnly = await synchronize(
+      { mode: "changed", dryRun: false },
+      { repositoryRoot, modules, gitClient: fixtureGitClient },
+    );
+    const ciObservedSha = (await git.revparse(["HEAD"])).trim();
+    expect(ciOnly.modules[0]).toMatchObject({
+      status: "retained",
+      observedSha: ciObservedSha,
+      publishedSha,
+    });
+    expect(await treeDigest(sourcesRoot)).toBe(initialDigest);
+
+    const implementationPath = path.join(upstream, "src/demo.cpp");
+    await writeFile(
+      implementationPath,
+      (await readFile(implementationPath, "utf8")).replace("return 42", "return 43"),
+      "utf8",
+    );
+    await git.add("src/demo.cpp");
+    await git.commit("fix: update implementation");
+    const implementationOnly = await synchronize(
+      { mode: "changed", dryRun: false },
+      { repositoryRoot, modules, gitClient: fixtureGitClient },
+    );
+    expect(implementationOnly.modules[0]?.status).toBe("retained");
+    expect(implementationOnly.modules[0]?.publishedSha).toBe(publishedSha);
+    expect(await treeDigest(sourcesRoot)).toBe(initialDigest);
+
+    const packagePath = path.join(upstream, "packages/Demo/cpkg.toml");
+    await writeFile(
+      packagePath,
+      `${await readFile(packagePath, "utf8")}\n# formatting only\n`,
+      "utf8",
+    );
+    await git.add("packages/Demo/cpkg.toml");
+    await git.commit("style: annotate package manifest");
+    const packageFormatting = await synchronize(
+      { mode: "changed", dryRun: false },
+      { repositoryRoot, modules, gitClient: fixtureGitClient },
+    );
+    expect(packageFormatting.modules[0]?.status).toBe("retained");
+    expect(packageFormatting.modules[0]?.publishedSha).toBe(publishedSha);
+    expect(await treeDigest(sourcesRoot)).toBe(initialDigest);
+
+    const readmePath = path.join(upstream, "README.md");
+    await writeFile(
+      readmePath,
+      `${await readFile(readmePath, "utf8")}\nPublished change.\n`,
+      "utf8",
+    );
+    await git.add("README.md");
+    await git.commit("docs: update published documentation");
+    const documentationChange = await synchronize(
+      { mode: "changed", dryRun: false },
+      { repositoryRoot, modules, gitClient: fixtureGitClient },
+    );
+    const updatedSha = (await git.revparse(["HEAD"])).trim();
+    expect(documentationChange.modules[0]).toMatchObject({
+      status: "changed",
+      observedSha: updatedSha,
+      publishedSha: updatedSha,
+    });
+    expect(await treeDigest(sourcesRoot)).not.toBe(initialDigest);
+  });
+
+  test("repairs an invalid existing artifact instead of retaining it", async () => {
+    const upstream = await createFixtureRepository();
+    const repositoryRoot = await createProjectRoot();
+    const modules = [fixtureModule("FixtureModule", upstream)];
+    await synchronize(
+      { mode: "all", dryRun: false },
+      { repositoryRoot, modules, gitClient: fixtureGitClient },
+    );
+
+    const sourcesRoot = path.join(repositoryRoot, "sources");
+    const validDigest = await treeDigest(sourcesRoot);
+    await writeFile(
+      path.join(sourcesRoot, "modules/FixtureModule/package-catalog.json"),
+      "{}\n",
+      "utf8",
+    );
+
+    const repaired = await synchronize(
+      { mode: "all", dryRun: false },
+      { repositoryRoot, modules, gitClient: fixtureGitClient },
+    );
+    expect(repaired.modules[0]?.status).toBe("changed");
+    expect(await treeDigest(sourcesRoot)).toBe(validDigest);
   });
 
   test("dry-run validates candidates without writing repository files", async () => {

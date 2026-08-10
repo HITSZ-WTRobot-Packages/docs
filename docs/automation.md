@@ -49,7 +49,7 @@ URL。载荷不能提供任意 URL、同步模式或提交开关；合法事件�
 
 事件适配器使用参数数组调用 `bun run sync`，不会把工作流表达式插值到命令中。同步在临时克隆内发现
 `cpkg.toml`
-和源码，使用锁定的 Doxygen 生成规范化目录，并只将文档、资源、许可证和目录 JSON 写入快照。同步 CLI 在写入前完成输入、schema、模块图、校验和、Doxygen 版本和跨模块依赖校验，并原子替换成功候选。workflow 不再运行离线质量门禁、站点构建、产物/链接检查或 Playwright/axe；这些检查只由手动
+和源码，使用锁定的 Doxygen 生成规范化目录，并只将文档、资源、许可证和目录 JSON 写入快照。同步 CLI 在写入前完成输入、schema、模块图、校验和、Doxygen 版本和跨模块依赖校验。若候选的规范化文档、资源、软件包、API 和质量状态与现有快照相同，则保留原发布 SHA 且不写入；只有发布内容变化、首次发现或损坏修复才原子替换候选。workflow 不再运行离线质量门禁、站点构建、产物/链接检查或 Playwright/axe；这些检查只由手动
 `Validation` 承担。可选提交只暂存 `sources/`，使用 GitHub Actions 机器人身份，并在提交消息中包含
 `[snapshot-sync]`，暂存后无差异时直接退出。工作流没有 push 触发器，因此机器人提交不会递归启动另一次同步，也不会自动启动
 `Validation`；需要验证该提交时，操作者必须为对应 ref 手动运行 `Validation`。
@@ -92,13 +92,18 @@ jobs:
 和默认分支构造 discovery 事件，并在非默认分支运行时跳过 dispatch，调用仓库不能覆盖目标模块。调用方在 GitHub
 API 接受事件后即成功，不等待 docs 的同步结果；克隆、Doxygen、同步校验和提交结果在 docs 的
 `Synchronize snapshots`
-运行中查看。重复 push 会被 docs 的串行同步组依次处理，相同上游修订最终成为 no-op。
+运行中查看。重复 push 会被 docs 的串行同步组依次处理；相同 revision 会直接跳过，新的 observed
+SHA 若没有改变规范化发布内容则报告为 `retained`。
 
 docs 接收 workflow 只在 `sources/` 有变化时创建 snapshot
 commit；无变化时不会 push，也就没有新的默认分支 commit 可供外部构建服务观察。该 commit 使用
 `DOCS_SYNC_TOKEN` 推送，而不是会抑制派生 workflow/Pages 事件的仓库
 `GITHUB_TOKEN`。本仓库不为此启用本地 push build：`Validation` 保持纯
 `workflow_dispatch`，正式部署仍由独立流程管理。
+
+同步日志和 GitHub Actions Job Summary 同时记录每个模块的 observed SHA 与 published SHA。observed
+SHA 表示本次验证的上游提交；published
+SHA 表示当前站点快照对应的精确提交。内容等价时二者可以不同，observed SHA 不写入默认分支。
 
 ## 固定工具链
 

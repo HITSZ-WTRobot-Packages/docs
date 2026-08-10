@@ -80,6 +80,10 @@ future `trellis update`.
 - `sources/` is a committed, deterministic snapshot of documentation/resources/licenses plus
   per-module package and API catalogs. Ordinary build, generation, test, and preview commands must
   work without contacting upstream module repositories or requiring Doxygen/source files.
+- A manifest module SHA identifies the exact upstream commit for the currently published content.
+  Synchronization logs a newer observed SHA but retains the published SHA and writes no `sources/`
+  diff when normalized documentation, resources, package data, API data, and quality states are
+  unchanged.
 - Preserve synchronized upstream content files byte-for-byte so their manifest SHA-256 values remain
   valid. Repository-owned normalized JSON must use deterministic serialization. The `sources/**` Git
   whitespace exemption applies only to upstream content bytes; do not extend it to repository-owned
@@ -108,7 +112,8 @@ future `trellis update`.
 - Synchronization must support full, per-module, changed-only, dry-run, and first-discovery
   operation; derive indexed modules from the committed manifest; preserve the last valid snapshot on
   failure; regenerate when the upstream revision, Doxygen version, or producer fingerprint changes;
-  and leave no diff for identical inputs.
+  persist only normalized publication changes or snapshot repairs; and leave no diff for
+  publication-equivalent inputs.
 - New UI must be keyboard accessible, respect reduced motion, avoid text overlap, and use the
   configured icon library instead of hand-authored UI SVGs.
 - Keep build artifacts, temporary clones, raw package manifests/source/XML, Git metadata, `.venv`,

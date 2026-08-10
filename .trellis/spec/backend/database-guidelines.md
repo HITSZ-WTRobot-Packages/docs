@@ -18,8 +18,10 @@ the complete cross-module graph validate successfully.
   never persist `cpkg.toml` or source files solely to support a later build.
 - Validate `sources/manifest.json`, each content file, and each package/API artifact at its read
   boundary.
-- Record repository URL, branch, full SHA, producer fingerprint, uncached references, selected
-  content path, artifact path, byte size, and SHA-256 checksum.
+- Record repository URL, branch, full published SHA, producer fingerprint, uncached references,
+  selected content path, artifact path, byte size, and SHA-256 checksum. A newer observed SHA belongs
+  in synchronization logs, not in the committed snapshot, until normalized publication content
+  changes.
 - Manifest format version 2 requires `shortSha` to equal the first 12 characters of `sha`,
   `totalBytes` to equal the sum of content and artifact byte counts, unique module IDs and paths, a
   complete one-to-one license-file index, and exactly one package plus one API artifact per module.
@@ -71,11 +73,14 @@ and deterministic-output tests.
   Doxygen version. Verify checksum, schema, module identity, source branch, and version before
   aggregation. API source URLs follow the configured branch instead of embedding the module SHA, so
   a revision-only update leaves the large API artifact byte-identical; the manifest retains the
-  exact synchronized SHA.
+  exact published SHA.
 - Every catalog package receives one API reference. Preserve explicit `complete`, `sparse`, `empty`,
   or `failed` states and stable warnings instead of rebuilding missing data during an ordinary build.
 - A producer fingerprint covers the locked Doxygen version and source-to-artifact implementation.
-  Changed-only synchronization may skip only when both upstream SHA and fingerprint match.
+  Changed-only synchronization may skip cloning only when both upstream SHA and fingerprint match.
+  After regeneration, retain the existing snapshot when its normalized content, package catalog,
+  API catalog, and quality state remain publication-equivalent; producer metadata alone must not
+  create a default-branch commit.
 
 ## Common Mistakes
 

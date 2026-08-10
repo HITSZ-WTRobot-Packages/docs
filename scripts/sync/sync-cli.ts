@@ -1,10 +1,11 @@
 import { Command } from "commander";
+import { appendFile } from "node:fs/promises";
 
 import { SyncDiagnostic } from "../../src/lib/sources/diagnostic";
 import { discoverModuleConfig, type ModuleConfig } from "../../src/lib/sources/modules";
 import type { SyncRequest } from "./synchronizer";
 import { synchronize } from "./synchronizer";
-import { reportSyncResult } from "./reporter";
+import { formatSyncJobSummary, reportSyncResult } from "./reporter";
 
 type CliOptions = {
   module?: string;
@@ -93,7 +94,10 @@ async function main(): Promise<void> {
       return;
     }
     const request = parseSyncRequest(arguments_);
-    reportSyncResult(await synchronize(request));
+    const result = await synchronize(request);
+    reportSyncResult(result);
+    const jobSummaryPath = process.env.GITHUB_STEP_SUMMARY?.trim();
+    if (jobSummaryPath) await appendFile(jobSummaryPath, formatSyncJobSummary(result), "utf8");
   } catch (error) {
     const diagnostic =
       error instanceof SyncDiagnostic
