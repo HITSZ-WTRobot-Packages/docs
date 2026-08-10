@@ -38,6 +38,25 @@
   Actions 作为 Pages 来源，配置分支/环境保护及所需权限，并且首次、重复、回滚演练和部署后检查清单全部通过。
 - 最近验证：2026-08-10
 
+## DEPLOYMENT-002：Netlify 生产设置尚未完成管理员验收
+
+- 状态：open
+- 范围：deployment
+- 负责人：Netlify 项目管理员与 `HITSZ-WTRobot-Packages/docs` 仓库管理员
+- 证据：2026-08-10 的 Netlify 构建日志显示项目已连接仓库，但使用控制台命令
+  `bun run build`，镜像只提供 Doxygen 1.9.8，因与 `.doxygen-version`
+  要求的 1.16.1 不一致而失败。仓库现已定义 `netlify.toml`
+  和固定工具链入口，但无法从仓库内确认 production branch、主域名、deploy lock、auto
+  publishing、预览策略或保留期限。
+- 影响：可以可复现地构建并验证 Netlify 候选产物；在管理员记录主域名、确认
+  `main`、锁定生产发布并完成首次/重复/回滚演练前，不得把候选视为批准的正式部署。该问题不阻塞 deploy
+  preview。
+- 规避措施：保持 production deploy lock；以 Netlify `URL` 和 `BASE_PATH=/` 构建候选，在手动
+  `Validation` 与部署后检查通过后由管理员发布。
+- 关闭条件：管理员记录 Netlify 项目主域名与 production branch，确认预览/branch
+  deploy 策略和保留期限，完成首次、重复、回滚及部署后检查，并明确是否启用 auto publishing。
+- 最近验证：2026-08-10
+
 ## UPSTREAM-001：ArmController 缺少软件包清单、README 和许可证文件
 
 - 状态：open

@@ -59,7 +59,9 @@ future `trellis update`.
   layout, Linkinator for static links, Playwright plus axe for browser/accessibility checks, and
   Astro Icon with the Lucide Iconify set for UI icons.
 - Keep GitHub Actions dependencies pinned to full commit SHAs. The local setup Action owns Bun,
-  frozen dependency installation, the exact Doxygen binary/checksum, and optional Chromium setup.
+  frozen dependency installation, shared pinned Doxygen setup, and optional Chromium setup.
+  `.doxygen-release.json` is the single source of truth for the Doxygen download URL/checksum and
+  must agree with `.doxygen-version` before GitHub Actions or Netlify adds the binary to `PATH`.
 
 ## Data And Network Boundaries
 
@@ -76,6 +78,9 @@ future `trellis update`.
   repository-owned code or documentation.
 - Only the synchronization CLI and its manually triggered GitHub Action may access upstream
   repositories. Never modify or push to an upstream module repository.
+- Explicit deployment toolchain setup may download only the release asset pinned in
+  `.doxygen-release.json`; ordinary build, generation, validation, test, and preview commands remain
+  offline with respect to both upstream module repositories and toolchain acquisition.
 - Validation CI is manually triggered only through `workflow_dispatch`, has read-only contents
   permission, and never invokes synchronization. Snapshot sync has no push trigger, parses dispatch
   data through `sync:action`, stages only `sources/`, and may push only after the complete offline
@@ -100,9 +105,9 @@ future `trellis update`.
   match its revision/documentation/dependency/status model, Pagefind must cover the portal, and the
   artifact must contain no symlinks, temporary/source directories, credentials, or resources outside
   the generated allowlist.
-- Formal deployment is a separate administrator-approved task. The future Pages build uses the exact
-  address pair documented in `docs/deployment.md`; deployment never synchronizes or rebuilds bytes
-  after artifact validation.
+- Formal production publication is an administrator-approved task. Pages and Netlify builds use
+  their exact address pairs documented in `docs/deployment.md`; neither deployment path synchronizes
+  snapshots, and deployment never changes bytes after artifact validation.
 
 ## Architecture Gate
 

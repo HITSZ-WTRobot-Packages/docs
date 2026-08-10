@@ -1,17 +1,22 @@
 # 部署计划
 
-本仓库已具备发布条件，但有意不包含已启用的部署工作流。首次生产部署是一项独立且需要管理员批准的变更。本计划选定使用自定义 Actions 工作流的 GitHub
-Pages 作为目标，并定义该变更必须执行的检查。
+本仓库支持 GitHub Pages 与 Netlify 两种并列的静态部署环境。GitHub
+Pages 仍是尚未启用、需要管理员批准的未来工作流；Netlify 通过根目录 `netlify.toml`
+构建候选部署。任何首次生产发布、自定义域名变更或自动发布启用仍属于独立的管理员批准事项。
+
+两种环境共享同一份已提交快照、固定工具链、地址模型和发布产物门禁，但必须为各自确切的
+`SITE_URL`/`BASE_PATH` 组合分别构建和验证；不得把一个提供商的产物上传到另一个地址。
 
 ## 地址契约
 
-仓库远程地址为 `HITSZ-WTRobot-Packages/docs`。在组织自有域名获批前，部署目标是 GitHub
-Pages 项目站点地址：
+仓库远程地址为 `HITSZ-WTRobot-Packages/docs`。支持的部署地址为：
 
-| 目标           | `SITE_URL`                                 | `BASE_PATH` |
-| -------------- | ------------------------------------------ | ----------- |
-| 默认项目站点   | `https://hitsz-wtrobot-packages.github.io` | `/docs/`    |
-| 未来自定义域名 | 获批且不带路径的 HTTPS 源站                | `/`         |
+| 目标                  | `SITE_URL`                                 | `BASE_PATH` |
+| --------------------- | ------------------------------------------ | ----------- |
+| GitHub Pages 项目站点 | `https://hitsz-wtrobot-packages.github.io` | `/docs/`    |
+| 未来自定义域名        | 获批且不带路径的 HTTPS 源站                | `/`         |
+| Netlify production    | Netlify 只读变量 `URL`                     | `/`         |
+| Netlify 预览          | Netlify 只读变量 `DEPLOY_PRIME_URL`        | `/`         |
 
 `SITE_URL` 和 `BASE_PATH` 是构建输入，不是运行时设置。canonical
 URL、sitemap 条目、robots 指令、导航、Pagefind 资源、Markdown 资源和依赖图链接都针对该确切组合编译。不得将产物部署到与构建和验证时所用值不同的源站或路径。
@@ -28,7 +33,30 @@ URL、sitemap 条目、robots 指令、导航、Pagefind 资源、Markdown 资�
 - [GitHub Pages HTTPS](https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https)
 - [Astro 部署到 GitHub Pages](https://docs.astro.build/en/guides/deploy/github/)
 
-## 管理前置条件
+## Netlify 构建契约
+
+根目录 `netlify.toml`
+是 Netlify 构建命令、发布目录和 Bun 安装参数的仓库内来源，优先于控制台中的冲突值：
+
+- Netlify 使用 Bun 1.3.14，并以 `--frozen-lockfile` 安装 `bun.lock` 中的依赖。
+- 构建命令为 `bun run build:netlify`，发布目录为 `dist/`。
+- production 使用 `URL` 作为 `SITE_URL`；deploy preview、branch deploy、preview
+  server 和本地 Netlify 上下文使用 `DEPLOY_PRIME_URL`。缺失或非法地址必须在下载和 Astro 构建前失败。
+- 所有 Netlify 产物使用 `BASE_PATH=/`。GitHub Pages 的 `/docs/` 产物不能部署到 Netlify。
+- 构建入口使用 `NETLIFY_CACHE_DIR`
+  缓存固定 Doxygen；缓存不可用时退回操作系统临时目录。缓存命中仍检查二进制版本。
+- 安装器只下载 `.doxygen-release.json` 固定的 Doxygen Release，验证 SHA-256 和 `.doxygen-version`
+  后才进入 `PATH`。之后依次运行构建、`check:artifacts` 和 `check:links`，不调用同步。
+
+Netlify 项目管理员应把 `main` 设为 production branch，启用 deploy preview，默认关闭普通 branch
+deploy，并使构建作用域可读取 Netlify 自带的只读部署变量。首次上线保持 deploy lock，允许 `main`
+继续产生候选构建但不自动替换线上版本；只有同一提交的手动
+`Validation`、Netlify 构建以及部署后检查全部通过后，才手动发布候选。完成首次、重复和回滚演练前不得启用 auto
+publishing。
+
+回滚优先使用 Netlify 已保留且与批准记录中提交、源站和根路径一致的成功原子部署。发布旧部署不会重建字节；如果该部署已过期，必须检出记录的提交并重新走固定工具链、构建和门禁，不得使用不同地址的保留产物。
+
+## GitHub Pages 管理前置条件
 
 添加部署工作流前，组织或仓库管理员必须完成并记录以下选择：
 
@@ -45,7 +73,7 @@ URL、sitemap 条目、robots 指令、导航、Pagefind 资源、Markdown 资�
 环境为目标。不需要检出凭据、仓库写入令牌、上游令牌或部署密钥。使用单一 `pages` 并发组和
 `cancel-in-progress: false`，避免新运行中断正在进行的部署。
 
-## 未来工作流契约
+## GitHub Pages 未来工作流契约
 
 后续部署任务必须分离构建、保留发布产物和部署职责：
 
@@ -70,7 +98,7 @@ GB 的 gzip 压缩 tar 归档，且不含符号链接或硬链接。保留发布
 
 ## 部署前门禁
 
-从干净提交运行以下矩阵。构建和生成器必须在无法访问上游网络时完成；只有 Linkinator 的本地预览和 Playwright 的回环服务器可以使用网络。
+从干净提交运行以下矩阵。固定工具链准备完成后，构建和生成器必须在无法访问上游网络时完成；门禁期间只有 Linkinator 的本地预览和 Playwright 的回环服务器可以使用网络。
 
 | 变体           | `SITE_URL`                                 | `BASE_PATH`           | 必需检查                                      |
 | -------------- | ------------------------------------------ | --------------------- | --------------------------------------------- |
