@@ -4,8 +4,7 @@
 `HITSZ WTRobot`）维护的可复用 STM32 软件包提供静态、可搜索的文档。
 
 站点从 `sources/`
-下已提交的文件构建。常规构建、测试和预览不会访问上游仓库；只有显式同步命令能访问上游模块仓库，部署工具链准备命令只能下载仓库固定并校验的 Doxygen
-Release。
+下已提交的文件构建。常规构建、测试和预览不会访问上游仓库；网络访问仅限显式执行的同步命令。
 
 ## 项目约定
 
@@ -40,7 +39,6 @@ bun run generate:catalog
 bun run generate:readme
 bun run generate:api
 bun run generate
-bun run setup:doxygen [--install-root <path>]
 bun run lint
 bun run typecheck
 bun run test
@@ -49,7 +47,6 @@ bun run check:artifacts
 bun run check:links
 bun run check
 bun run build
-bun run build:netlify
 ```
 
 根路径构建使用 `SITE_URL=https://example.invalid` 和 `BASE_PATH=/`。`BASE_PATH` 也可以是
@@ -58,7 +55,7 @@ bun run build:netlify
 ## 源码同步
 
 `bun run sync`
-是仓库中唯一允许访问上游模块仓库的命令。它将六个允许同步的模块仓库浅克隆到操作系统临时目录，将各分支解析为完整提交 SHA，并在修改已跟踪文件前验证完整候选快照。
+是仓库中唯一允许访问网络的命令。它将六个允许同步的模块仓库浅克隆到操作系统临时目录，将各分支解析为完整提交 SHA，并在修改已跟踪文件前验证完整候选快照。
 
 ```text
 bun run sync                         # 刷新所有允许同步的模块
@@ -100,9 +97,6 @@ HTML 或创建源码浏览器。
 XML 管线使用 `fast-xml-validator` 验证语法、`fast-xml-parser`
 解析，并将文件、命名空间、类和结构体、函数、枚举、类型定义、变量、宏定义、说明、位置、固定版本源码链接和符号关系规范化为带版本的 TypeScript 目录。缺失输入或符号会成为明确的空状态，缺失注释会成为文档稀疏状态，单个目标提取失败不会屏蔽其他软件包。Doxygen 可执行文件缺失或版本不匹配属于全局可复现性错误，必须先解决才能生成。
 
-`bun run setup:doxygen` 根据 `.doxygen-version` 和 `.doxygen-release.json`
-安装固定 Linux 二进制，下载后验证 SHA-256，并在加入执行路径前再次检查版本。该命令用于 CI/部署工具链准备；普通生成和构建不会自行下载工具。
-
 ## 文档门户
 
 生产构建将软件包目录、渲染后的 Markdown 和规范化 Doxygen 数据组合为静态 Astro 路由。主要路由如下：
@@ -131,8 +125,8 @@ Pagefind 由生产构建生成，因此应依次执行 `bun run build` 和 `bun 
 
 `.github/workflows/validation.yml`
 基于已提交快照运行离线质量门禁和静态站点矩阵。`.github/workflows/sync-snapshots.yml`
-是唯一允许访问上游模块仓库的工作流：它必须显式触发、验证事件载荷、调用本地使用的同一个
-`bun run sync` CLI，并且仅在请求提交且内容发生变化时提交 `sources/`。两个工作流都不会部署站点。
+是唯一允许访问网络的工作流：它必须显式触发、验证事件载荷、调用本地使用的同一个 `bun run sync`
+CLI，并且仅在请求提交且内容发生变化时提交 `sources/`。两个工作流都不会部署站点。
 
 工作流输入、`repository_dispatch` 载荷、权限、无变更行为、固定工具链和失败语义详见
 [docs/automation.md](docs/automation.md)。
@@ -142,10 +136,9 @@ Pagefind 由生产构建生成，因此应依次执行 `bun run build` 和 `bun 
 `bun run check:artifacts`
 是可执行的发布产物契约。除 canonical、robots、sitemap、404 和 Pagefind 资源外，它还会依据目录、README/降级内容、修订版本、依赖项和 API 数据验证每个模块/软件包路由，并拒绝临时路径、原始快照、Git 元数据、虚拟环境、凭据、符号链接以及生成允许列表之外的上游资源。
 
-仓库支持并列的静态部署目标。GitHub Pages 仍是待管理员批准的计划，使用
-`SITE_URL=https://hitsz-wtrobot-packages.github.io` 和 `BASE_PATH=/docs/`。Netlify 通过已提交的
-`netlify.toml` 使用根路径构建：production 从 Netlify 的 `URL` 读取源站，预览从 `DEPLOY_PRIME_URL`
-读取当前部署地址，并在发布前安装固定 Doxygen、构建、检查产物及链接。自定义域名需要针对新源站重新构建；不同地址组合之间不能复用生产产物。确切权限、发布锁、环境保护、自定义域名流程、回滚、发布演练、停止条件和部署后检查清单见
+未来选定的目标是使用 `SITE_URL=https://hitsz-wtrobot-packages.github.io` 和 `BASE_PATH=/docs/`
+构建的 GitHub
+Pages 项目站点。自定义域名需要新的根路径构建；不同地址组合之间不能复用生产产物。本仓库当前没有启用部署工作流。确切权限、环境保护、自定义域名流程、保留产物回滚、发布演练、停止条件和部署后检查清单见
 [docs/deployment.md](docs/deployment.md)。
 
 ## 架构问题

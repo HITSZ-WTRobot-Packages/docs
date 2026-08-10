@@ -1,7 +1,6 @@
 # 自动化
 
-本仓库将允许访问网络的快照同步与常规离线验证分离。两个 GitHub
-Actions 工作流都不会部署站点或启用 GitHub Pages；Netlify 使用独立的已提交配置构建静态站点。
+本仓库将允许访问网络的快照同步与常规离线验证分离。两个工作流都不会部署站点或启用 GitHub Pages。
 
 ## 验证工作流
 
@@ -65,9 +64,9 @@ URL、片段和 CSS 引用。根路径和产品路径变体还会运行桌面/�
 ## 固定工具链
 
 外部 Actions 均引用完整提交 SHA。本地 setup Action 根据软件包契约安装 Bun 1.3.14，执行
-`bun install --frozen-lockfile`，并调用 `bun run setup:doxygen`。共享安装器从
-`.doxygen-release.json` 读取官方 Doxygen 1.16.1 Linux 产物地址与 SHA-256，要求其版本等于
-`.doxygen-version`，提取前验证摘要，进入执行路径前验证二进制版本。Netlify 使用同一安装器和发布描述，避免平台配置漂移。只有运行 Playwright 的 GitHub 作业会安装 Chromium。
+`bun install --frozen-lockfile`，并下载官方 Doxygen 1.16.1
+Linux 产物。提取前验证其 SHA-256，版本必须等于
+`.doxygen-version`。只有运行 Playwright 的作业会安装 Chromium。
 
 修改工作流结构时运行：
 

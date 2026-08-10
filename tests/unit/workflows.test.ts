@@ -1,7 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { readFile } from "node:fs/promises";
 
-import { parse as parseToml } from "smol-toml";
 import { parse } from "yaml";
 import { z } from "zod";
 
@@ -27,20 +26,6 @@ const WorkflowSchema = z.looseObject({
 
 const ActionSchema = z.looseObject({
   runs: z.looseObject({ steps: z.array(StepSchema) }),
-});
-
-const NetlifySchema = z.object({
-  build: z.object({
-    command: z.string(),
-    publish: z.string(),
-    environment: z.record(z.string(), z.string()),
-  }),
-});
-
-const DoxygenReleaseSchema = z.object({
-  version: z.string(),
-  url: z.url(),
-  sha256: z.string().regex(/^[a-f0-9]{64}$/u),
 });
 
 async function readYaml(path: string): Promise<unknown> {
@@ -110,31 +95,9 @@ describe("GitHub Actions contracts", () => {
     expect(uses.length).toBeGreaterThan(0);
     expect(uses.every((value) => /@[0-9a-f]{40}$/u.test(value))).toBe(true);
 
-    const doxygenStep = toolchain.runs.steps.find((step) => step.run?.includes("setup:doxygen"));
-    const release = DoxygenReleaseSchema.parse(
-      JSON.parse(await readFile(".doxygen-release.json", "utf8")),
-    );
-    expect(doxygenStep?.run).toContain("--print-bin");
-    expect(release.url).toContain("github.com/doxygen/doxygen/releases/download/");
-    expect(release.version).toBe((await readFile(".doxygen-version", "utf8")).trim());
-  });
-
-  test("Netlify uses the pinned Bun toolchain and the validated deployment command", async () => {
-    const config = NetlifySchema.parse(parseToml(await readFile("netlify.toml", "utf8")));
-    const packageJson = z
-      .object({ scripts: z.record(z.string(), z.string()) })
-      .parse(JSON.parse(await readFile("package.json", "utf8")));
-
-    expect(config.build).toEqual({
-      command: "bun run build:netlify",
-      publish: "dist",
-      environment: {
-        BUN_VERSION: "1.3.14",
-        BUN_FLAGS: "--frozen-lockfile",
-      },
-    });
-    expect(packageJson.scripts["build:netlify"]).toContain("netlify-build-cli.ts");
-    expect(packageJson.scripts["setup:doxygen"]).toContain("setup-doxygen-cli.ts");
-    expect(JSON.stringify(config)).not.toContain("sync");
+    const doxygenStep = toolchain.runs.steps.find((step) => step.run?.includes("DOXYGEN_SHA256"));
+    expect(doxygenStep?.run).toContain("sha256sum --check --strict");
+    expect(JSON.stringify(toolchain)).toContain("1.16.1");
+    expect((await readFile(".doxygen-version", "utf8")).trim()).toBe("1.16.1");
   });
 });

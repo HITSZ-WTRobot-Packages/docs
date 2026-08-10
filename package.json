@@ -24,8 +24,6 @@
     "generate:readme": "bun run scripts/generate/readme-cli.ts",
     "generate:api": "bun run scripts/generate/api-cli.ts",
     "generate": "bun run generate:catalog && bun run generate:readme && bun run generate:api",
-    "setup:doxygen": "bun run scripts/toolchain/setup-doxygen-cli.ts",
-    "build:netlify": "bun run scripts/deployment/netlify-build-cli.ts",
     "sync:action": "bun run scripts/sync/action-sync-cli.ts",
     "check:conventions": "bun run scripts/validation/check-conventions.ts",
     "check:artifacts": "bun run scripts/validation/check-artifacts.ts",

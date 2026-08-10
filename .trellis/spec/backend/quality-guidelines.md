@@ -19,9 +19,6 @@
 - Doxygen must match `.doxygen-version`. Each target receives a temporary Doxyfile containing only
   checksum-verified owned inputs; HTML, source browsing, compilation, recursive input discovery,
   and normal-build network access remain disabled.
-- `.doxygen-release.json` is the single provider-neutral source for the Doxygen release URL and
-  SHA-256. Explicit setup verifies it against `.doxygen-version`, verifies the archive before
-  extraction, and verifies the executable before adding its directory to `PATH`.
 - A source belongs to the deepest package directory containing it. Every catalog package receives
   an API reference, and source files outside all package roots receive a module-level reference.
 - Doxygen target failures become explicit `failed` references. No inputs, no public symbols, and
@@ -74,9 +71,6 @@
 - A Pages deployment is a later administrator-approved change. Build once for the exact production
   `SITE_URL`/`BASE_PATH`, validate those bytes, retain a digest-addressed rollback artifact, and give
   only the separate protected deployment job `pages: write` plus `id-token: write`.
-- Netlify is a parallel root-path deployment target. Its committed config pins Bun and frozen
-  installation, while its build command installs the shared Doxygen release and validates the exact
-  `dist/` before publication; it never synchronizes snapshots.
 
 ## Review Checklist
 
@@ -216,88 +210,4 @@ on:
 # Correct: an operator must explicitly select a ref and dispatch Validation.
 on:
   workflow_dispatch:
-```
-
-## Scenario: Shared Doxygen Setup And Netlify Deployment
-
-### 1. Scope / Trigger
-
-Apply this contract when changing `.doxygen-release.json`, the shared installer, GitHub toolchain
-setup, `netlify.toml`, Netlify environment mapping, or the provider build command. It prevents
-toolchain drift and prevents a static artifact from advertising the wrong deployment origin.
-
-### 2. Signatures
-
-```text
-bun run setup:doxygen [--install-root <path>] [--print-bin]
-NETLIFY=true CONTEXT=production URL=<origin> bun run build:netlify
-NETLIFY=true CONTEXT=<non-production> DEPLOY_PRIME_URL=<origin> bun run build:netlify
-```
-
-### 3. Contracts
-
-| Boundary | Input | Required behavior |
-| --- | --- | --- |
-| Release metadata | `.doxygen-release.json`, `.doxygen-version` | Exact versions agree; URL is HTTPS; SHA-256 is 64 lowercase hex characters |
-| Tool cache | install root or `NETLIFY_CACHE_DIR` | Store only `doxygen-<version>`; verify cached executable version before reuse |
-| Production URL | `CONTEXT=production`, `URL` | Set `SITE_URL` to the validated origin and `BASE_PATH=/` |
-| Preview URL | non-production `CONTEXT`, `DEPLOY_PRIME_URL` | Set `SITE_URL` to the validated deploy origin and `BASE_PATH=/` |
-| Netlify build | pinned tool plus committed snapshot | Run build, artifact check, and link check in order; publish only `dist/` |
-
-The installer may access only the pinned Doxygen release. Ordinary `build`, `generate`, `test`,
-`preview`, and validation commands do not acquire tools or contact upstream module repositories.
-
-### 4. Validation & Error Matrix
-
-| Condition | Required result |
-| --- | --- |
-| Release metadata is missing, malformed, non-HTTPS, or disagrees with the version lock | Fail before download with a stable toolchain diagnostic |
-| Download fails, exceeds the size limit, or has the wrong SHA-256 | Remove temporary state, retain no candidate installation, and fail |
-| Cached or extracted executable reports the wrong version | Replace a bad cache or reject a bad extracted archive before `PATH` changes |
-| Production lacks `URL`; preview lacks `DEPLOY_PRIME_URL` | Fail before Doxygen setup or Astro build |
-| Deployment URL contains credentials, path, query, hash, or unsupported protocol | Fail with `NETLIFY_URL_INVALID` |
-| Build, artifact check, or link check fails | Return non-zero and do not publish `dist/` |
-
-### 5. Good / Base / Bad Cases
-
-- Good: Netlify production uses its read-only `URL`, a verified cached Doxygen 1.16.1, and validates
-  the resulting root-path artifact before publication.
-- Base: a clean cache downloads the one pinned archive, verifies it, installs atomically, and then
-  builds; later builds verify and reuse it.
-- Bad: putting a raw `curl | tar` sequence and duplicate checksum in `netlify.toml` or a workflow
-  creates provider drift and bypasses testable boundary validation.
-- Bad: building a deploy preview with production `URL` produces canonical and sitemap URLs for a
-  different host even though every file uploads successfully.
-
-### 6. Tests Required
-
-- Installer unit tests use a local archive fixture and assert first install, cache hit, bad-cache
-  replacement, checksum rejection, version-lock drift, and temporary cleanup without network.
-- Netlify configuration tests assert production/preview selection, root base, cache fallback,
-  missing metadata, and invalid URL diagnostics.
-- Workflow tests parse YAML, JSON, and TOML with maintained parsers; assert both providers reference
-  the shared release metadata, Bun is pinned, install is frozen, publish is `dist`, and no deploy
-  command contains synchronization.
-- Run one production and one preview `build:netlify` simulation against a verified cached binary;
-  artifact output must report the matching origin. Reuse the final `dist/` for Playwright/axe.
-
-### 7. Wrong vs Correct
-
-```toml
-# Wrong: depends on Netlify's older preinstalled Doxygen and skips release checks.
-[build]
-command = "bun run build"
-
-# Correct: the repository-owned command prepares the shared pinned tool and validates dist/.
-[build]
-command = "bun run build:netlify"
-publish = "dist"
-```
-
-```yaml
-# Wrong: a platform owns a second URL, version, and checksum.
-run: curl <release> | tar xz
-
-# Correct: every platform delegates to the tested shared installer.
-run: bun run --silent setup:doxygen --install-root "${RUNNER_TEMP}" --print-bin
 ```
