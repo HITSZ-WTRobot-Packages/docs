@@ -8,7 +8,7 @@
 
 <!-- @@@auto:current-status -->
 - **Active File**: `journal-1.md`
-- **Total Sessions**: 9
+- **Total Sessions**: 10
 - **Last Active**: 2026-08-11
 <!-- @@@/auto:current-status -->
 
@@ -19,7 +19,7 @@
 <!-- @@@auto:active-documents -->
 | File | Lines | Status |
 |------|-------|--------|
-| `journal-1.md` | ~323 | Active |
+| `journal-1.md` | ~357 | Active |
 <!-- @@@/auto:active-documents -->
 
 ---
@@ -29,6 +29,7 @@
 <!-- @@@auto:session-history -->
 | # | Date | Title | Commits | Branch |
 |---|------|-------|---------|--------|
+| 10 | 2026-08-11 | 精简同步工作流并稳定 Doxygen 产物 | `e315e17`, `6062b16` | `main` |
 | 9 | 2026-08-11 | External rebuild trigger chain | `fe7ec15` | `main` |
 | 8 | 2026-08-11 | Dispatch repository auto-discovery | `cbc43d9` | `main` |
 | 7 | 2026-08-10 | Persist generated documentation snapshots | `accd08d`, `9d3c635` | `main` |
