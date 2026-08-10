@@ -8,7 +8,7 @@
 
 <!-- @@@auto:current-status -->
 - **Active File**: `journal-1.md`
-- **Total Sessions**: 8
+- **Total Sessions**: 9
 - **Last Active**: 2026-08-11
 <!-- @@@/auto:current-status -->
 
@@ -19,7 +19,7 @@
 <!-- @@@auto:active-documents -->
 | File | Lines | Status |
 |------|-------|--------|
-| `journal-1.md` | ~290 | Active |
+| `journal-1.md` | ~323 | Active |
 <!-- @@@/auto:active-documents -->
 
 ---
@@ -29,6 +29,7 @@
 <!-- @@@auto:session-history -->
 | # | Date | Title | Commits | Branch |
 |---|------|-------|---------|--------|
+| 9 | 2026-08-11 | External rebuild trigger chain | `fe7ec15` | `main` |
 | 8 | 2026-08-11 | Dispatch repository auto-discovery | `cbc43d9` | `main` |
 | 7 | 2026-08-10 | Persist generated documentation snapshots | `accd08d`, `9d3c635` | `main` |
 | 6 | 2026-08-10 | 回退 Netlify 支持并降级 Doxygen | `51420f8`, `29ee2c1` | `main` |

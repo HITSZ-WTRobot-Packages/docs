@@ -288,3 +288,36 @@ Added a reusable caller workflow and strict repository dispatch boundary, replac
 ### Next Steps
 
 - None - task complete
+
+
+## Session 9: External rebuild trigger chain
+
+**Date**: 2026-08-11
+**Task**: External rebuild trigger chain
+**Branch**: `main`
+
+### Summary
+
+Kept the dispatch requester callable-only and Validation manual-only, switched driver callers to the rolling docs main workflow, and scoped the docs PAT to changed snapshot commits so external build automation can observe the push.
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `fe7ec15` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete
