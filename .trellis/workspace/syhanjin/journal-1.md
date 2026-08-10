@@ -154,3 +154,36 @@ Restricted Validation to workflow_dispatch, updated workflow tests and automatio
 ### Next Steps
 
 - None - task complete
+
+
+## Session 5: Add Netlify deployment support
+
+**Date**: 2026-08-10
+**Task**: Add Netlify deployment support
+**Branch**: `main`
+
+### Summary
+
+Added repository-owned Netlify configuration, shared pinned Doxygen installation for GitHub Actions and Netlify, production/preview URL mapping, release gates, tests, and deployment documentation. Verified check, generators, production and preview builds, artifacts, links, and Playwright/axe.
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `b56a8a7` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete

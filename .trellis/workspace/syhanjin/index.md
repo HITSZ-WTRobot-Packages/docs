@@ -8,7 +8,7 @@
 
 <!-- @@@auto:current-status -->
 - **Active File**: `journal-1.md`
-- **Total Sessions**: 4
+- **Total Sessions**: 5
 - **Last Active**: 2026-08-10
 <!-- @@@/auto:current-status -->
 
@@ -19,7 +19,7 @@
 <!-- @@@auto:active-documents -->
 | File | Lines | Status |
 |------|-------|--------|
-| `journal-1.md` | ~156 | Active |
+| `journal-1.md` | ~189 | Active |
 <!-- @@@/auto:active-documents -->
 
 ---
@@ -29,6 +29,7 @@
 <!-- @@@auto:session-history -->
 | # | Date | Title | Commits | Branch |
 |---|------|-------|---------|--------|
+| 5 | 2026-08-10 | Add Netlify deployment support | `b56a8a7` | `main` |
 | 4 | 2026-08-10 | Make Validation manually triggered | `9519e8b`, `385f4b2` | `main` |
 | 3 | 2026-08-10 | 软件包详情页右侧栏 | `79ff116`, `a00b8c1` | `main` |
 | 2 | 2026-08-10 | 全站中文化与品牌统一 | `af165b7`, `63b2689` | `main` |
