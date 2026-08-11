@@ -69,11 +69,15 @@ and deterministic-output tests.
 
 - Run the exact `.doxygen-version` only during synchronization against explicit source paths in the
   temporary clone. Doxygen XML is temporary and must not be committed.
-- Persist one format-version-2 `api-catalog.json` per module with its source branch and normalized
+- Persist one format-version-3 `api-catalog.json` per module with its source branch and normalized
   Doxygen version. Verify checksum, schema, module identity, source branch, and version before
   aggregation. API source URLs follow the configured branch instead of embedding the module SHA, so
   a revision-only update leaves the large API artifact byte-identical; the manifest retains the
   exact published SHA.
+- Normalize class/struct inheritance into typed `inheritanceRelations`, retain resolvable internal
+  base IDs plus external base names, and store access/static/virtual/const modifiers on member
+  symbols. `parentId` owns containment; the generic `references` array does not imply an
+  object-oriented relationship kind.
 - Every catalog package receives one API reference. Preserve explicit `complete`, `sparse`, `empty`,
   or `failed` states and stable warnings instead of rebuilding missing data during an ordinary build.
 - A producer fingerprint covers the locked Doxygen version and source-to-artifact implementation.

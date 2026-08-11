@@ -105,6 +105,15 @@ route it does not own.
   overflow assertions cannot detect text clipped inside canvas rendering, so inspect graph
   screenshots at desktop and mobile widths.
 
+## API Type Relationships
+
+- Present C/C++ API references around namespace-grouped classes and structs, with inherited bases,
+  derived types, and parent-owned members rendered as static semantic HTML before graph enhancement.
+- Use only typed `inheritanceRelations` for inheritance diagrams. Do not infer inheritance,
+  composition, dependency, or calls from the generic symbol `references` array.
+- Lazy-load Cytoscape when the inheritance disclosure opens, mirror the complete relation set in a
+  native list, and keep external base names visible without generating missing internal links.
+
 ## Common Mistakes
 
 - Hiding critical package content behind hydration.

@@ -59,6 +59,10 @@ future `trellis update`.
   `doxygen --version` only from an exact semantic version or the official
   `X.Y.Z (<40-hex release commit>)` form; reject every other suffix while preserving the raw output
   in mismatch diagnostics.
+- Keep committed API catalogs at format version 3. Express class/struct inheritance through typed
+  `inheritanceRelations`, member ownership through `parentId`, and access/static/virtual/const
+  modifiers through `member`. The generic `references` array is not an object-relation contract and
+  must not be presented as inheritance, composition, dependency, or call semantics.
 - Use Zod for runtime schemas, smol-toml for `cpkg.toml`, unified/remark/rehype for Markdown and
   sanitized HTML, fast-xml-parser plus fast-xml-validator for Doxygen XML, simple-git for Git
   operations, Execa for bounded external processes, Commander for CLI arguments, and tinyglobby for

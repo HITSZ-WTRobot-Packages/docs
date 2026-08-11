@@ -191,7 +191,7 @@ sources/manifest.json: formatVersion = 2
 sources/modules/<module>/content/<upstream-doc-path>
 sources/modules/<module>/package-catalog.json
 sources/modules/<module>/api-catalog.json
-ApiCatalog.formatVersion = 2
+ApiCatalog.formatVersion = 3
 ApiReference.sourceBranch = ModuleSnapshot.branch
 ModuleSnapshot.producerFingerprint: 64 lowercase hexadecimal SHA-256 characters
 ModuleSyncStatus: "changed" | "retained" | "unchanged" | "skipped" | "would-change"
@@ -213,7 +213,7 @@ cannot compose with those selectors; they validate and discover one organization
 | Boundary | Input | Output |
 | --- | --- | --- |
 | Synchronization | Manifest index, mode, optional indexed/discovery module, upstream Git repositories, locked Doxygen | Atomically replace publication-changing or repaired modules; retain publication-equivalent snapshots; report observed/published SHAs |
-| API artifact | Doxygen XML, owned input paths, module ID/default branch, package version | Format-version-2 references with `sourceBranch`; branch-based source URLs and no module SHA/revision label |
+| API artifact | Doxygen XML, owned input paths, module ID/default branch, package version | Format-version-3 references with typed inheritance/member metadata and `sourceBranch`; branch-based source URLs and no module SHA/revision label |
 | Generation | Valid committed `sources/` content, package/API artifacts, and manifest | Validated aggregate in-memory catalogs; no Doxygen, network, or snapshot mutation |
 | Build | `SITE_URL` absolute `http:`/`https:` URL; normalized absolute `BASE_PATH` | Static `dist/` whose internal routes and assets include the configured base |
 | Artifact check | The built `dist/`, the same address pair, and validated portal data | Release summary with module/package/API/HTML/Pagefind/file counts; no writes |
@@ -395,7 +395,7 @@ const api = await loadApiCatalog();
 { "formatVersion": 1, "moduleSha": "<40-hex>", "revisionLabel": "1.0.0+<short-sha>" }
 
 // Correct: published revision ownership stays in the manifest/package catalog; API links follow branch.
-{ "formatVersion": 2, "sourceBranch": "main" }
+{ "formatVersion": 3, "sourceBranch": "main", "inheritanceRelations": [] }
 ```
 
 ```ts
@@ -408,6 +408,89 @@ if (publicationEquals(published, candidate)) {
   candidate.snapshot = published.snapshot;
   candidate.retained = true;
 }
+```
+
+## Scenario: API Object Relationship Catalog
+
+### 1. Scope / Trigger
+
+Apply this contract when changing Doxygen XML normalization, API catalog schemas, committed API
+artifacts, or class/struct relationship presentation. The catalog is the boundary between
+synchronization-time source analysis and offline Astro rendering.
+
+### 2. Signatures
+
+```ts
+type ApiMemberMetadata = {
+  access: "public" | "protected" | "private" | null;
+  static: boolean;
+  virtual: "none" | "virtual" | "pure";
+  const: boolean;
+};
+
+type ApiInheritanceRelation = {
+  kind: "inherits";
+  derivedId: string;
+  baseId: string | null;
+  baseQualifiedName: string;
+  access: "public" | "protected" | "private";
+  virtual: boolean;
+};
+
+ApiCatalog.formatVersion = 3;
+ApiSymbol.member = ApiMemberMetadata | null;
+ApiReference.inheritanceRelations = ApiInheritanceRelation[];
+```
+
+### 3. Contracts
+
+- `parentId` identifies ownership within one API reference; every non-null value resolves to a
+  different symbol. Namespace/type ownership may be derived from the longest qualified-name prefix.
+- Every inheritance `derivedId` resolves to a class or struct in the same reference. `baseId`
+  resolves to an internal class/struct when available; otherwise it is null and
+  `baseQualifiedName` remains visible as an external base.
+- Preserve access, virtual inheritance, and member static/virtual/pure/const modifiers from Doxygen
+  XML. Serialize symbols and relations with explicit deterministic ordering.
+- Astro type navigation and Cytoscape inheritance views consume only these typed fields. The generic
+  `references` array remains opaque and must not define inheritance, composition, dependency, or
+  call semantics.
+
+### 4. Validation & Error Matrix
+
+| Input/state | Required result |
+| --- | --- |
+| Catalog format is not 3 during ordinary load | Reject as invalid committed API data; never regenerate during build |
+| `parentId` is missing or self-referential | Zod validation fails |
+| Derived/base ID resolves to a non-type or self | Zod validation fails |
+| Internal base name differs from its symbol | Zod validation fails |
+| External base has no resolvable symbol | Accept `baseId: null` and preserve its qualified name |
+| Doxygen base access/virtual metadata is invalid | Isolate the target as `DOXYGEN_XML_INVALID` |
+
+### 5. Good / Base / Bad Cases
+
+- Good: multiple and virtual inheritance produce separate typed edges with access metadata.
+- Base: a class without inheritance has an empty relation array and still renders its owned members.
+- Bad: treating every raw refid as a dependency or inheritance edge creates false object relations.
+
+### 6. Tests Required
+
+- Unit XML fixtures assert external bases, ownership, access, static, const, virtual, and pure virtual
+  normalization plus invalid relation endpoints.
+- Doxygen integration fixtures assert single/multiple inheritance and deterministic v3 serialization.
+- Real snapshot tests require internal and external inheritance plus polymorphic member metadata.
+- Artifact checks require type/base names on every API route; Playwright checks filters, unique
+  anchors, keyboard graph modes, nonblank desktop/mobile canvases, responsive layout, and axe.
+
+### 7. Wrong vs Correct
+
+```ts
+// Wrong: raw references mix documentation, signatures, calls, and type links.
+const inheritance = symbol.references.map((baseId) => ({ derivedId: symbol.id, baseId }));
+
+// Correct: synchronization normalized Doxygen basecompoundref semantics once.
+const inheritance = reference.inheritanceRelations.filter(
+  (relation) => relation.derivedId === symbol.id,
+);
 ```
 
 ```yaml
