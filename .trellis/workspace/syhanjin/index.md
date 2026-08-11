@@ -8,7 +8,7 @@
 
 <!-- @@@auto:current-status -->
 - **Active File**: `journal-1.md`
-- **Total Sessions**: 13
+- **Total Sessions**: 12
 - **Last Active**: 2026-08-11
 <!-- @@@/auto:current-status -->
 
@@ -19,7 +19,7 @@
 <!-- @@@auto:active-documents -->
 | File | Lines | Status |
 |------|-------|--------|
-| `journal-1.md` | ~456 | Active |
+| `journal-1.md` | ~423 | Active |
 <!-- @@@/auto:active-documents -->
 
 ---
@@ -29,7 +29,6 @@
 <!-- @@@auto:session-history -->
 | # | Date | Title | Commits | Branch |
 |---|------|-------|---------|--------|
-| 13 | 2026-08-11 | 恢复驱动包三级导航 | `d1badde` | `main` |
 | 12 | 2026-08-11 | 重组文档导航并预留指南页面 | `e8b8371` | `main` |
 | 11 | 2026-08-11 | Retain publication-equivalent snapshots | `c01e8d7` | `main` |
 | 10 | 2026-08-11 | 精简同步工作流并稳定 Doxygen 产物 | `e315e17`, `6062b16` | `main` |
