@@ -61,9 +61,7 @@ test("catalog exposes every module and a stable package table", async ({ page },
   }
 });
 
-test("guide scaffolds and driver navigation share the framework hierarchy", async ({
-  page,
-}, testInfo) => {
+test("guide scaffolds and driver navigation share the framework hierarchy", async ({ page }) => {
   await page.goto("getting-started/");
   await expectChineseDocument(page);
   await expect(page.getByRole("heading", { level: 1, name: "快速开始" })).toBeVisible();
@@ -72,20 +70,11 @@ test("guide scaffolds and driver navigation share the framework hierarchy", asyn
   for (const label of ["快速开始", "使用指南", "驱动包", "开发指南", "参考"]) {
     await expect(sidebar.getByText(label, { exact: true }).first()).toBeAttached();
   }
-  await expect(sidebar.locator('a[href*="/packages/"]')).toHaveCount(42);
+  await expect(sidebar.locator('a[href*="/packages/"]')).toHaveCount(0);
   await expect(sidebar.getByText("模块概览", { exact: true })).toHaveCount(0);
 
-  if (testInfo.project.name === "mobile-chromium") {
-    await page.getByRole("button", { name: "菜单" }).click();
-    await expect(sidebar).toBeVisible();
-  }
-
-  const basicComponents = sidebar.locator("summary").filter({ hasText: /^BasicComponents$/u });
-  await basicComponents.click();
-  const moduleReadme = sidebar.locator('a[href$="/modules/basiccomponents/"]');
-  const geometryPackage = sidebar.getByRole("link", { name: "Math::Geometry", exact: true });
-  await expect(moduleReadme).toHaveAttribute("href", /\/modules\/basiccomponents\/$/u);
-  await expect(geometryPackage).toBeVisible();
+  const basicComponents = sidebar.locator('a[href$="/modules/basiccomponents/"]');
+  await expect(basicComponents).toHaveAttribute("href", /\/modules\/basiccomponents\/$/u);
   await expectStableLayout(page);
   await expectAccessible(page);
 
@@ -104,19 +93,11 @@ test("package workflow keeps primary context in main and package information in 
   const main = page.locator("main");
   const packageInfo = page.locator(".wtr-package-info-sidebar");
   const packageInfoDisclosure = packageInfo.locator(":scope > details");
-  const currentPackageNavigation = page.locator(
-    '#starlight__sidebar a[href$="/packages/math--geometry/"][aria-current="page"]',
-  );
   const installPrompt = main.locator(".wtr-package-install-prompt");
   const installCommand = installPrompt.getByText("cpkg add Math::Geometry", { exact: true });
   const directDependencies = packageInfo.getByRole("heading", { level: 2, name: "直接依赖" });
   const apiReference = packageInfo.getByRole("link", { name: "API 参考" });
   await expect(packageInfo).toBeVisible();
-  await expect(currentPackageNavigation).toHaveText("Math::Geometry");
-  await expect(currentPackageNavigation.locator("xpath=ancestor::details[1]")).toHaveAttribute(
-    "open",
-    "",
-  );
   await expect(main.locator(".wtr-breadcrumbs")).toBeVisible();
   await expect(installPrompt).toBeVisible();
   await expect(installCommand).toBeVisible();

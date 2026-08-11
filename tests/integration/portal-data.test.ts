@@ -57,7 +57,7 @@ describe("portal build data", () => {
     expect(
       sidebar.map((item) => (isRecord(item) && typeof item.label === "string" ? item.label : null)),
     ).toEqual(["快速开始", "使用指南", "驱动包", "开发指南", "参考"]);
-    expect(links).toHaveLength(56);
+    expect(links).toHaveLength(14);
     expect(new Set(links).size).toBe(links.length);
     expect(links.every((link) => link.startsWith("/"))).toBe(true);
     expect(links.every((link) => !link.startsWith("/products/wtr/docs/"))).toBe(true);
@@ -69,13 +69,9 @@ describe("portal build data", () => {
         "/user-guide/",
         "/development-guide/",
         ...data.catalog.modules.map((module) => `/modules/${module.slug}/`),
-        ...data.catalog.packages.map((entry) => `/packages/${entry.slug}/`),
       ]),
     );
-    expect(links.filter((link) => link.startsWith("/packages/"))).toHaveLength(
-      data.catalog.packages.length,
-    );
-    expect(labels.filter((label) => label === "README")).toHaveLength(data.catalog.modules.length);
+    expect(links.some((link) => link.startsWith("/packages/"))).toBe(false);
     expect(labels).not.toContain("模块概览");
   });
 });
