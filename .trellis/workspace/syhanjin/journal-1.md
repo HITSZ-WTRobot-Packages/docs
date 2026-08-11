@@ -421,3 +421,38 @@ Changed synchronization to retain an existing published snapshot when normalized
 ### Next Steps
 
 - None - task complete
+
+
+## Session 13: 优化 API 面向对象关系展示
+
+**Date**: 2026-08-12
+**Task**: 优化 API 面向对象关系展示
+**Branch**: `main`
+
+### Summary
+
+将 API 目录升级到 v3，建模类型、成员和继承关系；新增类型化详情、继承图与响应式交互，并补齐制品、浏览器、可访问性和多 base-path 验证。
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `590f018` | (see git log) |
+| `6c412d7` | (see git log) |
+| `440531a` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete
