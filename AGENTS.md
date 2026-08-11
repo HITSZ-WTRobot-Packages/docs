@@ -50,8 +50,9 @@ future `trellis update`.
   deployment address inputs; route and asset code must go through the shared URL helper.
 - Keep repository-owned guide pages under `src/content/docs/` and build one shared Starlight sidebar
   for both content pages and generated portal routes. The sidebar groups guides separately from a
-  flat, catalog-derived driver-package group whose module titles link directly to module README
-  routes; do not expand catalog packages in the global navigation.
+  catalog-derived driver-package group. Each module is a native collapsible group containing its
+  README route followed by deterministic package links; do not replace Starlight's sidebar to make a
+  group label behave like a link.
 - Use the exact Doxygen version in `.doxygen-version` only during synchronization to produce
   transient XML and committed normalized API JSON. Pass a temporary Doxyfile path through Execa;
   ordinary generation, build, validation, and deployment consume the JSON and never run Doxygen.

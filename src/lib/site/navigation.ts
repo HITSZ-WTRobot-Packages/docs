@@ -10,6 +10,12 @@ function compareStrings(left: string, right: string): number {
 }
 
 export function buildPortalSidebar(catalog: PackageCatalog): PortalSidebar {
+  const packagesByModule = new Map<string, typeof catalog.packages>();
+  for (const entry of catalog.packages) {
+    const entries = packagesByModule.get(entry.moduleId) ?? [];
+    packagesByModule.set(entry.moduleId, [...entries, entry]);
+  }
+
   return [
     {
       label: "快速开始",
@@ -30,7 +36,16 @@ export function buildPortalSidebar(catalog: PackageCatalog): PortalSidebar {
         .toSorted((left, right) => compareStrings(left.displayName, right.displayName))
         .map((module) => ({
           label: module.displayName,
-          link: sitePath("/", "modules", module.slug),
+          collapsed: true,
+          items: [
+            { label: "README", link: sitePath("/", "modules", module.slug) },
+            ...(packagesByModule.get(module.id) ?? [])
+              .toSorted((left, right) => compareStrings(left.pkgname, right.pkgname))
+              .map((entry) => ({
+                label: entry.pkgname,
+                link: sitePath("/", "packages", entry.slug),
+              })),
+          ],
         })),
     },
     {

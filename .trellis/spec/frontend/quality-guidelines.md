@@ -35,9 +35,10 @@
 - Every package route shows revision, install command, pinned source link, README or explicit
   fallback, direct and reverse dependencies, and API status.
 - Breadcrumbs and a static dependency list make all routes reachable without client JavaScript.
-- The shared sidebar presents guide groups, a flat catalog-derived driver-package group linking
-  directly to module README routes, and reference links. It must not contain redundant module
-  overview children or expand package routes.
+- The shared sidebar presents guide groups, reference links, and a three-level driver-package tree.
+  Every catalog module is a collapsible group with exactly one README link followed by all of its
+  packages in `pkgname` order. Visiting a module or package route must expand the owning group and
+  mark the current link without custom client state.
 - Search distinguishes module, package, README, and API results and supports module, namespace, and
   type filters.
 - External dependencies are visually and semantically distinct and never link to a missing internal

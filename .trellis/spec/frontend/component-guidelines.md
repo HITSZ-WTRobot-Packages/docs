@@ -49,9 +49,10 @@ starlight({ sidebar });
 // Generated routes pass the same value to <PortalPage sidebar={sidebar}>.
 ```
 
-Keep repository guides in their own groups, list catalog modules as direct links in the flat
-`驱动包` group, and leave package discovery to the catalog and module pages instead of expanding
-every package globally.
+Keep repository guides in their own groups. In `驱动包`, render each catalog module as a native
+collapsed Starlight group whose first item is the module `README`, followed by every package sorted
+by `pkgname`. Starlight group labels cannot also be links; preserve the module route through the
+explicit README item instead of copying the framework Sidebar component.
 
 ## Starlight Right Sidebar Contract
 
