@@ -3,8 +3,10 @@ import { describe, expect, test } from "bun:test";
 import type { ApiReference, ApiSymbolKind, ApiWarning } from "../../src/lib/doxygen/schema";
 import type { ModuleSnapshot } from "../../src/lib/sources/manifest";
 import {
+  apiAccessLabel,
   apiStatusLabel,
   apiSymbolKindLabel,
+  apiVirtualLabel,
   apiWarningMessage,
   snapshotWarningMessage,
 } from "../../src/lib/site/view-models";
@@ -20,6 +22,7 @@ const reference: ApiReference = {
   status: "sparse",
   warnings: [],
   symbols: [],
+  inheritanceRelations: [],
   symbolCount: 5,
   documentedSymbolCount: 2,
 };
@@ -57,6 +60,16 @@ describe("Chinese portal view models", () => {
       "变量",
       "宏定义",
       "文件",
+    ]);
+    expect((["public", "protected", "private"] as const).map(apiAccessLabel)).toEqual([
+      "公开",
+      "受保护",
+      "私有",
+    ]);
+    expect((["none", "virtual", "pure"] as const).map(apiVirtualLabel)).toEqual([
+      "",
+      "虚函数",
+      "纯虚函数",
     ]);
   });
 

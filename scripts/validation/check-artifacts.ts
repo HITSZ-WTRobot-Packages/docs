@@ -8,6 +8,7 @@ import { unified } from "unified";
 import { visit } from "unist-util-visit";
 import { z } from "zod";
 
+import type { ApiReference } from "../../src/lib/doxygen/schema";
 import { readSiteConfig } from "../../src/lib/paths/site-config";
 import { loadPortalData } from "../../src/lib/site/portal-data";
 import { apiStatusLabel } from "../../src/lib/site/view-models";
@@ -74,6 +75,26 @@ function documentText(tree: Root): string {
 function requireText(page: ParsedHtml, expected: string, relativePath: string): void {
   if (!page.text.includes(expected)) {
     throw new Error(`${relativePath} does not contain required release metadata: ${expected}`);
+  }
+}
+
+function requireApiRelationshipContent(
+  page: ParsedHtml,
+  reference: ApiReference,
+  relativePath: string,
+): void {
+  const types = reference.symbols.filter(
+    (symbol) => symbol.kind === "class" || symbol.kind === "struct",
+  );
+  for (const expected of [
+    ...types.map((symbol) => symbol.qualifiedName),
+    ...reference.inheritanceRelations.map((relation) => relation.baseQualifiedName),
+  ]) {
+    requireText(page, expected, relativePath);
+  }
+  if (types.length > 0) requireText(page, "筛选类型", relativePath);
+  if (reference.inheritanceRelations.length > 0) {
+    requireText(page, "继承关系总览", relativePath);
   }
 }
 
@@ -228,6 +249,7 @@ async function main(): Promise<void> {
     requireText(apiPage, `${packageEntry.pkgname} API`, apiPath);
     requireText(apiPage, api.sourceBranch, apiPath);
     requireText(apiPage, apiStatusLabel(api.status), apiPath);
+    requireApiRelationshipContent(apiPage, api, apiPath);
   }
 
   for (const reference of data.api.references.filter((entry) => entry.targetKind === "module")) {
@@ -238,6 +260,7 @@ async function main(): Promise<void> {
     const page = parsedHtml.get(relativePath);
     if (!page) throw new Error(`Missing module API route: ${reference.moduleId}`);
     requireText(page, apiStatusLabel(reference.status), relativePath);
+    requireApiRelationshipContent(page, reference, relativePath);
   }
 
   const expectedResources = new Set(

@@ -1,0 +1,393 @@
+---
+import { Icon } from "astro-icon/components";
+
+import type { ApiReference } from "../../lib/doxygen/schema";
+import { apiAccessLabel } from "../../lib/site/view-models";
+
+interface Props {
+  reference: ApiReference;
+}
+
+const { reference } = Astro.props;
+const symbolById = new Map(reference.symbols.map((symbol) => [symbol.id, symbol]));
+const internalIds = new Set(
+  reference.inheritanceRelations.flatMap((relation) =>
+    relation.baseId ? [relation.derivedId, relation.baseId] : [relation.derivedId],
+  ),
+);
+const internalNodes = reference.symbols
+  .filter((symbol) => internalIds.has(symbol.id))
+  .map((symbol) => ({
+    id: symbol.id,
+    label: symbol.qualifiedName,
+    kind: "internal" as const,
+    href: `#${symbol.anchor}`,
+  }));
+const externalNames = [
+  ...new Set(
+    reference.inheritanceRelations.flatMap((relation) =>
+      relation.baseId === null ? [relation.baseQualifiedName] : [],
+    ),
+  ),
+].sort();
+const externalNodes = externalNames.map((name) => ({
+  id: `external:${name}`,
+  label: name,
+  kind: "external" as const,
+  href: null,
+}));
+const graphModel = {
+  root: internalNodes[0]?.id ?? "",
+  nodes: [...internalNodes, ...externalNodes],
+  edges: reference.inheritanceRelations.map((relation) => ({
+    source: relation.derivedId,
+    target: relation.baseId ?? `external:${relation.baseQualifiedName}`,
+    label: `${apiAccessLabel(relation.access)}${relation.virtual ? " / 虚继承" : ""}`,
+  })),
+};
+const serializedModel = JSON.stringify(graphModel).replaceAll("<", "\\u003c");
+---
+
+<api-inheritance-graph class="wtr-dependency-graph wtr-api-inheritance-graph">
+  <details>
+    <summary>
+      <Icon name="lucide:git-branch" size="1.1rem" aria-hidden="true" />
+      继承关系总览
+    </summary>
+    <div class="wtr-graph-toolbar" aria-label="继承图范围">
+      <button type="button" aria-pressed="true" data-inheritance-mode="local">当前类型</button>
+      <button type="button" aria-pressed="false" data-inheritance-mode="full">完整关系</button>
+    </div>
+    <p class="wtr-graph-status" aria-live="polite" data-inheritance-status>继承图尚未加载。</p>
+    <div
+      class="wtr-graph-canvas"
+      role="img"
+      aria-label="交互式类型继承关系图"
+      data-inheritance-canvas
+    >
+    </div>
+    <div class="wtr-graph-node-list" aria-label="继承图中的可见类型" data-inheritance-node-list>
+    </div>
+    <section class="wtr-inheritance-static" aria-labelledby="inheritance-static-heading">
+      <h3 id="inheritance-static-heading">全部继承关系</h3>
+      <ul>
+        {
+          reference.inheritanceRelations.map((relation) => {
+            const derived = symbolById.get(relation.derivedId);
+            const base = relation.baseId ? symbolById.get(relation.baseId) : undefined;
+            return derived ? (
+              <li>
+                <a href={`#${derived.anchor}`}>{derived.qualifiedName}</a>
+                <span aria-hidden="true"> → </span>
+                {base ? (
+                  <a href={`#${base.anchor}`}>{base.qualifiedName}</a>
+                ) : (
+                  <code>{relation.baseQualifiedName}</code>
+                )}
+                <span>
+                  （{apiAccessLabel(relation.access)}
+                  {relation.virtual ? "，虚继承" : ""}）
+                </span>
+              </li>
+            ) : null;
+          })
+        }
+      </ul>
+    </section>
+  </details>
+  <script is:inline type="application/json" data-inheritance-model set:html={serializedModel} />
+</api-inheritance-graph>
+
+<script>
+  import type { Core, ElementDefinition } from "cytoscape";
+
+  type InheritanceNode = {
+    id: string;
+    label: string;
+    kind: "internal" | "external";
+    href: string | null;
+  };
+  type InheritanceEdge = { source: string; target: string; label: string };
+  type InheritanceModel = {
+    root: string;
+    nodes: InheritanceNode[];
+    edges: InheritanceEdge[];
+  };
+  type InheritanceMode = "local" | "full";
+
+  function isRecord(value: unknown): value is Record<string, unknown> {
+    return typeof value === "object" && value !== null && !Array.isArray(value);
+  }
+
+  function isInheritanceModel(value: unknown): value is InheritanceModel {
+    return (
+      isRecord(value) &&
+      typeof value.root === "string" &&
+      Array.isArray(value.nodes) &&
+      value.nodes.every(
+        (node) =>
+          isRecord(node) &&
+          typeof node.id === "string" &&
+          typeof node.label === "string" &&
+          (node.kind === "internal" || node.kind === "external") &&
+          (typeof node.href === "string" || node.href === null),
+      ) &&
+      Array.isArray(value.edges) &&
+      value.edges.every(
+        (edge) =>
+          isRecord(edge) &&
+          typeof edge.source === "string" &&
+          typeof edge.target === "string" &&
+          typeof edge.label === "string",
+      )
+    );
+  }
+
+  function localNodeIds(model: InheritanceModel): Set<string> {
+    const visible = new Set([model.root]);
+    for (const edge of model.edges) {
+      if (edge.source === model.root) visible.add(edge.target);
+      if (edge.target === model.root) visible.add(edge.source);
+    }
+    return visible;
+  }
+
+  function nodeElement(node: InheritanceNode, root: string): ElementDefinition {
+    const textWidth = Math.min(220, Math.max(90, node.label.length * 7));
+    const lineCount = Math.ceil((node.label.length * 7) / textWidth);
+    return {
+      group: "nodes",
+      data: {
+        id: node.id,
+        label: node.label,
+        nodeWidth: textWidth + 26,
+        nodeHeight: lineCount > 1 ? 60 : 46,
+        textWidth,
+      },
+      classes: [node.id === root ? "root" : "", node.kind].filter(Boolean).join(" "),
+    };
+  }
+
+  function edgeElement(edge: InheritanceEdge, index: number): ElementDefinition {
+    return {
+      group: "edges",
+      data: { id: `inheritance-${index}-${edge.source}-${edge.target}`, ...edge },
+    };
+  }
+
+  class WtrApiInheritanceGraph extends HTMLElement {
+    private graph: Core | undefined;
+    private model: InheritanceModel | undefined;
+    private mode: InheritanceMode = "local";
+    private initialized = false;
+
+    connectedCallback() {
+      this.mode =
+        new URL(window.location.href).searchParams.get("inheritance") === "full" ? "full" : "local";
+      this.addEventListener("click", this.handleClick);
+      window.addEventListener("hashchange", this.handleHashChange);
+      this.querySelector("details")?.addEventListener("toggle", this.handleToggle);
+      this.updateModeControls();
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener("click", this.handleClick);
+      window.removeEventListener("hashchange", this.handleHashChange);
+      this.querySelector("details")?.removeEventListener("toggle", this.handleToggle);
+      this.graph?.destroy();
+      this.graph = undefined;
+    }
+
+    private handleToggle = () => {
+      const details = this.querySelector("details");
+      if (details?.open) void this.initialize();
+    };
+
+    private handleClick = (event: Event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const modeButton = target.closest<HTMLButtonElement>("[data-inheritance-mode]");
+      if (!modeButton) return;
+      const mode = modeButton.dataset.inheritanceMode;
+      if (mode !== "local" && mode !== "full") return;
+      this.mode = mode;
+      this.updateModeControls();
+      this.updateModeUrl();
+      this.render();
+    };
+
+    private handleHashChange = () => {
+      this.updateRootFromHash();
+      if (this.mode === "local") this.render();
+    };
+
+    private updateRootFromHash() {
+      if (!this.model || !window.location.hash) return;
+      const match = this.model.nodes.find((node) => node.href === window.location.hash);
+      if (match?.kind === "internal") this.model.root = match.id;
+    }
+
+    private updateModeControls() {
+      for (const control of this.querySelectorAll<HTMLButtonElement>("[data-inheritance-mode]")) {
+        control.setAttribute("aria-pressed", String(control.dataset.inheritanceMode === this.mode));
+      }
+    }
+
+    private updateModeUrl() {
+      const url = new URL(window.location.href);
+      if (this.mode === "local") url.searchParams.delete("inheritance");
+      else url.searchParams.set("inheritance", "full");
+      window.history.replaceState(window.history.state, "", url);
+    }
+
+    private async initialize() {
+      if (this.initialized) {
+        this.graph?.resize();
+        return;
+      }
+      this.initialized = true;
+      const modelElement = this.querySelector<HTMLScriptElement>("[data-inheritance-model]");
+      if (!modelElement) return;
+      let parsed: unknown;
+      try {
+        parsed = JSON.parse(modelElement.textContent || "");
+      } catch {
+        this.updateStatus("无法读取继承关系数据。");
+        return;
+      }
+      if (!isInheritanceModel(parsed)) {
+        this.updateStatus("继承关系数据无效。");
+        return;
+      }
+      this.model = parsed;
+      this.updateRootFromHash();
+      this.updateStatus("正在加载继承图。");
+      try {
+        const { default: cytoscape } = await import("cytoscape");
+        const container = this.querySelector<HTMLElement>("[data-inheritance-canvas]");
+        if (!container) return;
+        this.graph = cytoscape({
+          container,
+          elements: [],
+          minZoom: 0.45,
+          maxZoom: 2.2,
+          wheelSensitivity: 0.2,
+          style: [
+            {
+              selector: "node",
+              style: {
+                "background-color": "#1261a0",
+                color: "#ffffff",
+                label: "data(label)",
+                "font-size": 11,
+                "text-wrap": "wrap",
+                "text-overflow-wrap": "anywhere",
+                "text-max-width": "data(textWidth)",
+                "text-valign": "center",
+                "text-halign": "center",
+                width: "data(nodeWidth)",
+                height: "data(nodeHeight)",
+                shape: "round-rectangle",
+              },
+            },
+            { selector: "node.root", style: { "background-color": "#147d64" } },
+            {
+              selector: "node.external",
+              style: {
+                "background-color": "#626c76",
+                "border-style": "dashed",
+                "border-width": 2,
+                "border-color": "#e6aa58",
+              },
+            },
+            { selector: "node:selected", style: { "border-width": 4, "border-color": "#e6aa58" } },
+            {
+              selector: "edge",
+              style: {
+                width: 1.5,
+                "line-color": "#8b98a5",
+                "target-arrow-color": "#8b98a5",
+                "target-arrow-shape": "triangle",
+                "curve-style": "bezier",
+              },
+            },
+          ],
+        });
+        this.graph.on("tap", "node", (event) => {
+          const model = this.model;
+          if (!model) return;
+          const node = model.nodes.find((entry) => entry.id === event.target.id());
+          if (!node) return;
+          model.root = node.id;
+          this.updateStatus(`已选择 ${node.label}。`);
+          if (node.href) window.location.hash = node.href;
+        });
+        this.render();
+      } catch {
+        this.updateStatus("继承图加载失败，完整继承关系列表仍可使用。");
+      }
+    }
+
+    private updateStatus(message: string) {
+      const status = this.querySelector<HTMLElement>("[data-inheritance-status]");
+      if (status) status.textContent = message;
+    }
+
+    private render() {
+      if (!this.graph || !this.model) return;
+      const visible =
+        this.mode === "full"
+          ? new Set(this.model.nodes.map((node) => node.id))
+          : localNodeIds(this.model);
+      const nodes = this.model.nodes.filter((node) => visible.has(node.id));
+      const edges = this.model.edges.filter(
+        (edge) => visible.has(edge.source) && visible.has(edge.target),
+      );
+      this.graph.elements().remove();
+      this.graph.add([
+        ...nodes.map((node) => nodeElement(node, this.model?.root ?? "")),
+        ...edges.map(edgeElement),
+      ]);
+      this.graph
+        .layout({ name: "breadthfirst", directed: true, padding: 28, animate: false, fit: true })
+        .run();
+      this.renderNodeList(nodes);
+      this.updateStatus(
+        `${this.mode === "full" ? "完整关系" : "当前类型"}模式下显示 ${nodes.length} 个类型。`,
+      );
+    }
+
+    private renderNodeList(nodes: InheritanceNode[]) {
+      const container = this.querySelector<HTMLElement>("[data-inheritance-node-list]");
+      if (!container) return;
+      container.replaceChildren();
+      for (const node of nodes) {
+        const row = document.createElement("div");
+        const select = document.createElement("button");
+        select.type = "button";
+        select.textContent = node.label;
+        select.addEventListener("click", () => {
+          this.graph?.nodes().unselect();
+          this.graph?.getElementById(node.id).select();
+          this.updateStatus(`已选择 ${node.label}。`);
+        });
+        row.append(select);
+        if (node.href) {
+          const link = document.createElement("a");
+          link.href = node.href;
+          link.textContent = "打开";
+          row.append(link);
+        } else {
+          const kind = document.createElement("span");
+          kind.textContent = "外部";
+          row.append(kind);
+        }
+        container.append(row);
+      }
+    }
+  }
+
+  if (!customElements.get("api-inheritance-graph")) {
+    customElements.define("api-inheritance-graph", WtrApiInheritanceGraph);
+  }
+</script>

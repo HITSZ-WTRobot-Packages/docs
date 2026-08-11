@@ -30,10 +30,13 @@ async function expectStableLayout(page: Page) {
         );
       })
       .map((element) => element.textContent?.trim().slice(0, 80));
-    return { horizontalOverflow, clippedText };
+    const ids = [...document.querySelectorAll<HTMLElement>("[id]")].map((element) => element.id);
+    const duplicateIds = ids.filter((id, index) => id && ids.indexOf(id) !== index);
+    return { horizontalOverflow, clippedText, duplicateIds: [...new Set(duplicateIds)] };
   });
   expect(layout.horizontalOverflow).toBe(false);
   expect(layout.clippedText).toEqual([]);
+  expect(layout.duplicateIds).toEqual([]);
 }
 
 test("catalog exposes every module and a stable package table", async ({ page }, testInfo) => {
@@ -238,6 +241,7 @@ test("package workflow keeps primary context in main and package information in 
 
 test("API and quality routes expose branch-based source status", async ({ page }, testInfo) => {
   await page.goto("packages/math--geometry/api/");
+  const isDesktop = testInfo.project.name === "desktop-chromium";
   await expectChineseDocument(page);
   await expect(page.getByRole("heading", { level: 1, name: "Math::Geometry API" })).toBeVisible();
   await expect(page.locator(".wtr-package-info-sidebar")).toHaveCount(0);
@@ -246,10 +250,76 @@ test("API and quality routes expose branch-based source status", async ({ page }
   await expect(page.getByText("main", { exact: true })).toBeVisible();
   await expect(page.getByText("math::Quaternion", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("文档稀疏", { exact: true })).toBeVisible();
+  const typeFilter = page.getByRole("searchbox", { name: "筛选类型" });
+  await expect(typeFilter).toBeVisible();
+  await typeFilter.fill("Quaternion");
+  await expect(page.locator("[data-type-filter-status]")).toHaveText("显示 1 个类型");
+  if (!isDesktop) {
+    await page.getByText("类型目录", { exact: true }).click();
+  }
+  const quaternionLink = page.getByRole("link", { name: "Quaternion", exact: true });
+  await expect(quaternionLink).toBeVisible();
+  await quaternionLink.click();
+  const quaternion = page.locator(".wtr-api-type").filter({ hasText: "math::Quaternion" }).first();
+  await expect(
+    quaternion.getByRole("heading", { level: 2, name: "math::Quaternion" }),
+  ).toBeVisible();
+  await expect(quaternion.getByRole("heading", { level: 3, name: "构造与析构" })).toBeVisible();
+  await expect(quaternion.getByRole("heading", { level: 3, name: "成员函数" })).toBeVisible();
+  await expect(quaternion.getByRole("heading", { level: 3, name: "成员变量" })).toBeVisible();
   await expectStableLayout(page);
   await expectAccessible(page);
   await page.screenshot({
     path: testInfo.outputPath("api.png"),
+    fullPage: false,
+    animations: "disabled",
+  });
+
+  await page.goto("packages/motordrivers--controller/api/");
+  await expect(
+    page.getByRole("heading", { level: 1, name: "MotorDrivers::Controller API" }),
+  ).toBeVisible();
+  const positionController = page
+    .locator(".wtr-api-type")
+    .filter({ hasText: "controllers::MotorPosController" })
+    .first();
+  await expect(positionController.getByText("IController", { exact: true })).toBeVisible();
+  await expect(positionController.getByText("静态", { exact: true }).first()).toBeVisible();
+  await page.getByText("继承关系总览", { exact: true }).click();
+  await expect(page.locator("[data-inheritance-canvas] canvas").first()).toBeVisible();
+  await expect(page.locator("[data-inheritance-status]")).toContainText("个类型");
+  const fullInheritance = page.getByRole("button", { name: "完整关系" });
+  await fullInheritance.focus();
+  await page.keyboard.press("Enter");
+  await expect(fullInheritance).toHaveAttribute("aria-pressed", "true");
+  await expect(page).toHaveURL(/\?inheritance=full$/u);
+  await expect(page.getByRole("heading", { level: 3, name: "全部继承关系" })).toBeVisible();
+  const inheritanceCanvas = page.locator("[data-inheritance-canvas]");
+  const inheritanceCanvasIsNotBlank = await inheritanceCanvas
+    .locator("canvas")
+    .evaluateAll((canvases) =>
+      canvases.some((canvas) => {
+        if (!(canvas instanceof HTMLCanvasElement)) return false;
+        const context = canvas.getContext("2d");
+        if (!context || canvas.width === 0 || canvas.height === 0) return false;
+        const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
+        for (let index = 3; index < pixels.length; index += 64) {
+          const alpha = pixels[index];
+          if (alpha !== undefined && alpha > 0) return true;
+        }
+        return false;
+      }),
+    );
+  expect(inheritanceCanvasIsNotBlank).toBe(true);
+  await expectStableLayout(page);
+  await expectAccessible(page);
+  await inheritanceCanvas.scrollIntoViewIfNeeded();
+  await inheritanceCanvas.screenshot({
+    path: testInfo.outputPath("api-inheritance-canvas.png"),
+    animations: "disabled",
+  });
+  await page.screenshot({
+    path: testInfo.outputPath("api-inheritance.png"),
     fullPage: false,
     animations: "disabled",
   });

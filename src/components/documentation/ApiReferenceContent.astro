@@ -1,36 +1,92 @@
 ---
 import { Icon } from "astro-icon/components";
 
-import type { ApiReference, ApiSymbolKind } from "../../lib/doxygen/schema";
+import type { ApiReference, ApiSymbol, ApiSymbolKind } from "../../lib/doxygen/schema";
 import {
+  apiAccessLabel,
   apiStatusLabel,
   apiStatusTone,
   apiSymbolKindLabel,
   apiWarningMessage,
+  symbolNamespace,
 } from "../../lib/site/view-models";
 import StatusBadge from "../portal/StatusBadge.astro";
+import ApiInheritanceGraph from "./ApiInheritanceGraph.astro";
+import ApiSymbolDetail from "./ApiSymbolDetail.astro";
 
 interface Props {
   reference: ApiReference;
 }
 
+type MemberGroup = { label: string; symbols: ApiSymbol[] };
+
 const { reference } = Astro.props;
-const kindOrder: ApiSymbolKind[] = [
-  "namespace",
-  "class",
-  "struct",
-  "union",
+const symbolById = new Map(reference.symbols.map((symbol) => [symbol.id, symbol]));
+const typeKinds = new Set<ApiSymbolKind>(["class", "struct"]);
+const types = reference.symbols.filter((symbol) => typeKinds.has(symbol.kind));
+const typeIds = new Set(types.map((symbol) => symbol.id));
+const namespaces = [...new Set(types.map(symbolNamespace))].sort();
+const namespaceGroups = namespaces.map((namespace) => ({
+  namespace,
+  types: types.filter((symbol) => symbolNamespace(symbol) === namespace),
+}));
+const fallbackKindOrder: ApiSymbolKind[] = [
   "function",
   "enum",
   "typedef",
   "variable",
   "define",
+  "union",
   "file",
 ];
-const groups = kindOrder.flatMap((kind) => {
-  const symbols = reference.symbols.filter((symbol) => symbol.kind === kind);
+const fallbackGroups = fallbackKindOrder.flatMap((kind) => {
+  const symbols = reference.symbols.filter(
+    (symbol) => symbol.kind === kind && (symbol.parentId === null || !typeIds.has(symbol.parentId)),
+  );
   return symbols.length > 0 ? [{ kind, symbols }] : [];
 });
+
+function typeLeafName(symbol: ApiSymbol): string {
+  const parts = symbol.name.split("::");
+  return (parts.at(-1) ?? symbol.name).replace(/<.*$/u, "");
+}
+
+function memberGroups(type: ApiSymbol): MemberGroup[] {
+  const members = reference.symbols.filter((symbol) => symbol.parentId === type.id);
+  const typeName = typeLeafName(type);
+  const groups: MemberGroup[] = [
+    {
+      label: "构造与析构",
+      symbols: members.filter(
+        (symbol) =>
+          symbol.kind === "function" &&
+          (symbol.name === typeName || symbol.name === `~${typeName}`),
+      ),
+    },
+    {
+      label: "成员函数",
+      symbols: members.filter(
+        (symbol) =>
+          symbol.kind === "function" && symbol.name !== typeName && symbol.name !== `~${typeName}`,
+      ),
+    },
+    { label: "成员变量", symbols: members.filter((symbol) => symbol.kind === "variable") },
+    {
+      label: "嵌套类型",
+      symbols: members.filter((symbol) =>
+        ["class", "struct", "union", "enum", "typedef"].includes(symbol.kind),
+      ),
+    },
+  ];
+  return groups.filter((group) => group.symbols.length > 0);
+}
+
+function relationLabel(
+  access: ApiReference["inheritanceRelations"][number]["access"],
+  virtual: boolean,
+) {
+  return `${apiAccessLabel(access)}${virtual ? "、虚继承" : ""}`;
+}
 ---
 
 <section class="wtr-api-overview" aria-label="API 提取状态">
@@ -38,6 +94,8 @@ const groups = kindOrder.flatMap((kind) => {
   <dl class="wtr-inline-stats">
     <div><dt>符号</dt><dd>{reference.symbolCount}</dd></div>
     <div><dt>已记录</dt><dd>{reference.documentedSymbolCount}</dd></div>
+    <div><dt>类型</dt><dd>{types.length}</dd></div>
+    <div><dt>继承关系</dt><dd>{reference.inheritanceRelations.length}</dd></div>
     <div><dt>源码分支</dt><dd><code>{reference.sourceBranch}</code></dd></div>
   </dl>
   {
@@ -47,10 +105,160 @@ const groups = kindOrder.flatMap((kind) => {
   }
 </section>
 
+{reference.inheritanceRelations.length > 0 && <ApiInheritanceGraph reference={reference} />}
+
 {
-  groups.length > 0 ? (
+  types.length > 0 && (
+    <div class="wtr-api-type-layout">
+      <api-type-navigation class="wtr-api-type-navigation">
+        <label for="api-type-filter">筛选类型</label>
+        <div class="wtr-api-type-filter">
+          <Icon name="lucide:search" size="1rem" aria-hidden="true" />
+          <input id="api-type-filter" type="search" autocomplete="off" placeholder="输入类型名称" />
+        </div>
+        <p class="wtr-type-filter-status" aria-live="polite" data-type-filter-status>
+          共 {types.length} 个类型
+        </p>
+        <details open data-type-navigation-details>
+          <summary>类型目录</summary>
+          <nav aria-label="API 类型">
+            {namespaceGroups.map((group) => (
+              <section data-type-namespace>
+                <h2>{group.namespace === "(global)" ? "（全局）" : group.namespace}</h2>
+                <ul>
+                  {group.types.map((type) => (
+                    <li data-type-name={type.qualifiedName.toLocaleLowerCase("en-US")}>
+                      <a href={`#${type.anchor}`} data-api-type-link={type.id}>
+                        <Icon
+                          name={type.kind === "class" ? "lucide:boxes" : "lucide:code-2"}
+                          size="0.95rem"
+                          aria-hidden="true"
+                        />
+                        <span>{typeLeafName(type)}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </nav>
+        </details>
+      </api-type-navigation>
+
+      <div class="wtr-api-type-details">
+        {types.map((type) => {
+          const bases = reference.inheritanceRelations.filter(
+            (relation) => relation.derivedId === type.id,
+          );
+          const derived = reference.inheritanceRelations.filter(
+            (relation) => relation.baseId === type.id,
+          );
+          const groups = memberGroups(type);
+          return (
+            <article class="wtr-api-type" id={type.anchor} data-api-type={type.id}>
+              <header class="wtr-api-type-header">
+                <div>
+                  <span class="wtr-type-kind">{apiSymbolKindLabel(type.kind)}</span>
+                  <h2>{type.qualifiedName}</h2>
+                </div>
+                {type.location && (
+                  <a href={type.location.sourceUrl} target="_blank" rel="noreferrer">
+                    查看源码
+                    <Icon name="lucide:external-link" size="0.9rem" aria-hidden="true" />
+                  </a>
+                )}
+              </header>
+              {type.description ? (
+                <p class="wtr-type-description">{type.description}</p>
+              ) : (
+                <p class="wtr-muted">上游未提供类型说明。</p>
+              )}
+              {(bases.length > 0 || derived.length > 0) && (
+                <section class="wtr-type-relations" aria-labelledby={`${type.anchor}-relations`}>
+                  <h3 id={`${type.anchor}-relations`}>继承关系</h3>
+                  <dl>
+                    {bases.length > 0 && (
+                      <div>
+                        <dt>基类</dt>
+                        <dd>
+                          <ul>
+                            {bases.map((relation) => {
+                              const base = relation.baseId
+                                ? symbolById.get(relation.baseId)
+                                : undefined;
+                              return (
+                                <li>
+                                  {base ? (
+                                    <a href={`#${base.anchor}`}>{relation.baseQualifiedName}</a>
+                                  ) : (
+                                    <code>{relation.baseQualifiedName}</code>
+                                  )}
+                                  <span>{relationLabel(relation.access, relation.virtual)}</span>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </dd>
+                      </div>
+                    )}
+                    {derived.length > 0 && (
+                      <div>
+                        <dt>派生类</dt>
+                        <dd>
+                          <ul>
+                            {derived.map((relation) => {
+                              const child = symbolById.get(relation.derivedId);
+                              return child ? (
+                                <li>
+                                  <a href={`#${child.anchor}`}>{child.qualifiedName}</a>
+                                  <span>{relationLabel(relation.access, relation.virtual)}</span>
+                                </li>
+                              ) : null;
+                            })}
+                          </ul>
+                        </dd>
+                      </div>
+                    )}
+                  </dl>
+                </section>
+              )}
+              {groups.length > 0 ? (
+                <div class="wtr-type-member-groups">
+                  {groups.map((group) => (
+                    <section aria-labelledby={`${type.anchor}-${group.label}`}>
+                      <div class="wtr-section-heading wtr-section-heading--compact">
+                        <h3 id={`${type.anchor}-${group.label}`}>{group.label}</h3>
+                        <span>{group.symbols.length}</span>
+                      </div>
+                      <div class="wtr-symbol-list">
+                        {group.symbols.map((symbol) => (
+                          <ApiSymbolDetail
+                            symbol={symbol}
+                            headingLevel={4}
+                            showQualifiedName={false}
+                            linkToCanonical={typeIds.has(symbol.id)}
+                          />
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                </div>
+              ) : (
+                <p class="wtr-empty-state">此类型没有可用的公开成员。</p>
+              )}
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  )
+}
+
+{
+  fallbackGroups.length > 0 && (
     <div class="wtr-api-groups">
-      {groups.map(({ kind, symbols }) => (
+      {types.length > 0 && <h2>其他公开符号</h2>}
+      {fallbackGroups.map(({ kind, symbols }) => (
         <section aria-labelledby={`api-kind-${kind}`}>
           <div class="wtr-section-heading wtr-section-heading--compact">
             <h2 id={`api-kind-${kind}`}>{apiSymbolKindLabel(kind)}</h2>
@@ -58,59 +266,63 @@ const groups = kindOrder.flatMap((kind) => {
           </div>
           <div class="wtr-symbol-list">
             {symbols.map((symbol) => (
-              <article class="wtr-symbol" id={symbol.anchor}>
-                <header>
-                  <Icon
-                    name={kind === "file" ? "lucide:file-code-2" : "lucide:code-2"}
-                    size="1rem"
-                    aria-hidden="true"
-                  />
-                  <h3>{symbol.qualifiedName}</h3>
-                </header>
-                {symbol.signature && (
-                  <pre>
-                    <code>{symbol.signature}</code>
-                  </pre>
-                )}
-                {symbol.description ? (
-                  <p>{symbol.description}</p>
-                ) : (
-                  <p class="wtr-muted">上游未提供说明。</p>
-                )}
-                {symbol.enumValues.length > 0 && (
-                  <dl class="wtr-enum-values">
-                    {symbol.enumValues.map((value) => (
-                      <div>
-                        <dt>
-                          <code>
-                            {value.name}
-                            {value.initializer ? ` ${value.initializer}` : ""}
-                          </code>
-                        </dt>
-                        <dd>{value.description || "上游未提供说明。"}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                )}
-                {symbol.location && (
-                  <a
-                    class="wtr-source-location"
-                    href={symbol.location.sourceUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {symbol.location.path}
-                    {symbol.location.line ? `:${symbol.location.line}` : ""}
-                    <Icon name="lucide:external-link" size="0.9rem" aria-hidden="true" />
-                  </a>
-                )}
-              </article>
+              <ApiSymbolDetail symbol={symbol} />
             ))}
           </div>
         </section>
       ))}
     </div>
-  ) : (
+  )
+}
+
+{
+  types.length === 0 && fallbackGroups.length === 0 && (
     <p class="wtr-empty-state">此目标没有可用的公开 C/C++ 符号。</p>
   )
 }
+
+<script>
+  class WtrApiTypeNavigation extends HTMLElement {
+    private input: HTMLInputElement | undefined;
+    private narrowViewport: MediaQueryList | undefined;
+
+    connectedCallback() {
+      this.input = this.querySelector<HTMLInputElement>('input[type="search"]') ?? undefined;
+      this.input?.addEventListener("input", this.handleInput);
+      this.narrowViewport = window.matchMedia("(max-width: 40rem)");
+      this.narrowViewport.addEventListener("change", this.syncDisclosure);
+      this.syncDisclosure(this.narrowViewport);
+    }
+
+    disconnectedCallback() {
+      this.input?.removeEventListener("input", this.handleInput);
+      this.narrowViewport?.removeEventListener("change", this.syncDisclosure);
+    }
+
+    private handleInput = () => this.filter(this.input?.value ?? "");
+
+    private syncDisclosure = (event: Pick<MediaQueryList, "matches">) => {
+      const details = this.querySelector<HTMLDetailsElement>("[data-type-navigation-details]");
+      if (details) details.open = !event.matches;
+    };
+
+    private filter(query: string) {
+      const normalized = query.trim().toLocaleLowerCase("en-US");
+      let visibleCount = 0;
+      for (const item of this.querySelectorAll<HTMLElement>("[data-type-name]")) {
+        const visible = !normalized || item.dataset.typeName?.includes(normalized) === true;
+        item.hidden = !visible;
+        if (visible) visibleCount += 1;
+      }
+      for (const namespace of this.querySelectorAll<HTMLElement>("[data-type-namespace]")) {
+        namespace.hidden = !namespace.querySelector("[data-type-name]:not([hidden])");
+      }
+      const status = this.querySelector<HTMLElement>("[data-type-filter-status]");
+      if (status) status.textContent = `显示 ${visibleCount} 个类型`;
+    }
+  }
+
+  if (!customElements.get("api-type-navigation")) {
+    customElements.define("api-type-navigation", WtrApiTypeNavigation);
+  }
+</script>

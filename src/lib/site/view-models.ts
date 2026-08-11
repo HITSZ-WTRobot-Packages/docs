@@ -1,4 +1,10 @@
-import type { ApiReference, ApiSymbol, ApiSymbolKind, ApiWarning } from "../doxygen/schema";
+import type {
+  ApiAccess,
+  ApiReference,
+  ApiSymbol,
+  ApiSymbolKind,
+  ApiWarning,
+} from "../doxygen/schema";
 import type { ModuleSnapshot } from "../sources/manifest";
 
 export type QualityTone = "success" | "warning" | "danger" | "neutral";
@@ -38,6 +44,28 @@ export function apiSymbolKindLabel(kind: ApiSymbolKind): string {
       return "宏定义";
     case "file":
       return "文件";
+  }
+}
+
+export function apiAccessLabel(access: ApiAccess): string {
+  switch (access) {
+    case "public":
+      return "公开";
+    case "protected":
+      return "受保护";
+    case "private":
+      return "私有";
+  }
+}
+
+export function apiVirtualLabel(virtual: NonNullable<ApiSymbol["member"]>["virtual"]): string {
+  switch (virtual) {
+    case "none":
+      return "";
+    case "virtual":
+      return "虚函数";
+    case "pure":
+      return "纯虚函数";
   }
 }
 
