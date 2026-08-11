@@ -2,9 +2,13 @@ import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
 
+import { loadPackageCatalog } from "./src/lib/catalog/loader";
 import { readSiteConfig } from "./src/lib/paths/site-config";
+import { buildPortalSidebar } from "./src/lib/site/navigation";
 
 const siteConfig = readSiteConfig();
+const catalog = await loadPackageCatalog();
+const sidebar = buildPortalSidebar(catalog);
 
 export default defineConfig({
   site: siteConfig.siteUrl.href,
@@ -57,7 +61,7 @@ export default defineConfig({
           href: "https://github.com/HITSZ-WTRobot-Packages",
         },
       ],
-      sidebar: [],
+      sidebar,
     }),
   ],
 });

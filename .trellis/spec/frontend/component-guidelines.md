@@ -36,6 +36,23 @@ const { revision, sourceUrl } = Astro.props;
   graph links use the shared helper with `BASE_PATH`. Do not pass an already-prefixed link into
   Starlight or nested deployments will receive the prefix twice.
 
+### Shared Global Navigation
+
+Build the global sidebar through one shared navigation helper and use that result in both the
+Starlight integration config and custom `StarlightPage` routes. This prevents content pages and
+generated routes from drifting into different navigation trees.
+
+```ts
+const sidebar = buildPortalSidebar(catalog);
+
+starlight({ sidebar });
+// Generated routes pass the same value to <PortalPage sidebar={sidebar}>.
+```
+
+Keep repository guides in their own groups, list catalog modules as direct links in the flat
+`驱动包` group, and leave package discovery to the catalog and module pages instead of expanding
+every package globally.
+
 ## Starlight Right Sidebar Contract
 
 Starlight renders `PageSidebar` only when the route has a table-of-contents state. Portal routes

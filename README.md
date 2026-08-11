@@ -114,14 +114,23 @@ Summary 中。缺失输入或符号会成为明确的空状态，缺失注释会
 
 生产构建将软件包目录、渲染后的 Markdown 和规范化 Doxygen 数据组合为静态 Astro 路由。主要路由如下：
 
-| 路由                    | 内容                                               |
-| ----------------------- | -------------------------------------------------- |
-| `/`                     | 模块摘要和完整软件包目录                           |
-| `/modules/<module>/`    | 模块 README、软件包和模块级 API 状态               |
-| `/packages/<slug>/`     | 修订版本、安装命令、源码、手册、依赖项和 API 状态  |
-| `/packages/<slug>/api/` | 按命名空间组织的 Doxygen 符号和固定版本源码位置    |
-| `/search/`              | 带模块、命名空间和结果类型筛选条件的 Pagefind 搜索 |
-| `/quality/`             | 快照和 API 文档质量状态                            |
+| 路由                              | 内容                                               |
+| --------------------------------- | -------------------------------------------------- |
+| `/`                               | 模块摘要和完整软件包目录                           |
+| `/getting-started/`               | 快速开始概览                                       |
+| `/getting-started/installation/`  | 安装指南                                           |
+| `/getting-started/first-project/` | 首个工程指南                                       |
+| `/user-guide/`                    | 使用指南概览                                       |
+| `/development-guide/`             | 开发指南概览                                       |
+| `/modules/<module>/`              | 模块 README、软件包和模块级 API 状态               |
+| `/packages/<slug>/`               | 修订版本、安装命令、源码、手册、依赖项和 API 状态  |
+| `/packages/<slug>/api/`           | 按命名空间组织的 Doxygen 符号和固定版本源码位置    |
+| `/search/`                        | 带模块、命名空间和结果类型筛选条件的 Pagefind 搜索 |
+| `/quality/`                       | 快照和 API 文档质量状态                            |
+
+左侧导航依次组织“快速开始”“使用指南”“驱动包”“开发指南”和“参考”。仓库自有指南位于
+`src/content/docs/`；尚未编写正文的占位页通过 `pagefind: false`
+排除搜索索引。“驱动包”组从已提交 catalog 动态列出模块名称，每个名称直接进入对应的模块 README页面，不在全局导航中展开模块内的软件包。软件包详情仍可从首页目录和模块页面进入。
 
 软件包页面提供延迟加载的 Cytoscape 依赖关系浏览器，支持直接、传递和反向模式。非默认模式可通过
 `?graph=transitive` 或 `?graph=reverse` 分享；禁用 JavaScript 时仍可使用静态的直接和反向依赖列表。

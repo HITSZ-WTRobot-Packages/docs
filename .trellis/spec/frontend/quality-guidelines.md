@@ -16,10 +16,13 @@
   variant; external bot-protection skips are reported separately.
 - Artifact validation requires the generated 404, robots, sitemap, Pagefind entry point, favicon,
   quality/search routes, per-page canonical URLs, and no duplicated deployment prefix.
+- Artifact validation requires every repository-owned guide scaffold route. Empty scaffold pages
+  must retain `pagefind: false` so their titles do not produce empty search results.
 - The release artifact check must prove every module/package route carries its validated revision,
   README or explicit fallback, and dependencies, while every API route carries the configured source
-  branch and API quality state. Pagefind's parsed page count must cover at least all module and
-  package/API pages.
+  branch and API quality state. Pagefind's parsed page count must exactly match the currently
+  published documentation, API, catalog, and quality pages so empty guide scaffolds cannot enter the
+  index unnoticed: `documentation.pages.length + api.references.length + 2`.
 - Screenshot and layout assertions check for blank views, overlap, clipping, unexpected horizontal
   scrolling, and unstable fixed-format controls.
 - Manually inspect canvas screenshots after graph style/layout changes. Browser `scrollWidth`
@@ -32,6 +35,9 @@
 - Every package route shows revision, install command, pinned source link, README or explicit
   fallback, direct and reverse dependencies, and API status.
 - Breadcrumbs and a static dependency list make all routes reachable without client JavaScript.
+- The shared sidebar presents guide groups, a flat catalog-derived driver-package group linking
+  directly to module README routes, and reference links. It must not contain redundant module
+  overview children or expand package routes.
 - Search distinguishes module, package, README, and API results and supports module, namespace, and
   type filters.
 - External dependencies are visually and semantically distinct and never link to a missing internal

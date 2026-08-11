@@ -113,12 +113,17 @@ async function main(): Promise<void> {
   const data = await loadPortalData();
   const required = [
     "404.html",
+    "development-guide/index.html",
     "favicon.svg",
+    "getting-started/first-project/index.html",
+    "getting-started/index.html",
+    "getting-started/installation/index.html",
     "index.html",
     "quality/index.html",
     "robots.txt",
     "search/index.html",
     "sitemap-index.xml",
+    "user-guide/index.html",
     "pagefind/pagefind-entry.json",
     "pagefind/pagefind.js",
     "pagefind/pagefind-worker.js",
@@ -156,6 +161,18 @@ async function main(): Promise<void> {
   requireText(catalogPage, "HITSZ-WTRobot-Packages", "index.html");
   requireText(catalogPage, "哈尔滨工业大学（深圳）南工问天", "index.html");
   requireText(catalogPage, "HITSZ WTRobot", "index.html");
+
+  for (const [relativePath, title] of [
+    ["getting-started/index.html", "快速开始"],
+    ["getting-started/installation/index.html", "安装"],
+    ["getting-started/first-project/index.html", "首个工程"],
+    ["user-guide/index.html", "使用指南"],
+    ["development-guide/index.html", "开发指南"],
+  ] as const) {
+    const page = parsedHtml.get(relativePath);
+    if (!page) throw new Error(`Missing guide scaffold route: ${relativePath}`);
+    requireText(page, title, relativePath);
+  }
 
   for (const documentation of data.documentation.pages) {
     const relativePath = pageArtifactPath(documentation.route, config.basePath);
@@ -257,10 +274,10 @@ async function main(): Promise<void> {
     );
   }
   const indexedPages = chineseIndex.page_count;
-  const minimumIndexedPages = data.catalog.packages.length * 2 + data.catalog.modules.length;
-  if (indexedPages < minimumIndexedPages) {
+  const expectedIndexedPages = data.documentation.pages.length + data.api.references.length + 2;
+  if (indexedPages !== expectedIndexedPages) {
     throw new Error(
-      `Pagefind indexed ${indexedPages} pages; expected at least ${minimumIndexedPages} package/module pages.`,
+      `Pagefind indexed ${indexedPages} pages; expected exactly ${expectedIndexedPages} published content pages.`,
     );
   }
   const pagefindIndexes = artifactFiles.filter((relativePath) =>

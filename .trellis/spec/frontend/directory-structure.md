@@ -8,7 +8,9 @@ src/
     catalog/             # Dense package/module browsing controls
     dependency-graph/    # Lazy graph island and accessible alternatives
     documentation/       # README, API, metadata, and quality presentation
-  content/               # Starlight content configuration/adapters
+  content/
+    docs/                 # Repository-owned getting-started and guide Markdown
+    i18n/                 # Project-owned Starlight translations
   layouts/               # Page-level composition, not decorative cards
   lib/                   # Shared catalog, route, and URL helpers
   pages/                 # Astro routes and generated route entry points
@@ -39,3 +41,9 @@ public/                  # Repository-owned static files copied unchanged
 
 Provide home/catalog, module, package, supplemental Markdown, API, quality-state, and 404 routes.
 Every catalog entry must be reachable from static navigation without requiring JavaScript.
+
+Repository-owned learning content lives in the Starlight `docs` collection under stable English
+route directories. A placeholder page contains only the required Simplified Chinese frontmatter and
+sets `pagefind: false`; add it to search only when it has substantive body content. Module root
+README files remain the single main documents for driver repositories, and synchronized Markdown
+does not move into the repository-owned content collection.

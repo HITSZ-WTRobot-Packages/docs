@@ -61,6 +61,27 @@ test("catalog exposes every module and a stable package table", async ({ page },
   }
 });
 
+test("guide scaffolds and driver navigation share the framework hierarchy", async ({ page }) => {
+  await page.goto("getting-started/");
+  await expectChineseDocument(page);
+  await expect(page.getByRole("heading", { level: 1, name: "快速开始" })).toBeVisible();
+
+  const sidebar = page.locator("#starlight__sidebar");
+  for (const label of ["快速开始", "使用指南", "驱动包", "开发指南", "参考"]) {
+    await expect(sidebar.getByText(label, { exact: true }).first()).toBeAttached();
+  }
+  await expect(sidebar.locator('a[href*="/packages/"]')).toHaveCount(0);
+  await expect(sidebar.getByText("模块概览", { exact: true })).toHaveCount(0);
+
+  const basicComponents = sidebar.locator('a[href$="/modules/basiccomponents/"]');
+  await expect(basicComponents).toHaveAttribute("href", /\/modules\/basiccomponents\/$/u);
+  await expectStableLayout(page);
+  await expectAccessible(page);
+
+  await page.goto("modules/basiccomponents/");
+  await expect(page.getByRole("heading", { level: 1, name: "BasicComponents" })).toBeVisible();
+});
+
 test("package workflow keeps primary context in main and package information in the sidebar", async ({
   page,
 }, testInfo) => {

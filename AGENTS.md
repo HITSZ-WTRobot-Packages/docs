@@ -48,6 +48,10 @@ future `trellis update`.
 - When Python is required, use uv without relocating its project `.venv` or global cache.
 - Use Astro with Starlight in static-output mode. `SITE_URL` and `BASE_PATH` are the only supported
   deployment address inputs; route and asset code must go through the shared URL helper.
+- Keep repository-owned guide pages under `src/content/docs/` and build one shared Starlight sidebar
+  for both content pages and generated portal routes. The sidebar groups guides separately from a
+  flat, catalog-derived driver-package group whose module titles link directly to module README
+  routes; do not expand catalog packages in the global navigation.
 - Use the exact Doxygen version in `.doxygen-version` only during synchronization to produce
   transient XML and committed normalized API JSON. Pass a temporary Doxyfile path through Execa;
   ordinary generation, build, validation, and deployment consume the JSON and never run Doxygen.
@@ -74,6 +78,10 @@ future `trellis update`.
 - Repository-owned documentation and user-facing interface copy use Simplified Chinese with the
   `zh-CN` language tag. Preserve synchronized upstream documentation in its original language, and
   keep technical identifiers, commands, paths, URLs, and stable data values unchanged.
+- Module root `README.md` remains the single main document for each driver repository. Empty
+  repository-owned guide scaffolds must contain only required frontmatter and set `pagefind: false`
+  until substantive content is added; they do not create a new upstream `docs/` synchronization
+  contract.
 - Use the exact brand names `哈尔滨工业大学（深圳）南工问天` in Chinese, `HITSZ WTRobot` in English,
   and `HITSZ-WTRobot-Packages` for the project. Do not abbreviate or substitute these names in
   repository-owned documentation or interface copy.
