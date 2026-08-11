@@ -90,7 +90,7 @@ describe("Doxygen API generation", () => {
     expect(await exists(path.join(fixture.repositoryRoot, "html"))).toBe(false);
     expect(await exists(path.join(fixture.repositoryRoot, "latex"))).toBe(false);
     expect(serializeApiCatalog(second)).toBe(serializeApiCatalog(first));
-    expect(first.formatVersion).toBe(2);
+    expect(first.formatVersion).toBe(3);
     expect(first.references.every((reference) => reference.sourceBranch === "main")).toBe(true);
     expect(
       first.references
@@ -139,6 +139,47 @@ describe("Doxygen API generation", () => {
     expect(cppReference?.symbols.some((symbol) => symbol.qualifiedName.includes("Widget"))).toBe(
       true,
     );
+    const widget = cppReference?.symbols.find(
+      (symbol) => symbol.qualifiedName === "fixture::Widget" && symbol.kind === "class",
+    );
+    const value = cppReference?.symbols.find(
+      (symbol) => symbol.qualifiedName === "fixture::Widget::value",
+    );
+    const instances = cppReference?.symbols.find(
+      (symbol) => symbol.qualifiedName === "fixture::Widget::instances",
+    );
+    expect(widget?.parentId).toBe(
+      cppReference?.symbols.find((symbol) => symbol.qualifiedName === "fixture")?.id,
+    );
+    expect(value?.member).toEqual({
+      access: "public",
+      static: false,
+      virtual: "virtual",
+      const: true,
+    });
+    expect(instances?.member).toEqual({
+      access: "public",
+      static: true,
+      virtual: "none",
+      const: false,
+    });
+    expect(
+      cppReference?.inheritanceRelations
+        .filter((relation) => relation.derivedId === widget?.id)
+        .map((relation) => ({
+          base: relation.baseQualifiedName,
+          access: relation.access,
+          virtual: relation.virtual,
+        })),
+    ).toEqual([
+      { base: "fixture::Identified", access: "protected", virtual: false },
+      { base: "fixture::ValueProvider", access: "public", virtual: true },
+    ]);
+    expect(
+      cppReference?.symbols.find(
+        (symbol) => symbol.qualifiedName === "fixture::ValueProvider::value",
+      )?.member?.virtual,
+    ).toBe("pure");
     expect(headerReference?.symbols.some((symbol) => symbol.name === "square")).toBe(true);
     expect(
       emptyReference?.symbols

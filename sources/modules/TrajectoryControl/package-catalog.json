@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "TrajectoryControl",
-  "moduleSha": "29bd084ccf5d278db2df734fcf6c6841593e28af",
+  "moduleSha": "53b7dfe0e0105fff85d74ef6382d77dfc1ed8609",
   "packages": [
     {
       "name": "HomingMotorTrajectory",

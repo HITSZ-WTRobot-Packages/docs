@@ -1,5 +1,5 @@
 {
-  "formatVersion": 2,
+  "formatVersion": 3,
   "doxygenVersion": "1.16.1",
   "references": [
     {
@@ -38,6 +38,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.cpp#L10"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-28eca7ce34ce50bd",
             "api-class-7ae9cb29d575dd87"
@@ -59,6 +60,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-3679cc75c7a7b98b",
             "api-namespace-d41e911e8032083d"
@@ -80,6 +82,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-28eca7ce34ce50bd",
             "api-file-a8f0e862e677bd3d",
@@ -103,6 +106,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-edc9102cf57ebba8",
             "api-namespace-d41e911e8032083d"
@@ -124,6 +128,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-7ae9cb29d575dd87",
             "api-file-7de8c7f8db3446ca",
@@ -146,7 +151,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L29"
           },
-          "parentId": null,
+          "parentId": "api-namespace-d41e911e8032083d",
+          "member": null,
           "references": [
             "api-function-a236e618edfa1eae",
             "api-function-b76a16a342bced96",
@@ -179,7 +185,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L35"
           },
-          "parentId": null,
+          "parentId": "api-class-28eca7ce34ce50bd",
+          "member": null,
           "references": [
             "api-variable-0bf7044a2d20b161",
             "api-variable-5ae8dea89538e706",
@@ -204,6 +211,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L41"
           },
           "parentId": "api-struct-f0a1af8665883eb7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -222,6 +235,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L49"
           },
           "parentId": "api-struct-f0a1af8665883eb7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -240,6 +259,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L39"
           },
           "parentId": "api-struct-f0a1af8665883eb7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -258,6 +283,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L37"
           },
           "parentId": "api-struct-f0a1af8665883eb7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -276,6 +307,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L38"
           },
           "parentId": "api-struct-f0a1af8665883eb7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -294,6 +331,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L56"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-f0a1af8665883eb7"
           ],
@@ -314,6 +357,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L85"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -332,6 +381,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L86"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -350,6 +405,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L71"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-a236e618edfa1eae"
           ],
@@ -370,6 +431,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L81"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-859f04b174dd36c6"
           ],
@@ -390,6 +457,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L83"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -408,6 +481,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L77"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -426,6 +505,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L74"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -444,6 +529,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L79"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -462,6 +553,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L69"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-859f04b174dd36c6"
           ],
@@ -482,6 +579,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L62"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-859f04b174dd36c6"
           ],
@@ -502,6 +605,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L75"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -520,6 +629,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L57"
           },
           "parentId": "api-class-28eca7ce34ce50bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -537,7 +652,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L27"
           },
-          "parentId": null,
+          "parentId": "api-namespace-d41e911e8032083d",
+          "member": null,
           "references": [
             "api-function-07f95557b3f7b72c",
             "api-function-0f8a4d6ce4a15812",
@@ -569,7 +685,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L33"
           },
-          "parentId": null,
+          "parentId": "api-class-7ae9cb29d575dd87",
+          "member": null,
           "references": [
             "api-variable-158e978b341a91cd",
             "api-variable-7e1315e096c45c40",
@@ -592,6 +709,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L36"
           },
           "parentId": "api-struct-fce47fad9758999c",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -610,6 +733,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L42"
           },
           "parentId": "api-struct-fce47fad9758999c",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -628,6 +757,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L35"
           },
           "parentId": "api-struct-fce47fad9758999c",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -646,6 +781,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L49"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-fce47fad9758999c"
           ],
@@ -666,6 +807,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L52"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -684,6 +831,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L73"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -702,6 +855,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L83"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -720,6 +879,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L84"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -738,6 +903,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L75"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f434107f8bfd6a11"
           ],
@@ -758,6 +929,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L81"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-b776a1204eec46a5"
           ],
@@ -778,6 +955,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L78"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -796,6 +979,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L68"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-b776a1204eec46a5"
           ],
@@ -816,6 +1005,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L61"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-b776a1204eec46a5"
           ],
@@ -836,6 +1031,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L79"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -854,8 +1055,32 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L50"
           },
           "parentId": "api-class-7ae9cb29d575dd87",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-28eca7ce34ce50bd",
+          "baseId": null,
+          "baseQualifiedName": "IController",
+          "access": "public",
+          "virtual": false
+        },
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-7ae9cb29d575dd87",
+          "baseId": null,
+          "baseQualifiedName": "IController",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 42,
@@ -894,6 +1119,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L33"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-bc8440e27d139a5e"
           ],
@@ -914,6 +1140,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L41"
           },
           "parentId": "api-namespace-a7081a9df279c418",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -962,7 +1194,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L245"
           },
-          "parentId": null,
+          "parentId": "api-namespace-a7081a9df279c418",
+          "member": null,
           "references": [
             "api-class-a9105c736f1099d0",
             "api-enum-0efbdb3ab4262e70",
@@ -994,6 +1227,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L303"
           },
           "parentId": "api-class-bc8440e27d139a5e",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-a9105c736f1099d0",
             "api-enum-0efbdb3ab4262e70",
@@ -1017,6 +1256,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L353"
           },
           "parentId": "api-class-bc8440e27d139a5e",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-0efbdb3ab4262e70",
             "api-function-ae14e70180a858e8"
@@ -1038,6 +1283,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L281"
           },
           "parentId": "api-class-bc8440e27d139a5e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-variable-43f5d8aed3d1a668"
           ],
@@ -1058,6 +1309,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L261"
           },
           "parentId": "api-class-bc8440e27d139a5e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-variable-43f5d8aed3d1a668"
           ],
@@ -1078,6 +1335,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L293"
           },
           "parentId": "api-class-bc8440e27d139a5e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -1096,6 +1359,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L356"
           },
           "parentId": "api-class-bc8440e27d139a5e",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1114,6 +1383,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L300"
           },
           "parentId": "api-class-bc8440e27d139a5e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-class-a9105c736f1099d0",
             "api-variable-43f5d8aed3d1a668"
@@ -1135,6 +1410,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L352"
           },
           "parentId": "api-class-bc8440e27d139a5e",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-a9105c736f1099d0",
             "api-function-418f82642706254c",
@@ -1159,6 +1440,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L255"
           },
           "parentId": "api-class-bc8440e27d139a5e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1177,6 +1464,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L248"
           },
           "parentId": "api-class-bc8440e27d139a5e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1195,6 +1488,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-a9105c736f1099d0",
             "api-class-bc8440e27d139a5e",
@@ -1219,6 +1513,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L28"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-a9105c736f1099d0"
           ],
@@ -1238,7 +1533,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L69"
           },
-          "parentId": null,
+          "parentId": "api-namespace-98ea1926d48d3333",
+          "member": null,
           "references": [
             "api-class-bc8440e27d139a5e",
             "api-enum-0efbdb3ab4262e70",
@@ -1282,6 +1578,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L72"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1300,6 +1602,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L156"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -1334,6 +1642,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L126"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -1368,6 +1682,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L229"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-bc8440e27d139a5e"
           ],
@@ -1388,6 +1708,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L224"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-class-bc8440e27d139a5e"
           ],
@@ -1408,6 +1734,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L80"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": true
+          },
           "references": [
             "api-enum-0efbdb3ab4262e70"
           ],
@@ -1428,6 +1760,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L89"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -1446,6 +1784,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L94"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -1464,6 +1808,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L166"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": true
+          },
           "references": [
             "api-enum-de5e521ebbe588f4"
           ],
@@ -1484,6 +1834,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L136"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": true
+          },
           "references": [
             "api-enum-26b1533d5df63714"
           ],
@@ -1504,6 +1860,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L105"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -1522,6 +1884,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L226"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1540,6 +1908,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L215"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-class-bc8440e27d139a5e"
           ],
@@ -1560,6 +1934,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L98"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1578,6 +1958,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L121"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1596,6 +1982,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L195"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-function-093625f9e10531d8"
           ],
@@ -1616,6 +2008,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L176"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1634,6 +2032,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L147"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1652,6 +2056,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L116"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": true
+          },
           "references": [
             "api-function-ba540a230654e0c3"
           ],
@@ -1672,6 +2082,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L185"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -1690,6 +2106,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L202"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-class-bc8440e27d139a5e"
           ],
@@ -1710,10 +2132,17 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/core/motor_if.hpp#L73"
           },
           "parentId": "api-class-a9105c736f1099d0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         }
       ],
+      "inheritanceRelations": [],
       "symbolCount": 38,
       "documentedSymbolCount": 31
     },
@@ -1751,6 +2180,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L175"
           },
           "parentId": "api-file-caf123249e213cbc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1769,6 +2204,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L182"
           },
           "parentId": "api-file-caf123249e213cbc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1787,6 +2228,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L17"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-7692b6bf769627bd",
             "api-enum-ffa3f7da267cf79b",
@@ -1825,6 +2267,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-caf123249e213cbc",
             "api-namespace-d83182cabe2ef18c",
@@ -1847,6 +2290,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-7692b6bf769627bd",
             "api-file-d0c3c01b88e35491",
@@ -1869,7 +2313,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L37"
           },
-          "parentId": null,
+          "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": null,
           "references": [
             "api-enum-cf87cf6343ec2ef7",
             "api-enum-ffa3f7da267cf79b",
@@ -1929,6 +2374,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L133"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-14fc408e4d88b050",
             "api-function-55183d4f80f332f5",
@@ -1955,6 +2406,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L122"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1972,7 +2429,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L65"
           },
-          "parentId": null,
+          "parentId": "api-class-7692b6bf769627bd",
+          "member": null,
           "references": [
             "api-enum-ffa3f7da267cf79b",
             "api-variable-1f15af7c533127f3",
@@ -1999,6 +2457,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L71"
           },
           "parentId": "api-struct-a8a48d30b1ba31a9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2017,6 +2481,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L67"
           },
           "parentId": "api-struct-a8a48d30b1ba31a9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2035,6 +2505,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L69"
           },
           "parentId": "api-struct-a8a48d30b1ba31a9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2053,6 +2529,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L73"
           },
           "parentId": "api-struct-a8a48d30b1ba31a9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2071,6 +2553,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L72"
           },
           "parentId": "api-struct-a8a48d30b1ba31a9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2089,6 +2577,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L68"
           },
           "parentId": "api-struct-a8a48d30b1ba31a9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-ffa3f7da267cf79b"
           ],
@@ -2109,6 +2603,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L76"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-5d51553b48e06acc",
             "api-function-aa337a3b6f7d2389",
@@ -2133,6 +2633,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L45"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -2162,6 +2668,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L126"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-cf87cf6343ec2ef7",
             "api-function-55183d4f80f332f5",
@@ -2186,6 +2698,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L54"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -2220,6 +2738,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L158"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2238,6 +2762,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L140"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2256,6 +2786,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L138"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-a8a48d30b1ba31a9"
           ],
@@ -2276,6 +2812,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L98"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-c093e2133d2a4d30",
             "api-function-e35045d9423460d6",
@@ -2298,6 +2840,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L101"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -2316,6 +2864,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L155"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2334,6 +2888,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L145"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2352,6 +2912,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L83"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -2370,6 +2936,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L117"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-aa337a3b6f7d2389"
           ],
@@ -2390,6 +2962,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L88"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -2408,6 +2986,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L142"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2426,6 +3010,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L162"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2444,6 +3034,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L99"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -2462,6 +3058,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L149"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2480,6 +3082,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L92"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-c5a1b8c4fe73fc12"
           ],
@@ -2500,6 +3108,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L154"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2518,6 +3132,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L150"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2536,6 +3156,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L108"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2554,6 +3180,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L106"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -2572,6 +3204,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L159"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2590,6 +3228,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L146"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2608,6 +3252,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L77"
           },
           "parentId": "api-class-7692b6bf769627bd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-0561fce3e12b7bc6"
           ],
@@ -2628,6 +3278,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L277"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f344b652a1877d0f"
           ],
@@ -2648,6 +3304,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L293"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f344b652a1877d0f"
           ],
@@ -2667,7 +3329,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L25"
           },
-          "parentId": null,
+          "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": null,
           "references": [
             "api-class-7692b6bf769627bd",
             "api-function-0561fce3e12b7bc6",
@@ -2695,6 +3358,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L27"
           },
           "parentId": "api-struct-ce7c21ef8feb0c3b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2713,6 +3382,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L28"
           },
           "parentId": "api-struct-ce7c21ef8feb0c3b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-7692b6bf769627bd",
             "api-function-0561fce3e12b7bc6",
@@ -2738,6 +3413,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L49"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-0561fce3e12b7bc6",
             "api-function-5d51553b48e06acc",
@@ -2763,6 +3444,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L107"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-7692b6bf769627bd",
             "api-function-80a2eb8c284e4c8e",
@@ -2788,6 +3475,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L118"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-ffa3f7da267cf79b",
             "api-function-55183d4f80f332f5"
@@ -2809,6 +3502,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L35"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-0561fce3e12b7bc6",
             "api-function-5d51553b48e06acc"
@@ -2830,6 +3529,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L22"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f344b652a1877d0f"
           ],
@@ -2850,6 +3555,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L21"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6aeae227c7c58282",
             "api-function-f344b652a1877d0f"
@@ -2871,6 +3582,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L20"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-4d30bffb4c8fb2d4",
             "api-function-80a2eb8c284e4c8e"
@@ -2892,6 +3609,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L32"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-5d51553b48e06acc",
             "api-function-ac05ca4086b975a5",
@@ -2914,6 +3637,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L154"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-c5a1b8c4fe73fc12"
           ],
@@ -2934,6 +3663,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L60"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-7692b6bf769627bd",
             "api-function-4d30bffb4c8fb2d4",
@@ -2960,6 +3695,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L90"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-4d30bffb4c8fb2d4",
             "api-function-549aa44be00b90fc",
@@ -2984,6 +3725,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L43"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6aeae227c7c58282",
             "api-variable-8042bafc61945d7a"
@@ -3005,12 +3752,28 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L39"
           },
           "parentId": "api-namespace-d83182cabe2ef18c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-0561fce3e12b7bc6",
             "api-function-5d51553b48e06acc",
             "api-variable-8042bafc61945d7a"
           ],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-7692b6bf769627bd",
+          "baseId": null,
+          "baseQualifiedName": "IMotor",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 59,
@@ -3050,6 +3813,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L21"
           },
           "parentId": "api-file-ce0b65fcb3586bd2",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-9a28b03b2cb9acce",
             "api-function-f7e0763d0434c75c"
@@ -3071,6 +3840,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L305"
           },
           "parentId": "api-file-ce1b8d33d8acb80d",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3089,6 +3864,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L312"
           },
           "parentId": "api-file-ce1b8d33d8acb80d",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3107,6 +3888,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L13"
           },
           "parentId": "api-file-ce1b8d33d8acb80d",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3125,6 +3912,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L22"
           },
           "parentId": "api-file-ce0b65fcb3586bd2",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-202fcd970813e618",
             "api-function-b0f01e52f99decd8"
@@ -3146,6 +3939,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L23"
           },
           "parentId": "api-file-ce0b65fcb3586bd2",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-9a28b03b2cb9acce",
             "api-function-ba4cf74c176928c4"
@@ -3167,6 +3966,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L24"
           },
           "parentId": "api-file-ce0b65fcb3586bd2",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b0f01e52f99decd8"
           ],
@@ -3187,6 +3992,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L26"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-6a1548fa3e0dae02",
             "api-enum-a423b8c9ce06b381",
@@ -3222,6 +4028,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-ce1b8d33d8acb80d",
             "api-function-202fcd970813e618",
@@ -3249,6 +4056,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-6a1548fa3e0dae02",
             "api-file-ce0b65fcb3586bd2",
@@ -3271,7 +4079,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L34"
           },
-          "parentId": null,
+          "parentId": "api-namespace-2ceac213c62865d7",
+          "member": null,
           "references": [
             "api-define-02cb599506a72c53",
             "api-define-441573a26af130b1",
@@ -3355,6 +4164,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L212"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-2342b4a59eac790d",
             "api-function-89c83fb3c41800e9",
@@ -3378,6 +4193,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L205"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-973417b70ad05170"
           ],
@@ -3397,7 +4218,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L85"
           },
-          "parentId": null,
+          "parentId": "api-class-6a1548fa3e0dae02",
+          "member": null,
           "references": [
             "api-enum-a423b8c9ce06b381",
             "api-enum-a950de6834fd9746",
@@ -3430,6 +4252,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L97"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3448,6 +4276,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L95"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3466,6 +4300,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L87"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3484,6 +4324,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L88"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3502,6 +4348,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L90"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-a950de6834fd9746"
           ],
@@ -3522,6 +4374,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L91"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3540,6 +4398,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L99"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3558,6 +4422,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L98"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3576,6 +4446,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L93"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3594,6 +4470,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L89"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-a423b8c9ce06b381"
           ],
@@ -3614,6 +4496,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L92"
           },
           "parentId": "api-struct-2d503197447057c5",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3632,6 +4520,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L292"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3650,6 +4544,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L102"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-d6c0ddeef42df58e",
             "api-function-d332c8c94cdf5d05",
@@ -3672,6 +4572,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L291"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3690,6 +4596,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L60"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -3724,6 +4636,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L69"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -3788,6 +4706,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L40"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -3842,6 +4766,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L279"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3860,6 +4790,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L265"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3878,6 +4814,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L275"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3896,6 +4838,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L256"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-2d503197447057c5"
           ],
@@ -3916,6 +4864,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L273"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3934,6 +4888,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L143"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-02cb599506a72c53",
             "api-define-d6c0ddeef42df58e",
@@ -3958,6 +4918,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L125"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -3976,6 +4942,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L234"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-c2521b8ac60b3ee7"
           ],
@@ -3996,6 +4968,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L229"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-acb2f15bdff2206c",
             "api-function-d454ab721c21fdda"
@@ -4017,6 +4995,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L258"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4035,6 +5019,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L274"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4053,6 +5043,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L261"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4071,6 +5067,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L109"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -4089,6 +5091,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L119"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -4107,6 +5115,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L114"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -4125,6 +5139,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L169"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -4143,6 +5163,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L156"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -4161,6 +5187,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L276"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4179,6 +5211,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L145"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -4197,6 +5235,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L239"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-acb2f15bdff2206c",
             "api-function-c2521b8ac60b3ee7"
@@ -4218,6 +5262,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L277"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4236,6 +5286,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L223"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4254,6 +5310,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L123"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b0f01e52f99decd8"
           ],
@@ -4274,6 +5336,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L237"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-4c5023e9ba78f694",
             "api-function-ebfab2791f61beec"
@@ -4295,6 +5363,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L236"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-4c5023e9ba78f694",
             "api-function-9448141ffe3a1ce6"
@@ -4316,6 +5390,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L154"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f7e0763d0434c75c"
           ],
@@ -4336,6 +5416,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L197"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-a13a6c366330ff2c",
             "api-function-6a099c86dbf6c047",
@@ -4358,6 +5444,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L180"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-441573a26af130b1",
             "api-define-a13a6c366330ff2c",
@@ -4380,6 +5472,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L167"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-441573a26af130b1",
             "api-function-f20019028affc4dd"
@@ -4401,6 +5499,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L282"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4419,6 +5523,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L253"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-enum-27751d431dbac65e"
           ],
@@ -4439,6 +5549,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L271"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-27751d431dbac65e"
           ],
@@ -4459,6 +5575,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L147"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -4477,6 +5599,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L182"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -4495,6 +5623,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L268"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4513,6 +5647,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L269"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4531,6 +5671,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L267"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4549,6 +5695,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L219"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-9448141ffe3a1ce6"
           ],
@@ -4569,6 +5721,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L288"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -4587,6 +5745,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L266"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4605,6 +5769,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L280"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4623,6 +5793,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L262"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4641,6 +5817,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L103"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1eefa2a8a70b760c"
           ],
@@ -4661,6 +5843,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L365"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b42e5e7a42877d13"
           ],
@@ -4681,6 +5869,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L381"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b42e5e7a42877d13"
           ],
@@ -4700,7 +5894,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L39"
           },
-          "parentId": null,
+          "parentId": "api-namespace-2ceac213c62865d7",
+          "member": null,
           "references": [
             "api-class-6a1548fa3e0dae02",
             "api-define-b25ba3cac549e36a",
@@ -4725,6 +5920,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L41"
           },
           "parentId": "api-struct-1d1cb0a02e6ceebe",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4743,6 +5944,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L42"
           },
           "parentId": "api-struct-1d1cb0a02e6ceebe",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-6a1548fa3e0dae02",
             "api-define-b25ba3cac549e36a",
@@ -4765,6 +5972,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L51"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1eefa2a8a70b760c",
             "api-function-b42e5e7a42877d13",
@@ -4789,6 +6002,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L99"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-a423b8c9ce06b381",
             "api-function-9a28b03b2cb9acce",
@@ -4811,6 +6030,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L111"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-a423b8c9ce06b381",
             "api-function-b0f01e52f99decd8",
@@ -4833,6 +6058,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L45"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-2342b4a59eac790d",
             "api-function-d332c8c94cdf5d05",
@@ -4855,6 +6086,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L49"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-061215908584e6eb",
             "api-function-b42e5e7a42877d13"
@@ -4876,6 +6113,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L30"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-a950de6834fd9746"
           ],
@@ -4896,6 +6139,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L34"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-a950de6834fd9746"
           ],
@@ -4916,6 +6165,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L62"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-6a1548fa3e0dae02",
             "api-function-202fcd970813e618",
@@ -4940,11 +6195,27 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L86"
           },
           "parentId": "api-namespace-2ceac213c62865d7",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-2342b4a59eac790d",
             "api-function-821b6c94daf8b344"
           ],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-6a1548fa3e0dae02",
+          "baseId": null,
+          "baseQualifiedName": "IMotor",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 88,
@@ -4984,6 +6255,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L29"
           },
           "parentId": "api-file-769e151b15c68169",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-44338276221c313a"
           ],
@@ -5004,6 +6281,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L297"
           },
           "parentId": "api-file-d9c02a565f110eec",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5022,6 +6305,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L304"
           },
           "parentId": "api-file-d9c02a565f110eec",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5040,6 +6329,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L34"
           },
           "parentId": "api-file-d9c02a565f110eec",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5058,6 +6353,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L30"
           },
           "parentId": "api-file-769e151b15c68169",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5076,6 +6377,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L31"
           },
           "parentId": "api-file-769e151b15c68169",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5094,6 +6401,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L32"
           },
           "parentId": "api-file-769e151b15c68169",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5112,6 +6425,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L34"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-61d2d1b8a89e6a51",
             "api-define-09b6893e296152b0",
@@ -5152,6 +6466,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-d9c02a565f110eec",
             "api-function-44338276221c313a",
@@ -5175,6 +6490,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-61d2d1b8a89e6a51",
             "api-file-769e151b15c68169",
@@ -5198,7 +6514,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L43"
           },
-          "parentId": null,
+          "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": null,
           "references": [
             "api-class-61d2d1b8a89e6a51",
             "api-define-d6c51e3e3cc5bbe5",
@@ -5223,6 +6540,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L45"
           },
           "parentId": "api-struct-cc25bf3574f700ea",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5241,6 +6564,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L46"
           },
           "parentId": "api-struct-cc25bf3574f700ea",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-61d2d1b8a89e6a51",
             "api-define-d6c51e3e3cc5bbe5",
@@ -5262,7 +6591,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L55"
           },
-          "parentId": null,
+          "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": null,
           "references": [
             "api-define-07ef21200a360d3d",
             "api-enum-2ec044c795979e3c",
@@ -5351,6 +6681,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L227"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-0b84ebd647a2b441",
             "api-function-15c4d3fd98d85b40",
@@ -5375,6 +6711,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L220"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5392,7 +6734,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L100"
           },
-          "parentId": null,
+          "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": null,
           "references": [
             "api-variable-020b55df5b7ce985",
             "api-variable-363e19b46091b639",
@@ -5418,6 +6761,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L106"
           },
           "parentId": "api-struct-cb98d0bd2ca67a63",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5436,6 +6785,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L102"
           },
           "parentId": "api-struct-cb98d0bd2ca67a63",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5454,6 +6809,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L103"
           },
           "parentId": "api-struct-cb98d0bd2ca67a63",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5472,6 +6833,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L104"
           },
           "parentId": "api-struct-cb98d0bd2ca67a63",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5490,6 +6857,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L108"
           },
           "parentId": "api-struct-cb98d0bd2ca67a63",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5508,6 +6881,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L107"
           },
           "parentId": "api-struct-cb98d0bd2ca67a63",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5526,6 +6905,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L86"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -5579,7 +6964,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L268"
           },
-          "parentId": null,
+          "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": null,
           "references": [
             "api-enum-2ec044c795979e3c",
             "api-variable-0d3459e7a76e94be",
@@ -5607,6 +6993,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L270"
           },
           "parentId": "api-struct-6a8f2c073b74fd51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5625,6 +7017,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L275"
           },
           "parentId": "api-struct-6a8f2c073b74fd51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5643,6 +7041,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L277"
           },
           "parentId": "api-struct-6a8f2c073b74fd51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5661,6 +7065,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L274"
           },
           "parentId": "api-struct-6a8f2c073b74fd51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-2ec044c795979e3c"
           ],
@@ -5681,6 +7091,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L273"
           },
           "parentId": "api-struct-6a8f2c073b74fd51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5699,6 +7115,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L272"
           },
           "parentId": "api-struct-6a8f2c073b74fd51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5717,6 +7139,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L271"
           },
           "parentId": "api-struct-6a8f2c073b74fd51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5735,6 +7163,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L111"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-da59fb2df9383284",
             "api-struct-cb98d0bd2ca67a63"
@@ -5756,6 +7190,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L63"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -5795,6 +7235,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L76"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -5829,6 +7275,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L281"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5847,6 +7299,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L280"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5865,6 +7323,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L256"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-cb98d0bd2ca67a63"
           ],
@@ -5885,6 +7349,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L242"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-2ec044c795979e3c"
           ],
@@ -5905,6 +7375,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L123"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -5923,6 +7399,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L166"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-229e826bf25f7f14"
           ],
@@ -5943,6 +7425,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L160"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-d1c110d41e4411d6"
           ],
@@ -5963,6 +7451,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L258"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5981,6 +7475,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L206"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-8577fd15725fe306"
           ],
@@ -6001,6 +7501,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L278"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6019,6 +7525,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L266"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6037,6 +7549,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L116"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6055,6 +7573,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L117"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6073,6 +7597,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L283"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6091,6 +7621,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L119"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6109,6 +7645,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L236"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b76c170f7138762b"
           ],
@@ -6129,6 +7671,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L235"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-cf41e75fb8536dc6"
           ],
@@ -6149,6 +7697,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L232"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6167,6 +7721,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L234"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-720709e595f7cdd9",
             "api-function-930ff723a2cbe779"
@@ -6188,6 +7748,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L233"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-20a634e0c62cc8d0",
             "api-function-44338276221c313a",
@@ -6210,6 +7776,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L262"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6228,6 +7800,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L260"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6246,6 +7824,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L261"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6264,6 +7848,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L263"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6282,6 +7872,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L178"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-5b4f7c8eaaea2cd6"
           ],
@@ -6302,6 +7898,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L192"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6320,6 +7922,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L211"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6338,6 +7946,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L118"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6356,6 +7970,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L205"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-enum-2ec044c795979e3c"
           ],
@@ -6376,6 +7996,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L254"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6394,6 +8020,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L135"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-44338276221c313a"
           ],
@@ -6414,6 +8046,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L152"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-07ef21200a360d3d",
             "api-function-20a634e0c62cc8d0",
@@ -6443,6 +8081,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L171"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6461,6 +8105,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L284"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6479,6 +8129,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L128"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6497,6 +8153,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L137"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6515,6 +8177,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L203"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6533,6 +8201,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L204"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6551,6 +8225,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L210"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-da1e2584377b403a"
           ],
@@ -6571,6 +8251,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L249"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6589,6 +8275,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L282"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6607,6 +8299,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L265"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6625,6 +8323,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L199"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-bf3d52f7aa859634"
           ],
@@ -6645,6 +8349,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L112"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-bf857b3b04fdca2f"
           ],
@@ -6665,6 +8375,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L502"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-8577fd15725fe306"
           ],
@@ -6685,6 +8401,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L517"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-8577fd15725fe306"
           ],
@@ -6705,6 +8427,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L51"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-8577fd15725fe306",
             "api-function-bf857b3b04fdca2f",
@@ -6729,6 +8457,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L39"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-09b6893e296152b0",
             "api-function-0f951017882f6be2",
@@ -6753,6 +8487,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L194"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-44338276221c313a",
             "api-variable-87979831e54ab508"
@@ -6774,6 +8514,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L187"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-44338276221c313a",
             "api-variable-9b010d3b849bfc16"
@@ -6795,6 +8541,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L49"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-5d332d8e1db82129",
             "api-function-da59fb2df9383284",
@@ -6817,6 +8569,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L154"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-44338276221c313a",
             "api-variable-b06d7f514dbb3624"
@@ -6838,6 +8596,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L148"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-b06d7f514dbb3624"
           ],
@@ -6858,6 +8622,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L107"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6876,6 +8646,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L112"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-8577fd15725fe306"
           ],
@@ -6896,6 +8672,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L61"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-61d2d1b8a89e6a51",
             "api-function-2e508f44dbc34375",
@@ -6920,6 +8702,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L180"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-44338276221c313a",
             "api-variable-df34f2e71b08bd64"
@@ -6941,6 +8729,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L174"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-df34f2e71b08bd64"
           ],
@@ -6961,6 +8755,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L85"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-5d332d8e1db82129",
             "api-function-8d08093d07868d87"
@@ -6982,6 +8782,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L161"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-77dea557fec185e5"
           ],
@@ -7002,6 +8808,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L167"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-44338276221c313a",
             "api-variable-77dea557fec185e5"
@@ -7023,6 +8835,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L123"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-bf5b52fcf65ea8b6"
           ],
@@ -7043,10 +8861,26 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L117"
           },
           "parentId": "api-namespace-7e99d31d8cc18c4c",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-44338276221c313a"
           ],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-61d2d1b8a89e6a51",
+          "baseId": null,
+          "baseQualifiedName": "IMotor",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 98,
@@ -7086,6 +8920,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L14"
           },
           "parentId": "api-file-a7b987affefb8e98",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7104,6 +8944,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L280"
           },
           "parentId": "api-file-a7b987affefb8e98",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7122,6 +8968,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L287"
           },
           "parentId": "api-file-a7b987affefb8e98",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7140,6 +8992,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L15"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-5e5fd7a2cf5cc8c7",
             "api-function-409ebb20db0c3e02",
@@ -7169,6 +9022,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-a7b987affefb8e98",
             "api-namespace-e01f73c5ae02c778",
@@ -7191,6 +9045,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-5e5fd7a2cf5cc8c7",
             "api-file-1a7a152156608595",
@@ -7213,7 +9068,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L19"
           },
-          "parentId": null,
+          "parentId": "api-namespace-e01f73c5ae02c778",
+          "member": null,
           "references": [
             "api-class-5e5fd7a2cf5cc8c7",
             "api-define-25c6880a2ea05680",
@@ -7238,6 +9094,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L21"
           },
           "parentId": "api-struct-007b1b1f8ecf793f",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7256,6 +9118,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L22"
           },
           "parentId": "api-struct-007b1b1f8ecf793f",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-5e5fd7a2cf5cc8c7",
             "api-define-25c6880a2ea05680",
@@ -7277,7 +9145,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L36"
           },
-          "parentId": null,
+          "parentId": "api-namespace-e01f73c5ae02c778",
+          "member": null,
           "references": [
             "api-enum-1bfbb4032993b6d0",
             "api-enum-52e8a8014c6f62aa",
@@ -7352,6 +9221,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L199"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-609ebc0af66d8ee6",
             "api-function-bed7e8769aead70a",
@@ -7374,6 +9249,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L189"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7391,7 +9272,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L121"
           },
-          "parentId": null,
+          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": null,
           "references": [
             "api-variable-0bdaf9c05f93256f",
             "api-variable-8a808bdc372f4d78",
@@ -7417,6 +9299,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L136"
           },
           "parentId": "api-struct-64168033c751de56",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7435,6 +9323,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L133"
           },
           "parentId": "api-struct-64168033c751de56",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7453,6 +9347,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L123"
           },
           "parentId": "api-struct-64168033c751de56",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7471,6 +9371,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L124"
           },
           "parentId": "api-struct-64168033c751de56",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7489,6 +9395,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L134"
           },
           "parentId": "api-struct-64168033c751de56",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7507,6 +9419,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L137"
           },
           "parentId": "api-struct-64168033c751de56",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7525,6 +9443,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L43"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -7579,6 +9503,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L61"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -7623,6 +9553,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L140"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f33418083157db81",
             "api-struct-64168033c751de56"
@@ -7644,6 +9580,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L245"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7662,6 +9604,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L225"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7680,6 +9628,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L226"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7698,6 +9652,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L239"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7716,6 +9676,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L213"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-64168033c751de56"
           ],
@@ -7736,6 +9702,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L261"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7754,6 +9726,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L223"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7772,6 +9750,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L222"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7790,6 +9774,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L253"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-1bfbb4032993b6d0"
           ],
@@ -7810,6 +9800,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L155"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7828,6 +9824,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L221"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7846,6 +9848,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L219"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7864,6 +9872,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L242"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7882,6 +9896,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L237"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7900,6 +9920,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L215"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7918,6 +9944,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L147"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7936,6 +9968,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L152"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7954,6 +9992,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L165"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7972,6 +10016,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L243"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7990,6 +10040,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L160"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8008,6 +10064,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L207"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8026,6 +10088,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L211"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8044,6 +10112,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L206"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8062,6 +10136,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L210"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8080,6 +10160,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L205"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8098,6 +10184,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L209"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8116,6 +10208,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L208"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8134,6 +10232,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L231"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8152,6 +10256,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L230"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8170,6 +10280,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L220"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8188,6 +10304,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L153"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8206,6 +10328,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L236"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8224,6 +10352,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L267"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-enum-52e8a8014c6f62aa"
           ],
@@ -8244,6 +10378,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L163"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8262,6 +10402,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L174"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8280,6 +10426,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L241"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8298,6 +10450,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L162"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8316,6 +10474,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L234"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8334,6 +10498,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L246"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8352,6 +10522,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L233"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8370,6 +10546,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L216"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8388,6 +10570,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L227"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8406,6 +10594,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L228"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8424,6 +10618,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L141"
           },
           "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-735e095ef02161c5"
           ],
@@ -8444,6 +10644,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L290"
           },
           "parentId": "api-namespace-e01f73c5ae02c778",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-409ebb20db0c3e02"
           ],
@@ -8464,6 +10670,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L306"
           },
           "parentId": "api-namespace-e01f73c5ae02c778",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-409ebb20db0c3e02"
           ],
@@ -8484,6 +10696,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L81"
           },
           "parentId": "api-namespace-e01f73c5ae02c778",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8502,6 +10720,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L74"
           },
           "parentId": "api-namespace-e01f73c5ae02c778",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8520,6 +10744,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L27"
           },
           "parentId": "api-namespace-e01f73c5ae02c778",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-409ebb20db0c3e02",
             "api-function-735e095ef02161c5",
@@ -8544,6 +10774,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L25"
           },
           "parentId": "api-namespace-e01f73c5ae02c778",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-bed7e8769aead70a",
             "api-function-f33418083157db81",
@@ -8566,6 +10802,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L37"
           },
           "parentId": "api-namespace-e01f73c5ae02c778",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-5e5fd7a2cf5cc8c7",
             "api-function-914a535f867dd6a6",
@@ -8590,11 +10832,27 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L61"
           },
           "parentId": "api-namespace-e01f73c5ae02c778",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-bed7e8769aead70a",
             "api-function-e2c7584f839d20b9"
           ],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-5e5fd7a2cf5cc8c7",
+          "baseId": null,
+          "baseQualifiedName": "IMotor",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 74,

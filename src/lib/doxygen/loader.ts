@@ -67,7 +67,7 @@ export async function loadApiCatalog(
     }
   }
   return ApiCatalogSchema.parse({
-    formatVersion: 2,
+    formatVersion: 3,
     doxygenVersion: expectedVersion,
     references: moduleCatalogs
       .flatMap((catalog) => catalog.references)

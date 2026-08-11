@@ -1,5 +1,5 @@
 {
-  "formatVersion": 2,
+  "formatVersion": 3,
   "doxygenVersion": "1.16.1",
   "references": [
     {
@@ -41,6 +41,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.cpp#L9"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-0c7d919111cf3f2e",
             "api-class-28226dce511ae065",
@@ -70,7 +71,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L8"
           },
-          "parentId": null,
+          "parentId": "api-namespace-91a0e8e93b7eb85f",
+          "member": null,
           "references": [
             "api-class-920ee224b7ca1ed8",
             "api-function-1a18ab0c154f5ae2",
@@ -135,7 +137,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L14"
           },
-          "parentId": null,
+          "parentId": "api-class-6d4f6825750b2b12",
+          "member": null,
           "references": [
             "api-variable-0907324b540e8e66",
             "api-variable-1b5972a2589b77a7",
@@ -180,6 +183,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L29"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -198,6 +207,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L30"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -216,6 +231,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L31"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -234,6 +255,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L36"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -252,6 +279,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L52"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -270,6 +303,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L53"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -288,6 +327,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L54"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -306,6 +351,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L39"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -324,6 +375,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L16"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -342,6 +399,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L17"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -360,6 +423,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L18"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -378,6 +447,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L20"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -396,6 +471,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L21"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -414,6 +495,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L22"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -432,6 +519,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L35"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -450,6 +543,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L24"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -468,6 +567,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L25"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -486,6 +591,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L26"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -504,6 +615,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L34"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -522,6 +639,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L47"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -540,6 +663,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L48"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -558,6 +687,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L49"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -576,6 +711,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L42"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -594,6 +735,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L43"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -612,6 +759,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L44"
           },
           "parentId": "api-struct-a11c702810742332",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -630,6 +783,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L64"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-920ee224b7ca1ed8",
             "api-struct-a11c702810742332"
@@ -651,6 +810,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L224"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -669,6 +834,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L225"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -687,6 +858,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L226"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -705,6 +882,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L228"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -723,6 +906,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L229"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -741,6 +930,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L230"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -759,6 +954,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L164"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -777,6 +978,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L149"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -795,6 +1002,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L187"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -813,6 +1026,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L204"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-a11c702810742332"
           ],
@@ -833,6 +1052,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L232"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -851,6 +1076,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L214"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -869,6 +1100,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L206"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -887,6 +1124,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L210"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -905,6 +1148,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L215"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -923,6 +1172,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L207"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -941,6 +1196,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L211"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -959,6 +1220,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L216"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -977,6 +1244,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L208"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -995,6 +1268,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L212"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1013,6 +1292,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L108"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-variable-4aa03dc6656bc15a"
           ],
@@ -1033,6 +1318,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L116"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-68ab6eba42f49d64",
             "api-function-771be4f9863c7f54"
@@ -1054,6 +1345,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L124"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-d4b368fe7a619cbf",
             "api-variable-4aa03dc6656bc15a"
@@ -1075,6 +1372,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L132"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -1093,6 +1396,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L72"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-4aa03dc6656bc15a"
           ],
@@ -1113,6 +1422,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L134"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1131,6 +1446,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L198"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1149,6 +1470,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L200"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-920ee224b7ca1ed8"
           ],
@@ -1169,6 +1496,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L201"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-920ee224b7ca1ed8"
           ],
@@ -1189,6 +1522,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L202"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-920ee224b7ca1ed8"
           ],
@@ -1209,6 +1548,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L197"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1227,6 +1572,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L220"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1245,6 +1596,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L221"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1263,6 +1620,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L222"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1281,6 +1644,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L234"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1299,6 +1668,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L94"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1317,6 +1692,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L86"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1335,6 +1716,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L237"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1353,6 +1740,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L236"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1371,6 +1764,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L218"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1389,6 +1788,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L233"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1407,6 +1812,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp#L100"
           },
           "parentId": "api-class-6d4f6825750b2b12",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-d4b368fe7a619cbf",
             "api-variable-4aa03dc6656bc15a"
@@ -1428,6 +1839,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.cpp#L12"
           },
           "parentId": "api-namespace-91a0e8e93b7eb85f",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-12a5f050d482f571",
             "api-function-2242038eccbbcecf",
@@ -1451,7 +1868,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L162"
           },
-          "parentId": null,
+          "parentId": "api-namespace-91a0e8e93b7eb85f",
+          "member": null,
           "references": [
             "api-class-920ee224b7ca1ed8",
             "api-function-084f49bc2fe92a12",
@@ -1496,6 +1914,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L169"
           },
           "parentId": "api-class-faa62adbb0547bd2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-e701214d8714795d"
           ],
@@ -1516,6 +1940,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L178"
           },
           "parentId": "api-class-faa62adbb0547bd2",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1534,6 +1964,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L176"
           },
           "parentId": "api-class-faa62adbb0547bd2",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1552,6 +1988,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L179"
           },
           "parentId": "api-class-faa62adbb0547bd2",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1570,6 +2012,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L171"
           },
           "parentId": "api-class-faa62adbb0547bd2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-function-084f49bc2fe92a12",
             "api-function-2fe37c16ca96ee79",
@@ -1598,7 +2046,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L182"
           },
-          "parentId": null,
+          "parentId": "api-namespace-91a0e8e93b7eb85f",
+          "member": null,
           "references": [
             "api-class-920ee224b7ca1ed8",
             "api-function-084f49bc2fe92a12",
@@ -1643,6 +2092,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L188"
           },
           "parentId": "api-class-0c7d919111cf3f2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-e701214d8714795d"
           ],
@@ -1663,6 +2118,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L191"
           },
           "parentId": "api-class-0c7d919111cf3f2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-deea8052189f7fe6"
           ],
@@ -1683,6 +2144,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L195"
           },
           "parentId": "api-class-0c7d919111cf3f2e",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1701,6 +2168,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L190"
           },
           "parentId": "api-class-0c7d919111cf3f2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1719,6 +2192,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L192"
           },
           "parentId": "api-class-0c7d919111cf3f2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-function-084f49bc2fe92a12",
             "api-function-369a5d14ea9c529a",
@@ -1744,7 +2223,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L32"
           },
-          "parentId": null,
+          "parentId": "api-namespace-91a0e8e93b7eb85f",
+          "member": null,
           "references": [
             "api-class-0c7d919111cf3f2e",
             "api-class-faa62adbb0547bd2",
@@ -1799,6 +2279,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L110"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-760790371b37c814",
             "api-function-81be19ca17dc7bf0"
@@ -1820,6 +2306,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L53"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-2a8bd5b6a943db10"
           ],
@@ -1840,6 +2332,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L46"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1858,6 +2356,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L37"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-5211d141dbd63399",
             "api-function-edcead0603c5d961"
@@ -1879,6 +2383,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L118"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-2fe37c16ca96ee79",
             "api-function-6b2802ac7acbeda2",
@@ -1902,6 +2412,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L82"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-aefd987876b83a76",
             "api-function-c69d2fbf12c330e5"
@@ -1923,6 +2439,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L91"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-c69d2fbf12c330e5",
             "api-variable-bcd57cc7f889c66b"
@@ -1944,6 +2466,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L154"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1962,6 +2490,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L152"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1980,6 +2514,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L100"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-aefd987876b83a76",
             "api-function-c69d2fbf12c330e5"
@@ -2001,6 +2541,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L70"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -2019,6 +2565,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L108"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "protected",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-5e8dffb92b3efe7f"
           ],
@@ -2039,6 +2591,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L143"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-6b2802ac7acbeda2",
             "api-function-c69d2fbf12c330e5",
@@ -2061,6 +2619,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L150"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2079,6 +2643,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L151"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2097,6 +2667,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L142"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-6b2802ac7acbeda2",
             "api-function-c69d2fbf12c330e5",
@@ -2119,6 +2695,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L149"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2137,6 +2719,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L55"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2155,6 +2743,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L155"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2173,6 +2767,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L144"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-6b2802ac7acbeda2",
             "api-function-c69d2fbf12c330e5"
@@ -2194,6 +2794,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L146"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-6b2802ac7acbeda2",
             "api-function-c69d2fbf12c330e5"
@@ -2215,6 +2821,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L145"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-6b2802ac7acbeda2",
             "api-function-c69d2fbf12c330e5"
@@ -2236,6 +2848,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L157"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2254,6 +2872,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L159"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2272,6 +2896,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L158"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2290,6 +2920,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L77"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": false
+          },
           "references": [
             "api-function-6b2802ac7acbeda2",
             "api-function-c69d2fbf12c330e5"
@@ -2311,6 +2947,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L76"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2329,6 +2971,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L35"
           },
           "parentId": "api-class-920ee224b7ca1ed8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2346,7 +2994,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L14"
           },
-          "parentId": null,
+          "parentId": "api-namespace-91a0e8e93b7eb85f",
+          "member": null,
           "references": [
             "api-class-6d4f6825750b2b12",
             "api-function-03aa78d02d0a8099",
@@ -2388,6 +3037,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L39"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-6d4f6825750b2b12"
           ],
@@ -2408,6 +3063,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L1"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2426,6 +3087,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L89"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2444,6 +3111,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L52"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2462,6 +3135,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L91"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-6d4f6825750b2b12"
           ],
@@ -2482,6 +3161,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L97"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2500,6 +3185,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L77"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -2518,6 +3209,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L98"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2536,6 +3233,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L101"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2554,6 +3257,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L83"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2572,6 +3281,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L103"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2590,6 +3305,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L94"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2608,6 +3329,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L95"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2626,6 +3353,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L100"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2644,6 +3377,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L47"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2662,6 +3401,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L92"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2680,6 +3425,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L105"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2698,6 +3449,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L64"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2716,6 +3473,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L58"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2734,6 +3497,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L104"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2752,6 +3521,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp#L71"
           },
           "parentId": "api-class-28226dce511ae065",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2770,6 +3545,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L8"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-function-f255e82ecee9b5a5",
             "api-struct-c8c5775956803001",
@@ -2793,7 +3569,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L13"
           },
-          "parentId": null,
+          "parentId": "api-namespace-2e9062cdff6e4010",
+          "member": null,
           "references": [
             "api-function-f255e82ecee9b5a5",
             "api-variable-2f037599e900b11d",
@@ -2817,6 +3594,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L17"
           },
           "parentId": "api-struct-c8c5775956803001",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f255e82ecee9b5a5"
           ],
@@ -2837,6 +3620,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L16"
           },
           "parentId": "api-struct-c8c5775956803001",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f255e82ecee9b5a5"
           ],
@@ -2857,6 +3646,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L15"
           },
           "parentId": "api-struct-c8c5775956803001",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f255e82ecee9b5a5"
           ],
@@ -2877,6 +3672,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L11"
           },
           "parentId": "api-namespace-2e9062cdff6e4010",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2895,6 +3696,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L10"
           },
           "parentId": "api-namespace-2e9062cdff6e4010",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2913,6 +3720,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp#L20"
           },
           "parentId": "api-namespace-2e9062cdff6e4010",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-c8c5775956803001",
             "api-variable-2f037599e900b11d",
@@ -2936,6 +3749,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-4784da45de95575a",
             "api-file-996bcd411b7ec60b",
@@ -2958,6 +3772,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-6d4f6825750b2b12",
             "api-file-19d721b2b84124c5",
@@ -2984,6 +3799,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-0c7d919111cf3f2e",
             "api-class-920ee224b7ca1ed8",
@@ -3014,6 +3830,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit_dji.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-996bcd411b7ec60b",
             "api-namespace-91a0e8e93b7eb85f"
@@ -3035,6 +3852,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit_dm.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-996bcd411b7ec60b",
             "api-namespace-91a0e8e93b7eb85f"
@@ -3056,6 +3874,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_controller.cpp#L6"
           },
           "parentId": "api-file-b58f42d23456684d",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3074,6 +3898,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-4784da45de95575a",
             "api-file-996bcd411b7ec60b",
@@ -3099,6 +3924,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/controller/arm_slave.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-28226dce511ae065",
             "api-file-19d721b2b84124c5",
@@ -3118,6 +3944,7 @@
           "description": "",
           "location": null,
           "parentId": null,
+          "member": null,
           "references": [],
           "enumValues": []
         },
@@ -3136,8 +3963,35 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ArmController/blob/main/Core/arm_motor_mit.hpp#L9"
           },
           "parentId": null,
+          "member": null,
           "references": [],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-0c7d919111cf3f2e",
+          "baseId": "api-class-920ee224b7ca1ed8",
+          "baseQualifiedName": "Arm::MITMotorCtrl",
+          "access": "public",
+          "virtual": false
+        },
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-920ee224b7ca1ed8",
+          "baseId": null,
+          "baseQualifiedName": "controllers::IController",
+          "access": "public",
+          "virtual": false
+        },
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-faa62adbb0547bd2",
+          "baseId": "api-class-920ee224b7ca1ed8",
+          "baseQualifiedName": "Arm::MITMotorCtrl",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 153,

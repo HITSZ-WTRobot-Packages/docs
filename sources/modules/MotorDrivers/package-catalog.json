@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "MotorDrivers",
-  "moduleSha": "d8ebbce805b2c870943659f572493f45c100330e",
+  "moduleSha": "ea2a60e4fabc8e421c4d74c4472d4e26b4205fd7",
   "packages": [
     {
       "name": "Controller",

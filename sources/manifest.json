@@ -8,14 +8,14 @@
       "branch": "main",
       "sha": "967f6e0c5a1e211ffc45b7af80efece89252f685",
       "shortSha": "967f6e0c5a1e",
-      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
-      "totalBytes": 125988,
+      "producerFingerprint": "609bf5f34e4bbf77bfd8088f0a22378748dd5193b86ee0f7ed3b9a83f34dc846",
+      "totalBytes": 148302,
       "files": [],
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 125855,
-          "sha256": "7ecbe73b526c7a991c1c1b630fc040f2751c439df9c2719bb91feb21dbac3655",
+          "bytes": 148169,
+          "sha256": "b02489099e1dae093cdebb3b4776d1d0f3db1c0c7f20309847ca0f1b50a7d2ac",
           "kind": "api-catalog"
         },
         {
@@ -49,8 +49,8 @@
       "branch": "main",
       "sha": "a256353d28e5f574108622389a1832232eb97489",
       "shortSha": "a256353d28e5",
-      "producerFingerprint": "a6da2aef777da7bf141be6c44f86b0e16bc32591e8b61342f9c3d9e098dc9ace",
-      "totalBytes": 685428,
+      "producerFingerprint": "609bf5f34e4bbf77bfd8088f0a22378748dd5193b86ee0f7ed3b9a83f34dc846",
+      "totalBytes": 781741,
       "files": [
         {
           "path": "LICENSE",
@@ -80,8 +80,8 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 637260,
-          "sha256": "629874aa6638e0eae13250be9585076e173003ffe70b99d0a17d7d3e66971cca",
+          "bytes": 733573,
+          "sha256": "dbd650149000f7ed63ed36559d759d9fa6f03905048bb8bb6ccff6397c833fcd",
           "kind": "api-catalog"
         },
         {
@@ -104,8 +104,8 @@
       "branch": "main",
       "sha": "725be59228a4c0aa62c1b04c01fdadee257a4feb",
       "shortSha": "725be59228a4",
-      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
-      "totalBytes": 464510,
+      "producerFingerprint": "609bf5f34e4bbf77bfd8088f0a22378748dd5193b86ee0f7ed3b9a83f34dc846",
+      "totalBytes": 520985,
       "files": [
         {
           "path": "Chassis/Steering4/README.md",
@@ -147,8 +147,8 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 376019,
-          "sha256": "82ad017192e21350c5ca2405e6e22fbb91894eeff5df754b31b9d796705358bc",
+          "bytes": 432494,
+          "sha256": "3f807eb4f569464ac7bd6666fda2c9f1cf71314cc8a18ae9f0ebd5a66031e323",
           "kind": "api-catalog"
         },
         {
@@ -182,10 +182,10 @@
       "displayName": "MotorDrivers",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers.git",
       "branch": "main",
-      "sha": "d8ebbce805b2c870943659f572493f45c100330e",
-      "shortSha": "d8ebbce805b2",
-      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
-      "totalBytes": 428111,
+      "sha": "ea2a60e4fabc8e421c4d74c4472d4e26b4205fd7",
+      "shortSha": "ea2a60e4fabc",
+      "producerFingerprint": "609bf5f34e4bbf77bfd8088f0a22378748dd5193b86ee0f7ed3b9a83f34dc846",
+      "totalBytes": 486408,
       "files": [
         {
           "path": "LICENSE",
@@ -227,14 +227,14 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 352958,
-          "sha256": "587c1164477331bed8fafca217130218e7a3b32e04e66647512247cc7d1cd46f",
+          "bytes": 411255,
+          "sha256": "7ebce7ada483bac0dc02e3289315bbdddb6e064ba6ddebacaa39e15c43243298",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
           "bytes": 1870,
-          "sha256": "9236807b67692a3f9d1d8e29d6d50b2ef37bb8f09b9e1bad897ddda14662d5f5",
+          "sha256": "3f50191fddd1ee0b9603c8240e4948bfa8d72f905e0824a89c1a0aa2594650e7",
           "kind": "package-catalog"
         }
       ],
@@ -249,10 +249,10 @@
       "displayName": "Sensors",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/Sensors.git",
       "branch": "main",
-      "sha": "cea60a9e62e200c18e2d53db2e79766618aa0ecb",
-      "shortSha": "cea60a9e62e2",
-      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
-      "totalBytes": 314914,
+      "sha": "a2e7e2fb7c3181d29cdbe7df6f235059e671f950",
+      "shortSha": "a2e7e2fb7c31",
+      "producerFingerprint": "609bf5f34e4bbf77bfd8088f0a22378748dd5193b86ee0f7ed3b9a83f34dc846",
+      "totalBytes": 364003,
       "files": [
         {
           "path": "LICENSE",
@@ -270,14 +270,14 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 277953,
-          "sha256": "d01ade7ea1adf33d6abcfba3b7fb0129c13b15fe4781b6c987408971d04fc6e6",
+          "bytes": 327042,
+          "sha256": "0d361c5150360e5943a09dac1b1f6eb82e70a00012e037a35a6ec888e0d4bb58",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
           "bytes": 1803,
-          "sha256": "f050e1553e6c54939cf9da739a9aa10a5ee2e45e8f8bb718b413f93254512210",
+          "sha256": "fb8e85a10b79d860573f5320127043aad12ab228460570fe04a434254a0f598a",
           "kind": "package-catalog"
         }
       ],
@@ -292,10 +292,10 @@
       "displayName": "TrajectoryControl",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl.git",
       "branch": "main",
-      "sha": "29bd084ccf5d278db2df734fcf6c6841593e28af",
-      "shortSha": "29bd084ccf5d",
-      "producerFingerprint": "f5d8760361b36e06a910a5bbffe143308d5fabc0266f4f6871ec840941a444a1",
-      "totalBytes": 147183,
+      "sha": "53b7dfe0e0105fff85d74ef6382d77dfc1ed8609",
+      "shortSha": "53b7dfe0e010",
+      "producerFingerprint": "609bf5f34e4bbf77bfd8088f0a22378748dd5193b86ee0f7ed3b9a83f34dc846",
+      "totalBytes": 164334,
       "files": [
         {
           "path": "LICENSE",
@@ -313,14 +313,14 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 111076,
-          "sha256": "48d6dacf4d8040e6f945a503ed1bfeb467914309264bb232d3d448b5a9f7cd19",
+          "bytes": 128227,
+          "sha256": "2c9e6cb251f2773dbde4afddab0bf7d31523248f0aa087b29dd328f013a4fb23",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
           "bytes": 863,
-          "sha256": "d1d4e27b782df8966657f07b2e5cf850bc8065d713c3f11fee6ca5c50c18244a",
+          "sha256": "9ea1244d960d2fbd9a9325d327e98b43ffb5f670546b6de0c8e568d97b7192d0",
           "kind": "package-catalog"
         }
       ],

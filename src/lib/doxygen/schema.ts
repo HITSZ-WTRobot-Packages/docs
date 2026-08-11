@@ -38,6 +38,21 @@ export const ApiEnumValueSchema = z
 
 export type ApiEnumValue = z.infer<typeof ApiEnumValueSchema>;
 
+export const ApiAccessSchema = z.enum(["public", "protected", "private"]);
+
+export type ApiAccess = z.infer<typeof ApiAccessSchema>;
+
+export const ApiMemberMetadataSchema = z
+  .object({
+    access: ApiAccessSchema.nullable(),
+    static: z.boolean(),
+    virtual: z.enum(["none", "virtual", "pure"]),
+    const: z.boolean(),
+  })
+  .strict();
+
+export type ApiMemberMetadata = z.infer<typeof ApiMemberMetadataSchema>;
+
 export const ApiSymbolSchema = z
   .object({
     id: z.string().min(1),
@@ -49,12 +64,26 @@ export const ApiSymbolSchema = z
     description: z.string(),
     location: ApiLocationSchema.nullable(),
     parentId: z.string().min(1).nullable(),
+    member: ApiMemberMetadataSchema.nullable(),
     references: z.array(z.string().min(1)),
     enumValues: z.array(ApiEnumValueSchema),
   })
   .strict();
 
 export type ApiSymbol = z.infer<typeof ApiSymbolSchema>;
+
+export const ApiInheritanceRelationSchema = z
+  .object({
+    kind: z.literal("inherits"),
+    derivedId: z.string().min(1),
+    baseId: z.string().min(1).nullable(),
+    baseQualifiedName: z.string().min(1),
+    access: ApiAccessSchema,
+    virtual: z.boolean(),
+  })
+  .strict();
+
+export type ApiInheritanceRelation = z.infer<typeof ApiInheritanceRelationSchema>;
 
 export const ApiWarningSchema = z
   .object({
@@ -86,6 +115,7 @@ export const ApiReferenceSchema = z
     status: z.enum(["complete", "sparse", "empty", "failed"]),
     warnings: z.array(ApiWarningSchema),
     symbols: z.array(ApiSymbolSchema),
+    inheritanceRelations: z.array(ApiInheritanceRelationSchema),
     symbolCount: z.number().int().nonnegative(),
     documentedSymbolCount: z.number().int().nonnegative(),
   })
@@ -119,13 +149,63 @@ export const ApiReferenceSchema = z
         message: "Module references cannot have packageSlug.",
       });
     }
+    const symbolsById = new Map(reference.symbols.map((symbol) => [symbol.id, symbol]));
+    if (symbolsById.size !== reference.symbols.length) {
+      context.addIssue({
+        code: "custom",
+        path: ["symbols"],
+        message: "Symbol IDs must be unique within an API reference.",
+      });
+    }
+    for (const [index, symbol] of reference.symbols.entries()) {
+      if (
+        symbol.parentId !== null &&
+        (symbol.parentId === symbol.id || !symbolsById.has(symbol.parentId))
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["symbols", index, "parentId"],
+          message: "parentId must identify another symbol in the API reference.",
+        });
+      }
+    }
+    for (const [index, relation] of reference.inheritanceRelations.entries()) {
+      const derived = symbolsById.get(relation.derivedId);
+      const base = relation.baseId === null ? undefined : symbolsById.get(relation.baseId);
+      if (!derived || (derived.kind !== "class" && derived.kind !== "struct")) {
+        context.addIssue({
+          code: "custom",
+          path: ["inheritanceRelations", index, "derivedId"],
+          message: "derivedId must identify a class or struct in the API reference.",
+        });
+      }
+      if (
+        relation.baseId !== null &&
+        (!base ||
+          relation.baseId === relation.derivedId ||
+          (base.kind !== "class" && base.kind !== "struct"))
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["inheritanceRelations", index, "baseId"],
+          message: "baseId must identify a class or struct in the API reference when present.",
+        });
+      }
+      if (base && base.qualifiedName !== relation.baseQualifiedName) {
+        context.addIssue({
+          code: "custom",
+          path: ["inheritanceRelations", index, "baseQualifiedName"],
+          message: "baseQualifiedName must match the identified base symbol.",
+        });
+      }
+    }
   });
 
 export type ApiReference = z.infer<typeof ApiReferenceSchema>;
 
 export const ApiCatalogSchema = z
   .object({
-    formatVersion: z.literal(2),
+    formatVersion: z.literal(3),
     doxygenVersion: z.string().regex(/^\d+\.\d+\.\d+$/u),
     references: z.array(ApiReferenceSchema),
   })

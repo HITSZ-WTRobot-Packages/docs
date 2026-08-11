@@ -19,7 +19,7 @@ async function createFixture(sourceBranch: string) {
   const moduleRoot = path.join(sourcesRoot, "modules", "Fixture");
   await mkdir(moduleRoot, { recursive: true });
   const contents = serializeApiCatalog({
-    formatVersion: 2,
+    formatVersion: 3,
     doxygenVersion: "1.16.1",
     references: [
       {
@@ -33,6 +33,7 @@ async function createFixture(sourceBranch: string) {
         status: "empty",
         warnings: [],
         symbols: [],
+        inheritanceRelations: [],
         symbolCount: 0,
         documentedSymbolCount: 0,
       },

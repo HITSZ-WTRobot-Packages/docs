@@ -129,6 +129,7 @@ function failedReference(target: ApiTarget, error: unknown): ApiReference {
       },
     ],
     symbols: [],
+    inheritanceRelations: [],
     symbolCount: 0,
     documentedSymbolCount: 0,
   });
@@ -151,6 +152,7 @@ function noInputReference(target: ApiTarget): ApiReference {
       },
     ],
     symbols: [],
+    inheritanceRelations: [],
     symbolCount: 0,
     documentedSymbolCount: 0,
   });
@@ -297,7 +299,7 @@ export async function generateModuleApiCatalog(
     await rm(temporaryRoot, { recursive: true, force: true });
   }
   return ApiCatalogSchema.parse({
-    formatVersion: 2,
+    formatVersion: 3,
     doxygenVersion,
     references: references.sort(
       (left, right) =>

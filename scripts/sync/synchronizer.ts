@@ -512,7 +512,7 @@ function validateApiCatalogs(
   doxygenVersion: string,
 ): void {
   const references = ApiCatalogSchema.parse({
-    formatVersion: 2,
+    formatVersion: 3,
     doxygenVersion,
     references: moduleCatalogs.flatMap((catalog) => {
       if (catalog.doxygenVersion !== doxygenVersion) {

@@ -1,5 +1,5 @@
 {
-  "formatVersion": 2,
+  "formatVersion": 3,
   "doxygenVersion": "1.16.1",
   "references": [
     {
@@ -35,6 +35,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-22bc76abcb8fa8da",
             "api-namespace-bafdd2726138d98d",
@@ -61,6 +62,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L19"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-namespace-bafdd2726138d98d"
           ],
@@ -81,6 +83,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L19"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-22bc76abcb8fa8da"
           ],
@@ -100,7 +103,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L36"
           },
-          "parentId": null,
+          "parentId": "api-namespace-bafdd2726138d98d",
+          "member": null,
           "references": [
             "api-enum-05e25afd5e876913",
             "api-enum-ea526be2e2f03e9a",
@@ -184,6 +188,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L39"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -201,7 +211,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L66"
           },
-          "parentId": null,
+          "parentId": "api-class-22bc76abcb8fa8da",
+          "member": null,
           "references": [
             "api-function-88bca39e8530ee40",
             "api-struct-223c615afc6fb7ab",
@@ -231,6 +242,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L80"
           },
           "parentId": "api-struct-41e29ad48be8152d",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -249,6 +266,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L75"
           },
           "parentId": "api-struct-41e29ad48be8152d",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-daaf22ac3f031efb"
           ],
@@ -269,6 +292,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L73"
           },
           "parentId": "api-struct-41e29ad48be8152d",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-88bca39e8530ee40"
           ],
@@ -289,6 +318,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L77"
           },
           "parentId": "api-struct-41e29ad48be8152d",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-223c615afc6fb7ab"
           ],
@@ -309,6 +344,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L70"
           },
           "parentId": "api-struct-41e29ad48be8152d",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-88bca39e8530ee40"
           ],
@@ -329,6 +370,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L71"
           },
           "parentId": "api-struct-41e29ad48be8152d",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-88bca39e8530ee40"
           ],
@@ -349,6 +396,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L72"
           },
           "parentId": "api-struct-41e29ad48be8152d",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-88bca39e8530ee40"
           ],
@@ -369,6 +422,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L83"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -403,6 +462,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L110"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-41e29ad48be8152d",
             "api-variable-6630e7d61709bd48",
@@ -428,6 +493,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L40"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -445,7 +516,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L99"
           },
-          "parentId": null,
+          "parentId": "api-class-22bc76abcb8fa8da",
+          "member": null,
           "references": [
             "api-typedef-5a2488a91399e423",
             "api-variable-486a7a1321982d1a",
@@ -469,6 +541,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L104"
           },
           "parentId": "api-struct-a07a848cad04a43d",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-typedef-5a2488a91399e423"
           ],
@@ -489,6 +567,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L102"
           },
           "parentId": "api-struct-a07a848cad04a43d",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -507,6 +591,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L101"
           },
           "parentId": "api-struct-a07a848cad04a43d",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -524,7 +614,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L43"
           },
-          "parentId": null,
+          "parentId": "api-class-22bc76abcb8fa8da",
+          "member": null,
           "references": [
             "api-function-1ca346950ecabf29",
             "api-function-54be753e7233e55c",
@@ -550,6 +641,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L47"
           },
           "parentId": "api-struct-daaf22ac3f031efb",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-struct-daaf22ac3f031efb",
             "api-variable-1185802931d75b09",
@@ -573,6 +670,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L51"
           },
           "parentId": "api-struct-daaf22ac3f031efb",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-struct-daaf22ac3f031efb",
             "api-variable-1185802931d75b09",
@@ -596,6 +699,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L45"
           },
           "parentId": "api-struct-daaf22ac3f031efb",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1ca346950ecabf29",
             "api-function-54be753e7233e55c",
@@ -618,6 +727,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L45"
           },
           "parentId": "api-struct-daaf22ac3f031efb",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1ca346950ecabf29",
             "api-function-54be753e7233e55c",
@@ -640,6 +755,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L45"
           },
           "parentId": "api-struct-daaf22ac3f031efb",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1ca346950ecabf29",
             "api-function-54be753e7233e55c",
@@ -662,6 +783,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L93"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -690,7 +817,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L58"
           },
-          "parentId": null,
+          "parentId": "api-class-22bc76abcb8fa8da",
+          "member": null,
           "references": [
             "api-variable-62f06756d8f3e25f",
             "api-variable-9564135b273c609e",
@@ -713,6 +841,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L60"
           },
           "parentId": "api-struct-223c615afc6fb7ab",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -731,6 +865,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L61"
           },
           "parentId": "api-struct-223c615afc6fb7ab",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -749,6 +889,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L62"
           },
           "parentId": "api-struct-223c615afc6fb7ab",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -767,6 +913,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L620"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -785,6 +937,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L551"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -803,6 +961,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L370"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-enum-05e25afd5e876913"
           ],
@@ -823,6 +987,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L521"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -841,6 +1011,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L545"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-05e25afd5e876913"
           ],
@@ -861,6 +1037,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L579"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -879,6 +1061,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L107"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-306e401d1503cf11",
             "api-function-3ecd72ea0676a915",
@@ -904,6 +1092,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L506"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-0c8a882d4dceb29c",
             "api-variable-662b8ace4c213557",
@@ -926,6 +1120,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L470"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-7773b90648442fc6"
           ],
@@ -946,6 +1146,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L559"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -964,6 +1170,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L558"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -982,6 +1194,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L345"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-29b9113f2e316874",
             "api-function-6d56e119d38f7627"
@@ -1003,6 +1221,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L353"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-c4703befadde74d1",
             "api-variable-0c8a882d4dceb29c",
@@ -1026,6 +1250,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L372"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-struct-a07a848cad04a43d"
           ],
@@ -1046,6 +1276,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L553"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-a07a848cad04a43d"
           ],
@@ -1066,6 +1302,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L547"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-daaf22ac3f031efb"
           ],
@@ -1086,6 +1328,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L543"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1104,6 +1352,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L586"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1122,6 +1376,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L564"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6f7c2eb473688376"
           ],
@@ -1142,6 +1402,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L581"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1160,6 +1426,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L572"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-88bca39e8530ee40"
           ],
@@ -1180,6 +1452,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L583"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1198,6 +1476,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L479"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-7761a44dc93a5664"
           ],
@@ -1218,6 +1502,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L289"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-0ba53cf1e9d215b3",
             "api-variable-1925bb0197d9582c"
@@ -1239,6 +1529,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L297"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-0ba53cf1e9d215b3",
             "api-struct-daaf22ac3f031efb",
@@ -1261,6 +1557,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L293"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-ea526be2e2f03e9a",
             "api-function-0ba53cf1e9d215b3"
@@ -1282,6 +1584,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L276"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-ea526be2e2f03e9a",
             "api-function-398e410d9add176b",
@@ -1307,6 +1615,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L253"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6a7b24a025d8a77c",
             "api-variable-1925bb0197d9582c"
@@ -1328,6 +1642,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L261"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6a7b24a025d8a77c",
             "api-struct-daaf22ac3f031efb",
@@ -1350,6 +1670,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L257"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-ea526be2e2f03e9a",
             "api-function-6a7b24a025d8a77c"
@@ -1371,6 +1697,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L135"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-ea526be2e2f03e9a",
             "api-function-0ba53cf1e9d215b3",
@@ -1404,6 +1736,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L320"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f28fde8df8f5d4bb",
             "api-variable-1925bb0197d9582c"
@@ -1425,6 +1763,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L335"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f28fde8df8f5d4bb",
             "api-struct-daaf22ac3f031efb",
@@ -1447,6 +1791,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L328"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-ea526be2e2f03e9a",
             "api-function-f28fde8df8f5d4bb"
@@ -1468,6 +1818,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L302"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-ea526be2e2f03e9a",
             "api-function-55e3d4cf091cba4f",
@@ -1493,6 +1849,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L431"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-ddb5253e78713554",
             "api-variable-1583e340444768ab",
@@ -1517,6 +1879,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L397"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-variable-1583e340444768ab",
             "api-variable-2f877548a88db8de",
@@ -1540,6 +1908,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L452"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1558,6 +1932,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L557"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-7773b90648442fc6",
             "api-function-d913cd090668a5ec"
@@ -1579,6 +1959,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L565"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6a7b24a025d8a77c"
           ],
@@ -1599,6 +1985,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L549"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-223c615afc6fb7ab"
           ],
@@ -1619,6 +2011,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L595"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1637,6 +2035,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L582"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1655,6 +2059,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L560"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -1673,6 +2083,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L569"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6a7b24a025d8a77c",
             "api-function-7773b90648442fc6",
@@ -1695,6 +2111,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L570"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6a7b24a025d8a77c",
             "api-function-7773b90648442fc6",
@@ -1717,6 +2139,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L378"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-c4703befadde74d1"
           ],
@@ -1737,6 +2165,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L571"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6a7b24a025d8a77c",
             "api-function-7773b90648442fc6",
@@ -1759,6 +2193,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L576"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-29b9113f2e316874",
             "api-function-6a7b24a025d8a77c",
@@ -1781,6 +2221,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L577"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-29b9113f2e316874",
             "api-function-6a7b24a025d8a77c",
@@ -1803,12 +2249,28 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Master/Master.hpp#L578"
           },
           "parentId": "api-class-22bc76abcb8fa8da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-29b9113f2e316874",
             "api-function-6a7b24a025d8a77c",
             "api-function-ad55da3ce7226aac"
           ],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-22bc76abcb8fa8da",
+          "baseId": null,
+          "baseQualifiedName": "IChassisController",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 82,
@@ -1847,6 +2309,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-72bfa835ae5613cf",
             "api-namespace-172d3bea7afb9803",
@@ -1872,6 +2335,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L18"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-namespace-172d3bea7afb9803"
           ],
@@ -1892,6 +2356,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L18"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-72bfa835ae5613cf"
           ],
@@ -1911,7 +2376,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L39"
           },
-          "parentId": null,
+          "parentId": "api-namespace-172d3bea7afb9803",
+          "member": null,
           "references": [
             "api-function-3fd1c1cece1f37e8",
             "api-function-5bd20e03175e4f32",
@@ -1950,7 +2416,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L169"
           },
-          "parentId": null,
+          "parentId": "api-class-72bfa835ae5613cf",
+          "member": null,
           "references": [],
           "enumValues": []
         },
@@ -1968,7 +2435,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L46"
           },
-          "parentId": null,
+          "parentId": "api-class-72bfa835ae5613cf",
+          "member": null,
           "references": [
             "api-variable-3c948d49f64a44c5",
             "api-variable-74e8092aad46d26a",
@@ -1991,6 +2459,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L48"
           },
           "parentId": "api-struct-ddee57e015111217",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2009,6 +2483,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L49"
           },
           "parentId": "api-struct-ddee57e015111217",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2027,6 +2507,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L50"
           },
           "parentId": "api-struct-ddee57e015111217",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2045,6 +2531,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L61"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-ddee57e015111217"
           ],
@@ -2064,7 +2556,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L54"
           },
-          "parentId": null,
+          "parentId": "api-class-72bfa835ae5613cf",
+          "member": null,
           "references": [
             "api-function-778c0d06f1fdcf13",
             "api-function-f047ce306c145a73",
@@ -2088,6 +2581,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L56"
           },
           "parentId": "api-struct-df93151370e2f6eb",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-778c0d06f1fdcf13",
             "api-function-f047ce306c145a73"
@@ -2109,6 +2608,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L57"
           },
           "parentId": "api-struct-df93151370e2f6eb",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-778c0d06f1fdcf13",
             "api-function-f047ce306c145a73"
@@ -2130,6 +2635,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L177"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2148,6 +2659,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L152"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-ce434a14495127eb"
           ],
@@ -2168,6 +2685,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L175"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-df93151370e2f6eb"
           ],
@@ -2188,6 +2711,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L106"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2206,6 +2735,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L159"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2224,6 +2759,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L165"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2242,6 +2783,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L161"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2260,6 +2807,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L162"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2278,6 +2831,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L163"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2296,6 +2855,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L94"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-df93151370e2f6eb",
             "api-variable-ba090a03e4a9c30d",
@@ -2318,6 +2883,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L143"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-df93151370e2f6eb"
           ],
@@ -2338,6 +2909,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L120"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-db0684294632eb48"
           ],
@@ -2358,6 +2935,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L73"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-5bd20e03175e4f32",
             "api-variable-ba090a03e4a9c30d",
@@ -2380,8 +2963,24 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Controller/Slave/Slave.hpp#L166"
           },
           "parentId": "api-class-72bfa835ae5613cf",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-72bfa835ae5613cf",
+          "baseId": null,
+          "baseQualifiedName": "IChassisController",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 27,
@@ -2423,6 +3022,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-5086a1897627b789",
             "api-file-1b2e905da84d6a7f",
@@ -2448,6 +3048,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-1b2e905da84d6a7f",
             "api-file-97df795d72967a7a",
@@ -2473,6 +3074,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-f94f906bbc770bb6",
             "api-file-41321a9fb44bc39a",
@@ -2503,6 +3105,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-2777b6995b18dd2e",
             "api-file-1b2e905da84d6a7f",
@@ -2529,6 +3132,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L14"
           },
           "parentId": "api-file-1b2e905da84d6a7f",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1c444f8a84de77ae",
             "api-function-4a5c67e753e7adaa",
@@ -2553,6 +3162,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L10"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-namespace-37d5b4615d338c33",
             "api-namespace-5a3f5d16814b4c4b",
@@ -2576,7 +3186,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L33"
           },
-          "parentId": null,
+          "parentId": "api-namespace-ddec3f9aa8fd17fb",
+          "member": null,
           "references": [
             "api-function-1c444f8a84de77ae",
             "api-function-4a5c67e753e7adaa",
@@ -2607,6 +3218,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L41"
           },
           "parentId": "api-struct-1ee422de3781765f",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-struct-1ee422de3781765f",
             "api-variable-44b9d00958c52800",
@@ -2630,6 +3247,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L46"
           },
           "parentId": "api-struct-1ee422de3781765f",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-struct-1ee422de3781765f",
             "api-variable-44b9d00958c52800",
@@ -2653,6 +3276,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L35"
           },
           "parentId": "api-struct-1ee422de3781765f",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1c444f8a84de77ae",
             "api-function-4a5c67e753e7adaa",
@@ -2678,6 +3307,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L36"
           },
           "parentId": "api-struct-1ee422de3781765f",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1c444f8a84de77ae",
             "api-function-4a5c67e753e7adaa",
@@ -2703,6 +3338,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L37"
           },
           "parentId": "api-struct-1ee422de3781765f",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1c444f8a84de77ae",
             "api-function-4a5c67e753e7adaa",
@@ -2728,6 +3369,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L52"
           },
           "parentId": "api-struct-1ee422de3781765f",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -2746,6 +3393,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L39"
           },
           "parentId": "api-struct-1ee422de3781765f",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-1ee422de3781765f"
           ],
@@ -2765,7 +3418,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L19"
           },
-          "parentId": null,
+          "parentId": "api-namespace-ddec3f9aa8fd17fb",
+          "member": null,
           "references": [
             "api-function-29aae9ff91a441d6",
             "api-function-fe1eaa7a5b774126",
@@ -2790,6 +3444,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L21"
           },
           "parentId": "api-struct-6cabdc39038a7ca1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-fe1eaa7a5b774126"
           ],
@@ -2810,6 +3470,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L22"
           },
           "parentId": "api-struct-6cabdc39038a7ca1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-fe1eaa7a5b774126"
           ],
@@ -2830,6 +3496,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L23"
           },
           "parentId": "api-struct-6cabdc39038a7ca1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-fe1eaa7a5b774126"
           ],
@@ -2850,6 +3522,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisDef.hpp#L25"
           },
           "parentId": "api-struct-6cabdc39038a7ca1",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-6cabdc39038a7ca1"
           ],
@@ -2870,6 +3548,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L10"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-5086a1897627b789"
           ],
@@ -2889,7 +3568,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L24"
           },
-          "parentId": null,
+          "parentId": "api-namespace-bca8649f24557456",
+          "member": null,
           "references": [
             "api-class-2777b6995b18dd2e",
             "api-class-f94f906bbc770bb6",
@@ -2929,6 +3609,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L117"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-2777b6995b18dd2e",
             "api-class-f94f906bbc770bb6",
@@ -2952,6 +3638,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L44"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-function-401b4d822c724991",
             "api-function-4414c792d68051c4",
@@ -2974,6 +3666,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L126"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-aa983c7d99fd1504",
             "api-struct-6cabdc39038a7ca1",
@@ -2996,6 +3694,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L89"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-function-b688ec2485ae6fce",
             "api-variable-64f6f31e0c4346dd"
@@ -3017,6 +3721,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L73"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-function-494d6a974c62ef45",
             "api-variable-64f6f31e0c4346dd"
@@ -3038,6 +3748,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L103"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-aa983c7d99fd1504",
             "api-variable-64f6f31e0c4346dd"
@@ -3059,6 +3775,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L97"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-c5830f7b0409fdb1",
             "api-function-f1e93c27adc9f5f1",
@@ -3081,6 +3803,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L31"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-variable-281e428ba82a1de5"
           ],
@@ -3101,6 +3829,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L123"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-f94f906bbc770bb6",
             "api-function-0784d7decf586387",
@@ -3126,6 +3860,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L30"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-variable-64f6f31e0c4346dd"
           ],
@@ -3146,6 +3886,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L122"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-2777b6995b18dd2e",
             "api-function-0200e70f9c464c67",
@@ -3175,6 +3921,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L34"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-variable-281e428ba82a1de5"
           ],
@@ -3195,6 +3947,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L56"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-function-0200e70f9c464c67",
             "api-function-5c490c3f21b5789b",
@@ -3217,6 +3975,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L113"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": false
+          },
           "references": [
             "api-function-494d6a974c62ef45"
           ],
@@ -3237,6 +4001,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L32"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-variable-281e428ba82a1de5"
           ],
@@ -3257,6 +4027,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L33"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-variable-281e428ba82a1de5"
           ],
@@ -3277,6 +4053,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisController.hpp#L27"
           },
           "parentId": "api-class-5086a1897627b789",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-function-b688ec2485ae6fce"
           ],
@@ -3297,6 +4079,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L17"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-f94f906bbc770bb6"
           ],
@@ -3316,7 +4099,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L37"
           },
-          "parentId": null,
+          "parentId": "api-namespace-37d5b4615d338c33",
+          "member": null,
           "references": [
             "api-class-2777b6995b18dd2e",
             "api-define-6ca9f86bdd98a6e5",
@@ -3361,6 +4145,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L84"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-define-6ca9f86bdd98a6e5",
             "api-function-7d6d7c079acc2a9a",
@@ -3386,6 +4176,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L60"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-7d6d7c079acc2a9a",
             "api-function-fe1eaa7a5b774126",
@@ -3408,6 +4204,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L129"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-7d6d7c079acc2a9a",
             "api-function-ff42a0cffc29dca2",
@@ -3430,6 +4232,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L41"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-2777b6995b18dd2e",
             "api-variable-693b320e7a2cb447"
@@ -3451,6 +4259,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L98"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-6ca9f86bdd98a6e5",
             "api-struct-1ee422de3781765f",
@@ -3475,6 +4289,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L66"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-define-6ca9f86bdd98a6e5",
             "api-function-7d6d7c079acc2a9a",
@@ -3500,6 +4320,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L112"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-6ca9f86bdd98a6e5",
             "api-function-950350157db2bc55",
@@ -3525,6 +4351,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L54"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-7d6d7c079acc2a9a",
             "api-function-fe1eaa7a5b774126",
@@ -3547,6 +4379,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L138"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-variable-693b320e7a2cb447"
           ],
@@ -3567,6 +4405,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L135"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-2777b6995b18dd2e",
             "api-function-badb2100efc8042c",
@@ -3589,6 +4433,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L51"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
           "references": [
             "api-function-1c444f8a84de77ae",
             "api-function-53716ca8801f75ce",
@@ -3614,6 +4464,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L141"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "protected",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-6ca9f86bdd98a6e5",
             "api-function-98adbad19f093c0c",
@@ -3640,6 +4496,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L46"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
           "references": [
             "api-struct-6cabdc39038a7ca1"
           ],
@@ -3660,6 +4522,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L48"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
           "references": [
             "api-struct-6cabdc39038a7ca1"
           ],
@@ -3680,6 +4548,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisLoc.hpp#L43"
           },
           "parentId": "api-class-f94f906bbc770bb6",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3698,6 +4572,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L15"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-2777b6995b18dd2e"
           ],
@@ -3717,7 +4592,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L32"
           },
-          "parentId": null,
+          "parentId": "api-namespace-5a3f5d16814b4c4b",
+          "member": null,
           "references": [
             "api-class-5086a1897627b789",
             "api-function-10914d1d28c37544",
@@ -3751,6 +4627,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L85"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3769,6 +4651,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L88"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "pure",
+            "const": false
+          },
           "references": [
             "api-struct-6cabdc39038a7ca1"
           ],
@@ -3789,6 +4677,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L93"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-5086a1897627b789"
           ],
@@ -3809,6 +4703,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L79"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-class-5086a1897627b789"
           ],
@@ -3829,6 +4729,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L39"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3847,6 +4753,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L37"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -3865,6 +4777,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L41"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -3883,6 +4801,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L53"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": false
+          },
           "references": [
             "api-struct-6cabdc39038a7ca1"
           ],
@@ -3903,6 +4827,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L50"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
           "references": [
             "api-function-e975b7012ec3f3e8"
           ],
@@ -3923,6 +4853,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L72"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-class-5086a1897627b789"
           ],
@@ -3943,6 +4879,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L61"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [
             "api-class-5086a1897627b789"
           ],
@@ -3963,10 +4905,17 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Core/IChassisMotion.hpp#L35"
           },
           "parentId": "api-class-2777b6995b18dd2e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         }
       ],
+      "inheritanceRelations": [],
       "symbolCount": 69,
       "documentedSymbolCount": 49
     },
@@ -4004,6 +4953,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-e214ed4a6af1f8a5",
             "api-function-38079b0485c8736d",
@@ -4028,6 +4978,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-5c8e4c0ea33dcca0",
             "api-file-93c45eb1f99875bd",
@@ -4052,6 +5003,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.cpp#L15"
           },
           "parentId": "api-file-93c45eb1f99875bd",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-38079b0485c8736d",
             "api-function-543c26562a024e55"
@@ -4073,6 +5030,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.cpp#L17"
           },
           "parentId": "api-file-93c45eb1f99875bd",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-38079b0485c8736d"
           ],
@@ -4093,6 +5056,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.cpp#L13"
           },
           "parentId": "api-file-93c45eb1f99875bd",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-543c26562a024e55"
           ],
@@ -4113,6 +5082,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.cpp#L19"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-namespace-4e0815020c6d5a3b"
           ],
@@ -4133,6 +5103,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.cpp#L19"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-5c8e4c0ea33dcca0",
             "api-enum-95368e1bc03fcd63",
@@ -4156,7 +5127,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L21"
           },
-          "parentId": null,
+          "parentId": "api-namespace-4e0815020c6d5a3b",
+          "member": null,
           "references": [
             "api-define-206d8ea2f31f45cd",
             "api-define-a644a5375c46d03d",
@@ -4202,6 +5174,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L32"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -4230,7 +5208,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L38"
           },
-          "parentId": null,
+          "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": null,
           "references": [
             "api-enum-00a04874707f7790",
             "api-function-b3e5628ee5ad37e7",
@@ -4260,6 +5239,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L43"
           },
           "parentId": "api-struct-6f53eeb0522beef9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-00a04874707f7790"
           ],
@@ -4280,6 +5265,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L41"
           },
           "parentId": "api-struct-6f53eeb0522beef9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b3e5628ee5ad37e7"
           ],
@@ -4300,6 +5291,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L42"
           },
           "parentId": "api-struct-6f53eeb0522beef9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b3e5628ee5ad37e7"
           ],
@@ -4320,6 +5317,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L46"
           },
           "parentId": "api-struct-6f53eeb0522beef9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b3e5628ee5ad37e7"
           ],
@@ -4340,6 +5343,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L45"
           },
           "parentId": "api-struct-6f53eeb0522beef9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b3e5628ee5ad37e7"
           ],
@@ -4360,6 +5369,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L40"
           },
           "parentId": "api-struct-6f53eeb0522beef9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4378,6 +5393,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L47"
           },
           "parentId": "api-struct-6f53eeb0522beef9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b3e5628ee5ad37e7"
           ],
@@ -4398,6 +5419,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L48"
           },
           "parentId": "api-struct-6f53eeb0522beef9",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-b3e5628ee5ad37e7"
           ],
@@ -4418,6 +5445,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L51"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-3467116dc5fe09ea",
             "api-struct-6f53eeb0522beef9",
@@ -4445,6 +5478,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L24"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -4489,6 +5528,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L69"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-5c8e4c0ea33dcca0",
             "api-define-a644a5375c46d03d",
@@ -4512,6 +5557,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L54"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4530,6 +5581,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L53"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1f7250cf33184ff9"
           ],
@@ -4550,6 +5607,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L56"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-225a69b8f51dae9e",
             "api-function-b3df7f68d1356304"
@@ -4571,6 +5634,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L72"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4589,6 +5658,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L59"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-206d8ea2f31f45cd",
             "api-define-dcc08514cb2ef533",
@@ -4611,6 +5686,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L65"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -4629,6 +5710,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L75"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4647,6 +5734,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L73"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-00a04874707f7790"
           ],
@@ -4667,6 +5760,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L62"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-1f7250cf33184ff9"
           ],
@@ -4687,6 +5786,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L77"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4705,6 +5810,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.hpp#L74"
           },
           "parentId": "api-class-5c8e4c0ea33dcca0",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4723,6 +5834,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Mecanum4/Mecanum4.cpp#L22"
           },
           "parentId": "api-namespace-4e0815020c6d5a3b",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-95368e1bc03fcd63",
             "api-function-38079b0485c8736d",
@@ -4730,6 +5847,16 @@
             "api-function-b3e5628ee5ad37e7"
           ],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-5c8e4c0ea33dcca0",
+          "baseId": null,
+          "baseQualifiedName": "IChassisMotion",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 33,
@@ -4769,6 +5896,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-a1877f83155bab44",
             "api-function-0859021d37d90d96",
@@ -4794,6 +5922,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-dea9014e22c34e38",
             "api-file-7c27435194176dd3",
@@ -4818,6 +5947,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.cpp#L12"
           },
           "parentId": "api-file-7c27435194176dd3",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-0859021d37d90d96"
           ],
@@ -4838,6 +5973,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.cpp#L13"
           },
           "parentId": "api-file-7c27435194176dd3",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-99d306faf2994f67"
           ],
@@ -4858,6 +5999,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.cpp#L14"
           },
           "parentId": "api-file-7c27435194176dd3",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -4876,6 +6023,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.cpp#L11"
           },
           "parentId": "api-file-7c27435194176dd3",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-0859021d37d90d96"
           ],
@@ -4896,6 +6049,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.cpp#L16"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-namespace-1ce481183f60c97b"
           ],
@@ -4916,6 +6070,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.cpp#L16"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-dea9014e22c34e38",
             "api-namespace-d7ed79d94d48c81f"
@@ -4936,7 +6091,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L23"
           },
-          "parentId": null,
+          "parentId": "api-namespace-1ce481183f60c97b",
+          "member": null,
           "references": [
             "api-define-61b8f75fe49ca76b",
             "api-define-c449cadbbfc8ce6c",
@@ -4978,7 +6134,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L35"
           },
-          "parentId": null,
+          "parentId": "api-class-dea9014e22c34e38",
+          "member": null,
           "references": [
             "api-function-d00bee4400dda620",
             "api-variable-1fc1f5a81c4a88c9",
@@ -5006,6 +6163,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L38"
           },
           "parentId": "api-struct-bd287aa3cddb252a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-d00bee4400dda620"
           ],
@@ -5026,6 +6189,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L39"
           },
           "parentId": "api-struct-bd287aa3cddb252a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-d00bee4400dda620"
           ],
@@ -5046,6 +6215,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L42"
           },
           "parentId": "api-struct-bd287aa3cddb252a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-d00bee4400dda620"
           ],
@@ -5066,6 +6241,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L41"
           },
           "parentId": "api-struct-bd287aa3cddb252a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-d00bee4400dda620"
           ],
@@ -5086,6 +6267,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L37"
           },
           "parentId": "api-struct-bd287aa3cddb252a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5104,6 +6291,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L43"
           },
           "parentId": "api-struct-bd287aa3cddb252a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-d00bee4400dda620"
           ],
@@ -5124,6 +6317,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L44"
           },
           "parentId": "api-struct-bd287aa3cddb252a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-d00bee4400dda620"
           ],
@@ -5144,6 +6343,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L47"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-bd287aa3cddb252a",
             "api-variable-1fc1f5a81c4a88c9",
@@ -5170,6 +6375,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L26"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -5214,6 +6425,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L65"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-c449cadbbfc8ce6c",
             "api-define-ebbfda522333456a"
@@ -5235,6 +6452,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L50"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5253,6 +6476,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L49"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-8e29c1ba65324a9d"
           ],
@@ -5273,6 +6502,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L52"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-a6630bb96bdd42d9",
             "api-function-b5f5a17ae0a0275a"
@@ -5294,6 +6529,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L68"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5312,6 +6553,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L55"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-61b8f75fe49ca76b"
           ],
@@ -5332,6 +6579,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L70"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5350,6 +6603,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L61"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -5368,6 +6627,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L58"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-8e29c1ba65324a9d"
           ],
@@ -5388,6 +6653,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L72"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5406,6 +6677,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.hpp#L69"
           },
           "parentId": "api-class-dea9014e22c34e38",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5424,6 +6701,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.cpp#L18"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-enum-efca2a8748f0ec4d",
             "api-function-e6de8370f8e41753"
@@ -5445,6 +6723,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.cpp#L23"
           },
           "parentId": "api-namespace-d7ed79d94d48c81f",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-efca2a8748f0ec4d"
           ],
@@ -5465,8 +6749,24 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Omni4/Omni4.cpp#L21"
           },
           "parentId": "api-namespace-d7ed79d94d48c81f",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-dea9014e22c34e38",
+          "baseId": null,
+          "baseQualifiedName": "IChassisMotion",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 33,
@@ -5508,6 +6808,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-a6722f20734c7885",
             "api-file-c08a6959ec5b3e27",
@@ -5533,6 +6834,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-04e6dabd7e473c02",
             "api-file-c08a6959ec5b3e27",
@@ -5560,6 +6862,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-c08a6959ec5b3e27",
             "api-namespace-3b9cd047567a4e8a",
@@ -5582,6 +6885,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-23866649816ed65b",
             "api-file-a6722f20734c7885",
@@ -5610,6 +6914,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.cpp#L12"
           },
           "parentId": "api-file-c2beb02dfe60116c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6ee1159ab0e46ffa",
             "api-function-8d3c6db275a5efec"
@@ -5631,6 +6941,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.cpp#L11"
           },
           "parentId": "api-file-c2beb02dfe60116c",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-6ee1159ab0e46ffa",
             "api-function-8d3c6db275a5efec"
@@ -5652,6 +6968,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.cpp#L14"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-namespace-6b8ac147100b6d8f",
             "api-namespace-e00d1728856d6380"
@@ -5673,6 +6990,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.cpp#L14"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-04e6dabd7e473c02"
           ],
@@ -5692,7 +7010,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L20"
           },
-          "parentId": null,
+          "parentId": "api-namespace-e00d1728856d6380",
+          "member": null,
           "references": [
             "api-class-23866649816ed65b",
             "api-define-322552dac7ee1c11",
@@ -5737,7 +7056,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L31"
           },
-          "parentId": null,
+          "parentId": "api-class-04e6dabd7e473c02",
+          "member": null,
           "references": [
             "api-struct-04ce74847a92be01",
             "api-struct-53c36f33f1dc8d7e",
@@ -5767,7 +7087,8 @@
             "column": 9,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L39"
           },
-          "parentId": null,
+          "parentId": "api-struct-eb5e535ccbc252db",
+          "member": null,
           "references": [
             "api-struct-04ce74847a92be01",
             "api-struct-87605e990dafc621",
@@ -5791,6 +7112,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L42"
           },
           "parentId": "api-struct-53c36f33f1dc8d7e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-87605e990dafc621"
           ],
@@ -5811,6 +7138,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L41"
           },
           "parentId": "api-struct-53c36f33f1dc8d7e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-04ce74847a92be01"
           ],
@@ -5831,6 +7164,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L36"
           },
           "parentId": "api-struct-eb5e535ccbc252db",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5849,6 +7188,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L37"
           },
           "parentId": "api-struct-eb5e535ccbc252db",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5867,6 +7212,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L33"
           },
           "parentId": "api-struct-eb5e535ccbc252db",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5885,6 +7236,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L35"
           },
           "parentId": "api-struct-eb5e535ccbc252db",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -5903,6 +7260,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L45"
           },
           "parentId": "api-struct-eb5e535ccbc252db",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-53c36f33f1dc8d7e"
           ],
@@ -5923,6 +7286,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L44"
           },
           "parentId": "api-struct-eb5e535ccbc252db",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-53c36f33f1dc8d7e"
           ],
@@ -5943,6 +7312,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L46"
           },
           "parentId": "api-struct-eb5e535ccbc252db",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-53c36f33f1dc8d7e"
           ],
@@ -5963,6 +7338,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L47"
           },
           "parentId": "api-struct-eb5e535ccbc252db",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-53c36f33f1dc8d7e"
           ],
@@ -5983,6 +7364,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L50"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-eb5e535ccbc252db"
           ],
@@ -6002,7 +7389,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L117"
           },
-          "parentId": null,
+          "parentId": "api-class-04e6dabd7e473c02",
+          "member": null,
           "references": [
             "api-variable-2b95686611cae9de",
             "api-variable-76b57a126e40f1ab"
@@ -6024,6 +7412,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L119"
           },
           "parentId": "api-struct-6940ac07c3310503",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6042,6 +7436,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L119"
           },
           "parentId": "api-struct-6940ac07c3310503",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6060,6 +7460,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L23"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -6104,6 +7510,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L100"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-322552dac7ee1c11",
             "api-define-3e00ed4cbf7869aa",
@@ -6126,6 +7538,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L105"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6144,6 +7562,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L69"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-ac711a773fe551a7"
           ],
@@ -6164,6 +7588,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L52"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-796f0ff959bbc639",
             "api-function-8c8ea9b932f99e3d"
@@ -6185,6 +7615,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L104"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6203,6 +7639,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L76"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-ac711a773fe551a7"
           ],
@@ -6223,6 +7665,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L103"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6241,6 +7689,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L91"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6259,6 +7713,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L123"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-enum-1bbeb6745c233089"
           ],
@@ -6279,6 +7739,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L108"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6297,6 +7763,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L109"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6315,6 +7787,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L110"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6333,6 +7811,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L94"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-6ee1159ab0e46ffa"
           ],
@@ -6353,6 +7837,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L111"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6371,6 +7861,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L84"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-d0f016c55c9b0b75"
           ],
@@ -6391,6 +7887,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L97"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-322552dac7ee1c11",
             "api-define-3e00ed4cbf7869aa"
@@ -6412,6 +7914,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L113"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6430,6 +7938,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L115"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-class-23866649816ed65b"
           ],
@@ -6450,6 +7964,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/Steering4.hpp#L107"
           },
           "parentId": "api-class-04e6dabd7e473c02",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6468,6 +7988,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.cpp#L9"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-23866649816ed65b",
             "api-function-859d9505a85522c3",
@@ -6489,7 +8010,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L24"
           },
-          "parentId": null,
+          "parentId": "api-namespace-6b8ac147100b6d8f",
+          "member": null,
           "references": [
             "api-enum-935f59ee026cf11a",
             "api-function-3a5cd01cd0bb5b24",
@@ -6534,6 +8056,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L32"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": [
             {
@@ -6572,7 +8100,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L40"
           },
-          "parentId": null,
+          "parentId": "api-class-23866649816ed65b",
+          "member": null,
           "references": [
             "api-variable-839ac5fbabbd9e80",
             "api-variable-9c1e43638575c161",
@@ -6595,6 +8124,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L43"
           },
           "parentId": "api-struct-87605e990dafc621",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6613,6 +8148,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L44"
           },
           "parentId": "api-struct-87605e990dafc621",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6631,6 +8172,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L42"
           },
           "parentId": "api-struct-87605e990dafc621",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6648,7 +8195,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L47"
           },
-          "parentId": null,
+          "parentId": "api-class-23866649816ed65b",
+          "member": null,
           "references": [
             "api-variable-04bd35d49c549721",
             "api-variable-4dad9ed5ec1aee61",
@@ -6671,6 +8219,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L49"
           },
           "parentId": "api-struct-04ce74847a92be01",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6689,6 +8243,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L50"
           },
           "parentId": "api-struct-04ce74847a92be01",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6707,6 +8267,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L51"
           },
           "parentId": "api-struct-04ce74847a92be01",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6725,6 +8291,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L115"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6743,6 +8315,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L54"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-04ce74847a92be01",
             "api-struct-87605e990dafc621",
@@ -6764,7 +8342,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L27"
           },
-          "parentId": null,
+          "parentId": "api-class-23866649816ed65b",
+          "member": null,
           "references": [
             "api-variable-7b1afaaa31288dbb",
             "api-variable-d1e60aaa4a68f682"
@@ -6786,6 +8365,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L29"
           },
           "parentId": "api-struct-ef929870e5a9780f",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6804,6 +8389,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L30"
           },
           "parentId": "api-struct-ef929870e5a9780f",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6822,6 +8413,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L110"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-87605e990dafc621"
           ],
@@ -6842,6 +8439,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L111"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-enum-935f59ee026cf11a"
           ],
@@ -6862,6 +8465,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L107"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-04ce74847a92be01"
           ],
@@ -6882,6 +8491,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L88"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6900,6 +8515,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L74"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6918,6 +8539,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L109"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -6936,6 +8563,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L95"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-function-f737a9acaab12a98"
           ],
@@ -6956,6 +8589,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L68"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6974,6 +8613,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L62"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -6992,6 +8637,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L101"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7010,6 +8661,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L124"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7028,6 +8685,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L59"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-ef929870e5a9780f"
           ],
@@ -7048,6 +8711,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L57"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-3a5cd01cd0bb5b24"
           ],
@@ -7068,6 +8737,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L113"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-ef929870e5a9780f"
           ],
@@ -7088,6 +8763,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L139"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [
             "api-struct-ef929870e5a9780f"
           ],
@@ -7108,6 +8789,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L127"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7126,6 +8813,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L133"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7144,6 +8837,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.hpp#L104"
           },
           "parentId": "api-class-23866649816ed65b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7162,11 +8861,27 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Chassis/Steering4/SteeringWheel.cpp#L12"
           },
           "parentId": "api-namespace-6b8ac147100b6d8f",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-859d9505a85522c3",
             "api-struct-87605e990dafc621"
           ],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-04e6dabd7e473c02",
+          "baseId": null,
+          "baseQualifiedName": "IChassisMotion",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 80,
@@ -7205,6 +8920,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L22"
           },
           "parentId": "api-file-95ca0f0a45dbde72",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7223,6 +8944,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-56362f135ba0f2a1",
             "api-class-72982dabe4d48310",
@@ -7249,6 +8971,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L25"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-namespace-63e1c9444b44a807"
           ],
@@ -7269,6 +8992,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L25"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-56362f135ba0f2a1"
           ],
@@ -7288,7 +9012,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L46"
           },
-          "parentId": null,
+          "parentId": "api-namespace-63e1c9444b44a807",
+          "member": null,
           "references": [
             "api-class-72982dabe4d48310",
             "api-function-1a74e3ee136d02fd",
@@ -7342,6 +9067,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L311"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-46464a492c769750"
           ],
@@ -7361,7 +9092,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L227"
           },
-          "parentId": null,
+          "parentId": "api-class-56362f135ba0f2a1",
+          "member": null,
           "references": [
             "api-variable-00d53b89ac2b4f16",
             "api-variable-b699d13f140b6df6",
@@ -7384,6 +9116,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L229"
           },
           "parentId": "api-struct-decab08f2bf8b0af",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7402,6 +9140,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L231"
           },
           "parentId": "api-struct-decab08f2bf8b0af",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7420,6 +9164,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L232"
           },
           "parentId": "api-struct-decab08f2bf8b0af",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7438,6 +9188,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L408"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-625f9a3fd9e9e933",
             "api-typedef-19d84ce6d5afecb4",
@@ -7459,7 +9215,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L61"
           },
-          "parentId": null,
+          "parentId": "api-class-56362f135ba0f2a1",
+          "member": null,
           "references": [
             "api-function-28f70ba4d9b38d94",
             "api-function-64da1e37ee28cea8",
@@ -7488,7 +9245,8 @@
             "column": 9,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L72"
           },
-          "parentId": null,
+          "parentId": "api-class-72982dabe4d48310",
+          "member": null,
           "references": [
             "api-variable-0ca3efb1f6af4b68",
             "api-variable-209fa32034813f66",
@@ -7519,6 +9277,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L97"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7537,6 +9301,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L122"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7555,6 +9325,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L132"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7573,6 +9349,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L110"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7591,6 +9373,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L133"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7609,6 +9397,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L79"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7627,6 +9421,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L84"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7645,6 +9445,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L89"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7663,6 +9469,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L79"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7681,6 +9493,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L80"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7699,6 +9517,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L81"
           },
           "parentId": "api-struct-46464a492c769750",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7717,6 +9541,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L136"
           },
           "parentId": "api-class-72982dabe4d48310",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-struct-46464a492c769750"
           ],
@@ -7737,6 +9567,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L218"
           },
           "parentId": "api-class-72982dabe4d48310",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7755,6 +9591,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L219"
           },
           "parentId": "api-class-72982dabe4d48310",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7773,6 +9615,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L145"
           },
           "parentId": "api-class-72982dabe4d48310",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7791,6 +9639,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L180"
           },
           "parentId": "api-class-72982dabe4d48310",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7809,6 +9663,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L188"
           },
           "parentId": "api-class-72982dabe4d48310",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7827,6 +9687,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L155"
           },
           "parentId": "api-class-72982dabe4d48310",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7845,6 +9711,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L148"
           },
           "parentId": "api-class-72982dabe4d48310",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7863,6 +9735,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L143"
           },
           "parentId": "api-class-72982dabe4d48310",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7880,7 +9758,8 @@
             "column": 5,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L235"
           },
-          "parentId": null,
+          "parentId": "api-class-56362f135ba0f2a1",
+          "member": null,
           "references": [
             "api-variable-3f89069ce82aaa20",
             "api-variable-526304ee01a619c6",
@@ -7903,6 +9782,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L239"
           },
           "parentId": "api-struct-9fd2f8626a30c93b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7921,6 +9806,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L241"
           },
           "parentId": "api-struct-9fd2f8626a30c93b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7939,6 +9830,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L238"
           },
           "parentId": "api-struct-9fd2f8626a30c93b",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7957,6 +9854,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L252"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -7975,6 +9878,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L247"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -7993,6 +9902,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L52"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-f368929596051d87"
           ],
@@ -8013,6 +9928,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L223"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8031,6 +9952,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L444"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8049,6 +9976,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L440"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8067,6 +10000,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L435"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8085,6 +10024,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L441"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8103,6 +10048,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L245"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8121,6 +10072,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L396"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8139,6 +10096,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L397"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8157,6 +10120,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L224"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8175,6 +10144,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L249"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8193,6 +10168,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L447"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8211,6 +10192,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L221"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8229,6 +10216,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L427"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8247,6 +10240,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L436"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8265,6 +10264,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L394"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8283,6 +10288,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L395"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8301,6 +10312,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L244"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8319,6 +10336,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L318"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8337,6 +10360,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L266"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8355,6 +10384,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L255"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8373,6 +10408,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L339"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-625f9a3fd9e9e933"
           ],
@@ -8393,6 +10434,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L287"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8411,6 +10458,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L417"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8429,6 +10482,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L422"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8447,6 +10506,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L442"
           },
           "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8460,6 +10525,7 @@
           "description": "",
           "location": null,
           "parentId": null,
+          "member": null,
           "references": [
             "api-namespace-0c89d85d2ce241ea"
           ],
@@ -8475,8 +10541,27 @@
           "description": "",
           "location": null,
           "parentId": null,
+          "member": null,
           "references": [],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-56362f135ba0f2a1",
+          "baseId": null,
+          "baseQualifiedName": "IChassisLoc",
+          "access": "public",
+          "virtual": false
+        },
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-72982dabe4d48310",
+          "baseId": null,
+          "baseQualifiedName": "math::ekf::EKF< float, 4 >",
+          "access": "private",
+          "virtual": false
         }
       ],
       "symbolCount": 67,
@@ -8516,6 +10601,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.cpp#L10"
           },
           "parentId": "api-file-a302d62a79d57258",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-function-42bf64fc81d502f8"
           ],
@@ -8536,6 +10627,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.cpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-file-8952cab1d9c845b5",
             "api-function-42bf64fc81d502f8",
@@ -8559,6 +10651,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-2862201e2fe2c8aa",
             "api-file-a302d62a79d57258",
@@ -8582,6 +10675,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.cpp#L12"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-namespace-b7aa9a72eab11bac"
           ],
@@ -8602,6 +10696,7 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.cpp#L12"
           },
           "parentId": null,
+          "member": null,
           "references": [
             "api-class-2862201e2fe2c8aa"
           ],
@@ -8621,7 +10716,8 @@
             "column": 1,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp#L20"
           },
-          "parentId": null,
+          "parentId": "api-namespace-b7aa9a72eab11bac",
+          "member": null,
           "references": [
             "api-define-b2ab15fbc1faef22",
             "api-function-26ff4357c3490bc2",
@@ -8651,6 +10747,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp#L44"
           },
           "parentId": "api-class-2862201e2fe2c8aa",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8669,6 +10771,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp#L38"
           },
           "parentId": "api-class-2862201e2fe2c8aa",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8687,6 +10795,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp#L43"
           },
           "parentId": "api-class-2862201e2fe2c8aa",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8705,6 +10819,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp#L33"
           },
           "parentId": "api-class-2862201e2fe2c8aa",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8723,6 +10843,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp#L39"
           },
           "parentId": "api-class-2862201e2fe2c8aa",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
         },
@@ -8741,6 +10867,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp#L29"
           },
           "parentId": "api-class-2862201e2fe2c8aa",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [
             "api-define-b2ab15fbc1faef22"
           ],
@@ -8761,6 +10893,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp#L31"
           },
           "parentId": "api-class-2862201e2fe2c8aa",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8779,6 +10917,12 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp#L32"
           },
           "parentId": "api-class-2862201e2fe2c8aa",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
           "references": [],
           "enumValues": []
         },
@@ -8797,8 +10941,24 @@
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/JustEncoder/JustEncoder.hpp#L45"
           },
           "parentId": "api-class-2862201e2fe2c8aa",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
           "references": [],
           "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-2862201e2fe2c8aa",
+          "baseId": null,
+          "baseQualifiedName": "IChassisLoc",
+          "access": "public",
+          "virtual": false
         }
       ],
       "symbolCount": 15,

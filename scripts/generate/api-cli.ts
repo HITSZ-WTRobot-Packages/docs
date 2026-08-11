@@ -13,8 +13,12 @@ try {
     (total, reference) => total + reference.symbolCount,
     0,
   );
+  const relationCount = catalog.references.reduce(
+    (total, reference) => total + reference.inheritanceRelations.length,
+    0,
+  );
   console.log(
-    `API: ${catalog.references.length} references, ${symbolCount} symbols ` +
+    `API: ${catalog.references.length} references, ${symbolCount} symbols, ${relationCount} inheritance relations ` +
       `(${counts.complete} complete, ${counts.sparse} sparse, ${counts.empty} empty, ${counts.failed} failed), produced with Doxygen ${catalog.doxygenVersion}.`,
   );
 } catch (error) {

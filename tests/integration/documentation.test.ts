@@ -92,7 +92,7 @@ async function createDocumentationFixture(readme = moduleReadme): Promise<string
     ],
   });
   const apiContents =
-    '{\n  "formatVersion": 2,\n  "doxygenVersion": "1.16.1",\n  "references": []\n}\n';
+    '{\n  "formatVersion": 3,\n  "doxygenVersion": "1.16.1",\n  "references": []\n}\n';
   await writeFile(path.join(moduleRoot, "package-catalog.json"), packageContents, "utf8");
   await writeFile(path.join(moduleRoot, "api-catalog.json"), apiContents, "utf8");
   const artifacts = [

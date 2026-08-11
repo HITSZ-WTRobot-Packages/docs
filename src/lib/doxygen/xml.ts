@@ -9,8 +9,11 @@ import { DoxygenDiagnostic } from "./diagnostic";
 import type { ApiTarget } from "./ownership";
 import {
   ApiReferenceSchema,
+  type ApiAccess,
   type ApiEnumValue,
+  type ApiInheritanceRelation,
   type ApiLocation,
+  type ApiMemberMetadata,
   type ApiReference,
   type ApiSymbol,
   type ApiSymbolKind,
@@ -32,13 +35,22 @@ type SymbolCandidate = {
   rawId: string;
   rawParentId: string | null;
   rawReferences: string[];
+  rawInheritance: RawInheritanceRelation[];
   kind: ApiSymbolKind;
   name: string;
   qualifiedName: string;
   signature: string;
   description: string;
   location: ApiLocation | null;
+  member: ApiMemberMetadata | null;
   enumValues: ApiEnumValue[];
+};
+
+type RawInheritanceRelation = {
+  baseRawId: string | null;
+  baseQualifiedName: string;
+  access: ApiAccess;
+  virtual: boolean;
 };
 
 const parser = new XMLParser({
@@ -213,6 +225,55 @@ function symbolKind(rawKind: string): ApiSymbolKind | null {
   return null;
 }
 
+function apiAccess(rawAccess: string): ApiAccess | null {
+  if (rawAccess === "public" || rawAccess === "protected" || rawAccess === "private") {
+    return rawAccess;
+  }
+  return null;
+}
+
+function inheritanceRelations(compound: XmlRecord): RawInheritanceRelation[] {
+  return records(compound.basecompoundref)
+    .flatMap((base) => {
+      const baseQualifiedName = normalizedText(base);
+      const access = apiAccess(attribute(base, "prot"));
+      const virtualAttribute = attribute(base, "virt");
+      if (!baseQualifiedName) return [];
+      if (!access || (virtualAttribute !== "virtual" && virtualAttribute !== "non-virtual")) {
+        throw new DoxygenDiagnostic(
+          "DOXYGEN_XML_INVALID",
+          `Doxygen inheritance metadata is invalid for base type: ${baseQualifiedName}`,
+        );
+      }
+      return [
+        {
+          baseRawId: attribute(base, "refid") || null,
+          baseQualifiedName,
+          access,
+          virtual: virtualAttribute === "virtual",
+        },
+      ];
+    })
+    .sort(
+      (left, right) =>
+        compareStrings(left.baseQualifiedName, right.baseQualifiedName) ||
+        compareStrings(left.access, right.access) ||
+        Number(left.virtual) - Number(right.virtual),
+    );
+}
+
+function memberMetadata(member: XmlRecord, parent: SymbolCandidate | null): ApiMemberMetadata {
+  const parentOwnsAccess =
+    parent?.kind === "class" || parent?.kind === "struct" || parent?.kind === "union";
+  const rawVirtual = attribute(member, "virt");
+  return {
+    access: parentOwnsAccess ? apiAccess(attribute(member, "prot")) : null,
+    static: attribute(member, "static") === "yes",
+    virtual: rawVirtual === "pure-virtual" ? "pure" : rawVirtual === "virtual" ? "virtual" : "none",
+    const: attribute(member, "const") === "yes",
+  };
+}
+
 function enumValues(record: XmlRecord): ApiEnumValue[] {
   return records(record.enumvalue)
     .map((value) => ({
@@ -243,12 +304,14 @@ function compoundCandidate(
     rawId,
     rawParentId: null,
     rawReferences: [...collectRawReferences(compound)].sort(compareStrings),
+    rawInheritance: inheritanceRelations(compound),
     kind,
     name,
     qualifiedName: name,
     signature: "",
     description: description(compound),
     location: compoundLocation,
+    member: null,
     enumValues: [],
   };
 }
@@ -274,12 +337,14 @@ function memberCandidate(
     rawId,
     rawParentId: parent?.rawId ?? null,
     rawReferences: [...collectRawReferences(member)].sort(compareStrings),
+    rawInheritance: [],
     kind,
     name,
     qualifiedName,
     signature: [definition, args].filter(Boolean).join(" ").replace(/\s+/gu, " ").trim(),
     description: description(member),
     location: location(member.location, target, moduleRoot),
+    member: memberMetadata(member, parent),
     enumValues: kind === "enum" ? enumValues(member) : [],
   };
 }
@@ -338,10 +403,37 @@ function preferCandidate(left: SymbolCandidate, right: SymbolCandidate): SymbolC
   return left;
 }
 
+function mergeCandidates(left: SymbolCandidate, right: SymbolCandidate): SymbolCandidate {
+  const preferred = preferCandidate(left, right);
+  const inheritanceByKey = new Map(
+    [...left.rawInheritance, ...right.rawInheritance].map((relation) => [
+      [
+        relation.baseRawId ?? "",
+        relation.baseQualifiedName,
+        relation.access,
+        String(relation.virtual),
+      ].join("\u0000"),
+      relation,
+    ]),
+  );
+  return {
+    ...preferred,
+    rawReferences: [...new Set([...left.rawReferences, ...right.rawReferences])].sort(
+      compareStrings,
+    ),
+    rawInheritance: [...inheritanceByKey.values()].sort(
+      (first, second) =>
+        compareStrings(first.baseQualifiedName, second.baseQualifiedName) ||
+        compareStrings(first.access, second.access) ||
+        Number(first.virtual) - Number(second.virtual),
+    ),
+  };
+}
+
 function normalizeCandidates(
   target: ApiTarget,
   candidates: readonly SymbolCandidate[],
-): ApiSymbol[] {
+): { symbols: ApiSymbol[]; inheritanceRelations: ApiInheritanceRelation[] } {
   const byKey = new Map<string, SymbolCandidate>();
   const rawToKey = new Map<string, string>();
   for (const candidate of [...candidates].sort((left, right) =>
@@ -349,7 +441,7 @@ function normalizeCandidates(
   )) {
     const key = stableCandidateKey(candidate);
     const existing = byKey.get(key);
-    byKey.set(key, existing ? preferCandidate(existing, candidate) : candidate);
+    byKey.set(key, existing ? mergeCandidates(existing, candidate) : candidate);
     rawToKey.set(candidate.rawId, key);
   }
   const keyToId = new Map(
@@ -362,13 +454,41 @@ function normalizeCandidates(
     }),
   );
 
-  return [...byKey.entries()]
+  function inferredOwnerId(candidate: SymbolCandidate): string | null {
+    if (
+      candidate.rawParentId !== null ||
+      (candidate.kind !== "class" && candidate.kind !== "struct" && candidate.kind !== "union")
+    ) {
+      return null;
+    }
+    const owners = [...byKey.entries()]
+      .filter(
+        ([, possibleOwner]) =>
+          possibleOwner !== candidate &&
+          (possibleOwner.kind === "namespace" ||
+            possibleOwner.kind === "class" ||
+            possibleOwner.kind === "struct" ||
+            possibleOwner.kind === "union") &&
+          candidate.qualifiedName.startsWith(`${possibleOwner.qualifiedName}::`),
+      )
+      .sort(
+        ([, left], [, right]) =>
+          right.qualifiedName.length - left.qualifiedName.length ||
+          compareStrings(left.qualifiedName, right.qualifiedName),
+      );
+    const ownerKey = owners[0]?.[0];
+    return ownerKey ? (keyToId.get(ownerKey) ?? null) : null;
+  }
+
+  const symbols = [...byKey.entries()]
     .flatMap(([key, candidate]) => {
       const id = keyToId.get(key);
       if (!id) {
         return [];
       }
-      const parentId = candidate.rawParentId ? (rawToId.get(candidate.rawParentId) ?? null) : null;
+      const parentId = candidate.rawParentId
+        ? (rawToId.get(candidate.rawParentId) ?? null)
+        : inferredOwnerId(candidate);
       const references = [
         ...new Set(
           candidate.rawReferences.flatMap((rawId) => {
@@ -388,6 +508,7 @@ function normalizeCandidates(
           description: candidate.description,
           location: candidate.location,
           parentId,
+          member: candidate.member,
           references,
           enumValues: candidate.enumValues,
         },
@@ -400,6 +521,37 @@ function normalizeCandidates(
         compareStrings(left.signature, right.signature) ||
         compareStrings(left.id, right.id),
     );
+  const relationByKey = new Map<string, ApiInheritanceRelation>();
+  for (const [key, candidate] of byKey) {
+    const derivedId = keyToId.get(key);
+    if (!derivedId || (candidate.kind !== "class" && candidate.kind !== "struct")) continue;
+    for (const relation of candidate.rawInheritance) {
+      const normalized = {
+        kind: "inherits" as const,
+        derivedId,
+        baseId: relation.baseRawId ? (rawToId.get(relation.baseRawId) ?? null) : null,
+        baseQualifiedName: relation.baseQualifiedName,
+        access: relation.access,
+        virtual: relation.virtual,
+      };
+      const relationKey = [
+        normalized.derivedId,
+        normalized.baseId ?? "",
+        normalized.baseQualifiedName,
+        normalized.access,
+        String(normalized.virtual),
+      ].join("\u0000");
+      relationByKey.set(relationKey, normalized);
+    }
+  }
+  const normalizedRelations = [...relationByKey.values()].sort(
+    (left, right) =>
+      compareStrings(left.derivedId, right.derivedId) ||
+      compareStrings(left.baseQualifiedName, right.baseQualifiedName) ||
+      compareStrings(left.access, right.access) ||
+      Number(left.virtual) - Number(right.virtual),
+  );
+  return { symbols, inheritanceRelations: normalizedRelations };
 }
 
 export function parseDoxygenIndex(indexXml: string): DoxygenCompoundIndex[] {
@@ -453,7 +605,7 @@ export function normalizeDoxygenXml(
     const document = validateAndParse(xml, `${compound.refId}.xml`);
     candidates.push(...candidatesFromCompound(document, target, moduleRoot));
   }
-  const symbols = normalizeCandidates(target, candidates);
+  const { symbols, inheritanceRelations } = normalizeCandidates(target, candidates);
   const meaningfulSymbols = symbols.filter((symbol) => symbol.kind !== "file");
   const undocumentedSymbols = meaningfulSymbols.filter((symbol) => !symbol.description);
   const warnings = [];
@@ -482,6 +634,7 @@ export function normalizeDoxygenXml(
     status,
     warnings,
     symbols,
+    inheritanceRelations,
     symbolCount: symbols.length,
     documentedSymbolCount: symbols.filter((symbol) => symbol.description).length,
   });

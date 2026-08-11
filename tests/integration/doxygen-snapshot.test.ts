@@ -11,8 +11,20 @@ describe("real snapshot Doxygen API", () => {
       loadPackageCatalog(),
     ]);
 
+    expect(apiCatalog.formatVersion).toBe(3);
     expect(apiCatalog.references).toHaveLength(43);
     expect(apiCatalog.references.some((reference) => reference.status === "failed")).toBe(false);
+    const inheritanceRelations = apiCatalog.references.flatMap(
+      (reference) => reference.inheritanceRelations,
+    );
+    expect(inheritanceRelations.some((relation) => relation.baseId !== null)).toBe(true);
+    expect(inheritanceRelations.some((relation) => relation.baseId === null)).toBe(true);
+    const members = apiCatalog.references.flatMap((reference) =>
+      reference.symbols.flatMap((symbol) => (symbol.member ? [symbol.member] : [])),
+    );
+    expect(members.some((member) => member.virtual !== "none")).toBe(true);
+    expect(members.some((member) => member.static)).toBe(true);
+    expect(members.some((member) => member.const)).toBe(true);
     const packageReferences = new Map(
       apiCatalog.references
         .filter((reference) => reference.targetKind === "package")
