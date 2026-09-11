@@ -292,10 +292,10 @@
       "displayName": "TrajectoryControl",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl.git",
       "branch": "main",
-      "sha": "53b7dfe0e0105fff85d74ef6382d77dfc1ed8609",
-      "shortSha": "53b7dfe0e010",
-      "producerFingerprint": "609bf5f34e4bbf77bfd8088f0a22378748dd5193b86ee0f7ed3b9a83f34dc846",
-      "totalBytes": 164334,
+      "sha": "0f27569746189b5042d32ace0ccd1d47a63c9800",
+      "shortSha": "0f2756974618",
+      "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
+      "totalBytes": 164424,
       "files": [
         {
           "path": "LICENSE",
@@ -313,14 +313,14 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 128227,
-          "sha256": "2c9e6cb251f2773dbde4afddab0bf7d31523248f0aa087b29dd328f013a4fb23",
+          "bytes": 128317,
+          "sha256": "9070f4ae8a236a84848601e41b8907b6055e73e4fb8a21cfd2041ef2880a91dd",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
           "bytes": 863,
-          "sha256": "9ea1244d960d2fbd9a9325d327e98b43ffb5f670546b6de0c8e568d97b7192d0",
+          "sha256": "c6f635d1bddb58f646e7a5e8962395a5d2599717c09ab97f85e58aabc43a5314",
           "kind": "package-catalog"
         }
       ],

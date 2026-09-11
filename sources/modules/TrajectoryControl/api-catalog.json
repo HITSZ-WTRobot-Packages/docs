@@ -1143,18 +1143,18 @@
           "references": [
             "api-define-ca96efdace93b67f",
             "api-enum-a0afac75980a31ed",
-            "api-function-0daefbf2307a2368",
             "api-function-0dc60baf887c02a7",
             "api-function-1bbbc7cc615f87cd",
             "api-function-1c76da672463e240",
+            "api-function-2bd24c9b1981e673",
             "api-function-2c98f1c63d7a1cbf",
             "api-function-2e86bb71069a72e5",
             "api-function-2f597f1b56101d6f",
-            "api-function-39fd42d5b7c24d9b",
-            "api-function-3a8072cd5cf7a28b",
             "api-function-3bb7c501be788826",
             "api-function-49ca08f7e392162c",
             "api-function-5792870db0e448fb",
+            "api-function-73f6a592d509c9d0",
+            "api-function-8978d39cd99b7d78",
             "api-function-9fe37bb065c7051f",
             "api-function-a47e2f00efbecfe5",
             "api-function-a80c8b2489e305a8",
@@ -1165,23 +1165,23 @@
             "api-function-c50a965207e0418a",
             "api-function-d2f50ea19f5c9d10",
             "api-function-e4ce39dd6c18cc86",
+            "api-function-e83955964cb0b4f3",
             "api-function-e9cb511f372d5f58",
-            "api-function-e9dabe3eb77565ba",
             "api-function-f4550cbff4352f85",
             "api-function-fb503bda8015bdd0",
             "api-typedef-16e4ebb9e62a72aa",
-            "api-variable-004ee6a71926ee1b",
-            "api-variable-00703e585f4c5adf",
-            "api-variable-011d72a7a43b5875",
-            "api-variable-066fe1764f60f269",
-            "api-variable-234a7324b0e65fbc",
-            "api-variable-87059682cbea20fd",
-            "api-variable-9ba89907cc3eb8a8",
-            "api-variable-b75b4458170b4998",
-            "api-variable-ba493efcd86cd3c4",
-            "api-variable-d7902ba3c878f1ec",
-            "api-variable-e5721258d334d4b0",
-            "api-variable-f25d23f8cf9006f3"
+            "api-variable-021730ea9713a08c",
+            "api-variable-06d7d1d2df6d9b9f",
+            "api-variable-2c17bb5e205e273c",
+            "api-variable-32259b24260f78c9",
+            "api-variable-3226fd3d11c49413",
+            "api-variable-a198fde43aa8e767",
+            "api-variable-a879537c9c7b0de6",
+            "api-variable-b3bd1a4fbe22219b",
+            "api-variable-cc78c820a6c47060",
+            "api-variable-d7b92a4bb0112122",
+            "api-variable-dfcb25c8995f28e0",
+            "api-variable-f6cf912b6357cec1"
           ],
           "enumValues": []
         },
@@ -1208,7 +1208,7 @@
           },
           "references": [
             "api-typedef-16e4ebb9e62a72aa",
-            "api-variable-004ee6a71926ee1b"
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
@@ -1235,7 +1235,7 @@
           },
           "references": [
             "api-typedef-16e4ebb9e62a72aa",
-            "api-variable-004ee6a71926ee1b"
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
@@ -1262,7 +1262,7 @@
           },
           "references": [
             "api-typedef-16e4ebb9e62a72aa",
-            "api-variable-004ee6a71926ee1b"
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
@@ -1312,14 +1312,14 @@
             "const": false
           },
           "references": [
-            "api-function-e9dabe3eb77565ba",
-            "api-variable-004ee6a71926ee1b"
+            "api-function-73f6a592d509c9d0",
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-004ee6a71926ee1b",
-          "anchor": "api-variable-004ee6a71926ee1b",
+          "id": "api-variable-2c17bb5e205e273c",
+          "anchor": "api-variable-2c17bb5e205e273c",
           "kind": "variable",
           "name": "ctrl_",
           "qualifiedName": "trajectory::MotorTrajectory::ctrl_",
@@ -1327,9 +1327,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 303,
+            "line": 304,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L303"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L304"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1339,10 +1339,10 @@
             "const": false
           },
           "references": [
-            "api-function-0daefbf2307a2368",
             "api-function-0dc60baf887c02a7",
             "api-function-1bbbc7cc615f87cd",
             "api-function-1c76da672463e240",
+            "api-function-2bd24c9b1981e673",
             "api-function-2e86bb71069a72e5",
             "api-function-49ca08f7e392162c",
             "api-function-9fe37bb065c7051f",
@@ -1355,8 +1355,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f25d23f8cf9006f3",
-          "anchor": "api-variable-f25d23f8cf9006f3",
+          "id": "api-variable-b3bd1a4fbe22219b",
+          "anchor": "api-variable-b3bd1a4fbe22219b",
           "kind": "variable",
           "name": "default_profile_cfg_",
           "qualifiedName": "trajectory::MotorTrajectory::default_profile_cfg_",
@@ -1364,9 +1364,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 313,
+            "line": 314,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L313"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L314"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1381,8 +1381,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-0daefbf2307a2368",
-          "anchor": "api-function-0daefbf2307a2368",
+          "id": "api-function-2bd24c9b1981e673",
+          "anchor": "api-function-2bd24c9b1981e673",
           "kind": "function",
           "name": "disable",
           "qualifiedName": "trajectory::MotorTrajectory::disable",
@@ -1390,9 +1390,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 281,
+            "line": 282,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L281"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L282"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1403,7 +1403,7 @@
           },
           "references": [
             "api-function-2f597f1b56101d6f",
-            "api-variable-004ee6a71926ee1b"
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
@@ -1429,14 +1429,15 @@
             "const": false
           },
           "references": [
-            "api-function-e9dabe3eb77565ba",
-            "api-variable-004ee6a71926ee1b"
+            "api-function-2f597f1b56101d6f",
+            "api-function-73f6a592d509c9d0",
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-e9dabe3eb77565ba",
-          "anchor": "api-function-e9dabe3eb77565ba",
+          "id": "api-function-73f6a592d509c9d0",
+          "anchor": "api-function-73f6a592d509c9d0",
           "kind": "function",
           "name": "enabled",
           "qualifiedName": "trajectory::MotorTrajectory::enabled",
@@ -1444,9 +1445,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 292,
+            "line": 293,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L292"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L293"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1466,8 +1467,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-066fe1764f60f269",
-          "anchor": "api-variable-066fe1764f60f269",
+          "id": "api-variable-a879537c9c7b0de6",
+          "anchor": "api-variable-a879537c9c7b0de6",
           "kind": "variable",
           "name": "enabled_",
           "qualifiedName": "trajectory::MotorTrajectory::enabled_",
@@ -1475,9 +1476,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 306,
+            "line": 307,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L306"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L307"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1512,14 +1513,14 @@
           },
           "references": [
             "api-define-ca96efdace93b67f",
-            "api-function-e9dabe3eb77565ba",
-            "api-variable-004ee6a71926ee1b"
+            "api-function-73f6a592d509c9d0",
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-ba493efcd86cd3c4",
-          "anchor": "api-variable-ba493efcd86cd3c4",
+          "id": "api-variable-d7b92a4bb0112122",
+          "anchor": "api-variable-d7b92a4bb0112122",
           "kind": "variable",
           "name": "finish_threshold_",
           "qualifiedName": "trajectory::MotorTrajectory::finish_threshold_",
@@ -1527,9 +1528,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 309,
+            "line": 310,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L309"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L310"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1565,9 +1566,9 @@
           "references": [
             "api-function-2c98f1c63d7a1cbf",
             "api-function-2f597f1b56101d6f",
-            "api-function-39fd42d5b7c24d9b",
             "api-function-d2f50ea19f5c9d10",
-            "api-variable-004ee6a71926ee1b"
+            "api-function-e83955964cb0b4f3",
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
@@ -1594,7 +1595,7 @@
           },
           "references": [
             "api-function-2c98f1c63d7a1cbf",
-            "api-variable-004ee6a71926ee1b"
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
@@ -1620,7 +1621,7 @@
             "const": true
           },
           "references": [
-            "api-variable-004ee6a71926ee1b"
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
@@ -1646,7 +1647,7 @@
             "const": true
           },
           "references": [
-            "api-variable-004ee6a71926ee1b"
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
@@ -1675,8 +1676,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-39fd42d5b7c24d9b",
-          "anchor": "api-function-39fd42d5b7c24d9b",
+          "id": "api-function-e83955964cb0b4f3",
+          "anchor": "api-function-e83955964cb0b4f3",
           "kind": "function",
           "name": "isFinished",
           "qualifiedName": "trajectory::MotorTrajectory::isFinished",
@@ -1684,9 +1685,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 294,
+            "line": 295,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L294"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L295"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1725,8 +1726,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-e5721258d334d4b0",
-          "anchor": "api-variable-e5721258d334d4b0",
+          "id": "api-variable-021730ea9713a08c",
+          "anchor": "api-variable-021730ea9713a08c",
           "kind": "variable",
           "name": "last_failure_info_",
           "qualifiedName": "trajectory::MotorTrajectory::last_failure_info_",
@@ -1734,9 +1735,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 316,
+            "line": 317,
             "column": 50,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L316"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L317"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1749,8 +1750,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-9ba89907cc3eb8a8",
-          "anchor": "api-variable-9ba89907cc3eb8a8",
+          "id": "api-variable-3226fd3d11c49413",
+          "anchor": "api-variable-3226fd3d11c49413",
           "kind": "variable",
           "name": "now_",
           "qualifiedName": "trajectory::MotorTrajectory::now_",
@@ -1758,9 +1759,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 322,
+            "line": 323,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L322"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L323"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1773,8 +1774,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-87059682cbea20fd",
-          "anchor": "api-variable-87059682cbea20fd",
+          "id": "api-variable-06d7d1d2df6d9b9f",
+          "anchor": "api-variable-06d7d1d2df6d9b9f",
           "kind": "variable",
           "name": "p_ref_curr_",
           "qualifiedName": "trajectory::MotorTrajectory::p_ref_curr_",
@@ -1782,9 +1783,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 318,
+            "line": 319,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L318"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L319"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1797,8 +1798,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-00703e585f4c5adf",
-          "anchor": "api-variable-00703e585f4c5adf",
+          "id": "api-variable-a198fde43aa8e767",
+          "anchor": "api-variable-a198fde43aa8e767",
           "kind": "variable",
           "name": "pd_",
           "qualifiedName": "trajectory::MotorTrajectory::pd_",
@@ -1806,9 +1807,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 311,
+            "line": 312,
             "column": 8,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L311"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L312"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1843,14 +1844,14 @@
           },
           "references": [
             "api-define-ca96efdace93b67f",
-            "api-function-e9dabe3eb77565ba",
-            "api-variable-004ee6a71926ee1b"
+            "api-function-73f6a592d509c9d0",
+            "api-variable-2c17bb5e205e273c"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-b75b4458170b4998",
-          "anchor": "api-variable-b75b4458170b4998",
+          "id": "api-variable-dfcb25c8995f28e0",
+          "anchor": "api-variable-dfcb25c8995f28e0",
           "kind": "variable",
           "name": "profile_",
           "qualifiedName": "trajectory::MotorTrajectory::profile_",
@@ -1858,9 +1859,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 314,
+            "line": 315,
             "column": 37,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L314"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L315"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1873,8 +1874,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-3a8072cd5cf7a28b",
-          "anchor": "api-function-3a8072cd5cf7a28b",
+          "id": "api-function-8978d39cd99b7d78",
+          "anchor": "api-function-8978d39cd99b7d78",
           "kind": "function",
           "name": "setDefaultProfileConfig",
           "qualifiedName": "trajectory::MotorTrajectory::setDefaultProfileConfig",
@@ -1882,9 +1883,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 300,
+            "line": 301,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L300"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L301"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -1976,9 +1977,9 @@
             "api-enum-a0afac75980a31ed",
             "api-function-2c98f1c63d7a1cbf",
             "api-function-5792870db0e448fb",
+            "api-function-73f6a592d509c9d0",
             "api-function-b42da7ab1c749e75",
             "api-function-c0ffbb9bf11a61a8",
-            "api-function-e9dabe3eb77565ba",
             "api-function-fb503bda8015bdd0",
             "api-typedef-16e4ebb9e62a72aa"
           ],
@@ -2088,12 +2089,12 @@
           "references": [
             "api-enum-a0afac75980a31ed",
             "api-function-3bb7c501be788826",
+            "api-function-73f6a592d509c9d0",
             "api-function-a80c8b2489e305a8",
             "api-function-b42da7ab1c749e75",
             "api-function-c50a965207e0418a",
             "api-function-d2f50ea19f5c9d10",
             "api-function-e9cb511f372d5f58",
-            "api-function-e9dabe3eb77565ba",
             "api-typedef-16e4ebb9e62a72aa"
           ],
           "enumValues": []
@@ -2147,14 +2148,15 @@
             "const": false
           },
           "references": [
-            "api-function-0daefbf2307a2368",
+            "api-function-2bd24c9b1981e673",
+            "api-function-9fe37bb065c7051f",
             "api-function-b42da7ab1c749e75"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-011d72a7a43b5875",
-          "anchor": "api-variable-011d72a7a43b5875",
+          "id": "api-variable-f6cf912b6357cec1",
+          "anchor": "api-variable-f6cf912b6357cec1",
           "kind": "variable",
           "name": "stopped_",
           "qualifiedName": "trajectory::MotorTrajectory::stopped_",
@@ -2162,9 +2164,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 307,
+            "line": 308,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L307"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L308"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -2177,8 +2179,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-d7902ba3c878f1ec",
-          "anchor": "api-variable-d7902ba3c878f1ec",
+          "id": "api-variable-32259b24260f78c9",
+          "anchor": "api-variable-32259b24260f78c9",
           "kind": "variable",
           "name": "v_ref_curr_",
           "qualifiedName": "trajectory::MotorTrajectory::v_ref_curr_",
@@ -2186,9 +2188,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 319,
+            "line": 320,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L319"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L320"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
@@ -2201,8 +2203,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-234a7324b0e65fbc",
-          "anchor": "api-variable-234a7324b0e65fbc",
+          "id": "api-variable-cc78c820a6c47060",
+          "anchor": "api-variable-cc78c820a6c47060",
           "kind": "variable",
           "name": "v_ref_curr_rpm_",
           "qualifiedName": "trajectory::MotorTrajectory::v_ref_curr_rpm_",
@@ -2210,9 +2212,9 @@
           "description": "",
           "location": {
             "path": "MotorTrajectory/motor_trajectory.hpp",
-            "line": 320,
+            "line": 321,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L320"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl/blob/main/MotorTrajectory/motor_trajectory.hpp#L321"
           },
           "parentId": "api-class-bea01b2c6aa0c326",
           "member": {
