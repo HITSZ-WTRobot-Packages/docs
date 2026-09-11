@@ -12,222 +12,29 @@
       "inputPaths": [
         "bsp/can_driver/can_driver.cpp",
         "bsp/can_driver/can_driver.h",
-        "bsp/can_driver/can_driver.hpp",
-        "bsp/can_driver/can_hal_def.h"
+        "bsp/can_driver/can_driver.hpp"
       ],
       "status": "sparse",
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "11 of 67 public API symbols have no description."
+          "message": "15 of 28 public API symbols have no description."
         }
       ],
       "symbols": [
         {
-          "id": "api-define-75b2a1e59c1323ce",
-          "anchor": "api-define-75b2a1e59c1323ce",
-          "kind": "define",
-          "name": "CAN_FILTERMODE_IDLIST",
-          "qualifiedName": "CAN_FILTERMODE_IDLIST",
-          "signature": "",
-          "description": "Identifier list mode.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 74,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L74"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-f6dc3f010ff324d5",
-          "anchor": "api-define-f6dc3f010ff324d5",
-          "kind": "define",
-          "name": "CAN_FILTERMODE_IDMASK",
-          "qualifiedName": "CAN_FILTERMODE_IDMASK",
-          "signature": "",
-          "description": "Identifier mask mode.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 73,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L73"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-9495f2a10e446af7",
-          "anchor": "api-define-9495f2a10e446af7",
-          "kind": "define",
-          "name": "CAN_FILTERSCALE_16BIT",
-          "qualifiedName": "CAN_FILTERSCALE_16BIT",
-          "signature": "",
-          "description": "Two 16-bit filters.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 76,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L76"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-0aeadc288f385afe",
-          "anchor": "api-define-0aeadc288f385afe",
-          "kind": "define",
-          "name": "CAN_FILTERSCALE_32BIT",
-          "qualifiedName": "CAN_FILTERSCALE_32BIT",
-          "signature": "",
-          "description": "One 32-bit filter.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 77,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L77"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-6867107b009ae391",
-          "anchor": "api-define-6867107b009ae391",
-          "kind": "define",
-          "name": "CAN_FILTER_DISABLE",
-          "qualifiedName": "CAN_FILTER_DISABLE",
-          "signature": "",
-          "description": "Disable filter.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 79,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L79"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-8f4cedec53142562",
-          "anchor": "api-define-8f4cedec53142562",
-          "kind": "define",
-          "name": "CAN_FILTER_ENABLE",
-          "qualifiedName": "CAN_FILTER_ENABLE",
-          "signature": "",
-          "description": "Enable filter.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 80,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L80"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-845dc3fa03d8187c",
-          "anchor": "api-define-845dc3fa03d8187c",
-          "kind": "define",
-          "name": "CAN_FILTER_FIFO0",
-          "qualifiedName": "CAN_FILTER_FIFO0",
-          "signature": "",
-          "description": "Assign matching frames to Rx FIFO 0.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 82,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L82"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-ddab6a87ae193174",
-          "anchor": "api-define-ddab6a87ae193174",
-          "kind": "define",
-          "name": "CAN_FILTER_FIFO1",
-          "qualifiedName": "CAN_FILTER_FIFO1",
-          "signature": "",
-          "description": "Assign matching frames to Rx FIFO 1.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 83,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L83"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-ffaec2ad76f7222e",
-          "anchor": "api-function-ffaec2ad76f7222e",
+          "id": "api-function-f6e36a92209e4ba6",
+          "anchor": "api-function-f6e36a92209e4ba6",
           "kind": "function",
           "name": "CAN_Fifo0ReceiveCallback",
           "qualifiedName": "CAN_Fifo0ReceiveCallback",
           "signature": "void CAN_Fifo0ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "CAN Rx FIFO0 接收处理函数\n\nhcan can handle 取出 FIFO0 中的所有待处理帧，并分发到该总线上注册的各个回调函数。",
+          "description": "取消注册 CAN Fifo 处理回调\n\n本函数非线程安全，调用时请注意 hcan can handle filter_match_index 需要取消注册对应的过滤器对应的 id CAN Fifo0 接收处理函数 hcan can handle 本函数将会根据 hcan 和 rx_header 内部的 filter_id 来调用对应的回调函数",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 692,
+            "line": 202,
             "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L692"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L202"
           },
           "parentId": "api-file-0b4fabd167be700f",
           "member": {
@@ -237,24 +44,24 @@
             "const": false
           },
           "references": [
-            "api-function-ad6ab4eb1cfff7ad",
-            "api-function-f6c31de71cd1b912"
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-function-f988e8d58c70a4ae"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-4b78d193d1cf32d8",
-          "anchor": "api-function-4b78d193d1cf32d8",
+          "id": "api-function-dc747e1c6227b58d",
+          "anchor": "api-function-dc747e1c6227b58d",
           "kind": "function",
           "name": "CAN_Fifo1ReceiveCallback",
           "qualifiedName": "CAN_Fifo1ReceiveCallback",
           "signature": "void CAN_Fifo1ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "CAN Rx FIFO1 接收处理函数\n\nhcan can handle 取出 FIFO1 中的所有待处理帧，并分发到该总线上注册的各个回调函数。",
+          "description": "CAN Fifo1 接收处理函数\n\nhcan can handle 本函数将会根据 hcan 和 rx_header 内部的 filter_id 来调用对应的回调函数",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 702,
+            "line": 231,
             "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L702"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L231"
           },
           "parentId": "api-file-0b4fabd167be700f",
           "member": {
@@ -264,24 +71,24 @@
             "const": false
           },
           "references": [
-            "api-function-ad6ab4eb1cfff7ad",
-            "api-function-f6c31de71cd1b912"
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-function-f988e8d58c70a4ae"
           ],
           "enumValues": []
         },
         {
-          "id": "api-typedef-c492b22d210642a6",
-          "anchor": "api-typedef-c492b22d210642a6",
+          "id": "api-typedef-e02ea456595c52f0",
+          "anchor": "api-typedef-e02ea456595c52f0",
           "kind": "typedef",
           "name": "CAN_FifoReceiveCallback_t",
           "qualifiedName": "CAN_FifoReceiveCallback_t",
           "signature": "typedef void(* CAN_FifoReceiveCallback_t) (const CAN_HandleTypeDef *hcan, const CAN_RxHeaderTypeDef *header, const uint8_t *data) )(const CAN_HandleTypeDef *hcan, const CAN_RxHeaderTypeDef *header, const uint8_t *data)",
-          "description": "bxCAN 风格接收回调函数类型\n\nhcan 触发接收的 CAN 句柄 header 接收帧头，包含标准/扩展 ID、数据/远程帧标志与 DLC data 接收数据，有效长度由 header->DLC 决定（不超过 8 字节）",
+          "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.hpp",
-            "line": 103,
+            "line": 58,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L103"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L58"
           },
           "parentId": "api-file-34d9f606821f6319",
           "member": {
@@ -294,356 +101,18 @@
           "enumValues": []
         },
         {
-          "id": "api-struct-767c041e3b3f07b2",
-          "anchor": "api-struct-767c041e3b3f07b2",
-          "kind": "struct",
-          "name": "CAN_FilterTypeDef",
-          "qualifiedName": "CAN_FilterTypeDef",
-          "signature": "",
-          "description": "CAN filter configuration structure definition.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 11,
-            "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L11"
-          },
-          "parentId": null,
-          "member": null,
-          "references": [
-            "api-define-0aeadc288f385afe",
-            "api-define-6867107b009ae391",
-            "api-define-75b2a1e59c1323ce",
-            "api-define-845dc3fa03d8187c",
-            "api-define-8f4cedec53142562",
-            "api-define-9495f2a10e446af7",
-            "api-define-ddab6a87ae193174",
-            "api-define-f6dc3f010ff324d5",
-            "api-variable-05510da524adb98f",
-            "api-variable-34a50337a6037851",
-            "api-variable-3cb05b6f39bad1a1",
-            "api-variable-6e4e5b47a69ed26c",
-            "api-variable-a7888a69b45cc61e",
-            "api-variable-a7994e9011e30e21",
-            "api-variable-b442dd43bbc17488",
-            "api-variable-c45e730db9bee6da",
-            "api-variable-ee4ccd72867ad711",
-            "api-variable-fb05c40ec97f5a2a"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-b442dd43bbc17488",
-          "anchor": "api-variable-b442dd43bbc17488",
-          "kind": "variable",
-          "name": "FilterActivation",
-          "qualifiedName": "CAN_FilterTypeDef::FilterActivation",
-          "signature": "uint32_t CAN_FilterTypeDef::FilterActivation",
-          "description": "CAN_FILTER_DISABLE CAN_FILTER_ENABLE Filter activation state:or.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 33,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L33"
-          },
-          "parentId": "api-struct-767c041e3b3f07b2",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-define-6867107b009ae391",
-            "api-define-8f4cedec53142562"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-a7994e9011e30e21",
-          "anchor": "api-variable-a7994e9011e30e21",
-          "kind": "variable",
-          "name": "FilterBank",
-          "qualifiedName": "CAN_FilterTypeDef::FilterBank",
-          "signature": "uint32_t CAN_FilterTypeDef::FilterBank",
-          "description": "Filter bank index.\n\nRange: 0 to 13 for a single CAN instance, or 0 to 27 for dual CAN instances.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 27,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L27"
-          },
-          "parentId": "api-struct-767c041e3b3f07b2",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-34a50337a6037851",
-          "anchor": "api-variable-34a50337a6037851",
-          "kind": "variable",
-          "name": "FilterFIFOAssignment",
-          "qualifiedName": "CAN_FilterTypeDef::FilterFIFOAssignment",
-          "signature": "uint32_t CAN_FilterTypeDef::FilterFIFOAssignment",
-          "description": "CAN_FILTER_FIFO0 CAN_FILTER_FIFO1 FIFO assigned to a matching filter:or.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 25,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L25"
-          },
-          "parentId": "api-struct-767c041e3b3f07b2",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-define-845dc3fa03d8187c",
-            "api-define-ddab6a87ae193174"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-c45e730db9bee6da",
-          "anchor": "api-variable-c45e730db9bee6da",
-          "kind": "variable",
-          "name": "FilterIdHigh",
-          "qualifiedName": "CAN_FilterTypeDef::FilterIdHigh",
-          "signature": "uint32_t CAN_FilterTypeDef::FilterIdHigh",
-          "description": "Filter identification number MSBs for a 32-bit configuration, or the first ID for a 16-bit configuration.\n\nRange: 0x0000 to 0xFFFF.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 13,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L13"
-          },
-          "parentId": "api-struct-767c041e3b3f07b2",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-05510da524adb98f",
-          "anchor": "api-variable-05510da524adb98f",
-          "kind": "variable",
-          "name": "FilterIdLow",
-          "qualifiedName": "CAN_FilterTypeDef::FilterIdLow",
-          "signature": "uint32_t CAN_FilterTypeDef::FilterIdLow",
-          "description": "Filter identification number LSBs for a 32-bit configuration, or the second ID for a 16-bit configuration.\n\nRange: 0x0000 to 0xFFFF.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 16,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L16"
-          },
-          "parentId": "api-struct-767c041e3b3f07b2",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-6e4e5b47a69ed26c",
-          "anchor": "api-variable-6e4e5b47a69ed26c",
-          "kind": "variable",
-          "name": "FilterMaskIdHigh",
-          "qualifiedName": "CAN_FilterTypeDef::FilterMaskIdHigh",
-          "signature": "uint32_t CAN_FilterTypeDef::FilterMaskIdHigh",
-          "description": "Filter mask or identification number MSBs for a 32-bit configuration, or the first value for a 16-bit configuration.\n\nRange: 0x0000 to 0xFFFF.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 19,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L19"
-          },
-          "parentId": "api-struct-767c041e3b3f07b2",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-a7888a69b45cc61e",
-          "anchor": "api-variable-a7888a69b45cc61e",
-          "kind": "variable",
-          "name": "FilterMaskIdLow",
-          "qualifiedName": "CAN_FilterTypeDef::FilterMaskIdLow",
-          "signature": "uint32_t CAN_FilterTypeDef::FilterMaskIdLow",
-          "description": "Filter mask or identification number LSBs for a 32-bit configuration, or the second value for a 16-bit configuration.\n\nRange: 0x0000 to 0xFFFF.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 22,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L22"
-          },
-          "parentId": "api-struct-767c041e3b3f07b2",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-3cb05b6f39bad1a1",
-          "anchor": "api-variable-3cb05b6f39bad1a1",
-          "kind": "variable",
-          "name": "FilterMode",
-          "qualifiedName": "CAN_FilterTypeDef::FilterMode",
-          "signature": "uint32_t CAN_FilterTypeDef::FilterMode",
-          "description": "CAN_FILTERMODE_IDMASK CAN_FILTERMODE_IDLIST Filter mode: identifier mask or identifier list; seeand.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 29,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L29"
-          },
-          "parentId": "api-struct-767c041e3b3f07b2",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-define-75b2a1e59c1323ce",
-            "api-define-f6dc3f010ff324d5"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-fb05c40ec97f5a2a",
-          "anchor": "api-variable-fb05c40ec97f5a2a",
-          "kind": "variable",
-          "name": "FilterScale",
-          "qualifiedName": "CAN_FilterTypeDef::FilterScale",
-          "signature": "uint32_t CAN_FilterTypeDef::FilterScale",
-          "description": "CAN_FILTERSCALE_16BIT CAN_FILTERSCALE_32BIT Filter scale: two 16-bit filters or one 32-bit filter; seeand.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 31,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L31"
-          },
-          "parentId": "api-struct-767c041e3b3f07b2",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-define-0aeadc288f385afe",
-            "api-define-9495f2a10e446af7"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-ee4ccd72867ad711",
-          "anchor": "api-variable-ee4ccd72867ad711",
-          "kind": "variable",
-          "name": "SlaveStartFilterBank",
-          "qualifiedName": "CAN_FilterTypeDef::SlaveStartFilterBank",
-          "signature": "uint32_t CAN_FilterTypeDef::SlaveStartFilterBank",
-          "description": "Start bank assigned to the slave CAN instance.\n\nMeaningless for a single CAN instance; for dual CAN, lower banks belong to the master and higher banks to the slave. Range: 0 to 27.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 35,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L35"
-          },
-          "parentId": "api-struct-767c041e3b3f07b2",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-0a3aa13b3c8429c4",
-          "anchor": "api-define-0a3aa13b3c8429c4",
-          "kind": "define",
-          "name": "CAN_ID_EXT",
-          "qualifiedName": "CAN_ID_EXT",
-          "signature": "",
-          "description": "Extended identifier.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 86,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L86"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-f718ffc3c55a8091",
-          "anchor": "api-define-f718ffc3c55a8091",
-          "kind": "define",
-          "name": "CAN_ID_STD",
-          "qualifiedName": "CAN_ID_STD",
-          "signature": "",
-          "description": "Standard identifier.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 85,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L85"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-ecc96778fbec9c9b",
-          "anchor": "api-function-ecc96778fbec9c9b",
+          "id": "api-function-9581c3d274b39edb",
+          "anchor": "api-function-9581c3d274b39edb",
           "kind": "function",
           "name": "CAN_InitMainCallback",
           "qualifiedName": "CAN_InitMainCallback",
           "signature": "void CAN_InitMainCallback (CAN_HandleTypeDef *hcan)",
-          "description": "注册 CAN 主回调函数\n\nhcan can handle hcan can handle CAN_Start() 需在 HAL_CAN_Init() 之后、CAN_Start() 之前调用，注册后驱动才能收到接收与发送完成中断。注册接收 FIFO 与三个发送 mailbox 完成回调，需在 HAL_CAN_Init() 之后、之前调用。",
+          "description": "注册 CAN 主回调函数\n\nhcan can handle",
           "location": {
             "path": "bsp/can_driver/can_driver.hpp",
-            "line": 128,
+            "line": 68,
             "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L128"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L68"
           },
           "parentId": "api-file-34d9f606821f6319",
           "member": {
@@ -653,26 +122,25 @@
             "const": false
           },
           "references": [
-            "api-function-14dfda279d31c97c",
-            "api-function-4b78d193d1cf32d8",
-            "api-function-52f3dc98543febaf",
-            "api-function-ffaec2ad76f7222e"
+            "api-function-8bc70aafe98b46e4",
+            "api-function-dc747e1c6227b58d",
+            "api-function-f6e36a92209e4ba6"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-f6c31de71cd1b912",
-          "anchor": "api-function-f6c31de71cd1b912",
+          "id": "api-function-f988e8d58c70a4ae",
+          "anchor": "api-function-f988e8d58c70a4ae",
           "kind": "function",
           "name": "CAN_InitMainCallback",
           "qualifiedName": "CAN_InitMainCallback",
           "signature": "void CAN_InitMainCallback (CAN_HandleTypeDef *hcan)",
-          "description": "注册 CAN 主回调函数\n\nCAN_Start() hcan can handle 注册接收 FIFO 与三个发送 mailbox 完成回调，需在 HAL_CAN_Init() 之后、之前调用。",
+          "description": "注册 CAN 主回调函数\n\nhcan can handle",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 739,
+            "line": 276,
             "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L739"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L276"
           },
           "parentId": "api-file-0b4fabd167be700f",
           "member": {
@@ -682,16 +150,15 @@
             "const": false
           },
           "references": [
-            "api-function-14dfda279d31c97c",
-            "api-function-4b78d193d1cf32d8",
-            "api-function-52f3dc98543febaf",
-            "api-function-ffaec2ad76f7222e"
+            "api-function-8bc70aafe98b46e4",
+            "api-function-dc747e1c6227b58d",
+            "api-function-f6e36a92209e4ba6"
           ],
           "enumValues": []
         },
         {
-          "id": "api-define-3b2c6fe395be16fd",
-          "anchor": "api-define-3b2c6fe395be16fd",
+          "id": "api-define-19eec493a75a0023",
+          "anchor": "api-define-19eec493a75a0023",
           "kind": "define",
           "name": "CAN_MAX_CALLBACK_NUM",
           "qualifiedName": "CAN_MAX_CALLBACK_NUM",
@@ -699,9 +166,9 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.hpp",
-            "line": 66,
+            "line": 45,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L66"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L45"
           },
           "parentId": "api-file-34d9f606821f6319",
           "member": {
@@ -711,13 +178,13 @@
             "const": false
           },
           "references": [
-            "api-function-cd8f4bfd1b46288f"
+            "api-function-b0e85a37afd807b3"
           ],
           "enumValues": []
         },
         {
-          "id": "api-define-223d0c330f95478c",
-          "anchor": "api-define-223d0c330f95478c",
+          "id": "api-define-e3f3f42f15e73835",
+          "anchor": "api-define-e3f3f42f15e73835",
           "kind": "define",
           "name": "CAN_NUM",
           "qualifiedName": "CAN_NUM",
@@ -725,9 +192,9 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.hpp",
-            "line": 78,
-            "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L78"
+            "line": 50,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L50"
           },
           "parentId": "api-file-34d9f606821f6319",
           "member": {
@@ -737,71 +204,23 @@
             "const": false
           },
           "references": [
-            "api-function-cd8f4bfd1b46288f"
+            "api-function-b0e85a37afd807b3"
           ],
           "enumValues": []
         },
         {
-          "id": "api-define-4b9ad285db05a9cf",
-          "anchor": "api-define-4b9ad285db05a9cf",
-          "kind": "define",
-          "name": "CAN_RTR_DATA",
-          "qualifiedName": "CAN_RTR_DATA",
-          "signature": "",
-          "description": "Data frame.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 88,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L88"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-74c0a4f412fe6b99",
-          "anchor": "api-define-74c0a4f412fe6b99",
-          "kind": "define",
-          "name": "CAN_RTR_REMOTE",
-          "qualifiedName": "CAN_RTR_REMOTE",
-          "signature": "",
-          "description": "Remote frame.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 89,
-            "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L89"
-          },
-          "parentId": "api-file-5a3373ad4672fd81",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-94d497fba7de7b6f",
-          "anchor": "api-function-94d497fba7de7b6f",
+          "id": "api-function-955b15ca7f85dec4",
+          "anchor": "api-function-955b15ca7f85dec4",
           "kind": "function",
           "name": "CAN_RegisterCallback",
           "qualifiedName": "CAN_RegisterCallback",
           "signature": "void CAN_RegisterCallback (CAN_HandleTypeDef *hcan, CAN_FifoReceiveCallback_t callback)",
-          "description": "注册 CAN 接收回调\n\nhcan can handle callback 接收回调函数，不可为空 hcan can handle callback 回调函数指针，不可为空 非线程安全，建议在总线启动前完成注册 本函数非线程安全，调用时请注意 同一条总线上可以注册多个回调，收到帧后会依次调用。同一条总线上可以注册多个回调，收到帧后会依次调用。",
+          "description": "注册 CAN Fifo 处理回调\n\n本函数非线程安全，调用时请注意 hcan hcan callback 回调函数指针",
           "location": {
             "path": "bsp/can_driver/can_driver.hpp",
-            "line": 147,
+            "line": 72,
             "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L147"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L72"
           },
           "parentId": "api-file-34d9f606821f6319",
           "member": {
@@ -811,28 +230,28 @@
             "const": false
           },
           "references": [
-            "api-define-223d0c330f95478c",
-            "api-define-3b2c6fe395be16fd",
-            "api-function-c5cd99bb03aeac1d",
-            "api-typedef-c492b22d210642a6",
-            "api-variable-2d8a06cbff71250b",
-            "api-variable-40161882d5cdf75c"
+            "api-define-19eec493a75a0023",
+            "api-define-e3f3f42f15e73835",
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-typedef-e02ea456595c52f0",
+            "api-variable-1714174ba5e2577a",
+            "api-variable-66ba53b964ded79f"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-cd8f4bfd1b46288f",
-          "anchor": "api-function-cd8f4bfd1b46288f",
+          "id": "api-function-b0e85a37afd807b3",
+          "anchor": "api-function-b0e85a37afd807b3",
           "kind": "function",
           "name": "CAN_RegisterCallback",
           "qualifiedName": "CAN_RegisterCallback",
           "signature": "void CAN_RegisterCallback (CAN_HandleTypeDef *hcan, const CAN_FifoReceiveCallback_t callback)",
-          "description": "注册 CAN 接收回调\n\n本函数非线程安全，调用时请注意 hcan can handle callback 回调函数指针，不可为空 同一条总线上可以注册多个回调，收到帧后会依次调用。",
+          "description": "注册 CAN Fifo 处理回调\n\n本函数非线程安全，调用时请注意 hcan hcan callback 回调函数指针",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 614,
+            "line": 155,
             "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L614"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L155"
           },
           "parentId": "api-file-0b4fabd167be700f",
           "member": {
@@ -842,261 +261,28 @@
             "const": false
           },
           "references": [
-            "api-define-223d0c330f95478c",
-            "api-define-3b2c6fe395be16fd",
-            "api-function-c5cd99bb03aeac1d",
-            "api-typedef-c492b22d210642a6",
-            "api-variable-2d8a06cbff71250b",
-            "api-variable-40161882d5cdf75c"
+            "api-define-19eec493a75a0023",
+            "api-define-e3f3f42f15e73835",
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-typedef-e02ea456595c52f0",
+            "api-variable-1714174ba5e2577a",
+            "api-variable-66ba53b964ded79f"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-ad6ab4eb1cfff7ad",
-          "anchor": "api-function-ad6ab4eb1cfff7ad",
-          "kind": "function",
-          "name": "CAN_RxDispatch",
-          "qualifiedName": "CAN_RxDispatch",
-          "signature": "void CAN_RxDispatch (CAN_HandleTypeDef *hcan, uint32_t fifo)",
-          "description": "取消注册 CAN Fifo 处理回调\n\n本函数非线程安全，调用时请注意 hcan can handle filter_match_index 需要取消注册对应的过滤器对应的 id CAN 接收分发 hcan can handle fifo CAN_RX_FIFO0 或 CAN_RX_FIFO1 循环取出指定 FIFO 中的所有帧，并依次调用该总线上注册的各个回调函数。",
-          "location": {
-            "path": "bsp/can_driver/can_driver.cpp",
-            "line": 662,
-            "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L662"
-          },
-          "parentId": "api-file-0b4fabd167be700f",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-4b78d193d1cf32d8",
-            "api-function-c5cd99bb03aeac1d",
-            "api-function-ffaec2ad76f7222e"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-struct-44e45beacf3266cc",
-          "anchor": "api-struct-44e45beacf3266cc",
-          "kind": "struct",
-          "name": "CAN_RxHeaderTypeDef",
-          "qualifiedName": "CAN_RxHeaderTypeDef",
-          "signature": "",
-          "description": "CAN Rx message header structure definition.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 60,
-            "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L60"
-          },
-          "parentId": null,
-          "member": null,
-          "references": [
-            "api-define-0a3aa13b3c8429c4",
-            "api-define-4b9ad285db05a9cf",
-            "api-define-74c0a4f412fe6b99",
-            "api-define-f718ffc3c55a8091",
-            "api-variable-4c8a596e17354a41",
-            "api-variable-55f5d68663bf3aef",
-            "api-variable-818f2d9a0561d283",
-            "api-variable-a3215aa79c63a7b9",
-            "api-variable-a931205f1f76f0bf",
-            "api-variable-b795aa97a0abbbf2",
-            "api-variable-e932d9b682168c23"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-a931205f1f76f0bf",
-          "anchor": "api-variable-a931205f1f76f0bf",
-          "kind": "variable",
-          "name": "DLC",
-          "qualifiedName": "CAN_RxHeaderTypeDef::DLC",
-          "signature": "uint32_t CAN_RxHeaderTypeDef::DLC",
-          "description": "Frame data length.\n\nRange: 0 to 8 bytes.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 66,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L66"
-          },
-          "parentId": "api-struct-44e45beacf3266cc",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-b795aa97a0abbbf2",
-          "anchor": "api-variable-b795aa97a0abbbf2",
-          "kind": "variable",
-          "name": "ExtId",
-          "qualifiedName": "CAN_RxHeaderTypeDef::ExtId",
-          "signature": "uint32_t CAN_RxHeaderTypeDef::ExtId",
-          "description": "Extended identifier.\n\nRange: 0 to 0x1FFFFFFF.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 63,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L63"
-          },
-          "parentId": "api-struct-44e45beacf3266cc",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-a3215aa79c63a7b9",
-          "anchor": "api-variable-a3215aa79c63a7b9",
-          "kind": "variable",
-          "name": "FilterMatchIndex",
-          "qualifiedName": "CAN_RxHeaderTypeDef::FilterMatchIndex",
-          "signature": "uint32_t CAN_RxHeaderTypeDef::FilterMatchIndex",
-          "description": "Index of the matching acceptance filter.\n\nRange: 0 to 0xFF.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 69,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L69"
-          },
-          "parentId": "api-struct-44e45beacf3266cc",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-4c8a596e17354a41",
-          "anchor": "api-variable-4c8a596e17354a41",
-          "kind": "variable",
-          "name": "IDE",
-          "qualifiedName": "CAN_RxHeaderTypeDef::IDE",
-          "signature": "uint32_t CAN_RxHeaderTypeDef::IDE",
-          "description": "CAN_ID_STD CAN_ID_EXT Identifier type:or.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 64,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L64"
-          },
-          "parentId": "api-struct-44e45beacf3266cc",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-define-0a3aa13b3c8429c4",
-            "api-define-f718ffc3c55a8091"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-818f2d9a0561d283",
-          "anchor": "api-variable-818f2d9a0561d283",
-          "kind": "variable",
-          "name": "RTR",
-          "qualifiedName": "CAN_RxHeaderTypeDef::RTR",
-          "signature": "uint32_t CAN_RxHeaderTypeDef::RTR",
-          "description": "CAN_RTR_DATA CAN_RTR_REMOTE Frame type:or.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 65,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L65"
-          },
-          "parentId": "api-struct-44e45beacf3266cc",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-define-4b9ad285db05a9cf",
-            "api-define-74c0a4f412fe6b99"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-e932d9b682168c23",
-          "anchor": "api-variable-e932d9b682168c23",
-          "kind": "variable",
-          "name": "StdId",
-          "qualifiedName": "CAN_RxHeaderTypeDef::StdId",
-          "signature": "uint32_t CAN_RxHeaderTypeDef::StdId",
-          "description": "Standard identifier.\n\nRange: 0 to 0x7FF.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 62,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L62"
-          },
-          "parentId": "api-struct-44e45beacf3266cc",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-55f5d68663bf3aef",
-          "anchor": "api-variable-55f5d68663bf3aef",
-          "kind": "variable",
-          "name": "Timestamp",
-          "qualifiedName": "CAN_RxHeaderTypeDef::Timestamp",
-          "signature": "uint32_t CAN_RxHeaderTypeDef::Timestamp",
-          "description": "Timestamp captured at the start of reception.\n\nRange: 0 to 0xFFFF.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 67,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L67"
-          },
-          "parentId": "api-struct-44e45beacf3266cc",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-define-764dd6f73d686cfb",
-          "anchor": "api-define-764dd6f73d686cfb",
+          "id": "api-define-db72ef35a5e45389",
+          "anchor": "api-define-db72ef35a5e45389",
           "kind": "define",
           "name": "CAN_SEND_FAILED",
           "qualifiedName": "CAN_SEND_FAILED",
           "signature": "",
-          "description": "CAN_SendMessage() 发送失败时/ FDCAN_SendMessage() 的返回值",
+          "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.hpp",
-            "line": 62,
+            "line": 41,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L62"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L41"
           },
           "parentId": "api-file-34d9f606821f6319",
           "member": {
@@ -1106,25 +292,52 @@
             "const": false
           },
           "references": [
-            "api-function-06f2ae5a9134e2a4",
-            "api-function-14dfda279d31c97c",
-            "api-function-8b6e03cb12d8a012"
+            "api-function-8bc70aafe98b46e4",
+            "api-function-c7d3453231d1efde"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-06f2ae5a9134e2a4",
-          "anchor": "api-function-06f2ae5a9134e2a4",
+          "id": "api-function-293777fdd8cd5854",
+          "anchor": "api-function-293777fdd8cd5854",
           "kind": "function",
           "name": "CAN_SendMessage",
           "qualifiedName": "CAN_SendMessage",
           "signature": "uint32_t CAN_SendMessage (CAN_HandleTypeDef *hcan, const CAN_TxHeaderTypeDef *header, const uint8_t data[])",
-          "description": "发送一条 CAN 消息\n\nhcan can handle header 发送帧头，包含 ID 类型、数据/远程帧标志与 DLC data 待发送数据，长度由 header->DLC 决定（不超过 8 字节） 本函数是线程安全的 发送使用的 mailbox 编号，CAN_SEND_FAILED(0xFFFF) 表示发送失败",
+          "description": "发送一条 CAN 消息\n\nhcan can handle header CAN_TxHeaderTypeDef data 数据 本函数是线程安全的 mailbox, 0xFFFF 表示发送失败",
+          "location": {
+            "path": "bsp/can_driver/can_driver.hpp",
+            "line": 64,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L64"
+          },
+          "parentId": "api-file-34d9f606821f6319",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-define-db72ef35a5e45389",
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-variable-77b7b2758d08025d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c7d3453231d1efde",
+          "anchor": "api-function-c7d3453231d1efde",
+          "kind": "function",
+          "name": "CAN_SendMessage",
+          "qualifiedName": "CAN_SendMessage",
+          "signature": "uint32_t CAN_SendMessage (CAN_HandleTypeDef *hcan, const CAN_TxHeaderTypeDef *header, const uint8_t data[])",
+          "description": "发送一条 CAN 消息\n\nhcan can handle header CAN_TxHeaderTypeDef data 数据 本函数是线程安全的 mailbox, 0xFFFF 表示发送失败",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 544,
+            "line": 88,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L544"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L88"
           },
           "parentId": "api-file-0b4fabd167be700f",
           "member": {
@@ -1134,57 +347,25 @@
             "const": false
           },
           "references": [
-            "api-define-764dd6f73d686cfb",
-            "api-function-c5cd99bb03aeac1d",
-            "api-struct-815cd93cf1bca83c",
-            "api-variable-07e5d6784a7d9b91",
-            "api-variable-aa5f49961cab1221"
+            "api-define-db72ef35a5e45389",
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-variable-77b7b2758d08025d"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-8b6e03cb12d8a012",
-          "anchor": "api-function-8b6e03cb12d8a012",
-          "kind": "function",
-          "name": "CAN_SendMessage",
-          "qualifiedName": "CAN_SendMessage",
-          "signature": "uint32_t CAN_SendMessage (CAN_HandleTypeDef *hcan, const CAN_TxHeaderTypeDef *header, const uint8_t data[])",
-          "description": "发送一条 CAN 消息\n\nhcan can handle header 发送帧头，包含 ID 类型、数据/远程帧标志与 DLC data 待发送数据，长度由 header->DLC 决定（不超过 8 字节） hcan can handle header 发送帧头，包含 ID 类型、数据/远程帧标志与 DLC data 待发送数据，长度由 header->DLC 决定（不超过 8 字节） 线程安全：内部会短暂关闭中断 成功时返回发送使用的 mailbox 编号（FDCAN 兼容接口返回 0）， 失败时返回 CAN_SEND_FAILED 本函数是线程安全的 发送使用的 mailbox 编号，CAN_SEND_FAILED(0xFFFF) 表示发送失败",
-          "location": {
-            "path": "bsp/can_driver/can_driver.hpp",
-            "line": 118,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L118"
-          },
-          "parentId": "api-file-34d9f606821f6319",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-define-764dd6f73d686cfb",
-            "api-function-c5cd99bb03aeac1d",
-            "api-struct-815cd93cf1bca83c",
-            "api-variable-07e5d6784a7d9b91",
-            "api-variable-aa5f49961cab1221"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-52f3dc98543febaf",
-          "anchor": "api-function-52f3dc98543febaf",
+          "id": "api-function-474c3ddddb9cb9de",
+          "anchor": "api-function-474c3ddddb9cb9de",
           "kind": "function",
           "name": "CAN_Start",
           "qualifiedName": "CAN_Start",
           "signature": "void CAN_Start (CAN_HandleTypeDef *hcan, const uint32_t ActiveITs)",
-          "description": "启动 CAN 并开启中断\n\nhcan can handle ActiveITs 需要额外开启的中断，如 CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING 驱动会额外开启 CAN_IT_TX_MAILBOX_EMPTY，软件发送队列依赖该中断",
+          "description": "CAN 初始化\n\nhcan can handle ActiveITs CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 590,
+            "line": 132,
             "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L590"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L132"
           },
           "parentId": "api-file-0b4fabd167be700f",
           "member": {
@@ -1197,18 +378,18 @@
           "enumValues": []
         },
         {
-          "id": "api-function-6c89bb885a9cd272",
-          "anchor": "api-function-6c89bb885a9cd272",
+          "id": "api-function-fb21227c50882e02",
+          "anchor": "api-function-fb21227c50882e02",
           "kind": "function",
           "name": "CAN_Start",
           "qualifiedName": "CAN_Start",
           "signature": "void CAN_Start (CAN_HandleTypeDef *hcan, uint32_t ActiveITs)",
-          "description": "启动 CAN 并开启中断\n\nhcan can handle ActiveITs 需要额外开启的中断，如 CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING hcan can handle ActiveITs 需要额外开启的中断，如 CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING 驱动会额外开启发送完成中断，以驱动软件发送队列 驱动会额外开启 CAN_IT_TX_MAILBOX_EMPTY，软件发送队列依赖该中断",
+          "description": "CAN 初始化\n\nhcan can handle ActiveITs CAN_IT_RX_FIFO0_MSG_PENDING | CAN_IT_RX_FIFO1_MSG_PENDING",
           "location": {
             "path": "bsp/can_driver/can_driver.hpp",
-            "line": 137,
+            "line": 70,
             "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L137"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L70"
           },
           "parentId": "api-file-34d9f606821f6319",
           "member": {
@@ -1221,8 +402,8 @@
           "enumValues": []
         },
         {
-          "id": "api-define-cb9767bb86e8c0b8",
-          "anchor": "api-define-cb9767bb86e8c0b8",
+          "id": "api-define-101bb5460114fc43",
+          "anchor": "api-define-101bb5460114fc43",
           "kind": "define",
           "name": "CAN_TX_QUEUE_SIZE",
           "qualifiedName": "CAN_TX_QUEUE_SIZE",
@@ -1230,9 +411,9 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.hpp",
-            "line": 93,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L93"
+            "line": 55,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.hpp#L55"
           },
           "parentId": "api-file-34d9f606821f6319",
           "member": {
@@ -1245,201 +426,18 @@
           "enumValues": []
         },
         {
-          "id": "api-struct-815cd93cf1bca83c",
-          "anchor": "api-struct-815cd93cf1bca83c",
-          "kind": "struct",
-          "name": "CAN_TxHeaderTypeDef",
-          "qualifiedName": "CAN_TxHeaderTypeDef",
-          "signature": "",
-          "description": "CAN Tx message header structure definition.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 44,
-            "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L44"
-          },
-          "parentId": null,
-          "member": null,
-          "references": [
-            "api-define-0a3aa13b3c8429c4",
-            "api-define-4b9ad285db05a9cf",
-            "api-define-74c0a4f412fe6b99",
-            "api-define-f718ffc3c55a8091",
-            "api-function-06f2ae5a9134e2a4",
-            "api-variable-670ef1e16812e6c1",
-            "api-variable-6cc68ae940d78765",
-            "api-variable-91e630a259cde7c5",
-            "api-variable-aa5f49961cab1221",
-            "api-variable-acacf1f91f8cf6d2",
-            "api-variable-daa4321324324936"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-aa5f49961cab1221",
-          "anchor": "api-variable-aa5f49961cab1221",
-          "kind": "variable",
-          "name": "DLC",
-          "qualifiedName": "CAN_TxHeaderTypeDef::DLC",
-          "signature": "uint32_t CAN_TxHeaderTypeDef::DLC",
-          "description": "Frame data length.\n\nRange: 0 to 8 bytes.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 50,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L50"
-          },
-          "parentId": "api-struct-815cd93cf1bca83c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-06f2ae5a9134e2a4"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-6cc68ae940d78765",
-          "anchor": "api-variable-6cc68ae940d78765",
-          "kind": "variable",
-          "name": "ExtId",
-          "qualifiedName": "CAN_TxHeaderTypeDef::ExtId",
-          "signature": "uint32_t CAN_TxHeaderTypeDef::ExtId",
-          "description": "Extended identifier.\n\nRange: 0 to 0x1FFFFFFF.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 47,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L47"
-          },
-          "parentId": "api-struct-815cd93cf1bca83c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-670ef1e16812e6c1",
-          "anchor": "api-variable-670ef1e16812e6c1",
-          "kind": "variable",
-          "name": "IDE",
-          "qualifiedName": "CAN_TxHeaderTypeDef::IDE",
-          "signature": "uint32_t CAN_TxHeaderTypeDef::IDE",
-          "description": "CAN_ID_STD CAN_ID_EXT Identifier type:or.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 48,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L48"
-          },
-          "parentId": "api-struct-815cd93cf1bca83c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-define-0a3aa13b3c8429c4",
-            "api-define-f718ffc3c55a8091"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-91e630a259cde7c5",
-          "anchor": "api-variable-91e630a259cde7c5",
-          "kind": "variable",
-          "name": "RTR",
-          "qualifiedName": "CAN_TxHeaderTypeDef::RTR",
-          "signature": "uint32_t CAN_TxHeaderTypeDef::RTR",
-          "description": "CAN_RTR_DATA CAN_RTR_REMOTE Frame type:or.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 49,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L49"
-          },
-          "parentId": "api-struct-815cd93cf1bca83c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-define-4b9ad285db05a9cf",
-            "api-define-74c0a4f412fe6b99"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-daa4321324324936",
-          "anchor": "api-variable-daa4321324324936",
-          "kind": "variable",
-          "name": "StdId",
-          "qualifiedName": "CAN_TxHeaderTypeDef::StdId",
-          "signature": "uint32_t CAN_TxHeaderTypeDef::StdId",
-          "description": "Standard identifier.\n\nRange: 0 to 0x7FF.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 46,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L46"
-          },
-          "parentId": "api-struct-815cd93cf1bca83c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-acacf1f91f8cf6d2",
-          "anchor": "api-variable-acacf1f91f8cf6d2",
-          "kind": "variable",
-          "name": "TransmitGlobalTime",
-          "qualifiedName": "CAN_TxHeaderTypeDef::TransmitGlobalTime",
-          "signature": "FunctionalState CAN_TxHeaderTypeDef::TransmitGlobalTime",
-          "description": "Enable or disable transmission of the timestamp captured at the start of transmission.\n\nTime-triggered communication must be enabled; with DLC set to 8, the timestamp replaces DATA6 and DATA7.",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": 51,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h#L51"
-          },
-          "parentId": "api-struct-815cd93cf1bca83c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-14dfda279d31c97c",
-          "anchor": "api-function-14dfda279d31c97c",
+          "id": "api-function-8bc70aafe98b46e4",
+          "anchor": "api-function-8bc70aafe98b46e4",
           "kind": "function",
           "name": "CAN_TxMailboxCpltCallback",
           "qualifiedName": "CAN_TxMailboxCpltCallback",
           "signature": "void CAN_TxMailboxCpltCallback (CAN_HandleTypeDef *hcan)",
-          "description": "HAL CAN Tx 完成中断回调\n\nhcan can handle 硬件 mailbox 空出后，从软件发送队列中取出待发送帧继续发送。",
+          "description": "HAL CAN TX 中断回调\n\nhcan can handle",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 713,
+            "line": 253,
             "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L713"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L253"
           },
           "parentId": "api-file-0b4fabd167be700f",
           "member": {
@@ -1449,44 +447,45 @@
             "const": false
           },
           "references": [
-            "api-define-764dd6f73d686cfb",
-            "api-function-c5cd99bb03aeac1d",
-            "api-function-f6c31de71cd1b912"
+            "api-define-db72ef35a5e45389",
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-function-f988e8d58c70a4ae"
           ],
           "enumValues": []
         },
         {
-          "id": "api-namespace-0741cdc463dd5d1b",
-          "anchor": "api-namespace-0741cdc463dd5d1b",
+          "id": "api-namespace-1fe493770230860f",
+          "anchor": "api-namespace-1fe493770230860f",
           "kind": "namespace",
           "name": "anonymous_namespace{can_driver.cpp}",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}",
           "signature": "",
-          "description": "FDCAN 版本",
+          "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 488,
+            "line": 31,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L488"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L31"
           },
           "parentId": null,
           "member": null,
           "references": [
-            "api-function-06f2ae5a9134e2a4",
-            "api-function-14dfda279d31c97c",
-            "api-function-ad6ab4eb1cfff7ad",
-            "api-function-c5cd99bb03aeac1d",
-            "api-function-cd8f4bfd1b46288f",
-            "api-struct-06cd890d3c454d1f",
-            "api-struct-e6859dd2a5278f4a",
-            "api-variable-2d8a06cbff71250b",
-            "api-variable-40161882d5cdf75c"
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-function-8bc70aafe98b46e4",
+            "api-function-b0e85a37afd807b3",
+            "api-function-c7d3453231d1efde",
+            "api-function-dc747e1c6227b58d",
+            "api-function-f6e36a92209e4ba6",
+            "api-struct-13b799167bd9cff8",
+            "api-struct-3544eeb5c88501b5",
+            "api-variable-1714174ba5e2577a",
+            "api-variable-66ba53b964ded79f"
           ],
           "enumValues": []
         },
         {
-          "id": "api-struct-e6859dd2a5278f4a",
-          "anchor": "api-struct-e6859dd2a5278f4a",
+          "id": "api-struct-13b799167bd9cff8",
+          "anchor": "api-struct-13b799167bd9cff8",
           "kind": "struct",
           "name": "anonymous_namespace{can_driver.cpp}::CAN_CallbackMap",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::CAN_CallbackMap",
@@ -1494,40 +493,39 @@
           "description": "CAN 回调函数表\n\n由于 HAL 只允许将一个函数作为回调函数，如果想在一条总线上处理不同种类的 信息（有多个不同的回调函数），就必须要通过一个主回调函数进行分发 STM32 的 CAN mailbox 数量往往有限，但是在很短的时间内可能连续发送多条消息 自带的 mailbox 无法满足要求，故需要做一个软件缓冲区来临时储存溢出的消息",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 510,
+            "line": 54,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L510"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L54"
           },
-          "parentId": "api-namespace-0741cdc463dd5d1b",
+          "parentId": "api-namespace-1fe493770230860f",
           "member": null,
           "references": [
-            "api-define-cb9767bb86e8c0b8",
-            "api-function-06f2ae5a9134e2a4",
-            "api-struct-06cd890d3c454d1f",
-            "api-struct-44e45beacf3266cc",
-            "api-typedef-c492b22d210642a6",
-            "api-variable-07e5d6784a7d9b91",
-            "api-variable-48c59ce701815e9d",
-            "api-variable-7197e66faf299771",
-            "api-variable-8a4d7867de02546d"
+            "api-define-101bb5460114fc43",
+            "api-function-c7d3453231d1efde",
+            "api-struct-3544eeb5c88501b5",
+            "api-typedef-e02ea456595c52f0",
+            "api-variable-77b7b2758d08025d",
+            "api-variable-b78bbb20c6b60daf",
+            "api-variable-d85a9730ff12b0bf",
+            "api-variable-e392a08fbd730446"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-07e5d6784a7d9b91",
-          "anchor": "api-variable-07e5d6784a7d9b91",
+          "id": "api-variable-77b7b2758d08025d",
+          "anchor": "api-variable-77b7b2758d08025d",
           "kind": "variable",
           "name": "buffer",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::CAN_CallbackMap::buffer",
-          "signature": "libs::RingBuffer<CAN_MessageDef, CAN_TX_QUEUE_SIZE + 1, true> anonymous_namespace{can_driver.cpp}::CAN_CallbackMap::buffer",
+          "signature": "libs::RingBuffer<CAN_MessageDef, CAN_TX_QUEUE_SIZE, true> anonymous_namespace{can_driver.cpp}::CAN_CallbackMap::buffer",
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 517,
+            "line": 61,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L517"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L61"
           },
-          "parentId": "api-struct-e6859dd2a5278f4a",
+          "parentId": "api-struct-13b799167bd9cff8",
           "member": {
             "access": "public",
             "static": false,
@@ -1535,15 +533,15 @@
             "const": false
           },
           "references": [
-            "api-define-cb9767bb86e8c0b8",
-            "api-function-06f2ae5a9134e2a4",
-            "api-struct-06cd890d3c454d1f"
+            "api-define-101bb5460114fc43",
+            "api-function-c7d3453231d1efde",
+            "api-struct-3544eeb5c88501b5"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-7197e66faf299771",
-          "anchor": "api-variable-7197e66faf299771",
+          "id": "api-variable-b78bbb20c6b60daf",
+          "anchor": "api-variable-b78bbb20c6b60daf",
           "kind": "variable",
           "name": "callback_count",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::CAN_CallbackMap::callback_count",
@@ -1551,11 +549,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 514,
+            "line": 58,
             "column": 31,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L514"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L58"
           },
-          "parentId": "api-struct-e6859dd2a5278f4a",
+          "parentId": "api-struct-13b799167bd9cff8",
           "member": {
             "access": "public",
             "static": false,
@@ -1566,8 +564,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-48c59ce701815e9d",
-          "anchor": "api-variable-48c59ce701815e9d",
+          "id": "api-variable-e392a08fbd730446",
+          "anchor": "api-variable-e392a08fbd730446",
           "kind": "variable",
           "name": "callbacks",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::CAN_CallbackMap::callbacks",
@@ -1575,11 +573,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 513,
+            "line": 57,
             "column": 31,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L513"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L57"
           },
-          "parentId": "api-struct-e6859dd2a5278f4a",
+          "parentId": "api-struct-13b799167bd9cff8",
           "member": {
             "access": "public",
             "static": false,
@@ -1587,13 +585,13 @@
             "const": false
           },
           "references": [
-            "api-typedef-c492b22d210642a6"
+            "api-typedef-e02ea456595c52f0"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-8a4d7867de02546d",
-          "anchor": "api-variable-8a4d7867de02546d",
+          "id": "api-variable-d85a9730ff12b0bf",
+          "anchor": "api-variable-d85a9730ff12b0bf",
           "kind": "variable",
           "name": "hcan",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::CAN_CallbackMap::hcan",
@@ -1601,11 +599,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 512,
+            "line": 56,
             "column": 30,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L512"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L56"
           },
-          "parentId": "api-struct-e6859dd2a5278f4a",
+          "parentId": "api-struct-13b799167bd9cff8",
           "member": {
             "access": "public",
             "static": false,
@@ -1616,8 +614,8 @@
           "enumValues": []
         },
         {
-          "id": "api-struct-06cd890d3c454d1f",
-          "anchor": "api-struct-06cd890d3c454d1f",
+          "id": "api-struct-3544eeb5c88501b5",
+          "anchor": "api-struct-3544eeb5c88501b5",
           "kind": "struct",
           "name": "anonymous_namespace{can_driver.cpp}::CAN_MessageDef",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::CAN_MessageDef",
@@ -1625,22 +623,21 @@
           "description": "储存于软件缓冲区的 CAN 消息类型\n\n包括 TxHeader 和 至多 8 bytes 的数据",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 495,
+            "line": 39,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L495"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L39"
           },
-          "parentId": "api-namespace-0741cdc463dd5d1b",
+          "parentId": "api-namespace-1fe493770230860f",
           "member": null,
           "references": [
-            "api-struct-815cd93cf1bca83c",
-            "api-variable-2911d2b418827ba6",
-            "api-variable-707f22129aed0177"
+            "api-variable-200a7f2c1d9c7bd2",
+            "api-variable-950be2296ff9eb83"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-707f22129aed0177",
-          "anchor": "api-variable-707f22129aed0177",
+          "id": "api-variable-950be2296ff9eb83",
+          "anchor": "api-variable-950be2296ff9eb83",
           "kind": "variable",
           "name": "data",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::CAN_MessageDef::data",
@@ -1648,11 +645,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 498,
+            "line": 42,
             "column": 25,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L498"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L42"
           },
-          "parentId": "api-struct-06cd890d3c454d1f",
+          "parentId": "api-struct-3544eeb5c88501b5",
           "member": {
             "access": "public",
             "static": false,
@@ -1663,8 +660,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-2911d2b418827ba6",
-          "anchor": "api-variable-2911d2b418827ba6",
+          "id": "api-variable-200a7f2c1d9c7bd2",
+          "anchor": "api-variable-200a7f2c1d9c7bd2",
           "kind": "variable",
           "name": "header",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::CAN_MessageDef::header",
@@ -1672,25 +669,23 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 497,
+            "line": 41,
             "column": 25,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L497"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L41"
           },
-          "parentId": "api-struct-06cd890d3c454d1f",
+          "parentId": "api-struct-3544eeb5c88501b5",
           "member": {
             "access": "public",
             "static": false,
             "virtual": "none",
             "const": false
           },
-          "references": [
-            "api-struct-815cd93cf1bca83c"
-          ],
+          "references": [],
           "enumValues": []
         },
         {
-          "id": "api-function-c5cd99bb03aeac1d",
-          "anchor": "api-function-c5cd99bb03aeac1d",
+          "id": "api-function-0ac3fdbdbcd7ff6e",
+          "anchor": "api-function-0ac3fdbdbcd7ff6e",
           "kind": "function",
           "name": "get_map",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::get_map",
@@ -1698,11 +693,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 526,
+            "line": 70,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L526"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L70"
           },
-          "parentId": "api-namespace-0741cdc463dd5d1b",
+          "parentId": "api-namespace-1fe493770230860f",
           "member": {
             "access": null,
             "static": false,
@@ -1710,31 +705,32 @@
             "const": false
           },
           "references": [
-            "api-function-06f2ae5a9134e2a4",
-            "api-function-14dfda279d31c97c",
-            "api-function-ad6ab4eb1cfff7ad",
-            "api-function-cd8f4bfd1b46288f",
-            "api-struct-e6859dd2a5278f4a",
-            "api-variable-2d8a06cbff71250b",
-            "api-variable-40161882d5cdf75c"
+            "api-function-8bc70aafe98b46e4",
+            "api-function-b0e85a37afd807b3",
+            "api-function-c7d3453231d1efde",
+            "api-function-dc747e1c6227b58d",
+            "api-function-f6e36a92209e4ba6",
+            "api-struct-13b799167bd9cff8",
+            "api-variable-1714174ba5e2577a",
+            "api-variable-66ba53b964ded79f"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-40161882d5cdf75c",
-          "anchor": "api-variable-40161882d5cdf75c",
+          "id": "api-variable-66ba53b964ded79f",
+          "anchor": "api-variable-66ba53b964ded79f",
           "kind": "variable",
           "name": "map_size",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::map_size",
           "signature": "size_t anonymous_namespace{can_driver.cpp}::map_size",
-          "description": "当前已登记的回调表数量",
+          "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 523,
+            "line": 67,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L523"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L67"
           },
-          "parentId": "api-namespace-0741cdc463dd5d1b",
+          "parentId": "api-namespace-1fe493770230860f",
           "member": {
             "access": null,
             "static": false,
@@ -1742,14 +738,14 @@
             "const": false
           },
           "references": [
-            "api-function-c5cd99bb03aeac1d",
-            "api-function-cd8f4bfd1b46288f"
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-function-b0e85a37afd807b3"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-2d8a06cbff71250b",
-          "anchor": "api-variable-2d8a06cbff71250b",
+          "id": "api-variable-1714174ba5e2577a",
+          "anchor": "api-variable-1714174ba5e2577a",
           "kind": "variable",
           "name": "maps",
           "qualifiedName": "anonymous_namespace{can_driver.cpp}::maps",
@@ -1757,11 +753,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver/can_driver.cpp",
-            "line": 522,
+            "line": 66,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L522"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_driver.cpp#L66"
           },
-          "parentId": "api-namespace-0741cdc463dd5d1b",
+          "parentId": "api-namespace-1fe493770230860f",
           "member": {
             "access": null,
             "static": false,
@@ -1769,9 +765,9 @@
             "const": false
           },
           "references": [
-            "api-function-c5cd99bb03aeac1d",
-            "api-function-cd8f4bfd1b46288f",
-            "api-struct-e6859dd2a5278f4a"
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-function-b0e85a37afd807b3",
+            "api-struct-13b799167bd9cff8"
           ],
           "enumValues": []
         },
@@ -1792,26 +788,22 @@
           "parentId": null,
           "member": null,
           "references": [
-            "api-define-223d0c330f95478c",
-            "api-define-3b2c6fe395be16fd",
-            "api-define-764dd6f73d686cfb",
+            "api-define-19eec493a75a0023",
+            "api-define-db72ef35a5e45389",
+            "api-define-e3f3f42f15e73835",
             "api-file-34d9f606821f6319",
-            "api-function-14dfda279d31c97c",
-            "api-function-4b78d193d1cf32d8",
-            "api-function-52f3dc98543febaf",
-            "api-function-ad6ab4eb1cfff7ad",
-            "api-function-c5cd99bb03aeac1d",
-            "api-function-f6c31de71cd1b912",
-            "api-function-ffaec2ad76f7222e",
-            "api-namespace-0741cdc463dd5d1b",
-            "api-struct-06cd890d3c454d1f",
-            "api-struct-815cd93cf1bca83c",
-            "api-struct-e6859dd2a5278f4a",
-            "api-typedef-c492b22d210642a6",
-            "api-variable-07e5d6784a7d9b91",
-            "api-variable-2d8a06cbff71250b",
-            "api-variable-40161882d5cdf75c",
-            "api-variable-aa5f49961cab1221"
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-function-8bc70aafe98b46e4",
+            "api-function-dc747e1c6227b58d",
+            "api-function-f6e36a92209e4ba6",
+            "api-function-f988e8d58c70a4ae",
+            "api-namespace-1fe493770230860f",
+            "api-struct-13b799167bd9cff8",
+            "api-struct-3544eeb5c88501b5",
+            "api-typedef-e02ea456595c52f0",
+            "api-variable-1714174ba5e2577a",
+            "api-variable-66ba53b964ded79f",
+            "api-variable-77b7b2758d08025d"
           ],
           "enumValues": []
         },
@@ -1843,7 +835,7 @@
           "name": "bsp/can_driver/can_driver.hpp",
           "qualifiedName": "bsp/can_driver/can_driver.hpp",
           "signature": "",
-          "description": "CAN wrapper based on HAL library.\n\nsyhanjin 2025-09-04 定义 HAL_FDCAN_MODULE_ENABLED 时使用 FDCAN 外设，对外提供 FDCAN_* 原生接口， 同时保留仅支持 classic 帧的 CAN_* 兼容接口； 定义 HAL_CAN_MODULE_ENABLED 时使用传统 bxCAN 外设，只提供 CAN_* 接口。 本驱动是对 HAL 库的一层简要封装。根据 HAL 启用的外设自动选择后端： 由于 HAL 对同一事件只允许注册一个回调函数，接收方向统一由主回调进入驱动内部的 回调表，再分发给业务模块注册的多个回调函数（见 CAN_RegisterCallback）。 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. https://www.gnu.org/licenses/ You should have received a copy of the GNU General Public License along with this program. If not, see. https://github.com/HITSZ-WTRobot-Packages/BasicComponents Project repository:",
+          "description": "CAN wrapper based on HAL library.\n\nsyhanjin 2025-09-04 本驱动是对 HAL 库的一层简要封装 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. https://www.gnu.org/licenses/ You should have received a copy of the GNU General Public License along with this program. If not, see. https://github.com/HITSZ-WTRobot-Packages/BasicComponents Project repository:",
           "location": {
             "path": "bsp/can_driver/can_driver.hpp",
             "line": null,
@@ -1853,55 +845,28 @@
           "parentId": null,
           "member": null,
           "references": [
-            "api-define-223d0c330f95478c",
-            "api-define-3b2c6fe395be16fd",
-            "api-define-764dd6f73d686cfb",
+            "api-define-19eec493a75a0023",
+            "api-define-db72ef35a5e45389",
+            "api-define-e3f3f42f15e73835",
             "api-file-0b4fabd167be700f",
             "api-file-4460790a883f7a46",
-            "api-function-06f2ae5a9134e2a4",
-            "api-function-14dfda279d31c97c",
-            "api-function-4b78d193d1cf32d8",
-            "api-function-52f3dc98543febaf",
-            "api-function-8b6e03cb12d8a012",
-            "api-function-c5cd99bb03aeac1d",
-            "api-function-cd8f4bfd1b46288f",
-            "api-function-ffaec2ad76f7222e",
-            "api-struct-815cd93cf1bca83c",
-            "api-typedef-c492b22d210642a6",
-            "api-variable-07e5d6784a7d9b91",
-            "api-variable-2d8a06cbff71250b",
-            "api-variable-40161882d5cdf75c",
-            "api-variable-aa5f49961cab1221"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-file-5a3373ad4672fd81",
-          "anchor": "api-file-5a3373ad4672fd81",
-          "kind": "file",
-          "name": "bsp/can_driver/can_hal_def.h",
-          "qualifiedName": "bsp/can_driver/can_hal_def.h",
-          "signature": "",
-          "description": "",
-          "location": {
-            "path": "bsp/can_driver/can_hal_def.h",
-            "line": null,
-            "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver/can_hal_def.h"
-          },
-          "parentId": null,
-          "member": null,
-          "references": [
-            "api-struct-44e45beacf3266cc",
-            "api-struct-767c041e3b3f07b2",
-            "api-struct-815cd93cf1bca83c"
+            "api-function-0ac3fdbdbcd7ff6e",
+            "api-function-8bc70aafe98b46e4",
+            "api-function-b0e85a37afd807b3",
+            "api-function-c7d3453231d1efde",
+            "api-function-dc747e1c6227b58d",
+            "api-function-f6e36a92209e4ba6",
+            "api-typedef-e02ea456595c52f0",
+            "api-variable-1714174ba5e2577a",
+            "api-variable-66ba53b964ded79f",
+            "api-variable-77b7b2758d08025d"
           ],
           "enumValues": []
         }
       ],
       "inheritanceRelations": [],
-      "symbolCount": 71,
-      "documentedSymbolCount": 59
+      "symbolCount": 31,
+      "documentedSymbolCount": 16
     },
     {
       "targetKind": "package",
