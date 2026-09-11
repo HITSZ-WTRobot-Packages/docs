@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "BasicComponents",
-  "moduleSha": "2d3f814798ad9fe28e36372ada5806ab5a7daa4f",
+  "moduleSha": "cc900afbc7adc2eda516098c10926c8e7f0c4bba",
   "packages": [
     {
       "name": "EKF",

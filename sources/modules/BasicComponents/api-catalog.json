@@ -2052,7 +2052,7 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "27 of 57 public API symbols have no description."
+          "message": "32 of 62 public API symbols have no description."
         }
       ],
       "symbols": [
@@ -2303,8 +2303,8 @@
           "enumValues": []
         },
         {
-          "id": "api-define-0b6abde10dcb0f1f",
-          "anchor": "api-define-0b6abde10dcb0f1f",
+          "id": "api-define-148033e7209f1f3b",
+          "anchor": "api-define-148033e7209f1f3b",
           "kind": "define",
           "name": "GpioPinWithName",
           "qualifiedName": "GpioPinWithName",
@@ -2312,9 +2312,9 @@
           "description": "",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 66,
+            "line": 81,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L66"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L81"
           },
           "parentId": "api-file-cd0a4d46f150d1fe",
           "member": {
@@ -2645,9 +2645,9 @@
             "const": false
           },
           "references": [
+            "api-function-1184f00e459b1472",
             "api-function-4ca64dc4d858fc1c",
-            "api-function-6999d685cb6fe712",
-            "api-function-a37a1a5ea42b6f1c"
+            "api-function-6999d685cb6fe712"
           ],
           "enumValues": []
         },
@@ -2658,7 +2658,7 @@
           "name": "__attribute__",
           "qualifiedName": "__attribute__",
           "signature": "__attribute__ ((deprecated(\"Use bsp::gpio::GpioPin::reset() instead\"))) static inline void GPIO_ResetPin(GPIO_t *hgpio)",
-          "description": "输出低电平。\n\nDeprecated bsp::gpio::GpioPin::reset() 请使用。",
+          "description": "输出低电平。\n\nDeprecated 请使用 bsp::gpio::GpioPin::reset()。",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.h",
             "line": 95,
@@ -2672,9 +2672,7 @@
             "virtual": "none",
             "const": false
           },
-          "references": [
-            "api-function-f86da7892a6ecb11"
-          ],
+          "references": [],
           "enumValues": []
         },
         {
@@ -2684,7 +2682,7 @@
           "name": "__attribute__",
           "qualifiedName": "__attribute__",
           "signature": "__attribute__ ((deprecated(\"Use bsp::gpio::GpioPin::set() instead\"))) static inline void GPIO_SetPin(GPIO_t *hgpio)",
-          "description": "输出高电平。\n\nDeprecated bsp::gpio::GpioPin::set() 请使用。",
+          "description": "输出高电平。\n\nDeprecated 请使用 bsp::gpio::GpioPin::set()。",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.h",
             "line": 84,
@@ -2698,9 +2696,7 @@
             "virtual": "none",
             "const": false
           },
-          "references": [
-            "api-function-81db54fd24b38423"
-          ],
+          "references": [],
           "enumValues": []
         },
         {
@@ -2710,7 +2706,7 @@
           "name": "__attribute__",
           "qualifiedName": "__attribute__",
           "signature": "__attribute__ ((deprecated(\"Use bsp::gpio::GpioPin::toggle() instead\"))) static inline void GPIO_TogglePin(GPIO_t *hgpio)",
-          "description": "翻转 GPIO 输出状态。\n\nDeprecated bsp::gpio::GpioPin::toggle() 请使用。",
+          "description": "翻转 GPIO 输出状态。\n\nDeprecated 请使用 bsp::gpio::GpioPin::toggle()。",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.h",
             "line": 106,
@@ -2724,9 +2720,7 @@
             "virtual": "none",
             "const": false
           },
-          "references": [
-            "api-function-fa7f86e483dfc253"
-          ],
+          "references": [],
           "enumValues": []
         },
         {
@@ -2751,7 +2745,7 @@
             "const": false
           },
           "references": [
-            "api-function-cecd97ae19460521"
+            "api-function-009fbb02027fe536"
           ],
           "enumValues": []
         },
@@ -2777,7 +2771,7 @@
             "const": true
           },
           "references": [
-            "api-function-b0c970e6dfd2ee01"
+            "api-function-18c6f26ddd3c6909"
           ],
           "enumValues": []
         },
@@ -2803,9 +2797,9 @@
             "const": true
           },
           "references": [
-            "api-function-2b5d2e348b16a879",
             "api-function-5f6f8e65bc77db0a",
             "api-function-7e42a539fc6b5c10",
+            "api-function-7ecf3a2b4ae8eef0",
             "api-variable-6d274228b3855c3f"
           ],
           "enumValues": []
@@ -2850,13 +2844,13 @@
           "references": [
             "api-file-1ab718948f053aa0",
             "api-function-133c18d03c5ed113",
+            "api-function-18c6f26ddd3c6909",
             "api-function-4ca64dc4d858fc1c",
             "api-function-50be06b3d0372c58",
             "api-function-50faa6a8c5022588",
             "api-function-59e5f90a75b7c99e",
             "api-function-5f6f8e65bc77db0a",
             "api-function-6999d685cb6fe712",
-            "api-function-b0c970e6dfd2ee01",
             "api-function-c2c67c2da26a7ad0",
             "api-struct-687ec665739db897",
             "api-typedef-f3f56259b840a5e5",
@@ -2912,19 +2906,16 @@
           "member": null,
           "references": [
             "api-file-c9b77634558215ac",
-            "api-function-2b5d2e348b16a879",
+            "api-function-009fbb02027fe536",
+            "api-function-1184f00e459b1472",
+            "api-function-18c6f26ddd3c6909",
             "api-function-4ca64dc4d858fc1c",
             "api-function-50be06b3d0372c58",
             "api-function-50faa6a8c5022588",
             "api-function-5f6f8e65bc77db0a",
             "api-function-6999d685cb6fe712",
             "api-function-7e42a539fc6b5c10",
-            "api-function-81db54fd24b38423",
-            "api-function-a37a1a5ea42b6f1c",
-            "api-function-b0c970e6dfd2ee01",
-            "api-function-cecd97ae19460521",
-            "api-function-f86da7892a6ecb11",
-            "api-function-fa7f86e483dfc253",
+            "api-function-7ecf3a2b4ae8eef0",
             "api-struct-687ec665739db897",
             "api-struct-e8ea4a63e0840e34",
             "api-typedef-f3f56259b840a5e5",
@@ -2953,7 +2944,9 @@
             "api-file-59b742e6152bafad",
             "api-namespace-292177d7da369be2",
             "api-namespace-d42220351762ee97",
-            "api-struct-d9d58424c6f3853c"
+            "api-struct-1c4ba85d3938c38d",
+            "api-struct-3c79e9bad5e0d364",
+            "api-struct-e451ca6ee3d2908c"
           ],
           "enumValues": []
         },
@@ -3000,10 +2993,12 @@
           "member": null,
           "references": [
             "api-namespace-b5fd37a53b3790c5",
-            "api-struct-d9d58424c6f3853c",
-            "api-typedef-29fdac47ddaa7d85",
+            "api-struct-1c4ba85d3938c38d",
+            "api-struct-3c79e9bad5e0d364",
+            "api-struct-e451ca6ee3d2908c",
+            "api-typedef-c98d1d9bb35c764e",
             "api-variable-38798e2db562c3d0",
-            "api-variable-467beb99ba21f945",
+            "api-variable-6e03e14ed2600f81",
             "api-variable-9a52c3eeb104d8eb",
             "api-variable-aee79919fcc8efd6",
             "api-variable-be06816053a75111"
@@ -3040,18 +3035,18 @@
           "enumValues": []
         },
         {
-          "id": "api-typedef-29fdac47ddaa7d85",
-          "anchor": "api-typedef-29fdac47ddaa7d85",
+          "id": "api-typedef-c98d1d9bb35c764e",
+          "anchor": "api-typedef-c98d1d9bb35c764e",
           "kind": "typedef",
           "name": "ExtiCallback",
           "qualifiedName": "bsp::gpio::ExtiCallback",
-          "signature": "using bsp::gpio::ExtiCallback = void (*)(const GpioPin* gpio, uint32_t counter)",
+          "signature": "using bsp::gpio::ExtiCallback = void (*)(const GpioPinInput* gpio, uint32_t counter)",
           "description": "EXTI 回调签名。上下文通过 gpio->user_data 获取。",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 71,
+            "line": 86,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L71"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L86"
           },
           "parentId": "api-namespace-d42220351762ee97",
           "member": {
@@ -3062,42 +3057,46 @@
           },
           "references": [
             "api-namespace-d42220351762ee97",
-            "api-struct-d9d58424c6f3853c",
+            "api-struct-e451ca6ee3d2908c",
             "api-variable-9a52c3eeb104d8eb"
           ],
           "enumValues": []
         },
         {
-          "id": "api-struct-d9d58424c6f3853c",
-          "anchor": "api-struct-d9d58424c6f3853c",
+          "id": "api-struct-1c4ba85d3938c38d",
+          "anchor": "api-struct-1c4ba85d3938c38d",
           "kind": "struct",
           "name": "bsp::gpio::GpioPin",
           "qualifiedName": "bsp::gpio::GpioPin",
           "signature": "",
-          "description": "面向对象的 GPIO 引脚句柄。\n\n轻量值类型，可复制，public 成员兼容 brace 初始化。 推荐使用此类型替代 GPIO_t。",
+          "description": "",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 49,
+            "line": 43,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L49"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L43"
           },
           "parentId": "api-namespace-d42220351762ee97",
           "member": null,
           "references": [
-            "api-function-81db54fd24b38423",
-            "api-function-a37a1a5ea42b6f1c",
-            "api-function-cecd97ae19460521",
-            "api-function-f86da7892a6ecb11",
-            "api-function-fa7f86e483dfc253",
-            "api-variable-b40ebdaf989f04c8",
-            "api-variable-bf7be2bdd9128d8e",
-            "api-variable-d2993a9cf6371b79"
+            "api-function-009fbb02027fe536",
+            "api-function-1184f00e459b1472",
+            "api-function-7919b7fdd6f1f47b",
+            "api-function-86305d0a4efa78f3",
+            "api-function-978171181c91187b",
+            "api-function-b0c22d0ec137655d",
+            "api-function-c10f3667eed2b911",
+            "api-function-c1a4b20205f44411",
+            "api-struct-3c79e9bad5e0d364",
+            "api-struct-e451ca6ee3d2908c",
+            "api-variable-403d7a302fc49394",
+            "api-variable-733aa7173dde54ca"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-d2993a9cf6371b79",
-          "anchor": "api-variable-d2993a9cf6371b79",
+          "id": "api-variable-403d7a302fc49394",
+          "anchor": "api-variable-403d7a302fc49394",
           "kind": "variable",
           "name": "pin",
           "qualifiedName": "bsp::gpio::GpioPin::pin",
@@ -3105,11 +3104,11 @@
           "description": "",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 52,
+            "line": 46,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L52"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L46"
           },
-          "parentId": "api-struct-d9d58424c6f3853c",
+          "parentId": "api-struct-1c4ba85d3938c38d",
           "member": {
             "access": "public",
             "static": false,
@@ -3117,17 +3116,16 @@
             "const": false
           },
           "references": [
-            "api-function-81db54fd24b38423",
-            "api-function-a37a1a5ea42b6f1c",
-            "api-function-cecd97ae19460521",
-            "api-function-f86da7892a6ecb11",
-            "api-function-fa7f86e483dfc253"
+            "api-function-009fbb02027fe536",
+            "api-function-1184f00e459b1472",
+            "api-function-86305d0a4efa78f3",
+            "api-function-b0c22d0ec137655d"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-b40ebdaf989f04c8",
-          "anchor": "api-variable-b40ebdaf989f04c8",
+          "id": "api-variable-733aa7173dde54ca",
+          "anchor": "api-variable-733aa7173dde54ca",
           "kind": "variable",
           "name": "port",
           "qualifiedName": "bsp::gpio::GpioPin::port",
@@ -3135,11 +3133,11 @@
           "description": "",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 51,
+            "line": 45,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L51"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L45"
           },
-          "parentId": "api-struct-d9d58424c6f3853c",
+          "parentId": "api-struct-1c4ba85d3938c38d",
           "member": {
             "access": "public",
             "static": false,
@@ -3147,17 +3145,16 @@
             "const": false
           },
           "references": [
-            "api-function-81db54fd24b38423",
-            "api-function-a37a1a5ea42b6f1c",
-            "api-function-cecd97ae19460521",
-            "api-function-f86da7892a6ecb11",
-            "api-function-fa7f86e483dfc253"
+            "api-function-009fbb02027fe536",
+            "api-function-1184f00e459b1472",
+            "api-function-86305d0a4efa78f3",
+            "api-function-b0c22d0ec137655d"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-a37a1a5ea42b6f1c",
-          "anchor": "api-function-a37a1a5ea42b6f1c",
+          "id": "api-function-1184f00e459b1472",
+          "anchor": "api-function-1184f00e459b1472",
           "kind": "function",
           "name": "read",
           "qualifiedName": "bsp::gpio::GpioPin::read",
@@ -3165,11 +3162,11 @@
           "description": "",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 55,
+            "line": 49,
             "column": 20,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L55"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L49"
           },
-          "parentId": "api-struct-d9d58424c6f3853c",
+          "parentId": "api-struct-1c4ba85d3938c38d",
           "member": {
             "access": "public",
             "static": false,
@@ -3177,119 +3174,16 @@
             "const": true
           },
           "references": [
-            "api-variable-b40ebdaf989f04c8",
-            "api-variable-d2993a9cf6371b79"
+            "api-function-7919b7fdd6f1f47b",
+            "api-function-c1a4b20205f44411",
+            "api-variable-403d7a302fc49394",
+            "api-variable-733aa7173dde54ca"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-f86da7892a6ecb11",
-          "anchor": "api-function-f86da7892a6ecb11",
-          "kind": "function",
-          "name": "reset",
-          "qualifiedName": "bsp::gpio::GpioPin::reset",
-          "signature": "void bsp::gpio::GpioPin::reset () const",
-          "description": "",
-          "location": {
-            "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 61,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L61"
-          },
-          "parentId": "api-struct-d9d58424c6f3853c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [
-            "api-variable-b40ebdaf989f04c8",
-            "api-variable-d2993a9cf6371b79"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-81db54fd24b38423",
-          "anchor": "api-function-81db54fd24b38423",
-          "kind": "function",
-          "name": "set",
-          "qualifiedName": "bsp::gpio::GpioPin::set",
-          "signature": "void bsp::gpio::GpioPin::set () const",
-          "description": "",
-          "location": {
-            "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 59,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L59"
-          },
-          "parentId": "api-struct-d9d58424c6f3853c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [
-            "api-variable-b40ebdaf989f04c8",
-            "api-variable-d2993a9cf6371b79"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-fa7f86e483dfc253",
-          "anchor": "api-function-fa7f86e483dfc253",
-          "kind": "function",
-          "name": "toggle",
-          "qualifiedName": "bsp::gpio::GpioPin::toggle",
-          "signature": "void bsp::gpio::GpioPin::toggle () const",
-          "description": "",
-          "location": {
-            "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 63,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L63"
-          },
-          "parentId": "api-struct-d9d58424c6f3853c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [
-            "api-variable-b40ebdaf989f04c8",
-            "api-variable-d2993a9cf6371b79"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-bf7be2bdd9128d8e",
-          "anchor": "api-variable-bf7be2bdd9128d8e",
-          "kind": "variable",
-          "name": "user_data",
-          "qualifiedName": "bsp::gpio::GpioPin::user_data",
-          "signature": "void* bsp::gpio::GpioPin::user_data",
-          "description": "",
-          "location": {
-            "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 53,
-            "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L53"
-          },
-          "parentId": "api-struct-d9d58424c6f3853c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-cecd97ae19460521",
-          "anchor": "api-function-cecd97ae19460521",
+          "id": "api-function-009fbb02027fe536",
+          "anchor": "api-function-009fbb02027fe536",
           "kind": "function",
           "name": "write",
           "qualifiedName": "bsp::gpio::GpioPin::write",
@@ -3297,11 +3191,11 @@
           "description": "",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.hpp",
-            "line": 57,
+            "line": 48,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L57"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L48"
           },
-          "parentId": "api-struct-d9d58424c6f3853c",
+          "parentId": "api-struct-1c4ba85d3938c38d",
           "member": {
             "access": "public",
             "static": false,
@@ -3309,18 +3203,262 @@
             "const": true
           },
           "references": [
-            "api-variable-b40ebdaf989f04c8",
-            "api-variable-d2993a9cf6371b79"
+            "api-function-978171181c91187b",
+            "api-function-c10f3667eed2b911",
+            "api-variable-403d7a302fc49394",
+            "api-variable-733aa7173dde54ca"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-b0c970e6dfd2ee01",
-          "anchor": "api-function-b0c970e6dfd2ee01",
+          "id": "api-struct-e451ca6ee3d2908c",
+          "anchor": "api-struct-e451ca6ee3d2908c",
+          "kind": "struct",
+          "name": "bsp::gpio::GpioPinInput",
+          "qualifiedName": "bsp::gpio::GpioPinInput",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "bsp/gpio_driver/gpio_driver.hpp",
+            "line": 67,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L67"
+          },
+          "parentId": "api-namespace-d42220351762ee97",
+          "member": null,
+          "references": [
+            "api-function-009fbb02027fe536",
+            "api-function-1184f00e459b1472",
+            "api-function-7919b7fdd6f1f47b",
+            "api-function-86305d0a4efa78f3",
+            "api-function-c1a4b20205f44411",
+            "api-struct-1c4ba85d3938c38d",
+            "api-variable-403d7a302fc49394",
+            "api-variable-733aa7173dde54ca",
+            "api-variable-ef99bfad14a57154"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-86305d0a4efa78f3",
+          "anchor": "api-function-86305d0a4efa78f3",
+          "kind": "function",
+          "name": "GpioPinInput",
+          "qualifiedName": "bsp::gpio::GpioPinInput::GpioPinInput",
+          "signature": "bsp::gpio::GpioPinInput::GpioPinInput (GPIO_TypeDef *port, const uint16_t pin, void *user_data=nullptr)",
+          "description": "",
+          "location": {
+            "path": "bsp/gpio_driver/gpio_driver.hpp",
+            "line": 69,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L69"
+          },
+          "parentId": "api-struct-e451ca6ee3d2908c",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-403d7a302fc49394",
+            "api-variable-733aa7173dde54ca",
+            "api-variable-ef99bfad14a57154"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c1a4b20205f44411",
+          "anchor": "api-function-c1a4b20205f44411",
+          "kind": "function",
+          "name": "isReset",
+          "qualifiedName": "bsp::gpio::GpioPinInput::isReset",
+          "signature": "bool bsp::gpio::GpioPinInput::isReset () const",
+          "description": "",
+          "location": {
+            "path": "bsp/gpio_driver/gpio_driver.hpp",
+            "line": 78,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L78"
+          },
+          "parentId": "api-struct-e451ca6ee3d2908c",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-1184f00e459b1472"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-7919b7fdd6f1f47b",
+          "anchor": "api-function-7919b7fdd6f1f47b",
+          "kind": "function",
+          "name": "isSet",
+          "qualifiedName": "bsp::gpio::GpioPinInput::isSet",
+          "signature": "bool bsp::gpio::GpioPinInput::isSet () const",
+          "description": "",
+          "location": {
+            "path": "bsp/gpio_driver/gpio_driver.hpp",
+            "line": 77,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L77"
+          },
+          "parentId": "api-struct-e451ca6ee3d2908c",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-1184f00e459b1472"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-ef99bfad14a57154",
+          "anchor": "api-variable-ef99bfad14a57154",
+          "kind": "variable",
+          "name": "user_data",
+          "qualifiedName": "bsp::gpio::GpioPinInput::user_data",
+          "signature": "void* bsp::gpio::GpioPinInput::user_data",
+          "description": "",
+          "location": {
+            "path": "bsp/gpio_driver/gpio_driver.hpp",
+            "line": 75,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L75"
+          },
+          "parentId": "api-struct-e451ca6ee3d2908c",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-86305d0a4efa78f3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-3c79e9bad5e0d364",
+          "anchor": "api-struct-3c79e9bad5e0d364",
+          "kind": "struct",
+          "name": "bsp::gpio::GpioPinOutput",
+          "qualifiedName": "bsp::gpio::GpioPinOutput",
+          "signature": "",
+          "description": "面向对象的 GPIO 引脚句柄。\n\n轻量值类型，可复制，public 成员兼容 brace 初始化。 推荐使用此类型替代 GPIO_t。",
+          "location": {
+            "path": "bsp/gpio_driver/gpio_driver.hpp",
+            "line": 58,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L58"
+          },
+          "parentId": "api-namespace-d42220351762ee97",
+          "member": null,
+          "references": [
+            "api-function-009fbb02027fe536",
+            "api-function-1184f00e459b1472",
+            "api-function-978171181c91187b",
+            "api-function-b0c22d0ec137655d",
+            "api-function-c10f3667eed2b911",
+            "api-struct-1c4ba85d3938c38d",
+            "api-variable-403d7a302fc49394",
+            "api-variable-733aa7173dde54ca"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c10f3667eed2b911",
+          "anchor": "api-function-c10f3667eed2b911",
+          "kind": "function",
+          "name": "reset",
+          "qualifiedName": "bsp::gpio::GpioPinOutput::reset",
+          "signature": "void bsp::gpio::GpioPinOutput::reset () const",
+          "description": "",
+          "location": {
+            "path": "bsp/gpio_driver/gpio_driver.hpp",
+            "line": 62,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L62"
+          },
+          "parentId": "api-struct-3c79e9bad5e0d364",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-009fbb02027fe536"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-978171181c91187b",
+          "anchor": "api-function-978171181c91187b",
+          "kind": "function",
+          "name": "set",
+          "qualifiedName": "bsp::gpio::GpioPinOutput::set",
+          "signature": "void bsp::gpio::GpioPinOutput::set () const",
+          "description": "",
+          "location": {
+            "path": "bsp/gpio_driver/gpio_driver.hpp",
+            "line": 60,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L60"
+          },
+          "parentId": "api-struct-3c79e9bad5e0d364",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-009fbb02027fe536"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b0c22d0ec137655d",
+          "anchor": "api-function-b0c22d0ec137655d",
+          "kind": "function",
+          "name": "toggle",
+          "qualifiedName": "bsp::gpio::GpioPinOutput::toggle",
+          "signature": "void bsp::gpio::GpioPinOutput::toggle () const",
+          "description": "",
+          "location": {
+            "path": "bsp/gpio_driver/gpio_driver.hpp",
+            "line": 64,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.hpp#L64"
+          },
+          "parentId": "api-struct-3c79e9bad5e0d364",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-variable-403d7a302fc49394",
+            "api-variable-733aa7173dde54ca"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-18c6f26ddd3c6909",
+          "anchor": "api-function-18c6f26ddd3c6909",
           "kind": "function",
           "name": "RegisterExtiCallback",
           "qualifiedName": "bsp::gpio::RegisterExtiCallback",
-          "signature": "void bsp::gpio::RegisterExtiCallback (const GpioPin *gpio, ExtiCallback callback)",
+          "signature": "void bsp::gpio::RegisterExtiCallback (const GpioPinInput *gpio, ExtiCallback callback)",
           "description": "注册某个 GPIO 的 EXTI 回调。回调上下文从 gpio->user_data 读取。",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.cpp",
@@ -3336,22 +3474,22 @@
             "const": false
           },
           "references": [
-            "api-struct-d9d58424c6f3853c",
-            "api-typedef-29fdac47ddaa7d85",
+            "api-struct-e451ca6ee3d2908c",
+            "api-typedef-c98d1d9bb35c764e",
             "api-variable-38798e2db562c3d0",
-            "api-variable-467beb99ba21f945",
+            "api-variable-6e03e14ed2600f81",
             "api-variable-aee79919fcc8efd6",
             "api-variable-be06816053a75111"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-2b5d2e348b16a879",
-          "anchor": "api-function-2b5d2e348b16a879",
+          "id": "api-function-7ecf3a2b4ae8eef0",
+          "anchor": "api-function-7ecf3a2b4ae8eef0",
           "kind": "function",
           "name": "UnregisterExtiCallback",
           "qualifiedName": "bsp::gpio::UnregisterExtiCallback",
-          "signature": "void bsp::gpio::UnregisterExtiCallback (const GpioPin *gpio)",
+          "signature": "void bsp::gpio::UnregisterExtiCallback (const GpioPinInput *gpio)",
           "description": "取消注册 EXTI 回调。",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.cpp",
@@ -3367,9 +3505,9 @@
             "const": false
           },
           "references": [
-            "api-struct-d9d58424c6f3853c",
+            "api-struct-e451ca6ee3d2908c",
             "api-variable-38798e2db562c3d0",
-            "api-variable-467beb99ba21f945",
+            "api-variable-6e03e14ed2600f81",
             "api-variable-be06816053a75111"
           ],
           "enumValues": []
@@ -3413,13 +3551,14 @@
           "parentId": "api-namespace-b5fd37a53b3790c5",
           "member": null,
           "references": [
-            "api-function-2b5d2e348b16a879",
+            "api-function-18c6f26ddd3c6909",
             "api-function-50faa6a8c5022588",
-            "api-function-b0c970e6dfd2ee01",
-            "api-struct-d9d58424c6f3853c",
-            "api-typedef-29fdac47ddaa7d85",
+            "api-function-7ecf3a2b4ae8eef0",
+            "api-struct-1c4ba85d3938c38d",
+            "api-struct-e451ca6ee3d2908c",
+            "api-typedef-c98d1d9bb35c764e",
             "api-variable-38798e2db562c3d0",
-            "api-variable-467beb99ba21f945",
+            "api-variable-6e03e14ed2600f81",
             "api-variable-be06816053a75111"
           ],
           "enumValues": []
@@ -3435,7 +3574,7 @@
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.cpp",
             "line": 25,
-            "column": 20,
+            "column": 25,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.cpp#L25"
           },
           "parentId": "api-struct-6f6b24c68d44093a",
@@ -3446,10 +3585,10 @@
             "const": false
           },
           "references": [
-            "api-function-2b5d2e348b16a879",
+            "api-function-18c6f26ddd3c6909",
             "api-function-50faa6a8c5022588",
-            "api-function-b0c970e6dfd2ee01",
-            "api-typedef-29fdac47ddaa7d85"
+            "api-function-7ecf3a2b4ae8eef0",
+            "api-typedef-c98d1d9bb35c764e"
           ],
           "enumValues": []
         },
@@ -3464,7 +3603,7 @@
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.cpp",
             "line": 24,
-            "column": 20,
+            "column": 25,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.cpp#L24"
           },
           "parentId": "api-struct-6f6b24c68d44093a",
@@ -3475,24 +3614,24 @@
             "const": false
           },
           "references": [
-            "api-function-2b5d2e348b16a879",
+            "api-function-18c6f26ddd3c6909",
             "api-function-50faa6a8c5022588",
-            "api-function-b0c970e6dfd2ee01"
+            "api-function-7ecf3a2b4ae8eef0"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-467beb99ba21f945",
-          "anchor": "api-variable-467beb99ba21f945",
+          "id": "api-variable-6e03e14ed2600f81",
+          "anchor": "api-variable-6e03e14ed2600f81",
           "kind": "variable",
           "name": "gpio",
           "qualifiedName": "bsp::gpio::anonymous_namespace{gpio_driver.cpp}::ExtiSlot::gpio",
-          "signature": "const GpioPin* bsp::gpio::anonymous_namespace{gpio_driver.cpp}::ExtiSlot::gpio",
+          "signature": "const GpioPinInput* bsp::gpio::anonymous_namespace{gpio_driver.cpp}::ExtiSlot::gpio",
           "description": "被注册的 GPIO",
           "location": {
             "path": "bsp/gpio_driver/gpio_driver.cpp",
             "line": 23,
-            "column": 19,
+            "column": 24,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/gpio_driver/gpio_driver.cpp#L23"
           },
           "parentId": "api-struct-6f6b24c68d44093a",
@@ -3503,9 +3642,9 @@
             "const": false
           },
           "references": [
-            "api-function-2b5d2e348b16a879",
-            "api-function-b0c970e6dfd2ee01",
-            "api-struct-d9d58424c6f3853c"
+            "api-function-18c6f26ddd3c6909",
+            "api-function-7ecf3a2b4ae8eef0",
+            "api-struct-e451ca6ee3d2908c"
           ],
           "enumValues": []
         },
@@ -3607,10 +3746,10 @@
             "const": false
           },
           "references": [
+            "api-function-18c6f26ddd3c6909",
             "api-function-50be06b3d0372c58",
             "api-function-50faa6a8c5022588",
             "api-function-59e5f90a75b7c99e",
-            "api-function-b0c970e6dfd2ee01",
             "api-typedef-f3f56259b840a5e5"
           ],
           "enumValues": []
@@ -3756,8 +3895,25 @@
           "enumValues": []
         }
       ],
-      "inheritanceRelations": [],
-      "symbolCount": 62,
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-struct-3c79e9bad5e0d364",
+          "baseId": "api-struct-1c4ba85d3938c38d",
+          "baseQualifiedName": "bsp::gpio::GpioPin",
+          "access": "public",
+          "virtual": false
+        },
+        {
+          "kind": "inherits",
+          "derivedId": "api-struct-e451ca6ee3d2908c",
+          "baseId": "api-struct-1c4ba85d3938c38d",
+          "baseQualifiedName": "bsp::gpio::GpioPin",
+          "access": "public",
+          "virtual": false
+        }
+      ],
+      "symbolCount": 67,
       "documentedSymbolCount": 35
     },
     {
