@@ -329,6 +329,62 @@
         "LICENSE"
       ],
       "warnings": []
+    },
+    {
+      "id": "VelocityProfile",
+      "displayName": "VelocityProfile",
+      "repository": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile.git",
+      "branch": "main",
+      "sha": "61823125cf9d9b9ecaa3330fcba6080bbc50d963",
+      "shortSha": "61823125cf9d",
+      "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
+      "totalBytes": 261116,
+      "files": [
+        {
+          "path": "LICENSE",
+          "bytes": 35149,
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "kind": "license"
+        },
+        {
+          "path": "README.md",
+          "bytes": 631,
+          "sha256": "8cec96ebe4341db1eab885fcc42c8b48186dd03551d209725d6465b8d4a63276",
+          "kind": "readme"
+        },
+        {
+          "path": "SCurve/LICENSE",
+          "bytes": 35149,
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "kind": "license"
+        },
+        {
+          "path": "SCurve/README.md",
+          "bytes": 2974,
+          "sha256": "36c23fd46963350ce142d8d4b61ff0b43992921b7731740338207907253407d2",
+          "kind": "readme"
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "api-catalog.json",
+          "bytes": 186629,
+          "sha256": "4a5f04fbc74fd0f4efada472ae19a7a53c781fb30cdab7aebb71a260e75d3d93",
+          "kind": "api-catalog"
+        },
+        {
+          "path": "package-catalog.json",
+          "bytes": 584,
+          "sha256": "107bedbb795dd1a8fe8fa5ebf04ffb85dc63922ec513d90a08872ea8eb4690c7",
+          "kind": "package-catalog"
+        }
+      ],
+      "references": [],
+      "licenseFiles": [
+        "LICENSE",
+        "SCurve/LICENSE"
+      ],
+      "warnings": []
     }
   ]
 }

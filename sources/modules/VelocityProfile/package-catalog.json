@@ -1,0 +1,25 @@
+{
+  "formatVersion": 1,
+  "moduleId": "VelocityProfile",
+  "moduleSha": "61823125cf9d9b9ecaa3330fcba6080bbc50d963",
+  "packages": [
+    {
+      "name": "Core",
+      "pkgname": "VelocityProfile::Core",
+      "version": "0.1.0",
+      "manifestPath": "Core/cpkg.toml",
+      "packagePath": "Core",
+      "dependencyNames": []
+    },
+    {
+      "name": "SCurve",
+      "pkgname": "VelocityProfile::SCurve",
+      "version": "0.1.0",
+      "manifestPath": "SCurve/cpkg.toml",
+      "packagePath": "SCurve",
+      "dependencyNames": [
+        "VelocityProfile::Core"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4921 @@
+{
+  "formatVersion": 3,
+  "doxygenVersion": "1.16.1",
+  "references": [
+    {
+      "targetKind": "package",
+      "targetId": "velocityprofile--core",
+      "displayName": "VelocityProfile::Core",
+      "moduleId": "VelocityProfile",
+      "packageSlug": "velocityprofile--core",
+      "sourceBranch": "main",
+      "inputPaths": [
+        "Core/IVelocityProfile.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "8 of 8 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-file-d986461f6cf7fa9b",
+          "anchor": "api-file-d986461f6cf7fa9b",
+          "kind": "file",
+          "name": "Core/IVelocityProfile.hpp",
+          "qualifiedName": "Core/IVelocityProfile.hpp",
+          "signature": "",
+          "description": "速度曲线规划基类\n\nsyhanjin 2026-01-29",
+          "location": {
+            "path": "Core/IVelocityProfile.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/Core/IVelocityProfile.hpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-018269d9ec76b7c2",
+            "api-namespace-2926e82a96f86fa0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-2926e82a96f86fa0",
+          "anchor": "api-namespace-2926e82a96f86fa0",
+          "kind": "namespace",
+          "name": "velocity_profile",
+          "qualifiedName": "velocity_profile",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/IVelocityProfile.hpp",
+            "line": 10,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/Core/IVelocityProfile.hpp#L10"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-018269d9ec76b7c2"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-018269d9ec76b7c2",
+          "anchor": "api-class-018269d9ec76b7c2",
+          "kind": "class",
+          "name": "velocity_profile::IVelocityProfile",
+          "qualifiedName": "velocity_profile::IVelocityProfile",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "Core/IVelocityProfile.hpp",
+            "line": 13,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/Core/IVelocityProfile.hpp#L13"
+          },
+          "parentId": "api-namespace-2926e82a96f86fa0",
+          "member": null,
+          "references": [
+            "api-function-377cbeb48672d949",
+            "api-function-61d1d8fd166ece4b",
+            "api-function-794483454e348df4",
+            "api-function-b4bc8f85da7e0947",
+            "api-function-d9782df76cb1efb5",
+            "api-function-f8d3d6f64dd21ec1"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f8d3d6f64dd21ec1",
+          "anchor": "api-function-f8d3d6f64dd21ec1",
+          "kind": "function",
+          "name": "CalcA",
+          "qualifiedName": "velocity_profile::IVelocityProfile::CalcA",
+          "signature": "virtual float velocity_profile::IVelocityProfile::CalcA (float t) const =0",
+          "description": "",
+          "location": {
+            "path": "Core/IVelocityProfile.hpp",
+            "line": 27,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/Core/IVelocityProfile.hpp#L27"
+          },
+          "parentId": "api-class-018269d9ec76b7c2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-794483454e348df4",
+          "anchor": "api-function-794483454e348df4",
+          "kind": "function",
+          "name": "CalcV",
+          "qualifiedName": "velocity_profile::IVelocityProfile::CalcV",
+          "signature": "virtual float velocity_profile::IVelocityProfile::CalcV (float t) const =0",
+          "description": "",
+          "location": {
+            "path": "Core/IVelocityProfile.hpp",
+            "line": 24,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/Core/IVelocityProfile.hpp#L24"
+          },
+          "parentId": "api-class-018269d9ec76b7c2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b4bc8f85da7e0947",
+          "anchor": "api-function-b4bc8f85da7e0947",
+          "kind": "function",
+          "name": "CalcX",
+          "qualifiedName": "velocity_profile::IVelocityProfile::CalcX",
+          "signature": "virtual float velocity_profile::IVelocityProfile::CalcX (float t) const =0",
+          "description": "",
+          "location": {
+            "path": "Core/IVelocityProfile.hpp",
+            "line": 21,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/Core/IVelocityProfile.hpp#L21"
+          },
+          "parentId": "api-class-018269d9ec76b7c2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-61d1d8fd166ece4b",
+          "anchor": "api-function-61d1d8fd166ece4b",
+          "kind": "function",
+          "name": "getTotalTime",
+          "qualifiedName": "velocity_profile::IVelocityProfile::getTotalTime",
+          "signature": "virtual float velocity_profile::IVelocityProfile::getTotalTime () const =0",
+          "description": "",
+          "location": {
+            "path": "Core/IVelocityProfile.hpp",
+            "line": 30,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/Core/IVelocityProfile.hpp#L30"
+          },
+          "parentId": "api-class-018269d9ec76b7c2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "pure",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-377cbeb48672d949",
+          "anchor": "api-function-377cbeb48672d949",
+          "kind": "function",
+          "name": "success",
+          "qualifiedName": "velocity_profile::IVelocityProfile::success",
+          "signature": "virtual bool velocity_profile::IVelocityProfile::success () const",
+          "description": "",
+          "location": {
+            "path": "Core/IVelocityProfile.hpp",
+            "line": 18,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/Core/IVelocityProfile.hpp#L18"
+          },
+          "parentId": "api-class-018269d9ec76b7c2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d9782df76cb1efb5",
+          "anchor": "api-function-d9782df76cb1efb5",
+          "kind": "function",
+          "name": "~IVelocityProfile",
+          "qualifiedName": "velocity_profile::IVelocityProfile::~IVelocityProfile",
+          "signature": "virtual velocity_profile::IVelocityProfile::~IVelocityProfile ()=default",
+          "description": "",
+          "location": {
+            "path": "Core/IVelocityProfile.hpp",
+            "line": 16,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/Core/IVelocityProfile.hpp#L16"
+          },
+          "parentId": "api-class-018269d9ec76b7c2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "virtual",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [],
+      "symbolCount": 9,
+      "documentedSymbolCount": 1
+    },
+    {
+      "targetKind": "package",
+      "targetId": "velocityprofile--scurve",
+      "displayName": "VelocityProfile::SCurve",
+      "moduleId": "VelocityProfile",
+      "packageSlug": "velocityprofile--scurve",
+      "sourceBranch": "main",
+      "inputPaths": [
+        "SCurve/src/s_curve.cpp",
+        "SCurve/src/s_curve.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "176 of 176 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-file-953030e6a500217a",
+          "anchor": "api-file-953030e6a500217a",
+          "kind": "file",
+          "name": "SCurve/src/s_curve.cpp",
+          "qualifiedName": "SCurve/src/s_curve.cpp",
+          "signature": "",
+          "description": "syhanjin LIJunHong659 2026-04-09",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-file-8d060055cd0c6973",
+            "api-namespace-bd307d3c23aed3cc",
+            "api-namespace-e90f53afe2860b10",
+            "api-struct-0b66d84757003fe2",
+            "api-struct-1560f4e57cf21556",
+            "api-struct-5c2e8c97bf1132da",
+            "api-struct-9438bbeca021b8c1"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-8d060055cd0c6973",
+          "anchor": "api-file-8d060055cd0c6973",
+          "kind": "file",
+          "name": "SCurve/src/s_curve.hpp",
+          "qualifiedName": "SCurve/src/s_curve.hpp",
+          "signature": "",
+          "description": "syhanjin LIJunHong659 2026-01-28",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-69ff2d1e68bd8f76",
+            "api-class-9b027554c84a1ea1",
+            "api-file-953030e6a500217a",
+            "api-namespace-e90f53afe2860b10",
+            "api-struct-063359c545fb9fb0",
+            "api-struct-1a9c0fc6c491ecdd",
+            "api-struct-263083e1244e5410",
+            "api-struct-348c6b06eb5d75a0",
+            "api-struct-83899ec23be24de8",
+            "api-struct-a0670450e6a87101",
+            "api-struct-d18cbe651a172cec"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-define-5069b29308de3ff6",
+          "anchor": "api-define-5069b29308de3ff6",
+          "kind": "define",
+          "name": "S_CURVE_MAX_BS_ERROR",
+          "qualifiedName": "S_CURVE_MAX_BS_ERROR",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 14,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L14"
+          },
+          "parentId": "api-file-8d060055cd0c6973",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-e90f53afe2860b10",
+          "anchor": "api-namespace-e90f53afe2860b10",
+          "kind": "namespace",
+          "name": "velocity_profile",
+          "qualifiedName": "velocity_profile",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 10,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L10"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-69ff2d1e68bd8f76",
+            "api-namespace-bd307d3c23aed3cc"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-69ff2d1e68bd8f76",
+          "anchor": "api-class-69ff2d1e68bd8f76",
+          "kind": "class",
+          "name": "velocity_profile::SCurveProfile",
+          "qualifiedName": "velocity_profile::SCurveProfile",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 20,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L20"
+          },
+          "parentId": "api-namespace-e90f53afe2860b10",
+          "member": null,
+          "references": [
+            "api-class-9b027554c84a1ea1",
+            "api-enum-52cf066f33886ae0",
+            "api-enum-8cf6410fb6d0407f",
+            "api-function-0e8e48029c40a15a",
+            "api-function-111f24ae2a9ba02e",
+            "api-function-1d8a9fda9aa52ed0",
+            "api-function-209631479033f05b",
+            "api-function-2260a6d6c2a0ae4a",
+            "api-function-26b5390f10c15793",
+            "api-function-3261c1f53cfb130b",
+            "api-function-37c481502595f8b1",
+            "api-function-41240d6d853fa475",
+            "api-function-47e0c23c5709e38a",
+            "api-function-5067c0db5934b27d",
+            "api-function-50c94d2ce5c45f50",
+            "api-function-5184afd5de4332bb",
+            "api-function-5dc64c4154958b83",
+            "api-function-6785cf4bad3e6a62",
+            "api-function-79de6d5395bfb3df",
+            "api-function-8584b6613de533cf",
+            "api-function-88b6ea6fa337a365",
+            "api-function-8aa23d653c5c7e59",
+            "api-function-94fc5619ef400650",
+            "api-function-95207cb49838dd5a",
+            "api-function-9667485503850a3b",
+            "api-function-ad9815eb1099a074",
+            "api-function-b0f253056741a9a5",
+            "api-function-c24216521a7fe537",
+            "api-function-c2c99b53fd84f02f",
+            "api-function-d2a26ff571d3fb20",
+            "api-function-e52b7ba3394feb22",
+            "api-function-ef9da961ea215897",
+            "api-function-f1c5e30a11a08903",
+            "api-function-f239210e0e7f924d",
+            "api-function-f53bf150a3d0251d",
+            "api-function-f790c87590dbbd2c",
+            "api-struct-063359c545fb9fb0",
+            "api-struct-1a9c0fc6c491ecdd",
+            "api-struct-263083e1244e5410",
+            "api-struct-348c6b06eb5d75a0",
+            "api-struct-83899ec23be24de8",
+            "api-struct-a0670450e6a87101",
+            "api-struct-d18cbe651a172cec",
+            "api-variable-0c139aae378e6f4a",
+            "api-variable-3bfa5aa0ca45a4cf",
+            "api-variable-6d2360ae78d917dc",
+            "api-variable-70a0162e6ab60dd1",
+            "api-variable-ad90c726cdbf0e21",
+            "api-variable-bb5bbb37e4e04285",
+            "api-variable-bf554ebcf3add7bc",
+            "api-variable-c14f6294a94f3d2a",
+            "api-variable-f22df6cc1b5eec88"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-263083e1244e5410",
+          "anchor": "api-struct-263083e1244e5410",
+          "kind": "struct",
+          "name": "velocity_profile::SCurveProfile::BoundaryState",
+          "qualifiedName": "velocity_profile::SCurveProfile::BoundaryState",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 111,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L111"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": null,
+          "references": [
+            "api-variable-6dbed47eab75492c",
+            "api-variable-6fe7fc569906c966",
+            "api-variable-af1b4f1f3e6b52e1"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6dbed47eab75492c",
+          "anchor": "api-variable-6dbed47eab75492c",
+          "kind": "variable",
+          "name": "a",
+          "qualifiedName": "velocity_profile::SCurveProfile::BoundaryState::a",
+          "signature": "float velocity_profile::SCurveProfile::BoundaryState::a",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 115,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L115"
+          },
+          "parentId": "api-struct-263083e1244e5410",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-af1b4f1f3e6b52e1",
+          "anchor": "api-variable-af1b4f1f3e6b52e1",
+          "kind": "variable",
+          "name": "v",
+          "qualifiedName": "velocity_profile::SCurveProfile::BoundaryState::v",
+          "signature": "float velocity_profile::SCurveProfile::BoundaryState::v",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 114,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L114"
+          },
+          "parentId": "api-struct-263083e1244e5410",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6fe7fc569906c966",
+          "anchor": "api-variable-6fe7fc569906c966",
+          "kind": "variable",
+          "name": "x",
+          "qualifiedName": "velocity_profile::SCurveProfile::BoundaryState::x",
+          "signature": "float velocity_profile::SCurveProfile::BoundaryState::x",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 113,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L113"
+          },
+          "parentId": "api-struct-263083e1244e5410",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e52b7ba3394feb22",
+          "anchor": "api-function-e52b7ba3394feb22",
+          "kind": "function",
+          "name": "BuildStopPrefix",
+          "qualifiedName": "velocity_profile::SCurveProfile::BuildStopPrefix",
+          "signature": "SCurveProfile::PrefixPlan velocity_profile::SCurveProfile::BuildStopPrefix (const BoundaryState &start, float am, float jm)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 201,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L201"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5dc64c4154958b83",
+          "anchor": "api-function-5dc64c4154958b83",
+          "kind": "function",
+          "name": "BuildVelocityClampPrefix",
+          "qualifiedName": "velocity_profile::SCurveProfile::BuildVelocityClampPrefix",
+          "signature": "SCurveProfile::PrefixPlan velocity_profile::SCurveProfile::BuildVelocityClampPrefix (const BoundaryState &start, float target_v, float am, float jm)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 206,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L206"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-8aa23d653c5c7e59",
+          "anchor": "api-function-8aa23d653c5c7e59",
+          "kind": "function",
+          "name": "CalcA",
+          "qualifiedName": "velocity_profile::SCurveProfile::CalcA",
+          "signature": "float velocity_profile::SCurveProfile::CalcA (float t) const override",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 69,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L69"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-6785cf4bad3e6a62",
+          "anchor": "api-function-6785cf4bad3e6a62",
+          "kind": "function",
+          "name": "CalcV",
+          "qualifiedName": "velocity_profile::SCurveProfile::CalcV",
+          "signature": "float velocity_profile::SCurveProfile::CalcV (float t) const override",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 68,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L68"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-94fc5619ef400650",
+          "anchor": "api-function-94fc5619ef400650",
+          "kind": "function",
+          "name": "CalcX",
+          "qualifiedName": "velocity_profile::SCurveProfile::CalcX",
+          "signature": "float velocity_profile::SCurveProfile::CalcX (float t) const override",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 67,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L67"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-d18cbe651a172cec",
+          "anchor": "api-struct-d18cbe651a172cec",
+          "kind": "struct",
+          "name": "velocity_profile::SCurveProfile::Config",
+          "qualifiedName": "velocity_profile::SCurveProfile::Config",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 23,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L23"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": null,
+          "references": [
+            "api-function-209631479033f05b",
+            "api-function-81eb4f8b89be0d41",
+            "api-function-ee934d1e7153ddf9",
+            "api-variable-0c139aae378e6f4a",
+            "api-variable-bb5bbb37e4e04285",
+            "api-variable-c14f6294a94f3d2a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c14f6294a94f3d2a",
+          "anchor": "api-variable-c14f6294a94f3d2a",
+          "kind": "variable",
+          "name": "max_acc",
+          "qualifiedName": "velocity_profile::SCurveProfile::Config::max_acc",
+          "signature": "float velocity_profile::SCurveProfile::Config::max_acc",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 26,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L26"
+          },
+          "parentId": "api-struct-d18cbe651a172cec",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-209631479033f05b",
+            "api-function-81eb4f8b89be0d41",
+            "api-function-ee934d1e7153ddf9"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0c139aae378e6f4a",
+          "anchor": "api-variable-0c139aae378e6f4a",
+          "kind": "variable",
+          "name": "max_jerk",
+          "qualifiedName": "velocity_profile::SCurveProfile::Config::max_jerk",
+          "signature": "float velocity_profile::SCurveProfile::Config::max_jerk",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 27,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L27"
+          },
+          "parentId": "api-struct-d18cbe651a172cec",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-209631479033f05b",
+            "api-function-81eb4f8b89be0d41",
+            "api-function-ee934d1e7153ddf9"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-bb5bbb37e4e04285",
+          "anchor": "api-variable-bb5bbb37e4e04285",
+          "kind": "variable",
+          "name": "max_spd",
+          "qualifiedName": "velocity_profile::SCurveProfile::Config::max_spd",
+          "signature": "float velocity_profile::SCurveProfile::Config::max_spd",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 25,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L25"
+          },
+          "parentId": "api-struct-d18cbe651a172cec",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-209631479033f05b",
+            "api-function-81eb4f8b89be0d41",
+            "api-function-ee934d1e7153ddf9"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-81eb4f8b89be0d41",
+          "anchor": "api-function-81eb4f8b89be0d41",
+          "kind": "function",
+          "name": "operator*",
+          "qualifiedName": "velocity_profile::SCurveProfile::Config::operator*",
+          "signature": "Config velocity_profile::SCurveProfile::Config::operator* (const float ratio) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 29,
+            "column": 26,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L29"
+          },
+          "parentId": "api-struct-d18cbe651a172cec",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-struct-d18cbe651a172cec",
+            "api-variable-0c139aae378e6f4a",
+            "api-variable-bb5bbb37e4e04285",
+            "api-variable-c14f6294a94f3d2a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ee934d1e7153ddf9",
+          "anchor": "api-function-ee934d1e7153ddf9",
+          "kind": "function",
+          "name": "operator/",
+          "qualifiedName": "velocity_profile::SCurveProfile::Config::operator/",
+          "signature": "Config velocity_profile::SCurveProfile::Config::operator/ (const float factor) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 33,
+            "column": 26,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L33"
+          },
+          "parentId": "api-struct-d18cbe651a172cec",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-struct-d18cbe651a172cec",
+            "api-variable-0c139aae378e6f4a",
+            "api-variable-bb5bbb37e4e04285",
+            "api-variable-c14f6294a94f3d2a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f1c5e30a11a08903",
+          "anchor": "api-function-f1c5e30a11a08903",
+          "kind": "function",
+          "name": "EvaluateConstantJerk",
+          "qualifiedName": "velocity_profile::SCurveProfile::EvaluateConstantJerk",
+          "signature": "SCurveProfile::BoundaryState velocity_profile::SCurveProfile::EvaluateConstantJerk (const BoundaryState &state, float jerk, float dt)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 199,
+            "column": 27,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L199"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-52cf066f33886ae0",
+          "anchor": "api-enum-52cf066f33886ae0",
+          "kind": "enum",
+          "name": "FailureCode",
+          "qualifiedName": "velocity_profile::SCurveProfile::FailureCode",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 39,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L39"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": [
+            {
+              "name": "InternalError",
+              "initializer": "= 8",
+              "description": ""
+            },
+            {
+              "name": "InvalidEndState",
+              "initializer": "= 3",
+              "description": ""
+            },
+            {
+              "name": "InvalidLimit",
+              "initializer": "= 2",
+              "description": ""
+            },
+            {
+              "name": "NonFiniteInput",
+              "initializer": "= 1",
+              "description": ""
+            },
+            {
+              "name": "None",
+              "initializer": "= 0",
+              "description": ""
+            },
+            {
+              "name": "PrefixHandoffFailed",
+              "initializer": "= 7",
+              "description": ""
+            },
+            {
+              "name": "SolveCoreFailed",
+              "initializer": "= 4",
+              "description": ""
+            },
+            {
+              "name": "StopPrefixFailed",
+              "initializer": "= 6",
+              "description": ""
+            },
+            {
+              "name": "VelocityClampRecoveryFailed",
+              "initializer": "= 5",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-struct-063359c545fb9fb0",
+          "anchor": "api-struct-063359c545fb9fb0",
+          "kind": "struct",
+          "name": "velocity_profile::SCurveProfile::FailureInfo",
+          "qualifiedName": "velocity_profile::SCurveProfile::FailureInfo",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 52,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L52"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": null,
+          "references": [
+            "api-enum-52cf066f33886ae0",
+            "api-struct-d18cbe651a172cec",
+            "api-variable-46d6f1b35eda7500",
+            "api-variable-6b7c15fd6d616b8b",
+            "api-variable-717bb984bc778f26",
+            "api-variable-8b8adc7c23b8c021",
+            "api-variable-ac3949f60c5cb4d6",
+            "api-variable-b7bdd7d3d2b8de8f",
+            "api-variable-cf6e406730fb4ae7",
+            "api-variable-e4e7d9ddeb3e3ac9"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-ac3949f60c5cb4d6",
+          "anchor": "api-variable-ac3949f60c5cb4d6",
+          "kind": "variable",
+          "name": "ae",
+          "qualifiedName": "velocity_profile::SCurveProfile::FailureInfo::ae",
+          "signature": "float velocity_profile::SCurveProfile::FailureInfo::ae",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 60,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L60"
+          },
+          "parentId": "api-struct-063359c545fb9fb0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-46d6f1b35eda7500",
+          "anchor": "api-variable-46d6f1b35eda7500",
+          "kind": "variable",
+          "name": "as",
+          "qualifiedName": "velocity_profile::SCurveProfile::FailureInfo::as",
+          "signature": "float velocity_profile::SCurveProfile::FailureInfo::as",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 57,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L57"
+          },
+          "parentId": "api-struct-063359c545fb9fb0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-cf6e406730fb4ae7",
+          "anchor": "api-variable-cf6e406730fb4ae7",
+          "kind": "variable",
+          "name": "cfg",
+          "qualifiedName": "velocity_profile::SCurveProfile::FailureInfo::cfg",
+          "signature": "Config velocity_profile::SCurveProfile::FailureInfo::cfg",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 54,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L54"
+          },
+          "parentId": "api-struct-063359c545fb9fb0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-d18cbe651a172cec"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e4e7d9ddeb3e3ac9",
+          "anchor": "api-variable-e4e7d9ddeb3e3ac9",
+          "kind": "variable",
+          "name": "code",
+          "qualifiedName": "velocity_profile::SCurveProfile::FailureInfo::code",
+          "signature": "FailureCode velocity_profile::SCurveProfile::FailureInfo::code",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 61,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L61"
+          },
+          "parentId": "api-struct-063359c545fb9fb0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-52cf066f33886ae0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-8b8adc7c23b8c021",
+          "anchor": "api-variable-8b8adc7c23b8c021",
+          "kind": "variable",
+          "name": "ve",
+          "qualifiedName": "velocity_profile::SCurveProfile::FailureInfo::ve",
+          "signature": "float velocity_profile::SCurveProfile::FailureInfo::ve",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 59,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L59"
+          },
+          "parentId": "api-struct-063359c545fb9fb0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6b7c15fd6d616b8b",
+          "anchor": "api-variable-6b7c15fd6d616b8b",
+          "kind": "variable",
+          "name": "vs",
+          "qualifiedName": "velocity_profile::SCurveProfile::FailureInfo::vs",
+          "signature": "float velocity_profile::SCurveProfile::FailureInfo::vs",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 56,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L56"
+          },
+          "parentId": "api-struct-063359c545fb9fb0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-717bb984bc778f26",
+          "anchor": "api-variable-717bb984bc778f26",
+          "kind": "variable",
+          "name": "xe",
+          "qualifiedName": "velocity_profile::SCurveProfile::FailureInfo::xe",
+          "signature": "float velocity_profile::SCurveProfile::FailureInfo::xe",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 58,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L58"
+          },
+          "parentId": "api-struct-063359c545fb9fb0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b7bdd7d3d2b8de8f",
+          "anchor": "api-variable-b7bdd7d3d2b8de8f",
+          "kind": "variable",
+          "name": "xs",
+          "qualifiedName": "velocity_profile::SCurveProfile::FailureInfo::xs",
+          "signature": "float velocity_profile::SCurveProfile::FailureInfo::xs",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 55,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L55"
+          },
+          "parentId": "api-struct-063359c545fb9fb0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5067c0db5934b27d",
+          "anchor": "api-function-5067c0db5934b27d",
+          "kind": "function",
+          "name": "GetVelocityClampTarget",
+          "qualifiedName": "velocity_profile::SCurveProfile::GetVelocityClampTarget",
+          "signature": "bool velocity_profile::SCurveProfile::GetVelocityClampTarget (const BoundaryState &start, float vm, float jm, float *target_v)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 208,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L208"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f53bf150a3d0251d",
+          "anchor": "api-function-f53bf150a3d0251d",
+          "kind": "function",
+          "name": "IsFinite",
+          "qualifiedName": "velocity_profile::SCurveProfile::IsFinite",
+          "signature": "bool velocity_profile::SCurveProfile::IsFinite (float value)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 196,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L196"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b0f253056741a9a5",
+          "anchor": "api-function-b0f253056741a9a5",
+          "kind": "function",
+          "name": "MergePrefixWithLeadingJerk",
+          "qualifiedName": "velocity_profile::SCurveProfile::MergePrefixWithLeadingJerk",
+          "signature": "SCurveProfile::PrefixPlan velocity_profile::SCurveProfile::MergePrefixWithLeadingJerk (const BoundaryState &start, float jerk, float lead_time, const PrefixPlan &tail)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 204,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L204"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-a0670450e6a87101",
+          "anchor": "api-struct-a0670450e6a87101",
+          "kind": "struct",
+          "name": "velocity_profile::SCurveProfile::MotionCore",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 156,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L156"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": null,
+          "references": [
+            "api-variable-07025f31686cfcc1",
+            "api-variable-0c9e00a3df9592bc",
+            "api-variable-12d673432ad2c39b",
+            "api-variable-1e980a7cb7cd5c6a",
+            "api-variable-245d9bb14b31a5a3",
+            "api-variable-37d708508a9b062a",
+            "api-variable-45ca5eed0667c009",
+            "api-variable-57f158dd24b63a6f",
+            "api-variable-631303571930c036",
+            "api-variable-7b4304828d22ea98",
+            "api-variable-7c158eebef5ddce0",
+            "api-variable-7c4847924bd8bdc5",
+            "api-variable-84cb492e69b7d1b1",
+            "api-variable-8b36c42e473a1fb0",
+            "api-variable-8c65a139af3a7421",
+            "api-variable-96c29b3287cf0598",
+            "api-variable-978e64933fd21f33",
+            "api-variable-9c205ed0e63237ff",
+            "api-variable-a26b5155cb9dcb56",
+            "api-variable-c0c0cf9b5e153a20",
+            "api-variable-c28d76ac74b7951d",
+            "api-variable-c310b9befcedb6c8",
+            "api-variable-c5662dd1494b9051",
+            "api-variable-f75e330493f65786",
+            "api-variable-fe327f76d366ad03"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-96c29b3287cf0598",
+          "anchor": "api-variable-96c29b3287cf0598",
+          "kind": "variable",
+          "name": "ae",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::ae",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::ae",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 166,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L166"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-84cb492e69b7d1b1",
+          "anchor": "api-variable-84cb492e69b7d1b1",
+          "kind": "variable",
+          "name": "as",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::as",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::as",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 164,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L164"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7b4304828d22ea98",
+          "anchor": "api-variable-7b4304828d22ea98",
+          "kind": "variable",
+          "name": "direction",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::direction",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::direction",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 160,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L160"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-978e64933fd21f33",
+          "anchor": "api-variable-978e64933fd21f33",
+          "kind": "variable",
+          "name": "has_const",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::has_const",
+          "signature": "bool velocity_profile::SCurveProfile::MotionCore::has_const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 159,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L159"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-1e980a7cb7cd5c6a",
+          "anchor": "api-variable-1e980a7cb7cd5c6a",
+          "kind": "variable",
+          "name": "jm",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::jm",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::jm",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 167,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L167"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7c158eebef5ddce0",
+          "anchor": "api-variable-7c158eebef5ddce0",
+          "kind": "variable",
+          "name": "process1",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::process1",
+          "signature": "SCurveAccel velocity_profile::SCurveProfile::MotionCore::process1",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 185,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L185"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-245d9bb14b31a5a3",
+          "anchor": "api-variable-245d9bb14b31a5a3",
+          "kind": "variable",
+          "name": "process3",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::process3",
+          "signature": "SCurveAccel velocity_profile::SCurveProfile::MotionCore::process3",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 186,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L186"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a26b5155cb9dcb56",
+          "anchor": "api-variable-a26b5155cb9dcb56",
+          "kind": "variable",
+          "name": "t1",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::t1",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::t1",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 180,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L180"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9c205ed0e63237ff",
+          "anchor": "api-variable-9c205ed0e63237ff",
+          "kind": "variable",
+          "name": "t1_pre",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::t1_pre",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::t1_pre",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 170,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L170"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c5662dd1494b9051",
+          "anchor": "api-variable-c5662dd1494b9051",
+          "kind": "variable",
+          "name": "t2",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::t2",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::t2",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 181,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L181"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-8b36c42e473a1fb0",
+          "anchor": "api-variable-8b36c42e473a1fb0",
+          "kind": "variable",
+          "name": "t3_pre",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::t3_pre",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::t3_pre",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 175,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L175"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-fe327f76d366ad03",
+          "anchor": "api-variable-fe327f76d366ad03",
+          "kind": "variable",
+          "name": "total_time",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::total_time",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::total_time",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 183,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L183"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f75e330493f65786",
+          "anchor": "api-variable-f75e330493f65786",
+          "kind": "variable",
+          "name": "ts1",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::ts1",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::ts1",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 172,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L172"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-631303571930c036",
+          "anchor": "api-variable-631303571930c036",
+          "kind": "variable",
+          "name": "ts3",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::ts3",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::ts3",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 177,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L177"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c310b9befcedb6c8",
+          "anchor": "api-variable-c310b9befcedb6c8",
+          "kind": "variable",
+          "name": "valid",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::valid",
+          "signature": "bool velocity_profile::SCurveProfile::MotionCore::valid",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 158,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L158"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-8c65a139af3a7421",
+          "anchor": "api-variable-8c65a139af3a7421",
+          "kind": "variable",
+          "name": "ve",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::ve",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::ve",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 165,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L165"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7c4847924bd8bdc5",
+          "anchor": "api-variable-7c4847924bd8bdc5",
+          "kind": "variable",
+          "name": "vp",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::vp",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::vp",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 168,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L168"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-12d673432ad2c39b",
+          "anchor": "api-variable-12d673432ad2c39b",
+          "kind": "variable",
+          "name": "vs",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::vs",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::vs",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 163,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L163"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-45ca5eed0667c009",
+          "anchor": "api-variable-45ca5eed0667c009",
+          "kind": "variable",
+          "name": "x1",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::x1",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::x1",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 182,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L182"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-57f158dd24b63a6f",
+          "anchor": "api-variable-57f158dd24b63a6f",
+          "kind": "variable",
+          "name": "x1_pre",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::x1_pre",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::x1_pre",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 171,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L171"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-37d708508a9b062a",
+          "anchor": "api-variable-37d708508a9b062a",
+          "kind": "variable",
+          "name": "x3_pre",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::x3_pre",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::x3_pre",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 176,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L176"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-07025f31686cfcc1",
+          "anchor": "api-variable-07025f31686cfcc1",
+          "kind": "variable",
+          "name": "xe",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::xe",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::xe",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 162,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L162"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c0c0cf9b5e153a20",
+          "anchor": "api-variable-c0c0cf9b5e153a20",
+          "kind": "variable",
+          "name": "xs",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::xs",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::xs",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 161,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L161"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c28d76ac74b7951d",
+          "anchor": "api-variable-c28d76ac74b7951d",
+          "kind": "variable",
+          "name": "xs1",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::xs1",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::xs1",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 173,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L173"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0c9e00a3df9592bc",
+          "anchor": "api-variable-0c9e00a3df9592bc",
+          "kind": "variable",
+          "name": "xs3",
+          "qualifiedName": "velocity_profile::SCurveProfile::MotionCore::xs3",
+          "signature": "float velocity_profile::SCurveProfile::MotionCore::xs3",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 178,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L178"
+          },
+          "parentId": "api-struct-a0670450e6a87101",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5184afd5de4332bb",
+          "anchor": "api-function-5184afd5de4332bb",
+          "kind": "function",
+          "name": "PrecheckCore",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrecheckCore",
+          "signature": "bool velocity_profile::SCurveProfile::PrecheckCore (const BoundaryState &start, const BoundaryState &end, float vm, float jm)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 210,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L210"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-1a9c0fc6c491ecdd",
+          "anchor": "api-struct-1a9c0fc6c491ecdd",
+          "kind": "struct",
+          "name": "velocity_profile::SCurveProfile::PrefixPlan",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 128,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L128"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": null,
+          "references": [
+            "api-variable-19c75f32b73e84f6",
+            "api-variable-1df2b59973f68942",
+            "api-variable-2894747288688d48",
+            "api-variable-2ab55e09617a6493",
+            "api-variable-350378710a845437",
+            "api-variable-3cc126779e669136",
+            "api-variable-57b261500e36901e",
+            "api-variable-6b6c4a25679c1f28",
+            "api-variable-7371ceb7f1605c4b",
+            "api-variable-878bb32109190da6",
+            "api-variable-9cd1507da48f403c",
+            "api-variable-c86fadf8f9e49af4",
+            "api-variable-c8b85408799dcaff",
+            "api-variable-c8d4728d106f3ab1",
+            "api-variable-d0a7a11c76c8e11f",
+            "api-variable-d830feed97228933",
+            "api-variable-e3f8d75e30d5f83d",
+            "api-variable-f4162058a46fdf61",
+            "api-variable-fe22b7cbe53f9676"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6b6c4a25679c1f28",
+          "anchor": "api-variable-6b6c4a25679c1f28",
+          "kind": "variable",
+          "name": "a0",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::a0",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::a0",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 132,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L132"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c8d4728d106f3ab1",
+          "anchor": "api-variable-c8d4728d106f3ab1",
+          "kind": "variable",
+          "name": "a_hold",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::a_hold",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::a_hold",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 146,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L146"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2894747288688d48",
+          "anchor": "api-variable-2894747288688d48",
+          "kind": "variable",
+          "name": "a_ramp",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::a_ramp",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::a_ramp",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 142,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L142"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d830feed97228933",
+          "anchor": "api-variable-d830feed97228933",
+          "kind": "variable",
+          "name": "end_a",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::end_a",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::end_a",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 151,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L151"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7371ceb7f1605c4b",
+          "anchor": "api-variable-7371ceb7f1605c4b",
+          "kind": "variable",
+          "name": "end_v",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::end_v",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::end_v",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 150,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L150"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c8b85408799dcaff",
+          "anchor": "api-variable-c8b85408799dcaff",
+          "kind": "variable",
+          "name": "end_x",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::end_x",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::end_x",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 149,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L149"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-57b261500e36901e",
+          "anchor": "api-variable-57b261500e36901e",
+          "kind": "variable",
+          "name": "j_ramp",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::j_ramp",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::j_ramp",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 133,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L133"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d0a7a11c76c8e11f",
+          "anchor": "api-variable-d0a7a11c76c8e11f",
+          "kind": "variable",
+          "name": "j_settle",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::j_settle",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::j_settle",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 134,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L134"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-19c75f32b73e84f6",
+          "anchor": "api-variable-19c75f32b73e84f6",
+          "kind": "variable",
+          "name": "t_hold",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::t_hold",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::t_hold",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 137,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L137"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c86fadf8f9e49af4",
+          "anchor": "api-variable-c86fadf8f9e49af4",
+          "kind": "variable",
+          "name": "t_ramp",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::t_ramp",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::t_ramp",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 136,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L136"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3cc126779e669136",
+          "anchor": "api-variable-3cc126779e669136",
+          "kind": "variable",
+          "name": "t_settle",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::t_settle",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::t_settle",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 138,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L138"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-350378710a845437",
+          "anchor": "api-variable-350378710a845437",
+          "kind": "variable",
+          "name": "total_time",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::total_time",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::total_time",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 148,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L148"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-1df2b59973f68942",
+          "anchor": "api-variable-1df2b59973f68942",
+          "kind": "variable",
+          "name": "v0",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::v0",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::v0",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 131,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L131"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2ab55e09617a6493",
+          "anchor": "api-variable-2ab55e09617a6493",
+          "kind": "variable",
+          "name": "v_hold",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::v_hold",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::v_hold",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 145,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L145"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9cd1507da48f403c",
+          "anchor": "api-variable-9cd1507da48f403c",
+          "kind": "variable",
+          "name": "v_ramp",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::v_ramp",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::v_ramp",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 141,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L141"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-fe22b7cbe53f9676",
+          "anchor": "api-variable-fe22b7cbe53f9676",
+          "kind": "variable",
+          "name": "valid",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::valid",
+          "signature": "bool velocity_profile::SCurveProfile::PrefixPlan::valid",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 153,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L153"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f4162058a46fdf61",
+          "anchor": "api-variable-f4162058a46fdf61",
+          "kind": "variable",
+          "name": "x0",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::x0",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::x0",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 130,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L130"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e3f8d75e30d5f83d",
+          "anchor": "api-variable-e3f8d75e30d5f83d",
+          "kind": "variable",
+          "name": "x_hold",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::x_hold",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::x_hold",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 144,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L144"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-878bb32109190da6",
+          "anchor": "api-variable-878bb32109190da6",
+          "kind": "variable",
+          "name": "x_ramp",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrefixPlan::x_ramp",
+          "signature": "float velocity_profile::SCurveProfile::PrefixPlan::x_ramp",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 140,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L140"
+          },
+          "parentId": "api-struct-1a9c0fc6c491ecdd",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-88b6ea6fa337a365",
+          "anchor": "api-function-88b6ea6fa337a365",
+          "kind": "function",
+          "name": "PrepareSide",
+          "qualifiedName": "velocity_profile::SCurveProfile::PrepareSide",
+          "signature": "SCurveProfile::SidePrepare velocity_profile::SCurveProfile::PrepareSide (float v0, float a0, float vm, float jm)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 217,
+            "column": 25,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L217"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-9b027554c84a1ea1",
+          "anchor": "api-class-9b027554c84a1ea1",
+          "kind": "class",
+          "name": "velocity_profile::SCurveProfile::SCurveAccel",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 75,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L75"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": null,
+          "references": [
+            "api-function-0863a191d7682d60",
+            "api-function-30c32c38e6bb9234",
+            "api-function-6fd793d9d84532d7",
+            "api-function-7d24409a92d025d5",
+            "api-function-a4b8c872ea86665b",
+            "api-function-d3b83dae1fae904c",
+            "api-function-d56559390440f262",
+            "api-variable-27ce48e97da6ee5c",
+            "api-variable-2f5db15c1482bbb6",
+            "api-variable-3ed0da201ad5d3af",
+            "api-variable-7c31ed7f1377c106",
+            "api-variable-7ee22ae30fbde926",
+            "api-variable-81d14083fbf1a0d7",
+            "api-variable-897199ae6028f013",
+            "api-variable-b642bb50bfed38f3",
+            "api-variable-cdf1d0db2831f918",
+            "api-variable-d9aa8e7ffee47f5b",
+            "api-variable-e94d8c5214e8d96a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0863a191d7682d60",
+          "anchor": "api-function-0863a191d7682d60",
+          "kind": "function",
+          "name": "SCurveAccel",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::SCurveAccel",
+          "signature": "velocity_profile::SCurveProfile::SCurveAccel::SCurveAccel ()",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 78,
+            "column": 9,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L78"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2f5db15c1482bbb6",
+          "anchor": "api-variable-2f5db15c1482bbb6",
+          "kind": "variable",
+          "name": "ap_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::ap_",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::ap_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 100,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L100"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-6fd793d9d84532d7",
+          "anchor": "api-function-6fd793d9d84532d7",
+          "kind": "function",
+          "name": "getAcceleration",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::getAcceleration",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::getAcceleration (float t) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 83,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L83"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-7d24409a92d025d5",
+          "anchor": "api-function-7d24409a92d025d5",
+          "kind": "function",
+          "name": "getDistance",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::getDistance",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::getDistance (float t) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 81,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L81"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d3b83dae1fae904c",
+          "anchor": "api-function-d3b83dae1fae904c",
+          "kind": "function",
+          "name": "getTotalDistance",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::getTotalDistance",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::getTotalDistance () const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 84,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L84"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-30c32c38e6bb9234",
+          "anchor": "api-function-30c32c38e6bb9234",
+          "kind": "function",
+          "name": "getTotalTime",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::getTotalTime",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::getTotalTime () const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 85,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L85"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-a4b8c872ea86665b",
+          "anchor": "api-function-a4b8c872ea86665b",
+          "kind": "function",
+          "name": "getVelocity",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::getVelocity",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::getVelocity (float t) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 82,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L82"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-27ce48e97da6ee5c",
+          "anchor": "api-variable-27ce48e97da6ee5c",
+          "kind": "variable",
+          "name": "has_uniform_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::has_uniform_",
+          "signature": "bool velocity_profile::SCurveProfile::SCurveAccel::has_uniform_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 88,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L88"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d56559390440f262",
+          "anchor": "api-function-d56559390440f262",
+          "kind": "function",
+          "name": "init",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::init",
+          "signature": "void velocity_profile::SCurveProfile::SCurveAccel::init (float vs, float vp, float am, float jm)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 79,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L79"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-cdf1d0db2831f918",
+          "anchor": "api-variable-cdf1d0db2831f918",
+          "kind": "variable",
+          "name": "jm_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::jm_",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::jm_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 90,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L90"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7c31ed7f1377c106",
+          "anchor": "api-variable-7c31ed7f1377c106",
+          "kind": "variable",
+          "name": "t1_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::t1_",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::t1_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 95,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L95"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-897199ae6028f013",
+          "anchor": "api-variable-897199ae6028f013",
+          "kind": "variable",
+          "name": "t2_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::t2_",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::t2_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 98,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L98"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7ee22ae30fbde926",
+          "anchor": "api-variable-7ee22ae30fbde926",
+          "kind": "variable",
+          "name": "total_distance_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::total_distance_",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::total_distance_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 93,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L93"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d9aa8e7ffee47f5b",
+          "anchor": "api-variable-d9aa8e7ffee47f5b",
+          "kind": "variable",
+          "name": "total_time_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::total_time_",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::total_time_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 92,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L92"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e94d8c5214e8d96a",
+          "anchor": "api-variable-e94d8c5214e8d96a",
+          "kind": "variable",
+          "name": "v1_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::v1_",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::v1_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 97,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L97"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b642bb50bfed38f3",
+          "anchor": "api-variable-b642bb50bfed38f3",
+          "kind": "variable",
+          "name": "vp_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::vp_",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::vp_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 101,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L101"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3ed0da201ad5d3af",
+          "anchor": "api-variable-3ed0da201ad5d3af",
+          "kind": "variable",
+          "name": "vs_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::vs_",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::vs_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 89,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L89"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-81d14083fbf1a0d7",
+          "anchor": "api-variable-81d14083fbf1a0d7",
+          "kind": "variable",
+          "name": "x1_",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveAccel::x1_",
+          "signature": "float velocity_profile::SCurveProfile::SCurveAccel::x1_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 96,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L96"
+          },
+          "parentId": "api-class-9b027554c84a1ea1",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-209631479033f05b",
+          "anchor": "api-function-209631479033f05b",
+          "kind": "function",
+          "name": "SCurveProfile",
+          "qualifiedName": "velocity_profile::SCurveProfile::SCurveProfile",
+          "signature": "velocity_profile::SCurveProfile::SCurveProfile (const Config &cfg, float xs, float vs, float as, float xe, float ve=0, float ae=0)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 64,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L64"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-d18cbe651a172cec",
+            "api-variable-0c139aae378e6f4a",
+            "api-variable-bb5bbb37e4e04285",
+            "api-variable-c14f6294a94f3d2a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-50c94d2ce5c45f50",
+          "anchor": "api-function-50c94d2ce5c45f50",
+          "kind": "function",
+          "name": "SampleCoreA",
+          "qualifiedName": "velocity_profile::SCurveProfile::SampleCoreA",
+          "signature": "float velocity_profile::SCurveProfile::SampleCoreA (const MotionCore &core, float t) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 237,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L237"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d2a26ff571d3fb20",
+          "anchor": "api-function-d2a26ff571d3fb20",
+          "kind": "function",
+          "name": "SampleCoreV",
+          "qualifiedName": "velocity_profile::SCurveProfile::SampleCoreV",
+          "signature": "float velocity_profile::SCurveProfile::SampleCoreV (const MotionCore &core, float t) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 236,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L236"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c24216521a7fe537",
+          "anchor": "api-function-c24216521a7fe537",
+          "kind": "function",
+          "name": "SampleCoreX",
+          "qualifiedName": "velocity_profile::SCurveProfile::SampleCoreX",
+          "signature": "float velocity_profile::SCurveProfile::SampleCoreX (const MotionCore &core, float t) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 235,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L235"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f790c87590dbbd2c",
+          "anchor": "api-function-f790c87590dbbd2c",
+          "kind": "function",
+          "name": "SamplePrefixA",
+          "qualifiedName": "velocity_profile::SCurveProfile::SamplePrefixA",
+          "signature": "float velocity_profile::SCurveProfile::SamplePrefixA (const PrefixPlan &plan, float t)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 215,
+            "column": 26,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L215"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2260a6d6c2a0ae4a",
+          "anchor": "api-function-2260a6d6c2a0ae4a",
+          "kind": "function",
+          "name": "SamplePrefixV",
+          "qualifiedName": "velocity_profile::SCurveProfile::SamplePrefixV",
+          "signature": "float velocity_profile::SCurveProfile::SamplePrefixV (const PrefixPlan &plan, float t)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 214,
+            "column": 26,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L214"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-8584b6613de533cf",
+          "anchor": "api-function-8584b6613de533cf",
+          "kind": "function",
+          "name": "SamplePrefixX",
+          "qualifiedName": "velocity_profile::SCurveProfile::SamplePrefixX",
+          "signature": "float velocity_profile::SCurveProfile::SamplePrefixX (const PrefixPlan &plan, float t)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 213,
+            "column": 26,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L213"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ef9da961ea215897",
+          "anchor": "api-function-ef9da961ea215897",
+          "kind": "function",
+          "name": "SampleSuffixA",
+          "qualifiedName": "velocity_profile::SCurveProfile::SampleSuffixA",
+          "signature": "float velocity_profile::SCurveProfile::SampleSuffixA (const SuffixPlan &suffix, float elapsed) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 233,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L233"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-79de6d5395bfb3df",
+          "anchor": "api-function-79de6d5395bfb3df",
+          "kind": "function",
+          "name": "SampleSuffixV",
+          "qualifiedName": "velocity_profile::SCurveProfile::SampleSuffixV",
+          "signature": "float velocity_profile::SCurveProfile::SampleSuffixV (const SuffixPlan &suffix, float elapsed) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 232,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L232"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-1d8a9fda9aa52ed0",
+          "anchor": "api-function-1d8a9fda9aa52ed0",
+          "kind": "function",
+          "name": "SampleSuffixX",
+          "qualifiedName": "velocity_profile::SCurveProfile::SampleSuffixX",
+          "signature": "float velocity_profile::SCurveProfile::SampleSuffixX (const SuffixPlan &suffix, float elapsed) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 231,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L231"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0e8e48029c40a15a",
+          "anchor": "api-function-0e8e48029c40a15a",
+          "kind": "function",
+          "name": "ShiftPrefixWithVelocityBias",
+          "qualifiedName": "velocity_profile::SCurveProfile::ShiftPrefixWithVelocityBias",
+          "signature": "SCurveProfile::PrefixPlan velocity_profile::SCurveProfile::ShiftPrefixWithVelocityBias (const PrefixPlan &plan, float x_origin, float velocity_bias)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 202,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L202"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-348c6b06eb5d75a0",
+          "anchor": "api-struct-348c6b06eb5d75a0",
+          "kind": "struct",
+          "name": "velocity_profile::SCurveProfile::SidePrepare",
+          "qualifiedName": "velocity_profile::SCurveProfile::SidePrepare",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 118,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L118"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": null,
+          "references": [
+            "api-variable-2d299a6187a1ce0e",
+            "api-variable-3590feabefc93c03",
+            "api-variable-7c8ac40eb63b1cc9",
+            "api-variable-d1dfc91896dc1b93",
+            "api-variable-db3bebacc4a40528",
+            "api-variable-f9a0fe9d2150afd6"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2d299a6187a1ce0e",
+          "anchor": "api-variable-2d299a6187a1ce0e",
+          "kind": "variable",
+          "name": "t_pre",
+          "qualifiedName": "velocity_profile::SCurveProfile::SidePrepare::t_pre",
+          "signature": "float velocity_profile::SCurveProfile::SidePrepare::t_pre",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 120,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L120"
+          },
+          "parentId": "api-struct-348c6b06eb5d75a0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-db3bebacc4a40528",
+          "anchor": "api-variable-db3bebacc4a40528",
+          "kind": "variable",
+          "name": "t_shift",
+          "qualifiedName": "velocity_profile::SCurveProfile::SidePrepare::t_shift",
+          "signature": "float velocity_profile::SCurveProfile::SidePrepare::t_shift",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 123,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L123"
+          },
+          "parentId": "api-struct-348c6b06eb5d75a0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d1dfc91896dc1b93",
+          "anchor": "api-variable-d1dfc91896dc1b93",
+          "kind": "variable",
+          "name": "v_base",
+          "qualifiedName": "velocity_profile::SCurveProfile::SidePrepare::v_base",
+          "signature": "float velocity_profile::SCurveProfile::SidePrepare::v_base",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 122,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L122"
+          },
+          "parentId": "api-struct-348c6b06eb5d75a0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f9a0fe9d2150afd6",
+          "anchor": "api-variable-f9a0fe9d2150afd6",
+          "kind": "variable",
+          "name": "valid",
+          "qualifiedName": "velocity_profile::SCurveProfile::SidePrepare::valid",
+          "signature": "bool velocity_profile::SCurveProfile::SidePrepare::valid",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 125,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L125"
+          },
+          "parentId": "api-struct-348c6b06eb5d75a0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3590feabefc93c03",
+          "anchor": "api-variable-3590feabefc93c03",
+          "kind": "variable",
+          "name": "vp_min",
+          "qualifiedName": "velocity_profile::SCurveProfile::SidePrepare::vp_min",
+          "signature": "float velocity_profile::SCurveProfile::SidePrepare::vp_min",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 124,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L124"
+          },
+          "parentId": "api-struct-348c6b06eb5d75a0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7c8ac40eb63b1cc9",
+          "anchor": "api-variable-7c8ac40eb63b1cc9",
+          "kind": "variable",
+          "name": "x_pre",
+          "qualifiedName": "velocity_profile::SCurveProfile::SidePrepare::x_pre",
+          "signature": "float velocity_profile::SCurveProfile::SidePrepare::x_pre",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 121,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L121"
+          },
+          "parentId": "api-struct-348c6b06eb5d75a0",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-41240d6d853fa475",
+          "anchor": "api-function-41240d6d853fa475",
+          "kind": "function",
+          "name": "Sign",
+          "qualifiedName": "velocity_profile::SCurveProfile::Sign",
+          "signature": "float velocity_profile::SCurveProfile::Sign (float value)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 197,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L197"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ad9815eb1099a074",
+          "anchor": "api-function-ad9815eb1099a074",
+          "kind": "function",
+          "name": "SolveCore",
+          "qualifiedName": "velocity_profile::SCurveProfile::SolveCore",
+          "signature": "SCurveProfile::SolveStatus velocity_profile::SCurveProfile::SolveCore (const Config &cfg, const BoundaryState &start, const BoundaryState &end, MotionCore *core) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 219,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L219"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-struct-d18cbe651a172cec"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-8cf6410fb6d0407f",
+          "anchor": "api-enum-8cf6410fb6d0407f",
+          "kind": "enum",
+          "name": "SolveStatus",
+          "qualifiedName": "velocity_profile::SCurveProfile::SolveStatus",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 104,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L104"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": [
+            {
+              "name": "kInternalError",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "kNeedsPrefixFallback",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "kSuccess",
+              "initializer": "",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-struct-83899ec23be24de8",
+          "anchor": "api-struct-83899ec23be24de8",
+          "kind": "struct",
+          "name": "velocity_profile::SCurveProfile::SuffixPlan",
+          "qualifiedName": "velocity_profile::SCurveProfile::SuffixPlan",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 189,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L189"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": null,
+          "references": [
+            "api-variable-2622b60c5237efdd",
+            "api-variable-6fae31123b9111e4",
+            "api-variable-9e58dcd145020ca6"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9e58dcd145020ca6",
+          "anchor": "api-variable-9e58dcd145020ca6",
+          "kind": "variable",
+          "name": "reverse_plan",
+          "qualifiedName": "velocity_profile::SCurveProfile::SuffixPlan::reverse_plan",
+          "signature": "PrefixPlan velocity_profile::SCurveProfile::SuffixPlan::reverse_plan",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 191,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L191"
+          },
+          "parentId": "api-struct-83899ec23be24de8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2622b60c5237efdd",
+          "anchor": "api-variable-2622b60c5237efdd",
+          "kind": "variable",
+          "name": "start_x",
+          "qualifiedName": "velocity_profile::SCurveProfile::SuffixPlan::start_x",
+          "signature": "float velocity_profile::SCurveProfile::SuffixPlan::start_x",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 192,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L192"
+          },
+          "parentId": "api-struct-83899ec23be24de8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6fae31123b9111e4",
+          "anchor": "api-variable-6fae31123b9111e4",
+          "kind": "variable",
+          "name": "valid",
+          "qualifiedName": "velocity_profile::SCurveProfile::SuffixPlan::valid",
+          "signature": "bool velocity_profile::SCurveProfile::SuffixPlan::valid",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 193,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L193"
+          },
+          "parentId": "api-struct-83899ec23be24de8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-37c481502595f8b1",
+          "anchor": "api-function-37c481502595f8b1",
+          "kind": "function",
+          "name": "TrimPrefix",
+          "qualifiedName": "velocity_profile::SCurveProfile::TrimPrefix",
+          "signature": "SCurveProfile::PrefixPlan velocity_profile::SCurveProfile::TrimPrefix (const PrefixPlan &plan, float cut_time)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 212,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L212"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-47e0c23c5709e38a",
+          "anchor": "api-function-47e0c23c5709e38a",
+          "kind": "function",
+          "name": "TryPrefixHandoff",
+          "qualifiedName": "velocity_profile::SCurveProfile::TryPrefixHandoff",
+          "signature": "bool velocity_profile::SCurveProfile::TryPrefixHandoff (const Config &cfg, const PrefixPlan &prefix_seed, const BoundaryState &end, PrefixPlan *prefix, MotionCore *core) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 224,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L224"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-struct-d18cbe651a172cec"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-26b5390f10c15793",
+          "anchor": "api-function-26b5390f10c15793",
+          "kind": "function",
+          "name": "TryVelocityClampRecovery",
+          "qualifiedName": "velocity_profile::SCurveProfile::TryVelocityClampRecovery",
+          "signature": "bool velocity_profile::SCurveProfile::TryVelocityClampRecovery (const Config &cfg, const BoundaryState &start, const BoundaryState &end, PrefixPlan *prefix, MotionCore *core) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 221,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L221"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-struct-d18cbe651a172cec"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-9667485503850a3b",
+          "anchor": "api-function-9667485503850a3b",
+          "kind": "function",
+          "name": "failureInfo",
+          "qualifiedName": "velocity_profile::SCurveProfile::failureInfo",
+          "signature": "const FailureInfo & velocity_profile::SCurveProfile::failureInfo () const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 72,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L72"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-struct-063359c545fb9fb0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f22df6cc1b5eec88",
+          "anchor": "api-variable-f22df6cc1b5eec88",
+          "kind": "variable",
+          "name": "failure_info_",
+          "qualifiedName": "velocity_profile::SCurveProfile::failure_info_",
+          "signature": "FailureInfo velocity_profile::SCurveProfile::failure_info_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 240,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L240"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-063359c545fb9fb0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c2c99b53fd84f02f",
+          "anchor": "api-function-c2c99b53fd84f02f",
+          "kind": "function",
+          "name": "getReverseAcceleration",
+          "qualifiedName": "velocity_profile::SCurveProfile::getReverseAcceleration",
+          "signature": "float velocity_profile::SCurveProfile::getReverseAcceleration (const MotionCore &core, float tau) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 230,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L230"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-95207cb49838dd5a",
+          "anchor": "api-function-95207cb49838dd5a",
+          "kind": "function",
+          "name": "getReverseDistance",
+          "qualifiedName": "velocity_profile::SCurveProfile::getReverseDistance",
+          "signature": "float velocity_profile::SCurveProfile::getReverseDistance (const MotionCore &core, float tau) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 228,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L228"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f239210e0e7f924d",
+          "anchor": "api-function-f239210e0e7f924d",
+          "kind": "function",
+          "name": "getReverseVelocity",
+          "qualifiedName": "velocity_profile::SCurveProfile::getReverseVelocity",
+          "signature": "float velocity_profile::SCurveProfile::getReverseVelocity (const MotionCore &core, float tau) const",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 229,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L229"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-111f24ae2a9ba02e",
+          "anchor": "api-function-111f24ae2a9ba02e",
+          "kind": "function",
+          "name": "getTotalTime",
+          "qualifiedName": "velocity_profile::SCurveProfile::getTotalTime",
+          "signature": "float velocity_profile::SCurveProfile::getTotalTime () const override",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 70,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L70"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-bf554ebcf3add7bc",
+          "anchor": "api-variable-bf554ebcf3add7bc",
+          "kind": "variable",
+          "name": "main_core_",
+          "qualifiedName": "velocity_profile::SCurveProfile::main_core_",
+          "signature": "MotionCore velocity_profile::SCurveProfile::main_core_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 242,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L242"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3bfa5aa0ca45a4cf",
+          "anchor": "api-variable-3bfa5aa0ca45a4cf",
+          "kind": "variable",
+          "name": "prefix_",
+          "qualifiedName": "velocity_profile::SCurveProfile::prefix_",
+          "signature": "PrefixPlan velocity_profile::SCurveProfile::prefix_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 241,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L241"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-3261c1f53cfb130b",
+          "anchor": "api-function-3261c1f53cfb130b",
+          "kind": "function",
+          "name": "success",
+          "qualifiedName": "velocity_profile::SCurveProfile::success",
+          "signature": "bool velocity_profile::SCurveProfile::success () const override",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 71,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L71"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-70a0162e6ab60dd1",
+          "anchor": "api-variable-70a0162e6ab60dd1",
+          "kind": "variable",
+          "name": "success_",
+          "qualifiedName": "velocity_profile::SCurveProfile::success_",
+          "signature": "bool velocity_profile::SCurveProfile::success_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 239,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L239"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-ad90c726cdbf0e21",
+          "anchor": "api-variable-ad90c726cdbf0e21",
+          "kind": "variable",
+          "name": "suffix_",
+          "qualifiedName": "velocity_profile::SCurveProfile::suffix_",
+          "signature": "SuffixPlan velocity_profile::SCurveProfile::suffix_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 243,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L243"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6d2360ae78d917dc",
+          "anchor": "api-variable-6d2360ae78d917dc",
+          "kind": "variable",
+          "name": "total_time_",
+          "qualifiedName": "velocity_profile::SCurveProfile::total_time_",
+          "signature": "float velocity_profile::SCurveProfile::total_time_",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.hpp",
+            "line": 244,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.hpp#L244"
+          },
+          "parentId": "api-class-69ff2d1e68bd8f76",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-bd307d3c23aed3cc",
+          "anchor": "api-namespace-bd307d3c23aed3cc",
+          "kind": "namespace",
+          "name": "velocity_profile::anonymous_namespace{s_curve.cpp}",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 12,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L12"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-define-5069b29308de3ff6",
+            "api-function-56d322cc37f4294d",
+            "api-function-9d023b5deb707200",
+            "api-function-a36c5866040c1c64",
+            "api-function-b96f8990b8422f2d",
+            "api-struct-0b66d84757003fe2",
+            "api-struct-1560f4e57cf21556",
+            "api-struct-5c2e8c97bf1132da",
+            "api-struct-9438bbeca021b8c1",
+            "api-variable-0bc74b49f47fdad5",
+            "api-variable-130183e9751f80b3",
+            "api-variable-3ca184d58ab88d1c",
+            "api-variable-49529944216eba5f",
+            "api-variable-5347530fa40942f4",
+            "api-variable-6850d74036d70671",
+            "api-variable-7b34415167f06314",
+            "api-variable-8fc2354f94967719",
+            "api-variable-9002b35c30419e88",
+            "api-variable-9fba8c26ff636b92",
+            "api-variable-a027ea2a7929242c",
+            "api-variable-a6e17b07e44b3fe2",
+            "api-variable-b5d7794fe8614446",
+            "api-variable-b95955bd9ce14749",
+            "api-variable-be8221376af73301",
+            "api-variable-c1c62fd13f5001ed",
+            "api-variable-ca74dd39272aa754",
+            "api-variable-d3935ade1e1f9dcb",
+            "api-variable-dcdfaac3b7ec7393",
+            "api-variable-e79ed2b5ee1d6760",
+            "api-variable-e9f0cfd673d686c3",
+            "api-variable-f10f5eedd0db4fbd",
+            "api-variable-f8063c6b370cc8fa"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-9d023b5deb707200",
+          "anchor": "api-function-9d023b5deb707200",
+          "kind": "function",
+          "name": "BuildFastEvalProfile",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::BuildFastEvalProfile",
+          "signature": "FastEvalProfile velocity_profile::anonymous_namespace{s_curve.cpp}::BuildFastEvalProfile (const FastEvalConfig &cfg, const float v_base, const float vp)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 59,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L59"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-a36c5866040c1c64",
+            "api-struct-0b66d84757003fe2",
+            "api-struct-5c2e8c97bf1132da",
+            "api-variable-0bc74b49f47fdad5",
+            "api-variable-3ca184d58ab88d1c",
+            "api-variable-49529944216eba5f",
+            "api-variable-6850d74036d70671",
+            "api-variable-8fc2354f94967719",
+            "api-variable-9002b35c30419e88",
+            "api-variable-9fba8c26ff636b92",
+            "api-variable-a027ea2a7929242c",
+            "api-variable-b5d7794fe8614446",
+            "api-variable-b95955bd9ce14749",
+            "api-variable-be8221376af73301",
+            "api-variable-ca74dd39272aa754",
+            "api-variable-dcdfaac3b7ec7393",
+            "api-variable-e79ed2b5ee1d6760",
+            "api-variable-e9f0cfd673d686c3",
+            "api-variable-f8063c6b370cc8fa"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-56d322cc37f4294d",
+          "anchor": "api-function-56d322cc37f4294d",
+          "kind": "function",
+          "name": "EvaluateDistanceDelta",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::EvaluateDistanceDelta",
+          "signature": "FastEvalResult velocity_profile::anonymous_namespace{s_curve.cpp}::EvaluateDistanceDelta (const FastEvalConfig &cfg, const FastEvalSide &start, const FastEvalSide &end, const float len, const float vp)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 136,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L136"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-a36c5866040c1c64",
+            "api-struct-1560f4e57cf21556",
+            "api-struct-5c2e8c97bf1132da",
+            "api-struct-9438bbeca021b8c1",
+            "api-variable-130183e9751f80b3",
+            "api-variable-c1c62fd13f5001ed",
+            "api-variable-f10f5eedd0db4fbd"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b96f8990b8422f2d",
+          "anchor": "api-function-b96f8990b8422f2d",
+          "kind": "function",
+          "name": "EvaluateFastEvalDistance",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::EvaluateFastEvalDistance",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::EvaluateFastEvalDistance (const FastEvalConfig &cfg, const FastEvalProfile &profile, const float t)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 101,
+            "column": 8,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L101"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-a36c5866040c1c64",
+            "api-struct-0b66d84757003fe2",
+            "api-struct-5c2e8c97bf1132da",
+            "api-variable-3ca184d58ab88d1c",
+            "api-variable-49529944216eba5f",
+            "api-variable-6850d74036d70671",
+            "api-variable-8fc2354f94967719",
+            "api-variable-9002b35c30419e88",
+            "api-variable-9fba8c26ff636b92",
+            "api-variable-b5d7794fe8614446",
+            "api-variable-b95955bd9ce14749",
+            "api-variable-be8221376af73301",
+            "api-variable-ca74dd39272aa754",
+            "api-variable-d3935ade1e1f9dcb",
+            "api-variable-dcdfaac3b7ec7393",
+            "api-variable-e79ed2b5ee1d6760",
+            "api-variable-f8063c6b370cc8fa"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-a36c5866040c1c64",
+          "anchor": "api-function-a36c5866040c1c64",
+          "kind": "function",
+          "name": "EvaluateSideDistance",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::EvaluateSideDistance",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::EvaluateSideDistance (const FastEvalConfig &cfg, const FastEvalSide &side, const float vp)",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 125,
+            "column": 8,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L125"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-56d322cc37f4294d",
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d",
+            "api-struct-1560f4e57cf21556",
+            "api-struct-5c2e8c97bf1132da",
+            "api-variable-5347530fa40942f4",
+            "api-variable-6850d74036d70671",
+            "api-variable-7b34415167f06314",
+            "api-variable-a6e17b07e44b3fe2"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-5c2e8c97bf1132da",
+          "anchor": "api-struct-5c2e8c97bf1132da",
+          "kind": "struct",
+          "name": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 23,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L23"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": null,
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d",
+            "api-variable-0bc74b49f47fdad5",
+            "api-variable-a027ea2a7929242c",
+            "api-variable-b5d7794fe8614446",
+            "api-variable-ca74dd39272aa754",
+            "api-variable-e9f0cfd673d686c3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-ca74dd39272aa754",
+          "anchor": "api-variable-ca74dd39272aa754",
+          "kind": "variable",
+          "name": "am",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig::am",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig::am",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 25,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L25"
+          },
+          "parentId": "api-struct-5c2e8c97bf1132da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0bc74b49f47fdad5",
+          "anchor": "api-variable-0bc74b49f47fdad5",
+          "kind": "variable",
+          "name": "am_square",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig::am_square",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig::am_square",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 27,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L27"
+          },
+          "parentId": "api-struct-5c2e8c97bf1132da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e9f0cfd673d686c3",
+          "anchor": "api-variable-e9f0cfd673d686c3",
+          "kind": "variable",
+          "name": "inv_double_am",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig::inv_double_am",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig::inv_double_am",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 29,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L29"
+          },
+          "parentId": "api-struct-5c2e8c97bf1132da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a027ea2a7929242c",
+          "anchor": "api-variable-a027ea2a7929242c",
+          "kind": "variable",
+          "name": "jerk_ramp_time",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig::jerk_ramp_time",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig::jerk_ramp_time",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 28,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L28"
+          },
+          "parentId": "api-struct-5c2e8c97bf1132da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b5d7794fe8614446",
+          "anchor": "api-variable-b5d7794fe8614446",
+          "kind": "variable",
+          "name": "jm",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig::jm",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalConfig::jm",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 26,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L26"
+          },
+          "parentId": "api-struct-5c2e8c97bf1132da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-0b66d84757003fe2",
+          "anchor": "api-struct-0b66d84757003fe2",
+          "kind": "struct",
+          "name": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 39,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L39"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": null,
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-a36c5866040c1c64",
+            "api-function-b96f8990b8422f2d",
+            "api-variable-3ca184d58ab88d1c",
+            "api-variable-49529944216eba5f",
+            "api-variable-6850d74036d70671",
+            "api-variable-8fc2354f94967719",
+            "api-variable-9002b35c30419e88",
+            "api-variable-9fba8c26ff636b92",
+            "api-variable-b95955bd9ce14749",
+            "api-variable-be8221376af73301",
+            "api-variable-f8063c6b370cc8fa"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-be8221376af73301",
+          "anchor": "api-variable-be8221376af73301",
+          "kind": "variable",
+          "name": "has_uniform",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::has_uniform",
+          "signature": "bool velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::has_uniform",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 41,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L41"
+          },
+          "parentId": "api-struct-0b66d84757003fe2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9fba8c26ff636b92",
+          "anchor": "api-variable-9fba8c26ff636b92",
+          "kind": "variable",
+          "name": "t1",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::t1",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::t1",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 44,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L44"
+          },
+          "parentId": "api-struct-0b66d84757003fe2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-49529944216eba5f",
+          "anchor": "api-variable-49529944216eba5f",
+          "kind": "variable",
+          "name": "t2",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::t2",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::t2",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 45,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L45"
+          },
+          "parentId": "api-struct-0b66d84757003fe2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6850d74036d70671",
+          "anchor": "api-variable-6850d74036d70671",
+          "kind": "variable",
+          "name": "total_distance",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::total_distance",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::total_distance",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 49,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L49"
+          },
+          "parentId": "api-struct-0b66d84757003fe2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-a36c5866040c1c64",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9002b35c30419e88",
+          "anchor": "api-variable-9002b35c30419e88",
+          "kind": "variable",
+          "name": "total_time",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::total_time",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::total_time",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 48,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L48"
+          },
+          "parentId": "api-struct-0b66d84757003fe2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3ca184d58ab88d1c",
+          "anchor": "api-variable-3ca184d58ab88d1c",
+          "kind": "variable",
+          "name": "v1",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::v1",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::v1",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 47,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L47"
+          },
+          "parentId": "api-struct-0b66d84757003fe2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f8063c6b370cc8fa",
+          "anchor": "api-variable-f8063c6b370cc8fa",
+          "kind": "variable",
+          "name": "v_base",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::v_base",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::v_base",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 42,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L42"
+          },
+          "parentId": "api-struct-0b66d84757003fe2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b95955bd9ce14749",
+          "anchor": "api-variable-b95955bd9ce14749",
+          "kind": "variable",
+          "name": "vp",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::vp",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::vp",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 43,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L43"
+          },
+          "parentId": "api-struct-0b66d84757003fe2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-8fc2354f94967719",
+          "anchor": "api-variable-8fc2354f94967719",
+          "kind": "variable",
+          "name": "x1",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::x1",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalProfile::x1",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 46,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L46"
+          },
+          "parentId": "api-struct-0b66d84757003fe2",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-9438bbeca021b8c1",
+          "anchor": "api-struct-9438bbeca021b8c1",
+          "kind": "struct",
+          "name": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalResult",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalResult",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 52,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L52"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": null,
+          "references": [
+            "api-function-56d322cc37f4294d",
+            "api-variable-130183e9751f80b3",
+            "api-variable-c1c62fd13f5001ed",
+            "api-variable-f10f5eedd0db4fbd"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c1c62fd13f5001ed",
+          "anchor": "api-variable-c1c62fd13f5001ed",
+          "kind": "variable",
+          "name": "delta",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalResult::delta",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalResult::delta",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 56,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L56"
+          },
+          "parentId": "api-struct-9438bbeca021b8c1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-56d322cc37f4294d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f10f5eedd0db4fbd",
+          "anchor": "api-variable-f10f5eedd0db4fbd",
+          "kind": "variable",
+          "name": "dx1",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalResult::dx1",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalResult::dx1",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 54,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L54"
+          },
+          "parentId": "api-struct-9438bbeca021b8c1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-56d322cc37f4294d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-130183e9751f80b3",
+          "anchor": "api-variable-130183e9751f80b3",
+          "kind": "variable",
+          "name": "dx3",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalResult::dx3",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalResult::dx3",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 55,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L55"
+          },
+          "parentId": "api-struct-9438bbeca021b8c1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-56d322cc37f4294d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-1560f4e57cf21556",
+          "anchor": "api-struct-1560f4e57cf21556",
+          "kind": "struct",
+          "name": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalSide",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalSide",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 32,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L32"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": null,
+          "references": [
+            "api-function-a36c5866040c1c64",
+            "api-variable-5347530fa40942f4",
+            "api-variable-7b34415167f06314",
+            "api-variable-a6e17b07e44b3fe2"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7b34415167f06314",
+          "anchor": "api-variable-7b34415167f06314",
+          "kind": "variable",
+          "name": "t_shift",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalSide::t_shift",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalSide::t_shift",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 36,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L36"
+          },
+          "parentId": "api-struct-1560f4e57cf21556",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-a36c5866040c1c64"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a6e17b07e44b3fe2",
+          "anchor": "api-variable-a6e17b07e44b3fe2",
+          "kind": "variable",
+          "name": "v_base",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalSide::v_base",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalSide::v_base",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 34,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L34"
+          },
+          "parentId": "api-struct-1560f4e57cf21556",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-a36c5866040c1c64"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5347530fa40942f4",
+          "anchor": "api-variable-5347530fa40942f4",
+          "kind": "variable",
+          "name": "x_pre",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalSide::x_pre",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::FastEvalSide::x_pre",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 35,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L35"
+          },
+          "parentId": "api-struct-1560f4e57cf21556",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-a36c5866040c1c64"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-8fa8bb8f71185274",
+          "anchor": "api-variable-8fa8bb8f71185274",
+          "kind": "variable",
+          "name": "kDistanceTolerance",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::kDistanceTolerance",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::kDistanceTolerance",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 18,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L18"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-define-5069b29308de3ff6"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-fdd35890e46941ad",
+          "anchor": "api-variable-fdd35890e46941ad",
+          "kind": "variable",
+          "name": "kEpsilon",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::kEpsilon",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::kEpsilon",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 17,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L17"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-dcdfaac3b7ec7393",
+          "anchor": "api-variable-dcdfaac3b7ec7393",
+          "kind": "variable",
+          "name": "kHalf",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::kHalf",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::kHalf",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 14,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L14"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e79ed2b5ee1d6760",
+          "anchor": "api-variable-e79ed2b5ee1d6760",
+          "kind": "variable",
+          "name": "kOneSixth",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::kOneSixth",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::kOneSixth",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 15,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L15"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-9d023b5deb707200",
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-07fe618af602dfdb",
+          "anchor": "api-variable-07fe618af602dfdb",
+          "kind": "variable",
+          "name": "kPeakVelocityBisectIterations",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::kPeakVelocityBisectIterations",
+          "signature": "int velocity_profile::anonymous_namespace{s_curve.cpp}::kPeakVelocityBisectIterations",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 21,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L21"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-933da4521a97c00d",
+          "anchor": "api-variable-933da4521a97c00d",
+          "kind": "variable",
+          "name": "kRecoveryRefineSteps",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::kRecoveryRefineSteps",
+          "signature": "int velocity_profile::anonymous_namespace{s_curve.cpp}::kRecoveryRefineSteps",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 20,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L20"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-72fd267d7399ab49",
+          "anchor": "api-variable-72fd267d7399ab49",
+          "kind": "variable",
+          "name": "kRecoverySearchSteps",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::kRecoverySearchSteps",
+          "signature": "int velocity_profile::anonymous_namespace{s_curve.cpp}::kRecoverySearchSteps",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 19,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L19"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d3935ade1e1f9dcb",
+          "anchor": "api-variable-d3935ade1e1f9dcb",
+          "kind": "variable",
+          "name": "kZero",
+          "qualifiedName": "velocity_profile::anonymous_namespace{s_curve.cpp}::kZero",
+          "signature": "float velocity_profile::anonymous_namespace{s_curve.cpp}::kZero",
+          "description": "",
+          "location": {
+            "path": "SCurve/src/s_curve.cpp",
+            "line": 16,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile/blob/main/SCurve/src/s_curve.cpp#L16"
+          },
+          "parentId": "api-namespace-bd307d3c23aed3cc",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-b96f8990b8422f2d"
+          ],
+          "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-69ff2d1e68bd8f76",
+          "baseId": null,
+          "baseQualifiedName": "IVelocityProfile",
+          "access": "public",
+          "virtual": false
+        }
+      ],
+      "symbolCount": 178,
+      "documentedSymbolCount": 2
+    }
+  ]
+}
