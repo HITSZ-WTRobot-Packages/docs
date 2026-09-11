@@ -8901,7 +8901,7 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "34 of 66 public API symbols have no description."
+          "message": "34 of 67 public API symbols have no description."
         }
       ],
       "symbols": [
@@ -9017,37 +9017,38 @@
           "references": [
             "api-class-72982dabe4d48310",
             "api-function-1a74e3ee136d02fd",
+            "api-function-23b077cf2a7bc205",
+            "api-function-58a023bb2c78a720",
             "api-function-625f9a3fd9e9e933",
             "api-function-6a25f4daf9c065b3",
+            "api-function-714e8f77f56b097e",
             "api-function-8f94bc10d9a9fc84",
+            "api-function-a04999a186605538",
             "api-function-a55d60bd3d40c1ed",
             "api-function-a5f87588e70c9f3f",
-            "api-function-b95e73a9d6c435be",
             "api-function-b9c71115b28ae1bb",
             "api-function-c3b6486c0ac999be",
             "api-function-c55a1b0205517273",
-            "api-function-e46e8019343b9a38",
-            "api-function-eee51853c5e45e07",
-            "api-function-f0ee76166e5d5157",
-            "api-function-f368929596051d87",
+            "api-function-e06ff3f97551a0c3",
+            "api-function-f7cb354a613baaef",
             "api-function-f7d18e0b9911997b",
             "api-struct-46464a492c769750",
             "api-struct-9fd2f8626a30c93b",
             "api-struct-decab08f2bf8b0af",
             "api-typedef-19d84ce6d5afecb4",
+            "api-variable-0670403dbeaa1c14",
             "api-variable-127508cee33c2d01",
-            "api-variable-36c02efbd6eaaa90",
-            "api-variable-55d4091fc32c42dd",
+            "api-variable-168d9498d7c6df0c",
+            "api-variable-2728f39ba7e95d67",
+            "api-variable-3da1bacdb2159ddb",
+            "api-variable-4b024160d2a164d8",
             "api-variable-762218243adfe355",
             "api-variable-8c7ed98fdcaae909",
-            "api-variable-9b43c34a46c6b2d6",
+            "api-variable-97cc4212010e029b",
             "api-variable-ba639b61dfa9b66d",
-            "api-variable-ba77443584d5212f",
             "api-variable-d1dd56a9632cf75d",
             "api-variable-db35a3e4e7653728",
-            "api-variable-dbf0c9e9207861b8",
             "api-variable-dc69899510394ae3",
-            "api-variable-e3a98e1a1917768e",
             "api-variable-f4ddd07227aaf838"
           ],
           "enumValues": []
@@ -9174,8 +9175,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-f368929596051d87",
-          "anchor": "api-function-f368929596051d87",
+          "id": "api-function-58a023bb2c78a720",
+          "anchor": "api-function-58a023bb2c78a720",
           "kind": "function",
           "name": "LocEKF",
           "qualifiedName": "chassis::loc::LocEKF::LocEKF",
@@ -9183,9 +9184,9 @@
           "description": "motion 作为里程计输入来源的 Motion cfg 滤波配置 gyro 提供 yaw / wz 观测的陀螺仪 delta_ticks update() 两次调用之间预计相隔多少个 HAL tick 若初始状态依赖首次外部观测，推荐先让 Motion 独立运行，待拿到第一帧雷达位姿和 第一帧陀螺仪数据，并准备好 cfg.x_init 等初始条件后，再构造本对象。",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 408,
+            "line": 418,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L408"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L418"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -9909,7 +9910,7 @@
             "const": false
           },
           "references": [
-            "api-function-f368929596051d87"
+            "api-function-58a023bb2c78a720"
           ],
           "enumValues": []
         },
@@ -9938,8 +9939,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-dbf0c9e9207861b8",
-          "anchor": "api-variable-dbf0c9e9207861b8",
+          "id": "api-variable-0670403dbeaa1c14",
+          "anchor": "api-variable-0670403dbeaa1c14",
           "kind": "variable",
           "name": "idx_",
           "qualifiedName": "chassis::loc::LocEKF::idx_",
@@ -9947,9 +9948,9 @@
           "description": "当前对外可见缓冲区下标",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 444,
+            "line": 454,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L444"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L454"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -9962,8 +9963,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-55d4091fc32c42dd",
-          "anchor": "api-variable-55d4091fc32c42dd",
+          "id": "api-variable-97cc4212010e029b",
+          "anchor": "api-variable-97cc4212010e029b",
           "kind": "variable",
           "name": "in_body",
           "qualifiedName": "chassis::loc::LocEKF::in_body",
@@ -9971,9 +9972,9 @@
           "description": "",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 440,
+            "line": 450,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L440"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L450"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -9986,8 +9987,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-36c02efbd6eaaa90",
-          "anchor": "api-variable-36c02efbd6eaaa90",
+          "id": "api-variable-3da1bacdb2159ddb",
+          "anchor": "api-variable-3da1bacdb2159ddb",
           "kind": "variable",
           "name": "in_world",
           "qualifiedName": "chassis::loc::LocEKF::in_world",
@@ -9995,9 +9996,9 @@
           "description": "",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 435,
+            "line": 445,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L435"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L445"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -10010,8 +10011,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-ba77443584d5212f",
-          "anchor": "api-variable-ba77443584d5212f",
+          "id": "api-variable-168d9498d7c6df0c",
+          "anchor": "api-variable-168d9498d7c6df0c",
           "kind": "variable",
           "name": "in_world",
           "qualifiedName": "chassis::loc::LocEKF::in_world",
@@ -10019,9 +10020,9 @@
           "description": "",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 441,
+            "line": 451,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L441"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L451"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -10154,8 +10155,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-e46e8019343b9a38",
-          "anchor": "api-function-e46e8019343b9a38",
+          "id": "api-function-a04999a186605538",
+          "anchor": "api-function-a04999a186605538",
           "kind": "function",
           "name": "next_idx",
           "qualifiedName": "chassis::loc::LocEKF::next_idx",
@@ -10163,9 +10164,9 @@
           "description": "只有两个缓冲区，因此这里直接在 0 / 1 之间切换。",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 447,
+            "line": 457,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L447"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L457"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -10202,8 +10203,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-b95e73a9d6c435be",
-          "anchor": "api-function-b95e73a9d6c435be",
+          "id": "api-function-f7cb354a613baaef",
+          "anchor": "api-function-f7cb354a613baaef",
           "kind": "function",
           "name": "postureInWorld",
           "qualifiedName": "chassis::loc::LocEKF::postureInWorld",
@@ -10211,9 +10212,9 @@
           "description": "双缓冲读取，避免读到 update 中间态。",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 427,
+            "line": 437,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L427"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L437"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -10226,8 +10227,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-9b43c34a46c6b2d6",
-          "anchor": "api-variable-9b43c34a46c6b2d6",
+          "id": "api-variable-2728f39ba7e95d67",
+          "anchor": "api-variable-2728f39ba7e95d67",
           "kind": "variable",
           "name": "posture_",
           "qualifiedName": "chassis::loc::LocEKF::posture_",
@@ -10235,9 +10236,9 @@
           "description": "",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 436,
+            "line": 446,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L436"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L446"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -10247,6 +10248,32 @@
             "const": false
           },
           "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-23b077cf2a7bc205",
+          "anchor": "api-function-23b077cf2a7bc205",
+          "kind": "function",
+          "name": "resetState",
+          "qualifiedName": "chassis::loc::LocEKF::resetState",
+          "signature": "void chassis::loc::LocEKF< StateBufferCapacity, InputBufferCapacity >::resetState (const Config &cfg)",
+          "description": "用新的初始状态和协方差重置 EKF，并丢弃旧的回放历史。",
+          "location": {
+            "path": "Localization/EKF/LocEKF.hpp",
+            "line": 400,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L400"
+          },
+          "parentId": "api-class-56362f135ba0f2a1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-typedef-19d84ce6d5afecb4"
+          ],
           "enumValues": []
         },
         {
@@ -10444,8 +10471,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-eee51853c5e45e07",
-          "anchor": "api-function-eee51853c5e45e07",
+          "id": "api-function-714e8f77f56b097e",
+          "anchor": "api-function-714e8f77f56b097e",
           "kind": "function",
           "name": "velocityInBody",
           "qualifiedName": "chassis::loc::LocEKF::velocityInBody",
@@ -10453,9 +10480,9 @@
           "description": "双缓冲读取，避免读到 update 中间态。",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 417,
+            "line": 427,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L417"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L427"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -10468,8 +10495,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-f0ee76166e5d5157",
-          "anchor": "api-function-f0ee76166e5d5157",
+          "id": "api-function-e06ff3f97551a0c3",
+          "anchor": "api-function-e06ff3f97551a0c3",
           "kind": "function",
           "name": "velocityInWorld",
           "qualifiedName": "chassis::loc::LocEKF::velocityInWorld",
@@ -10477,9 +10504,9 @@
           "description": "双缓冲读取，避免读到 update 中间态。",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 422,
+            "line": 432,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L422"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L432"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -10492,8 +10519,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-e3a98e1a1917768e",
-          "anchor": "api-variable-e3a98e1a1917768e",
+          "id": "api-variable-4b024160d2a164d8",
+          "anchor": "api-variable-4b024160d2a164d8",
           "kind": "variable",
           "name": "velocity_",
           "qualifiedName": "chassis::loc::LocEKF::velocity_",
@@ -10501,9 +10528,9 @@
           "description": "",
           "location": {
             "path": "Localization/EKF/LocEKF.hpp",
-            "line": 442,
+            "line": 452,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L442"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/ChassisController/blob/main/Localization/EKF/LocEKF.hpp#L452"
           },
           "parentId": "api-class-56362f135ba0f2a1",
           "member": {
@@ -10564,8 +10591,8 @@
           "virtual": false
         }
       ],
-      "symbolCount": 67,
-      "documentedSymbolCount": 33
+      "symbolCount": 68,
+      "documentedSymbolCount": 34
     },
     {
       "targetKind": "package",

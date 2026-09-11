@@ -102,10 +102,10 @@
       "displayName": "ChassisController",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/ChassisController.git",
       "branch": "main",
-      "sha": "725be59228a4c0aa62c1b04c01fdadee257a4feb",
-      "shortSha": "725be59228a4",
-      "producerFingerprint": "609bf5f34e4bbf77bfd8088f0a22378748dd5193b86ee0f7ed3b9a83f34dc846",
-      "totalBytes": 520985,
+      "sha": "7691678de58ff43a983ddd4ecab599bd24d36d13",
+      "shortSha": "7691678de58f",
+      "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
+      "totalBytes": 522095,
       "files": [
         {
           "path": "Chassis/Steering4/README.md",
@@ -147,14 +147,14 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 432494,
-          "sha256": "3f807eb4f569464ac7bd6666fda2c9f1cf71314cc8a18ae9f0ebd5a66031e323",
+          "bytes": 433604,
+          "sha256": "77a78162624b79463342631ebd7900d4b38ae53d14e39eafd6594af99ccc4d21",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
           "bytes": 2542,
-          "sha256": "23880dc4ef3f3a30e787cd93da9cc57d085cbc60787a5edaf12faa531870801a",
+          "sha256": "78817a90f5840c537fcfabaf706c92a177d2b8cece731422de496bad0d4f51c9",
           "kind": "package-catalog"
         }
       ],
