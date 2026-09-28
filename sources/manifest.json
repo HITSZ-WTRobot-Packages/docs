@@ -47,10 +47,10 @@
       "displayName": "BasicComponents",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents.git",
       "branch": "main",
-      "sha": "cc900afbc7adc2eda516098c10926c8e7f0c4bba",
-      "shortSha": "cc900afbc7ad",
+      "sha": "e1cb2e18219d88b89ac8639d2c900964d4e49990",
+      "shortSha": "e1cb2e18219d",
       "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
-      "totalBytes": 835223,
+      "totalBytes": 837380,
       "files": [
         {
           "path": "LICENSE",
@@ -80,14 +80,14 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 787055,
-          "sha256": "1ca9deb680886e089ece4eb08d56251dcf45cf6dffd92dbbee9d7d67ccfd7404",
+          "bytes": 789212,
+          "sha256": "e498eefd6e1f4d9f65b8c9db24aa527ccb4ce4093a04027554a025b5589e9459",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
           "bytes": 4947,
-          "sha256": "16df153fa63b65c5a608e0ee61bda5cc998e3aebcffe862535c8052e41133770",
+          "sha256": "9cf2df9c82b687960cae96c37c70a5abf8820813953cfafe3c1d40b56ef16102",
           "kind": "package-catalog"
         }
       ],

@@ -5361,13 +5361,13 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "7 of 11 public API symbols have no description."
+          "message": "8 of 13 public API symbols have no description."
         }
       ],
       "symbols": [
         {
-          "id": "api-class-b65fbbf394a16164",
-          "anchor": "api-class-b65fbbf394a16164",
+          "id": "api-class-afbff33bda1526db",
+          "anchor": "api-class-afbff33bda1526db",
           "kind": "class",
           "name": "AtomicFlagGuard",
           "qualifiedName": "AtomicFlagGuard",
@@ -5375,37 +5375,39 @@
           "description": "",
           "location": {
             "path": "libs/concurrency/AtomicFlagLock.hpp",
-            "line": 37,
+            "line": 46,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L37"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L46"
           },
           "parentId": null,
           "member": null,
           "references": [
             "api-class-8133071b3165b363",
-            "api-function-0b5fe39522847ad1",
-            "api-function-303e429b8c915a8e",
-            "api-function-b53addba947c943e",
-            "api-function-c565324b9540051c",
-            "api-variable-0e88c68870fa75dd"
+            "api-function-21894bd7363d777e",
+            "api-function-38c47d6016699abd",
+            "api-function-3e73db358ae8724e",
+            "api-function-46b68b2cd51ddc0f",
+            "api-function-e32483da7cd092e1",
+            "api-variable-2b645191ade3d07e",
+            "api-variable-ccf8100a8d18d12b"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-b53addba947c943e",
-          "anchor": "api-function-b53addba947c943e",
+          "id": "api-function-21894bd7363d777e",
+          "anchor": "api-function-21894bd7363d777e",
           "kind": "function",
           "name": "AtomicFlagGuard",
           "qualifiedName": "AtomicFlagGuard::AtomicFlagGuard",
           "signature": "AtomicFlagGuard::AtomicFlagGuard (AtomicFlagLock &lock) noexcept",
-          "description": "RAII 封装：构造时加锁，析构时释放。",
+          "description": "RAII 封装：构造时尝试加锁，析构时仅释放自己成功获取的锁。",
           "location": {
             "path": "libs/concurrency/AtomicFlagLock.hpp",
-            "line": 43,
+            "line": 52,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L43"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L52"
           },
-          "parentId": "api-class-b65fbbf394a16164",
+          "parentId": "api-class-afbff33bda1526db",
           "member": {
             "access": "public",
             "static": false,
@@ -5414,14 +5416,14 @@
           },
           "references": [
             "api-class-8133071b3165b363",
-            "api-function-0b5fe39522847ad1",
-            "api-function-303e429b8c915a8e"
+            "api-function-3e73db358ae8724e",
+            "api-function-e32483da7cd092e1"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-303e429b8c915a8e",
-          "anchor": "api-function-303e429b8c915a8e",
+          "id": "api-function-e32483da7cd092e1",
+          "anchor": "api-function-e32483da7cd092e1",
           "kind": "function",
           "name": "AtomicFlagGuard",
           "qualifiedName": "AtomicFlagGuard::AtomicFlagGuard",
@@ -5429,11 +5431,11 @@
           "description": "",
           "location": {
             "path": "libs/concurrency/AtomicFlagLock.hpp",
-            "line": 47,
+            "line": 65,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L47"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L65"
           },
-          "parentId": "api-class-b65fbbf394a16164",
+          "parentId": "api-class-afbff33bda1526db",
           "member": {
             "access": "public",
             "static": false,
@@ -5441,14 +5443,14 @@
             "const": false
           },
           "references": [
-            "api-class-b65fbbf394a16164",
-            "api-function-b53addba947c943e"
+            "api-class-afbff33bda1526db",
+            "api-function-21894bd7363d777e"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-0e88c68870fa75dd",
-          "anchor": "api-variable-0e88c68870fa75dd",
+          "id": "api-variable-ccf8100a8d18d12b",
+          "anchor": "api-variable-ccf8100a8d18d12b",
           "kind": "variable",
           "name": "lock_",
           "qualifiedName": "AtomicFlagGuard::lock_",
@@ -5456,11 +5458,11 @@
           "description": "",
           "location": {
             "path": "libs/concurrency/AtomicFlagLock.hpp",
-            "line": 51,
+            "line": 69,
             "column": 20,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L51"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L69"
           },
-          "parentId": "api-class-b65fbbf394a16164",
+          "parentId": "api-class-afbff33bda1526db",
           "member": {
             "access": "private",
             "static": false,
@@ -5473,8 +5475,56 @@
           "enumValues": []
         },
         {
-          "id": "api-function-0b5fe39522847ad1",
-          "anchor": "api-function-0b5fe39522847ad1",
+          "id": "api-variable-2b645191ade3d07e",
+          "anchor": "api-variable-2b645191ade3d07e",
+          "kind": "variable",
+          "name": "locked_",
+          "qualifiedName": "AtomicFlagGuard::locked_",
+          "signature": "bool AtomicFlagGuard::locked_",
+          "description": "",
+          "location": {
+            "path": "libs/concurrency/AtomicFlagLock.hpp",
+            "line": 71,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L71"
+          },
+          "parentId": "api-class-afbff33bda1526db",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-38c47d6016699abd",
+          "anchor": "api-function-38c47d6016699abd",
+          "kind": "function",
+          "name": "operator bool",
+          "qualifiedName": "AtomicFlagGuard::operator bool",
+          "signature": "AtomicFlagGuard::operator bool () const noexcept",
+          "description": "判断当前 Guard 是否成功获取了锁。",
+          "location": {
+            "path": "libs/concurrency/AtomicFlagLock.hpp",
+            "line": 63,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L63"
+          },
+          "parentId": "api-class-afbff33bda1526db",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-3e73db358ae8724e",
+          "anchor": "api-function-3e73db358ae8724e",
           "kind": "function",
           "name": "operator=",
           "qualifiedName": "AtomicFlagGuard::operator=",
@@ -5482,11 +5532,11 @@
           "description": "",
           "location": {
             "path": "libs/concurrency/AtomicFlagLock.hpp",
-            "line": 48,
+            "line": 66,
             "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L48"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L66"
           },
-          "parentId": "api-class-b65fbbf394a16164",
+          "parentId": "api-class-afbff33bda1526db",
           "member": {
             "access": "public",
             "static": false,
@@ -5494,14 +5544,14 @@
             "const": false
           },
           "references": [
-            "api-class-b65fbbf394a16164",
-            "api-function-b53addba947c943e"
+            "api-class-afbff33bda1526db",
+            "api-function-21894bd7363d777e"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-c565324b9540051c",
-          "anchor": "api-function-c565324b9540051c",
+          "id": "api-function-46b68b2cd51ddc0f",
+          "anchor": "api-function-46b68b2cd51ddc0f",
           "kind": "function",
           "name": "~AtomicFlagGuard",
           "qualifiedName": "AtomicFlagGuard::~AtomicFlagGuard",
@@ -5509,11 +5559,11 @@
           "description": "",
           "location": {
             "path": "libs/concurrency/AtomicFlagLock.hpp",
-            "line": 45,
+            "line": 54,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L45"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L54"
           },
-          "parentId": "api-class-b65fbbf394a16164",
+          "parentId": "api-class-afbff33bda1526db",
           "member": {
             "access": "public",
             "static": false,
@@ -5540,16 +5590,16 @@
           "parentId": null,
           "member": null,
           "references": [
-            "api-function-10764e2b6c3415cb",
-            "api-function-28c97ade0c029c5a",
-            "api-function-7800fddbc2f1931d",
-            "api-variable-1d0262b43b2a168c"
+            "api-function-1ed97a28ab26eb0a",
+            "api-function-8d745fc16a7ec04a",
+            "api-function-f29c10a10ad4b7e5",
+            "api-variable-55341ee2363239bc"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-1d0262b43b2a168c",
-          "anchor": "api-variable-1d0262b43b2a168c",
+          "id": "api-variable-55341ee2363239bc",
+          "anchor": "api-variable-55341ee2363239bc",
           "kind": "variable",
           "name": "flag_",
           "qualifiedName": "AtomicFlagLock::flag_",
@@ -5557,9 +5607,9 @@
           "description": "",
           "location": {
             "path": "libs/concurrency/AtomicFlagLock.hpp",
-            "line": 34,
+            "line": 43,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L34"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L43"
           },
           "parentId": "api-class-8133071b3165b363",
           "member": {
@@ -5572,8 +5622,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-28c97ade0c029c5a",
-          "anchor": "api-function-28c97ade0c029c5a",
+          "id": "api-function-f29c10a10ad4b7e5",
+          "anchor": "api-function-f29c10a10ad4b7e5",
           "kind": "function",
           "name": "is_locked",
           "qualifiedName": "AtomicFlagLock::is_locked",
@@ -5581,9 +5631,9 @@
           "description": "查询当前是否处于 locked 状态。",
           "location": {
             "path": "libs/concurrency/AtomicFlagLock.hpp",
-            "line": 31,
+            "line": 40,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L31"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L40"
           },
           "parentId": "api-class-8133071b3165b363",
           "member": {
@@ -5596,18 +5646,18 @@
           "enumValues": []
         },
         {
-          "id": "api-function-7800fddbc2f1931d",
-          "anchor": "api-function-7800fddbc2f1931d",
+          "id": "api-function-1ed97a28ab26eb0a",
+          "anchor": "api-function-1ed97a28ab26eb0a",
           "kind": "function",
           "name": "lock",
           "qualifiedName": "AtomicFlagLock::lock",
-          "signature": "void AtomicFlagLock::lock () noexcept",
-          "description": "标记为 locked。\n\n这个类并不提供阻塞等待，只负责把状态改成“占用中”。",
+          "signature": "bool AtomicFlagLock::lock () noexcept",
+          "description": "尝试标记为 locked。\n\nunlock() 这个类并不提供阻塞等待，只负责以非阻塞方式尝试把状态改成“占用中”。 只有从 unlocked 成功切换到 locked 时才返回 true；已经 locked 时返回 false， 且调用方不得在失败后调用。",
           "location": {
             "path": "libs/concurrency/AtomicFlagLock.hpp",
-            "line": 21,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L21"
+            "line": 23,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L23"
           },
           "parentId": "api-class-8133071b3165b363",
           "member": {
@@ -5616,12 +5666,14 @@
             "virtual": "none",
             "const": false
           },
-          "references": [],
+          "references": [
+            "api-function-8d745fc16a7ec04a"
+          ],
           "enumValues": []
         },
         {
-          "id": "api-function-10764e2b6c3415cb",
-          "anchor": "api-function-10764e2b6c3415cb",
+          "id": "api-function-8d745fc16a7ec04a",
+          "anchor": "api-function-8d745fc16a7ec04a",
           "kind": "function",
           "name": "unlock",
           "qualifiedName": "AtomicFlagLock::unlock",
@@ -5629,9 +5681,9 @@
           "description": "标记为 unlocked。",
           "location": {
             "path": "libs/concurrency/AtomicFlagLock.hpp",
-            "line": 26,
+            "line": 35,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L26"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/concurrency/AtomicFlagLock.hpp#L35"
           },
           "parentId": "api-class-8133071b3165b363",
           "member": {
@@ -5661,14 +5713,14 @@
           "member": null,
           "references": [
             "api-class-8133071b3165b363",
-            "api-class-b65fbbf394a16164"
+            "api-class-afbff33bda1526db"
           ],
           "enumValues": []
         }
       ],
       "inheritanceRelations": [],
-      "symbolCount": 12,
-      "documentedSymbolCount": 5
+      "symbolCount": 14,
+      "documentedSymbolCount": 6
     },
     {
       "targetKind": "package",

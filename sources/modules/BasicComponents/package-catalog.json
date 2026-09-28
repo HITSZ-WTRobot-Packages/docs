@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "BasicComponents",
-  "moduleSha": "cc900afbc7adc2eda516098c10926c8e7f0c4bba",
+  "moduleSha": "e1cb2e18219d88b89ac8639d2c900964d4e49990",
   "packages": [
     {
       "name": "EKF",
@@ -74,7 +74,7 @@
     {
       "name": "Concurrency",
       "pkgname": "libs::Concurrency",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "manifestPath": "libs/concurrency/cpkg.toml",
       "packagePath": "libs/concurrency",
       "dependencyNames": []
