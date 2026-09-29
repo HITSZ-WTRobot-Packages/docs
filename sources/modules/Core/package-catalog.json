@@ -1,0 +1,17 @@
+{
+  "formatVersion": 1,
+  "moduleId": "Core",
+  "moduleSha": "5f442f61af7729a0187d71b885f61dfd9bdf3251",
+  "packages": [
+    {
+      "name": "IController",
+      "pkgname": "Core::IController",
+      "version": "0.1.0",
+      "manifestPath": "IController/cpkg.toml",
+      "packagePath": "IController",
+      "dependencyNames": [
+        "libs::Concurrency"
+      ]
+    }
+  ]
+}
