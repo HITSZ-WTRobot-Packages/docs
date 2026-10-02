@@ -8697,23 +8697,23 @@
           "parentId": null,
           "member": null,
           "references": [
-            "api-function-08a7d5b3a35853ab",
-            "api-function-61474674b78b0bd8",
+            "api-function-3df1953679734b44",
+            "api-function-54dd728e6fc7085b",
+            "api-function-61886acf49d6a6e9",
             "api-function-7163174807007784",
+            "api-function-765804a0b019d595",
+            "api-function-7fbf6f8e6e60f978",
             "api-function-a9acc1ec0c16a2da",
-            "api-function-be59fa4ae6653da8",
-            "api-function-caf347669fe5895b",
-            "api-function-cea21d29c858b211",
-            "api-function-da2d5f1dd1e50ed0",
-            "api-function-e3e48e0d84e7369b",
+            "api-function-bf1082238a4fd68a",
+            "api-function-c3037ae1925247c4",
             "api-struct-dbcd94979f5226ea",
-            "api-variable-1b8d3880a2138471",
-            "api-variable-35ba38a2b24bf984",
-            "api-variable-4c8866b0d9e447a4",
-            "api-variable-a19f015db77b0d10",
-            "api-variable-b65d2d9537064426",
-            "api-variable-f76d51df352f74ea",
-            "api-variable-fa1ad529f4fe7ce7"
+            "api-variable-22d8dbfe95c38dbf",
+            "api-variable-4bc90929c62a0f41",
+            "api-variable-7a1e55c4c56c1dda",
+            "api-variable-caf2676256c23889",
+            "api-variable-cdb4275f0765504f",
+            "api-variable-cebbf898cc74ee4c",
+            "api-variable-d9e5460685d4a6e5"
           ],
           "enumValues": []
         },
@@ -8888,18 +8888,18 @@
           "enumValues": []
         },
         {
-          "id": "api-function-08a7d5b3a35853ab",
-          "anchor": "api-function-08a7d5b3a35853ab",
+          "id": "api-function-54dd728e6fc7085b",
+          "anchor": "api-function-54dd728e6fc7085b",
           "kind": "function",
           "name": "calc",
           "qualifiedName": "PIDMotor::calc",
-          "signature": "float PIDMotor::calc (const float &ref, const float &fdb)",
-          "description": "计算一次 PID 输出。\n\nref 目标值 fdb 反馈值 限幅后的控制输出",
+          "signature": "float PIDMotor::calc (const float &ref, const float &fdb, const float &ff=0.0f)",
+          "description": "计算一次 PID 输出。\n\nref 目标值 fdb 反馈值 ff 前馈输入 限幅后的控制输出",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 35,
+            "line": 36,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L35"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L36"
           },
           "parentId": "api-class-984937dd6c7e23da",
           "member": {
@@ -8912,8 +8912,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f76d51df352f74ea",
-          "anchor": "api-variable-f76d51df352f74ea",
+          "id": "api-variable-cdb4275f0765504f",
+          "anchor": "api-variable-cdb4275f0765504f",
           "kind": "variable",
           "name": "cfg_",
           "qualifiedName": "PIDMotor::cfg_",
@@ -8921,9 +8921,9 @@
           "description": "",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 57,
+            "line": 58,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L57"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L58"
           },
           "parentId": "api-class-984937dd6c7e23da",
           "member": {
@@ -8938,8 +8938,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-fa1ad529f4fe7ce7",
-          "anchor": "api-variable-fa1ad529f4fe7ce7",
+          "id": "api-variable-22d8dbfe95c38dbf",
+          "anchor": "api-variable-22d8dbfe95c38dbf",
           "kind": "variable",
           "name": "error_",
           "qualifiedName": "PIDMotor::error_",
@@ -8947,9 +8947,9 @@
           "description": "当前误差",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 62,
+            "line": 63,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L62"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L63"
           },
           "parentId": "api-class-984937dd6c7e23da",
           "member": {
@@ -8962,8 +8962,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-4c8866b0d9e447a4",
-          "anchor": "api-variable-4c8866b0d9e447a4",
+          "id": "api-variable-cebbf898cc74ee4c",
+          "anchor": "api-variable-cebbf898cc74ee4c",
           "kind": "variable",
           "name": "fdb_",
           "qualifiedName": "PIDMotor::fdb_",
@@ -8971,9 +8971,9 @@
           "description": "最近一次反馈值",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 60,
+            "line": 61,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L60"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L61"
           },
           "parentId": "api-class-984937dd6c7e23da",
           "member": {
@@ -8986,8 +8986,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-caf347669fe5895b",
-          "anchor": "api-function-caf347669fe5895b",
+          "id": "api-function-bf1082238a4fd68a",
+          "anchor": "api-function-bf1082238a4fd68a",
           "kind": "function",
           "name": "getConfig",
           "qualifiedName": "PIDMotor::getConfig",
@@ -8995,9 +8995,9 @@
           "description": "获取控制参数。",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 43,
+            "line": 44,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L43"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L44"
           },
           "parentId": "api-class-984937dd6c7e23da",
           "member": {
@@ -9012,12 +9012,36 @@
           "enumValues": []
         },
         {
-          "id": "api-function-e3e48e0d84e7369b",
-          "anchor": "api-function-e3e48e0d84e7369b",
+          "id": "api-function-c3037ae1925247c4",
+          "anchor": "api-function-c3037ae1925247c4",
           "kind": "function",
           "name": "getOutput",
           "qualifiedName": "PIDMotor::getOutput",
           "signature": "float PIDMotor::getOutput () const",
+          "description": "",
+          "location": {
+            "path": "libs/control/pid_motor/pid_motor.hpp",
+            "line": 55,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L55"
+          },
+          "parentId": "api-class-984937dd6c7e23da",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-765804a0b019d595",
+          "anchor": "api-function-765804a0b019d595",
+          "kind": "function",
+          "name": "getRef",
+          "qualifiedName": "PIDMotor::getRef",
+          "signature": "float PIDMotor::getRef () const",
           "description": "",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
@@ -9036,61 +9060,13 @@
           "enumValues": []
         },
         {
-          "id": "api-function-cea21d29c858b211",
-          "anchor": "api-function-cea21d29c858b211",
-          "kind": "function",
-          "name": "getRef",
-          "qualifiedName": "PIDMotor::getRef",
-          "signature": "float PIDMotor::getRef () const",
-          "description": "",
-          "location": {
-            "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 53,
-            "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L53"
-          },
-          "parentId": "api-class-984937dd6c7e23da",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-a19f015db77b0d10",
-          "anchor": "api-variable-a19f015db77b0d10",
+          "id": "api-variable-caf2676256c23889",
+          "anchor": "api-variable-caf2676256c23889",
           "kind": "variable",
           "name": "integral_",
           "qualifiedName": "PIDMotor::integral_",
           "signature": "float PIDMotor::integral_",
           "description": "积分状态，已包含 Ki",
-          "location": {
-            "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 65,
-            "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L65"
-          },
-          "parentId": "api-class-984937dd6c7e23da",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-35ba38a2b24bf984",
-          "anchor": "api-variable-35ba38a2b24bf984",
-          "kind": "variable",
-          "name": "output_",
-          "qualifiedName": "PIDMotor::output_",
-          "signature": "float PIDMotor::output_",
-          "description": "最近一次输出",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
             "line": 66,
@@ -9108,8 +9084,32 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-b65d2d9537064426",
-          "anchor": "api-variable-b65d2d9537064426",
+          "id": "api-variable-7a1e55c4c56c1dda",
+          "anchor": "api-variable-7a1e55c4c56c1dda",
+          "kind": "variable",
+          "name": "output_",
+          "qualifiedName": "PIDMotor::output_",
+          "signature": "float PIDMotor::output_",
+          "description": "最近一次输出",
+          "location": {
+            "path": "libs/control/pid_motor/pid_motor.hpp",
+            "line": 67,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L67"
+          },
+          "parentId": "api-class-984937dd6c7e23da",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-4bc90929c62a0f41",
+          "anchor": "api-variable-4bc90929c62a0f41",
           "kind": "variable",
           "name": "prev_error_",
           "qualifiedName": "PIDMotor::prev_error_",
@@ -9117,9 +9117,9 @@
           "description": "上一次误差",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 63,
+            "line": 64,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L63"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L64"
           },
           "parentId": "api-class-984937dd6c7e23da",
           "member": {
@@ -9132,8 +9132,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-1b8d3880a2138471",
-          "anchor": "api-variable-1b8d3880a2138471",
+          "id": "api-variable-d9e5460685d4a6e5",
+          "anchor": "api-variable-d9e5460685d4a6e5",
           "kind": "variable",
           "name": "ref_",
           "qualifiedName": "PIDMotor::ref_",
@@ -9141,9 +9141,9 @@
           "description": "最近一次目标值",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 59,
+            "line": 60,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L59"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L60"
           },
           "parentId": "api-class-984937dd6c7e23da",
           "member": {
@@ -9156,8 +9156,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-be59fa4ae6653da8",
-          "anchor": "api-function-be59fa4ae6653da8",
+          "id": "api-function-7fbf6f8e6e60f978",
+          "anchor": "api-function-7fbf6f8e6e60f978",
           "kind": "function",
           "name": "reset",
           "qualifiedName": "PIDMotor::reset",
@@ -9165,9 +9165,9 @@
           "description": "清空内部状态。",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 51,
+            "line": 52,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L51"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L52"
           },
           "parentId": "api-class-984937dd6c7e23da",
           "member": {
@@ -9180,8 +9180,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-da2d5f1dd1e50ed0",
-          "anchor": "api-function-da2d5f1dd1e50ed0",
+          "id": "api-function-61886acf49d6a6e9",
+          "anchor": "api-function-61886acf49d6a6e9",
           "kind": "function",
           "name": "setConfig",
           "qualifiedName": "PIDMotor::setConfig",
@@ -9189,9 +9189,9 @@
           "description": "更新控制参数。",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 39,
+            "line": 40,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L39"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L40"
           },
           "parentId": "api-class-984937dd6c7e23da",
           "member": {
@@ -9206,8 +9206,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-61474674b78b0bd8",
-          "anchor": "api-function-61474674b78b0bd8",
+          "id": "api-function-3df1953679734b44",
+          "anchor": "api-function-3df1953679734b44",
           "kind": "function",
           "name": "setOutputMax",
           "qualifiedName": "PIDMotor::setOutputMax",
@@ -9215,9 +9215,9 @@
           "description": "直接修改输出上限。",
           "location": {
             "path": "libs/control/pid_motor/pid_motor.hpp",
-            "line": 47,
+            "line": 48,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L47"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/pid_motor/pid_motor.hpp#L48"
           },
           "parentId": "api-class-984937dd6c7e23da",
           "member": {
