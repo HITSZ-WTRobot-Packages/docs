@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "BasicComponents",
-  "moduleSha": "e1cb2e18219d88b89ac8639d2c900964d4e49990",
+  "moduleSha": "d89bd544cea1853655263fce0d67c55a439c2f00",
   "packages": [
     {
       "name": "EKF",
@@ -133,6 +133,22 @@
       "version": "0.1.0",
       "manifestPath": "libs/utils/printf/cpkg.toml",
       "packagePath": "libs/utils/printf",
+      "dependencyNames": []
+    },
+    {
+      "name": "StaticArena",
+      "pkgname": "memory::StaticArena",
+      "version": "0.1.0",
+      "manifestPath": "memory/StaticArena/cpkg.toml",
+      "packagePath": "memory/StaticArena",
+      "dependencyNames": []
+    },
+    {
+      "name": "StaticObject",
+      "pkgname": "memory::StaticObject",
+      "version": "0.1.0",
+      "manifestPath": "memory/StaticObject/cpkg.toml",
+      "packagePath": "memory/StaticObject",
       "dependencyNames": []
     },
     {

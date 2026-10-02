@@ -16125,6 +16125,1063 @@
     },
     {
       "targetKind": "package",
+      "targetId": "memory--staticarena",
+      "displayName": "memory::StaticArena",
+      "moduleId": "BasicComponents",
+      "packageSlug": "memory--staticarena",
+      "sourceBranch": "main",
+      "inputPaths": [
+        "memory/StaticArena/static_arena.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "9 of 12 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-class-fa9287eb036edeb3",
+          "anchor": "api-class-fa9287eb036edeb3",
+          "kind": "class",
+          "name": "StaticArena",
+          "qualifiedName": "StaticArena",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 14,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L14"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-function-0838e4b487045d12",
+            "api-function-0cbfba288013930e",
+            "api-function-708c55ccd5718863",
+            "api-function-7c871f5b58210e5a",
+            "api-function-815ec5b9f65c6c4a",
+            "api-function-981ba2d8d4f1bc65",
+            "api-function-a66eaa598b9f0ff0",
+            "api-function-dd7948965d892a94",
+            "api-function-ffbbaf7c28ac9a49",
+            "api-variable-2773965a1828ec58",
+            "api-variable-79267515c03d008b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-981ba2d8d4f1bc65",
+          "anchor": "api-function-981ba2d8d4f1bc65",
+          "kind": "function",
+          "name": "StaticArena",
+          "qualifiedName": "StaticArena::StaticArena",
+          "signature": "StaticArena< Size >::StaticArena ()=default",
+          "description": "",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 24,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L24"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-dd7948965d892a94",
+          "anchor": "api-function-dd7948965d892a94",
+          "kind": "function",
+          "name": "StaticArena",
+          "qualifiedName": "StaticArena::StaticArena",
+          "signature": "StaticArena< Size >::StaticArena (const StaticArena &)=delete",
+          "description": "",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 22,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L22"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-class-fa9287eb036edeb3",
+            "api-function-ffbbaf7c28ac9a49"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-708c55ccd5718863",
+          "anchor": "api-function-708c55ccd5718863",
+          "kind": "function",
+          "name": "allocate",
+          "qualifiedName": "StaticArena::allocate",
+          "signature": "void * StaticArena< Size >::allocate (const size_t size, const size_t alignment=alignof(std::max_align_t))",
+          "description": "原子化基础分配接口。\n\n通过 CAS 确保并发任务下只有一个分配者能成功推进 offset_。 这里没有 free 接口，因为分配器的目标就是“只增不减”，从而让实现尽量简单可靠。",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 32,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L32"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-0838e4b487045d12"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2773965a1828ec58",
+          "anchor": "api-variable-2773965a1828ec58",
+          "kind": "variable",
+          "name": "buffer_",
+          "qualifiedName": "StaticArena::buffer_",
+          "signature": "std::byte StaticArena< Size >::buffer_[Size] [Size]",
+          "description": "",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 17,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L17"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-815ec5b9f65c6c4a",
+          "anchor": "api-function-815ec5b9f65c6c4a",
+          "kind": "function",
+          "name": "capacity",
+          "qualifiedName": "StaticArena::capacity",
+          "signature": "size_t StaticArena< Size >::capacity () const",
+          "description": "",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 81,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L81"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0cbfba288013930e",
+          "anchor": "api-function-0cbfba288013930e",
+          "kind": "function",
+          "name": "clear",
+          "qualifiedName": "StaticArena::clear",
+          "signature": "void StaticArena< Size >::clear ()",
+          "description": "重置分配器。\n\n这会让所有已分配对象在逻辑上失效，只有在系统重新初始化时使用。 你可以把它理解为“整块内存池一起回收”，而不是逐个对象析构。",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 96,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L96"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0838e4b487045d12",
+          "anchor": "api-function-0838e4b487045d12",
+          "kind": "function",
+          "name": "create",
+          "qualifiedName": "StaticArena::create",
+          "signature": "T * StaticArena< Size >::create (Args &&... args)",
+          "description": "线程安全的对象构造接口。\n\n注意：这里只保证“拿到一块唯一内存”是原子的，构造函数本身是否线程安全取决于 T 自己。 如果 T 的构造过程里会访问共享资源，调用方仍然需要自己处理并发关系。",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 65,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L65"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-708c55ccd5718863"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-79267515c03d008b",
+          "anchor": "api-variable-79267515c03d008b",
+          "kind": "variable",
+          "name": "offset_",
+          "qualifiedName": "StaticArena::offset_",
+          "signature": "std::atomic<size_t> StaticArena< Size >::offset_",
+          "description": "",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 18,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L18"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ffbbaf7c28ac9a49",
+          "anchor": "api-function-ffbbaf7c28ac9a49",
+          "kind": "function",
+          "name": "operator=",
+          "qualifiedName": "StaticArena::operator=",
+          "signature": "StaticArena & StaticArena< Size >::operator= (const StaticArena &)=delete",
+          "description": "",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 23,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L23"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-class-fa9287eb036edeb3",
+            "api-function-dd7948965d892a94"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-7c871f5b58210e5a",
+          "anchor": "api-function-7c871f5b58210e5a",
+          "kind": "function",
+          "name": "usage_ratio",
+          "qualifiedName": "StaticArena::usage_ratio",
+          "signature": "double StaticArena< Size >::usage_ratio () const",
+          "description": "",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 85,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L85"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-a66eaa598b9f0ff0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-a66eaa598b9f0ff0",
+          "anchor": "api-function-a66eaa598b9f0ff0",
+          "kind": "function",
+          "name": "used",
+          "qualifiedName": "StaticArena::used",
+          "signature": "size_t StaticArena< Size >::used () const",
+          "description": "",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": 77,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp#L77"
+          },
+          "parentId": "api-class-fa9287eb036edeb3",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-7c871f5b58210e5a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-ebec549c23e37988",
+          "anchor": "api-file-ebec549c23e37988",
+          "kind": "file",
+          "name": "memory/StaticArena/static_arena.hpp",
+          "qualifiedName": "memory/StaticArena/static_arena.hpp",
+          "signature": "",
+          "description": "原子化静态区线性分配器。\n\n适合嵌入式场景下的短生命周期对象分配，不支持释放，只支持线性增长和整体清空。 如果系统里只有少量对象需要动态创建，但又不想引入通用堆分配器，这种线性分配器会更容易控制时序和占用。",
+          "location": {
+            "path": "memory/StaticArena/static_arena.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticArena/static_arena.hpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-fa9287eb036edeb3"
+          ],
+          "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [],
+      "symbolCount": 13,
+      "documentedSymbolCount": 4
+    },
+    {
+      "targetKind": "package",
+      "targetId": "memory--staticobject",
+      "displayName": "memory::StaticObject",
+      "moduleId": "BasicComponents",
+      "packageSlug": "memory--staticobject",
+      "sourceBranch": "main",
+      "inputPaths": [
+        "memory/StaticObject/static_object.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "23 of 26 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-define-57246af6d31dcb84",
+          "anchor": "api-define-57246af6d31dcb84",
+          "kind": "define",
+          "name": "INIT_OBJECT",
+          "qualifiedName": "INIT_OBJECT",
+          "signature": "",
+          "description": "在函数体中原地构造对象，返回 T*；不进行堆分配。\n\nobject 必须是可变槽的左值，只求值一次。构造参数直接出现在 new T(...) 中， 因此支持裸 {...}，不会遇到完美转发的列表推导限制。构造成功后才发布状态； 若 T 的构造函数抛出异常，异常原样传播，槽仍保持未初始化状态。 INIT_OBJECT(device, ) 示例：INIT_OBJECT(motors[index++], config, {1, 2}); 严格 C++17 的无参构造写作;，保留显式的空可变参数。 宏不属于 C++ 命名空间：使用 INIT_OBJECT，而不是 memory::INIT_OBJECT。",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 142,
+            "column": 9,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L142"
+          },
+          "parentId": "api-file-f92b14585520c94b",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-define-757b1e257717d5e8"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-define-757b1e257717d5e8",
+          "anchor": "api-define-757b1e257717d5e8",
+          "kind": "define",
+          "name": "STATIC_OBJECT_DETAIL_INIT_EXPAND",
+          "qualifiedName": "STATIC_OBJECT_DETAIL_INIT_EXPAND",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 128,
+            "column": 9,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L128"
+          },
+          "parentId": "api-file-f92b14585520c94b",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-define-be8b2297543f628b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-define-be8b2297543f628b",
+          "anchor": "api-define-be8b2297543f628b",
+          "kind": "define",
+          "name": "STATIC_OBJECT_DETAIL_INIT_IMPL",
+          "qualifiedName": "STATIC_OBJECT_DETAIL_INIT_IMPL",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 118,
+            "column": 9,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L118"
+          },
+          "parentId": "api-file-f92b14585520c94b",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-6f5e47e7b49e9571"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-4f91820ae21c067d",
+          "anchor": "api-namespace-4f91820ae21c067d",
+          "kind": "namespace",
+          "name": "memory",
+          "qualifiedName": "memory",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 11,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L11"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-d0d7b249faa5f60a",
+            "api-namespace-47aa0eb9d592e18b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-f92b14585520c94b",
+          "anchor": "api-file-f92b14585520c94b",
+          "kind": "file",
+          "name": "memory/StaticObject/static_object.hpp",
+          "qualifiedName": "memory/StaticObject/static_object.hpp",
+          "signature": "",
+          "description": "C++17 固定存储、显式构造的永久对象槽。",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-d0d7b249faa5f60a",
+            "api-define-57246af6d31dcb84",
+            "api-define-757b1e257717d5e8",
+            "api-define-be8b2297543f628b",
+            "api-function-6f5e47e7b49e9571",
+            "api-namespace-47aa0eb9d592e18b",
+            "api-namespace-4f91820ae21c067d",
+            "api-struct-d0d6b1eed562e64f"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-d0d7b249faa5f60a",
+          "anchor": "api-class-d0d7b249faa5f60a",
+          "kind": "class",
+          "name": "memory::StaticObject",
+          "qualifiedName": "memory::StaticObject",
+          "signature": "",
+          "description": "为一个永久对象预留固定地址的存储，不分配堆内存，也不自动析构 T。\n\nT 完整、非数组、非 cv 限定的具体对象类型；不要求默认构造或复制/移动。 对象槽应具有静态存储期；先用 INIT_OBJECT 构造，再访问对象。 每个槽只能成功构造一次。重复初始化在 Debug 下断言失败；Release 由调用方保证。 ->、* 和指针转换均不检查状态；未构造时调用这些操作违反前置条件。 状态查询使用 is_initialized()、if (slot)、!slot 或与 nullptr 的比较。 bool ready = slot 会经由隐式指针转换；需要保存状态时使用 static_cast<bool>(slot)。 const 槽视图提供 const T 访问；取得的指针不拥有对象，禁止 delete。 不提供线程/ISR 同步；应在使用者开始访问前完成构造，或由调用方同步。 sizeof(StaticObject<T>) 包含 T 的存储、状态及对齐填充，不包含 T 自行申请的内存。 内存区域由实例声明和链接脚本决定；本类型不配置 DMA、MPU 或缓存属性。 使用约定：",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 33,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L33"
+          },
+          "parentId": "api-namespace-4f91820ae21c067d",
+          "member": null,
+          "references": [
+            "api-function-0733f63f6b0df2fc",
+            "api-function-1b5a63a33ee7a5f7",
+            "api-function-20de70abebe63a00",
+            "api-function-4ce652f506641ad2",
+            "api-function-4dd3625a543bdd80",
+            "api-function-52ec35091046a98c",
+            "api-function-58c012c414320c5b",
+            "api-function-5bba72830af2f272",
+            "api-function-633d74b16a00039d",
+            "api-function-674987418471a6c4",
+            "api-function-7abf265e46f79fc3",
+            "api-function-7f952ac1543b3cde",
+            "api-function-867ff14215be5f1b",
+            "api-function-8b674869c91fe6ec",
+            "api-function-bb57abb77bfd586e",
+            "api-function-d5af08e4a04b7eda",
+            "api-struct-d0d6b1eed562e64f",
+            "api-variable-6bf164c9be00fb6a",
+            "api-variable-e68aaf4e702308f0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-7f952ac1543b3cde",
+          "anchor": "api-function-7f952ac1543b3cde",
+          "kind": "function",
+          "name": "StaticObject",
+          "qualifiedName": "memory::StaticObject::StaticObject",
+          "signature": "memory::StaticObject< T >::StaticObject () noexcept=default",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 44,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L44"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-0733f63f6b0df2fc",
+            "api-function-52ec35091046a98c",
+            "api-function-7abf265e46f79fc3",
+            "api-function-867ff14215be5f1b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-52ec35091046a98c",
+          "anchor": "api-function-52ec35091046a98c",
+          "kind": "function",
+          "name": "StaticObject",
+          "qualifiedName": "memory::StaticObject::StaticObject",
+          "signature": "memory::StaticObject< T >::StaticObject (StaticObject &&)=delete",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 47,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L47"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-7f952ac1543b3cde"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-7abf265e46f79fc3",
+          "anchor": "api-function-7abf265e46f79fc3",
+          "kind": "function",
+          "name": "StaticObject",
+          "qualifiedName": "memory::StaticObject::StaticObject",
+          "signature": "memory::StaticObject< T >::StaticObject (const StaticObject &)=delete",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 45,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L45"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-7f952ac1543b3cde"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-4dd3625a543bdd80",
+          "anchor": "api-function-4dd3625a543bdd80",
+          "kind": "function",
+          "name": "initialization_storage",
+          "qualifiedName": "memory::StaticObject::initialization_storage",
+          "signature": "T * memory::StaticObject< T >::initialization_storage () noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 91,
+            "column": 7,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L91"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6bf164c9be00fb6a",
+          "anchor": "api-variable-6bf164c9be00fb6a",
+          "kind": "variable",
+          "name": "initialized_",
+          "qualifiedName": "memory::StaticObject::initialized_",
+          "signature": "bool memory::StaticObject< T >::initialized_",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 99,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L99"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-674987418471a6c4",
+          "anchor": "api-function-674987418471a6c4",
+          "kind": "function",
+          "name": "operator T*",
+          "qualifiedName": "memory::StaticObject::operator T*",
+          "signature": "memory::StaticObject< T >::operator T* () noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 57,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L57"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d5af08e4a04b7eda",
+          "anchor": "api-function-d5af08e4a04b7eda",
+          "kind": "function",
+          "name": "operator bool",
+          "qualifiedName": "memory::StaticObject::operator bool",
+          "signature": "memory::StaticObject< T >::operator bool () const noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 85,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L85"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-633d74b16a00039d",
+          "anchor": "api-function-633d74b16a00039d",
+          "kind": "function",
+          "name": "operator bool",
+          "qualifiedName": "memory::StaticObject::operator bool",
+          "signature": "memory::StaticObject< T >::operator bool () noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 84,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L84"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-bb57abb77bfd586e",
+          "anchor": "api-function-bb57abb77bfd586e",
+          "kind": "function",
+          "name": "operator const T *",
+          "qualifiedName": "memory::StaticObject::operator const T *",
+          "signature": "memory::StaticObject< T >::operator const T * () const noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 58,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L58"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5bba72830af2f272",
+          "anchor": "api-function-5bba72830af2f272",
+          "kind": "function",
+          "name": "operator*",
+          "qualifiedName": "memory::StaticObject::operator*",
+          "signature": "T & memory::StaticObject< T >::operator* () noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 54,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L54"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-1b5a63a33ee7a5f7",
+          "anchor": "api-function-1b5a63a33ee7a5f7",
+          "kind": "function",
+          "name": "operator*",
+          "qualifiedName": "memory::StaticObject::operator*",
+          "signature": "const T & memory::StaticObject< T >::operator* () const noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 55,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L55"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-8b674869c91fe6ec",
+          "anchor": "api-function-8b674869c91fe6ec",
+          "kind": "function",
+          "name": "operator->",
+          "qualifiedName": "memory::StaticObject::operator->",
+          "signature": "T * memory::StaticObject< T >::operator-> () noexcept",
+          "description": "无检查的对象访问；调用前必须已完成构造。",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 51,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L51"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-20de70abebe63a00",
+          "anchor": "api-function-20de70abebe63a00",
+          "kind": "function",
+          "name": "operator->",
+          "qualifiedName": "memory::StaticObject::operator->",
+          "signature": "const T * memory::StaticObject< T >::operator-> () const noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 52,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L52"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-867ff14215be5f1b",
+          "anchor": "api-function-867ff14215be5f1b",
+          "kind": "function",
+          "name": "operator=",
+          "qualifiedName": "memory::StaticObject::operator=",
+          "signature": "StaticObject & memory::StaticObject< T >::operator= (StaticObject &&)=delete",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 48,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L48"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-7f952ac1543b3cde"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0733f63f6b0df2fc",
+          "anchor": "api-function-0733f63f6b0df2fc",
+          "kind": "function",
+          "name": "operator=",
+          "qualifiedName": "memory::StaticObject::operator=",
+          "signature": "StaticObject & memory::StaticObject< T >::operator= (const StaticObject &)=delete",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 46,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L46"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-7f952ac1543b3cde"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-58c012c414320c5b",
+          "anchor": "api-function-58c012c414320c5b",
+          "kind": "function",
+          "name": "pointer",
+          "qualifiedName": "memory::StaticObject::pointer",
+          "signature": "T * memory::StaticObject< T >::pointer () noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 88,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L88"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-4ce652f506641ad2",
+          "anchor": "api-function-4ce652f506641ad2",
+          "kind": "function",
+          "name": "pointer",
+          "qualifiedName": "memory::StaticObject::pointer",
+          "signature": "const T * memory::StaticObject< T >::pointer () const noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 89,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L89"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e68aaf4e702308f0",
+          "anchor": "api-variable-e68aaf4e702308f0",
+          "kind": "variable",
+          "name": "storage_",
+          "qualifiedName": "memory::StaticObject::storage_",
+          "signature": "std::byte memory::StaticObject< T >::storage_[sizeof(T)] [sizeof(T)]",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 98,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L98"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-47aa0eb9d592e18b",
+          "anchor": "api-namespace-47aa0eb9d592e18b",
+          "kind": "namespace",
+          "name": "memory::detail",
+          "qualifiedName": "memory::detail",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 13,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L13"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-struct-d0d6b1eed562e64f"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-d0d6b1eed562e64f",
+          "anchor": "api-struct-d0d6b1eed562e64f",
+          "kind": "struct",
+          "name": "memory::detail::StaticObjectInitializer",
+          "qualifiedName": "memory::detail::StaticObjectInitializer",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 104,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L104"
+          },
+          "parentId": "api-namespace-47aa0eb9d592e18b",
+          "member": null,
+          "references": [
+            "api-class-d0d7b249faa5f60a",
+            "api-function-6f5e47e7b49e9571"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-6f5e47e7b49e9571",
+          "anchor": "api-function-6f5e47e7b49e9571",
+          "kind": "function",
+          "name": "initialize",
+          "qualifiedName": "memory::detail::StaticObjectInitializer::initialize",
+          "signature": "static T * memory::detail::StaticObjectInitializer::initialize (StaticObject< T > &object, Constructor &&constructor)",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 107,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L107"
+          },
+          "parentId": "api-struct-d0d6b1eed562e64f",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-class-d0d7b249faa5f60a"
+          ],
+          "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [],
+      "symbolCount": 27,
+      "documentedSymbolCount": 4
+    },
+    {
+      "targetKind": "package",
       "targetId": "protocol--uartrxsync",
       "displayName": "protocol::UartRxSync",
       "moduleId": "BasicComponents",
@@ -20243,326 +21300,16 @@
       "sourceBranch": "main",
       "inputPaths": [
         "utils/isr_lock.h",
-        "utils/static_arena.hpp",
         "utils/utils.h"
       ],
       "status": "sparse",
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "11 of 15 public API symbols have no description."
+          "message": "2 of 3 public API symbols have no description."
         }
       ],
       "symbols": [
-        {
-          "id": "api-class-aa8712939d308075",
-          "anchor": "api-class-aa8712939d308075",
-          "kind": "class",
-          "name": "StaticArena",
-          "qualifiedName": "StaticArena",
-          "signature": "",
-          "description": "",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 14,
-            "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L14"
-          },
-          "parentId": null,
-          "member": null,
-          "references": [
-            "api-function-48627240be4c7ab4",
-            "api-function-8567daacd1e4982b",
-            "api-function-877394a22b29eb04",
-            "api-function-87c273f55ef55003",
-            "api-function-8d90fa59e98d5f92",
-            "api-function-9830510e915cdb92",
-            "api-function-d27dbaf4e134d15f",
-            "api-function-db08aa6175c726d7",
-            "api-function-f9212a888f4038ca",
-            "api-variable-022bb8d557f34030",
-            "api-variable-c49878ef885002b0"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-48627240be4c7ab4",
-          "anchor": "api-function-48627240be4c7ab4",
-          "kind": "function",
-          "name": "StaticArena",
-          "qualifiedName": "StaticArena::StaticArena",
-          "signature": "StaticArena< Size >::StaticArena ()=default",
-          "description": "",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 24,
-            "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L24"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-877394a22b29eb04",
-          "anchor": "api-function-877394a22b29eb04",
-          "kind": "function",
-          "name": "StaticArena",
-          "qualifiedName": "StaticArena::StaticArena",
-          "signature": "StaticArena< Size >::StaticArena (const StaticArena &)=delete",
-          "description": "",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 22,
-            "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L22"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-class-aa8712939d308075",
-            "api-function-9830510e915cdb92"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-db08aa6175c726d7",
-          "anchor": "api-function-db08aa6175c726d7",
-          "kind": "function",
-          "name": "allocate",
-          "qualifiedName": "StaticArena::allocate",
-          "signature": "void * StaticArena< Size >::allocate (const size_t size, const size_t alignment=alignof(std::max_align_t))",
-          "description": "原子化基础分配接口。\n\n通过 CAS 确保并发任务下只有一个分配者能成功推进 offset_。 这里没有 free 接口，因为分配器的目标就是“只增不减”，从而让实现尽量简单可靠。",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 32,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L32"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-d27dbaf4e134d15f"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-c49878ef885002b0",
-          "anchor": "api-variable-c49878ef885002b0",
-          "kind": "variable",
-          "name": "buffer_",
-          "qualifiedName": "StaticArena::buffer_",
-          "signature": "std::byte StaticArena< Size >::buffer_[Size] [Size]",
-          "description": "",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 17,
-            "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L17"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-f9212a888f4038ca",
-          "anchor": "api-function-f9212a888f4038ca",
-          "kind": "function",
-          "name": "capacity",
-          "qualifiedName": "StaticArena::capacity",
-          "signature": "size_t StaticArena< Size >::capacity () const",
-          "description": "",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 81,
-            "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L81"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-87c273f55ef55003",
-          "anchor": "api-function-87c273f55ef55003",
-          "kind": "function",
-          "name": "clear",
-          "qualifiedName": "StaticArena::clear",
-          "signature": "void StaticArena< Size >::clear ()",
-          "description": "重置分配器。\n\n这会让所有已分配对象在逻辑上失效，只有在系统重新初始化时使用。 你可以把它理解为“整块内存池一起回收”，而不是逐个对象析构。",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 96,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L96"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-d27dbaf4e134d15f",
-          "anchor": "api-function-d27dbaf4e134d15f",
-          "kind": "function",
-          "name": "create",
-          "qualifiedName": "StaticArena::create",
-          "signature": "T * StaticArena< Size >::create (Args &&... args)",
-          "description": "线程安全的对象构造接口。\n\n注意：这里只保证“拿到一块唯一内存”是原子的，构造函数本身是否线程安全取决于 T 自己。 如果 T 的构造过程里会访问共享资源，调用方仍然需要自己处理并发关系。",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 65,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L65"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-db08aa6175c726d7"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-022bb8d557f34030",
-          "anchor": "api-variable-022bb8d557f34030",
-          "kind": "variable",
-          "name": "offset_",
-          "qualifiedName": "StaticArena::offset_",
-          "signature": "std::atomic<size_t> StaticArena< Size >::offset_",
-          "description": "",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 18,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L18"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-9830510e915cdb92",
-          "anchor": "api-function-9830510e915cdb92",
-          "kind": "function",
-          "name": "operator=",
-          "qualifiedName": "StaticArena::operator=",
-          "signature": "StaticArena & StaticArena< Size >::operator= (const StaticArena &)=delete",
-          "description": "",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 23,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L23"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-class-aa8712939d308075",
-            "api-function-877394a22b29eb04"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-8567daacd1e4982b",
-          "anchor": "api-function-8567daacd1e4982b",
-          "kind": "function",
-          "name": "usage_ratio",
-          "qualifiedName": "StaticArena::usage_ratio",
-          "signature": "double StaticArena< Size >::usage_ratio () const",
-          "description": "",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 85,
-            "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L85"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [
-            "api-function-8d90fa59e98d5f92"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-8d90fa59e98d5f92",
-          "anchor": "api-function-8d90fa59e98d5f92",
-          "kind": "function",
-          "name": "used",
-          "qualifiedName": "StaticArena::used",
-          "signature": "size_t StaticArena< Size >::used () const",
-          "description": "",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": 77,
-            "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp#L77"
-          },
-          "parentId": "api-class-aa8712939d308075",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [
-            "api-function-8567daacd1e4982b"
-          ],
-          "enumValues": []
-        },
         {
           "id": "api-function-4b82e50d769bf603",
           "anchor": "api-function-4b82e50d769bf603",
@@ -20655,27 +21402,6 @@
           "enumValues": []
         },
         {
-          "id": "api-file-2e167f3f9a3dd101",
-          "anchor": "api-file-2e167f3f9a3dd101",
-          "kind": "file",
-          "name": "utils/static_arena.hpp",
-          "qualifiedName": "utils/static_arena.hpp",
-          "signature": "",
-          "description": "原子化静态区线性分配器。\n\n适合嵌入式场景下的短生命周期对象分配，不支持释放，只支持线性增长和整体清空。 如果系统里只有少量对象需要动态创建，但又不想引入通用堆分配器，这种线性分配器会更容易控制时序和占用。",
-          "location": {
-            "path": "utils/static_arena.hpp",
-            "line": null,
-            "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/utils/static_arena.hpp"
-          },
-          "parentId": null,
-          "member": null,
-          "references": [
-            "api-class-aa8712939d308075"
-          ],
-          "enumValues": []
-        },
-        {
           "id": "api-file-678fbbf142db2f63",
           "anchor": "api-file-678fbbf142db2f63",
           "kind": "file",
@@ -20696,8 +21422,8 @@
         }
       ],
       "inheritanceRelations": [],
-      "symbolCount": 18,
-      "documentedSymbolCount": 7
+      "symbolCount": 5,
+      "documentedSymbolCount": 3
     }
   ]
 }
