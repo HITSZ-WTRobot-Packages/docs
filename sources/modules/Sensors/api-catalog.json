@@ -121,7 +121,7 @@
           "member": null,
           "references": [
             "api-class-7f99ebd0d26528ae",
-            "api-function-0491f42f9e8ae58f"
+            "api-function-9d87dcf02bed9b38"
           ],
           "enumValues": []
         },
@@ -143,30 +143,30 @@
           "member": null,
           "references": [
             "api-enum-54634577e5983642",
-            "api-function-0491f42f9e8ae58f",
             "api-function-1163a47e2b024c36",
-            "api-function-30ce933defc2dcbd",
+            "api-function-1e9899379e099785",
+            "api-function-30091b6a714e4ca0",
             "api-function-47739a18d5fa835d",
+            "api-function-5e13d6700c6b948a",
+            "api-function-72daa2b973a35dcd",
             "api-function-769538b4796f799b",
-            "api-function-928238bca8408ce0",
-            "api-function-b1b442fe7bb01624",
+            "api-function-9d87dcf02bed9b38",
             "api-function-c0f43cfd3865a8fc",
-            "api-function-e6b4523187563bcd",
             "api-function-ee2b782399a92347",
-            "api-variable-2f29f63cc0c59d3e",
-            "api-variable-619202856de7f874",
-            "api-variable-c48d15d94bb5232c",
-            "api-variable-fc16ce487b740080"
+            "api-variable-22a2bc4a2cbb4b51",
+            "api-variable-6841da59ddfb47c4",
+            "api-variable-884bf285495f14cb",
+            "api-variable-8c69627d1fe722e7"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-b1b442fe7bb01624",
-          "anchor": "api-function-b1b442fe7bb01624",
+          "id": "api-function-1e9899379e099785",
+          "anchor": "api-function-1e9899379e099785",
           "kind": "function",
           "name": "HWT101CT",
           "qualifiedName": "sensors::gyro::HWT101CT::HWT101CT",
-          "signature": "sensors::gyro::HWT101CT::HWT101CT (UART_HandleTypeDef *huart)",
+          "signature": "sensors::gyro::HWT101CT::HWT101CT (UART_HandleTypeDef *huart, Buffer &buffer)",
           "description": "",
           "location": {
             "path": "gyro/HWT101CT/HWT101CT.hpp",
@@ -294,8 +294,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-0491f42f9e8ae58f",
-          "anchor": "api-function-0491f42f9e8ae58f",
+          "id": "api-function-9d87dcf02bed9b38",
+          "anchor": "api-function-9d87dcf02bed9b38",
           "kind": "function",
           "name": "decode",
           "qualifiedName": "sensors::gyro::HWT101CT::decode",
@@ -303,9 +303,9 @@
           "description": "",
           "location": {
             "path": "gyro/HWT101CT/HWT101CT.hpp",
-            "line": 75,
+            "line": 69,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L75"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L69"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "member": {
@@ -320,8 +320,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-619202856de7f874",
-          "anchor": "api-variable-619202856de7f874",
+          "id": "api-variable-884bf285495f14cb",
+          "anchor": "api-variable-884bf285495f14cb",
           "kind": "variable",
           "name": "feedback_yaw_",
           "qualifiedName": "sensors::gyro::HWT101CT::feedback_yaw_",
@@ -329,9 +329,9 @@
           "description": "",
           "location": {
             "path": "gyro/HWT101CT/HWT101CT.hpp",
-            "line": 81,
+            "line": 75,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L81"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L75"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "member": {
@@ -344,8 +344,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-928238bca8408ce0",
-          "anchor": "api-function-928238bca8408ce0",
+          "id": "api-function-5e13d6700c6b948a",
+          "anchor": "api-function-5e13d6700c6b948a",
           "kind": "function",
           "name": "getWz",
           "qualifiedName": "sensors::gyro::HWT101CT::getWz",
@@ -353,9 +353,9 @@
           "description": "",
           "location": {
             "path": "gyro/HWT101CT/HWT101CT.hpp",
-            "line": 63,
+            "line": 60,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L63"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L60"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "member": {
@@ -392,8 +392,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-e6b4523187563bcd",
-          "anchor": "api-function-e6b4523187563bcd",
+          "id": "api-function-72daa2b973a35dcd",
+          "anchor": "api-function-72daa2b973a35dcd",
           "kind": "function",
           "name": "header",
           "qualifiedName": "sensors::gyro::HWT101CT::header",
@@ -401,9 +401,9 @@
           "description": "",
           "location": {
             "path": "gyro/HWT101CT/HWT101CT.hpp",
-            "line": 69,
+            "line": 63,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L69"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L63"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "member": {
@@ -440,8 +440,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-2f29f63cc0c59d3e",
-          "anchor": "api-variable-2f29f63cc0c59d3e",
+          "id": "api-variable-6841da59ddfb47c4",
+          "anchor": "api-variable-6841da59ddfb47c4",
           "kind": "variable",
           "name": "round_",
           "qualifiedName": "sensors::gyro::HWT101CT::round_",
@@ -449,9 +449,9 @@
           "description": "",
           "location": {
             "path": "gyro/HWT101CT/HWT101CT.hpp",
-            "line": 82,
+            "line": 76,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L82"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L76"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "member": {
@@ -490,8 +490,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-30ce933defc2dcbd",
-          "anchor": "api-function-30ce933defc2dcbd",
+          "id": "api-function-30091b6a714e4ca0",
+          "anchor": "api-function-30091b6a714e4ca0",
           "kind": "function",
           "name": "write_reg",
           "qualifiedName": "sensors::gyro::HWT101CT::write_reg",
@@ -499,9 +499,9 @@
           "description": "",
           "location": {
             "path": "gyro/HWT101CT/HWT101CT.hpp",
-            "line": 84,
+            "line": 78,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L84"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L78"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "member": {
@@ -514,8 +514,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-fc16ce487b740080",
-          "anchor": "api-variable-fc16ce487b740080",
+          "id": "api-variable-8c69627d1fe722e7",
+          "anchor": "api-variable-8c69627d1fe722e7",
           "kind": "variable",
           "name": "wz_",
           "qualifiedName": "sensors::gyro::HWT101CT::wz_",
@@ -523,9 +523,9 @@
           "description": "",
           "location": {
             "path": "gyro/HWT101CT/HWT101CT.hpp",
-            "line": 79,
+            "line": 73,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L79"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L73"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "member": {
@@ -538,8 +538,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-c48d15d94bb5232c",
-          "anchor": "api-variable-c48d15d94bb5232c",
+          "id": "api-variable-22a2bc4a2cbb4b51",
+          "anchor": "api-variable-22a2bc4a2cbb4b51",
           "kind": "variable",
           "name": "yaw_",
           "qualifiedName": "sensors::gyro::HWT101CT::yaw_",
@@ -547,9 +547,9 @@
           "description": "",
           "location": {
             "path": "gyro/HWT101CT/HWT101CT.hpp",
-            "line": 78,
+            "line": 72,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L78"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/HWT101CT/HWT101CT.hpp#L72"
           },
           "parentId": "api-class-7f99ebd0d26528ae",
           "member": {
@@ -583,7 +583,7 @@
             "const": false
           },
           "references": [
-            "api-function-0491f42f9e8ae58f"
+            "api-function-9d87dcf02bed9b38"
           ],
           "enumValues": []
         }
@@ -665,8 +665,8 @@
             "api-namespace-64564b0eeb2dc59d",
             "api-namespace-81be3e96d2ebcf5b",
             "api-struct-17cc3c87f0be6c20",
+            "api-struct-422c81610f172eef",
             "api-struct-4c3b41387c344eb6",
-            "api-struct-9b7c481644abfe90",
             "api-struct-c350f81aca45c66e"
           ],
           "enumValues": []
@@ -725,8 +725,8 @@
           "references": [
             "api-class-a3bb0c2db1cf0699",
             "api-enum-ed5e382feea9db8d",
-            "api-function-4d9ae5b9d6e328f7",
-            "api-function-990b5c9988312d4a"
+            "api-function-1e717abcaa140d4c",
+            "api-function-bd1f1cfecc0fce41"
           ],
           "enumValues": []
         },
@@ -750,61 +750,61 @@
             "api-enum-1e921e612349beed",
             "api-enum-6c6abbf2ffa2314b",
             "api-enum-ed5e382feea9db8d",
-            "api-function-007600e4a9087440",
-            "api-function-010d5b880873cdd7",
             "api-function-0a1be28e3280a1b5",
-            "api-function-0b4aa2917e0449ae",
-            "api-function-1158a486071c6cca",
-            "api-function-1165eb3581d14720",
+            "api-function-18574af71a6d6b41",
+            "api-function-1e717abcaa140d4c",
             "api-function-2b2bee214f824d3d",
-            "api-function-3bbf2e76140fe1a5",
-            "api-function-4d9ae5b9d6e328f7",
-            "api-function-720a67936330ac0a",
-            "api-function-95c1123dfeed8ec5",
-            "api-function-990b5c9988312d4a",
-            "api-function-9b7be84b0995e3bc",
-            "api-function-9c49dbcea824ca00",
-            "api-function-aa94586708fa289b",
-            "api-function-b7467cc38fc64917",
-            "api-function-dfa5579622208db8",
-            "api-function-e45e7b5f207b26bd",
+            "api-function-3b97dcd55a53f465",
+            "api-function-3d36922361f7966e",
+            "api-function-3daf45ce641b9c1e",
+            "api-function-50494a1e411fdc5c",
+            "api-function-73472d68f91d9468",
+            "api-function-741fa580c5191c43",
+            "api-function-7bb365dd19dd8a77",
+            "api-function-8f998ef61d1071ba",
+            "api-function-90451319e231467f",
+            "api-function-a545f4589215a056",
+            "api-function-bd1f1cfecc0fce41",
+            "api-function-cc8db509aebc28cf",
+            "api-function-de9c614e13bf2005",
+            "api-function-efc15f3cb46b5b76",
             "api-function-f907c2c872b2aa97",
             "api-struct-17cc3c87f0be6c20",
+            "api-struct-422c81610f172eef",
             "api-struct-4c3b41387c344eb6",
-            "api-struct-9b7c481644abfe90",
             "api-struct-c350f81aca45c66e",
             "api-typedef-43507fcaa8df4321",
             "api-typedef-6039ad6ec3b3a4d8",
-            "api-variable-029701f667261c1c",
-            "api-variable-0eae14ddc5364247",
+            "api-variable-0090a0d20ce0a14c",
+            "api-variable-009d75025dc958f0",
+            "api-variable-055145ceaa1949e8",
+            "api-variable-0a5e40236dedd73d",
+            "api-variable-0e39182ca6f64958",
             "api-variable-15a107a044abd3b4",
             "api-variable-1ba37d77e4a6e29b",
-            "api-variable-232f8c79b42f866a",
-            "api-variable-26ab0e93687ee737",
-            "api-variable-280a0a6daaf192e1",
-            "api-variable-2e6c8326b288c6b8",
-            "api-variable-2e9e812b477bf9a5",
-            "api-variable-2fee7cd79500f868",
-            "api-variable-38f8514f28d24bd1",
-            "api-variable-446397acc68f2b0b",
-            "api-variable-505c142202b1aab0",
-            "api-variable-60622a60723bfff8",
-            "api-variable-634963948be70599",
-            "api-variable-6c6ed28cbbb9147d",
-            "api-variable-8709f1deea3f4852",
+            "api-variable-1dc6112f81862a8e",
+            "api-variable-202034244f1b9f3c",
+            "api-variable-20961101ff25f453",
+            "api-variable-22747eeee9a1b292",
+            "api-variable-31a31b0cba5b6eb5",
+            "api-variable-34718581f00ecbd9",
+            "api-variable-42b1f400f5426364",
+            "api-variable-5195691969036957",
+            "api-variable-63887c6d1ebd5612",
+            "api-variable-679057e2dd3caabf",
+            "api-variable-7ae5a6087328a029",
+            "api-variable-843e55c133a2b2fe",
+            "api-variable-887751a54e9f8a63",
             "api-variable-975ef3cf7c7ff85d",
             "api-variable-983ae9704ddab631",
-            "api-variable-a0aef013a9512bbc",
-            "api-variable-b67d8d4a5ff31eff",
-            "api-variable-c14d0e80bfcbf103",
-            "api-variable-c861f925cf607676",
-            "api-variable-cba8a54bdf0950ea",
-            "api-variable-cdef775b6a436ec3",
-            "api-variable-d8a8d9c641298fe0",
+            "api-variable-a1cb443ed82125cf",
             "api-variable-dee2cbb15651a8de",
+            "api-variable-dfbcefc53ba2ea60",
+            "api-variable-e3f732e978e27e64",
+            "api-variable-eeac62074fc32d49",
             "api-variable-ef291376a8b19e64",
-            "api-variable-f081d1609b1a70c3",
-            "api-variable-fa308126a7e50687"
+            "api-variable-f1ff217a561320fe",
+            "api-variable-f9009e4ebb1b33ec"
           ],
           "enumValues": []
         },
@@ -1195,8 +1195,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-2e9e812b477bf9a5",
-          "anchor": "api-variable-2e9e812b477bf9a5",
+          "id": "api-variable-20961101ff25f453",
+          "anchor": "api-variable-20961101ff25f453",
           "kind": "variable",
           "name": "HEADER",
           "qualifiedName": "sensor::gyro::JY901S::HEADER",
@@ -1204,9 +1204,9 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 119,
+            "line": 122,
             "column": 33,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L119"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L122"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -1216,24 +1216,24 @@
             "const": false
           },
           "references": [
-            "api-function-4d9ae5b9d6e328f7",
-            "api-function-aa94586708fa289b"
+            "api-function-8f998ef61d1071ba",
+            "api-function-bd1f1cfecc0fce41"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-95c1123dfeed8ec5",
-          "anchor": "api-function-95c1123dfeed8ec5",
+          "id": "api-function-7bb365dd19dd8a77",
+          "anchor": "api-function-7bb365dd19dd8a77",
           "kind": "function",
           "name": "JY901S",
           "qualifiedName": "sensor::gyro::JY901S::JY901S",
-          "signature": "sensor::gyro::JY901S::JY901S (UART_HandleTypeDef *huart, const math::Posef &pose_in_body)",
+          "signature": "sensor::gyro::JY901S::JY901S (UART_HandleTypeDef *huart, Buffer &buffer, const math::Posef &pose_in_body)",
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 105,
+            "line": 108,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L105"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L108"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -1246,12 +1246,12 @@
           "enumValues": []
         },
         {
-          "id": "api-function-990b5c9988312d4a",
-          "anchor": "api-function-990b5c9988312d4a",
+          "id": "api-function-1e717abcaa140d4c",
+          "anchor": "api-function-1e717abcaa140d4c",
           "kind": "function",
           "name": "JY901S",
           "qualifiedName": "sensor::gyro::JY901S::JY901S",
-          "signature": "sensor::gyro::JY901S::JY901S (UART_HandleTypeDef *huart, const math::Posef &pose_in_body, const Config &config)",
+          "signature": "sensor::gyro::JY901S::JY901S (UART_HandleTypeDef *huart, Buffer &buffer, const math::Posef &pose_in_body, const Config &config)",
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
@@ -1273,8 +1273,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-cba8a54bdf0950ea",
-          "anchor": "api-variable-cba8a54bdf0950ea",
+          "id": "api-variable-a1cb443ed82125cf",
+          "anchor": "api-variable-a1cb443ed82125cf",
           "kind": "variable",
           "name": "MaxAccel",
           "qualifiedName": "sensor::gyro::JY901S::MaxAccel",
@@ -1282,9 +1282,9 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 134,
+            "line": 137,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L134"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L137"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -1297,8 +1297,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6c6ed28cbbb9147d",
-          "anchor": "api-variable-6c6ed28cbbb9147d",
+          "id": "api-variable-1dc6112f81862a8e",
+          "anchor": "api-variable-1dc6112f81862a8e",
           "kind": "variable",
           "name": "MaxAngle",
           "qualifiedName": "sensor::gyro::JY901S::MaxAngle",
@@ -1306,9 +1306,9 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 136,
+            "line": 139,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L136"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L139"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -1321,8 +1321,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-d8a8d9c641298fe0",
-          "anchor": "api-variable-d8a8d9c641298fe0",
+          "id": "api-variable-dfbcefc53ba2ea60",
+          "anchor": "api-variable-dfbcefc53ba2ea60",
           "kind": "variable",
           "name": "MaxGyro",
           "qualifiedName": "sensor::gyro::JY901S::MaxGyro",
@@ -1330,9 +1330,9 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 135,
+            "line": 138,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L135"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L138"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -1345,8 +1345,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f081d1609b1a70c3",
-          "anchor": "api-variable-f081d1609b1a70c3",
+          "id": "api-variable-42b1f400f5426364",
+          "anchor": "api-variable-42b1f400f5426364",
           "kind": "variable",
           "name": "MaxQuat",
           "qualifiedName": "sensor::gyro::JY901S::MaxQuat",
@@ -1354,9 +1354,9 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 137,
+            "line": 140,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L137"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L140"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -1385,7 +1385,7 @@
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": null,
           "references": [
-            "api-function-4d9ae5b9d6e328f7",
+            "api-function-bd1f1cfecc0fce41",
             "api-typedef-43507fcaa8df4321",
             "api-variable-01b231938f5d9b08",
             "api-variable-1ba37d77e4a6e29b",
@@ -1450,7 +1450,7 @@
             "const": false
           },
           "references": [
-            "api-function-4d9ae5b9d6e328f7",
+            "api-function-bd1f1cfecc0fce41",
             "api-typedef-43507fcaa8df4321"
           ],
           "enumValues": []
@@ -1659,7 +1659,7 @@
             "const": false
           },
           "references": [
-            "api-function-4d9ae5b9d6e328f7",
+            "api-function-bd1f1cfecc0fce41",
             "api-typedef-43507fcaa8df4321"
           ],
           "enumValues": []
@@ -1826,8 +1826,8 @@
           ]
         },
         {
-          "id": "api-struct-9b7c481644abfe90",
-          "anchor": "api-struct-9b7c481644abfe90",
+          "id": "api-struct-422c81610f172eef",
+          "anchor": "api-struct-422c81610f172eef",
           "kind": "struct",
           "name": "sensor::gyro::JY901S::Reg",
           "qualifiedName": "sensor::gyro::JY901S::Reg",
@@ -1835,120 +1835,120 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 141,
+            "line": 144,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L141"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L144"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": null,
           "references": [
-            "api-variable-0219bdbff12162ad",
-            "api-variable-02defc3a5f29f584",
-            "api-variable-0512b3d8483704c8",
-            "api-variable-0653624cc745151d",
-            "api-variable-07b4b28f8e3c2d02",
-            "api-variable-08df4807c84b3ad7",
-            "api-variable-0a77cd8f2ce93f4e",
-            "api-variable-0c869e91a233e341",
-            "api-variable-0f5e54afc3640fb9",
-            "api-variable-1080bca6273c9278",
-            "api-variable-1261152121e67e3b",
-            "api-variable-1469e14f4bf24391",
-            "api-variable-15e6ea43915659ab",
-            "api-variable-18e198b5d2abdd1b",
-            "api-variable-1c69446672c9a767",
-            "api-variable-212e9eb416eb9413",
-            "api-variable-238d6035a7d36ce2",
-            "api-variable-2721c32730f43bbd",
-            "api-variable-2b5678ff0c3d5777",
-            "api-variable-2b6f2fa7443235be",
-            "api-variable-2bf9cb0725d4b655",
-            "api-variable-334d5ac1943c3712",
-            "api-variable-39be308452f0832b",
-            "api-variable-39ca974af88b39e9",
-            "api-variable-39eccc74ca76b710",
-            "api-variable-3c9114da48cd5291",
-            "api-variable-3ca5beb3fe05ea1d",
-            "api-variable-3d2dd5b39a8d1a68",
-            "api-variable-3d4492a71ff1ccfa",
-            "api-variable-3e1cf15e576f706e",
-            "api-variable-3f779eae36955e7a",
-            "api-variable-4193fca327a1f70d",
-            "api-variable-42244c3a31360612",
-            "api-variable-45832d40fad61d58",
-            "api-variable-487aff5ad1cd443b",
-            "api-variable-48c28237cd6a3f08",
-            "api-variable-50fc5b18aa91ec7d",
-            "api-variable-551a53a390c4573a",
-            "api-variable-570e265eaaa447ca",
-            "api-variable-58a635ca6c9992be",
-            "api-variable-5e0fcf78f05498a7",
-            "api-variable-6432a845c7cd9d1f",
-            "api-variable-6533f8df0256e834",
-            "api-variable-69416dc8b10de3cb",
-            "api-variable-696f18190a1a216f",
-            "api-variable-698279b756e9b5d9",
-            "api-variable-6c9eeaef31dd5608",
-            "api-variable-6d4c3420c4d2f237",
-            "api-variable-6edf4720fa91e2a9",
-            "api-variable-70c1febcd737d441",
-            "api-variable-70d80d6dbb1f9174",
-            "api-variable-7146ae269c31038b",
-            "api-variable-77cbef8060f5fed3",
-            "api-variable-77f3eb542676783d",
-            "api-variable-786e09701dd1ba93",
-            "api-variable-79fa50c8cb20d318",
-            "api-variable-7fb1ca87fa76e57c",
-            "api-variable-8676d959c2cc1cdc",
-            "api-variable-8b6d67364c1357a4",
-            "api-variable-8c1ee2e1de083745",
-            "api-variable-8df7d804f047c55b",
-            "api-variable-9284f693100feb79",
-            "api-variable-949412e94d609f84",
-            "api-variable-989d8354cf72e175",
-            "api-variable-9918e049588d34a0",
-            "api-variable-9970b21a33c637b2",
-            "api-variable-9cd6f691eb160c99",
-            "api-variable-9d276aab3fc45bac",
-            "api-variable-9dcdc4adf7225505",
-            "api-variable-a0106302bc445dbe",
-            "api-variable-a08fa90d93201b34",
-            "api-variable-a1526b9a9fc593fe",
-            "api-variable-a270772aa44faa42",
-            "api-variable-a4d383f178266a22",
-            "api-variable-a5e2929392745724",
-            "api-variable-a87181c515eb0eb6",
-            "api-variable-aa901f220095c3cb",
-            "api-variable-aab0ecf6038193d0",
-            "api-variable-abbed7ea71bd391d",
-            "api-variable-b59aec939ab32fda",
-            "api-variable-b6a3e7aa7d2c1f57",
-            "api-variable-b7de52708991b555",
-            "api-variable-bd8cdd5f4538e082",
-            "api-variable-c1845c7b5e85b50d",
-            "api-variable-c4fe08552870268d",
-            "api-variable-c90eaaf756a62392",
-            "api-variable-cfe17211c18327c5",
-            "api-variable-d0c753110edec6ef",
-            "api-variable-d476f38e6e5ac547",
-            "api-variable-d66d49306215dd78",
-            "api-variable-d9d9eba7f622615b",
-            "api-variable-e3ae7356dd81becc",
-            "api-variable-e89d178b3fc2779c",
-            "api-variable-ef622f60be6606ad",
-            "api-variable-f1a4ea1e4d94a824",
-            "api-variable-f442f29cb479bc56",
-            "api-variable-f4e615223cbe3a08",
-            "api-variable-f69fde7748eafc23",
-            "api-variable-fa511a9cd8efd541",
-            "api-variable-ff96eff670ea3833",
-            "api-variable-ffdcf07ad1367d74"
+            "api-variable-00f949689b20fe81",
+            "api-variable-02cf64c27d514fa7",
+            "api-variable-0373d2d06a6605c2",
+            "api-variable-060b5445c6c33ef8",
+            "api-variable-078f42d61099e1b9",
+            "api-variable-0a43f702c3a213b9",
+            "api-variable-0cbd6501ec9c74e0",
+            "api-variable-0d04d18bdbb46e3d",
+            "api-variable-0d9d14fd87bb11fc",
+            "api-variable-0e32eb3f65122bac",
+            "api-variable-1252abf7f908bfa5",
+            "api-variable-150a84a7271985ec",
+            "api-variable-16fe29938558d244",
+            "api-variable-170da798c9475d91",
+            "api-variable-195100aa24a184f3",
+            "api-variable-1a51c4212866696c",
+            "api-variable-1f219e5c2c9fc621",
+            "api-variable-24d5b6396df18e53",
+            "api-variable-2644944ff76bb7c8",
+            "api-variable-2792cd43cc6d9ee1",
+            "api-variable-2c836f76509e7eed",
+            "api-variable-30138cecfb3c6cfd",
+            "api-variable-31eb1750864062ef",
+            "api-variable-3469d72a2f0035d2",
+            "api-variable-3d4b044a5190e1c5",
+            "api-variable-3d526ba03a59804d",
+            "api-variable-3e2254da63c62809",
+            "api-variable-41b5429ca73deada",
+            "api-variable-4248fe18800e08c5",
+            "api-variable-430c0217db1eb180",
+            "api-variable-450fd9fa7e52ba1f",
+            "api-variable-465018e3f4af1a59",
+            "api-variable-4c7cee6ade1a61a3",
+            "api-variable-4d07bc6c5b93cef1",
+            "api-variable-4de63a4af25b2777",
+            "api-variable-4f85adf2a660aead",
+            "api-variable-51b000b2a6c2af67",
+            "api-variable-546dbbbea0b0dacd",
+            "api-variable-5812cf6ed9420f88",
+            "api-variable-5e31854a3f0f4732",
+            "api-variable-5e329d6f47a62ecd",
+            "api-variable-5ea6d351b9d6e435",
+            "api-variable-68856ee8200bb05c",
+            "api-variable-6bf8591886a4be61",
+            "api-variable-6f0d81052198ab49",
+            "api-variable-6f8b31f530827354",
+            "api-variable-706e2d936c26a5c5",
+            "api-variable-7118303abb62f535",
+            "api-variable-7296fa8e2756b6eb",
+            "api-variable-773fe0e524ed7563",
+            "api-variable-80218ab21abe645e",
+            "api-variable-81f960742580276b",
+            "api-variable-87b97911a50bc488",
+            "api-variable-8997a2973ba55d26",
+            "api-variable-8faa8d55f6859c05",
+            "api-variable-915578c8afce6269",
+            "api-variable-91acffa70285e2b2",
+            "api-variable-9a43b58eccec3dd4",
+            "api-variable-9a8d1438580c82fa",
+            "api-variable-9b0cddf200ae3b5e",
+            "api-variable-9b293b79db368921",
+            "api-variable-a317eb135cc81b29",
+            "api-variable-a33251a5e33bf931",
+            "api-variable-a6fa889db1f93584",
+            "api-variable-a705d9c18d810c31",
+            "api-variable-af9d7fb2873e851d",
+            "api-variable-b19fb0e3132e3712",
+            "api-variable-b2cc99f4f4574b8b",
+            "api-variable-b3f11be038941172",
+            "api-variable-b4e991b1c46f071a",
+            "api-variable-b56d1d0abe6ce3da",
+            "api-variable-b5c3661385ccd6d8",
+            "api-variable-b5c61b40006b68b5",
+            "api-variable-b8f41a73ec3e43e3",
+            "api-variable-b9dd5ef9a31ac311",
+            "api-variable-be967c77d51d49f4",
+            "api-variable-bef59e3b682df648",
+            "api-variable-bff3ef269a6c0516",
+            "api-variable-c046209c41e9cfb5",
+            "api-variable-c1af1ff9edab80aa",
+            "api-variable-cbfa7e5c6be2cef6",
+            "api-variable-cd8304f678049109",
+            "api-variable-d09cee41cea5e30b",
+            "api-variable-d1c7a806fa487dbc",
+            "api-variable-d34309554934b49f",
+            "api-variable-dbdde19fe76f7a11",
+            "api-variable-de9b147f0ac46886",
+            "api-variable-e13a0ef2554190b2",
+            "api-variable-e15ac5f4a4583c8c",
+            "api-variable-e648c91ccc306035",
+            "api-variable-e82e7cc18d1a00bc",
+            "api-variable-eaf31dc8d4f9650c",
+            "api-variable-ec397e297fddf1d0",
+            "api-variable-ee144ee728ae74b0",
+            "api-variable-f2048bd0ab19746f",
+            "api-variable-f258747ce8845beb",
+            "api-variable-f78886319dc0afaf",
+            "api-variable-f95c0ad078afecc6",
+            "api-variable-fb5163ad5c341b8f",
+            "api-variable-fbf398330e12190d",
+            "api-variable-fda0cc3336b3725b"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-1261152121e67e3b",
-          "anchor": "api-variable-1261152121e67e3b",
+          "id": "api-variable-d34309554934b49f",
+          "anchor": "api-variable-d34309554934b49f",
           "kind": "variable",
           "name": "AccFilt",
           "qualifiedName": "sensor::gyro::JY901S::Reg::AccFilt",
@@ -1956,11 +1956,11 @@
           "description": "加速度滤波",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 175,
+            "line": 178,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L175"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L178"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -1971,8 +1971,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-c90eaaf756a62392",
-          "anchor": "api-variable-c90eaaf756a62392",
+          "id": "api-variable-be967c77d51d49f4",
+          "anchor": "api-variable-be967c77d51d49f4",
           "kind": "variable",
           "name": "AccRange",
           "qualifiedName": "sensor::gyro::JY901S::Reg::AccRange",
@@ -1980,11 +1980,11 @@
           "description": "加速度量程",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 168,
+            "line": 171,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L168"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L171"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -1995,8 +1995,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-786e09701dd1ba93",
-          "anchor": "api-variable-786e09701dd1ba93",
+          "id": "api-variable-078f42d61099e1b9",
+          "anchor": "api-variable-078f42d61099e1b9",
           "kind": "variable",
           "name": "AlarmLevel",
           "qualifiedName": "sensor::gyro::JY901S::Reg::AlarmLevel",
@@ -2004,11 +2004,11 @@
           "description": "角度报警电平",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 227,
+            "line": 230,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L227"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L230"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2019,8 +2019,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f442f29cb479bc56",
-          "anchor": "api-variable-f442f29cb479bc56",
+          "id": "api-variable-00f949689b20fe81",
+          "anchor": "api-variable-00f949689b20fe81",
           "kind": "variable",
           "name": "AlarmPin",
           "qualifiedName": "sensor::gyro::JY901S::Reg::AlarmPin",
@@ -2028,11 +2028,11 @@
           "description": "报警引脚映射",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 223,
+            "line": 226,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L223"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L226"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2043,8 +2043,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-39be308452f0832b",
-          "anchor": "api-variable-39be308452f0832b",
+          "id": "api-variable-02cf64c27d514fa7",
+          "anchor": "api-variable-02cf64c27d514fa7",
           "kind": "variable",
           "name": "Ax",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Ax",
@@ -2052,11 +2052,11 @@
           "description": "加速度X",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 182,
+            "line": 185,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L182"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L185"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2067,8 +2067,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-ef622f60be6606ad",
-          "anchor": "api-variable-ef622f60be6606ad",
+          "id": "api-variable-fbf398330e12190d",
+          "anchor": "api-variable-fbf398330e12190d",
           "kind": "variable",
           "name": "AxOffset",
           "qualifiedName": "sensor::gyro::JY901S::Reg::AxOffset",
@@ -2076,11 +2076,11 @@
           "description": "加速度X零偏",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 148,
+            "line": 151,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L148"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L151"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2091,8 +2091,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-9cd6f691eb160c99",
-          "anchor": "api-variable-9cd6f691eb160c99",
+          "id": "api-variable-1252abf7f908bfa5",
+          "anchor": "api-variable-1252abf7f908bfa5",
           "kind": "variable",
           "name": "Axis6",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Axis6",
@@ -2100,11 +2100,11 @@
           "description": "算法",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 171,
+            "line": 174,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L171"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L174"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2115,8 +2115,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-45832d40fad61d58",
-          "anchor": "api-variable-45832d40fad61d58",
+          "id": "api-variable-546dbbbea0b0dacd",
+          "anchor": "api-variable-546dbbbea0b0dacd",
           "kind": "variable",
           "name": "Ay",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Ay",
@@ -2124,11 +2124,11 @@
           "description": "加速度Y",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 183,
+            "line": 186,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L183"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L186"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2139,8 +2139,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-70c1febcd737d441",
-          "anchor": "api-variable-70c1febcd737d441",
+          "id": "api-variable-b56d1d0abe6ce3da",
+          "anchor": "api-variable-b56d1d0abe6ce3da",
           "kind": "variable",
           "name": "AyOffset",
           "qualifiedName": "sensor::gyro::JY901S::Reg::AyOffset",
@@ -2148,11 +2148,11 @@
           "description": "加速度Y零偏",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 149,
+            "line": 152,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L149"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L152"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2163,8 +2163,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-18e198b5d2abdd1b",
-          "anchor": "api-variable-18e198b5d2abdd1b",
+          "id": "api-variable-2644944ff76bb7c8",
+          "anchor": "api-variable-2644944ff76bb7c8",
           "kind": "variable",
           "name": "Az",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Az",
@@ -2172,11 +2172,11 @@
           "description": "加速度Z",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 184,
+            "line": 187,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L184"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L187"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2187,8 +2187,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-3e1cf15e576f706e",
-          "anchor": "api-variable-3e1cf15e576f706e",
+          "id": "api-variable-0a43f702c3a213b9",
+          "anchor": "api-variable-0a43f702c3a213b9",
           "kind": "variable",
           "name": "AzOffset",
           "qualifiedName": "sensor::gyro::JY901S::Reg::AzOffset",
@@ -2196,11 +2196,11 @@
           "description": "加速度Z零偏",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 150,
+            "line": 153,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L150"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L153"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2211,8 +2211,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-48c28237cd6a3f08",
-          "anchor": "api-variable-48c28237cd6a3f08",
+          "id": "api-variable-0d9d14fd87bb11fc",
+          "anchor": "api-variable-0d9d14fd87bb11fc",
           "kind": "variable",
           "name": "Bandwidth",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Bandwidth",
@@ -2220,11 +2220,11 @@
           "description": "带宽",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 166,
+            "line": 169,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L166"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L169"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2235,8 +2235,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-a5e2929392745724",
-          "anchor": "api-variable-a5e2929392745724",
+          "id": "api-variable-fda0cc3336b3725b",
+          "anchor": "api-variable-fda0cc3336b3725b",
           "kind": "variable",
           "name": "BatVal",
           "qualifiedName": "sensor::gyro::JY901S::Reg::BatVal",
@@ -2244,11 +2244,11 @@
           "description": "供电电压",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 222,
+            "line": 225,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L222"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L225"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2259,8 +2259,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-ffdcf07ad1367d74",
-          "anchor": "api-variable-ffdcf07ad1367d74",
+          "id": "api-variable-a33251a5e33bf931",
+          "anchor": "api-variable-a33251a5e33bf931",
           "kind": "variable",
           "name": "Baud",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Baud",
@@ -2268,11 +2268,11 @@
           "description": "串口波特率",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 147,
+            "line": 150,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L147"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L150"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2283,8 +2283,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-ff96eff670ea3833",
-          "anchor": "api-variable-ff96eff670ea3833",
+          "id": "api-variable-51b000b2a6c2af67",
+          "anchor": "api-variable-51b000b2a6c2af67",
           "kind": "variable",
           "name": "CalSw",
           "qualifiedName": "sensor::gyro::JY901S::Reg::CalSw",
@@ -2292,11 +2292,11 @@
           "description": "校准模式",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 144,
+            "line": 147,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L144"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L147"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2307,8 +2307,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-a87181c515eb0eb6",
-          "anchor": "api-variable-a87181c515eb0eb6",
+          "id": "api-variable-b4e991b1c46f071a",
+          "anchor": "api-variable-b4e991b1c46f071a",
           "kind": "variable",
           "name": "D0Mode",
           "qualifiedName": "sensor::gyro::JY901S::Reg::D0Mode",
@@ -2316,11 +2316,11 @@
           "description": "D0引脚模式",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 157,
+            "line": 160,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L157"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L160"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2331,8 +2331,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6edf4720fa91e2a9",
-          "anchor": "api-variable-6edf4720fa91e2a9",
+          "id": "api-variable-3469d72a2f0035d2",
+          "anchor": "api-variable-3469d72a2f0035d2",
           "kind": "variable",
           "name": "D0Status",
           "qualifiedName": "sensor::gyro::JY901S::Reg::D0Status",
@@ -2340,11 +2340,11 @@
           "description": "D0引脚状态",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 195,
+            "line": 198,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L195"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L198"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2355,8 +2355,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-2b5678ff0c3d5777",
-          "anchor": "api-variable-2b5678ff0c3d5777",
+          "id": "api-variable-de9b147f0ac46886",
+          "anchor": "api-variable-de9b147f0ac46886",
           "kind": "variable",
           "name": "D1Mode",
           "qualifiedName": "sensor::gyro::JY901S::Reg::D1Mode",
@@ -2364,11 +2364,11 @@
           "description": "D1引脚模式",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 158,
+            "line": 161,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L158"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L161"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2379,8 +2379,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-a0106302bc445dbe",
-          "anchor": "api-variable-a0106302bc445dbe",
+          "id": "api-variable-b5c61b40006b68b5",
+          "anchor": "api-variable-b5c61b40006b68b5",
           "kind": "variable",
           "name": "D1Status",
           "qualifiedName": "sensor::gyro::JY901S::Reg::D1Status",
@@ -2388,11 +2388,11 @@
           "description": "D1引脚状态",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 196,
+            "line": 199,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L196"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L199"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2403,8 +2403,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-a4d383f178266a22",
-          "anchor": "api-variable-a4d383f178266a22",
+          "id": "api-variable-81f960742580276b",
+          "anchor": "api-variable-81f960742580276b",
           "kind": "variable",
           "name": "D2Mode",
           "qualifiedName": "sensor::gyro::JY901S::Reg::D2Mode",
@@ -2412,11 +2412,11 @@
           "description": "D2引脚模式",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 159,
+            "line": 162,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L159"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L162"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2427,8 +2427,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-334d5ac1943c3712",
-          "anchor": "api-variable-334d5ac1943c3712",
+          "id": "api-variable-0373d2d06a6605c2",
+          "anchor": "api-variable-0373d2d06a6605c2",
           "kind": "variable",
           "name": "D2Status",
           "qualifiedName": "sensor::gyro::JY901S::Reg::D2Status",
@@ -2436,11 +2436,11 @@
           "description": "D2引脚状态",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 197,
+            "line": 200,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L197"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L200"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2451,8 +2451,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-abbed7ea71bd391d",
-          "anchor": "api-variable-abbed7ea71bd391d",
+          "id": "api-variable-31eb1750864062ef",
+          "anchor": "api-variable-31eb1750864062ef",
           "kind": "variable",
           "name": "D3Mode",
           "qualifiedName": "sensor::gyro::JY901S::Reg::D3Mode",
@@ -2460,11 +2460,11 @@
           "description": "D3引脚模式",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 160,
+            "line": 163,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L160"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L163"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2475,8 +2475,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6533f8df0256e834",
-          "anchor": "api-variable-6533f8df0256e834",
+          "id": "api-variable-430c0217db1eb180",
+          "anchor": "api-variable-430c0217db1eb180",
           "kind": "variable",
           "name": "D3Status",
           "qualifiedName": "sensor::gyro::JY901S::Reg::D3Status",
@@ -2484,11 +2484,11 @@
           "description": "D3引脚状态",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 198,
+            "line": 201,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L198"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L201"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2499,8 +2499,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-8df7d804f047c55b",
-          "anchor": "api-variable-8df7d804f047c55b",
+          "id": "api-variable-ee144ee728ae74b0",
+          "anchor": "api-variable-ee144ee728ae74b0",
           "kind": "variable",
           "name": "DdHh",
           "qualifiedName": "sensor::gyro::JY901S::Reg::DdHh",
@@ -2508,11 +2508,11 @@
           "description": "时日",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 179,
+            "line": 182,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L179"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L182"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2523,8 +2523,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-77cbef8060f5fed3",
-          "anchor": "api-variable-77cbef8060f5fed3",
+          "id": "api-variable-f78886319dc0afaf",
+          "anchor": "api-variable-f78886319dc0afaf",
           "kind": "variable",
           "name": "DelayT",
           "qualifiedName": "sensor::gyro::JY901S::Reg::DelayT",
@@ -2532,11 +2532,11 @@
           "description": "报警信号延迟",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 219,
+            "line": 222,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L219"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L222"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2547,8 +2547,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-42244c3a31360612",
-          "anchor": "api-variable-42244c3a31360612",
+          "id": "api-variable-060b5445c6c33ef8",
+          "anchor": "api-variable-060b5445c6c33ef8",
           "kind": "variable",
           "name": "FiltK",
           "qualifiedName": "sensor::gyro::JY901S::Reg::FiltK",
@@ -2556,11 +2556,11 @@
           "description": "动态滤波",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 172,
+            "line": 175,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L172"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L175"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2571,8 +2571,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0219bdbff12162ad",
-          "anchor": "api-variable-0219bdbff12162ad",
+          "id": "api-variable-a317eb135cc81b29",
+          "anchor": "api-variable-a317eb135cc81b29",
           "kind": "variable",
           "name": "GpsBaud",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GpsBaud",
@@ -2580,11 +2580,11 @@
           "description": "GPS波特率",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 173,
+            "line": 176,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L173"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L176"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2595,8 +2595,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-2b6f2fa7443235be",
-          "anchor": "api-variable-2b6f2fa7443235be",
+          "id": "api-variable-4d07bc6c5b93cef1",
+          "anchor": "api-variable-4d07bc6c5b93cef1",
           "kind": "variable",
           "name": "GpsHeight",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GpsHeight",
@@ -2604,11 +2604,11 @@
           "description": "GPS海拔",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 207,
+            "line": 210,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L207"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L210"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2619,8 +2619,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-c1845c7b5e85b50d",
-          "anchor": "api-variable-c1845c7b5e85b50d",
+          "id": "api-variable-9b0cddf200ae3b5e",
+          "anchor": "api-variable-9b0cddf200ae3b5e",
           "kind": "variable",
           "name": "GpsVH",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GpsVH",
@@ -2628,11 +2628,11 @@
           "description": "GPS地速高16位",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 210,
+            "line": 213,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L210"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L213"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2643,8 +2643,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-9284f693100feb79",
-          "anchor": "api-variable-9284f693100feb79",
+          "id": "api-variable-b19fb0e3132e3712",
+          "anchor": "api-variable-b19fb0e3132e3712",
           "kind": "variable",
           "name": "GpsVL",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GpsVL",
@@ -2652,11 +2652,11 @@
           "description": "GPS地速低16位",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 209,
+            "line": 212,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L209"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L212"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2667,8 +2667,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-212e9eb416eb9413",
-          "anchor": "api-variable-212e9eb416eb9413",
+          "id": "api-variable-6f8b31f530827354",
+          "anchor": "api-variable-6f8b31f530827354",
           "kind": "variable",
           "name": "GpsYaw",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GpsYaw",
@@ -2676,11 +2676,11 @@
           "description": "GPS航向角",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 208,
+            "line": 211,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L208"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L211"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2691,8 +2691,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6432a845c7cd9d1f",
-          "anchor": "api-variable-6432a845c7cd9d1f",
+          "id": "api-variable-bef59e3b682df648",
+          "anchor": "api-variable-bef59e3b682df648",
           "kind": "variable",
           "name": "Gx",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Gx",
@@ -2700,11 +2700,11 @@
           "description": "角速度X",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 185,
+            "line": 188,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L185"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L188"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2715,8 +2715,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-02defc3a5f29f584",
-          "anchor": "api-variable-02defc3a5f29f584",
+          "id": "api-variable-3d4b044a5190e1c5",
+          "anchor": "api-variable-3d4b044a5190e1c5",
           "kind": "variable",
           "name": "GxOffset",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GxOffset",
@@ -2724,11 +2724,11 @@
           "description": "角速度X零偏",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 151,
+            "line": 154,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L151"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L154"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2739,8 +2739,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-69416dc8b10de3cb",
-          "anchor": "api-variable-69416dc8b10de3cb",
+          "id": "api-variable-16fe29938558d244",
+          "anchor": "api-variable-16fe29938558d244",
           "kind": "variable",
           "name": "Gy",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Gy",
@@ -2748,11 +2748,11 @@
           "description": "角速度Y",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 186,
+            "line": 189,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L186"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L189"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2763,8 +2763,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f4e615223cbe3a08",
-          "anchor": "api-variable-f4e615223cbe3a08",
+          "id": "api-variable-e15ac5f4a4583c8c",
+          "anchor": "api-variable-e15ac5f4a4583c8c",
           "kind": "variable",
           "name": "GyOffset",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GyOffset",
@@ -2772,11 +2772,11 @@
           "description": "角速度Y零偏",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 152,
+            "line": 155,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L152"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L155"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2787,8 +2787,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-989d8354cf72e175",
-          "anchor": "api-variable-989d8354cf72e175",
+          "id": "api-variable-eaf31dc8d4f9650c",
+          "anchor": "api-variable-eaf31dc8d4f9650c",
           "kind": "variable",
           "name": "GyroCaliThr",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GyroCaliThr",
@@ -2796,11 +2796,11 @@
           "description": "陀螺仪静止阈值",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 226,
+            "line": 229,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L226"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L229"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2811,8 +2811,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-d0c753110edec6ef",
-          "anchor": "api-variable-d0c753110edec6ef",
+          "id": "api-variable-9b293b79db368921",
+          "anchor": "api-variable-9b293b79db368921",
           "kind": "variable",
           "name": "GyroCaliTime",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GyroCaliTime",
@@ -2820,11 +2820,11 @@
           "description": "陀螺仪自动校准时间",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 228,
+            "line": 231,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L228"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L231"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2835,8 +2835,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-bd8cdd5f4538e082",
-          "anchor": "api-variable-bd8cdd5f4538e082",
+          "id": "api-variable-a6fa889db1f93584",
+          "anchor": "api-variable-a6fa889db1f93584",
           "kind": "variable",
           "name": "GyroRange",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GyroRange",
@@ -2844,11 +2844,11 @@
           "description": "陀螺仪量程",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 167,
+            "line": 170,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L167"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L170"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2859,8 +2859,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-b6a3e7aa7d2c1f57",
-          "anchor": "api-variable-b6a3e7aa7d2c1f57",
+          "id": "api-variable-450fd9fa7e52ba1f",
+          "anchor": "api-variable-450fd9fa7e52ba1f",
           "kind": "variable",
           "name": "Gz",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Gz",
@@ -2868,11 +2868,11 @@
           "description": "角速度Z",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 187,
+            "line": 190,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L187"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L190"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2883,8 +2883,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f69fde7748eafc23",
-          "anchor": "api-variable-f69fde7748eafc23",
+          "id": "api-variable-8997a2973ba55d26",
+          "anchor": "api-variable-8997a2973ba55d26",
           "kind": "variable",
           "name": "GzOffset",
           "qualifiedName": "sensor::gyro::JY901S::Reg::GzOffset",
@@ -2892,11 +2892,11 @@
           "description": "角速度Z零偏",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 153,
+            "line": 156,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L153"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L156"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2907,8 +2907,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-8b6d67364c1357a4",
-          "anchor": "api-variable-8b6d67364c1357a4",
+          "id": "api-variable-2792cd43cc6d9ee1",
+          "anchor": "api-variable-2792cd43cc6d9ee1",
           "kind": "variable",
           "name": "Hdop",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Hdop",
@@ -2916,11 +2916,11 @@
           "description": "水平精度",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 217,
+            "line": 220,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L217"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L220"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2931,8 +2931,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-9970b21a33c637b2",
-          "anchor": "api-variable-9970b21a33c637b2",
+          "id": "api-variable-b3f11be038941172",
+          "anchor": "api-variable-b3f11be038941172",
           "kind": "variable",
           "name": "HeightH",
           "qualifiedName": "sensor::gyro::JY901S::Reg::HeightH",
@@ -2940,11 +2940,11 @@
           "description": "高度高16位",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 202,
+            "line": 205,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L202"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L205"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2955,8 +2955,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-07b4b28f8e3c2d02",
-          "anchor": "api-variable-07b4b28f8e3c2d02",
+          "id": "api-variable-170da798c9475d91",
+          "anchor": "api-variable-170da798c9475d91",
           "kind": "variable",
           "name": "HeightL",
           "qualifiedName": "sensor::gyro::JY901S::Reg::HeightL",
@@ -2964,11 +2964,11 @@
           "description": "高度低16位",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 201,
+            "line": 204,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L201"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L204"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -2979,8 +2979,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-3d4492a71ff1ccfa",
-          "anchor": "api-variable-3d4492a71ff1ccfa",
+          "id": "api-variable-4248fe18800e08c5",
+          "anchor": "api-variable-4248fe18800e08c5",
           "kind": "variable",
           "name": "Hx",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Hx",
@@ -2988,11 +2988,11 @@
           "description": "磁场X",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 188,
+            "line": 191,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L188"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L191"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3003,8 +3003,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-5e0fcf78f05498a7",
-          "anchor": "api-variable-5e0fcf78f05498a7",
+          "id": "api-variable-30138cecfb3c6cfd",
+          "anchor": "api-variable-30138cecfb3c6cfd",
           "kind": "variable",
           "name": "HxOffset",
           "qualifiedName": "sensor::gyro::JY901S::Reg::HxOffset",
@@ -3012,11 +3012,11 @@
           "description": "磁场X零偏",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 154,
+            "line": 157,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L154"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L157"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3027,8 +3027,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-a1526b9a9fc593fe",
-          "anchor": "api-variable-a1526b9a9fc593fe",
+          "id": "api-variable-e648c91ccc306035",
+          "anchor": "api-variable-e648c91ccc306035",
           "kind": "variable",
           "name": "Hy",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Hy",
@@ -3036,11 +3036,11 @@
           "description": "磁场Y",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 189,
+            "line": 192,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L189"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L192"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3051,8 +3051,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-d476f38e6e5ac547",
-          "anchor": "api-variable-d476f38e6e5ac547",
+          "id": "api-variable-0e32eb3f65122bac",
+          "anchor": "api-variable-0e32eb3f65122bac",
           "kind": "variable",
           "name": "HyOffset",
           "qualifiedName": "sensor::gyro::JY901S::Reg::HyOffset",
@@ -3060,11 +3060,11 @@
           "description": "磁场Y零偏",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 155,
+            "line": 158,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L155"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L158"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3075,8 +3075,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f1a4ea1e4d94a824",
-          "anchor": "api-variable-f1a4ea1e4d94a824",
+          "id": "api-variable-5e31854a3f0f4732",
+          "anchor": "api-variable-5e31854a3f0f4732",
           "kind": "variable",
           "name": "Hz",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Hz",
@@ -3084,11 +3084,11 @@
           "description": "磁场Z",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 190,
+            "line": 193,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L190"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L193"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3099,8 +3099,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-d66d49306215dd78",
-          "anchor": "api-variable-d66d49306215dd78",
+          "id": "api-variable-80218ab21abe645e",
+          "anchor": "api-variable-80218ab21abe645e",
           "kind": "variable",
           "name": "HzOffset",
           "qualifiedName": "sensor::gyro::JY901S::Reg::HzOffset",
@@ -3108,11 +3108,11 @@
           "description": "磁场Z零偏",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 156,
+            "line": 159,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L156"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L159"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3123,8 +3123,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-aa901f220095c3cb",
-          "anchor": "api-variable-aa901f220095c3cb",
+          "id": "api-variable-24d5b6396df18e53",
+          "anchor": "api-variable-24d5b6396df18e53",
           "kind": "variable",
           "name": "IicAddr",
           "qualifiedName": "sensor::gyro::JY901S::Reg::IicAddr",
@@ -3132,11 +3132,11 @@
           "description": "IIC设备地址",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 161,
+            "line": 164,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L161"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L164"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3147,8 +3147,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-c4fe08552870268d",
-          "anchor": "api-variable-c4fe08552870268d",
+          "id": "api-variable-7296fa8e2756b6eb",
+          "anchor": "api-variable-7296fa8e2756b6eb",
           "kind": "variable",
           "name": "Key",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Key",
@@ -3156,11 +3156,11 @@
           "description": "解锁",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 230,
+            "line": 233,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L230"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L233"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3171,8 +3171,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-7fb1ca87fa76e57c",
-          "anchor": "api-variable-7fb1ca87fa76e57c",
+          "id": "api-variable-d09cee41cea5e30b",
+          "anchor": "api-variable-d09cee41cea5e30b",
           "kind": "variable",
           "name": "LatH",
           "qualifiedName": "sensor::gyro::JY901S::Reg::LatH",
@@ -3180,11 +3180,11 @@
           "description": "纬度高16位",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 206,
+            "line": 209,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L206"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L209"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3195,8 +3195,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-e3ae7356dd81becc",
-          "anchor": "api-variable-e3ae7356dd81becc",
+          "id": "api-variable-9a8d1438580c82fa",
+          "anchor": "api-variable-9a8d1438580c82fa",
           "kind": "variable",
           "name": "LatL",
           "qualifiedName": "sensor::gyro::JY901S::Reg::LatL",
@@ -3204,11 +3204,11 @@
           "description": "纬度低16位",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 205,
+            "line": 208,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L205"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L208"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3219,8 +3219,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-a08fa90d93201b34",
-          "anchor": "api-variable-a08fa90d93201b34",
+          "id": "api-variable-915578c8afce6269",
+          "anchor": "api-variable-915578c8afce6269",
           "kind": "variable",
           "name": "LedOff",
           "qualifiedName": "sensor::gyro::JY901S::Reg::LedOff",
@@ -3228,11 +3228,11 @@
           "description": "关闭LED灯",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 162,
+            "line": 165,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L162"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L165"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3243,8 +3243,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-fa511a9cd8efd541",
-          "anchor": "api-variable-fa511a9cd8efd541",
+          "id": "api-variable-4de63a4af25b2777",
+          "anchor": "api-variable-4de63a4af25b2777",
           "kind": "variable",
           "name": "LonH",
           "qualifiedName": "sensor::gyro::JY901S::Reg::LonH",
@@ -3252,11 +3252,11 @@
           "description": "经度高16位",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 204,
+            "line": 207,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L204"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L207"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3267,8 +3267,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-8c1ee2e1de083745",
-          "anchor": "api-variable-8c1ee2e1de083745",
+          "id": "api-variable-dbdde19fe76f7a11",
+          "anchor": "api-variable-dbdde19fe76f7a11",
           "kind": "variable",
           "name": "LonL",
           "qualifiedName": "sensor::gyro::JY901S::Reg::LonL",
@@ -3276,11 +3276,11 @@
           "description": "经度低16位",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 203,
+            "line": 206,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L203"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L206"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3291,8 +3291,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-39eccc74ca76b710",
-          "anchor": "api-variable-39eccc74ca76b710",
+          "id": "api-variable-f95c0ad078afecc6",
+          "anchor": "api-variable-f95c0ad078afecc6",
           "kind": "variable",
           "name": "MagRangeX",
           "qualifiedName": "sensor::gyro::JY901S::Reg::MagRangeX",
@@ -3300,11 +3300,11 @@
           "description": "磁场X校准范围",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 163,
+            "line": 166,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L163"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L166"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3315,8 +3315,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0c869e91a233e341",
-          "anchor": "api-variable-0c869e91a233e341",
+          "id": "api-variable-af9d7fb2873e851d",
+          "anchor": "api-variable-af9d7fb2873e851d",
           "kind": "variable",
           "name": "MagRangeY",
           "qualifiedName": "sensor::gyro::JY901S::Reg::MagRangeY",
@@ -3324,11 +3324,11 @@
           "description": "磁场Y校准范围",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 164,
+            "line": 167,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L164"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L167"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3339,8 +3339,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-d9d9eba7f622615b",
-          "anchor": "api-variable-d9d9eba7f622615b",
+          "id": "api-variable-d1c7a806fa487dbc",
+          "anchor": "api-variable-d1c7a806fa487dbc",
           "kind": "variable",
           "name": "MagRangeZ",
           "qualifiedName": "sensor::gyro::JY901S::Reg::MagRangeZ",
@@ -3348,11 +3348,11 @@
           "description": "磁场Z校准范围",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 165,
+            "line": 168,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L165"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L168"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3363,8 +3363,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-58a635ca6c9992be",
-          "anchor": "api-variable-58a635ca6c9992be",
+          "id": "api-variable-41b5429ca73deada",
+          "anchor": "api-variable-41b5429ca73deada",
           "kind": "variable",
           "name": "MmSs",
           "qualifiedName": "sensor::gyro::JY901S::Reg::MmSs",
@@ -3372,11 +3372,11 @@
           "description": "分秒",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 180,
+            "line": 183,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L180"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L183"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3387,8 +3387,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6d4c3420c4d2f237",
-          "anchor": "api-variable-6d4c3420c4d2f237",
+          "id": "api-variable-68856ee8200bb05c",
+          "anchor": "api-variable-68856ee8200bb05c",
           "kind": "variable",
           "name": "ModDelay",
           "qualifiedName": "sensor::gyro::JY901S::Reg::ModDelay",
@@ -3396,11 +3396,11 @@
           "description": "485数据应答延时",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 235,
+            "line": 238,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L235"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L238"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3411,8 +3411,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-3c9114da48cd5291",
-          "anchor": "api-variable-3c9114da48cd5291",
+          "id": "api-variable-b5c3661385ccd6d8",
+          "anchor": "api-variable-b5c3661385ccd6d8",
           "kind": "variable",
           "name": "MsL",
           "qualifiedName": "sensor::gyro::JY901S::Reg::MsL",
@@ -3420,11 +3420,11 @@
           "description": "毫秒",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 181,
+            "line": 184,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L181"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L184"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3435,8 +3435,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-9d276aab3fc45bac",
-          "anchor": "api-variable-9d276aab3fc45bac",
+          "id": "api-variable-ec397e297fddf1d0",
+          "anchor": "api-variable-ec397e297fddf1d0",
           "kind": "variable",
           "name": "NumberId1",
           "qualifiedName": "sensor::gyro::JY901S::Reg::NumberId1",
@@ -3444,11 +3444,11 @@
           "description": "设备编号1-2",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 238,
+            "line": 241,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L238"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L241"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3459,8 +3459,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-570e265eaaa447ca",
-          "anchor": "api-variable-570e265eaaa447ca",
+          "id": "api-variable-c046209c41e9cfb5",
+          "anchor": "api-variable-c046209c41e9cfb5",
           "kind": "variable",
           "name": "NumberId2",
           "qualifiedName": "sensor::gyro::JY901S::Reg::NumberId2",
@@ -3468,11 +3468,11 @@
           "description": "设备编号3-4",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 239,
+            "line": 242,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L239"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L242"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3483,8 +3483,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-70d80d6dbb1f9174",
-          "anchor": "api-variable-70d80d6dbb1f9174",
+          "id": "api-variable-0cbd6501ec9c74e0",
+          "anchor": "api-variable-0cbd6501ec9c74e0",
           "kind": "variable",
           "name": "NumberId3",
           "qualifiedName": "sensor::gyro::JY901S::Reg::NumberId3",
@@ -3492,11 +3492,11 @@
           "description": "设备编号5-6",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 240,
+            "line": 243,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L240"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L243"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3507,8 +3507,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-3f779eae36955e7a",
-          "anchor": "api-variable-3f779eae36955e7a",
+          "id": "api-variable-1f219e5c2c9fc621",
+          "anchor": "api-variable-1f219e5c2c9fc621",
           "kind": "variable",
           "name": "NumberId4",
           "qualifiedName": "sensor::gyro::JY901S::Reg::NumberId4",
@@ -3516,11 +3516,11 @@
           "description": "设备编号7-8",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 241,
+            "line": 244,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L241"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L244"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3531,8 +3531,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-9918e049588d34a0",
-          "anchor": "api-variable-9918e049588d34a0",
+          "id": "api-variable-f258747ce8845beb",
+          "anchor": "api-variable-f258747ce8845beb",
           "kind": "variable",
           "name": "NumberId5",
           "qualifiedName": "sensor::gyro::JY901S::Reg::NumberId5",
@@ -3540,11 +3540,11 @@
           "description": "设备编号9-10",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 242,
+            "line": 245,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L242"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L245"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3555,8 +3555,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6c9eeaef31dd5608",
-          "anchor": "api-variable-6c9eeaef31dd5608",
+          "id": "api-variable-cd8304f678049109",
+          "anchor": "api-variable-cd8304f678049109",
           "kind": "variable",
           "name": "NumberId6",
           "qualifiedName": "sensor::gyro::JY901S::Reg::NumberId6",
@@ -3564,11 +3564,11 @@
           "description": "设备编号11-12",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 243,
+            "line": 246,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L243"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L246"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3579,8 +3579,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-b7de52708991b555",
-          "anchor": "api-variable-b7de52708991b555",
+          "id": "api-variable-6f0d81052198ab49",
+          "anchor": "api-variable-6f0d81052198ab49",
           "kind": "variable",
           "name": "Orient",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Orient",
@@ -3588,11 +3588,11 @@
           "description": "安装方向",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 170,
+            "line": 173,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L170"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L173"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3603,8 +3603,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-a270772aa44faa42",
-          "anchor": "api-variable-a270772aa44faa42",
+          "id": "api-variable-f2048bd0ab19746f",
+          "anchor": "api-variable-f2048bd0ab19746f",
           "kind": "variable",
           "name": "Pdop",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Pdop",
@@ -3612,11 +3612,11 @@
           "description": "位置精度",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 216,
+            "line": 219,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L216"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L219"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3627,8 +3627,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0f5e54afc3640fb9",
-          "anchor": "api-variable-0f5e54afc3640fb9",
+          "id": "api-variable-7118303abb62f535",
+          "anchor": "api-variable-7118303abb62f535",
           "kind": "variable",
           "name": "Pitch",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Pitch",
@@ -3636,11 +3636,11 @@
           "description": "俯仰",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 192,
+            "line": 195,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L192"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L195"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3651,8 +3651,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-1080bca6273c9278",
-          "anchor": "api-variable-1080bca6273c9278",
+          "id": "api-variable-5e329d6f47a62ecd",
+          "anchor": "api-variable-5e329d6f47a62ecd",
           "kind": "variable",
           "name": "PowerOnSend",
           "qualifiedName": "sensor::gyro::JY901S::Reg::PowerOnSend",
@@ -3660,11 +3660,11 @@
           "description": "指令启动",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 176,
+            "line": 179,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L176"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L179"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3675,8 +3675,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-77f3eb542676783d",
-          "anchor": "api-variable-77f3eb542676783d",
+          "id": "api-variable-a705d9c18d810c31",
+          "anchor": "api-variable-a705d9c18d810c31",
           "kind": "variable",
           "name": "PressureH",
           "qualifiedName": "sensor::gyro::JY901S::Reg::PressureH",
@@ -3684,11 +3684,11 @@
           "description": "气压高16位",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 200,
+            "line": 203,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L200"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L203"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3699,8 +3699,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-79fa50c8cb20d318",
-          "anchor": "api-variable-79fa50c8cb20d318",
+          "id": "api-variable-4c7cee6ade1a61a3",
+          "anchor": "api-variable-4c7cee6ade1a61a3",
           "kind": "variable",
           "name": "PressureL",
           "qualifiedName": "sensor::gyro::JY901S::Reg::PressureL",
@@ -3708,11 +3708,11 @@
           "description": "气压低16位",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 199,
+            "line": 202,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L199"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L202"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3723,8 +3723,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-4193fca327a1f70d",
-          "anchor": "api-variable-4193fca327a1f70d",
+          "id": "api-variable-e13a0ef2554190b2",
+          "anchor": "api-variable-e13a0ef2554190b2",
           "kind": "variable",
           "name": "Q0",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Q0",
@@ -3732,11 +3732,11 @@
           "description": "四元数0",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 211,
+            "line": 214,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L211"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L214"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3747,8 +3747,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-7146ae269c31038b",
-          "anchor": "api-variable-7146ae269c31038b",
+          "id": "api-variable-b2cc99f4f4574b8b",
+          "anchor": "api-variable-b2cc99f4f4574b8b",
           "kind": "variable",
           "name": "Q1",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Q1",
@@ -3756,11 +3756,11 @@
           "description": "四元数1",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 212,
+            "line": 215,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L212"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L215"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3771,8 +3771,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-08df4807c84b3ad7",
-          "anchor": "api-variable-08df4807c84b3ad7",
+          "id": "api-variable-465018e3f4af1a59",
+          "anchor": "api-variable-465018e3f4af1a59",
           "kind": "variable",
           "name": "Q2",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Q2",
@@ -3780,11 +3780,11 @@
           "description": "四元数2",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 213,
+            "line": 216,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L213"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L216"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3795,8 +3795,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-698279b756e9b5d9",
-          "anchor": "api-variable-698279b756e9b5d9",
+          "id": "api-variable-5ea6d351b9d6e435",
+          "anchor": "api-variable-5ea6d351b9d6e435",
           "kind": "variable",
           "name": "Q3",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Q3",
@@ -3804,11 +3804,11 @@
           "description": "四元数3",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 214,
+            "line": 217,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L214"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L217"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3819,8 +3819,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-487aff5ad1cd443b",
-          "anchor": "api-variable-487aff5ad1cd443b",
+          "id": "api-variable-e82e7cc18d1a00bc",
+          "anchor": "api-variable-e82e7cc18d1a00bc",
           "kind": "variable",
           "name": "RRate",
           "qualifiedName": "sensor::gyro::JY901S::Reg::RRate",
@@ -3828,11 +3828,11 @@
           "description": "输出速率",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 146,
+            "line": 149,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L146"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L149"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3843,8 +3843,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-50fc5b18aa91ec7d",
-          "anchor": "api-variable-50fc5b18aa91ec7d",
+          "id": "api-variable-150a84a7271985ec",
+          "anchor": "api-variable-150a84a7271985ec",
           "kind": "variable",
           "name": "RSW",
           "qualifiedName": "sensor::gyro::JY901S::Reg::RSW",
@@ -3852,11 +3852,11 @@
           "description": "输出内容",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 145,
+            "line": 148,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L145"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L148"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3867,8 +3867,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-8676d959c2cc1cdc",
-          "anchor": "api-variable-8676d959c2cc1cdc",
+          "id": "api-variable-3d526ba03a59804d",
+          "anchor": "api-variable-3d526ba03a59804d",
           "kind": "variable",
           "name": "ReadAddr",
           "qualifiedName": "sensor::gyro::JY901S::Reg::ReadAddr",
@@ -3876,11 +3876,11 @@
           "description": "读取寄存器",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 174,
+            "line": 177,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L174"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L177"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3891,8 +3891,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0653624cc745151d",
-          "anchor": "api-variable-0653624cc745151d",
+          "id": "api-variable-2c836f76509e7eed",
+          "anchor": "api-variable-2c836f76509e7eed",
           "kind": "variable",
           "name": "Roll",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Roll",
@@ -3900,11 +3900,11 @@
           "description": "横滚角",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 191,
+            "line": 194,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L191"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L194"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3915,8 +3915,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-3d2dd5b39a8d1a68",
-          "anchor": "api-variable-3d2dd5b39a8d1a68",
+          "id": "api-variable-91acffa70285e2b2",
+          "anchor": "api-variable-91acffa70285e2b2",
           "kind": "variable",
           "name": "Save",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Save",
@@ -3924,11 +3924,11 @@
           "description": "保存/重启/恢复出厂",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 143,
+            "line": 146,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L143"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L146"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3939,8 +3939,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0a77cd8f2ce93f4e",
-          "anchor": "api-variable-0a77cd8f2ce93f4e",
+          "id": "api-variable-b8f41a73ec3e43e3",
+          "anchor": "api-variable-b8f41a73ec3e43e3",
           "kind": "variable",
           "name": "Sleep",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Sleep",
@@ -3948,11 +3948,11 @@
           "description": "休眠",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 169,
+            "line": 172,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L169"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L172"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3963,8 +3963,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-39ca974af88b39e9",
-          "anchor": "api-variable-39ca974af88b39e9",
+          "id": "api-variable-706e2d936c26a5c5",
+          "anchor": "api-variable-706e2d936c26a5c5",
           "kind": "variable",
           "name": "SvNum",
           "qualifiedName": "sensor::gyro::JY901S::Reg::SvNum",
@@ -3972,11 +3972,11 @@
           "description": "卫星数",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 215,
+            "line": 218,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L215"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L218"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -3987,8 +3987,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-949412e94d609f84",
-          "anchor": "api-variable-949412e94d609f84",
+          "id": "api-variable-9a43b58eccec3dd4",
+          "anchor": "api-variable-9a43b58eccec3dd4",
           "kind": "variable",
           "name": "Temp",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Temp",
@@ -3996,11 +3996,11 @@
           "description": "温度",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 194,
+            "line": 197,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L194"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L197"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4011,8 +4011,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-b59aec939ab32fda",
-          "anchor": "api-variable-b59aec939ab32fda",
+          "id": "api-variable-5812cf6ed9420f88",
+          "anchor": "api-variable-5812cf6ed9420f88",
           "kind": "variable",
           "name": "TimeZone",
           "qualifiedName": "sensor::gyro::JY901S::Reg::TimeZone",
@@ -4020,11 +4020,11 @@
           "description": "GPS时区",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 232,
+            "line": 235,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L232"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L235"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4035,8 +4035,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-e89d178b3fc2779c",
-          "anchor": "api-variable-e89d178b3fc2779c",
+          "id": "api-variable-cbfa7e5c6be2cef6",
+          "anchor": "api-variable-cbfa7e5c6be2cef6",
           "kind": "variable",
           "name": "TrigTime",
           "qualifiedName": "sensor::gyro::JY901S::Reg::TrigTime",
@@ -4044,11 +4044,11 @@
           "description": "报警连续触发时间",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 229,
+            "line": 232,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L229"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L232"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4059,8 +4059,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-1c69446672c9a767",
-          "anchor": "api-variable-1c69446672c9a767",
+          "id": "api-variable-8faa8d55f6859c05",
+          "anchor": "api-variable-8faa8d55f6859c05",
           "kind": "variable",
           "name": "Vdop",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Vdop",
@@ -4068,11 +4068,11 @@
           "description": "垂直精度",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 218,
+            "line": 221,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L218"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L221"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4083,8 +4083,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-cfe17211c18327c5",
-          "anchor": "api-variable-cfe17211c18327c5",
+          "id": "api-variable-87b97911a50bc488",
+          "anchor": "api-variable-87b97911a50bc488",
           "kind": "variable",
           "name": "Version",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Version",
@@ -4092,11 +4092,11 @@
           "description": "版本号",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 177,
+            "line": 180,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L177"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L180"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4107,8 +4107,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0512b3d8483704c8",
-          "anchor": "api-variable-0512b3d8483704c8",
+          "id": "api-variable-195100aa24a184f3",
+          "anchor": "api-variable-195100aa24a184f3",
           "kind": "variable",
           "name": "WError",
           "qualifiedName": "sensor::gyro::JY901S::Reg::WError",
@@ -4116,11 +4116,11 @@
           "description": "陀螺仪变化值",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 231,
+            "line": 234,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L231"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L234"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4131,8 +4131,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-238d6035a7d36ce2",
-          "anchor": "api-variable-238d6035a7d36ce2",
+          "id": "api-variable-4f85adf2a660aead",
+          "anchor": "api-variable-4f85adf2a660aead",
           "kind": "variable",
           "name": "WzStatic",
           "qualifiedName": "sensor::gyro::JY901S::Reg::WzStatic",
@@ -4140,11 +4140,11 @@
           "description": "角速度积分阈值",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 234,
+            "line": 237,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L234"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L237"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4155,8 +4155,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-2721c32730f43bbd",
-          "anchor": "api-variable-2721c32730f43bbd",
+          "id": "api-variable-773fe0e524ed7563",
+          "anchor": "api-variable-773fe0e524ed7563",
           "kind": "variable",
           "name": "WzTime",
           "qualifiedName": "sensor::gyro::JY901S::Reg::WzTime",
@@ -4164,11 +4164,11 @@
           "description": "角速度连续静止时间",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 233,
+            "line": 236,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L233"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L236"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4179,8 +4179,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-696f18190a1a216f",
-          "anchor": "api-variable-696f18190a1a216f",
+          "id": "api-variable-3e2254da63c62809",
+          "anchor": "api-variable-3e2254da63c62809",
           "kind": "variable",
           "name": "XMax",
           "qualifiedName": "sensor::gyro::JY901S::Reg::XMax",
@@ -4188,11 +4188,11 @@
           "description": "X轴角度报警最大值",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 221,
+            "line": 224,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L221"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L224"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4203,8 +4203,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-2bf9cb0725d4b655",
-          "anchor": "api-variable-2bf9cb0725d4b655",
+          "id": "api-variable-b9dd5ef9a31ac311",
+          "anchor": "api-variable-b9dd5ef9a31ac311",
           "kind": "variable",
           "name": "XMin",
           "qualifiedName": "sensor::gyro::JY901S::Reg::XMin",
@@ -4212,11 +4212,11 @@
           "description": "X轴角度报警最小值",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 220,
+            "line": 223,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L220"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L223"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4227,8 +4227,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-9dcdc4adf7225505",
-          "anchor": "api-variable-9dcdc4adf7225505",
+          "id": "api-variable-c1af1ff9edab80aa",
+          "anchor": "api-variable-c1af1ff9edab80aa",
           "kind": "variable",
           "name": "XRefRoll",
           "qualifiedName": "sensor::gyro::JY901S::Reg::XRefRoll",
@@ -4236,11 +4236,11 @@
           "description": "横滚角零位参考值",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 236,
+            "line": 239,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L236"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L239"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4251,8 +4251,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-aab0ecf6038193d0",
-          "anchor": "api-variable-aab0ecf6038193d0",
+          "id": "api-variable-bff3ef269a6c0516",
+          "anchor": "api-variable-bff3ef269a6c0516",
           "kind": "variable",
           "name": "YMax",
           "qualifiedName": "sensor::gyro::JY901S::Reg::YMax",
@@ -4260,11 +4260,11 @@
           "description": "Y轴角度报警最大值",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 225,
+            "line": 228,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L225"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L228"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4275,8 +4275,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-15e6ea43915659ab",
-          "anchor": "api-variable-15e6ea43915659ab",
+          "id": "api-variable-6bf8591886a4be61",
+          "anchor": "api-variable-6bf8591886a4be61",
           "kind": "variable",
           "name": "YMin",
           "qualifiedName": "sensor::gyro::JY901S::Reg::YMin",
@@ -4284,11 +4284,11 @@
           "description": "Y轴角度报警最小值",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 224,
+            "line": 227,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L224"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L227"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4299,8 +4299,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-3ca5beb3fe05ea1d",
-          "anchor": "api-variable-3ca5beb3fe05ea1d",
+          "id": "api-variable-0d04d18bdbb46e3d",
+          "anchor": "api-variable-0d04d18bdbb46e3d",
           "kind": "variable",
           "name": "YRefRoll",
           "qualifiedName": "sensor::gyro::JY901S::Reg::YRefRoll",
@@ -4308,11 +4308,11 @@
           "description": "俯仰角零位参考值",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 237,
+            "line": 240,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L237"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L240"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4323,8 +4323,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-1469e14f4bf24391",
-          "anchor": "api-variable-1469e14f4bf24391",
+          "id": "api-variable-fb5163ad5c341b8f",
+          "anchor": "api-variable-fb5163ad5c341b8f",
           "kind": "variable",
           "name": "Yaw",
           "qualifiedName": "sensor::gyro::JY901S::Reg::Yaw",
@@ -4332,11 +4332,11 @@
           "description": "航向角",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 193,
+            "line": 196,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L193"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L196"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4347,8 +4347,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-551a53a390c4573a",
-          "anchor": "api-variable-551a53a390c4573a",
+          "id": "api-variable-1a51c4212866696c",
+          "anchor": "api-variable-1a51c4212866696c",
           "kind": "variable",
           "name": "YyMm",
           "qualifiedName": "sensor::gyro::JY901S::Reg::YyMm",
@@ -4356,11 +4356,11 @@
           "description": "年月",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 178,
+            "line": 181,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L178"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L181"
           },
-          "parentId": "api-struct-9b7c481644abfe90",
+          "parentId": "api-struct-422c81610f172eef",
           "member": {
             "access": "public",
             "static": true,
@@ -4397,630 +4397,12 @@
           "enumValues": []
         },
         {
-          "id": "api-function-9b7be84b0995e3bc",
-          "anchor": "api-function-9b7be84b0995e3bc",
+          "id": "api-function-3d36922361f7966e",
+          "anchor": "api-function-3d36922361f7966e",
           "kind": "function",
           "name": "_send",
           "qualifiedName": "sensor::gyro::JY901S::_send",
           "signature": "void sensor::gyro::JY901S::_send (const std::array< uint8_t, 5 > &cmd) const",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 281,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L281"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-2e6c8326b288c6b8",
-          "anchor": "api-variable-2e6c8326b288c6b8",
-          "kind": "variable",
-          "name": "acc",
-          "qualifiedName": "sensor::gyro::JY901S::acc",
-          "signature": "bool sensor::gyro::JY901S::acc",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 271,
-            "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L271"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-c14d0e80bfcbf103",
-          "anchor": "api-variable-c14d0e80bfcbf103",
-          "kind": "variable",
-          "name": "acc_raw_",
-          "qualifiedName": "sensor::gyro::JY901S::acc_raw_",
-          "signature": "math::Vec3f sensor::gyro::JY901S::acc_raw_",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 264,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L264"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-a0aef013a9512bbc",
-          "anchor": "api-variable-a0aef013a9512bbc",
-          "kind": "variable",
-          "name": "acc_w_",
-          "qualifiedName": "sensor::gyro::JY901S::acc_w_",
-          "signature": "math::Vec3f sensor::gyro::JY901S::acc_w_",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 265,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L265"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-c861f925cf607676",
-          "anchor": "api-variable-c861f925cf607676",
-          "kind": "variable",
-          "name": "angles_w_",
-          "qualifiedName": "sensor::gyro::JY901S::angles_w_",
-          "signature": "math::EulerDegf sensor::gyro::JY901S::angles_w_",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 267,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L267"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-b7467cc38fc64917",
-          "anchor": "api-function-b7467cc38fc64917",
-          "kind": "function",
-          "name": "body_state",
-          "qualifiedName": "sensor::gyro::JY901S::body_state",
-          "signature": "const BodyState & sensor::gyro::JY901S::body_state () const",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 111,
-            "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L111"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [
-            "api-struct-17cc3c87f0be6c20"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-010d5b880873cdd7",
-          "anchor": "api-function-010d5b880873cdd7",
-          "kind": "function",
-          "name": "calibrateAcc",
-          "qualifiedName": "sensor::gyro::JY901S::calibrateAcc",
-          "signature": "void sensor::gyro::JY901S::calibrateAcc () const",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 108,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L108"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-007600e4a9087440",
-          "anchor": "api-function-007600e4a9087440",
-          "kind": "function",
-          "name": "calibrateAngle",
-          "qualifiedName": "sensor::gyro::JY901S::calibrateAngle",
-          "signature": "void sensor::gyro::JY901S::calibrateAngle () const",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 109,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L109"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-60622a60723bfff8",
-          "anchor": "api-variable-60622a60723bfff8",
-          "kind": "variable",
-          "name": "cfg_",
-          "qualifiedName": "sensor::gyro::JY901S::cfg_",
-          "signature": "Config sensor::gyro::JY901S::cfg_",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 246,
-            "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L246"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-struct-4c3b41387c344eb6"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-4d9ae5b9d6e328f7",
-          "anchor": "api-function-4d9ae5b9d6e328f7",
-          "kind": "function",
-          "name": "decode",
-          "qualifiedName": "sensor::gyro::JY901S::decode",
-          "signature": "bool sensor::gyro::JY901S::decode (const uint8_t data[10]) override",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 123,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L123"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "protected",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-2b2bee214f824d3d",
-            "api-function-f907c2c872b2aa97",
-            "api-variable-2e9e812b477bf9a5",
-            "api-variable-dee2cbb15651a8de",
-            "api-variable-ef291376a8b19e64"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-1158a486071c6cca",
-          "anchor": "api-function-1158a486071c6cca",
-          "kind": "function",
-          "name": "feedbackTransform",
-          "qualifiedName": "sensor::gyro::JY901S::feedbackTransform",
-          "signature": "void sensor::gyro::JY901S::feedbackTransform ()",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 285,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L285"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-029701f667261c1c",
-          "anchor": "api-variable-029701f667261c1c",
-          "kind": "variable",
-          "name": "feedback_dt_",
-          "qualifiedName": "sensor::gyro::JY901S::feedback_dt_",
-          "signature": "float sensor::gyro::JY901S::feedback_dt_",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 258,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L258"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-634963948be70599",
-          "anchor": "api-variable-634963948be70599",
-          "kind": "variable",
-          "name": "feedback_ok_",
-          "qualifiedName": "sensor::gyro::JY901S::feedback_ok_",
-          "signature": "struct sensor::gyro::JY901S::@324170215114001206232043154176064345127023017375 sensor::gyro::JY901S::feedback_ok_",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 272,
-            "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L272"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-8709f1deea3f4852",
-          "anchor": "api-variable-8709f1deea3f4852",
-          "kind": "variable",
-          "name": "g",
-          "qualifiedName": "sensor::gyro::JY901S::g",
-          "signature": "float sensor::gyro::JY901S::g",
-          "description": "解释一下单位：\n\n加速度单位 m/s^2，陀螺仪传输单位为 g 角速度单位 rad/s，方便计算 四元数为单位四元数 欧拉角为角度，仅用于显示，不用于计算。故采用易读取的方式",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 133,
-            "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L133"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": true,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-b67d8d4a5ff31eff",
-          "anchor": "api-variable-b67d8d4a5ff31eff",
-          "kind": "variable",
-          "name": "gyro",
-          "qualifiedName": "sensor::gyro::JY901S::gyro",
-          "signature": "bool sensor::gyro::JY901S::gyro",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 271,
-            "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L271"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-cdef775b6a436ec3",
-          "anchor": "api-variable-cdef775b6a436ec3",
-          "kind": "variable",
-          "name": "gyro_s_",
-          "qualifiedName": "sensor::gyro::JY901S::gyro_s_",
-          "signature": "math::Vec3f sensor::gyro::JY901S::gyro_s_",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 266,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L266"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-aa94586708fa289b",
-          "anchor": "api-function-aa94586708fa289b",
-          "kind": "function",
-          "name": "header",
-          "qualifiedName": "sensor::gyro::JY901S::header",
-          "signature": "const std::array< uint8_t, 1 > & sensor::gyro::JY901S::header () const override",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 121,
-            "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L121"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "protected",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [
-            "api-variable-2e9e812b477bf9a5"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-e45e7b5f207b26bd",
-          "anchor": "api-function-e45e7b5f207b26bd",
-          "kind": "function",
-          "name": "init",
-          "qualifiedName": "sensor::gyro::JY901S::init",
-          "signature": "void sensor::gyro::JY901S::init ()",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 107,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L107"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-0eae14ddc5364247",
-          "anchor": "api-variable-0eae14ddc5364247",
-          "kind": "variable",
-          "name": "pose_in_body_",
-          "qualifiedName": "sensor::gyro::JY901S::pose_in_body_",
-          "signature": "math::Posef sensor::gyro::JY901S::pose_in_body_",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 255,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L255"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-38f8514f28d24bd1",
-          "anchor": "api-variable-38f8514f28d24bd1",
-          "kind": "variable",
-          "name": "quat",
-          "qualifiedName": "sensor::gyro::JY901S::quat",
-          "signature": "bool sensor::gyro::JY901S::quat",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 271,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L271"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-505c142202b1aab0",
-          "anchor": "api-variable-505c142202b1aab0",
-          "kind": "variable",
-          "name": "quat_w_",
-          "qualifiedName": "sensor::gyro::JY901S::quat_w_",
-          "signature": "math::Quatf sensor::gyro::JY901S::quat_w_",
-          "description": "陀螺仪相对于自身的加速度，角速度和在世界中的姿态",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 263,
-            "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L263"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-0b4aa2917e0449ae",
-          "anchor": "api-function-0b4aa2917e0449ae",
-          "kind": "function",
-          "name": "registerTrigger",
-          "qualifiedName": "sensor::gyro::JY901S::registerTrigger",
-          "signature": "void sensor::gyro::JY901S::registerTrigger (const Trigger &trigger)",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 113,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L113"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-typedef-6039ad6ec3b3a4d8"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-1165eb3581d14720",
-          "anchor": "api-function-1165eb3581d14720",
-          "kind": "function",
-          "name": "resetRot",
-          "qualifiedName": "sensor::gyro::JY901S::resetRot",
-          "signature": "void sensor::gyro::JY901S::resetRot ()",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 115,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L115"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-3bbf2e76140fe1a5"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-3bbf2e76140fe1a5",
-          "anchor": "api-function-3bbf2e76140fe1a5",
-          "kind": "function",
-          "name": "resetRotBy",
-          "qualifiedName": "sensor::gyro::JY901S::resetRotBy",
-          "signature": "void sensor::gyro::JY901S::resetRotBy (const math::Quatf &rot)",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 116,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L116"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-1165eb3581d14720"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-720a67936330ac0a",
-          "anchor": "api-function-720a67936330ac0a",
-          "kind": "function",
-          "name": "save",
-          "qualifiedName": "sensor::gyro::JY901S::save",
-          "signature": "void sensor::gyro::JY901S::save () const",
-          "description": "",
-          "location": {
-            "path": "gyro/JY901S/JY901S.hpp",
-            "line": 283,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L283"
-          },
-          "parentId": "api-class-a3bb0c2db1cf0699",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": true
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-dfa5579622208db8",
-          "anchor": "api-function-dfa5579622208db8",
-          "kind": "function",
-          "name": "sendCMD",
-          "qualifiedName": "sensor::gyro::JY901S::sendCMD",
-          "signature": "void sensor::gyro::JY901S::sendCMD (uint8_t cmd, uint16_t data) const",
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
@@ -5039,8 +4421,626 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-fa308126a7e50687",
-          "anchor": "api-variable-fa308126a7e50687",
+          "id": "api-variable-34718581f00ecbd9",
+          "anchor": "api-variable-34718581f00ecbd9",
+          "kind": "variable",
+          "name": "acc",
+          "qualifiedName": "sensor::gyro::JY901S::acc",
+          "signature": "bool sensor::gyro::JY901S::acc",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 274,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L274"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-009d75025dc958f0",
+          "anchor": "api-variable-009d75025dc958f0",
+          "kind": "variable",
+          "name": "acc_raw_",
+          "qualifiedName": "sensor::gyro::JY901S::acc_raw_",
+          "signature": "math::Vec3f sensor::gyro::JY901S::acc_raw_",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 267,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L267"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-887751a54e9f8a63",
+          "anchor": "api-variable-887751a54e9f8a63",
+          "kind": "variable",
+          "name": "acc_w_",
+          "qualifiedName": "sensor::gyro::JY901S::acc_w_",
+          "signature": "math::Vec3f sensor::gyro::JY901S::acc_w_",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 268,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L268"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-055145ceaa1949e8",
+          "anchor": "api-variable-055145ceaa1949e8",
+          "kind": "variable",
+          "name": "angles_w_",
+          "qualifiedName": "sensor::gyro::JY901S::angles_w_",
+          "signature": "math::EulerDegf sensor::gyro::JY901S::angles_w_",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 270,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L270"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-18574af71a6d6b41",
+          "anchor": "api-function-18574af71a6d6b41",
+          "kind": "function",
+          "name": "body_state",
+          "qualifiedName": "sensor::gyro::JY901S::body_state",
+          "signature": "const BodyState & sensor::gyro::JY901S::body_state () const",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 114,
+            "column": 22,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L114"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-struct-17cc3c87f0be6c20"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-efc15f3cb46b5b76",
+          "anchor": "api-function-efc15f3cb46b5b76",
+          "kind": "function",
+          "name": "calibrateAcc",
+          "qualifiedName": "sensor::gyro::JY901S::calibrateAcc",
+          "signature": "void sensor::gyro::JY901S::calibrateAcc () const",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 111,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L111"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-3b97dcd55a53f465",
+          "anchor": "api-function-3b97dcd55a53f465",
+          "kind": "function",
+          "name": "calibrateAngle",
+          "qualifiedName": "sensor::gyro::JY901S::calibrateAngle",
+          "signature": "void sensor::gyro::JY901S::calibrateAngle () const",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 112,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L112"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7ae5a6087328a029",
+          "anchor": "api-variable-7ae5a6087328a029",
+          "kind": "variable",
+          "name": "cfg_",
+          "qualifiedName": "sensor::gyro::JY901S::cfg_",
+          "signature": "Config sensor::gyro::JY901S::cfg_",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 249,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L249"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-4c3b41387c344eb6"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-bd1f1cfecc0fce41",
+          "anchor": "api-function-bd1f1cfecc0fce41",
+          "kind": "function",
+          "name": "decode",
+          "qualifiedName": "sensor::gyro::JY901S::decode",
+          "signature": "bool sensor::gyro::JY901S::decode (const uint8_t data[10]) override",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 126,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L126"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-2b2bee214f824d3d",
+            "api-function-f907c2c872b2aa97",
+            "api-variable-20961101ff25f453",
+            "api-variable-dee2cbb15651a8de",
+            "api-variable-ef291376a8b19e64"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-50494a1e411fdc5c",
+          "anchor": "api-function-50494a1e411fdc5c",
+          "kind": "function",
+          "name": "feedbackTransform",
+          "qualifiedName": "sensor::gyro::JY901S::feedbackTransform",
+          "signature": "void sensor::gyro::JY901S::feedbackTransform ()",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 288,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L288"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0090a0d20ce0a14c",
+          "anchor": "api-variable-0090a0d20ce0a14c",
+          "kind": "variable",
+          "name": "feedback_dt_",
+          "qualifiedName": "sensor::gyro::JY901S::feedback_dt_",
+          "signature": "float sensor::gyro::JY901S::feedback_dt_",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 261,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L261"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5195691969036957",
+          "anchor": "api-variable-5195691969036957",
+          "kind": "variable",
+          "name": "feedback_ok_",
+          "qualifiedName": "sensor::gyro::JY901S::feedback_ok_",
+          "signature": "struct sensor::gyro::JY901S::@324170215114001206232043154176064345127023017375 sensor::gyro::JY901S::feedback_ok_",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 275,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L275"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f9009e4ebb1b33ec",
+          "anchor": "api-variable-f9009e4ebb1b33ec",
+          "kind": "variable",
+          "name": "g",
+          "qualifiedName": "sensor::gyro::JY901S::g",
+          "signature": "float sensor::gyro::JY901S::g",
+          "description": "解释一下单位：\n\n加速度单位 m/s^2，陀螺仪传输单位为 g 角速度单位 rad/s，方便计算 四元数为单位四元数 欧拉角为角度，仅用于显示，不用于计算。故采用易读取的方式",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 136,
+            "column": 28,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L136"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0a5e40236dedd73d",
+          "anchor": "api-variable-0a5e40236dedd73d",
+          "kind": "variable",
+          "name": "gyro",
+          "qualifiedName": "sensor::gyro::JY901S::gyro",
+          "signature": "bool sensor::gyro::JY901S::gyro",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 274,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L274"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-63887c6d1ebd5612",
+          "anchor": "api-variable-63887c6d1ebd5612",
+          "kind": "variable",
+          "name": "gyro_s_",
+          "qualifiedName": "sensor::gyro::JY901S::gyro_s_",
+          "signature": "math::Vec3f sensor::gyro::JY901S::gyro_s_",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 269,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L269"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-8f998ef61d1071ba",
+          "anchor": "api-function-8f998ef61d1071ba",
+          "kind": "function",
+          "name": "header",
+          "qualifiedName": "sensor::gyro::JY901S::header",
+          "signature": "const std::array< uint8_t, 1 > & sensor::gyro::JY901S::header () const override",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 124,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L124"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "protected",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-variable-20961101ff25f453"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-cc8db509aebc28cf",
+          "anchor": "api-function-cc8db509aebc28cf",
+          "kind": "function",
+          "name": "init",
+          "qualifiedName": "sensor::gyro::JY901S::init",
+          "signature": "void sensor::gyro::JY901S::init ()",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 110,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L110"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0e39182ca6f64958",
+          "anchor": "api-variable-0e39182ca6f64958",
+          "kind": "variable",
+          "name": "pose_in_body_",
+          "qualifiedName": "sensor::gyro::JY901S::pose_in_body_",
+          "signature": "math::Posef sensor::gyro::JY901S::pose_in_body_",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 258,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L258"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-679057e2dd3caabf",
+          "anchor": "api-variable-679057e2dd3caabf",
+          "kind": "variable",
+          "name": "quat",
+          "qualifiedName": "sensor::gyro::JY901S::quat",
+          "signature": "bool sensor::gyro::JY901S::quat",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 274,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L274"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-31a31b0cba5b6eb5",
+          "anchor": "api-variable-31a31b0cba5b6eb5",
+          "kind": "variable",
+          "name": "quat_w_",
+          "qualifiedName": "sensor::gyro::JY901S::quat_w_",
+          "signature": "math::Quatf sensor::gyro::JY901S::quat_w_",
+          "description": "陀螺仪相对于自身的加速度，角速度和在世界中的姿态",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 266,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L266"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-a545f4589215a056",
+          "anchor": "api-function-a545f4589215a056",
+          "kind": "function",
+          "name": "registerTrigger",
+          "qualifiedName": "sensor::gyro::JY901S::registerTrigger",
+          "signature": "void sensor::gyro::JY901S::registerTrigger (const Trigger &trigger)",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 116,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L116"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-typedef-6039ad6ec3b3a4d8"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-de9c614e13bf2005",
+          "anchor": "api-function-de9c614e13bf2005",
+          "kind": "function",
+          "name": "resetRot",
+          "qualifiedName": "sensor::gyro::JY901S::resetRot",
+          "signature": "void sensor::gyro::JY901S::resetRot ()",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 118,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L118"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-73472d68f91d9468"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-73472d68f91d9468",
+          "anchor": "api-function-73472d68f91d9468",
+          "kind": "function",
+          "name": "resetRotBy",
+          "qualifiedName": "sensor::gyro::JY901S::resetRotBy",
+          "signature": "void sensor::gyro::JY901S::resetRotBy (const math::Quatf &rot)",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 119,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L119"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-de9c614e13bf2005"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-3daf45ce641b9c1e",
+          "anchor": "api-function-3daf45ce641b9c1e",
+          "kind": "function",
+          "name": "save",
+          "qualifiedName": "sensor::gyro::JY901S::save",
+          "signature": "void sensor::gyro::JY901S::save () const",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 286,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L286"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-741fa580c5191c43",
+          "anchor": "api-function-741fa580c5191c43",
+          "kind": "function",
+          "name": "sendCMD",
+          "qualifiedName": "sensor::gyro::JY901S::sendCMD",
+          "signature": "void sensor::gyro::JY901S::sendCMD (uint8_t cmd, uint16_t data) const",
+          "description": "",
+          "location": {
+            "path": "gyro/JY901S/JY901S.hpp",
+            "line": 287,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L287"
+          },
+          "parentId": "api-class-a3bb0c2db1cf0699",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f1ff217a561320fe",
+          "anchor": "api-variable-f1ff217a561320fe",
           "kind": "variable",
           "name": "state_body_",
           "qualifiedName": "sensor::gyro::JY901S::state_body_",
@@ -5048,9 +5048,9 @@
           "description": "body 在世界中的加速度，角速度，姿态",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 277,
+            "line": 280,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L277"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L280"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -5065,8 +5065,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-280a0a6daaf192e1",
-          "anchor": "api-variable-280a0a6daaf192e1",
+          "id": "api-variable-202034244f1b9f3c",
+          "anchor": "api-variable-202034244f1b9f3c",
           "kind": "variable",
           "name": "temperature_",
           "qualifiedName": "sensor::gyro::JY901S::temperature_",
@@ -5074,9 +5074,9 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 279,
+            "line": 282,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L279"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L282"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -5089,8 +5089,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-2fee7cd79500f868",
-          "anchor": "api-variable-2fee7cd79500f868",
+          "id": "api-variable-eeac62074fc32d49",
+          "anchor": "api-variable-eeac62074fc32d49",
           "kind": "variable",
           "name": "time_ms_",
           "qualifiedName": "sensor::gyro::JY901S::time_ms_",
@@ -5098,9 +5098,9 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 257,
+            "line": 260,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L257"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L260"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -5113,8 +5113,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-26ab0e93687ee737",
-          "anchor": "api-variable-26ab0e93687ee737",
+          "id": "api-variable-22747eeee9a1b292",
+          "anchor": "api-variable-22747eeee9a1b292",
           "kind": "variable",
           "name": "trig_",
           "qualifiedName": "sensor::gyro::JY901S::trig_",
@@ -5122,9 +5122,9 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 248,
+            "line": 251,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L248"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L251"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -5139,8 +5139,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-446397acc68f2b0b",
-          "anchor": "api-variable-446397acc68f2b0b",
+          "id": "api-variable-e3f732e978e27e64",
+          "anchor": "api-variable-e3f732e978e27e64",
           "kind": "variable",
           "name": "true_world_rot_",
           "qualifiedName": "sensor::gyro::JY901S::true_world_rot_",
@@ -5148,9 +5148,9 @@
           "description": "陀螺仪有地磁修正，所以其真实世界系的方向是固定的 该量表示真实世界系在世界系中的姿态",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 254,
+            "line": 257,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L254"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L257"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -5163,8 +5163,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-9c49dbcea824ca00",
-          "anchor": "api-function-9c49dbcea824ca00",
+          "id": "api-function-90451319e231467f",
+          "anchor": "api-function-90451319e231467f",
           "kind": "function",
           "name": "unlock",
           "qualifiedName": "sensor::gyro::JY901S::unlock",
@@ -5172,9 +5172,9 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 282,
+            "line": 285,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L282"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L285"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -5187,8 +5187,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-232f8c79b42f866a",
-          "anchor": "api-variable-232f8c79b42f866a",
+          "id": "api-variable-843e55c133a2b2fe",
+          "anchor": "api-variable-843e55c133a2b2fe",
           "kind": "variable",
           "name": "vec_g",
           "qualifiedName": "sensor::gyro::JY901S::vec_g",
@@ -5196,9 +5196,9 @@
           "description": "",
           "location": {
             "path": "gyro/JY901S/JY901S.hpp",
-            "line": 139,
+            "line": 142,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L139"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/gyro/JY901S/JY901S.hpp#L142"
           },
           "parentId": "api-class-a3bb0c2db1cf0699",
           "member": {
@@ -5233,7 +5233,7 @@
           },
           "references": [
             "api-enum-ed5e382feea9db8d",
-            "api-function-990b5c9988312d4a"
+            "api-function-1e717abcaa140d4c"
           ],
           "enumValues": []
         },
@@ -5259,7 +5259,7 @@
             "const": false
           },
           "references": [
-            "api-function-4d9ae5b9d6e328f7"
+            "api-function-bd1f1cfecc0fce41"
           ],
           "enumValues": []
         },
@@ -5285,7 +5285,7 @@
             "const": false
           },
           "references": [
-            "api-function-4d9ae5b9d6e328f7"
+            "api-function-bd1f1cfecc0fce41"
           ],
           "enumValues": []
         }
@@ -5869,11 +5869,11 @@
           "member": null,
           "references": [
             "api-class-88a0a6b0c8a41f60",
+            "api-function-702f566fcf59473b",
             "api-function-b7b86cae707ed792",
             "api-function-c6ce72ea22ef8d2c",
             "api-function-e12f8ccef1bab7c9",
             "api-function-e193cbe2e0d6c8fa",
-            "api-function-e93dfed980470ffb",
             "api-function-fded4b8e50b32475",
             "api-variable-3c51ec66e34f5342",
             "api-variable-c2dfe7aef1935293"
@@ -5881,12 +5881,12 @@
           "enumValues": []
         },
         {
-          "id": "api-function-e93dfed980470ffb",
-          "anchor": "api-function-e93dfed980470ffb",
+          "id": "api-function-702f566fcf59473b",
+          "anchor": "api-function-702f566fcf59473b",
           "kind": "function",
           "name": "DT35Board",
           "qualifiedName": "sensors::laser::DT35Board::DT35Board",
-          "signature": "sensors::laser::DT35Board::DT35Board (UART_HandleTypeDef *huart)",
+          "signature": "sensors::laser::DT35Board::DT35Board (UART_HandleTypeDef *huart, Buffer &buffer)",
           "description": "",
           "location": {
             "path": "laser/dt35/DT35.hpp",
@@ -6241,7 +6241,7 @@
             "api-function-17321f541a835f3d",
             "api-function-1c579585a7b85cc3",
             "api-function-6469fd804e6f25f7",
-            "api-function-96d21cd2966cf864",
+            "api-function-a08437fb020eede1",
             "api-function-f87b25df0465b747",
             "api-struct-664b1796f775a40d",
             "api-variable-b4a5fa943dbcae4e",
@@ -6495,12 +6495,12 @@
           "enumValues": []
         },
         {
-          "id": "api-function-96d21cd2966cf864",
-          "anchor": "api-function-96d21cd2966cf864",
+          "id": "api-function-a08437fb020eede1",
+          "anchor": "api-function-a08437fb020eede1",
           "kind": "function",
           "name": "STP23L",
           "qualifiedName": "sensors::laser::STP23L::STP23L",
-          "signature": "sensors::laser::STP23L::STP23L (UART_HandleTypeDef *huart)",
+          "signature": "sensors::laser::STP23L::STP23L (UART_HandleTypeDef *huart, Buffer &buffer)",
           "description": "",
           "location": {
             "path": "laser/stp23l/STP23L.hpp",
@@ -6879,6 +6879,7 @@
           "member": null,
           "references": [
             "api-define-88465741bd90fbd7",
+            "api-function-1708f18548bc3552",
             "api-function-1b74b0a0b83fda00",
             "api-function-1dbabd7692a64572",
             "api-function-2a1319ee4a70fb0c",
@@ -6887,7 +6888,6 @@
             "api-function-6e228c9fe202cfd7",
             "api-function-6e42181fbb756fd0",
             "api-function-93b613bd01f69de7",
-            "api-function-9b49883b557cb70b",
             "api-function-b06656984be76631",
             "api-function-d44ce239ae82845c",
             "api-function-d5c49926f52d93de",
@@ -6923,12 +6923,12 @@
           "enumValues": []
         },
         {
-          "id": "api-function-9b49883b557cb70b",
-          "anchor": "api-function-9b49883b557cb70b",
+          "id": "api-function-1708f18548bc3552",
+          "anchor": "api-function-1708f18548bc3552",
           "kind": "function",
           "name": "ActionOPS",
           "qualifiedName": "sensors::ops::ActionOPS::ActionOPS",
-          "signature": "sensors::ops::ActionOPS::ActionOPS (UART_HandleTypeDef *huart, const Config &cfg)",
+          "signature": "sensors::ops::ActionOPS::ActionOPS (UART_HandleTypeDef *huart, Buffer &buffer, const Config &cfg)",
           "description": "",
           "location": {
             "path": "ops/ActionOPS/ActionOPS.hpp",
@@ -7962,8 +7962,8 @@
             "const": false
           },
           "references": [
-            "api-function-2a1319ee4a70fb0c",
-            "api-function-9b49883b557cb70b"
+            "api-function-1708f18548bc3552",
+            "api-function-2a1319ee4a70fb0c"
           ],
           "enumValues": []
         },
@@ -8013,8 +8013,8 @@
             "const": false
           },
           "references": [
-            "api-function-2a1319ee4a70fb0c",
-            "api-function-9b49883b557cb70b"
+            "api-function-1708f18548bc3552",
+            "api-function-2a1319ee4a70fb0c"
           ],
           "enumValues": []
         },
@@ -8064,8 +8064,8 @@
             "const": false
           },
           "references": [
-            "api-function-2a1319ee4a70fb0c",
-            "api-function-9b49883b557cb70b"
+            "api-function-1708f18548bc3552",
+            "api-function-2a1319ee4a70fb0c"
           ],
           "enumValues": []
         },

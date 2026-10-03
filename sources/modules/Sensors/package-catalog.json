@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "Sensors",
-  "moduleSha": "a2e7e2fb7c3181d29cdbe7df6f235059e671f950",
+  "moduleSha": "d53b00e6225a43e748df477bf377fd7d315e21fc",
   "packages": [
     {
       "name": "HWT101CT",

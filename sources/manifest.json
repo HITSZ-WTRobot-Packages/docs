@@ -292,10 +292,10 @@
       "displayName": "Sensors",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/Sensors.git",
       "branch": "main",
-      "sha": "a2e7e2fb7c3181d29cdbe7df6f235059e671f950",
-      "shortSha": "a2e7e2fb7c31",
-      "producerFingerprint": "609bf5f34e4bbf77bfd8088f0a22378748dd5193b86ee0f7ed3b9a83f34dc846",
-      "totalBytes": 364003,
+      "sha": "d53b00e6225a43e748df477bf377fd7d315e21fc",
+      "shortSha": "d53b00e6225a",
+      "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
+      "totalBytes": 365756,
       "files": [
         {
           "path": "LICENSE",
@@ -305,22 +305,22 @@
         },
         {
           "path": "README.md",
-          "bytes": 9,
-          "sha256": "a7ebf47b30a28d68130ab8e895d7df7cdd1dd34259bbfb5e783c7f175fc9ed8a",
+          "bytes": 1666,
+          "sha256": "05c38f1542a576ac5f77aa6d1ef918ed346b494fffa8bd2ca0a90c97313422c6",
           "kind": "readme"
         }
       ],
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 327042,
-          "sha256": "0d361c5150360e5943a09dac1b1f6eb82e70a00012e037a35a6ec888e0d4bb58",
+          "bytes": 327138,
+          "sha256": "8ae2f6ccf5e835f7b9c90ff10e271eef49ce9f293fd406c003cf9b313641d7f3",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
           "bytes": 1803,
-          "sha256": "fb8e85a10b79d860573f5320127043aad12ab228460570fe04a434254a0f598a",
+          "sha256": "980857987290c926e408eb3127f29e097a9bc2a290c88a52b9ab18a9a3ce32d9",
           "kind": "package-catalog"
         }
       ],
