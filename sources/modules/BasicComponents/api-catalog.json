@@ -16125,6 +16125,330 @@
     },
     {
       "targetKind": "package",
+      "targetId": "memory--dmabuffer",
+      "displayName": "memory::DMABuffer",
+      "moduleId": "BasicComponents",
+      "packageSlug": "memory--dmabuffer",
+      "sourceBranch": "main",
+      "inputPaths": [
+        "memory/DMABuffer/dma_buffer.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "10 of 11 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-namespace-b3e23e961d66a307",
+          "anchor": "api-namespace-b3e23e961d66a307",
+          "kind": "namespace",
+          "name": "memory",
+          "qualifiedName": "memory",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 9,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L9"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-57d42c7f5c2da93e"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-012f6abbb33fddd8",
+          "anchor": "api-file-012f6abbb33fddd8",
+          "kind": "file",
+          "name": "memory/DMABuffer/dma_buffer.hpp",
+          "qualifiedName": "memory/DMABuffer/dma_buffer.hpp",
+          "signature": "",
+          "description": "C++17 固定容量、32 字节对齐的 DMA 字节存储。",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-57d42c7f5c2da93e",
+            "api-namespace-b3e23e961d66a307"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-57d42c7f5c2da93e",
+          "anchor": "api-class-57d42c7f5c2da93e",
+          "kind": "class",
+          "name": "memory::DMABuffer",
+          "qualifiedName": "memory::DMABuffer",
+          "signature": "",
+          "description": "内嵌 N 字节存储，不分配堆内存，不允许复制或移动。\n\nN 可用字节数，必须大于零。 通过引用传给驱动；存储必须保持有效，直到 DMA 及相关回调不再访问它。 data() 指向对象内部，size() 返回可用容量，不包含对齐填充。 sizeof(DMABuffer<N>) 可能大于 N；链接器按包含填充的实际大小预留空间。 内存区域由实例声明和链接脚本决定；32 字节对齐不保证 DMA 可达或不可缓存。 本类型不配置 MPU/Cache、不校验地址，也不提供 CPU/DMA 同步。 默认零初始化；若放入自定义 section，项目必须提供对应的启动初始化。 NOLOAD 不会自动清零，不能仅依靠成员初始化器假定上电后存储已经为零。 使用约定：",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 25,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L25"
+          },
+          "parentId": "api-namespace-b3e23e961d66a307",
+          "member": null,
+          "references": [
+            "api-function-558c77246a755527",
+            "api-function-646aaa4d59914fb7",
+            "api-function-65dad7691f42fec9",
+            "api-function-761c091d8829beea",
+            "api-function-7eeaaf0bc83587d3",
+            "api-function-b2c2b4aa124b9f75",
+            "api-function-ec5ba2b9c28b7036",
+            "api-function-fa304397dc21ef6e",
+            "api-variable-06cc7057de3e647a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-7eeaaf0bc83587d3",
+          "anchor": "api-function-7eeaaf0bc83587d3",
+          "kind": "function",
+          "name": "DMABuffer",
+          "qualifiedName": "memory::DMABuffer::DMABuffer",
+          "signature": "memory::DMABuffer< N, Alignment >::DMABuffer () noexcept=default",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 30,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L30"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-558c77246a755527",
+            "api-function-646aaa4d59914fb7",
+            "api-function-b2c2b4aa124b9f75",
+            "api-function-fa304397dc21ef6e"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-646aaa4d59914fb7",
+          "anchor": "api-function-646aaa4d59914fb7",
+          "kind": "function",
+          "name": "DMABuffer",
+          "qualifiedName": "memory::DMABuffer::DMABuffer",
+          "signature": "memory::DMABuffer< N, Alignment >::DMABuffer (DMABuffer &&)=delete",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 33,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L33"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-7eeaaf0bc83587d3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b2c2b4aa124b9f75",
+          "anchor": "api-function-b2c2b4aa124b9f75",
+          "kind": "function",
+          "name": "DMABuffer",
+          "qualifiedName": "memory::DMABuffer::DMABuffer",
+          "signature": "memory::DMABuffer< N, Alignment >::DMABuffer (const DMABuffer &)=delete",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 31,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L31"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-7eeaaf0bc83587d3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-761c091d8829beea",
+          "anchor": "api-function-761c091d8829beea",
+          "kind": "function",
+          "name": "data",
+          "qualifiedName": "memory::DMABuffer::data",
+          "signature": "const std::uint8_t * memory::DMABuffer< N, Alignment >::data () const noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 37,
+            "column": 35,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L37"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-65dad7691f42fec9",
+          "anchor": "api-function-65dad7691f42fec9",
+          "kind": "function",
+          "name": "data",
+          "qualifiedName": "memory::DMABuffer::data",
+          "signature": "std::uint8_t * memory::DMABuffer< N, Alignment >::data () noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 36,
+            "column": 29,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L36"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-558c77246a755527",
+          "anchor": "api-function-558c77246a755527",
+          "kind": "function",
+          "name": "operator=",
+          "qualifiedName": "memory::DMABuffer::operator=",
+          "signature": "DMABuffer & memory::DMABuffer< N, Alignment >::operator= (DMABuffer &&)=delete",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 34,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L34"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-7eeaaf0bc83587d3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-fa304397dc21ef6e",
+          "anchor": "api-function-fa304397dc21ef6e",
+          "kind": "function",
+          "name": "operator=",
+          "qualifiedName": "memory::DMABuffer::operator=",
+          "signature": "DMABuffer & memory::DMABuffer< N, Alignment >::operator= (const DMABuffer &)=delete",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 32,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L32"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-7eeaaf0bc83587d3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ec5ba2b9c28b7036",
+          "anchor": "api-function-ec5ba2b9c28b7036",
+          "kind": "function",
+          "name": "size",
+          "qualifiedName": "memory::DMABuffer::size",
+          "signature": "static constexpr std::size_t memory::DMABuffer< N, Alignment >::size () noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 38,
+            "column": 35,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L38"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-06cc7057de3e647a",
+          "anchor": "api-variable-06cc7057de3e647a",
+          "kind": "variable",
+          "name": "storage_",
+          "qualifiedName": "memory::DMABuffer::storage_",
+          "signature": "std::uint8_t memory::DMABuffer< N, Alignment >::storage_[N] [N]",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 41,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L41"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [],
+      "symbolCount": 12,
+      "documentedSymbolCount": 2
+    },
+    {
+      "targetKind": "package",
       "targetId": "memory--staticarena",
       "displayName": "memory::StaticArena",
       "moduleId": "BasicComponents",
@@ -16490,13 +16814,13 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "23 of 26 public API symbols have no description."
+          "message": "24 of 27 public API symbols have no description."
         }
       ],
       "symbols": [
         {
-          "id": "api-define-57246af6d31dcb84",
-          "anchor": "api-define-57246af6d31dcb84",
+          "id": "api-define-6388dde8d8ff5476",
+          "anchor": "api-define-6388dde8d8ff5476",
           "kind": "define",
           "name": "INIT_OBJECT",
           "qualifiedName": "INIT_OBJECT",
@@ -16504,9 +16828,9 @@
           "description": "在函数体中原地构造对象，返回 T*；不进行堆分配。\n\nobject 必须是可变槽的左值，只求值一次。构造参数直接出现在 new T(...) 中， 因此支持裸 {...}，不会遇到完美转发的列表推导限制。构造成功后才发布状态； 若 T 的构造函数抛出异常，异常原样传播，槽仍保持未初始化状态。 INIT_OBJECT(device, ) 示例：INIT_OBJECT(motors[index++], config, {1, 2}); 严格 C++17 的无参构造写作;，保留显式的空可变参数。 宏不属于 C++ 命名空间：使用 INIT_OBJECT，而不是 memory::INIT_OBJECT。",
           "location": {
             "path": "memory/StaticObject/static_object.hpp",
-            "line": 142,
+            "line": 143,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L142"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L143"
           },
           "parentId": "api-file-f92b14585520c94b",
           "member": {
@@ -16516,13 +16840,13 @@
             "const": false
           },
           "references": [
-            "api-define-757b1e257717d5e8"
+            "api-define-fbdc823d09660bb6"
           ],
           "enumValues": []
         },
         {
-          "id": "api-define-757b1e257717d5e8",
-          "anchor": "api-define-757b1e257717d5e8",
+          "id": "api-define-fbdc823d09660bb6",
+          "anchor": "api-define-fbdc823d09660bb6",
           "kind": "define",
           "name": "STATIC_OBJECT_DETAIL_INIT_EXPAND",
           "qualifiedName": "STATIC_OBJECT_DETAIL_INIT_EXPAND",
@@ -16530,9 +16854,9 @@
           "description": "",
           "location": {
             "path": "memory/StaticObject/static_object.hpp",
-            "line": 128,
+            "line": 129,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L128"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L129"
           },
           "parentId": "api-file-f92b14585520c94b",
           "member": {
@@ -16542,13 +16866,13 @@
             "const": false
           },
           "references": [
-            "api-define-be8b2297543f628b"
+            "api-define-6172d0217a82187b"
           ],
           "enumValues": []
         },
         {
-          "id": "api-define-be8b2297543f628b",
-          "anchor": "api-define-be8b2297543f628b",
+          "id": "api-define-6172d0217a82187b",
+          "anchor": "api-define-6172d0217a82187b",
           "kind": "define",
           "name": "STATIC_OBJECT_DETAIL_INIT_IMPL",
           "qualifiedName": "STATIC_OBJECT_DETAIL_INIT_IMPL",
@@ -16556,9 +16880,9 @@
           "description": "",
           "location": {
             "path": "memory/StaticObject/static_object.hpp",
-            "line": 118,
+            "line": 119,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L118"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L119"
           },
           "parentId": "api-file-f92b14585520c94b",
           "member": {
@@ -16568,7 +16892,7 @@
             "const": false
           },
           "references": [
-            "api-function-6f5e47e7b49e9571"
+            "api-function-7db5dc12ad8101da"
           ],
           "enumValues": []
         },
@@ -16612,13 +16936,13 @@
           "member": null,
           "references": [
             "api-class-d0d7b249faa5f60a",
-            "api-define-57246af6d31dcb84",
-            "api-define-757b1e257717d5e8",
-            "api-define-be8b2297543f628b",
-            "api-function-6f5e47e7b49e9571",
+            "api-define-6172d0217a82187b",
+            "api-define-6388dde8d8ff5476",
+            "api-define-fbdc823d09660bb6",
+            "api-function-7db5dc12ad8101da",
             "api-namespace-47aa0eb9d592e18b",
             "api-namespace-4f91820ae21c067d",
-            "api-struct-d0d6b1eed562e64f"
+            "api-struct-b2fc30ff6806dcca"
           ],
           "enumValues": []
         },
@@ -16655,9 +16979,10 @@
             "api-function-8b674869c91fe6ec",
             "api-function-bb57abb77bfd586e",
             "api-function-d5af08e4a04b7eda",
-            "api-struct-d0d6b1eed562e64f",
-            "api-variable-6bf164c9be00fb6a",
-            "api-variable-e68aaf4e702308f0"
+            "api-struct-b2fc30ff6806dcca",
+            "api-variable-c48ee4f99e1d5736",
+            "api-variable-c60570c7b33507b3",
+            "api-variable-ddff81731c8936d9"
           ],
           "enumValues": []
         },
@@ -16743,6 +17068,30 @@
           "enumValues": []
         },
         {
+          "id": "api-variable-ddff81731c8936d9",
+          "anchor": "api-variable-ddff81731c8936d9",
+          "kind": "variable",
+          "name": "debug_",
+          "qualifiedName": "memory::StaticObject::debug_",
+          "signature": "T* const memory::StaticObject< T >::debug_",
+          "description": "",
+          "location": {
+            "path": "memory/StaticObject/static_object.hpp",
+            "line": 98,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L98"
+          },
+          "parentId": "api-class-d0d7b249faa5f60a",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
           "id": "api-function-4dd3625a543bdd80",
           "anchor": "api-function-4dd3625a543bdd80",
           "kind": "function",
@@ -16767,8 +17116,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6bf164c9be00fb6a",
-          "anchor": "api-variable-6bf164c9be00fb6a",
+          "id": "api-variable-c48ee4f99e1d5736",
+          "anchor": "api-variable-c48ee4f99e1d5736",
           "kind": "variable",
           "name": "initialized_",
           "qualifiedName": "memory::StaticObject::initialized_",
@@ -16776,9 +17125,9 @@
           "description": "",
           "location": {
             "path": "memory/StaticObject/static_object.hpp",
-            "line": 99,
+            "line": 100,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L99"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L100"
           },
           "parentId": "api-class-d0d7b249faa5f60a",
           "member": {
@@ -17083,8 +17432,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-e68aaf4e702308f0",
-          "anchor": "api-variable-e68aaf4e702308f0",
+          "id": "api-variable-c60570c7b33507b3",
+          "anchor": "api-variable-c60570c7b33507b3",
           "kind": "variable",
           "name": "storage_",
           "qualifiedName": "memory::StaticObject::storage_",
@@ -17092,9 +17441,9 @@
           "description": "",
           "location": {
             "path": "memory/StaticObject/static_object.hpp",
-            "line": 98,
+            "line": 99,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L98"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L99"
           },
           "parentId": "api-class-d0d7b249faa5f60a",
           "member": {
@@ -17123,13 +17472,13 @@
           "parentId": null,
           "member": null,
           "references": [
-            "api-struct-d0d6b1eed562e64f"
+            "api-struct-b2fc30ff6806dcca"
           ],
           "enumValues": []
         },
         {
-          "id": "api-struct-d0d6b1eed562e64f",
-          "anchor": "api-struct-d0d6b1eed562e64f",
+          "id": "api-struct-b2fc30ff6806dcca",
+          "anchor": "api-struct-b2fc30ff6806dcca",
           "kind": "struct",
           "name": "memory::detail::StaticObjectInitializer",
           "qualifiedName": "memory::detail::StaticObjectInitializer",
@@ -17137,21 +17486,21 @@
           "description": "",
           "location": {
             "path": "memory/StaticObject/static_object.hpp",
-            "line": 104,
+            "line": 105,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L104"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L105"
           },
           "parentId": "api-namespace-47aa0eb9d592e18b",
           "member": null,
           "references": [
             "api-class-d0d7b249faa5f60a",
-            "api-function-6f5e47e7b49e9571"
+            "api-function-7db5dc12ad8101da"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-6f5e47e7b49e9571",
-          "anchor": "api-function-6f5e47e7b49e9571",
+          "id": "api-function-7db5dc12ad8101da",
+          "anchor": "api-function-7db5dc12ad8101da",
           "kind": "function",
           "name": "initialize",
           "qualifiedName": "memory::detail::StaticObjectInitializer::initialize",
@@ -17159,11 +17508,11 @@
           "description": "",
           "location": {
             "path": "memory/StaticObject/static_object.hpp",
-            "line": 107,
+            "line": 108,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L107"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/StaticObject/static_object.hpp#L108"
           },
-          "parentId": "api-struct-d0d6b1eed562e64f",
+          "parentId": "api-struct-b2fc30ff6806dcca",
           "member": {
             "access": "public",
             "static": true,
@@ -17177,7 +17526,7 @@
         }
       ],
       "inheritanceRelations": [],
-      "symbolCount": 27,
+      "symbolCount": 28,
       "documentedSymbolCount": 4
     },
     {

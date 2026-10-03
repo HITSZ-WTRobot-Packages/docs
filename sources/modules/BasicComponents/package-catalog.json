@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "BasicComponents",
-  "moduleSha": "f2c9727271afd5e2fdab2183b575703438ed771b",
+  "moduleSha": "54f8499a59acef5686a47c3dd0bb0198d96202a6",
   "packages": [
     {
       "name": "EKF",
@@ -133,6 +133,14 @@
       "version": "0.1.0",
       "manifestPath": "libs/utils/printf/cpkg.toml",
       "packagePath": "libs/utils/printf",
+      "dependencyNames": []
+    },
+    {
+      "name": "DMABuffer",
+      "pkgname": "memory::DMABuffer",
+      "version": "0.1.0",
+      "manifestPath": "memory/DMABuffer/cpkg.toml",
+      "packagePath": "memory/DMABuffer",
       "dependencyNames": []
     },
     {
