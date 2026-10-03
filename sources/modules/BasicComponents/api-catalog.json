@@ -16137,7 +16137,7 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "10 of 11 public API symbols have no description."
+          "message": "12 of 13 public API symbols have no description."
         }
       ],
       "symbols": [
@@ -16201,15 +16201,17 @@
           "parentId": "api-namespace-b3e23e961d66a307",
           "member": null,
           "references": [
+            "api-function-4253832828fbbe35",
             "api-function-558c77246a755527",
             "api-function-646aaa4d59914fb7",
             "api-function-65dad7691f42fec9",
             "api-function-761c091d8829beea",
             "api-function-7eeaaf0bc83587d3",
+            "api-function-a249dbdb68b2f418",
             "api-function-b2c2b4aa124b9f75",
             "api-function-ec5ba2b9c28b7036",
             "api-function-fa304397dc21ef6e",
-            "api-variable-06cc7057de3e647a"
+            "api-variable-4da06df4f90398fe"
           ],
           "enumValues": []
         },
@@ -16329,7 +16331,7 @@
           "location": {
             "path": "memory/DMABuffer/dma_buffer.hpp",
             "line": 36,
-            "column": 29,
+            "column": 35,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L36"
           },
           "parentId": "api-class-57d42c7f5c2da93e",
@@ -16339,7 +16341,10 @@
             "virtual": "none",
             "const": false
           },
-          "references": [],
+          "references": [
+            "api-function-4253832828fbbe35",
+            "api-function-a249dbdb68b2f418"
+          ],
           "enumValues": []
         },
         {
@@ -16405,7 +16410,7 @@
           "location": {
             "path": "memory/DMABuffer/dma_buffer.hpp",
             "line": 38,
-            "column": 35,
+            "column": 36,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L38"
           },
           "parentId": "api-class-57d42c7f5c2da93e",
@@ -16419,8 +16424,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-06cc7057de3e647a",
-          "anchor": "api-variable-06cc7057de3e647a",
+          "id": "api-variable-4da06df4f90398fe",
+          "anchor": "api-variable-4da06df4f90398fe",
           "kind": "variable",
           "name": "storage_",
           "qualifiedName": "memory::DMABuffer::storage_",
@@ -16428,9 +16433,9 @@
           "description": "",
           "location": {
             "path": "memory/DMABuffer/dma_buffer.hpp",
-            "line": 41,
+            "line": 44,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L41"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L44"
           },
           "parentId": "api-class-57d42c7f5c2da93e",
           "member": {
@@ -16441,10 +16446,62 @@
           },
           "references": [],
           "enumValues": []
+        },
+        {
+          "id": "api-function-4253832828fbbe35",
+          "anchor": "api-function-4253832828fbbe35",
+          "kind": "function",
+          "name": "operator const std::uint8_t *",
+          "qualifiedName": "memory::DMABuffer::uint8_t *",
+          "signature": "memory::DMABuffer< N, Alignment >::operator const std::uint8_t * () const noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 41,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L41"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-65dad7691f42fec9"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-a249dbdb68b2f418",
+          "anchor": "api-function-a249dbdb68b2f418",
+          "kind": "function",
+          "name": "operator std::uint8_t *",
+          "qualifiedName": "memory::DMABuffer::uint8_t *",
+          "signature": "memory::DMABuffer< N, Alignment >::operator std::uint8_t * () noexcept",
+          "description": "",
+          "location": {
+            "path": "memory/DMABuffer/dma_buffer.hpp",
+            "line": 40,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/memory/DMABuffer/dma_buffer.hpp#L40"
+          },
+          "parentId": "api-class-57d42c7f5c2da93e",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-65dad7691f42fec9"
+          ],
+          "enumValues": []
         }
       ],
       "inheritanceRelations": [],
-      "symbolCount": 12,
+      "symbolCount": 14,
       "documentedSymbolCount": 2
     },
     {
@@ -17543,13 +17600,13 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "20 of 22 public API symbols have no description."
+          "message": "21 of 23 public API symbols have no description."
         }
       ],
       "symbols": [
         {
-          "id": "api-define-0e9c9ae5f2d20aeb",
-          "anchor": "api-define-0e9c9ae5f2d20aeb",
+          "id": "api-define-9f48074fb3cedc2f",
+          "anchor": "api-define-9f48074fb3cedc2f",
           "kind": "define",
           "name": "UartRxSync_DefineCallback",
           "qualifiedName": "UartRxSync_DefineCallback",
@@ -17557,9 +17614,9 @@
           "description": "Deprecated 旧式宏包装，建议直接使用类实例的回调注册方式。 这个宏保留主要是为了兼容旧代码，新的代码请直接调用 RegisterCallback 对应的能力。",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 40,
+            "line": 41,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L40"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L41"
           },
           "parentId": "api-file-c92b11adb1762643",
           "member": {
@@ -17572,8 +17629,8 @@
           "enumValues": []
         },
         {
-          "id": "api-define-35e09b92fd9dd27c",
-          "anchor": "api-define-35e09b92fd9dd27c",
+          "id": "api-define-9b68626e973b0e2d",
+          "anchor": "api-define-9b68626e973b0e2d",
           "kind": "define",
           "name": "UartRxSync_RegisterCallback",
           "qualifiedName": "UartRxSync_RegisterCallback",
@@ -17581,9 +17638,9 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 42,
+            "line": 43,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L42"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L43"
           },
           "parentId": "api-file-c92b11adb1762643",
           "member": {
@@ -17596,8 +17653,8 @@
           "enumValues": []
         },
         {
-          "id": "api-namespace-8283eebd2c2da1ec",
-          "anchor": "api-namespace-8283eebd2c2da1ec",
+          "id": "api-namespace-0af3ece7f56ed8dd",
+          "anchor": "api-namespace-0af3ece7f56ed8dd",
           "kind": "namespace",
           "name": "protocol",
           "qualifiedName": "protocol",
@@ -17605,14 +17662,14 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 32,
+            "line": 33,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L32"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L33"
           },
           "parentId": null,
           "member": null,
           "references": [
-            "api-class-a0776a3d695b373c"
+            "api-class-340f4202a3aea508"
           ],
           "enumValues": []
         },
@@ -17633,14 +17690,14 @@
           "parentId": null,
           "member": null,
           "references": [
-            "api-class-a0776a3d695b373c",
-            "api-namespace-8283eebd2c2da1ec"
+            "api-class-340f4202a3aea508",
+            "api-namespace-0af3ece7f56ed8dd"
           ],
           "enumValues": []
         },
         {
-          "id": "api-class-a0776a3d695b373c",
-          "anchor": "api-class-a0776a3d695b373c",
+          "id": "api-class-340f4202a3aea508",
+          "anchor": "api-class-340f4202a3aea508",
           "kind": "class",
           "name": "protocol::UartRxSync",
           "qualifiedName": "protocol::UartRxSync",
@@ -17648,37 +17705,62 @@
           "description": "带帧头同步功能的串口接收器，基于中断和 DMA。\n\n典型使用场景是固定帧格式传感器：先用中断逐字节找帧头，再交给 DMA 接收整帧剩余部分。 这样既能保持同步，也能减少每个字节都进中断带来的开销。",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 56,
+            "line": 57,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L56"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L57"
           },
-          "parentId": "api-namespace-8283eebd2c2da1ec",
+          "parentId": "api-namespace-0af3ece7f56ed8dd",
           "member": null,
           "references": [
-            "api-enum-c49dcb09c91d1987",
-            "api-function-18801b7d5c94a140",
-            "api-function-4a0173882d722cd5",
-            "api-function-722c8e21deaddfcb",
-            "api-function-7ed6dcbfbb23fe72",
-            "api-function-93165cccd8c6f5cf",
-            "api-function-bffd6d7a28166d73",
-            "api-function-c52a3053af42e311",
-            "api-function-dd7c132cfb176a52",
-            "api-function-e730a2d45dc34939",
-            "api-function-f579c3a184bc1458",
-            "api-function-f91965187870f0e1",
-            "api-function-fc12a9b3732c9732",
-            "api-variable-0b8c67452be87489",
-            "api-variable-621ff7fd27230a0c",
-            "api-variable-af217a52a79a2b4e",
-            "api-variable-c976a77bcd3edaed",
-            "api-variable-eb657b4396469759"
+            "api-enum-6e2ab51df505c802",
+            "api-function-129547d7730c3190",
+            "api-function-206b1c0a3a2919af",
+            "api-function-3ec3a5800d6df45a",
+            "api-function-4911267792575f34",
+            "api-function-4df30db3be53cd99",
+            "api-function-555a1329fbeb7591",
+            "api-function-5a9fa20a83ad0487",
+            "api-function-609e6071b9620557",
+            "api-function-65156d03e1cd05b2",
+            "api-function-7f4e86252c3bbd6f",
+            "api-function-99068d3b471cefd6",
+            "api-function-d0d7035601234bd5",
+            "api-typedef-b7eccfbd50786416",
+            "api-variable-1996bea046ef9d9e",
+            "api-variable-48a28411cfd82e00",
+            "api-variable-64d73d293635b2e5",
+            "api-variable-d375c86a7888630f",
+            "api-variable-f6984df6e2c5a098"
           ],
           "enumValues": []
         },
         {
-          "id": "api-enum-c49dcb09c91d1987",
-          "anchor": "api-enum-c49dcb09c91d1987",
+          "id": "api-typedef-b7eccfbd50786416",
+          "anchor": "api-typedef-b7eccfbd50786416",
+          "kind": "typedef",
+          "name": "Buffer",
+          "qualifiedName": "protocol::UartRxSync::Buffer",
+          "signature": "using protocol::UartRxSync< HeaderLen, FrameLen, DecodeWithHeader >::Buffer = memory::DMABuffer<FrameLen>",
+          "description": "",
+          "location": {
+            "path": "protocol/UartRxSync/UartRxSync.hpp",
+            "line": 63,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L63"
+          },
+          "parentId": "api-class-340f4202a3aea508",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-6e2ab51df505c802",
+          "anchor": "api-enum-6e2ab51df505c802",
           "kind": "enum",
           "name": "SyncState",
           "qualifiedName": "protocol::UartRxSync::SyncState",
@@ -17686,11 +17768,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 64,
+            "line": 70,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L64"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L70"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "public",
             "static": false,
@@ -17722,20 +17804,20 @@
           ]
         },
         {
-          "id": "api-function-dd7c132cfb176a52",
-          "anchor": "api-function-dd7c132cfb176a52",
+          "id": "api-function-555a1329fbeb7591",
+          "anchor": "api-function-555a1329fbeb7591",
           "kind": "function",
           "name": "UartRxSync",
           "qualifiedName": "protocol::UartRxSync::UartRxSync",
-          "signature": "protocol::UartRxSync< HeaderLen, FrameLen, DecodeWithHeader >::UartRxSync (UART_HandleTypeDef *huart)",
+          "signature": "protocol::UartRxSync< HeaderLen, FrameLen, DecodeWithHeader >::UartRxSync (UART_HandleTypeDef *huart, Buffer &buffer)",
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 62,
+            "line": 65,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L62"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L65"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "public",
             "static": false,
@@ -17743,13 +17825,14 @@
             "const": false
           },
           "references": [
-            "api-function-7ed6dcbfbb23fe72"
+            "api-function-d0d7035601234bd5",
+            "api-typedef-b7eccfbd50786416"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-e730a2d45dc34939",
-          "anchor": "api-function-e730a2d45dc34939",
+          "id": "api-function-609e6071b9620557",
+          "anchor": "api-function-609e6071b9620557",
           "kind": "function",
           "name": "_decode",
           "qualifiedName": "protocol::UartRxSync::_decode",
@@ -17757,11 +17840,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 230,
+            "line": 236,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L230"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L236"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "private",
             "static": false,
@@ -17772,8 +17855,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-fc12a9b3732c9732",
-          "anchor": "api-function-fc12a9b3732c9732",
+          "id": "api-function-3ec3a5800d6df45a",
+          "anchor": "api-function-3ec3a5800d6df45a",
           "kind": "function",
           "name": "check_header",
           "qualifiedName": "protocol::UartRxSync::check_header",
@@ -17781,11 +17864,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 213,
+            "line": 219,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L213"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L219"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "private",
             "static": false,
@@ -17796,8 +17879,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-bffd6d7a28166d73",
-          "anchor": "api-function-bffd6d7a28166d73",
+          "id": "api-function-7f4e86252c3bbd6f",
+          "anchor": "api-function-7f4e86252c3bbd6f",
           "kind": "function",
           "name": "decode",
           "qualifiedName": "protocol::UartRxSync::decode",
@@ -17805,11 +17888,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 198,
+            "line": 203,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L198"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L203"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "protected",
             "static": false,
@@ -17820,8 +17903,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-f91965187870f0e1",
-          "anchor": "api-function-f91965187870f0e1",
+          "id": "api-function-206b1c0a3a2919af",
+          "anchor": "api-function-206b1c0a3a2919af",
           "kind": "function",
           "name": "errorHandler",
           "qualifiedName": "protocol::UartRxSync::errorHandler",
@@ -17829,11 +17912,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 143,
+            "line": 149,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L143"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L149"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "public",
             "static": false,
@@ -17844,8 +17927,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-eb657b4396469759",
-          "anchor": "api-variable-eb657b4396469759",
+          "id": "api-variable-d375c86a7888630f",
+          "anchor": "api-variable-d375c86a7888630f",
           "kind": "variable",
           "name": "hdr_idx_",
           "qualifiedName": "protocol::UartRxSync::hdr_idx_",
@@ -17853,11 +17936,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 210,
-            "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L210"
+            "line": 216,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L216"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "private",
             "static": false,
@@ -17868,8 +17951,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-722c8e21deaddfcb",
-          "anchor": "api-function-722c8e21deaddfcb",
+          "id": "api-function-4911267792575f34",
+          "anchor": "api-function-4911267792575f34",
           "kind": "function",
           "name": "header",
           "qualifiedName": "protocol::UartRxSync::header",
@@ -17877,11 +17960,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 197,
+            "line": 202,
             "column": 30,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L197"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L202"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "protected",
             "static": false,
@@ -17889,13 +17972,13 @@
             "const": true
           },
           "references": [
-            "api-function-93165cccd8c6f5cf"
+            "api-function-4df30db3be53cd99"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-7ed6dcbfbb23fe72",
-          "anchor": "api-function-7ed6dcbfbb23fe72",
+          "id": "api-function-d0d7035601234bd5",
+          "anchor": "api-function-d0d7035601234bd5",
           "kind": "function",
           "name": "huart",
           "qualifiedName": "protocol::UartRxSync::huart",
@@ -17903,11 +17986,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 194,
+            "line": 199,
             "column": 25,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L194"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L199"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "public",
             "static": false,
@@ -17915,13 +17998,13 @@
             "const": true
           },
           "references": [
-            "api-function-dd7c132cfb176a52"
+            "api-function-555a1329fbeb7591"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-af217a52a79a2b4e",
-          "anchor": "api-variable-af217a52a79a2b4e",
+          "id": "api-variable-48a28411cfd82e00",
+          "anchor": "api-variable-48a28411cfd82e00",
           "kind": "variable",
           "name": "huart_",
           "qualifiedName": "protocol::UartRxSync::huart_",
@@ -17929,11 +18012,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 203,
+            "line": 208,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L203"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L208"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "private",
             "static": false,
@@ -17944,8 +18027,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-c52a3053af42e311",
-          "anchor": "api-function-c52a3053af42e311",
+          "id": "api-function-129547d7730c3190",
+          "anchor": "api-function-129547d7730c3190",
           "kind": "function",
           "name": "isConnected",
           "qualifiedName": "protocol::UartRxSync::isConnected",
@@ -17953,11 +18036,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 188,
+            "line": 193,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L188"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L193"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "public",
             "static": false,
@@ -17968,8 +18051,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-93165cccd8c6f5cf",
-          "anchor": "api-function-93165cccd8c6f5cf",
+          "id": "api-function-4df30db3be53cd99",
+          "anchor": "api-function-4df30db3be53cd99",
           "kind": "function",
           "name": "receiveCallback",
           "qualifiedName": "protocol::UartRxSync::receiveCallback",
@@ -17977,11 +18060,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 86,
+            "line": 92,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L86"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L92"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "public",
             "static": false,
@@ -17989,37 +18072,39 @@
             "const": false
           },
           "references": [
-            "api-function-722c8e21deaddfcb"
+            "api-function-4911267792575f34"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-621ff7fd27230a0c",
-          "anchor": "api-variable-621ff7fd27230a0c",
+          "id": "api-variable-1996bea046ef9d9e",
+          "anchor": "api-variable-1996bea046ef9d9e",
           "kind": "variable",
           "name": "rx_buffer_",
           "qualifiedName": "protocol::UartRxSync::rx_buffer_",
-          "signature": "uint8_t protocol::UartRxSync< HeaderLen, FrameLen, DecodeWithHeader >::rx_buffer_[FrameLen] [FrameLen]",
+          "signature": "Buffer& protocol::UartRxSync< HeaderLen, FrameLen, DecodeWithHeader >::rx_buffer_",
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 209,
-            "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L209"
+            "line": 214,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L214"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "private",
             "static": false,
             "virtual": "none",
             "const": false
           },
-          "references": [],
+          "references": [
+            "api-typedef-b7eccfbd50786416"
+          ],
           "enumValues": []
         },
         {
-          "id": "api-function-f579c3a184bc1458",
-          "anchor": "api-function-f579c3a184bc1458",
+          "id": "api-function-99068d3b471cefd6",
+          "anchor": "api-function-99068d3b471cefd6",
           "kind": "function",
           "name": "startReceive",
           "qualifiedName": "protocol::UartRxSync::startReceive",
@@ -18027,11 +18112,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 76,
+            "line": 82,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L76"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L82"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "public",
             "static": false,
@@ -18042,8 +18127,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0b8c67452be87489",
-          "anchor": "api-variable-0b8c67452be87489",
+          "id": "api-variable-f6984df6e2c5a098",
+          "anchor": "api-variable-f6984df6e2c5a098",
           "kind": "variable",
           "name": "state_",
           "qualifiedName": "protocol::UartRxSync::state_",
@@ -18051,11 +18136,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 205,
+            "line": 210,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L205"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L210"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "private",
             "static": false,
@@ -18063,13 +18148,13 @@
             "const": false
           },
           "references": [
-            "api-enum-c49dcb09c91d1987"
+            "api-enum-6e2ab51df505c802"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-18801b7d5c94a140",
-          "anchor": "api-function-18801b7d5c94a140",
+          "id": "api-function-5a9fa20a83ad0487",
+          "anchor": "api-function-5a9fa20a83ad0487",
           "kind": "function",
           "name": "timeout",
           "qualifiedName": "protocol::UartRxSync::timeout",
@@ -18077,11 +18162,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 200,
+            "line": 205,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L200"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L205"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "protected",
             "static": false,
@@ -18092,8 +18177,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-c976a77bcd3edaed",
-          "anchor": "api-variable-c976a77bcd3edaed",
+          "id": "api-variable-64d73d293635b2e5",
+          "anchor": "api-variable-64d73d293635b2e5",
           "kind": "variable",
           "name": "watchdog_",
           "qualifiedName": "protocol::UartRxSync::watchdog_",
@@ -18101,11 +18186,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 207,
+            "line": 212,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L207"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L212"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "private",
             "static": false,
@@ -18116,8 +18201,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-4a0173882d722cd5",
-          "anchor": "api-function-4a0173882d722cd5",
+          "id": "api-function-65156d03e1cd05b2",
+          "anchor": "api-function-65156d03e1cd05b2",
           "kind": "function",
           "name": "~UartRxSync",
           "qualifiedName": "protocol::UartRxSync::~UartRxSync",
@@ -18125,11 +18210,11 @@
           "description": "",
           "location": {
             "path": "protocol/UartRxSync/UartRxSync.hpp",
-            "line": 63,
+            "line": 69,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L63"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/protocol/UartRxSync/UartRxSync.hpp#L69"
           },
-          "parentId": "api-class-a0776a3d695b373c",
+          "parentId": "api-class-340f4202a3aea508",
           "member": {
             "access": "public",
             "static": false,
@@ -18141,7 +18226,7 @@
         }
       ],
       "inheritanceRelations": [],
-      "symbolCount": 23,
+      "symbolCount": 24,
       "documentedSymbolCount": 3
     },
     {

@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "BasicComponents",
-  "moduleSha": "54f8499a59acef5686a47c3dd0bb0198d96202a6",
+  "moduleSha": "292413338411fd969967ab6746d81f2960757a17",
   "packages": [
     {
       "name": "EKF",
@@ -166,6 +166,7 @@
       "manifestPath": "protocol/UartRxSync/cpkg.toml",
       "packagePath": "protocol/UartRxSync",
       "dependencyNames": [
+        "memory::DMABuffer",
         "services::Watchdog",
         "stm32cubemx"
       ]
