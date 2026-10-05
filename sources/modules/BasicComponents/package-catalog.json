@@ -1,8 +1,39 @@
 {
   "formatVersion": 1,
   "moduleId": "BasicComponents",
-  "moduleSha": "292413338411fd969967ab6746d81f2960757a17",
+  "moduleSha": "4eb144ec77c7a17eaab87a8d7c4dc675f1f5fbb1",
   "packages": [
+    {
+      "name": "EthernetPHYCore",
+      "pkgname": "EthernetPHY::Core",
+      "version": "0.1.0",
+      "manifestPath": "bsp/ethernet/core/cpkg.toml",
+      "packagePath": "bsp/ethernet/core",
+      "dependencyNames": []
+    },
+    {
+      "name": "DP83822",
+      "pkgname": "EthernetPHY::DP83822",
+      "version": "0.1.0",
+      "manifestPath": "bsp/ethernet/phy_drivers/dp83822/cpkg.toml",
+      "packagePath": "bsp/ethernet/phy_drivers/dp83822",
+      "dependencyNames": [
+        "EthernetPHY::Core",
+        "stm32cubemx"
+      ]
+    },
+    {
+      "name": "LwipPlatform",
+      "pkgname": "EthernetPHY::LwipPlatform",
+      "version": "0.1.0",
+      "manifestPath": "bsp/ethernet/lwip_platform/cpkg.toml",
+      "packagePath": "bsp/ethernet/lwip_platform",
+      "dependencyNames": [
+        "EthernetPHY::Core",
+        "FreeRTOS",
+        "stm32cubemx"
+      ]
+    },
     {
       "name": "EKF",
       "pkgname": "Math::EKF",
