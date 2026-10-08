@@ -2186,58 +2186,10 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "25 of 57 public API symbols have no description."
+          "message": "23 of 53 public API symbols have no description."
         }
       ],
       "symbols": [
-        {
-          "id": "api-function-e461ae0a40cd6985",
-          "anchor": "api-function-e461ae0a40cd6985",
-          "kind": "function",
-          "name": "DJI_CAN_Fifo0ReceiveCallback",
-          "qualifiedName": "DJI_CAN_Fifo0ReceiveCallback",
-          "signature": "void DJI_CAN_Fifo0ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "DJI FIFO0 中断回调包装\n\nCANBaseReceiveCallback() 如果项目没有统一 CAN 分发器，可以直接使用这个 HAL 包装；否则更推荐统一把报文分发到。",
-          "location": {
-            "path": "motors/DJI/dji.hpp",
-            "line": 175,
-            "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L175"
-          },
-          "parentId": "api-file-caf123249e213cbc",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-e59f72d34767e27d",
-          "anchor": "api-function-e59f72d34767e27d",
-          "kind": "function",
-          "name": "DJI_CAN_Fifo1ReceiveCallback",
-          "qualifiedName": "DJI_CAN_Fifo1ReceiveCallback",
-          "signature": "void DJI_CAN_Fifo1ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "DJI FIFO1 中断回调包装\n\nCANBaseReceiveCallback() 如果项目没有统一 CAN 分发器，可以直接使用这个 HAL 包装；否则更推荐统一把报文分发到。",
-          "location": {
-            "path": "motors/DJI/dji.hpp",
-            "line": 182,
-            "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.hpp#L182"
-          },
-          "parentId": "api-file-caf123249e213cbc",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
         {
           "id": "api-namespace-d83182cabe2ef18c",
           "anchor": "api-namespace-d83182cabe2ef18c",
@@ -2347,13 +2299,11 @@
             "api-function-0681a1f99424d3ed",
             "api-function-096c557ec7bab32b",
             "api-function-11fbe65a1051ad87",
-            "api-function-14fc408e4d88b050",
             "api-function-369f97789a526b8f",
             "api-function-549aa44be00b90fc",
             "api-function-55183d4f80f332f5",
             "api-function-5d51553b48e06acc",
             "api-function-6aeae227c7c58282",
-            "api-function-7126a3fda5cbadf7",
             "api-function-75a97213db53bda1",
             "api-function-aa337a3b6f7d2389",
             "api-function-ac05ca4086b975a5",
@@ -2406,10 +2356,8 @@
             "const": false
           },
           "references": [
-            "api-function-14fc408e4d88b050",
             "api-function-55183d4f80f332f5",
             "api-function-6aeae227c7c58282",
-            "api-function-7126a3fda5cbadf7",
             "api-function-c5a1b8c4fe73fc12",
             "api-variable-6400288a7565894f",
             "api-variable-b71e7c1bf2f582c3"
@@ -3289,58 +3237,6 @@
           "enumValues": []
         },
         {
-          "id": "api-function-14fc408e4d88b050",
-          "anchor": "api-function-14fc408e4d88b050",
-          "kind": "function",
-          "name": "DJI_CAN_Fifo0ReceiveCallback",
-          "qualifiedName": "motors::DJI_CAN_Fifo0ReceiveCallback",
-          "signature": "void motors::DJI_CAN_Fifo0ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "",
-          "location": {
-            "path": "motors/DJI/dji.cpp",
-            "line": 277,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L277"
-          },
-          "parentId": "api-namespace-d83182cabe2ef18c",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-f344b652a1877d0f"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-7126a3fda5cbadf7",
-          "anchor": "api-function-7126a3fda5cbadf7",
-          "kind": "function",
-          "name": "DJI_CAN_Fifo1ReceiveCallback",
-          "qualifiedName": "motors::DJI_CAN_Fifo1ReceiveCallback",
-          "signature": "void motors::DJI_CAN_Fifo1ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "",
-          "location": {
-            "path": "motors/DJI/dji.cpp",
-            "line": 293,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DJI/dji.cpp#L293"
-          },
-          "parentId": "api-namespace-d83182cabe2ef18c",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-f344b652a1877d0f"
-          ],
-          "enumValues": []
-        },
-        {
           "id": "api-struct-ce7c21ef8feb0c3b",
           "anchor": "api-struct-ce7c21ef8feb0c3b",
           "kind": "struct",
@@ -3801,8 +3697,8 @@
           "virtual": false
         }
       ],
-      "symbolCount": 59,
-      "documentedSymbolCount": 34
+      "symbolCount": 55,
+      "documentedSymbolCount": 32
     },
     {
       "targetKind": "package",
@@ -3819,7 +3715,7 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "35 of 86 public API symbols have no description."
+          "message": "33 of 82 public API symbols have no description."
         }
       ],
       "symbols": [
@@ -3848,54 +3744,6 @@
             "api-function-9a28b03b2cb9acce",
             "api-function-f7e0763d0434c75c"
           ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-013acf34ddb1ff03",
-          "anchor": "api-function-013acf34ddb1ff03",
-          "kind": "function",
-          "name": "DM_CAN_Fifo0ReceiveCallback",
-          "qualifiedName": "DM_CAN_Fifo0ReceiveCallback",
-          "signature": "void DM_CAN_Fifo0ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "DM FIFO0 中断回调包装\n\nCANBaseReceiveCallback() 如果项目没有统一 CAN 分发器，可以直接使用这个 HAL 包装；否则更推荐统一把报文分发到。",
-          "location": {
-            "path": "motors/DM/dm.hpp",
-            "line": 305,
-            "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L305"
-          },
-          "parentId": "api-file-ce1b8d33d8acb80d",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-560007770bc31bc7",
-          "anchor": "api-function-560007770bc31bc7",
-          "kind": "function",
-          "name": "DM_CAN_Fifo1ReceiveCallback",
-          "qualifiedName": "DM_CAN_Fifo1ReceiveCallback",
-          "signature": "void DM_CAN_Fifo1ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "DM FIFO1 中断回调包装\n\nCANBaseReceiveCallback() 如果项目没有统一 CAN 分发器，可以直接使用这个 HAL 包装；否则更推荐统一把报文分发到。",
-          "location": {
-            "path": "motors/DM/dm.hpp",
-            "line": 312,
-            "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L312"
-          },
-          "parentId": "api-file-ce1b8d33d8acb80d",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
           "enumValues": []
         },
         {
@@ -4130,14 +3978,12 @@
             "api-function-7e6f6528b51b0624",
             "api-function-802bd9031abdc038",
             "api-function-821b6c94daf8b344",
-            "api-function-89c83fb3c41800e9",
             "api-function-8aa7b5a499865c3d",
             "api-function-9448141ffe3a1ce6",
             "api-function-9a28b03b2cb9acce",
             "api-function-acb2f15bdff2206c",
             "api-function-b0f01e52f99decd8",
             "api-function-b42e5e7a42877d13",
-            "api-function-b67232d8e7e2949a",
             "api-function-ba4cf74c176928c4",
             "api-function-bd8b7afb4a570541",
             "api-function-c2521b8ac60b3ee7",
@@ -4197,8 +4043,6 @@
           },
           "references": [
             "api-function-2342b4a59eac790d",
-            "api-function-89c83fb3c41800e9",
-            "api-function-b67232d8e7e2949a",
             "api-variable-973417b70ad05170"
           ],
           "enumValues": []
@@ -5854,58 +5698,6 @@
           "enumValues": []
         },
         {
-          "id": "api-function-89c83fb3c41800e9",
-          "anchor": "api-function-89c83fb3c41800e9",
-          "kind": "function",
-          "name": "DM_CAN_Fifo0ReceiveCallback",
-          "qualifiedName": "motors::DM_CAN_Fifo0ReceiveCallback",
-          "signature": "void motors::DM_CAN_Fifo0ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "",
-          "location": {
-            "path": "motors/DM/dm.cpp",
-            "line": 365,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L365"
-          },
-          "parentId": "api-namespace-2ceac213c62865d7",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-b42e5e7a42877d13"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-b67232d8e7e2949a",
-          "anchor": "api-function-b67232d8e7e2949a",
-          "kind": "function",
-          "name": "DM_CAN_Fifo1ReceiveCallback",
-          "qualifiedName": "motors::DM_CAN_Fifo1ReceiveCallback",
-          "signature": "void motors::DM_CAN_Fifo1ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "",
-          "location": {
-            "path": "motors/DM/dm.cpp",
-            "line": 381,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L381"
-          },
-          "parentId": "api-namespace-2ceac213c62865d7",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-b42e5e7a42877d13"
-          ],
-          "enumValues": []
-        },
-        {
           "id": "api-struct-1d1cb0a02e6ceebe",
           "anchor": "api-struct-1d1cb0a02e6ceebe",
           "kind": "struct",
@@ -6243,8 +6035,8 @@
           "virtual": false
         }
       ],
-      "symbolCount": 88,
-      "documentedSymbolCount": 53
+      "symbolCount": 84,
+      "documentedSymbolCount": 51
     },
     {
       "targetKind": "package",
@@ -6261,7 +6053,7 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "53 of 96 public API symbols have no description."
+          "message": "51 of 92 public API symbols have no description."
         }
       ],
       "symbols": [
@@ -6289,54 +6081,6 @@
           "references": [
             "api-function-44338276221c313a"
           ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-400931c39b707dcf",
-          "anchor": "api-function-400931c39b707dcf",
-          "kind": "function",
-          "name": "MI_CAN_Fifo0ReceiveCallback",
-          "qualifiedName": "MI_CAN_Fifo0ReceiveCallback",
-          "signature": "void MI_CAN_Fifo0ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "MI FIFO0 中断回调包装\n\n如果项目没有统一 CAN 分发器，可直接使用此 HAL 包装； 否则推荐统一把报文分发到 CANBaseReceiveCallback()。",
-          "location": {
-            "path": "motors/MI/mi.hpp",
-            "line": 297,
-            "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L297"
-          },
-          "parentId": "api-file-d9c02a565f110eec",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-063e811bcc2067c0",
-          "anchor": "api-function-063e811bcc2067c0",
-          "kind": "function",
-          "name": "MI_CAN_Fifo1ReceiveCallback",
-          "qualifiedName": "MI_CAN_Fifo1ReceiveCallback",
-          "signature": "void MI_CAN_Fifo1ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "MI FIFO1 中断回调包装\n\n如果项目没有统一 CAN 分发器，可直接使用此 HAL 包装； 否则推荐统一把报文分发到 CANBaseReceiveCallback()。",
-          "location": {
-            "path": "motors/MI/mi.hpp",
-            "line": 304,
-            "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L304"
-          },
-          "parentId": "api-file-d9c02a565f110eec",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
           "enumValues": []
         },
         {
@@ -6465,14 +6209,14 @@
             "api-function-bf857b3b04fdca2f",
             "api-function-da59fb2df9383284",
             "api-struct-cc25bf3574f700ea",
+            "api-variable-075ab79ac5fbf9b7",
             "api-variable-3c0dc2f77e9cb52a",
             "api-variable-528dee4228578bbe",
-            "api-variable-77dea557fec185e5",
+            "api-variable-7cf734533057cffa",
             "api-variable-824314e3a0d4ce9f",
-            "api-variable-87979831e54ab508",
-            "api-variable-9b010d3b849bfc16",
             "api-variable-b06d7f514dbb3624",
-            "api-variable-df34f2e71b08bd64"
+            "api-variable-f3927e23fdd02313",
+            "api-variable-f41a81e2dda845c9"
           ],
           "enumValues": []
         },
@@ -6520,7 +6264,7 @@
             "api-class-61d2d1b8a89e6a51",
             "api-file-769e151b15c68169",
             "api-namespace-7e99d31d8cc18c4c",
-            "api-struct-6a8f2c073b74fd51",
+            "api-struct-78328209668070f1",
             "api-struct-cb98d0bd2ca67a63"
           ],
           "enumValues": []
@@ -6623,7 +6367,6 @@
             "api-enum-2ec044c795979e3c",
             "api-enum-a3d2857c8a547b09",
             "api-enum-cfdc51d2f96c2609",
-            "api-function-0b84ebd647a2b441",
             "api-function-10c0595d5e2c9568",
             "api-function-147b9dd52a363173",
             "api-function-15c4d3fd98d85b40",
@@ -6638,23 +6381,22 @@
             "api-function-53b28fa3ef3f1ee3",
             "api-function-5b4f7c8eaaea2cd6",
             "api-function-5d332d8e1db82129",
-            "api-function-60148cd1f052ee0b",
             "api-function-720709e595f7cdd9",
             "api-function-7b15e32585ab3803",
             "api-function-8577fd15725fe306",
+            "api-function-89d7784723f1c8ed",
             "api-function-8d08093d07868d87",
             "api-function-930ff723a2cbe779",
             "api-function-9b18513f26ba12f4",
             "api-function-9bb31effe77902ae",
-            "api-function-9fbc0ba36ca6d72e",
             "api-function-b4a6a40b4b55c86b",
             "api-function-b76c170f7138762b",
             "api-function-bb8f186b81403200",
+            "api-function-bcf22da714e45a16",
             "api-function-bf3d52f7aa859634",
             "api-function-bf5b52fcf65ea8b6",
             "api-function-bf857b3b04fdca2f",
             "api-function-cd1653db47b8acbf",
-            "api-function-ce8ac5ad717bc919",
             "api-function-cf41e75fb8536dc6",
             "api-function-d1c110d41e4411d6",
             "api-function-da1e2584377b403a",
@@ -6662,32 +6404,32 @@
             "api-function-dc0ffdb753e8ca22",
             "api-function-e28d01b2fedca339",
             "api-function-e7118c0caed6f8d4",
+            "api-function-f08aa10d35aa2340",
             "api-function-f53f2d326859b20d",
             "api-function-f604ec443deaa902",
             "api-function-faa2b16c6090406d",
-            "api-function-fc7c272683b0f34a",
-            "api-struct-6a8f2c073b74fd51",
+            "api-struct-78328209668070f1",
             "api-struct-cb98d0bd2ca67a63",
-            "api-variable-049b25396cb6686b",
-            "api-variable-081f1bd43079bd3d",
-            "api-variable-18193942774c435a",
-            "api-variable-1fc1f4f0fb654043",
-            "api-variable-24d28b66b610ffb1",
-            "api-variable-668134ecc5b1a997",
-            "api-variable-77dea557fec185e5",
+            "api-variable-075ab79ac5fbf9b7",
+            "api-variable-47ba2f175df285e5",
+            "api-variable-6153ef154dcf84d5",
+            "api-variable-66e241d9f1f06d0e",
+            "api-variable-679fc64cd87099e7",
+            "api-variable-781f074a179499d0",
+            "api-variable-7cf734533057cffa",
+            "api-variable-804a6e0de70f4bb4",
             "api-variable-824314e3a0d4ce9f",
-            "api-variable-87979831e54ab508",
-            "api-variable-893d2efb953d106c",
-            "api-variable-8e0478aa592cd2e0",
-            "api-variable-9b010d3b849bfc16",
+            "api-variable-9097bd0d49135d8b",
+            "api-variable-96b9f321480497b7",
             "api-variable-b06d7f514dbb3624",
-            "api-variable-b85103771581acfe",
-            "api-variable-df34f2e71b08bd64",
-            "api-variable-eea20c30f1ec8bbb",
-            "api-variable-f7d2f161604a5f8c",
-            "api-variable-f9754566b41cf1ee",
-            "api-variable-fc66de93ac724652",
-            "api-variable-fecca0e1287da7d1"
+            "api-variable-c432721b262d28c6",
+            "api-variable-c88f2af746f0a86d",
+            "api-variable-d9c5c65c67ed5c23",
+            "api-variable-dcfb468b514e54eb",
+            "api-variable-ef343b2722d6ffa0",
+            "api-variable-f3927e23fdd02313",
+            "api-variable-f41a81e2dda845c9",
+            "api-variable-fb02a25984e6fab9"
           ],
           "enumValues": []
         },
@@ -6713,10 +6455,8 @@
             "const": false
           },
           "references": [
-            "api-function-0b84ebd647a2b441",
             "api-function-15c4d3fd98d85b40",
             "api-function-5d332d8e1db82129",
-            "api-function-9fbc0ba36ca6d72e",
             "api-function-faa2b16c6090406d"
           ],
           "enumValues": []
@@ -6976,8 +6716,8 @@
           ]
         },
         {
-          "id": "api-struct-6a8f2c073b74fd51",
-          "anchor": "api-struct-6a8f2c073b74fd51",
+          "id": "api-struct-78328209668070f1",
+          "anchor": "api-struct-78328209668070f1",
           "kind": "struct",
           "name": "motors::MIMotor::Feedback",
           "qualifiedName": "motors::MIMotor::Feedback",
@@ -6985,27 +6725,27 @@
           "description": "",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 268,
+            "line": 269,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L268"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L269"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": null,
           "references": [
             "api-enum-2ec044c795979e3c",
-            "api-variable-0d3459e7a76e94be",
-            "api-variable-4b78a63ff19e341c",
-            "api-variable-792168d808229230",
-            "api-variable-aa357e930c4d2b88",
-            "api-variable-ad7e24def5ddc2ca",
-            "api-variable-b724eab8f99e1afe",
-            "api-variable-f43ffe5dc2411969"
+            "api-variable-0c6ab6a1f7213688",
+            "api-variable-29c01ca94a8f92b0",
+            "api-variable-724ea2684b85f188",
+            "api-variable-8e3818d82448479c",
+            "api-variable-a85792ab1f70268a",
+            "api-variable-cb92678501e2b139",
+            "api-variable-ed4d30b69f68ae04"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-aa357e930c4d2b88",
-          "anchor": "api-variable-aa357e930c4d2b88",
+          "id": "api-variable-29c01ca94a8f92b0",
+          "anchor": "api-variable-29c01ca94a8f92b0",
           "kind": "variable",
           "name": "angle",
           "qualifiedName": "motors::MIMotor::Feedback::angle",
@@ -7013,11 +6753,11 @@
           "description": "电机当前位置（单圈范围内），单位 deg",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 270,
+            "line": 271,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L270"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L271"
           },
-          "parentId": "api-struct-6a8f2c073b74fd51",
+          "parentId": "api-struct-78328209668070f1",
           "member": {
             "access": "public",
             "static": false,
@@ -7028,8 +6768,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-b724eab8f99e1afe",
-          "anchor": "api-variable-b724eab8f99e1afe",
+          "id": "api-variable-cb92678501e2b139",
+          "anchor": "api-variable-cb92678501e2b139",
           "kind": "variable",
           "name": "fault",
           "qualifiedName": "motors::MIMotor::Feedback::fault",
@@ -7037,11 +6777,11 @@
           "description": "",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 275,
+            "line": 276,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L275"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L276"
           },
-          "parentId": "api-struct-6a8f2c073b74fd51",
+          "parentId": "api-struct-78328209668070f1",
           "member": {
             "access": "public",
             "static": false,
@@ -7052,8 +6792,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-792168d808229230",
-          "anchor": "api-variable-792168d808229230",
+          "id": "api-variable-ed4d30b69f68ae04",
+          "anchor": "api-variable-ed4d30b69f68ae04",
           "kind": "variable",
           "name": "round_cnt",
           "qualifiedName": "motors::MIMotor::Feedback::round_cnt",
@@ -7061,11 +6801,11 @@
           "description": "跨圈累计，用于展开成连续角度",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 277,
+            "line": 278,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L277"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L278"
           },
-          "parentId": "api-struct-6a8f2c073b74fd51",
+          "parentId": "api-struct-78328209668070f1",
           "member": {
             "access": "public",
             "static": false,
@@ -7076,8 +6816,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-4b78a63ff19e341c",
-          "anchor": "api-variable-4b78a63ff19e341c",
+          "id": "api-variable-8e3818d82448479c",
+          "anchor": "api-variable-8e3818d82448479c",
           "kind": "variable",
           "name": "run_state",
           "qualifiedName": "motors::MIMotor::Feedback::run_state",
@@ -7085,11 +6825,11 @@
           "description": "",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 274,
+            "line": 275,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L274"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L275"
           },
-          "parentId": "api-struct-6a8f2c073b74fd51",
+          "parentId": "api-struct-78328209668070f1",
           "member": {
             "access": "public",
             "static": false,
@@ -7102,8 +6842,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f43ffe5dc2411969",
-          "anchor": "api-variable-f43ffe5dc2411969",
+          "id": "api-variable-a85792ab1f70268a",
+          "anchor": "api-variable-a85792ab1f70268a",
           "kind": "variable",
           "name": "temperature",
           "qualifiedName": "motors::MIMotor::Feedback::temperature",
@@ -7111,11 +6851,11 @@
           "description": "电机温度，单位 degC",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 273,
+            "line": 274,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L273"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L274"
           },
-          "parentId": "api-struct-6a8f2c073b74fd51",
+          "parentId": "api-struct-78328209668070f1",
           "member": {
             "access": "public",
             "static": false,
@@ -7126,8 +6866,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0d3459e7a76e94be",
-          "anchor": "api-variable-0d3459e7a76e94be",
+          "id": "api-variable-724ea2684b85f188",
+          "anchor": "api-variable-724ea2684b85f188",
           "kind": "variable",
           "name": "torque",
           "qualifiedName": "motors::MIMotor::Feedback::torque",
@@ -7135,11 +6875,11 @@
           "description": "反馈力矩，单位 Nm",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 272,
+            "line": 273,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L272"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L273"
           },
-          "parentId": "api-struct-6a8f2c073b74fd51",
+          "parentId": "api-struct-78328209668070f1",
           "member": {
             "access": "public",
             "static": false,
@@ -7150,8 +6890,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-ad7e24def5ddc2ca",
-          "anchor": "api-variable-ad7e24def5ddc2ca",
+          "id": "api-variable-0c6ab6a1f7213688",
+          "anchor": "api-variable-0c6ab6a1f7213688",
           "kind": "variable",
           "name": "velocity",
           "qualifiedName": "motors::MIMotor::Feedback::velocity",
@@ -7159,11 +6899,11 @@
           "description": "电机侧速度，单位 rpm",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 271,
+            "line": 272,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L271"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L272"
           },
-          "parentId": "api-struct-6a8f2c073b74fd51",
+          "parentId": "api-struct-78328209668070f1",
           "member": {
             "access": "public",
             "static": false,
@@ -7286,13 +7026,37 @@
           ]
         },
         {
-          "id": "api-variable-24d28b66b610ffb1",
-          "anchor": "api-variable-24d28b66b610ffb1",
+          "id": "api-variable-fb02a25984e6fab9",
+          "anchor": "api-variable-fb02a25984e6fab9",
           "kind": "variable",
           "name": "abs_angle_",
           "qualifiedName": "motors::MIMotor::abs_angle_",
           "signature": "float motors::MIMotor::abs_angle_",
           "description": "输出轴绝对角度，单位 deg",
+          "location": {
+            "path": "motors/MI/mi.hpp",
+            "line": 282,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L282"
+          },
+          "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9097bd0d49135d8b",
+          "anchor": "api-variable-9097bd0d49135d8b",
+          "kind": "variable",
+          "name": "angle_zero_",
+          "qualifiedName": "motors::MIMotor::angle_zero_",
+          "signature": "float motors::MIMotor::angle_zero_",
+          "description": "零点角度，单位 deg",
           "location": {
             "path": "motors/MI/mi.hpp",
             "line": 281,
@@ -7310,32 +7074,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-8e0478aa592cd2e0",
-          "anchor": "api-variable-8e0478aa592cd2e0",
-          "kind": "variable",
-          "name": "angle_zero_",
-          "qualifiedName": "motors::MIMotor::angle_zero_",
-          "signature": "float motors::MIMotor::angle_zero_",
-          "description": "零点角度，单位 deg",
-          "location": {
-            "path": "motors/MI/mi.hpp",
-            "line": 280,
-            "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L280"
-          },
-          "parentId": "api-class-61d2d1b8a89e6a51",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-049b25396cb6686b",
-          "anchor": "api-variable-049b25396cb6686b",
+          "id": "api-variable-804a6e0de70f4bb4",
+          "anchor": "api-variable-804a6e0de70f4bb4",
           "kind": "variable",
           "name": "cfg_",
           "qualifiedName": "motors::MIMotor::cfg_",
@@ -7343,9 +7083,9 @@
           "description": "",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 256,
+            "line": 257,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L256"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L257"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7360,8 +7100,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-ce8ac5ad717bc919",
-          "anchor": "api-function-ce8ac5ad717bc919",
+          "id": "api-function-f08aa10d35aa2340",
+          "anchor": "api-function-f08aa10d35aa2340",
           "kind": "function",
           "name": "decode",
           "qualifiedName": "motors::MIMotor::decode",
@@ -7369,9 +7109,9 @@
           "description": "解码 Type 2 反馈帧",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 242,
+            "line": 243,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L242"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L243"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7462,8 +7202,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-893d2efb953d106c",
-          "anchor": "api-variable-893d2efb953d106c",
+          "id": "api-variable-6153ef154dcf84d5",
+          "anchor": "api-variable-6153ef154dcf84d5",
           "kind": "variable",
           "name": "enabled_",
           "qualifiedName": "motors::MIMotor::enabled_",
@@ -7471,9 +7211,9 @@
           "description": "是否已发送使能报文",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 258,
+            "line": 259,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L258"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L259"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7512,8 +7252,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-18193942774c435a",
-          "anchor": "api-variable-18193942774c435a",
+          "id": "api-variable-c88f2af746f0a86d",
+          "anchor": "api-variable-c88f2af746f0a86d",
           "kind": "variable",
           "name": "feedback_",
           "qualifiedName": "motors::MIMotor::feedback_",
@@ -7521,9 +7261,9 @@
           "description": "",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 278,
+            "line": 279,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L278"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L279"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7536,8 +7276,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-eea20c30f1ec8bbb",
-          "anchor": "api-variable-eea20c30f1ec8bbb",
+          "id": "api-variable-ef343b2722d6ffa0",
+          "anchor": "api-variable-ef343b2722d6ffa0",
           "kind": "variable",
           "name": "feedback_count_",
           "qualifiedName": "motors::MIMotor::feedback_count_",
@@ -7545,9 +7285,9 @@
           "description": "反馈计数，用于上电自动归零",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 266,
-            "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L266"
+            "line": 267,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L267"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7608,8 +7348,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-668134ecc5b1a997",
-          "anchor": "api-variable-668134ecc5b1a997",
+          "id": "api-variable-66e241d9f1f06d0e",
+          "anchor": "api-variable-66e241d9f1f06d0e",
           "kind": "variable",
           "name": "inv_reduction_rate_",
           "qualifiedName": "motors::MIMotor::inv_reduction_rate_",
@@ -7617,9 +7357,9 @@
           "description": "外接减速比倒数",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 283,
+            "line": 284,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L283"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L284"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7642,7 +7382,7 @@
           "location": {
             "path": "motors/MI/mi.hpp",
             "line": 119,
-            "column": 11,
+            "column": 12,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L119"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
@@ -7656,8 +7396,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-87979831e54ab508",
-          "anchor": "api-variable-87979831e54ab508",
+          "id": "api-variable-7cf734533057cffa",
+          "anchor": "api-variable-7cf734533057cffa",
           "kind": "variable",
           "name": "kKdMax",
           "qualifiedName": "motors::MIMotor::kKdMax",
@@ -7665,9 +7405,9 @@
           "description": "Kd 量程",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 236,
+            "line": 237,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L236"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L237"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7682,8 +7422,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-9b010d3b849bfc16",
-          "anchor": "api-variable-9b010d3b849bfc16",
+          "id": "api-variable-f41a81e2dda845c9",
+          "anchor": "api-variable-f41a81e2dda845c9",
           "kind": "variable",
           "name": "kKpMax",
           "qualifiedName": "motors::MIMotor::kKpMax",
@@ -7691,9 +7431,9 @@
           "description": "Kp 量程",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 235,
+            "line": 236,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L235"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L236"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7732,8 +7472,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-df34f2e71b08bd64",
-          "anchor": "api-variable-df34f2e71b08bd64",
+          "id": "api-variable-f3927e23fdd02313",
+          "anchor": "api-variable-f3927e23fdd02313",
           "kind": "variable",
           "name": "kTorqueMax",
           "qualifiedName": "motors::MIMotor::kTorqueMax",
@@ -7741,9 +7481,9 @@
           "description": "力矩量程，单位 Nm",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 234,
+            "line": 235,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L234"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L235"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7759,8 +7499,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-77dea557fec185e5",
-          "anchor": "api-variable-77dea557fec185e5",
+          "id": "api-variable-075ab79ac5fbf9b7",
+          "anchor": "api-variable-075ab79ac5fbf9b7",
           "kind": "variable",
           "name": "kVelMaxRps",
           "qualifiedName": "motors::MIMotor::kVelMaxRps",
@@ -7768,9 +7508,9 @@
           "description": "速度量程，单位 rad/s",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 233,
+            "line": 234,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L233"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L234"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7787,8 +7527,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f9754566b41cf1ee",
-          "anchor": "api-variable-f9754566b41cf1ee",
+          "id": "api-variable-d9c5c65c67ed5c23",
+          "anchor": "api-variable-d9c5c65c67ed5c23",
           "kind": "variable",
           "name": "param_read_index_",
           "qualifiedName": "motors::MIMotor::param_read_index_",
@@ -7796,9 +7536,9 @@
           "description": "",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 262,
+            "line": 263,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L262"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L263"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7811,36 +7551,12 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f7d2f161604a5f8c",
-          "anchor": "api-variable-f7d2f161604a5f8c",
+          "id": "api-variable-96b9f321480497b7",
+          "anchor": "api-variable-96b9f321480497b7",
           "kind": "variable",
           "name": "param_read_pending_",
           "qualifiedName": "motors::MIMotor::param_read_pending_",
           "signature": "volatile bool motors::MIMotor::param_read_pending_",
-          "description": "",
-          "location": {
-            "path": "motors/MI/mi.hpp",
-            "line": 260,
-            "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L260"
-          },
-          "parentId": "api-class-61d2d1b8a89e6a51",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-081f1bd43079bd3d",
-          "anchor": "api-variable-081f1bd43079bd3d",
-          "kind": "variable",
-          "name": "param_read_valid_",
-          "qualifiedName": "motors::MIMotor::param_read_valid_",
-          "signature": "volatile bool motors::MIMotor::param_read_valid_",
           "description": "",
           "location": {
             "path": "motors/MI/mi.hpp",
@@ -7859,8 +7575,32 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-b85103771581acfe",
-          "anchor": "api-variable-b85103771581acfe",
+          "id": "api-variable-47ba2f175df285e5",
+          "anchor": "api-variable-47ba2f175df285e5",
+          "kind": "variable",
+          "name": "param_read_valid_",
+          "qualifiedName": "motors::MIMotor::param_read_valid_",
+          "signature": "volatile bool motors::MIMotor::param_read_valid_",
+          "description": "",
+          "location": {
+            "path": "motors/MI/mi.hpp",
+            "line": 262,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L262"
+          },
+          "parentId": "api-class-61d2d1b8a89e6a51",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c432721b262d28c6",
+          "anchor": "api-variable-c432721b262d28c6",
           "kind": "variable",
           "name": "param_read_value_",
           "qualifiedName": "motors::MIMotor::param_read_value_",
@@ -7868,9 +7608,9 @@
           "description": "",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 263,
+            "line": 264,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L263"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L264"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -7967,7 +7707,7 @@
           "location": {
             "path": "motors/MI/mi.hpp",
             "line": 118,
-            "column": 24,
+            "column": 25,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L118"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
@@ -8007,8 +7747,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-60148cd1f052ee0b",
-          "anchor": "api-function-60148cd1f052ee0b",
+          "id": "api-function-bcf22da714e45a16",
+          "anchor": "api-function-bcf22da714e45a16",
           "kind": "function",
           "name": "sendEnableDisable",
           "qualifiedName": "motors::MIMotor::sendEnableDisable",
@@ -8016,9 +7756,9 @@
           "description": "发送使能 / 失能 / 归零内部实现",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 254,
+            "line": 255,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L254"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L255"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -8086,7 +7826,7 @@
             "api-function-cd1653db47b8acbf",
             "api-function-cf41e75fb8536dc6",
             "api-function-f53f2d326859b20d",
-            "api-variable-77dea557fec185e5",
+            "api-variable-075ab79ac5fbf9b7",
             "api-variable-b06d7f514dbb3624"
           ],
           "enumValues": []
@@ -8116,8 +7856,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-1fc1f4f0fb654043",
-          "anchor": "api-variable-1fc1f4f0fb654043",
+          "id": "api-variable-679fc64cd87099e7",
+          "anchor": "api-variable-679fc64cd87099e7",
           "kind": "variable",
           "name": "sign_",
           "qualifiedName": "motors::MIMotor::sign_",
@@ -8125,9 +7865,9 @@
           "description": "方向符号，正转为 1，反转为 -1",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 284,
+            "line": 285,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L284"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L285"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -8262,8 +8002,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-fc7c272683b0f34a",
-          "anchor": "api-function-fc7c272683b0f34a",
+          "id": "api-function-89d7784723f1c8ed",
+          "anchor": "api-function-89d7784723f1c8ed",
           "kind": "function",
           "name": "tx_header",
           "qualifiedName": "motors::MIMotor::tx_header",
@@ -8271,9 +8011,9 @@
           "description": "生成发送报文头\n\ncomm_type 通信类型（bit28~24） data_area2 数据区2（bit23~8）",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 249,
+            "line": 250,
             "column": 26,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L249"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L250"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -8286,8 +8026,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-fecca0e1287da7d1",
-          "anchor": "api-variable-fecca0e1287da7d1",
+          "id": "api-variable-dcfb468b514e54eb",
+          "anchor": "api-variable-dcfb468b514e54eb",
           "kind": "variable",
           "name": "velocity_",
           "qualifiedName": "motors::MIMotor::velocity_",
@@ -8295,9 +8035,9 @@
           "description": "输出轴速度，单位 rpm",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 282,
+            "line": 283,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L282"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L283"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -8310,8 +8050,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-fc66de93ac724652",
-          "anchor": "api-variable-fc66de93ac724652",
+          "id": "api-variable-781f074a179499d0",
+          "anchor": "api-variable-781f074a179499d0",
           "kind": "variable",
           "name": "watchdog_",
           "qualifiedName": "motors::MIMotor::watchdog_",
@@ -8319,9 +8059,9 @@
           "description": "",
           "location": {
             "path": "motors/MI/mi.hpp",
-            "line": 265,
+            "line": 266,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L265"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.hpp#L266"
           },
           "parentId": "api-class-61d2d1b8a89e6a51",
           "member": {
@@ -8382,58 +8122,6 @@
           },
           "references": [
             "api-function-bf857b3b04fdca2f"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-9fbc0ba36ca6d72e",
-          "anchor": "api-function-9fbc0ba36ca6d72e",
-          "kind": "function",
-          "name": "MI_CAN_Fifo0ReceiveCallback",
-          "qualifiedName": "motors::MI_CAN_Fifo0ReceiveCallback",
-          "signature": "void motors::MI_CAN_Fifo0ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "",
-          "location": {
-            "path": "motors/MI/mi.cpp",
-            "line": 502,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L502"
-          },
-          "parentId": "api-namespace-7e99d31d8cc18c4c",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-8577fd15725fe306"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-0b84ebd647a2b441",
-          "anchor": "api-function-0b84ebd647a2b441",
-          "kind": "function",
-          "name": "MI_CAN_Fifo1ReceiveCallback",
-          "qualifiedName": "motors::MI_CAN_Fifo1ReceiveCallback",
-          "signature": "void motors::MI_CAN_Fifo1ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "",
-          "location": {
-            "path": "motors/MI/mi.cpp",
-            "line": 517,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/MI/mi.cpp#L517"
-          },
-          "parentId": "api-namespace-7e99d31d8cc18c4c",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-8577fd15725fe306"
           ],
           "enumValues": []
         },
@@ -8520,7 +8208,7 @@
           },
           "references": [
             "api-function-44338276221c313a",
-            "api-variable-87979831e54ab508"
+            "api-variable-7cf734533057cffa"
           ],
           "enumValues": []
         },
@@ -8547,7 +8235,7 @@
           },
           "references": [
             "api-function-44338276221c313a",
-            "api-variable-9b010d3b849bfc16"
+            "api-variable-f41a81e2dda845c9"
           ],
           "enumValues": []
         },
@@ -8735,7 +8423,7 @@
           },
           "references": [
             "api-function-44338276221c313a",
-            "api-variable-df34f2e71b08bd64"
+            "api-variable-f3927e23fdd02313"
           ],
           "enumValues": []
         },
@@ -8761,7 +8449,7 @@
             "const": false
           },
           "references": [
-            "api-variable-df34f2e71b08bd64"
+            "api-variable-f3927e23fdd02313"
           ],
           "enumValues": []
         },
@@ -8814,7 +8502,7 @@
             "const": false
           },
           "references": [
-            "api-variable-77dea557fec185e5"
+            "api-variable-075ab79ac5fbf9b7"
           ],
           "enumValues": []
         },
@@ -8841,7 +8529,7 @@
           },
           "references": [
             "api-function-44338276221c313a",
-            "api-variable-77dea557fec185e5"
+            "api-variable-075ab79ac5fbf9b7"
           ],
           "enumValues": []
         },
@@ -8908,8 +8596,8 @@
           "virtual": false
         }
       ],
-      "symbolCount": 98,
-      "documentedSymbolCount": 45
+      "symbolCount": 94,
+      "documentedSymbolCount": 43
     },
     {
       "targetKind": "package",
@@ -8926,7 +8614,7 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "30 of 72 public API symbols have no description."
+          "message": "28 of 68 public API symbols have no description."
         }
       ],
       "symbols": [
@@ -8955,54 +8643,6 @@
           "enumValues": []
         },
         {
-          "id": "api-function-805aa6db2aa64945",
-          "anchor": "api-function-805aa6db2aa64945",
-          "kind": "function",
-          "name": "VESC_CAN_Fifo0ReceiveCallback",
-          "qualifiedName": "VESC_CAN_Fifo0ReceiveCallback",
-          "signature": "void VESC_CAN_Fifo0ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "VESC FIFO0 中断回调包装\n\nCANBaseReceiveCallback() 如果项目没有统一 CAN 分发器，可以直接使用这个 HAL 包装；否则更推荐统一把报文分发到。",
-          "location": {
-            "path": "motors/VESC/vesc.hpp",
-            "line": 280,
-            "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L280"
-          },
-          "parentId": "api-file-a7b987affefb8e98",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-14e6bc07aa662414",
-          "anchor": "api-function-14e6bc07aa662414",
-          "kind": "function",
-          "name": "VESC_CAN_Fifo1ReceiveCallback",
-          "qualifiedName": "VESC_CAN_Fifo1ReceiveCallback",
-          "signature": "void VESC_CAN_Fifo1ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "VESC FIFO1 中断回调包装\n\nCANBaseReceiveCallback() 如果项目没有统一 CAN 分发器，可以直接使用这个 HAL 包装；否则更推荐统一把报文分发到。",
-          "location": {
-            "path": "motors/VESC/vesc.hpp",
-            "line": 287,
-            "column": 6,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L287"
-          },
-          "parentId": "api-file-a7b987affefb8e98",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
           "id": "api-namespace-e01f73c5ae02c778",
           "anchor": "api-namespace-e01f73c5ae02c778",
           "kind": "namespace",
@@ -9019,12 +8659,12 @@
           "parentId": null,
           "member": null,
           "references": [
-            "api-class-5e5fd7a2cf5cc8c7",
-            "api-function-409ebb20db0c3e02",
+            "api-class-2f85394c0dfa28d6",
+            "api-function-0ea8add5ae727b44",
+            "api-function-225498a474bf6439",
+            "api-function-37682827b10ecaf9",
             "api-function-735e095ef02161c5",
-            "api-function-914a535f867dd6a6",
             "api-function-bed7e8769aead70a",
-            "api-function-e2c7584f839d20b9",
             "api-function-f33418083157db81",
             "api-struct-007b1b1f8ecf793f",
             "api-variable-675186e3d8dadb99",
@@ -9072,10 +8712,10 @@
           "parentId": null,
           "member": null,
           "references": [
-            "api-class-5e5fd7a2cf5cc8c7",
+            "api-class-2f85394c0dfa28d6",
             "api-file-1a7a152156608595",
             "api-namespace-e01f73c5ae02c778",
-            "api-struct-64168033c751de56"
+            "api-struct-e96d81c6c9f25a94"
           ],
           "enumValues": []
         },
@@ -9096,7 +8736,7 @@
           "parentId": "api-namespace-e01f73c5ae02c778",
           "member": null,
           "references": [
-            "api-class-5e5fd7a2cf5cc8c7",
+            "api-class-2f85394c0dfa28d6",
             "api-define-25c6880a2ea05680",
             "api-function-f33418083157db81",
             "api-variable-675186e3d8dadb99",
@@ -9150,15 +8790,15 @@
             "const": false
           },
           "references": [
-            "api-class-5e5fd7a2cf5cc8c7",
+            "api-class-2f85394c0dfa28d6",
             "api-define-25c6880a2ea05680",
             "api-function-f33418083157db81"
           ],
           "enumValues": []
         },
         {
-          "id": "api-class-5e5fd7a2cf5cc8c7",
-          "anchor": "api-class-5e5fd7a2cf5cc8c7",
+          "id": "api-class-2f85394c0dfa28d6",
+          "anchor": "api-class-2f85394c0dfa28d6",
           "kind": "class",
           "name": "motors::VESCMotor",
           "qualifiedName": "motors::VESCMotor",
@@ -9166,74 +8806,72 @@
           "description": "VESC 电调对象\n\n电流控制 内部速度控制 常见状态反馈解析 当前封装重点覆盖： 角度反馈 速度反馈 电流输入 内部速度输入 从能力模型上看，VESC 这一路主要提供： 当前 VESC 实现里，速度接口单位为 rpm。",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 36,
+            "line": 35,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L36"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L35"
           },
           "parentId": "api-namespace-e01f73c5ae02c778",
           "member": null,
           "references": [
-            "api-enum-1bfbb4032993b6d0",
-            "api-enum-52e8a8014c6f62aa",
-            "api-function-25c78761a7d38463",
-            "api-function-28c965dbb7d13688",
-            "api-function-29ec39532ee2c708",
-            "api-function-3d14dcfc1ac8d597",
-            "api-function-409ebb20db0c3e02",
-            "api-function-58a2c4a1afa9aceb",
-            "api-function-609ebc0af66d8ee6",
-            "api-function-67311f536cd521c6",
+            "api-enum-66c9996758f31eb1",
+            "api-enum-899ce1ecbe2e0f28",
+            "api-function-014068a510180354",
+            "api-function-01bdbd2ea2bde8ec",
+            "api-function-0ea8add5ae727b44",
+            "api-function-225498a474bf6439",
+            "api-function-23a7092b7e546cc2",
+            "api-function-2c502e5ad6588bea",
+            "api-function-30f364f41706bc3a",
+            "api-function-37682827b10ecaf9",
+            "api-function-5a507f8b23dbe4ca",
             "api-function-735e095ef02161c5",
-            "api-function-87bae275893593b5",
-            "api-function-88e8c51baec0f13c",
-            "api-function-914a535f867dd6a6",
-            "api-function-a40a4a29fd18ab6e",
+            "api-function-8a5ccac4b9212291",
+            "api-function-9615d439e0069c7c",
+            "api-function-97ef2fa457eb6a44",
+            "api-function-b6fee5465ca7d497",
             "api-function-bed7e8769aead70a",
-            "api-function-cbb5af49c6c5cf17",
-            "api-function-d13906261808a8b9",
-            "api-function-d411fbe17b3717ac",
-            "api-function-de1d238b84d54eb2",
-            "api-function-e2c7584f839d20b9",
+            "api-function-ebd8fb2b18f39e06",
+            "api-function-ec198f66ed375eb9",
             "api-function-f33418083157db81",
-            "api-function-f90f1f685851b93d",
-            "api-struct-64168033c751de56",
-            "api-variable-120c02520f32ea6a",
-            "api-variable-1bfff21c3631a71d",
-            "api-variable-277e6192f9849670",
-            "api-variable-3112808baf187884",
-            "api-variable-3b96d869512710e1",
-            "api-variable-4c92fac0f907fa6e",
-            "api-variable-54bbc1b728d868cd",
-            "api-variable-55acde77a97189bc",
-            "api-variable-563144903308037c",
-            "api-variable-5c87bd41c2bc6ba8",
-            "api-variable-6568ca9429b6dfa9",
-            "api-variable-672de426a3c810fc",
-            "api-variable-6b35a245f2bd65c9",
-            "api-variable-6d40472e79aeb5ac",
-            "api-variable-751f77dc6cde0605",
-            "api-variable-7867851c52539b1c",
-            "api-variable-7b935c96617c4726",
-            "api-variable-87e51c58b145637b",
-            "api-variable-a0ecec7b8280c7bf",
-            "api-variable-a25a85b2c9257edc",
-            "api-variable-a3c5bdd3b790c0a6",
-            "api-variable-aae3e43bf03d817f",
-            "api-variable-ae8d7e8a1e70c454",
-            "api-variable-b198224bc674f2b6",
-            "api-variable-b7aa0a617703ded9",
-            "api-variable-d1814271d178e17e",
-            "api-variable-f3ce1e71d4886eb7",
-            "api-variable-f4aa16810a2c1336",
-            "api-variable-fa9bcb0b1f79ff80",
-            "api-variable-fc452ac5a41e3465",
-            "api-variable-fd8feac85d869b39"
+            "api-function-f93920845ad350bd",
+            "api-struct-e96d81c6c9f25a94",
+            "api-variable-03ed2e3c46239aba",
+            "api-variable-0d844acb314a586b",
+            "api-variable-1eb52c993c45ad8c",
+            "api-variable-24bc64f46c1ab38a",
+            "api-variable-271e98aac65d588e",
+            "api-variable-3405427b550030ed",
+            "api-variable-3b26e13f6923413f",
+            "api-variable-3b56292eef316262",
+            "api-variable-445ed3194ad82401",
+            "api-variable-466e3dedf98bde11",
+            "api-variable-47fada1e54147ac9",
+            "api-variable-4da2d270c891479b",
+            "api-variable-5fe9f4345c582858",
+            "api-variable-773e973c47cd75fa",
+            "api-variable-7806ef9df38d7bbd",
+            "api-variable-8da1fc378e3ddcce",
+            "api-variable-97fd5a5231d789d5",
+            "api-variable-a2c72441823f585b",
+            "api-variable-a33330f270719f1e",
+            "api-variable-ad7d3f90e5da69ee",
+            "api-variable-be58ee006fcb83b8",
+            "api-variable-beeffd9a75613d6f",
+            "api-variable-c390a025839fdbfc",
+            "api-variable-c66786915abd4db9",
+            "api-variable-ccc81fa40b74882c",
+            "api-variable-cface9e784c05c5c",
+            "api-variable-de825e66a2dab87b",
+            "api-variable-e1f76f1faff93171",
+            "api-variable-e510d7c50dbd817e",
+            "api-variable-f9e65b9b543decf6",
+            "api-variable-ff3954ae536145a0"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-409ebb20db0c3e02",
-          "anchor": "api-function-409ebb20db0c3e02",
+          "id": "api-function-37682827b10ecaf9",
+          "anchor": "api-function-37682827b10ecaf9",
           "kind": "function",
           "name": "CANBaseReceiveCallback",
           "qualifiedName": "motors::VESCMotor::CANBaseReceiveCallback",
@@ -9241,11 +8879,11 @@
           "description": "CAN 基础接收回调\n\nhcan CAN 句柄 header CAN 报文头 data 数据 如果项目里已经有统一 CAN 分发器，推荐把它注册到分发器中；否则也可以在 HAL 的 FIFO 回调里直接调用它。",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 199,
+            "line": 198,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L199"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L198"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": true,
@@ -9253,15 +8891,13 @@
             "const": false
           },
           "references": [
-            "api-function-609ebc0af66d8ee6",
-            "api-function-bed7e8769aead70a",
-            "api-function-de1d238b84d54eb2"
+            "api-function-bed7e8769aead70a"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-25c78761a7d38463",
-          "anchor": "api-function-25c78761a7d38463",
+          "id": "api-function-b6fee5465ca7d497",
+          "anchor": "api-function-b6fee5465ca7d497",
           "kind": "function",
           "name": "CAN_FilterInit",
           "qualifiedName": "motors::VESCMotor::CAN_FilterInit",
@@ -9269,11 +8905,11 @@
           "description": "是否支持内部位置控制\n\n协议本身存在位置设定命令，但当前这个类没有把它作为稳定接口对外开放。 不重写 internalPositionSupportLevel()，继承基类默认 NotSupported。 hcan CAN 句柄 filter_bank 滤波器组 初始化 CAN 滤波器",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 189,
+            "line": 188,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L189"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L188"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": true,
@@ -9284,8 +8920,8 @@
           "enumValues": []
         },
         {
-          "id": "api-struct-64168033c751de56",
-          "anchor": "api-struct-64168033c751de56",
+          "id": "api-struct-e96d81c6c9f25a94",
+          "anchor": "api-struct-e96d81c6c9f25a94",
           "kind": "struct",
           "name": "motors::VESCMotor::Config",
           "qualifiedName": "motors::VESCMotor::Config",
@@ -9293,25 +8929,25 @@
           "description": "VESC 配置结构体 对应 VESC_Config_t.",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 121,
+            "line": 120,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L121"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L120"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": null,
           "references": [
-            "api-variable-0bdaf9c05f93256f",
-            "api-variable-8a808bdc372f4d78",
-            "api-variable-90ee1543654992c2",
-            "api-variable-97dce8e2e5a68bd4",
-            "api-variable-e9ef297cb68c2b72",
-            "api-variable-ece6bf6aaf0fc554"
+            "api-variable-0a702f4722c2da87",
+            "api-variable-13d376230bd908be",
+            "api-variable-36308b31ba501c63",
+            "api-variable-954c18b0bd7bfa2a",
+            "api-variable-a72c6ac25f420f9a",
+            "api-variable-faaa1e23204307a7"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-ece6bf6aaf0fc554",
-          "anchor": "api-variable-ece6bf6aaf0fc554",
+          "id": "api-variable-faaa1e23204307a7",
+          "anchor": "api-variable-faaa1e23204307a7",
           "kind": "variable",
           "name": "auto_zero",
           "qualifiedName": "motors::VESCMotor::Config::auto_zero",
@@ -9319,11 +8955,11 @@
           "description": "上电收够一段稳定反馈后，是否自动把当前角度设为零点",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 136,
+            "line": 135,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L136"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L135"
           },
-          "parentId": "api-struct-64168033c751de56",
+          "parentId": "api-struct-e96d81c6c9f25a94",
           "member": {
             "access": "public",
             "static": false,
@@ -9334,8 +8970,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-97dce8e2e5a68bd4",
-          "anchor": "api-variable-97dce8e2e5a68bd4",
+          "id": "api-variable-36308b31ba501c63",
+          "anchor": "api-variable-36308b31ba501c63",
           "kind": "variable",
           "name": "electrodes",
           "qualifiedName": "motors::VESCMotor::Config::electrodes",
@@ -9343,11 +8979,11 @@
           "description": "电机极对数，用于机械 rpm 与 ERPM 的换算。\n\n注意这里填写的是“极对数”，不是总极数。 例如 14 极电机，这里应填写 7。 electrodes 字段名沿用历史命名，当前不改动接口以兼容现有代码。",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 133,
+            "line": 132,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L133"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L132"
           },
-          "parentId": "api-struct-64168033c751de56",
+          "parentId": "api-struct-e96d81c6c9f25a94",
           "member": {
             "access": "public",
             "static": false,
@@ -9358,8 +8994,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-8a808bdc372f4d78",
-          "anchor": "api-variable-8a808bdc372f4d78",
+          "id": "api-variable-0a702f4722c2da87",
+          "anchor": "api-variable-0a702f4722c2da87",
           "kind": "variable",
           "name": "hcan",
           "qualifiedName": "motors::VESCMotor::Config::hcan",
@@ -9367,11 +9003,11 @@
           "description": "所在 CAN 总线",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 123,
+            "line": 122,
             "column": 27,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L123"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L122"
           },
-          "parentId": "api-struct-64168033c751de56",
+          "parentId": "api-struct-e96d81c6c9f25a94",
           "member": {
             "access": "public",
             "static": false,
@@ -9382,8 +9018,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-90ee1543654992c2",
-          "anchor": "api-variable-90ee1543654992c2",
+          "id": "api-variable-954c18b0bd7bfa2a",
+          "anchor": "api-variable-954c18b0bd7bfa2a",
           "kind": "variable",
           "name": "id",
           "qualifiedName": "motors::VESCMotor::Config::id",
@@ -9391,11 +9027,11 @@
           "description": "控制器 id，0xFF 代表广播",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 124,
+            "line": 123,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L124"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L123"
           },
-          "parentId": "api-struct-64168033c751de56",
+          "parentId": "api-struct-e96d81c6c9f25a94",
           "member": {
             "access": "public",
             "static": false,
@@ -9406,8 +9042,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0bdaf9c05f93256f",
-          "anchor": "api-variable-0bdaf9c05f93256f",
+          "id": "api-variable-13d376230bd908be",
+          "anchor": "api-variable-13d376230bd908be",
           "kind": "variable",
           "name": "reduction_rate",
           "qualifiedName": "motors::VESCMotor::Config::reduction_rate",
@@ -9415,11 +9051,11 @@
           "description": "外接减速比（VESC 上位机设置的减速比不生效）",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 134,
+            "line": 133,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L134"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L133"
           },
-          "parentId": "api-struct-64168033c751de56",
+          "parentId": "api-struct-e96d81c6c9f25a94",
           "member": {
             "access": "public",
             "static": false,
@@ -9430,8 +9066,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-e9ef297cb68c2b72",
-          "anchor": "api-variable-e9ef297cb68c2b72",
+          "id": "api-variable-a72c6ac25f420f9a",
+          "anchor": "api-variable-a72c6ac25f420f9a",
           "kind": "variable",
           "name": "reverse",
           "qualifiedName": "motors::VESCMotor::Config::reverse",
@@ -9439,11 +9075,11 @@
           "description": "是否反转输出方向",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 137,
+            "line": 136,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L137"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L136"
           },
-          "parentId": "api-struct-64168033c751de56",
+          "parentId": "api-struct-e96d81c6c9f25a94",
           "member": {
             "access": "public",
             "static": false,
@@ -9454,8 +9090,8 @@
           "enumValues": []
         },
         {
-          "id": "api-enum-52e8a8014c6f62aa",
-          "anchor": "api-enum-52e8a8014c6f62aa",
+          "id": "api-enum-66c9996758f31eb1",
+          "anchor": "api-enum-66c9996758f31eb1",
           "kind": "enum",
           "name": "SetCommand",
           "qualifiedName": "motors::VESCMotor::SetCommand",
@@ -9463,11 +9099,11 @@
           "description": "VESC CAN 指令集（设置类） 对应 VESC_CAN_PocketSet_t.",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 43,
+            "line": 42,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L43"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L42"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9514,8 +9150,8 @@
           ]
         },
         {
-          "id": "api-enum-1bfbb4032993b6d0",
-          "anchor": "api-enum-1bfbb4032993b6d0",
+          "id": "api-enum-899ce1ecbe2e0f28",
+          "anchor": "api-enum-899ce1ecbe2e0f28",
           "kind": "enum",
           "name": "StatusCommand",
           "qualifiedName": "motors::VESCMotor::StatusCommand",
@@ -9523,11 +9159,11 @@
           "description": "VESC CAN 状态反馈指令集 对应 VESC_CAN_PocketStatus_t.\n\n下面各状态包的字段说明，按“当前公开资料 + 本项目解码实现”整理。 如果注释里写了“推测”，表示该字段含义或物理单位在当前资料下并非完全确认。",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 61,
+            "line": 60,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L61"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L60"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9564,8 +9200,8 @@
           ]
         },
         {
-          "id": "api-function-914a535f867dd6a6",
-          "anchor": "api-function-914a535f867dd6a6",
+          "id": "api-function-225498a474bf6439",
+          "anchor": "api-function-225498a474bf6439",
           "kind": "function",
           "name": "VESCMotor",
           "qualifiedName": "motors::VESCMotor::VESCMotor",
@@ -9573,11 +9209,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 140,
+            "line": 139,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L140"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L139"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9586,13 +9222,13 @@
           },
           "references": [
             "api-function-f33418083157db81",
-            "api-struct-64168033c751de56"
+            "api-struct-e96d81c6c9f25a94"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-d1814271d178e17e",
-          "anchor": "api-variable-d1814271d178e17e",
+          "id": "api-variable-a33330f270719f1e",
+          "anchor": "api-variable-a33330f270719f1e",
           "kind": "variable",
           "name": "abs_angle_",
           "qualifiedName": "motors::VESCMotor::abs_angle_",
@@ -9600,11 +9236,11 @@
           "description": "输出轴绝对角度，单位 deg",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 245,
+            "line": 244,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L245"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L244"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -9615,8 +9251,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f3ce1e71d4886eb7",
-          "anchor": "api-variable-f3ce1e71d4886eb7",
+          "id": "api-variable-ad7d3f90e5da69ee",
+          "anchor": "api-variable-ad7d3f90e5da69ee",
           "kind": "variable",
           "name": "amp_hours",
           "qualifiedName": "motors::VESCMotor::amp_hours",
@@ -9624,11 +9260,11 @@
           "description": "累计放电安时",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 225,
+            "line": 224,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L225"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L224"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9639,8 +9275,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-277e6192f9849670",
-          "anchor": "api-variable-277e6192f9849670",
+          "id": "api-variable-de825e66a2dab87b",
+          "anchor": "api-variable-de825e66a2dab87b",
           "kind": "variable",
           "name": "amp_hours_charged",
           "qualifiedName": "motors::VESCMotor::amp_hours_charged",
@@ -9648,11 +9284,11 @@
           "description": "累计回充安时",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 226,
+            "line": 225,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L226"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L225"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9663,8 +9299,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f4aa16810a2c1336",
-          "anchor": "api-variable-f4aa16810a2c1336",
+          "id": "api-variable-466e3dedf98bde11",
+          "anchor": "api-variable-466e3dedf98bde11",
           "kind": "variable",
           "name": "angle_zero_",
           "qualifiedName": "motors::VESCMotor::angle_zero_",
@@ -9672,11 +9308,11 @@
           "description": "零点角度，单位 deg",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 239,
+            "line": 238,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L239"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L238"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -9687,8 +9323,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-fd8feac85d869b39",
-          "anchor": "api-variable-fd8feac85d869b39",
+          "id": "api-variable-4da2d270c891479b",
+          "anchor": "api-variable-4da2d270c891479b",
           "kind": "variable",
           "name": "cfg_",
           "qualifiedName": "motors::VESCMotor::cfg_",
@@ -9696,11 +9332,11 @@
           "description": "构造时保存的配置",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 213,
+            "line": 212,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L213"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L212"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -9708,13 +9344,13 @@
             "const": false
           },
           "references": [
-            "api-struct-64168033c751de56"
+            "api-struct-e96d81c6c9f25a94"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-f90f1f685851b93d",
-          "anchor": "api-function-f90f1f685851b93d",
+          "id": "api-function-5a507f8b23dbe4ca",
+          "anchor": "api-function-5a507f8b23dbe4ca",
           "kind": "function",
           "name": "clamp",
           "qualifiedName": "motors::VESCMotor::clamp",
@@ -9722,11 +9358,11 @@
           "description": "限幅\n\nvalue 输入值 abs_max 最大绝对值 限幅后的值",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 261,
+            "line": 260,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L261"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L260"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": true,
@@ -9737,8 +9373,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-563144903308037c",
-          "anchor": "api-variable-563144903308037c",
+          "id": "api-variable-3b56292eef316262",
+          "anchor": "api-variable-3b56292eef316262",
           "kind": "variable",
           "name": "current_in",
           "qualifiedName": "motors::VESCMotor::current_in",
@@ -9746,11 +9382,11 @@
           "description": "输入电流，来自状态包 4，单位按 A 推测",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 223,
+            "line": 222,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L223"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L222"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9761,8 +9397,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6d40472e79aeb5ac",
-          "anchor": "api-variable-6d40472e79aeb5ac",
+          "id": "api-variable-ff3954ae536145a0",
+          "anchor": "api-variable-ff3954ae536145a0",
           "kind": "variable",
           "name": "current_motor",
           "qualifiedName": "motors::VESCMotor::current_motor",
@@ -9770,11 +9406,11 @@
           "description": "电机电流，来自状态包 1",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 222,
+            "line": 221,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L222"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L221"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9785,8 +9421,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-d13906261808a8b9",
-          "anchor": "api-function-d13906261808a8b9",
+          "id": "api-function-ebd8fb2b18f39e06",
+          "anchor": "api-function-ebd8fb2b18f39e06",
           "kind": "function",
           "name": "decode",
           "qualifiedName": "motors::VESCMotor::decode",
@@ -9794,11 +9430,11 @@
           "description": "解码状态反馈\n\nstatus_cmd 状态指令 data 数据",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 253,
+            "line": 252,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L253"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L252"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -9806,13 +9442,13 @@
             "const": false
           },
           "references": [
-            "api-enum-1bfbb4032993b6d0"
+            "api-enum-899ce1ecbe2e0f28"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-67311f536cd521c6",
-          "anchor": "api-function-67311f536cd521c6",
+          "id": "api-function-8a5ccac4b9212291",
+          "anchor": "api-function-8a5ccac4b9212291",
           "kind": "function",
           "name": "defaultControlMode",
           "qualifiedName": "motors::VESCMotor::defaultControlMode",
@@ -9820,11 +9456,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 155,
+            "line": 154,
             "column": 31,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L155"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L154"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9835,8 +9471,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-120c02520f32ea6a",
-          "anchor": "api-variable-120c02520f32ea6a",
+          "id": "api-variable-be58ee006fcb83b8",
+          "anchor": "api-variable-be58ee006fcb83b8",
           "kind": "variable",
           "name": "duty",
           "qualifiedName": "motors::VESCMotor::duty",
@@ -9844,11 +9480,11 @@
           "description": "占空比，来自状态包 1",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 221,
+            "line": 220,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L221"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L220"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9859,8 +9495,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-54bbc1b728d868cd",
-          "anchor": "api-variable-54bbc1b728d868cd",
+          "id": "api-variable-e510d7c50dbd817e",
+          "anchor": "api-variable-e510d7c50dbd817e",
           "kind": "variable",
           "name": "erpm",
           "qualifiedName": "motors::VESCMotor::erpm",
@@ -9868,11 +9504,11 @@
           "description": "电角转速 ERPM，来自状态包 1",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 219,
+            "line": 218,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L219"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L218"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9883,8 +9519,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-7867851c52539b1c",
-          "anchor": "api-variable-7867851c52539b1c",
+          "id": "api-variable-445ed3194ad82401",
+          "anchor": "api-variable-445ed3194ad82401",
           "kind": "variable",
           "name": "erpm2velocity_",
           "qualifiedName": "motors::VESCMotor::erpm2velocity_",
@@ -9892,11 +9528,11 @@
           "description": "ERPM 到输出轴机械 rpm 的换算系数",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 242,
+            "line": 241,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L242"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L241"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -9907,8 +9543,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-ae8d7e8a1e70c454",
-          "anchor": "api-variable-ae8d7e8a1e70c454",
+          "id": "api-variable-c390a025839fdbfc",
+          "anchor": "api-variable-c390a025839fdbfc",
           "kind": "variable",
           "name": "feedback_",
           "qualifiedName": "motors::VESCMotor::feedback_",
@@ -9916,11 +9552,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 237,
+            "line": 236,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L237"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L236"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -9931,8 +9567,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-5c87bd41c2bc6ba8",
-          "anchor": "api-variable-5c87bd41c2bc6ba8",
+          "id": "api-variable-beeffd9a75613d6f",
+          "anchor": "api-variable-beeffd9a75613d6f",
           "kind": "variable",
           "name": "feedback_count_",
           "qualifiedName": "motors::VESCMotor::feedback_count_",
@@ -9940,11 +9576,11 @@
           "description": "反馈计数，用于上电自动清零",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 215,
+            "line": 214,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L215"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L214"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -9955,8 +9591,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-cbb5af49c6c5cf17",
-          "anchor": "api-function-cbb5af49c6c5cf17",
+          "id": "api-function-014068a510180354",
+          "anchor": "api-function-014068a510180354",
           "kind": "function",
           "name": "getAngle",
           "qualifiedName": "motors::VESCMotor::getAngle",
@@ -9964,11 +9600,11 @@
           "description": "获取输出轴角度\n\n角度，单位 deg",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 147,
+            "line": 146,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L147"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L146"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -9979,8 +9615,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-58a2c4a1afa9aceb",
-          "anchor": "api-function-58a2c4a1afa9aceb",
+          "id": "api-function-9615d439e0069c7c",
+          "anchor": "api-function-9615d439e0069c7c",
           "kind": "function",
           "name": "getVelocity",
           "qualifiedName": "motors::VESCMotor::getVelocity",
@@ -9988,11 +9624,11 @@
           "description": "获取输出轴速度\n\n速度；当前 VESC 实现单位为 rpm",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 152,
+            "line": 151,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L152"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L151"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10003,8 +9639,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-29ec39532ee2c708",
-          "anchor": "api-function-29ec39532ee2c708",
+          "id": "api-function-30f364f41706bc3a",
+          "anchor": "api-function-30f364f41706bc3a",
           "kind": "function",
           "name": "internalVelocitySupportLevel",
           "qualifiedName": "motors::VESCMotor::internalVelocitySupportLevel",
@@ -10012,11 +9648,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 165,
+            "line": 164,
             "column": 35,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L165"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L164"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10027,8 +9663,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-b198224bc674f2b6",
-          "anchor": "api-variable-b198224bc674f2b6",
+          "id": "api-variable-47fada1e54147ac9",
+          "anchor": "api-variable-47fada1e54147ac9",
           "kind": "variable",
           "name": "inv_reduction_rate_",
           "qualifiedName": "motors::VESCMotor::inv_reduction_rate_",
@@ -10036,11 +9672,11 @@
           "description": "外接减速比倒数",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 243,
+            "line": 242,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L243"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L242"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -10051,8 +9687,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-88e8c51baec0f13c",
-          "anchor": "api-function-88e8c51baec0f13c",
+          "id": "api-function-f93920845ad350bd",
+          "anchor": "api-function-f93920845ad350bd",
           "kind": "function",
           "name": "isConnected",
           "qualifiedName": "motors::VESCMotor::isConnected",
@@ -10060,11 +9696,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 160,
+            "line": 159,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L160"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L159"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10075,8 +9711,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-a0ecec7b8280c7bf",
-          "anchor": "api-variable-a0ecec7b8280c7bf",
+          "id": "api-variable-cface9e784c05c5c",
+          "anchor": "api-variable-cface9e784c05c5c",
           "kind": "variable",
           "name": "kSetCurrentBrakeMax",
           "qualifiedName": "motors::VESCMotor::kSetCurrentBrakeMax",
@@ -10084,11 +9720,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 207,
+            "line": 206,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L207"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L206"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": true,
@@ -10099,8 +9735,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6568ca9429b6dfa9",
-          "anchor": "api-variable-6568ca9429b6dfa9",
+          "id": "api-variable-97fd5a5231d789d5",
+          "anchor": "api-variable-97fd5a5231d789d5",
           "kind": "variable",
           "name": "kSetCurrentBrakeRelMax",
           "qualifiedName": "motors::VESCMotor::kSetCurrentBrakeRelMax",
@@ -10108,11 +9744,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 211,
+            "line": 210,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L211"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L210"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": true,
@@ -10123,8 +9759,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-a3c5bdd3b790c0a6",
-          "anchor": "api-variable-a3c5bdd3b790c0a6",
+          "id": "api-variable-7806ef9df38d7bbd",
+          "anchor": "api-variable-7806ef9df38d7bbd",
           "kind": "variable",
           "name": "kSetCurrentMax",
           "qualifiedName": "motors::VESCMotor::kSetCurrentMax",
@@ -10132,11 +9768,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 206,
+            "line": 205,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L206"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L205"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": true,
@@ -10147,8 +9783,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-aae3e43bf03d817f",
-          "anchor": "api-variable-aae3e43bf03d817f",
+          "id": "api-variable-1eb52c993c45ad8c",
+          "anchor": "api-variable-1eb52c993c45ad8c",
           "kind": "variable",
           "name": "kSetCurrentRelMax",
           "qualifiedName": "motors::VESCMotor::kSetCurrentRelMax",
@@ -10156,11 +9792,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 210,
+            "line": 209,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L210"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L209"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": true,
@@ -10171,8 +9807,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-1bfff21c3631a71d",
-          "anchor": "api-variable-1bfff21c3631a71d",
+          "id": "api-variable-0d844acb314a586b",
+          "anchor": "api-variable-0d844acb314a586b",
           "kind": "variable",
           "name": "kSetDutyMax",
           "qualifiedName": "motors::VESCMotor::kSetDutyMax",
@@ -10180,11 +9816,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 205,
+            "line": 204,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L205"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L204"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": true,
@@ -10195,8 +9831,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-55acde77a97189bc",
-          "anchor": "api-variable-55acde77a97189bc",
+          "id": "api-variable-03ed2e3c46239aba",
+          "anchor": "api-variable-03ed2e3c46239aba",
           "kind": "variable",
           "name": "kSetPositionMax",
           "qualifiedName": "motors::VESCMotor::kSetPositionMax",
@@ -10204,11 +9840,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 209,
+            "line": 208,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L209"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L208"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": true,
@@ -10219,8 +9855,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-b7aa0a617703ded9",
-          "anchor": "api-variable-b7aa0a617703ded9",
+          "id": "api-variable-ccc81fa40b74882c",
+          "anchor": "api-variable-ccc81fa40b74882c",
           "kind": "variable",
           "name": "kSetRPMMax",
           "qualifiedName": "motors::VESCMotor::kSetRPMMax",
@@ -10228,11 +9864,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 208,
+            "line": 207,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L208"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L207"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": true,
@@ -10243,8 +9879,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-751f77dc6cde0605",
-          "anchor": "api-variable-751f77dc6cde0605",
+          "id": "api-variable-24bc64f46c1ab38a",
+          "anchor": "api-variable-24bc64f46c1ab38a",
           "kind": "variable",
           "name": "mos_temperature",
           "qualifiedName": "motors::VESCMotor::mos_temperature",
@@ -10252,11 +9888,11 @@
           "description": "MOSFET 温度，来自状态包 4，单位按 degC 推测",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 231,
+            "line": 230,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L231"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L230"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10267,8 +9903,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-87e51c58b145637b",
-          "anchor": "api-variable-87e51c58b145637b",
+          "id": "api-variable-5fe9f4345c582858",
+          "anchor": "api-variable-5fe9f4345c582858",
           "kind": "variable",
           "name": "motor_temperature",
           "qualifiedName": "motors::VESCMotor::motor_temperature",
@@ -10276,11 +9912,11 @@
           "description": "电机温度，来自状态包 4，单位按 degC 推测",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 230,
+            "line": 229,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L230"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L229"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10291,8 +9927,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-fa9bcb0b1f79ff80",
-          "anchor": "api-variable-fa9bcb0b1f79ff80",
+          "id": "api-variable-3b26e13f6923413f",
+          "anchor": "api-variable-3b26e13f6923413f",
           "kind": "variable",
           "name": "pos",
           "qualifiedName": "motors::VESCMotor::pos",
@@ -10300,11 +9936,11 @@
           "description": "单圈位置，当前项目按 0~360 deg 使用，来自状态包 4",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 220,
+            "line": 219,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L220"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L219"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10315,8 +9951,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-3d14dcfc1ac8d597",
-          "anchor": "api-function-3d14dcfc1ac8d597",
+          "id": "api-function-2c502e5ad6588bea",
+          "anchor": "api-function-2c502e5ad6588bea",
           "kind": "function",
           "name": "resetAngle",
           "qualifiedName": "motors::VESCMotor::resetAngle",
@@ -10324,11 +9960,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 153,
+            "line": 152,
             "column": 25,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L153"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L152"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10339,8 +9975,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-3112808baf187884",
-          "anchor": "api-variable-3112808baf187884",
+          "id": "api-variable-a2c72441823f585b",
+          "anchor": "api-variable-a2c72441823f585b",
           "kind": "variable",
           "name": "round_cnt",
           "qualifiedName": "motors::VESCMotor::round_cnt",
@@ -10348,11 +9984,11 @@
           "description": "圈数统计",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 236,
+            "line": 235,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L236"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L235"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10363,8 +9999,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-a40a4a29fd18ab6e",
-          "anchor": "api-function-a40a4a29fd18ab6e",
+          "id": "api-function-ec198f66ed375eb9",
+          "anchor": "api-function-ec198f66ed375eb9",
           "kind": "function",
           "name": "sendSetCommand",
           "qualifiedName": "motors::VESCMotor::sendSetCommand",
@@ -10372,11 +10008,11 @@
           "description": "发送设置指令\n\ncmd 指令 value 值",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 267,
+            "line": 266,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L267"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L266"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -10384,13 +10020,13 @@
             "const": true
           },
           "references": [
-            "api-enum-52e8a8014c6f62aa"
+            "api-enum-66c9996758f31eb1"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-28c965dbb7d13688",
-          "anchor": "api-function-28c965dbb7d13688",
+          "id": "api-function-01bdbd2ea2bde8ec",
+          "anchor": "api-function-01bdbd2ea2bde8ec",
           "kind": "function",
           "name": "setCurrent",
           "qualifiedName": "motors::VESCMotor::setCurrent",
@@ -10398,11 +10034,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 163,
+            "line": 162,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L163"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L162"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10413,8 +10049,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-d411fbe17b3717ac",
-          "anchor": "api-function-d411fbe17b3717ac",
+          "id": "api-function-23a7092b7e546cc2",
+          "anchor": "api-function-23a7092b7e546cc2",
           "kind": "function",
           "name": "setInternalVelocity",
           "qualifiedName": "motors::VESCMotor::setInternalVelocity",
@@ -10422,11 +10058,11 @@
           "description": "发送内部速度参考\n\nVESC 内部速度模式不支持 maxi，该参数被忽略。",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 174,
+            "line": 173,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L174"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L173"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10437,8 +10073,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-3b96d869512710e1",
-          "anchor": "api-variable-3b96d869512710e1",
+          "id": "api-variable-c66786915abd4db9",
+          "anchor": "api-variable-c66786915abd4db9",
           "kind": "variable",
           "name": "sign_",
           "qualifiedName": "motors::VESCMotor::sign_",
@@ -10446,11 +10082,11 @@
           "description": "方向符号，正转为 1，反转为 -1",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 241,
+            "line": 240,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L241"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L240"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -10461,8 +10097,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-87bae275893593b5",
-          "anchor": "api-function-87bae275893593b5",
+          "id": "api-function-97ef2fa457eb6a44",
+          "anchor": "api-function-97ef2fa457eb6a44",
           "kind": "function",
           "name": "supportsCurrent",
           "qualifiedName": "motors::VESCMotor::supportsCurrent",
@@ -10470,11 +10106,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 162,
+            "line": 161,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L162"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L161"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10485,8 +10121,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-a25a85b2c9257edc",
-          "anchor": "api-variable-a25a85b2c9257edc",
+          "id": "api-variable-8da1fc378e3ddcce",
+          "anchor": "api-variable-8da1fc378e3ddcce",
           "kind": "variable",
           "name": "tachometer_value",
           "qualifiedName": "motors::VESCMotor::tachometer_value",
@@ -10494,11 +10130,11 @@
           "description": "原始转速计值，来自状态包 5，精确物理含义仍待确认",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 234,
+            "line": 233,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L234"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L233"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10509,8 +10145,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-672de426a3c810fc",
-          "anchor": "api-variable-672de426a3c810fc",
+          "id": "api-variable-f9e65b9b543decf6",
+          "anchor": "api-variable-f9e65b9b543decf6",
           "kind": "variable",
           "name": "velocity_",
           "qualifiedName": "motors::VESCMotor::velocity_",
@@ -10518,11 +10154,11 @@
           "description": "输出轴角速度，当前实现单位 rpm",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 246,
+            "line": 245,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L246"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L245"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -10533,8 +10169,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6b35a245f2bd65c9",
-          "anchor": "api-variable-6b35a245f2bd65c9",
+          "id": "api-variable-e1f76f1faff93171",
+          "anchor": "api-variable-e1f76f1faff93171",
           "kind": "variable",
           "name": "vin",
           "qualifiedName": "motors::VESCMotor::vin",
@@ -10542,11 +10178,11 @@
           "description": "输入电压",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 233,
+            "line": 232,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L233"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L232"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10557,8 +10193,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-7b935c96617c4726",
-          "anchor": "api-variable-7b935c96617c4726",
+          "id": "api-variable-773e973c47cd75fa",
+          "anchor": "api-variable-773e973c47cd75fa",
           "kind": "variable",
           "name": "watchdog_",
           "qualifiedName": "motors::VESCMotor::watchdog_",
@@ -10566,11 +10202,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 216,
+            "line": 215,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L216"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L215"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "private",
             "static": false,
@@ -10581,8 +10217,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-4c92fac0f907fa6e",
-          "anchor": "api-variable-4c92fac0f907fa6e",
+          "id": "api-variable-3405427b550030ed",
+          "anchor": "api-variable-3405427b550030ed",
           "kind": "variable",
           "name": "watt_hours",
           "qualifiedName": "motors::VESCMotor::watt_hours",
@@ -10590,11 +10226,11 @@
           "description": "累计放电瓦时",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 227,
+            "line": 226,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L227"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L226"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10605,8 +10241,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-fc452ac5a41e3465",
-          "anchor": "api-variable-fc452ac5a41e3465",
+          "id": "api-variable-271e98aac65d588e",
+          "anchor": "api-variable-271e98aac65d588e",
           "kind": "variable",
           "name": "watt_hours_charged",
           "qualifiedName": "motors::VESCMotor::watt_hours_charged",
@@ -10614,11 +10250,11 @@
           "description": "累计回充瓦时",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 228,
+            "line": 227,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L228"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L227"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10629,8 +10265,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-e2c7584f839d20b9",
-          "anchor": "api-function-e2c7584f839d20b9",
+          "id": "api-function-0ea8add5ae727b44",
+          "anchor": "api-function-0ea8add5ae727b44",
           "kind": "function",
           "name": "~VESCMotor",
           "qualifiedName": "motors::VESCMotor::~VESCMotor",
@@ -10638,11 +10274,11 @@
           "description": "",
           "location": {
             "path": "motors/VESC/vesc.hpp",
-            "line": 141,
+            "line": 140,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L141"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.hpp#L140"
           },
-          "parentId": "api-class-5e5fd7a2cf5cc8c7",
+          "parentId": "api-class-2f85394c0dfa28d6",
           "member": {
             "access": "public",
             "static": false,
@@ -10651,58 +10287,6 @@
           },
           "references": [
             "api-function-735e095ef02161c5"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-609ebc0af66d8ee6",
-          "anchor": "api-function-609ebc0af66d8ee6",
-          "kind": "function",
-          "name": "VESC_CAN_Fifo0ReceiveCallback",
-          "qualifiedName": "motors::VESC_CAN_Fifo0ReceiveCallback",
-          "signature": "void motors::VESC_CAN_Fifo0ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "",
-          "location": {
-            "path": "motors/VESC/vesc.cpp",
-            "line": 290,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L290"
-          },
-          "parentId": "api-namespace-e01f73c5ae02c778",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-409ebb20db0c3e02"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-de1d238b84d54eb2",
-          "anchor": "api-function-de1d238b84d54eb2",
-          "kind": "function",
-          "name": "VESC_CAN_Fifo1ReceiveCallback",
-          "qualifiedName": "motors::VESC_CAN_Fifo1ReceiveCallback",
-          "signature": "void motors::VESC_CAN_Fifo1ReceiveCallback (CAN_HandleTypeDef *hcan)",
-          "description": "",
-          "location": {
-            "path": "motors/VESC/vesc.cpp",
-            "line": 306,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/VESC/vesc.cpp#L306"
-          },
-          "parentId": "api-namespace-e01f73c5ae02c778",
-          "member": {
-            "access": null,
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-409ebb20db0c3e02"
           ],
           "enumValues": []
         },
@@ -10776,7 +10360,7 @@
             "const": false
           },
           "references": [
-            "api-function-409ebb20db0c3e02",
+            "api-function-37682827b10ecaf9",
             "api-function-735e095ef02161c5",
             "api-function-f33418083157db81",
             "api-struct-007b1b1f8ecf793f",
@@ -10834,8 +10418,8 @@
             "const": false
           },
           "references": [
-            "api-class-5e5fd7a2cf5cc8c7",
-            "api-function-914a535f867dd6a6",
+            "api-class-2f85394c0dfa28d6",
+            "api-function-225498a474bf6439",
             "api-function-bed7e8769aead70a",
             "api-variable-675186e3d8dadb99",
             "api-variable-87261468486a5cd4"
@@ -10864,8 +10448,8 @@
             "const": false
           },
           "references": [
-            "api-function-bed7e8769aead70a",
-            "api-function-e2c7584f839d20b9"
+            "api-function-0ea8add5ae727b44",
+            "api-function-bed7e8769aead70a"
           ],
           "enumValues": []
         }
@@ -10873,15 +10457,15 @@
       "inheritanceRelations": [
         {
           "kind": "inherits",
-          "derivedId": "api-class-5e5fd7a2cf5cc8c7",
+          "derivedId": "api-class-2f85394c0dfa28d6",
           "baseId": null,
           "baseQualifiedName": "IMotor",
           "access": "public",
           "virtual": false
         }
       ],
-      "symbolCount": 74,
-      "documentedSymbolCount": 44
+      "symbolCount": 70,
+      "documentedSymbolCount": 42
     }
   ]
 }
