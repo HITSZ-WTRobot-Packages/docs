@@ -23,7 +23,7 @@ import { catalogSlug } from "./slugs";
 
 export const APPROVED_EXTERNAL_DEPENDENCIES = new Set([
   "FreeRTOS",
-  "VelocityProfile::SCurve",
+  "LwIP",
   "stm32cubemx",
 ]);
 
