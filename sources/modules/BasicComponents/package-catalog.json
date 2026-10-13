@@ -1,8 +1,21 @@
 {
   "formatVersion": 1,
   "moduleId": "BasicComponents",
-  "moduleSha": "4eb144ec77c7a17eaab87a8d7c4dc675f1f5fbb1",
+  "moduleSha": "bfa445e36dbecfdba6a981501218513fe0cd27b6",
   "packages": [
+    {
+      "name": "UdpSocket",
+      "pkgname": "Ethernet::UdpSocket",
+      "version": "0.1.0",
+      "manifestPath": "bsp/ethernet/net/udp_socket/cpkg.toml",
+      "packagePath": "bsp/ethernet/net/udp_socket",
+      "dependencyNames": [
+        "EthernetPHY::Core",
+        "FreeRTOS",
+        "LwIP",
+        "stm32cubemx"
+      ]
+    },
     {
       "name": "EthernetPHYCore",
       "pkgname": "EthernetPHY::Core",
@@ -19,6 +32,7 @@
       "packagePath": "bsp/ethernet/phy_drivers/dp83822",
       "dependencyNames": [
         "EthernetPHY::Core",
+        "bsp::GPIO_Driver",
         "stm32cubemx"
       ]
     },
@@ -31,6 +45,7 @@
       "dependencyNames": [
         "EthernetPHY::Core",
         "FreeRTOS",
+        "LwIP",
         "stm32cubemx"
       ]
     },
@@ -68,6 +83,18 @@
       "version": "0.1.0",
       "manifestPath": "bsp/can_driver/cpkg.toml",
       "packagePath": "bsp/can_driver",
+      "dependencyNames": [
+        "libs::RingBuffer",
+        "stm32cubemx",
+        "utils"
+      ]
+    },
+    {
+      "name": "CANDriver2",
+      "pkgname": "bsp::CANDriver2",
+      "version": "0.1.0",
+      "manifestPath": "bsp/can_driver2/cpkg.toml",
+      "packagePath": "bsp/can_driver2",
       "dependencyNames": [
         "libs::RingBuffer",
         "stm32cubemx",

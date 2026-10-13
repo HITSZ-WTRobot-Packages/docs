@@ -6,7 +6,13 @@
 
 - bsp: 对 HAL 库的基本封装
     - ![Last Update](https://img.shields.io/github/last-commit/HITSZ-WTRobot-Packages/BasicComponents?path=bsp%2Fcan_driver&label=%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0&color=2ea44f&style=flat-square&logo=github) can_driver ：STM32 bxCAN 驱动
+    - [can_driver2](bsp/can_driver2/README.md) ：固定存储的 CAN/FDCAN 驱动
     - ![Last Update](https://img.shields.io/github/last-commit/HITSZ-WTRobot-Packages/BasicComponents?path=bsp%2Fgpio_driver&label=%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0&color=2ea44f&style=flat-square&logo=github) gpio_driver ：STM32 GPIO 封装（GPIO + PWM）
+    - ethernet: 以太网与 PHY 组件
+        - ![Last Update](https://img.shields.io/github/last-commit/HITSZ-WTRobot-Packages/BasicComponents?path=bsp%2Fethernet%2Fcore&label=%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0&color=2ea44f&style=flat-square&logo=github) [core](bsp/ethernet/core/README.md) ：`IPhy` 同步 PHY 契约与链路事件接口
+        - ![Last Update](https://img.shields.io/github/last-commit/HITSZ-WTRobot-Packages/BasicComponents?path=bsp%2Fethernet%2Fphy_drivers%2Fdp83822&label=%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0&color=2ea44f&style=flat-square&logo=github) [dp83822](bsp/ethernet/phy_drivers/dp83822/README.md) ：DP83822 PHY 驱动（可选 RESET_N / INT_PWDN_N）
+        - ![Last Update](https://img.shields.io/github/last-commit/HITSZ-WTRobot-Packages/BasicComponents?path=bsp%2Fethernet%2Flwip_platform&label=%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0&color=2ea44f&style=flat-square&logo=github) [lwip_platform](bsp/ethernet/lwip_platform/README.md) ：持有链路线程的 STM32 ETH MAC / LwIP netif 平台
+        - udp_socket ：UDP socket 封装
 
 - libs:
     - ![Last Update](https://img.shields.io/github/last-commit/HITSZ-WTRobot-Packages/BasicComponents?path=libs%2Fconcurrency&label=%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0&color=2ea44f&style=flat-square&logo=github) concurrency ： 并发控制库

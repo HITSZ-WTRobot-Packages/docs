@@ -47,10 +47,10 @@
       "displayName": "BasicComponents",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents.git",
       "branch": "main",
-      "sha": "4eb144ec77c7a17eaab87a8d7c4dc675f1f5fbb1",
-      "shortSha": "4eb144ec77c7",
-      "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
-      "totalBytes": 1102207,
+      "sha": "bfa445e36dbecfdba6a981501218513fe0cd27b6",
+      "shortSha": "bfa445e36dbe",
+      "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
+      "totalBytes": 1346601,
       "files": [
         {
           "path": "LICENSE",
@@ -60,8 +60,32 @@
         },
         {
           "path": "README.md",
-          "bytes": 4204,
-          "sha256": "ccdeb21552e85d8a2efb04987fcab1c1208d6c492e29646375f93769c523e2df",
+          "bytes": 5363,
+          "sha256": "bb4b5e2a8b6904bb7239092a698a34156edca74f643d7de3b3521a223a98a201",
+          "kind": "readme"
+        },
+        {
+          "path": "bsp/can_driver2/README.md",
+          "bytes": 16584,
+          "sha256": "984c6f3e0c6b5b5c1da3a3fdd6d5258db921eed0b0d1d46aad9bf37a24bd3cc9",
+          "kind": "readme"
+        },
+        {
+          "path": "bsp/ethernet/core/README.md",
+          "bytes": 2591,
+          "sha256": "809e85a05a5bb1a7c0b5e40f1dccf953532d685c4cdd294d7cf7e20fff970fb3",
+          "kind": "readme"
+        },
+        {
+          "path": "bsp/ethernet/lwip_platform/README.md",
+          "bytes": 9401,
+          "sha256": "24036b6a8e5d551fdf777cd6145ac718e41b953be59e669cf29b6d4ec2a00487",
+          "kind": "readme"
+        },
+        {
+          "path": "bsp/ethernet/phy_drivers/dp83822/README.md",
+          "bytes": 3775,
+          "sha256": "00d31b1d62563005025c09e4b706c2999a1db8031b3bf549262ea4fdc7fbcdd3",
           "kind": "readme"
         },
         {
@@ -80,14 +104,14 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 1052432,
-          "sha256": "99ce1662a0d79cb4c426af14a83b1dbff202e73dcdb9ac73ee71a0be4bd5ff9a",
+          "bytes": 1262633,
+          "sha256": "e127b7c240cce63b4aae3757f60d11c477a5597d1901b70cab945c32d4cc8327",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
-          "bytes": 6554,
-          "sha256": "4b89213ecf75570c6e7c8bebf849658583b12e344b416d4b8fd99d7f2ba99f15",
+          "bytes": 7237,
+          "sha256": "0be22670b9793d3aec53f33a1f9983a474ea949f63bc8d02372fba22e9d7e050",
           "kind": "package-catalog"
         }
       ],
