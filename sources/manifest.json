@@ -47,10 +47,10 @@
       "displayName": "BasicComponents",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents.git",
       "branch": "main",
-      "sha": "bfa445e36dbecfdba6a981501218513fe0cd27b6",
-      "shortSha": "bfa445e36dbe",
+      "sha": "741d8ac8ecc88ce629599fa7538f7a84c9b78be5",
+      "shortSha": "741d8ac8ecc8",
       "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
-      "totalBytes": 1346601,
+      "totalBytes": 1355987,
       "files": [
         {
           "path": "LICENSE",
@@ -66,8 +66,8 @@
         },
         {
           "path": "bsp/can_driver2/README.md",
-          "bytes": 16584,
-          "sha256": "984c6f3e0c6b5b5c1da3a3fdd6d5258db921eed0b0d1d46aad9bf37a24bd3cc9",
+          "bytes": 18247,
+          "sha256": "7b14d5801a2bf94ac0533c51f23c46e7c0cbf3a05ebb0100535ce760ba465dcf",
           "kind": "readme"
         },
         {
@@ -104,14 +104,14 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 1262633,
-          "sha256": "e127b7c240cce63b4aae3757f60d11c477a5597d1901b70cab945c32d4cc8327",
+          "bytes": 1270356,
+          "sha256": "41d37fdd1db3b413b6cb52f0eb7c7d36ed61710c32698cddcc22d690e8f997f0",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
           "bytes": 7237,
-          "sha256": "0be22670b9793d3aec53f33a1f9983a474ea949f63bc8d02372fba22e9d7e050",
+          "sha256": "34a864ccaeaf9c7c869cc971bee390e40a3f45cd6d61966f874e16b661bb9666",
           "kind": "package-catalog"
         }
       ],

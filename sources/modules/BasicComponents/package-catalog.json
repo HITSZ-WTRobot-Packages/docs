@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "BasicComponents",
-  "moduleSha": "bfa445e36dbecfdba6a981501218513fe0cd27b6",
+  "moduleSha": "741d8ac8ecc88ce629599fa7538f7a84c9b78be5",
   "packages": [
     {
       "name": "UdpSocket",

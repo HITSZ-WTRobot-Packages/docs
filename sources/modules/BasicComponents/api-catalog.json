@@ -2142,13 +2142,13 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "24 of 140 public API symbols have no description."
+          "message": "25 of 147 public API symbols have no description."
         }
       ],
       "symbols": [
         {
-          "id": "api-define-6e822fe6248d47c1",
-          "anchor": "api-define-6e822fe6248d47c1",
+          "id": "api-define-336995dbece98c2e",
+          "anchor": "api-define-336995dbece98c2e",
           "kind": "define",
           "name": "CAN_DRIVER_BXCAN_CAN2_START_BANK",
           "qualifiedName": "CAN_DRIVER_BXCAN_CAN2_START_BANK",
@@ -2156,9 +2156,9 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 100,
+            "line": 103,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L100"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L103"
           },
           "parentId": "api-file-4696933f0c61601e",
           "member": {
@@ -2249,8 +2249,8 @@
           "enumValues": []
         },
         {
-          "id": "api-define-709291cc2948a847",
-          "anchor": "api-define-709291cc2948a847",
+          "id": "api-define-b43c4e7328a37f54",
+          "anchor": "api-define-b43c4e7328a37f54",
           "kind": "define",
           "name": "CAN_DRIVER_MAX_CALLBACKS",
           "qualifiedName": "CAN_DRIVER_MAX_CALLBACKS",
@@ -2258,9 +2258,9 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 115,
+            "line": 118,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L115"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L118"
           },
           "parentId": "api-file-4696933f0c61601e",
           "member": {
@@ -2273,8 +2273,8 @@
           "enumValues": []
         },
         {
-          "id": "api-define-7af09b5e702fcbf2",
-          "anchor": "api-define-7af09b5e702fcbf2",
+          "id": "api-define-9ff0b9bc8616fc34",
+          "anchor": "api-define-9ff0b9bc8616fc34",
           "kind": "define",
           "name": "CAN_DRIVER_MAX_INSTANCES",
           "qualifiedName": "CAN_DRIVER_MAX_INSTANCES",
@@ -2282,9 +2282,9 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 123,
+            "line": 126,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L123"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L126"
           },
           "parentId": "api-file-4696933f0c61601e",
           "member": {
@@ -2297,8 +2297,8 @@
           "enumValues": []
         },
         {
-          "id": "api-define-e1f965b4301c6134",
-          "anchor": "api-define-e1f965b4301c6134",
+          "id": "api-define-ca6be35925525bee",
+          "anchor": "api-define-ca6be35925525bee",
           "kind": "define",
           "name": "CAN_DRIVER_TX_QUEUE_SIZE",
           "qualifiedName": "CAN_DRIVER_TX_QUEUE_SIZE",
@@ -2306,9 +2306,9 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 111,
+            "line": 114,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L111"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L114"
           },
           "parentId": "api-file-4696933f0c61601e",
           "member": {
@@ -2321,8 +2321,8 @@
           "enumValues": []
         },
         {
-          "id": "api-define-b4cab2a531e0b13c",
-          "anchor": "api-define-b4cab2a531e0b13c",
+          "id": "api-define-fd56d453f0cfbce7",
+          "anchor": "api-define-fd56d453f0cfbce7",
           "kind": "define",
           "name": "CAN_DRIVER_VALIDATE_TX_FRAME",
           "qualifiedName": "CAN_DRIVER_VALIDATE_TX_FRAME",
@@ -2330,9 +2330,9 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 132,
+            "line": 135,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L132"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L135"
           },
           "parentId": "api-file-4696933f0c61601e",
           "member": {
@@ -2396,7 +2396,7 @@
           "name": "bsp/can_driver2/can_driver.hpp",
           "qualifiedName": "bsp/can_driver2/can_driver.hpp",
           "signature": "",
-          "description": "固定存储的 CAN/FDCAN 包装：无堆分配、无 stop API、无 RX 队列。 面向带 CAN/FDCAN 的 STM32 MCU HAL1，需要 C++20 与 HAL 回调注册支持。 不支持 STM32MP 或 HAL2（包括 STM32C5）；不包含没有 CAN/FDCAN 外设的型号。\n\nbxCAN 后端承载 Classic CAN；FDCAN 后端承载 Classic/FD，并按当前 HAL 的 FDCAN_DLC_BYTES_* 宏解码接收长度，兼容原始与移位 DLC 编码。 bxCAN 目标系列：F0/F1/F2/F3/F4/F7/L4（仅 Classic CAN）。 固定 message RAM FDCAN 系列：G4/G0/C0/L5/H5/U5/U3/H7RS，Rx FIFO0/1 与 Tx FIFO/Queue 固定各 3 个 64 字节负载 element。标准/扩展过滤器容量取 Init 启用数量与硬件上限 28/8 的较小值；需要过滤器时，须在 HAL Init 前设置 StdFiltersNbr/ExtFiltersNbr。这些系列不支持专用 RxBuffer 或 calibration_message， 请求该功能返回 Unsupported。传统 H7（不含 H7RS）与 N6 保留可配置 RAM 布局。 兼容性验证记录（HAL1 driver 版本，不是 STM32Cube 固件包版本）： C = 真实 HAL/CMSIS 下交叉编译三个驱动翻译单元；S = 主机 HAL 边界模拟收发。 系列 代表型号 HAL1 版本 验证层级 F0 F072 1.7.9 C F1 F105 1.1.10 C F2 F207 1.2.9 C F3 F303xC 1.5.9 C F4 F405 1.8.5 C F7 F767 1.3.3 C L4 L476 1.13.6 C G4 G431 1.2.7 C + S G0 G0B1 1.4.7 C + S C0 C092 1.4.1 C + S L5 L552 1.0.7 C + S H5 H563 1.7.0 C + S U5 U575 1.6.3 C + S U3 U375 1.4.0 C + S H7RS H7S7 1.2.1 C + S 传统 H7 H723 1.11.0 / 1.11.6 C + S（移位 / 原始 DLC） N6 N657 1.4.0 C + S 代表型号覆盖 TX 校验 0/1 × 软件队列容量 0/4；所用 CMSIS 中带 CAN/FDCAN 的 160 个芯片宏另完成交叉编译（TX 校验 1、软件队列 0）。双核 H7 的 CM4/CM7 均编译验证，板级须选择 CORE_CM4/CORE_CM7，并确保同一外设仅由一个核独占； 驱动不提供跨核同步。上述证据不等于所有 HAL 历史版本或订货号的板上收发验证。 未进行板上验证；时钟、GPIO、时序、IRQ 与外设核归属仍由板级负责。 使用顺序：先初始化 HAL 句柄，再配置过滤器/注册回调，最后 start()。HAL 的中断 处理函数仍由板级代码负责。一个 Can 独占一个句柄的回调；不得再把旧驱动挂到 同一句柄上。句柄、Can 对象以及被借用的回调对象必须比外设的使用期更长。 析构只解除 C++ 实例的登记，不会停止外设；start() 之后不得再改动 HAL 句柄或 其 Init 资源布局。 接收在 ISR 上下文按注册顺序同步广播。回调不得阻塞、抛异常、销毁本总线或 保存 FrameView。start() 之后的注册/过滤变更会被拒绝，且没有注销（unregister） 接口。send() 为非阻塞，单核 Cortex-M 上可由任务或 ISR 调用。只保留硬件提交 顺序，不保留 CAN 仲裁顺序。FDCAN 的所有已分配 Rx FIFO/Buffer element 须可 容纳 64 字节负载；容量不足时 start() 返回 InvalidConfiguration，不启动硬件。 过滤器配置写入指定 entry/策略，并应用后端全局设置。FDCAN 默认可能接受未匹配帧，需要拒收时 显式应用 GlobalFilter{}。所有 bxCAN 共享 bank 必须在两路 HAL 初始化完成后、 任一条总线启动前配置；共享分界由 CAN_DRIVER_BXCAN_CAN2_START_BANK 统一指定， 随每次过滤器配置写入 HAL，不再提供运行时分界配置。 CAN_DRIVER_TX_QUEUE_SIZE 选择可用的软件 TX 容量（允许为 0）。 CAN_DRIVER_MAX_CALLBACKS 与 CAN_DRIVER_MAX_INSTANCES 是固定资源上限。所有使用 本套件的翻译单元必须给出这些宏的一致定义。TX 容量在 FDCAN 上默认 0，在 bxCAN 上默认 8。 CAN_DRIVER_VALIDATE_TX_FRAME 默认 0，表示发送路径不执行帧结构或后端帧能力 校验；非零时启用。所有使用本套件的翻译单元必须给出该宏的一致定义。关闭时 调用方必须自行保证提交的帧合法且适配已配置的后端，尤其不得超出 TX element 容量；此时 send() 不保证给出 InvalidFrame/Unsupported 诊断。",
+          "description": "固定存储的 CAN/FDCAN 包装：无堆分配、无 stop API、无 RX 队列。 面向带 CAN/FDCAN 的 STM32 MCU HAL1，需要 C++20、无锁 32 位原子操作与 HAL 回调注册支持。 不支持 STM32MP 或 HAL2（包括 STM32C5）；不包含没有 CAN/FDCAN 外设的型号。 Cortex-M0/M0+ 等不支持无锁 32 位原子读改写的目标暂不支持，不提供兼容回退。\n\nbxCAN 后端承载 Classic CAN；FDCAN 后端承载 Classic/FD，并按当前 HAL 的 FDCAN_DLC_BYTES_* 宏解码接收长度，兼容原始与移位 DLC 编码。 bxCAN 目标系列：F1/F2/F3/F4/F7/L4（仅 Classic CAN）。 固定 message RAM FDCAN 系列：G4/L5/H5/U5/U3/H7RS，Rx FIFO0/1 与 Tx FIFO/Queue 固定各 3 个 64 字节负载 element。标准/扩展过滤器容量取 Init 启用数量与硬件上限 28/8 的较小值；需要过滤器时，须在 HAL Init 前设置 StdFiltersNbr/ExtFiltersNbr。这些系列不支持专用 RxBuffer 或 calibration_message， 请求该功能返回 Unsupported。传统 H7（不含 H7RS）与 N6 保留可配置 RAM 布局。 历史兼容性验证记录（HAL1 driver 版本，不是 STM32Cube 固件包版本）： C = 真实 HAL/CMSIS 下交叉编译三个驱动翻译单元；S = 主机 HAL 边界模拟收发。 以下记录早于无锁 RX 计数要求；F0/G0/C0 不属于当前支持范围。 系列 代表型号 HAL1 版本 验证层级 F0 F072 1.7.9 C F1 F105 1.1.10 C F2 F207 1.2.9 C F3 F303xC 1.5.9 C F4 F405 1.8.5 C F7 F767 1.3.3 C L4 L476 1.13.6 C G4 G431 1.2.7 C + S G0 G0B1 1.4.7 C + S C0 C092 1.4.1 C + S L5 L552 1.0.7 C + S H5 H563 1.7.0 C + S U5 U575 1.6.3 C + S U3 U375 1.4.0 C + S H7RS H7S7 1.2.1 C + S 传统 H7 H723 1.11.0 / 1.11.6 C + S（移位 / 原始 DLC） N6 N657 1.4.0 C + S 代表型号覆盖 TX 校验 0/1 × 软件队列容量 0/4；所用 CMSIS 中带 CAN/FDCAN 的 160 个芯片宏另完成交叉编译（TX 校验 1、软件队列 0）。双核 H7 的 CM4/CM7 均编译验证，板级须选择 CORE_CM4/CORE_CM7，并确保同一外设仅由一个核独占； 驱动不提供跨核同步。上述证据不等于所有 HAL 历史版本或订货号的板上收发验证。 未进行板上验证；时钟、GPIO、时序、IRQ 与外设核归属仍由板级负责。 使用顺序：先初始化 HAL 句柄，再配置过滤器/注册回调，最后 start()。HAL 的中断 处理函数仍由板级代码负责。一个 Can 独占一个句柄的回调；不得再把旧驱动挂到 同一句柄上。句柄、Can 对象以及被借用的回调对象必须比外设的使用期更长。 析构只解除 C++ 实例的登记，不会停止外设；start() 之后不得再改动 HAL 句柄或 其 Init 资源布局。 接收在 ISR 上下文按注册顺序同步广播。回调不得阻塞、抛异常、销毁本总线或 保存 FrameView。start() 之后的注册/过滤变更会被拒绝，且没有注销（unregister） 接口。send() 为非阻塞，单核 Cortex-M 上可由任务或 ISR 调用。只保留硬件提交 顺序，不保留 CAN 仲裁顺序。FDCAN 的所有已分配 Rx FIFO/Buffer element 须可 容纳 64 字节负载；容量不足时 start() 返回 InvalidConfiguration，不启动硬件。 过滤器配置写入指定 entry/策略，并应用后端全局设置。FDCAN 默认可能接受未匹配帧，需要拒收时 显式应用 GlobalFilter{}。所有 bxCAN 共享 bank 必须在两路 HAL 初始化完成后、 任一条总线启动前配置；共享分界由 CAN_DRIVER_BXCAN_CAN2_START_BANK 统一指定， 随每次过滤器配置写入 HAL，不再提供运行时分界配置。 CAN_DRIVER_TX_QUEUE_SIZE 选择可用的软件 TX 容量（允许为 0）。 CAN_DRIVER_MAX_CALLBACKS 与 CAN_DRIVER_MAX_INSTANCES 是固定资源上限。所有使用 本套件的翻译单元必须给出这些宏的一致定义。TX 容量在 FDCAN 上默认 0，在 bxCAN 上默认 8。 CAN_DRIVER_VALIDATE_TX_FRAME 默认 0，表示发送路径不执行帧结构或后端帧能力 校验；非零时启用。所有使用本套件的翻译单元必须给出该宏的一致定义。关闭时 调用方必须自行保证提交的帧合法且适配已配置的后端，尤其不得超出 TX element 容量；此时 send() 不保证给出 InvalidFrame/Unsupported 诊断。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
             "line": null,
@@ -2406,7 +2406,7 @@
           "parentId": null,
           "member": null,
           "references": [
-            "api-class-a206bedeaa8964ee",
+            "api-class-9f62762617ead6e3",
             "api-file-14d1cb8eb2ec4ee9",
             "api-file-294d17b0235d0939",
             "api-file-66fdd140dbada4c3",
@@ -2414,9 +2414,9 @@
             "api-function-c447c247740ae722",
             "api-namespace-10ac10992f8e14e9",
             "api-namespace-6fb3a57881748479",
-            "api-struct-1349e08e15deefbc",
-            "api-struct-cea597eee80f399d",
-            "api-union-7f43f65d75c6f79b"
+            "api-struct-52e59ca8d19a91b3",
+            "api-struct-700d6c1412110d0d",
+            "api-union-bfa8fe281835b204"
           ],
           "enumValues": []
         },
@@ -2491,13 +2491,14 @@
             "api-file-78ea81c5e6dc3a8d",
             "api-namespace-10ac10992f8e14e9",
             "api-namespace-6fb3a57881748479",
-            "api-struct-12cfdc9fef69e10d",
-            "api-struct-1f676f70e5b182fa",
-            "api-struct-68b9c71805505cec",
-            "api-struct-a4b34ab1ac7a8874",
-            "api-struct-aff305fed64704a7",
-            "api-struct-cee3ba6df3f910d3",
-            "api-struct-d02ef904485cde60"
+            "api-struct-2c866764efcc0151",
+            "api-struct-4419cce6a6a588e1",
+            "api-struct-5391d96d50156977",
+            "api-struct-553e8d279f62b2d3",
+            "api-struct-5cbe9d42ff1ccf75",
+            "api-struct-af27a08b698421d8",
+            "api-struct-af7a1d29101fd473",
+            "api-struct-b3ba529d9ab2ed62"
           ],
           "enumValues": []
         },
@@ -2518,22 +2519,23 @@
           "parentId": null,
           "member": null,
           "references": [
-            "api-class-a206bedeaa8964ee",
+            "api-class-9f62762617ead6e3",
             "api-enum-11a8a5d46d9bacff",
             "api-namespace-36868f4dca0f3ce0",
-            "api-struct-12cfdc9fef69e10d",
-            "api-struct-1f676f70e5b182fa",
-            "api-struct-68b9c71805505cec",
-            "api-struct-a4b34ab1ac7a8874",
-            "api-struct-aff305fed64704a7",
-            "api-struct-cee3ba6df3f910d3",
-            "api-struct-d02ef904485cde60"
+            "api-struct-2c866764efcc0151",
+            "api-struct-4419cce6a6a588e1",
+            "api-struct-5391d96d50156977",
+            "api-struct-553e8d279f62b2d3",
+            "api-struct-5cbe9d42ff1ccf75",
+            "api-struct-af27a08b698421d8",
+            "api-struct-af7a1d29101fd473",
+            "api-struct-b3ba529d9ab2ed62"
           ],
           "enumValues": []
         },
         {
-          "id": "api-struct-d02ef904485cde60",
-          "anchor": "api-struct-d02ef904485cde60",
+          "id": "api-struct-af27a08b698421d8",
+          "anchor": "api-struct-af27a08b698421d8",
           "kind": "struct",
           "name": "bsp::can::BankFilter",
           "qualifiedName": "bsp::can::BankFilter",
@@ -2541,31 +2543,31 @@
           "description": "完整的 bxCAN filter bank 布局，不含 HAL 类型/宏；FDCAN 返回 Unsupported。 四个字即硬件 filter 半字，因此任何 IDE/RTR 组合与部分扩展 ID 匹配都能精确 表达。index 为 bank 编号（越界返回 OutOfRange），enabled 为假时写为禁用 bank。\n\nBits32/Mask：id_high:id_low 为键，mask_high:mask_low 为掩码。 Bits32/List：id_high:id_low 依次为两个标识符。 Bits16/Mask：(id_low, mask_low) 与 (id_high, mask_high) 为两组键/掩码。 Bits16/List：id_low、mask_low、id_high、mask_high 为四个标识符。 32 位键为 StdId<<21 或 (ExtId<<3)|IDE；RTR 为 bit 1，IDE 为 bit 2。 16 位键为 StdId<<5，或 ((ExtId>>18)<<5)|IDE|((ExtId>>15)&7)； RTR 为 bit 4，IDE 为 bit 3；16 位模式不比较扩展 ID 的低 15 位。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 189,
+            "line": 231,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L189"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L231"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": null,
           "references": [
-            "api-enum-12b7669c561ea1cb",
-            "api-enum-ea21b102e6d6f4b1",
-            "api-enum-fce25224b3f6358f",
-            "api-variable-07b6a0df3799dd33",
-            "api-variable-2463457441fee14c",
-            "api-variable-50e2c8075413df8d",
-            "api-variable-81db51003392239c",
-            "api-variable-8ca1324df0793ba9",
-            "api-variable-a3b1bbfe8e1a279c",
-            "api-variable-ed60d81d9ebf31d2",
-            "api-variable-f400ebc85559a8c0",
-            "api-variable-ffebac89d8848941"
+            "api-enum-46043be5e0d260ba",
+            "api-enum-9af85f0f01f1ae17",
+            "api-enum-fd3333f3637ef781",
+            "api-variable-00893966f1441035",
+            "api-variable-229163a9c5ac9069",
+            "api-variable-354133816b0b5af7",
+            "api-variable-9c1a6c976803ee8b",
+            "api-variable-c36622a3871e7f3e",
+            "api-variable-c9918eaf51d4ae19",
+            "api-variable-cbb18eb74dd3d3c3",
+            "api-variable-d612bcbdbbcb1bf2",
+            "api-variable-effbed116b506f97"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-ffebac89d8848941",
-          "anchor": "api-variable-ffebac89d8848941",
+          "id": "api-variable-00893966f1441035",
+          "anchor": "api-variable-00893966f1441035",
           "kind": "variable",
           "name": "enabled",
           "qualifiedName": "bsp::can::BankFilter::enabled",
@@ -2573,11 +2575,11 @@
           "description": "是否使能该 bank。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 195,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L195"
+            "line": 237,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L237"
           },
-          "parentId": "api-struct-d02ef904485cde60",
+          "parentId": "api-struct-af27a08b698421d8",
           "member": {
             "access": "public",
             "static": false,
@@ -2588,8 +2590,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-81db51003392239c",
-          "anchor": "api-variable-81db51003392239c",
+          "id": "api-variable-d612bcbdbbcb1bf2",
+          "anchor": "api-variable-d612bcbdbbcb1bf2",
           "kind": "variable",
           "name": "fifo",
           "qualifiedName": "bsp::can::BankFilter::fifo",
@@ -2597,11 +2599,11 @@
           "description": "命中帧写入的 FIFO。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 194,
-            "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L194"
+            "line": 236,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L236"
           },
-          "parentId": "api-struct-d02ef904485cde60",
+          "parentId": "api-struct-af27a08b698421d8",
           "member": {
             "access": "public",
             "static": false,
@@ -2609,13 +2611,13 @@
             "const": false
           },
           "references": [
-            "api-enum-fce25224b3f6358f"
+            "api-enum-46043be5e0d260ba"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-a3b1bbfe8e1a279c",
-          "anchor": "api-variable-a3b1bbfe8e1a279c",
+          "id": "api-variable-cbb18eb74dd3d3c3",
+          "anchor": "api-variable-cbb18eb74dd3d3c3",
           "kind": "variable",
           "name": "id_high",
           "qualifiedName": "bsp::can::BankFilter::id_high",
@@ -2623,11 +2625,11 @@
           "description": "高位半字（键/标识符）。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 196,
-            "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L196"
+            "line": 238,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L238"
           },
-          "parentId": "api-struct-d02ef904485cde60",
+          "parentId": "api-struct-af27a08b698421d8",
           "member": {
             "access": "public",
             "static": false,
@@ -2638,8 +2640,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f400ebc85559a8c0",
-          "anchor": "api-variable-f400ebc85559a8c0",
+          "id": "api-variable-effbed116b506f97",
+          "anchor": "api-variable-effbed116b506f97",
           "kind": "variable",
           "name": "id_low",
           "qualifiedName": "bsp::can::BankFilter::id_low",
@@ -2647,11 +2649,11 @@
           "description": "低位半字（键/标识符）。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 197,
-            "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L197"
+            "line": 239,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L239"
           },
-          "parentId": "api-struct-d02ef904485cde60",
+          "parentId": "api-struct-af27a08b698421d8",
           "member": {
             "access": "public",
             "static": false,
@@ -2662,8 +2664,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-07b6a0df3799dd33",
-          "anchor": "api-variable-07b6a0df3799dd33",
+          "id": "api-variable-c36622a3871e7f3e",
+          "anchor": "api-variable-c36622a3871e7f3e",
           "kind": "variable",
           "name": "index",
           "qualifiedName": "bsp::can::BankFilter::index",
@@ -2671,11 +2673,11 @@
           "description": "bank 编号。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 191,
-            "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L191"
+            "line": 233,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L233"
           },
-          "parentId": "api-struct-d02ef904485cde60",
+          "parentId": "api-struct-af27a08b698421d8",
           "member": {
             "access": "public",
             "static": false,
@@ -2686,8 +2688,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-50e2c8075413df8d",
-          "anchor": "api-variable-50e2c8075413df8d",
+          "id": "api-variable-354133816b0b5af7",
+          "anchor": "api-variable-354133816b0b5af7",
           "kind": "variable",
           "name": "mask_high",
           "qualifiedName": "bsp::can::BankFilter::mask_high",
@@ -2695,11 +2697,11 @@
           "description": "高位半字掩码或第二个标识符。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 198,
-            "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L198"
+            "line": 240,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L240"
           },
-          "parentId": "api-struct-d02ef904485cde60",
+          "parentId": "api-struct-af27a08b698421d8",
           "member": {
             "access": "public",
             "static": false,
@@ -2710,8 +2712,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-ed60d81d9ebf31d2",
-          "anchor": "api-variable-ed60d81d9ebf31d2",
+          "id": "api-variable-c9918eaf51d4ae19",
+          "anchor": "api-variable-c9918eaf51d4ae19",
           "kind": "variable",
           "name": "mask_low",
           "qualifiedName": "bsp::can::BankFilter::mask_low",
@@ -2719,11 +2721,11 @@
           "description": "低位半字掩码或第二个标识符。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 199,
-            "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L199"
+            "line": 241,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L241"
           },
-          "parentId": "api-struct-d02ef904485cde60",
+          "parentId": "api-struct-af27a08b698421d8",
           "member": {
             "access": "public",
             "static": false,
@@ -2734,8 +2736,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-8ca1324df0793ba9",
-          "anchor": "api-variable-8ca1324df0793ba9",
+          "id": "api-variable-9c1a6c976803ee8b",
+          "anchor": "api-variable-9c1a6c976803ee8b",
           "kind": "variable",
           "name": "mode",
           "qualifiedName": "bsp::can::BankFilter::mode",
@@ -2743,11 +2745,11 @@
           "description": "掩码或列表匹配。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 193,
+            "line": 235,
             "column": 20,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L193"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L235"
           },
-          "parentId": "api-struct-d02ef904485cde60",
+          "parentId": "api-struct-af27a08b698421d8",
           "member": {
             "access": "public",
             "static": false,
@@ -2755,13 +2757,13 @@
             "const": false
           },
           "references": [
-            "api-enum-ea21b102e6d6f4b1"
+            "api-enum-9af85f0f01f1ae17"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-2463457441fee14c",
-          "anchor": "api-variable-2463457441fee14c",
+          "id": "api-variable-229163a9c5ac9069",
+          "anchor": "api-variable-229163a9c5ac9069",
           "kind": "variable",
           "name": "scale",
           "qualifiedName": "bsp::can::BankFilter::scale",
@@ -2769,11 +2771,11 @@
           "description": "半字位宽。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 192,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L192"
+            "line": 234,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L234"
           },
-          "parentId": "api-struct-d02ef904485cde60",
+          "parentId": "api-struct-af27a08b698421d8",
           "member": {
             "access": "public",
             "static": false,
@@ -2781,13 +2783,13 @@
             "const": false
           },
           "references": [
-            "api-enum-12b7669c561ea1cb"
+            "api-enum-fd3333f3637ef781"
           ],
           "enumValues": []
         },
         {
-          "id": "api-enum-ea21b102e6d6f4b1",
-          "anchor": "api-enum-ea21b102e6d6f4b1",
+          "id": "api-enum-9af85f0f01f1ae17",
+          "anchor": "api-enum-9af85f0f01f1ae17",
           "kind": "enum",
           "name": "BankFilterMode",
           "qualifiedName": "bsp::can::BankFilterMode",
@@ -2795,9 +2797,9 @@
           "description": "bxCAN bank 匹配方式：掩码或列表。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 172,
+            "line": 206,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L172"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L206"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -2821,8 +2823,8 @@
           ]
         },
         {
-          "id": "api-class-a206bedeaa8964ee",
-          "anchor": "api-class-a206bedeaa8964ee",
+          "id": "api-class-9f62762617ead6e3",
+          "anchor": "api-class-9f62762617ead6e3",
           "kind": "class",
           "name": "bsp::can::Can",
           "qualifiedName": "bsp::can::Can",
@@ -2830,77 +2832,81 @@
           "description": "固定存储的 CAN/FDCAN 包装。一个实例独占一个 HAL 句柄——实际上是该句柄指向 的外设（同一外设、不同句柄也会被视为冲突）。无堆分配、无 stop API、无 RX 队列；生命周期与回调约束见文件头说明。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 157,
+            "line": 163,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L157"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L163"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": null,
           "references": [
-            "api-define-709291cc2948a847",
-            "api-define-7af09b5e702fcbf2",
-            "api-define-e1f965b4301c6134",
-            "api-enum-3a1160d24449b069",
-            "api-enum-fc4fbf4c73aac232",
-            "api-function-0284757f9d39bc83",
-            "api-function-05a059f513f5f065",
-            "api-function-076b7ae6bff32cc3",
-            "api-function-1809dc9a094469fe",
-            "api-function-191247f32773169e",
-            "api-function-37dd2a8b2cf4f95b",
-            "api-function-39d01f8113460733",
-            "api-function-3a82febccb55827c",
-            "api-function-3e05ab7b9756eace",
-            "api-function-5bc077adde27357d",
-            "api-function-5f70fbccfce455cd",
-            "api-function-62847a90029cd79e",
-            "api-function-654cf3b84b4734a7",
-            "api-function-702289f6cf3c63ea",
-            "api-function-70c8f3a5329e5b1b",
-            "api-function-7868106c64edbe4d",
-            "api-function-86bf1003f8bd816d",
-            "api-function-8d5c10f96a954eed",
-            "api-function-8e564c5a0002ac64",
-            "api-function-9121ec941109cd53",
-            "api-function-b1aaa336b173bdbc",
-            "api-function-bd9b867dddc7f6a0",
-            "api-function-c76235c425e2ad7c",
-            "api-function-ca93250236ccaa3e",
-            "api-function-cb4571ba8186da89",
-            "api-function-cd64ea22e3bdfd30",
-            "api-function-d285527e8da53060",
-            "api-function-d53c3d95c9abfdbb",
-            "api-function-e1d7b89d8d7e4988",
-            "api-function-e3da34b0f7b61fe8",
-            "api-function-ec88a3c6b6f6e018",
-            "api-function-ee5d814302a012f9",
-            "api-struct-1349e08e15deefbc",
-            "api-struct-68b9c71805505cec",
-            "api-struct-aff305fed64704a7",
-            "api-struct-cea597eee80f399d",
-            "api-typedef-4684e7a776f99460",
-            "api-typedef-61a4498868277048",
-            "api-typedef-f7f2b48db7b29d7c",
-            "api-variable-19e406d2044c73f8",
-            "api-variable-1aec2157e0d2a69b",
-            "api-variable-3563944c68fcd09c",
-            "api-variable-45a02e962e155e7b",
-            "api-variable-4eaaa996a6d18574",
-            "api-variable-4f86ca2b85d1df71",
-            "api-variable-5465a45c25b7041c",
-            "api-variable-6f814ecf6fe2551f",
-            "api-variable-8a358ff708126c8e",
-            "api-variable-b590f604fd474c04",
-            "api-variable-bdfe1f753713ffb3",
-            "api-variable-c26f463533cca169",
-            "api-variable-d77cea81d99223a2",
-            "api-variable-df80883b37ba699f"
+            "api-define-9ff0b9bc8616fc34",
+            "api-define-b43c4e7328a37f54",
+            "api-define-ca6be35925525bee",
+            "api-enum-1c06edf7ac47791e",
+            "api-enum-e8976e05ea68a506",
+            "api-function-05c7085855af2e23",
+            "api-function-08827bf55ae57de4",
+            "api-function-122b95b910322c99",
+            "api-function-1718e2d9bb5d542c",
+            "api-function-246b94320f494abe",
+            "api-function-2512e41046bbc791",
+            "api-function-260844ae49236555",
+            "api-function-2744955b7229026e",
+            "api-function-2822c99ed3ef6828",
+            "api-function-2d1ad678c27a5b6b",
+            "api-function-2f467f53de2b3cd1",
+            "api-function-320bf371359cafce",
+            "api-function-353d12ead2eb5269",
+            "api-function-3c0cfa7c63afa0d7",
+            "api-function-61b927a6ca6a4602",
+            "api-function-6d957872d39052fc",
+            "api-function-72032fb385b095a3",
+            "api-function-739705f2a72a4c4c",
+            "api-function-893ca1b4c721271b",
+            "api-function-918af86b7d0477c2",
+            "api-function-923f46147e7f1153",
+            "api-function-93035d32c5d0a07d",
+            "api-function-950295681691f0ab",
+            "api-function-ad4c8b087ec21e95",
+            "api-function-ad7c05ca629dd7ee",
+            "api-function-af9889e17b14a8eb",
+            "api-function-afa793f8b161d1f0",
+            "api-function-b1b12cd3a14d386c",
+            "api-function-b4e5d0caa0074ba6",
+            "api-function-daf460b33ebd702c",
+            "api-function-e3f6b8630cdd7f6c",
+            "api-function-f5182198ecbaff04",
+            "api-function-fd8344b5b69dad33",
+            "api-struct-4419cce6a6a588e1",
+            "api-struct-52e59ca8d19a91b3",
+            "api-struct-5391d96d50156977",
+            "api-struct-700d6c1412110d0d",
+            "api-struct-af7a1d29101fd473",
+            "api-typedef-82e67918600872fb",
+            "api-typedef-8baa1262a3370ac2",
+            "api-typedef-cb616b03c4cf7a23",
+            "api-variable-2040ad1d6c21d890",
+            "api-variable-36f4973d2b2e2f05",
+            "api-variable-39f6adf42d2f8f18",
+            "api-variable-4405daefdc8217cc",
+            "api-variable-4b04c60bc196cac7",
+            "api-variable-72efb52148766163",
+            "api-variable-7f0ed7b3350cd934",
+            "api-variable-7faaa26eefe816b1",
+            "api-variable-95a05877b658f430",
+            "api-variable-a43a22ccd87e20ac",
+            "api-variable-ab0bad0815f2f2dc",
+            "api-variable-bd7677fd9872105b",
+            "api-variable-c20db85f28ca11dd",
+            "api-variable-c27425ec040a6ebd",
+            "api-variable-c396964cdd4e1a3e",
+            "api-variable-cd157b54ca6cf569"
           ],
           "enumValues": []
         },
         {
-          "id": "api-struct-1349e08e15deefbc",
-          "anchor": "api-struct-1349e08e15deefbc",
+          "id": "api-struct-700d6c1412110d0d",
+          "anchor": "api-struct-700d6c1412110d0d",
           "kind": "struct",
           "name": "bsp::can::Can::Callback",
           "qualifiedName": "bsp::can::Can::Callback",
@@ -2908,24 +2914,24 @@
           "description": "单个回调条目：函数指针或借用对象，加统一调用入口。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 287,
+            "line": 297,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L287"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L297"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": null,
           "references": [
-            "api-struct-68b9c71805505cec",
-            "api-struct-cee3ba6df3f910d3",
-            "api-union-7f43f65d75c6f79b",
-            "api-variable-85d55830bc5a0fae",
-            "api-variable-c05b5e734d6623f4"
+            "api-struct-5391d96d50156977",
+            "api-struct-b3ba529d9ab2ed62",
+            "api-union-bfa8fe281835b204",
+            "api-variable-508ffbb51cec4a37",
+            "api-variable-c197376bb0d8e2c1"
           ],
           "enumValues": []
         },
         {
-          "id": "api-union-7f43f65d75c6f79b",
-          "anchor": "api-union-7f43f65d75c6f79b",
+          "id": "api-union-bfa8fe281835b204",
+          "anchor": "api-union-bfa8fe281835b204",
           "kind": "union",
           "name": "bsp::can::Can::Callback::Target",
           "qualifiedName": "bsp::can::Can::Callback::Target",
@@ -2933,26 +2939,26 @@
           "description": "目标要么是裸函数指针，要么是借用对象指针，二者互斥。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 290,
+            "line": 300,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L290"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L300"
           },
-          "parentId": "api-struct-1349e08e15deefbc",
+          "parentId": "api-struct-700d6c1412110d0d",
           "member": null,
           "references": [
-            "api-function-39d01f8113460733",
-            "api-function-70c8f3a5329e5b1b",
-            "api-struct-68b9c71805505cec",
-            "api-struct-cee3ba6df3f910d3",
-            "api-typedef-4684e7a776f99460",
-            "api-variable-19e406d2044c73f8",
-            "api-variable-4f86ca2b85d1df71"
+            "api-function-3c0cfa7c63afa0d7",
+            "api-function-ad7c05ca629dd7ee",
+            "api-struct-5391d96d50156977",
+            "api-struct-b3ba529d9ab2ed62",
+            "api-typedef-cb616b03c4cf7a23",
+            "api-variable-36f4973d2b2e2f05",
+            "api-variable-7f0ed7b3350cd934"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-19e406d2044c73f8",
-          "anchor": "api-variable-19e406d2044c73f8",
+          "id": "api-variable-7f0ed7b3350cd934",
+          "anchor": "api-variable-7f0ed7b3350cd934",
           "kind": "variable",
           "name": "function",
           "qualifiedName": "bsp::can::Can::Callback::Target::function",
@@ -2960,11 +2966,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 293,
+            "line": 303,
             "column": 29,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L293"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L303"
           },
-          "parentId": "api-union-7f43f65d75c6f79b",
+          "parentId": "api-union-bfa8fe281835b204",
           "member": {
             "access": "public",
             "static": false,
@@ -2972,14 +2978,14 @@
             "const": false
           },
           "references": [
-            "api-function-39d01f8113460733",
-            "api-typedef-4684e7a776f99460"
+            "api-function-ad7c05ca629dd7ee",
+            "api-typedef-cb616b03c4cf7a23"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-4f86ca2b85d1df71",
-          "anchor": "api-variable-4f86ca2b85d1df71",
+          "id": "api-variable-36f4973d2b2e2f05",
+          "anchor": "api-variable-36f4973d2b2e2f05",
           "kind": "variable",
           "name": "object",
           "qualifiedName": "bsp::can::Can::Callback::Target::object",
@@ -2987,11 +2993,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 292,
+            "line": 302,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L292"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L302"
           },
-          "parentId": "api-union-7f43f65d75c6f79b",
+          "parentId": "api-union-bfa8fe281835b204",
           "member": {
             "access": "public",
             "static": false,
@@ -2999,13 +3005,13 @@
             "const": false
           },
           "references": [
-            "api-function-70c8f3a5329e5b1b"
+            "api-function-3c0cfa7c63afa0d7"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-c05b5e734d6623f4",
-          "anchor": "api-variable-c05b5e734d6623f4",
+          "id": "api-variable-c197376bb0d8e2c1",
+          "anchor": "api-variable-c197376bb0d8e2c1",
           "kind": "variable",
           "name": "invoke",
           "qualifiedName": "bsp::can::Can::Callback::invoke",
@@ -3013,11 +3019,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 295,
+            "line": 305,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L295"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L305"
           },
-          "parentId": "api-struct-1349e08e15deefbc",
+          "parentId": "api-struct-700d6c1412110d0d",
           "member": {
             "access": "public",
             "static": false,
@@ -3028,8 +3034,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-85d55830bc5a0fae",
-          "anchor": "api-variable-85d55830bc5a0fae",
+          "id": "api-variable-508ffbb51cec4a37",
+          "anchor": "api-variable-508ffbb51cec4a37",
           "kind": "variable",
           "name": "target",
           "qualifiedName": "bsp::can::Can::Callback::target",
@@ -3037,11 +3043,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 294,
+            "line": 304,
             "column": 16,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L294"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L304"
           },
-          "parentId": "api-struct-1349e08e15deefbc",
+          "parentId": "api-struct-700d6c1412110d0d",
           "member": {
             "access": "public",
             "static": false,
@@ -3049,13 +3055,13 @@
             "const": false
           },
           "references": [
-            "api-union-7f43f65d75c6f79b"
+            "api-union-bfa8fe281835b204"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-b590f604fd474c04",
-          "anchor": "api-variable-b590f604fd474c04",
+          "id": "api-variable-a43a22ccd87e20ac",
+          "anchor": "api-variable-a43a22ccd87e20ac",
           "kind": "variable",
           "name": "CallbackCapacity",
           "qualifiedName": "bsp::can::Can::CallbackCapacity",
@@ -3063,11 +3069,11 @@
           "description": "可注册接收回调数上限。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 165,
+            "line": 171,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L165"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L171"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": true,
@@ -3075,13 +3081,13 @@
             "const": false
           },
           "references": [
-            "api-define-709291cc2948a847"
+            "api-define-b43c4e7328a37f54"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-bd9b867dddc7f6a0",
-          "anchor": "api-function-bd9b867dddc7f6a0",
+          "id": "api-function-246b94320f494abe",
+          "anchor": "api-function-246b94320f494abe",
           "kind": "function",
           "name": "Can",
           "qualifiedName": "bsp::can::Can::Can",
@@ -3089,11 +3095,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 177,
+            "line": 183,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L177"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L183"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3101,13 +3107,13 @@
             "const": false
           },
           "references": [
-            "api-function-ec88a3c6b6f6e018"
+            "api-function-e3f6b8630cdd7f6c"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-ec88a3c6b6f6e018",
-          "anchor": "api-function-ec88a3c6b6f6e018",
+          "id": "api-function-e3f6b8630cdd7f6c",
+          "anchor": "api-function-e3f6b8630cdd7f6c",
           "kind": "function",
           "name": "Can",
           "qualifiedName": "bsp::can::Can::Can",
@@ -3115,11 +3121,11 @@
           "description": "仅保存句柄引用，不触碰硬件、不占用实例槽；句柄须已完成 HAL Init。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 171,
+            "line": 177,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L171"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L177"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3127,17 +3133,17 @@
             "const": false
           },
           "references": [
-            "api-function-0284757f9d39bc83",
-            "api-function-702289f6cf3c63ea",
-            "api-function-bd9b867dddc7f6a0",
-            "api-function-d53c3d95c9abfdbb",
-            "api-typedef-61a4498868277048"
+            "api-function-08827bf55ae57de4",
+            "api-function-246b94320f494abe",
+            "api-function-2f467f53de2b3cd1",
+            "api-function-f5182198ecbaff04",
+            "api-typedef-8baa1262a3370ac2"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-0284757f9d39bc83",
-          "anchor": "api-function-0284757f9d39bc83",
+          "id": "api-function-08827bf55ae57de4",
+          "anchor": "api-function-08827bf55ae57de4",
           "kind": "function",
           "name": "Can",
           "qualifiedName": "bsp::can::Can::Can",
@@ -3145,11 +3151,11 @@
           "description": "独占外设与回调槽，禁止复制与移动。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 175,
+            "line": 181,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L175"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L181"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3157,13 +3163,13 @@
             "const": false
           },
           "references": [
-            "api-function-ec88a3c6b6f6e018"
+            "api-function-e3f6b8630cdd7f6c"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-bdfe1f753713ffb3",
-          "anchor": "api-variable-bdfe1f753713ffb3",
+          "id": "api-variable-4b04c60bc196cac7",
+          "anchor": "api-variable-4b04c60bc196cac7",
           "kind": "variable",
           "name": "MaxDataLength",
           "qualifiedName": "bsp::can::Can::MaxDataLength",
@@ -3171,11 +3177,11 @@
           "description": "单帧负载字节上限。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 161,
+            "line": 167,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L161"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L167"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": true,
@@ -3183,13 +3189,13 @@
             "const": false
           },
           "references": [
-            "api-variable-1aec2157e0d2a69b"
+            "api-variable-c396964cdd4e1a3e"
           ],
           "enumValues": []
         },
         {
-          "id": "api-typedef-4684e7a776f99460",
-          "anchor": "api-typedef-4684e7a776f99460",
+          "id": "api-typedef-cb616b03c4cf7a23",
+          "anchor": "api-typedef-cb616b03c4cf7a23",
           "kind": "typedef",
           "name": "ReceiveFunction",
           "qualifiedName": "bsp::can::Can::ReceiveFunction",
@@ -3197,11 +3203,11 @@
           "description": "无状态函数指针回调类型。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 168,
+            "line": 174,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L168"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L174"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3209,13 +3215,13 @@
             "const": false
           },
           "references": [
-            "api-struct-68b9c71805505cec"
+            "api-struct-5391d96d50156977"
           ],
           "enumValues": []
         },
         {
-          "id": "api-struct-cea597eee80f399d",
-          "anchor": "api-struct-cea597eee80f399d",
+          "id": "api-struct-52e59ca8d19a91b3",
+          "anchor": "api-struct-52e59ca8d19a91b3",
           "kind": "struct",
           "name": "bsp::can::Can::StoredFrame",
           "qualifiedName": "bsp::can::Can::StoredFrame",
@@ -3223,27 +3229,27 @@
           "description": "TX 软件队列持有的一帧；不用于 RX。data 按 MaxDataLength 固定分配并 4 字节对齐，length 为有效字节数。assign() 初始化 HAL 会读取的尾部； view() 借用本条目的数据，须在该条目存活期内使用。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 304,
+            "line": 314,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L304"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L314"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": null,
           "references": [
-            "api-function-881bebbf4cd06b54",
-            "api-function-92850e25318c6477",
-            "api-struct-68b9c71805505cec",
-            "api-struct-cee3ba6df3f910d3",
-            "api-variable-3173007ff1ade516",
-            "api-variable-439fad1c780e8c7f",
-            "api-variable-5e73ce64e60804e4",
-            "api-variable-bdfe1f753713ffb3"
+            "api-function-c67efd2b34b1eae3",
+            "api-function-dcc30ea68dc2b676",
+            "api-struct-5391d96d50156977",
+            "api-struct-b3ba529d9ab2ed62",
+            "api-variable-452fda7c245d8c07",
+            "api-variable-4b04c60bc196cac7",
+            "api-variable-4fb7e1482496aa1e",
+            "api-variable-c9534dd99c439655"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-92850e25318c6477",
-          "anchor": "api-function-92850e25318c6477",
+          "id": "api-function-dcc30ea68dc2b676",
+          "anchor": "api-function-dcc30ea68dc2b676",
           "kind": "function",
           "name": "assign",
           "qualifiedName": "bsp::can::Can::StoredFrame::assign",
@@ -3251,11 +3257,11 @@
           "description": "FrameView 将借用的复制为 TX 队列独立持有的一帧，并初始化 HAL 可读的尾部。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 310,
+            "line": 320,
             "column": 33,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L310"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L320"
           },
-          "parentId": "api-struct-cea597eee80f399d",
+          "parentId": "api-struct-52e59ca8d19a91b3",
           "member": {
             "access": "public",
             "static": false,
@@ -3263,13 +3269,13 @@
             "const": false
           },
           "references": [
-            "api-struct-68b9c71805505cec"
+            "api-struct-5391d96d50156977"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-5e73ce64e60804e4",
-          "anchor": "api-variable-5e73ce64e60804e4",
+          "id": "api-variable-c9534dd99c439655",
+          "anchor": "api-variable-c9534dd99c439655",
           "kind": "variable",
           "name": "data",
           "qualifiedName": "bsp::can::Can::StoredFrame::data",
@@ -3277,11 +3283,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 308,
+            "line": 318,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L308"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L318"
           },
-          "parentId": "api-struct-cea597eee80f399d",
+          "parentId": "api-struct-52e59ca8d19a91b3",
           "member": {
             "access": "public",
             "static": false,
@@ -3289,13 +3295,13 @@
             "const": false
           },
           "references": [
-            "api-variable-bdfe1f753713ffb3"
+            "api-variable-4b04c60bc196cac7"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-3173007ff1ade516",
-          "anchor": "api-variable-3173007ff1ade516",
+          "id": "api-variable-452fda7c245d8c07",
+          "anchor": "api-variable-452fda7c245d8c07",
           "kind": "variable",
           "name": "header",
           "qualifiedName": "bsp::can::Can::StoredFrame::header",
@@ -3303,11 +3309,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 306,
+            "line": 316,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L306"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L316"
           },
-          "parentId": "api-struct-cea597eee80f399d",
+          "parentId": "api-struct-52e59ca8d19a91b3",
           "member": {
             "access": "public",
             "static": false,
@@ -3315,13 +3321,13 @@
             "const": false
           },
           "references": [
-            "api-struct-cee3ba6df3f910d3"
+            "api-struct-b3ba529d9ab2ed62"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-439fad1c780e8c7f",
-          "anchor": "api-variable-439fad1c780e8c7f",
+          "id": "api-variable-4fb7e1482496aa1e",
+          "anchor": "api-variable-4fb7e1482496aa1e",
           "kind": "variable",
           "name": "length",
           "qualifiedName": "bsp::can::Can::StoredFrame::length",
@@ -3329,11 +3335,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 307,
+            "line": 317,
             "column": 22,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L307"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L317"
           },
-          "parentId": "api-struct-cea597eee80f399d",
+          "parentId": "api-struct-52e59ca8d19a91b3",
           "member": {
             "access": "public",
             "static": false,
@@ -3344,8 +3350,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-881bebbf4cd06b54",
-          "anchor": "api-function-881bebbf4cd06b54",
+          "id": "api-function-c67efd2b34b1eae3",
+          "anchor": "api-function-c67efd2b34b1eae3",
           "kind": "function",
           "name": "view",
           "qualifiedName": "bsp::can::Can::StoredFrame::view",
@@ -3353,11 +3359,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 311,
+            "line": 321,
             "column": 20,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L311"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L321"
           },
-          "parentId": "api-struct-cea597eee80f399d",
+          "parentId": "api-struct-52e59ca8d19a91b3",
           "member": {
             "access": "public",
             "static": false,
@@ -3365,13 +3371,13 @@
             "const": true
           },
           "references": [
-            "api-struct-68b9c71805505cec"
+            "api-struct-5391d96d50156977"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-1aec2157e0d2a69b",
-          "anchor": "api-variable-1aec2157e0d2a69b",
+          "id": "api-variable-c396964cdd4e1a3e",
+          "anchor": "api-variable-c396964cdd4e1a3e",
           "kind": "variable",
           "name": "SupportsFD",
           "qualifiedName": "bsp::can::Can::SupportsFD",
@@ -3379,11 +3385,11 @@
           "description": "编译期后端是否支持 CAN FD。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 160,
+            "line": 166,
             "column": 27,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L160"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L166"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": true,
@@ -3394,8 +3400,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6f814ecf6fe2551f",
-          "anchor": "api-variable-6f814ecf6fe2551f",
+          "id": "api-variable-c27425ec040a6ebd",
+          "anchor": "api-variable-c27425ec040a6ebd",
           "kind": "variable",
           "name": "TxQueueCapacity",
           "qualifiedName": "bsp::can::Can::TxQueueCapacity",
@@ -3403,11 +3409,11 @@
           "description": "软件 TX 队列容量（可为 0）。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 162,
+            "line": 168,
             "column": 34,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L162"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L168"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": true,
@@ -3415,13 +3421,13 @@
             "const": false
           },
           "references": [
-            "api-define-e1f965b4301c6134"
+            "api-define-ca6be35925525bee"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-d285527e8da53060",
-          "anchor": "api-function-d285527e8da53060",
+          "id": "api-function-ad4c8b087ec21e95",
+          "anchor": "api-function-ad4c8b087ec21e95",
           "kind": "function",
           "name": "add_callback",
           "qualifiedName": "bsp::can::Can::add_callback",
@@ -3429,11 +3435,11 @@
           "description": "启动前入表；已启动返回 InvalidState，满返回 NoCapacity。\n\n追加一个回调条目；仅允许启动前注册（starting_/started_ 为假），否则返回 InvalidState，保证运行期回调表不变。表满返回 NoCapacity。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 337,
+            "line": 350,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L337"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L350"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3441,13 +3447,13 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232"
+            "api-enum-1c06edf7ac47791e"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-45a02e962e155e7b",
-          "anchor": "api-variable-45a02e962e155e7b",
+          "id": "api-variable-39f6adf42d2f8f18",
+          "anchor": "api-variable-39f6adf42d2f8f18",
           "kind": "variable",
           "name": "callback_count_",
           "qualifiedName": "bsp::can::Can::callback_count_",
@@ -3455,11 +3461,11 @@
           "description": "已注册回调数，受 ISRGuard 保护。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 320,
+            "line": 330,
             "column": 44,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L320"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L330"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3470,8 +3476,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-c26f463533cca169",
-          "anchor": "api-variable-c26f463533cca169",
+          "id": "api-variable-cd157b54ca6cf569",
+          "anchor": "api-variable-cd157b54ca6cf569",
           "kind": "variable",
           "name": "callbacks_",
           "qualifiedName": "bsp::can::Can::callbacks_",
@@ -3479,11 +3485,11 @@
           "description": "定长回调表，start() 后不再改变。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 319,
+            "line": 329,
             "column": 16,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L319"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L329"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3491,13 +3497,13 @@
             "const": false
           },
           "references": [
-            "api-variable-b590f604fd474c04"
+            "api-variable-a43a22ccd87e20ac"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-5bc077adde27357d",
-          "anchor": "api-function-5bc077adde27357d",
+          "id": "api-function-af9889e17b14a8eb",
+          "anchor": "api-function-af9889e17b14a8eb",
           "kind": "function",
           "name": "claim_instance",
           "qualifiedName": "bsp::can::Can::claim_instance",
@@ -3505,11 +3511,11 @@
           "description": "Caller holds ISRGuard. 调用方须持有 ISRGuard。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 334,
+            "line": 347,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L334"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L347"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3517,13 +3523,13 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232"
+            "api-enum-1c06edf7ac47791e"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-7868106c64edbe4d",
-          "anchor": "api-function-7868106c64edbe4d",
+          "id": "api-function-afa793f8b161d1f0",
+          "anchor": "api-function-afa793f8b161d1f0",
           "kind": "function",
           "name": "configure_filter",
           "qualifiedName": "bsp::can::Can::configure_filter",
@@ -3531,11 +3537,11 @@
           "description": "start() 配置一个过滤器 entry 或全局策略，仅可在之前调用。资源 index 由 配置显式给出并做边界检查；越界/无容量返回 OutOfRange/NoCapacity，后端 不支持的备选项返回 Unsupported，句柄为空返回 InvalidConfiguration，外设 已被其他实例占用返回 HandleInUse。\n\nCan FilterConfig 仅允许启动前配置滤波。若句柄/外设已被其他占用则拒绝——包括同一 CAN 外设但使用不同 HAL handle 的另一个包装实例。资源索引由显式给出。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 220,
+            "line": 230,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L220"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L230"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3543,17 +3549,17 @@
             "const": false
           },
           "references": [
-            "api-class-a206bedeaa8964ee",
-            "api-enum-fc4fbf4c73aac232",
-            "api-function-191247f32773169e",
-            "api-function-d53c3d95c9abfdbb",
-            "api-typedef-f7f2b48db7b29d7c"
+            "api-class-9f62762617ead6e3",
+            "api-enum-1c06edf7ac47791e",
+            "api-function-2f467f53de2b3cd1",
+            "api-function-fd8344b5b69dad33",
+            "api-typedef-82e67918600872fb"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-8d5c10f96a954eed",
-          "anchor": "api-function-8d5c10f96a954eed",
+          "id": "api-function-2d1ad678c27a5b6b",
+          "anchor": "api-function-2d1ad678c27a5b6b",
           "kind": "function",
           "name": "configure_filter_hardware",
           "qualifiedName": "bsp::can::Can::configure_filter_hardware",
@@ -3561,11 +3567,11 @@
           "description": "后端：应用过滤器配置。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 376,
+            "line": 389,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L376"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L389"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3573,14 +3579,14 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232",
-            "api-typedef-f7f2b48db7b29d7c"
+            "api-enum-1c06edf7ac47791e",
+            "api-typedef-82e67918600872fb"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-62847a90029cd79e",
-          "anchor": "api-function-62847a90029cd79e",
+          "id": "api-function-353d12ead2eb5269",
+          "anchor": "api-function-353d12ead2eb5269",
           "kind": "function",
           "name": "configure_tx_delay_compensation",
           "qualifiedName": "bsp::can::Can::configure_tx_delay_compensation",
@@ -3588,11 +3594,11 @@
           "description": "在 HAL Init 后、start() 前立即配置发送延迟补偿，不保存配置。FDCAN 必须为 READY；启用要求 FD_BRS 模式、DataPrescaler 为 1/2，offset/filter 为 0..127 mtq。 禁用仅清除 TDC 使能位，忽略其他字段。不调用则保持已有板级配置；重新 HAL Init 后须重配。启动中/已启动或非 READY 返回 InvalidState，外设被占用返回 HandleInUse， 句柄/时序不合法返回 InvalidConfiguration，参数越界返回 OutOfRange，HAL 失败返回 HardwareError；bxCAN 返回 Unsupported。\n\n与滤波器配置共用启动前互斥与外设独占规则；TDC 立即应用，不参与运行期发送。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 230,
+            "line": 240,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L230"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L240"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3600,15 +3606,15 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232",
-            "api-function-d53c3d95c9abfdbb",
-            "api-struct-aff305fed64704a7"
+            "api-enum-1c06edf7ac47791e",
+            "api-function-2f467f53de2b3cd1",
+            "api-struct-af7a1d29101fd473"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-076b7ae6bff32cc3",
-          "anchor": "api-function-076b7ae6bff32cc3",
+          "id": "api-function-122b95b910322c99",
+          "anchor": "api-function-122b95b910322c99",
           "kind": "function",
           "name": "configure_tx_delay_compensation_hardware",
           "qualifiedName": "bsp::can::Can::configure_tx_delay_compensation_hardware",
@@ -3616,11 +3622,11 @@
           "description": "后端：立即应用 TDC 配置，不得等待。\n\nTDC 是 FDCAN 数据段专有的发送延迟补偿，经典 bxCAN 无任何对应硬件：直接返回 Unsupported，绝不静默成功。参数的合法性不在此判断，因为任何取值都无法生效。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 378,
+            "line": 391,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L378"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L391"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3628,14 +3634,41 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232",
-            "api-struct-aff305fed64704a7"
+            "api-enum-1c06edf7ac47791e",
+            "api-struct-af7a1d29101fd473"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-9121ec941109cd53",
-          "anchor": "api-function-9121ec941109cd53",
+          "id": "api-function-72032fb385b095a3",
+          "anchor": "api-function-72032fb385b095a3",
+          "kind": "function",
+          "name": "counters",
+          "qualifiedName": "bsp::can::Can::counters",
+          "signature": "TrafficCounters bsp::can::Can::counters () const noexcept",
+          "description": "返回本实例 RX/TX 累计帧数的一致快照，不清零。单核 Cortex-M 上可由任务 或 ISR 调用；TX 仅统计成功写入硬件的帧，入队与失败不计数。",
+          "location": {
+            "path": "bsp/can_driver2/can_driver.hpp",
+            "line": 224,
+            "column": 22,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L224"
+          },
+          "parentId": "api-class-9f62762617ead6e3",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-2f467f53de2b3cd1",
+            "api-struct-4419cce6a6a588e1"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-260844ae49236555",
+          "anchor": "api-function-260844ae49236555",
           "kind": "function",
           "name": "enable_notifications",
           "qualifiedName": "bsp::can::Can::enable_notifications",
@@ -3643,11 +3676,11 @@
           "description": "后端：使能 IRQ 通知（不得等待）。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 354,
+            "line": 367,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L354"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L367"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3655,13 +3688,13 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232"
+            "api-enum-1c06edf7ac47791e"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-8e564c5a0002ac64",
-          "anchor": "api-function-8e564c5a0002ac64",
+          "id": "api-function-950295681691f0ab",
+          "anchor": "api-function-950295681691f0ab",
           "kind": "function",
           "name": "find",
           "qualifiedName": "bsp::can::Can::find",
@@ -3669,11 +3702,11 @@
           "description": "由 HAL 句柄反查所属实例。\n\nCan 按 HAL handle 的地址在注册表中查出对应实例。后端 IRQ 回调只有裸句柄， 借此映射回再转发 on_receive()/on_tx_available()。未注册返回 nullptr， 故已销毁对象不会再被中断解引用。ISR 上下文调用，不加锁。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 331,
+            "line": 344,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L331"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L344"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": true,
@@ -3681,15 +3714,15 @@
             "const": false
           },
           "references": [
-            "api-class-a206bedeaa8964ee",
-            "api-function-ec88a3c6b6f6e018",
-            "api-typedef-61a4498868277048"
+            "api-class-9f62762617ead6e3",
+            "api-function-e3f6b8630cdd7f6c",
+            "api-typedef-8baa1262a3370ac2"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-05a059f513f5f065",
-          "anchor": "api-function-05a059f513f5f065",
+          "id": "api-function-b1b12cd3a14d386c",
+          "anchor": "api-function-b1b12cd3a14d386c",
           "kind": "function",
           "name": "flush_tx",
           "qualifiedName": "bsp::can::Can::flush_tx",
@@ -3697,11 +3730,11 @@
           "description": "Caller holds ISRGuard. 尽可能清空并重放软件队列。\n\n在临界区内（调用方持 ISRGuard）排空发送队列：只有 write() 返回 Ok 才弹出 队首，否则原样返回状态、保留该帧以便下次重试。每帧以 padded_storage=true 写出。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 347,
+            "line": 360,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L347"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L360"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3709,13 +3742,13 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232"
+            "api-enum-1c06edf7ac47791e"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-df80883b37ba699f",
-          "anchor": "api-variable-df80883b37ba699f",
+          "id": "api-variable-4405daefdc8217cc",
+          "anchor": "api-variable-4405daefdc8217cc",
           "kind": "variable",
           "name": "handle_",
           "qualifiedName": "bsp::can::Can::handle_",
@@ -3723,11 +3756,11 @@
           "description": "借用的 HAL 句柄，须比本对象长寿。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 318,
+            "line": 328,
             "column": 43,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L318"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L328"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3735,13 +3768,13 @@
             "const": false
           },
           "references": [
-            "api-typedef-61a4498868277048"
+            "api-typedef-8baa1262a3370ac2"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-3563944c68fcd09c",
-          "anchor": "api-variable-3563944c68fcd09c",
+          "id": "api-variable-2040ad1d6c21d890",
+          "anchor": "api-variable-2040ad1d6c21d890",
           "kind": "variable",
           "name": "hardware_started_",
           "qualifiedName": "bsp::can::Can::hardware_started_",
@@ -3749,11 +3782,11 @@
           "description": "后端回滚时不得停止其他 owner 的句柄。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 323,
+            "line": 333,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L323"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L333"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3764,8 +3797,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-d77cea81d99223a2",
-          "anchor": "api-variable-d77cea81d99223a2",
+          "id": "api-variable-7faaa26eefe816b1",
+          "anchor": "api-variable-7faaa26eefe816b1",
           "kind": "variable",
           "name": "instances_",
           "qualifiedName": "bsp::can::Can::instances_",
@@ -3773,11 +3806,11 @@
           "description": "实例 registry，用于句柄/外设唯一性与反查。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 330,
+            "line": 343,
             "column": 31,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L330"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L343"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": true,
@@ -3785,14 +3818,14 @@
             "const": false
           },
           "references": [
-            "api-define-7af09b5e702fcbf2",
-            "api-function-ec88a3c6b6f6e018"
+            "api-define-9ff0b9bc8616fc34",
+            "api-function-e3f6b8630cdd7f6c"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-1809dc9a094469fe",
-          "anchor": "api-function-1809dc9a094469fe",
+          "id": "api-function-893ca1b4c721271b",
+          "anchor": "api-function-893ca1b4c721271b",
           "kind": "function",
           "name": "on_receive",
           "qualifiedName": "bsp::can::Can::on_receive",
@@ -3800,11 +3833,11 @@
           "description": "RX ISR 入口：循环读空 location 并广播。\n\nFrameView 接收中断入口。持续从指定 location（FIFO/缓冲区索引）读出帧直到无数据或出错， 使一次中断尽量排空该队列。InvalidFrame 表示后端已确认并释放该不可用帧，继续 排空而非返回。回调在本 ISR 上下文同步执行，buffer 每轮复用，故仅在本次回调期间有效；回调表启动后不变，无需额外全局屏蔽即可安全遍历。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 349,
+            "line": 362,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L349"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L362"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3812,13 +3845,13 @@
             "const": false
           },
           "references": [
-            "api-struct-68b9c71805505cec"
+            "api-struct-5391d96d50156977"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-ee5d814302a012f9",
-          "anchor": "api-function-ee5d814302a012f9",
+          "id": "api-function-61b927a6ca6a4602",
+          "anchor": "api-function-61b927a6ca6a4602",
           "kind": "function",
           "name": "on_tx_available",
           "qualifiedName": "bsp::can::Can::on_tx_available",
@@ -3826,11 +3859,11 @@
           "description": "TX 空间释放时的 ISR 入口。\n\n发送完成中断入口：仅在已启动时排空软件队列；硬件忙时本轮停止，等待下一次 TX 中断再继续。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 348,
+            "line": 361,
             "column": 26,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L348"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L361"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3841,8 +3874,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-d53c3d95c9abfdbb",
-          "anchor": "api-function-d53c3d95c9abfdbb",
+          "id": "api-function-2f467f53de2b3cd1",
+          "anchor": "api-function-2f467f53de2b3cd1",
           "kind": "function",
           "name": "operator=",
           "qualifiedName": "bsp::can::Can::operator=",
@@ -3850,11 +3883,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 178,
+            "line": 184,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L178"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L184"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3862,16 +3895,17 @@
             "const": false
           },
           "references": [
-            "api-function-62847a90029cd79e",
-            "api-function-7868106c64edbe4d",
-            "api-function-86bf1003f8bd816d",
-            "api-function-ec88a3c6b6f6e018"
+            "api-function-05c7085855af2e23",
+            "api-function-353d12ead2eb5269",
+            "api-function-72032fb385b095a3",
+            "api-function-afa793f8b161d1f0",
+            "api-function-e3f6b8630cdd7f6c"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-702289f6cf3c63ea",
-          "anchor": "api-function-702289f6cf3c63ea",
+          "id": "api-function-f5182198ecbaff04",
+          "anchor": "api-function-f5182198ecbaff04",
           "kind": "function",
           "name": "operator=",
           "qualifiedName": "bsp::can::Can::operator=",
@@ -3879,11 +3913,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 176,
+            "line": 182,
             "column": 9,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L176"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L182"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3891,13 +3925,13 @@
             "const": false
           },
           "references": [
-            "api-function-ec88a3c6b6f6e018"
+            "api-function-e3f6b8630cdd7f6c"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-3e05ab7b9756eace",
-          "anchor": "api-function-3e05ab7b9756eace",
+          "id": "api-function-daf460b33ebd702c",
+          "anchor": "api-function-daf460b33ebd702c",
           "kind": "function",
           "name": "read",
           "qualifiedName": "bsp::can::Can::read",
@@ -3905,11 +3939,11 @@
           "description": "后端读帧。location 为 Rx FIFO 索引或 Rx Buffer 下标（含义随后端而定）。 buffer 须提供至少 MaxDataLength 字节的可写空间；后端直接填写 frame.header， 并使 frame.data 借用 buffer 中的有效负载。仅返回 Ok 时 frame 有效，远程帧 的数据视图为空；调用方不得在 buffer 被复用或销毁后继续持有视图。 Empty 表示无数据；InvalidFrame 表示帧已消费并确认但不可交付，须继续排空。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 373,
+            "line": 386,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L373"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L386"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -3917,14 +3951,14 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232",
-            "api-struct-68b9c71805505cec"
+            "api-enum-1c06edf7ac47791e",
+            "api-struct-5391d96d50156977"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-e1d7b89d8d7e4988",
-          "anchor": "api-function-e1d7b89d8d7e4988",
+          "id": "api-function-320bf371359cafce",
+          "anchor": "api-function-320bf371359cafce",
           "kind": "function",
           "name": "register_callback",
           "qualifiedName": "bsp::can::Can::register_callback",
@@ -3932,11 +3966,11 @@
           "description": "借用左值可调用对象；不接受临时捕获 lambda。回调在 ISR 上下文同步触发， 注册后该对象必须存活至本总线停止使用，且不得阻塞或抛异常。 仅接受可用 callable(frame) 直接调用的对象；成员函数指针使用另一重载。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 253,
+            "line": 263,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L253"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L263"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3944,13 +3978,13 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232"
+            "api-enum-1c06edf7ac47791e"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-70c8f3a5329e5b1b",
-          "anchor": "api-function-70c8f3a5329e5b1b",
+          "id": "api-function-3c0cfa7c63afa0d7",
+          "anchor": "api-function-3c0cfa7c63afa0d7",
           "kind": "function",
           "name": "register_callback",
           "qualifiedName": "bsp::can::Can::register_callback",
@@ -3958,11 +3992,11 @@
           "description": "成员函数回调：用法见 bus.register_callback<&Motor::on_can>(motor)。 Method 在注册时即固定，要求签名 void(Object&, const FrameView&)； object 必须存活至本总线停止使用。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 273,
+            "line": 283,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L273"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L283"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3970,14 +4004,14 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232",
-            "api-variable-4f86ca2b85d1df71"
+            "api-enum-1c06edf7ac47791e",
+            "api-variable-36f4973d2b2e2f05"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-39d01f8113460733",
-          "anchor": "api-function-39d01f8113460733",
+          "id": "api-function-ad7c05ca629dd7ee",
+          "anchor": "api-function-ad7c05ca629dd7ee",
           "kind": "function",
           "name": "register_callback",
           "qualifiedName": "bsp::can::Can::register_callback",
@@ -3985,11 +4019,11 @@
           "description": "start() 注册无状态函数指针回调；function 为 nullptr 返回 InvalidArgument。回调 在 ISR 上下文按注册顺序同步广播，不得阻塞、抛异常或销毁本总线。仅可在之前注册，否则返回 InvalidState；表满返回 NoCapacity。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 236,
+            "line": 246,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L236"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L246"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -3997,16 +4031,16 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232",
-            "api-function-191247f32773169e",
-            "api-typedef-4684e7a776f99460",
-            "api-variable-19e406d2044c73f8"
+            "api-enum-1c06edf7ac47791e",
+            "api-function-fd8344b5b69dad33",
+            "api-typedef-cb616b03c4cf7a23",
+            "api-variable-7f0ed7b3350cd934"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-cd64ea22e3bdfd30",
-          "anchor": "api-function-cd64ea22e3bdfd30",
+          "id": "api-function-923f46147e7f1153",
+          "anchor": "api-function-923f46147e7f1153",
           "kind": "function",
           "name": "release_instance",
           "qualifiedName": "bsp::can::Can::release_instance",
@@ -4014,11 +4048,11 @@
           "description": "Caller holds ISRGuard. 调用方须持有 ISRGuard。\n\nstart() 清空指向本实例的注册表槽位（ISRGuard 已由调用方持有）。析构与失败路径都会调用，使 find() 之后不再命中本对象。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 336,
+            "line": 349,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L336"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L349"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -4026,13 +4060,13 @@
             "const": false
           },
           "references": [
-            "api-function-191247f32773169e"
+            "api-function-fd8344b5b69dad33"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-b1aaa336b173bdbc",
-          "anchor": "api-function-b1aaa336b173bdbc",
+          "id": "api-function-2744955b7229026e",
+          "anchor": "api-function-2744955b7229026e",
           "kind": "function",
           "name": "rollback_start",
           "qualifiedName": "bsp::can::Can::rollback_start",
@@ -4040,11 +4074,11 @@
           "description": "只回滚本实例启动的硬件，不恢复或注销 HAL Callback。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 355,
+            "line": 368,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L355"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L368"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -4055,8 +4089,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-654cf3b84b4734a7",
-          "anchor": "api-function-654cf3b84b4734a7",
+          "id": "api-function-2822c99ed3ef6828",
+          "anchor": "api-function-2822c99ed3ef6828",
           "kind": "function",
           "name": "rx_fifo0_irq",
           "qualifiedName": "bsp::can::Can::rx_fifo0_irq",
@@ -4064,11 +4098,11 @@
           "description": "Can HAL 接收回调（FIFO0）的桥接：按 HAL handle 反查已注册的实例，若该 handle 尚未被任何实例认领则忽略。运行在中断上下文，实际取帧与用户回调派发由 on_receive() -> read() 完成。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 390,
+            "line": 403,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L390"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L403"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": true,
@@ -4076,14 +4110,14 @@
             "const": false
           },
           "references": [
-            "api-class-a206bedeaa8964ee",
-            "api-typedef-61a4498868277048"
+            "api-class-9f62762617ead6e3",
+            "api-typedef-8baa1262a3370ac2"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-e3da34b0f7b61fe8",
-          "anchor": "api-function-e3da34b0f7b61fe8",
+          "id": "api-function-93035d32c5d0a07d",
+          "anchor": "api-function-93035d32c5d0a07d",
           "kind": "function",
           "name": "rx_fifo1_irq",
           "qualifiedName": "bsp::can::Can::rx_fifo1_irq",
@@ -4091,11 +4125,11 @@
           "description": "HAL 接收回调（FIFO1）的桥接，行为同 rx_fifo0_irq()。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 391,
+            "line": 404,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L391"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L404"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": true,
@@ -4103,13 +4137,37 @@
             "const": false
           },
           "references": [
-            "api-typedef-61a4498868277048"
+            "api-typedef-8baa1262a3370ac2"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-86bf1003f8bd816d",
-          "anchor": "api-function-86bf1003f8bd816d",
+          "id": "api-variable-72efb52148766163",
+          "anchor": "api-variable-72efb52148766163",
+          "kind": "variable",
+          "name": "rx_frames_",
+          "qualifiedName": "bsp::can::Can::rx_frames_",
+          "signature": "std::atomic<std::uint32_t> bsp::can::Can::rx_frames_",
+          "description": "RX 无锁原子计数，不屏蔽中断。",
+          "location": {
+            "path": "bsp/can_driver2/can_driver.hpp",
+            "line": 335,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L335"
+          },
+          "parentId": "api-class-9f62762617ead6e3",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-05c7085855af2e23",
+          "anchor": "api-function-05c7085855af2e23",
           "kind": "function",
           "name": "send",
           "qualifiedName": "bsp::can::Can::send",
@@ -4117,11 +4175,11 @@
           "description": "校验并提交一帧，或在硬件无空位时把它复制进软件队列。负载为借用，函数 返回后调用方即可复用其缓冲区。软件队列满时丢弃最旧一项并返回 ReplacedOldest。\n\n提交一帧的完整流程：CAN_DRIVER_VALIDATE_TX_FRAME 非零时先做软件校验并映射结果， 在临界区内确认已启动后再做硬件相关校验；关闭时跳过这两道校验，直接依赖调用方 保证帧合法。随后排空历史队列，队列为空时尝试直接写硬件，若硬件忙则改为入队。 入队时若队列已满，覆盖最旧一项并返回 ReplacedOldest，否则返回 Queued。 Submitted/Queued/ReplacedOldest 均不保证最终发送成功。 仅当 CAN_DRIVER_VALIDATE_TX_FRAME 非零时才执行帧结构与后端帧能力校验 （默认 0 不执行）。关闭时调用方必须自行保证帧合法且适配已配置的后端， 尤其不得超出 TX element 容量；此时不会给出 InvalidFrame/Unsupported 诊断。 start() Submitted/Queued/ReplacedOldest 仅表示帧已被受理，不保证真正发送成功，也 不含 CAN 仲裁顺序信息。FD 数据长度必须精确可表示（见 is_fd_length）， 不做填充或分片。总线尚未时返回 NotStarted。单核 Cortex-M 上 可在任务或 ISR 中调用。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 214,
+            "line": 220,
             "column": 16,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L214"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L220"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -4129,16 +4187,16 @@
             "const": false
           },
           "references": [
-            "api-enum-3a1160d24449b069",
-            "api-function-191247f32773169e",
-            "api-function-d53c3d95c9abfdbb",
-            "api-struct-68b9c71805505cec"
+            "api-enum-e8976e05ea68a506",
+            "api-function-2f467f53de2b3cd1",
+            "api-function-fd8344b5b69dad33",
+            "api-struct-5391d96d50156977"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-ca93250236ccaa3e",
-          "anchor": "api-function-ca93250236ccaa3e",
+          "id": "api-function-2512e41046bbc791",
+          "anchor": "api-function-2512e41046bbc791",
           "kind": "function",
           "name": "send_result",
           "qualifiedName": "bsp::can::Can::send_result",
@@ -4146,11 +4204,11 @@
           "description": "Status SendResult 到的映射。\n\nStatus 把底层归类为面向调用者的 SendResult：Ok→Submitted、Busy→Busy、 Unsupported→Unsupported、各类参数/范围错误→InvalidFrame、BusOff→BusOff、 InvalidState→NotStarted，其余默认 HardwareError。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 345,
+            "line": 358,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L345"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L358"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": true,
@@ -4158,14 +4216,14 @@
             "const": false
           },
           "references": [
-            "api-enum-3a1160d24449b069",
-            "api-enum-fc4fbf4c73aac232"
+            "api-enum-1c06edf7ac47791e",
+            "api-enum-e8976e05ea68a506"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-3a82febccb55827c",
-          "anchor": "api-function-3a82febccb55827c",
+          "id": "api-function-1718e2d9bb5d542c",
+          "anchor": "api-function-1718e2d9bb5d542c",
           "kind": "function",
           "name": "shared_filter_bus_started",
           "qualifiedName": "bsp::can::Can::shared_filter_bus_started",
@@ -4173,11 +4231,11 @@
           "description": "同一共享 filter 域的另一条总线是否已启动。\n\n仅 bxCAN 双外设（CAN1/CAN2 共享滤波 bank）场景有意义：检查同共享域的 另一个已注册实例是否已启动（started_ 或 starting_）。返回 true 表示共享 滤波域已被占用，当前实例在启动前不得再写共享滤波寄存器。非该场景恒为 false。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 332,
+            "line": 345,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L332"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L345"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": true,
@@ -4185,13 +4243,13 @@
             "const": false
           },
           "references": [
-            "api-typedef-61a4498868277048"
+            "api-typedef-8baa1262a3370ac2"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-191247f32773169e",
-          "anchor": "api-function-191247f32773169e",
+          "id": "api-function-fd8344b5b69dad33",
+          "anchor": "api-function-fd8344b5b69dad33",
           "kind": "function",
           "name": "start",
           "qualifiedName": "bsp::can::Can::start",
@@ -4199,11 +4257,11 @@
           "description": "安装该句柄的 HAL 回调、启动硬件并使能所需的 IRQ 通知。不初始化 GPIO、 时序或 message RAM；TDC 可在 HAL Init 后由板级或配置 API 显式设置，start 不改写。\n\nstart() 在临界区外做前置检查：ISR 上下文、PRIMASK 屏蔽或 BASEPRI 屏蔽（Cortex-M3+） 一律拒绝，因为随后的 HAL 启动依赖可运行的中断/超时。started_ 或 starting_ 已置位则拒绝重复启动。抢占注册表槽位后置 starting_，再在中断开放状态下 执行 start_hardware()；成功则在临界区内置 started_ 并 enable_notifications() （该调用不得阻塞）。任一步失败只回滚由本实例启动的硬件，清 starting_ 并 释放槽位，不恢复或注销已安装的 HAL Callback；调用方须自行保证成功。 不初始化 GPIO/时序/消息 RAM/TDC。 HAL 启动期间中断保持可用，以便基于 tick 的 HAL 超时能够推进，因此必须 在线程模式且中断未屏蔽时调用（IPSR/PRIMASK/BASEPRI 非零时返回 InvalidState），绝不可在 ISR 中调用。启动进行中以 starting_ 冻结配置变更。 start() 成功返回 Ok；句柄 Instance 为空返回 InvalidConfiguration；外设已被其他 实例占用返回 HandleInUse；实例槽耗尽返回 NoCapacity；使能通知失败会回滚 本实例启动的硬件并释放槽位后返回对应错误。重复返回 InvalidState。 FDCAN 已分配的 Rx FIFO/Buffer element 负载容量不足 64 字节时返回 InvalidConfiguration， 未分配的资源不检查 element 尺寸；板级须在 HAL Init 前配置足够容量。 start() HAL Callback 安装不是事务：任何启动失败都不会恢复或注销已成功安装的 Callback。调用方须自行保证成功，不得假定失败后句柄可直接交给 其他 owner 使用。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 198,
+            "line": 204,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L198"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L204"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -4211,13 +4269,13 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232"
+            "api-enum-1c06edf7ac47791e"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-37dd2a8b2cf4f95b",
-          "anchor": "api-function-37dd2a8b2cf4f95b",
+          "id": "api-function-918af86b7d0477c2",
+          "anchor": "api-function-918af86b7d0477c2",
           "kind": "function",
           "name": "start_hardware",
           "qualifiedName": "bsp::can::Can::start_hardware",
@@ -4225,11 +4283,11 @@
           "description": "后端：启动硬件并安装回调。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 353,
+            "line": 366,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L353"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L366"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -4237,13 +4295,13 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232"
+            "api-enum-1c06edf7ac47791e"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-4eaaa996a6d18574",
-          "anchor": "api-variable-4eaaa996a6d18574",
+          "id": "api-variable-95a05877b658f430",
+          "anchor": "api-variable-95a05877b658f430",
           "kind": "variable",
           "name": "started_",
           "qualifiedName": "bsp::can::Can::started_",
@@ -4251,11 +4309,11 @@
           "description": "已启动：回调与过滤器冻结，可发送/接收。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 322,
+            "line": 332,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L322"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L332"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -4266,8 +4324,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-5465a45c25b7041c",
-          "anchor": "api-variable-5465a45c25b7041c",
+          "id": "api-variable-bd7677fd9872105b",
+          "anchor": "api-variable-bd7677fd9872105b",
           "kind": "variable",
           "name": "starting_",
           "qualifiedName": "bsp::can::Can::starting_",
@@ -4275,11 +4333,11 @@
           "description": "start() 进行中：冻结配置并阻止重复启动。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 321,
+            "line": 331,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L321"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L331"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -4287,13 +4345,13 @@
             "const": false
           },
           "references": [
-            "api-function-191247f32773169e"
+            "api-function-fd8344b5b69dad33"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-cb4571ba8186da89",
-          "anchor": "api-function-cb4571ba8186da89",
+          "id": "api-function-b4e5d0caa0074ba6",
+          "anchor": "api-function-b4e5d0caa0074ba6",
           "kind": "function",
           "name": "tx_irq",
           "qualifiedName": "bsp::can::Can::tx_irq",
@@ -4301,11 +4359,11 @@
           "description": "TX 完成 IRQ，运行于 ISR 上下文。\n\nTx 相关回调（邮箱完成/中止、错误）共用的桥接：在中断上下文中让实例推进软件 发送队列；未认领的 handle 被忽略。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 393,
+            "line": 406,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L393"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L406"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": true,
@@ -4313,13 +4371,13 @@
             "const": false
           },
           "references": [
-            "api-typedef-61a4498868277048"
+            "api-typedef-8baa1262a3370ac2"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-8a358ff708126c8e",
-          "anchor": "api-variable-8a358ff708126c8e",
+          "id": "api-variable-c20db85f28ca11dd",
+          "anchor": "api-variable-c20db85f28ca11dd",
           "kind": "variable",
           "name": "tx_queue_",
           "qualifiedName": "bsp::can::Can::tx_queue_",
@@ -4327,11 +4385,11 @@
           "description": "软件 TX 队列（多一个 slot 以区分满/空）。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 326,
+            "line": 339,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L326"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L339"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -4339,13 +4397,37 @@
             "const": false
           },
           "references": [
-            "api-define-e1f965b4301c6134"
+            "api-define-ca6be35925525bee"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-c76235c425e2ad7c",
-          "anchor": "api-function-c76235c425e2ad7c",
+          "id": "api-variable-ab0bad0815f2f2dc",
+          "anchor": "api-variable-ab0bad0815f2f2dc",
+          "kind": "variable",
+          "name": "tx_submitted_frames_",
+          "qualifiedName": "bsp::can::Can::tx_submitted_frames_",
+          "signature": "std::uint32_t bsp::can::Can::tx_submitted_frames_",
+          "description": "TX 计数仍由既有 ISRGuard 保护。",
+          "location": {
+            "path": "bsp/can_driver2/can_driver.hpp",
+            "line": 336,
+            "column": 32,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L336"
+          },
+          "parentId": "api-class-9f62762617ead6e3",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-6d957872d39052fc",
+          "anchor": "api-function-6d957872d39052fc",
           "kind": "function",
           "name": "write",
           "qualifiedName": "bsp::can::Can::write",
@@ -4353,11 +4435,11 @@
           "description": "send() 后端写帧。padded_storage 为真表示 frame 来自软件队列，其向上取整字尾部 已由 StoredFrame::assign() 初始化，后端可跳过临时缓冲直接引用；来自的裸视图须自行补零后再提交。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 365,
+            "line": 378,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L365"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L378"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "private",
             "static": false,
@@ -4365,15 +4447,15 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232",
-            "api-function-86bf1003f8bd816d",
-            "api-struct-68b9c71805505cec"
+            "api-enum-1c06edf7ac47791e",
+            "api-function-05c7085855af2e23",
+            "api-struct-5391d96d50156977"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-5f70fbccfce455cd",
-          "anchor": "api-function-5f70fbccfce455cd",
+          "id": "api-function-739705f2a72a4c4c",
+          "anchor": "api-function-739705f2a72a4c4c",
           "kind": "function",
           "name": "~Can",
           "qualifiedName": "bsp::can::Can::~Can",
@@ -4381,11 +4463,11 @@
           "description": "释放在 registry 中占用的实例槽；不停止外设、不注销 HAL 回调。\n\n析构只释放注册表槽位：不调用 stop()，也不注销 HAL 回调，硬件仍可能继续 产生中断。调用方须在销毁前确保硬件已停止；此后的 IRQ 经 find() 返回 nullptr，不再访问本对象。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 173,
+            "line": 179,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L173"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L179"
           },
-          "parentId": "api-class-a206bedeaa8964ee",
+          "parentId": "api-class-9f62762617ead6e3",
           "member": {
             "access": "public",
             "static": false,
@@ -4396,8 +4478,8 @@
           "enumValues": []
         },
         {
-          "id": "api-struct-12cfdc9fef69e10d",
-          "anchor": "api-struct-12cfdc9fef69e10d",
+          "id": "api-struct-5cbe9d42ff1ccf75",
+          "anchor": "api-struct-5cbe9d42ff1ccf75",
           "kind": "struct",
           "name": "bsp::can::ExtendedIdMask",
           "qualifiedName": "bsp::can::ExtendedIdMask",
@@ -4405,20 +4487,20 @@
           "description": "FDCAN XIDAM：扩展 ID 的全局掩码，按位作用于所有扩展帧；它不会替换某个具体 过滤器的掩码，而是与其共同生效。默认 0x1FFFFFFF 表示比较全部 29 位； mask 超过 0x1FFFFFFF 返回 InvalidArgument。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 223,
+            "line": 270,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L223"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L270"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": null,
           "references": [
-            "api-variable-9ee29258ae84325a"
+            "api-variable-0dd7c1a9b912a2bd"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-9ee29258ae84325a",
-          "anchor": "api-variable-9ee29258ae84325a",
+          "id": "api-variable-0dd7c1a9b912a2bd",
+          "anchor": "api-variable-0dd7c1a9b912a2bd",
           "kind": "variable",
           "name": "mask",
           "qualifiedName": "bsp::can::ExtendedIdMask::mask",
@@ -4426,11 +4508,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 225,
+            "line": 272,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L225"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L272"
           },
-          "parentId": "api-struct-12cfdc9fef69e10d",
+          "parentId": "api-struct-5cbe9d42ff1ccf75",
           "member": {
             "access": "public",
             "static": false,
@@ -4441,8 +4523,8 @@
           "enumValues": []
         },
         {
-          "id": "api-enum-8b4517ed27ca1758",
-          "anchor": "api-enum-8b4517ed27ca1758",
+          "id": "api-enum-bc26c181eca72b52",
+          "anchor": "api-enum-bc26c181eca72b52",
           "kind": "enum",
           "name": "FilterAction",
           "qualifiedName": "bsp::can::FilterAction",
@@ -4450,9 +4532,9 @@
           "description": "匹配后的处理动作。Disable/Fifo0/Fifo1 两种后端可用（Fifo0/1 要求对应 FIFO 已分配 element，否则 NoCapacity）；Reject/PriorityFifo0/PriorityFifo1 仅 FDCAN 支持。RxBuffer 还要求 HAL 提供专用 RX Buffer； 固定 message RAM 的 FDCAN 系列（见 can_driver.hpp）和 bxCAN 返回 Unsupported。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 124,
+            "line": 154,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L124"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L154"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -4501,8 +4583,8 @@
           ]
         },
         {
-          "id": "api-typedef-f7f2b48db7b29d7c",
-          "anchor": "api-typedef-f7f2b48db7b29d7c",
+          "id": "api-typedef-82e67918600872fb",
+          "anchor": "api-typedef-82e67918600872fb",
           "kind": "typedef",
           "name": "FilterConfig",
           "qualifiedName": "bsp::can::FilterConfig",
@@ -4510,9 +4592,9 @@
           "description": "过滤器配置统一入口；后端不支持的备选项返回 Unsupported。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 229,
+            "line": 276,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L229"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L276"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -4522,16 +4604,16 @@
             "const": false
           },
           "references": [
-            "api-struct-12cfdc9fef69e10d",
-            "api-struct-1f676f70e5b182fa",
-            "api-struct-a4b34ab1ac7a8874",
-            "api-struct-d02ef904485cde60"
+            "api-struct-2c866764efcc0151",
+            "api-struct-553e8d279f62b2d3",
+            "api-struct-5cbe9d42ff1ccf75",
+            "api-struct-af27a08b698421d8"
           ],
           "enumValues": []
         },
         {
-          "id": "api-enum-169f06293fa91513",
-          "anchor": "api-enum-169f06293fa91513",
+          "id": "api-enum-3e923d2322b5b9f8",
+          "anchor": "api-enum-3e923d2322b5b9f8",
           "kind": "enum",
           "name": "FilterMode",
           "qualifiedName": "bsp::can::FilterMode",
@@ -4539,9 +4621,9 @@
           "description": "ID 匹配方式。Mask/List 两种后端都支持；Range 与 RangeWithoutExtendedMask 为 FDCAN 专属，bxCAN 返回 Unsupported。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 119,
+            "line": 143,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L119"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L143"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -4575,8 +4657,8 @@
           ]
         },
         {
-          "id": "api-enum-12b7669c561ea1cb",
-          "anchor": "api-enum-12b7669c561ea1cb",
+          "id": "api-enum-fd3333f3637ef781",
+          "anchor": "api-enum-fd3333f3637ef781",
           "kind": "enum",
           "name": "FilterScale",
           "qualifiedName": "bsp::can::FilterScale",
@@ -4584,9 +4666,9 @@
           "description": "bxCAN filter bank 位宽：16 位两项或 32 位一项。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 170,
+            "line": 200,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L170"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L200"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -4610,8 +4692,8 @@
           ]
         },
         {
-          "id": "api-enum-165bec7176685754",
-          "anchor": "api-enum-165bec7176685754",
+          "id": "api-enum-0255045ae826b662",
+          "anchor": "api-enum-0255045ae826b662",
           "kind": "enum",
           "name": "FrameFormat",
           "qualifiedName": "bsp::can::FrameFormat",
@@ -4619,9 +4701,9 @@
           "description": "帧格式：Classic 为经典 CAN 2.0，Fd 为 CAN FD；仅支持 FD 的后端可发送 Fd。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 24,
+            "line": 28,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L24"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L28"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -4645,8 +4727,8 @@
           ]
         },
         {
-          "id": "api-struct-cee3ba6df3f910d3",
-          "anchor": "api-struct-cee3ba6df3f910d3",
+          "id": "api-struct-b3ba529d9ab2ed62",
+          "anchor": "api-struct-b3ba529d9ab2ed62",
           "kind": "struct",
           "name": "bsp::can::FrameHeader",
           "qualifiedName": "bsp::can::FrameHeader",
@@ -4654,30 +4736,30 @@
           "description": "帧元数据，不含负载。字段为跨后端的中立描述，与 HAL 枚举无关。\n\nis_fd_length() 组合约束：Classic 帧的 bit_rate_switch 与 error_state_indicator 必须为 false；Remote 帧仅存在于 Classic 格式，remote_length 表示被请求的字节数 （0..8）且 data 必须为空；Fd 帧仅允许 Data 类型，data.size() 必须是认可的 FD 长度。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 36,
+            "line": 48,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L36"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L48"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": null,
           "references": [
+            "api-enum-0255045ae826b662",
             "api-enum-11a8a5d46d9bacff",
-            "api-enum-165bec7176685754",
-            "api-enum-605a73ec6ded9680",
-            "api-function-1b9ca085229a1be1",
-            "api-variable-279bcaf806f5303b",
-            "api-variable-2eb552bfb96e7702",
-            "api-variable-6a82af0c1e9afa48",
-            "api-variable-9f6a6111af2f7b16",
-            "api-variable-abf69f3fb84963aa",
-            "api-variable-b2c372e4f02db923",
-            "api-variable-eb8cf420139b9799"
+            "api-enum-396130d51b2712a6",
+            "api-function-51cfff5d108817e3",
+            "api-variable-2c392b3e23e6fdce",
+            "api-variable-41748c093f63ee37",
+            "api-variable-8ce7eaf76d8ea732",
+            "api-variable-90cf29d478df53b2",
+            "api-variable-91deb9c525d2b676",
+            "api-variable-b0e34ddf8a478393",
+            "api-variable-ed8d36d818e5ef2f"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-2eb552bfb96e7702",
-          "anchor": "api-variable-2eb552bfb96e7702",
+          "id": "api-variable-b0e34ddf8a478393",
+          "anchor": "api-variable-b0e34ddf8a478393",
           "kind": "variable",
           "name": "bit_rate_switch",
           "qualifiedName": "bsp::can::FrameHeader::bit_rate_switch",
@@ -4685,11 +4767,11 @@
           "description": "FD BRS：数据段切换到更高比特率。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 42,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L42"
+            "line": 54,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L54"
           },
-          "parentId": "api-struct-cee3ba6df3f910d3",
+          "parentId": "api-struct-b3ba529d9ab2ed62",
           "member": {
             "access": "public",
             "static": false,
@@ -4700,8 +4782,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6a82af0c1e9afa48",
-          "anchor": "api-variable-6a82af0c1e9afa48",
+          "id": "api-variable-8ce7eaf76d8ea732",
+          "anchor": "api-variable-8ce7eaf76d8ea732",
           "kind": "variable",
           "name": "error_state_indicator",
           "qualifiedName": "bsp::can::FrameHeader::error_state_indicator",
@@ -4709,11 +4791,11 @@
           "description": "FD ESI：true 表示节点处于 error passive。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 43,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L43"
+            "line": 55,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L55"
           },
-          "parentId": "api-struct-cee3ba6df3f910d3",
+          "parentId": "api-struct-b3ba529d9ab2ed62",
           "member": {
             "access": "public",
             "static": false,
@@ -4724,8 +4806,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-eb8cf420139b9799",
-          "anchor": "api-variable-eb8cf420139b9799",
+          "id": "api-variable-41748c093f63ee37",
+          "anchor": "api-variable-41748c093f63ee37",
           "kind": "variable",
           "name": "format",
           "qualifiedName": "bsp::can::FrameHeader::format",
@@ -4733,11 +4815,11 @@
           "description": "经典帧或 FD 帧。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 40,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L40"
+            "line": 52,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L52"
           },
-          "parentId": "api-struct-cee3ba6df3f910d3",
+          "parentId": "api-struct-b3ba529d9ab2ed62",
           "member": {
             "access": "public",
             "static": false,
@@ -4745,13 +4827,13 @@
             "const": false
           },
           "references": [
-            "api-enum-165bec7176685754"
+            "api-enum-0255045ae826b662"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-abf69f3fb84963aa",
-          "anchor": "api-variable-abf69f3fb84963aa",
+          "id": "api-variable-91deb9c525d2b676",
+          "anchor": "api-variable-91deb9c525d2b676",
           "kind": "variable",
           "name": "id",
           "qualifiedName": "bsp::can::FrameHeader::id",
@@ -4759,11 +4841,11 @@
           "description": "标识符，有效位宽由 id_type 决定。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 38,
+            "line": 50,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L38"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L50"
           },
-          "parentId": "api-struct-cee3ba6df3f910d3",
+          "parentId": "api-struct-b3ba529d9ab2ed62",
           "member": {
             "access": "public",
             "static": false,
@@ -4774,8 +4856,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-b2c372e4f02db923",
-          "anchor": "api-variable-b2c372e4f02db923",
+          "id": "api-variable-ed8d36d818e5ef2f",
+          "anchor": "api-variable-ed8d36d818e5ef2f",
           "kind": "variable",
           "name": "id_type",
           "qualifiedName": "bsp::can::FrameHeader::id_type",
@@ -4783,11 +4865,11 @@
           "description": "决定 id 的位宽与硬件 IDE 位。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 39,
-            "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L39"
+            "line": 51,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L51"
           },
-          "parentId": "api-struct-cee3ba6df3f910d3",
+          "parentId": "api-struct-b3ba529d9ab2ed62",
           "member": {
             "access": "public",
             "static": false,
@@ -4800,8 +4882,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-9f6a6111af2f7b16",
-          "anchor": "api-variable-9f6a6111af2f7b16",
+          "id": "api-variable-90cf29d478df53b2",
+          "anchor": "api-variable-90cf29d478df53b2",
           "kind": "variable",
           "name": "remote_length",
           "qualifiedName": "bsp::can::FrameHeader::remote_length",
@@ -4809,11 +4891,11 @@
           "description": "被请求的字节数，仅用于 Classic RTR。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 44,
-            "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L44"
+            "line": 56,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L56"
           },
-          "parentId": "api-struct-cee3ba6df3f910d3",
+          "parentId": "api-struct-b3ba529d9ab2ed62",
           "member": {
             "access": "public",
             "static": false,
@@ -4824,8 +4906,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-279bcaf806f5303b",
-          "anchor": "api-variable-279bcaf806f5303b",
+          "id": "api-variable-2c392b3e23e6fdce",
+          "anchor": "api-variable-2c392b3e23e6fdce",
           "kind": "variable",
           "name": "type",
           "qualifiedName": "bsp::can::FrameHeader::type",
@@ -4833,11 +4915,11 @@
           "description": "数据帧或远程请求帧。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 41,
-            "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L41"
+            "line": 53,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L53"
           },
-          "parentId": "api-struct-cee3ba6df3f910d3",
+          "parentId": "api-struct-b3ba529d9ab2ed62",
           "member": {
             "access": "public",
             "static": false,
@@ -4845,13 +4927,13 @@
             "const": false
           },
           "references": [
-            "api-enum-605a73ec6ded9680"
+            "api-enum-396130d51b2712a6"
           ],
           "enumValues": []
         },
         {
-          "id": "api-enum-605a73ec6ded9680",
-          "anchor": "api-enum-605a73ec6ded9680",
+          "id": "api-enum-396130d51b2712a6",
+          "anchor": "api-enum-396130d51b2712a6",
           "kind": "enum",
           "name": "FrameType",
           "qualifiedName": "bsp::can::FrameType",
@@ -4859,9 +4941,9 @@
           "description": "帧类型：Data 携带数据负载，Remote 为 RTR 远程请求帧（不携带负载）。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 26,
+            "line": 34,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L26"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L34"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -4885,8 +4967,8 @@
           ]
         },
         {
-          "id": "api-struct-68b9c71805505cec",
-          "anchor": "api-struct-68b9c71805505cec",
+          "id": "api-struct-5391d96d50156977",
+          "anchor": "api-struct-5391d96d50156977",
           "kind": "struct",
           "name": "bsp::can::FrameView",
           "qualifiedName": "bsp::can::FrameView",
@@ -4894,22 +4976,22 @@
           "description": "一帧的只读视图：header 加借用的数据负载 span。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 48,
+            "line": 60,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L48"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L60"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": null,
           "references": [
-            "api-struct-cee3ba6df3f910d3",
-            "api-variable-2cf9df46d9993db7",
-            "api-variable-6628d095fab323c8"
+            "api-struct-b3ba529d9ab2ed62",
+            "api-variable-b0a39a156132349d",
+            "api-variable-fa3b54424a97ff68"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-2cf9df46d9993db7",
-          "anchor": "api-variable-2cf9df46d9993db7",
+          "id": "api-variable-fa3b54424a97ff68",
+          "anchor": "api-variable-fa3b54424a97ff68",
           "kind": "variable",
           "name": "data",
           "qualifiedName": "bsp::can::FrameView::data",
@@ -4917,11 +4999,11 @@
           "description": "远程帧为空；span 存活期由调用方/后端保证。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 51,
+            "line": 63,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L51"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L63"
           },
-          "parentId": "api-struct-68b9c71805505cec",
+          "parentId": "api-struct-5391d96d50156977",
           "member": {
             "access": "public",
             "static": false,
@@ -4932,8 +5014,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6628d095fab323c8",
-          "anchor": "api-variable-6628d095fab323c8",
+          "id": "api-variable-b0a39a156132349d",
+          "anchor": "api-variable-b0a39a156132349d",
           "kind": "variable",
           "name": "header",
           "qualifiedName": "bsp::can::FrameView::header",
@@ -4941,11 +5023,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 50,
-            "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L50"
+            "line": 62,
+            "column": 35,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L62"
           },
-          "parentId": "api-struct-68b9c71805505cec",
+          "parentId": "api-struct-5391d96d50156977",
           "member": {
             "access": "public",
             "static": false,
@@ -4953,13 +5035,13 @@
             "const": false
           },
           "references": [
-            "api-struct-cee3ba6df3f910d3"
+            "api-struct-b3ba529d9ab2ed62"
           ],
           "enumValues": []
         },
         {
-          "id": "api-struct-a4b34ab1ac7a8874",
-          "anchor": "api-struct-a4b34ab1ac7a8874",
+          "id": "api-struct-553e8d279f62b2d3",
+          "anchor": "api-struct-553e8d279f62b2d3",
           "kind": "struct",
           "name": "bsp::can::GlobalFilter",
           "qualifiedName": "bsp::can::GlobalFilter",
@@ -4967,24 +5049,24 @@
           "description": "GlobalFilter FDCAN 全局接受规则；bxCAN 不支持（返回 Unsupported）。未显式配置时 FDCAN 复位默认可能接受未匹配帧：需要拒收时请显式提交{}。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 210,
+            "line": 257,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L210"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L257"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": null,
           "references": [
-            "api-enum-4bef5a59609e1ff8",
-            "api-variable-536053f2fc6ae981",
-            "api-variable-7561f27e969ab761",
-            "api-variable-db33d9bc09e21a1e",
-            "api-variable-e4f940090ad4bbf9"
+            "api-enum-c4d37ffcdfa2fb40",
+            "api-variable-05e72604e21222fc",
+            "api-variable-4e6768f7fd1c01b1",
+            "api-variable-553fde9fd8596f46",
+            "api-variable-9183fcd880578801"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-e4f940090ad4bbf9",
-          "anchor": "api-variable-e4f940090ad4bbf9",
+          "id": "api-variable-4e6768f7fd1c01b1",
+          "anchor": "api-variable-4e6768f7fd1c01b1",
           "kind": "variable",
           "name": "extended",
           "qualifiedName": "bsp::can::GlobalFilter::extended",
@@ -4992,11 +5074,11 @@
           "description": "未命中扩展 ID 帧的处理。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 213,
+            "line": 260,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L213"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L260"
           },
-          "parentId": "api-struct-a4b34ab1ac7a8874",
+          "parentId": "api-struct-553e8d279f62b2d3",
           "member": {
             "access": "public",
             "static": false,
@@ -5004,13 +5086,13 @@
             "const": false
           },
           "references": [
-            "api-enum-4bef5a59609e1ff8"
+            "api-enum-c4d37ffcdfa2fb40"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-db33d9bc09e21a1e",
-          "anchor": "api-variable-db33d9bc09e21a1e",
+          "id": "api-variable-9183fcd880578801",
+          "anchor": "api-variable-9183fcd880578801",
           "kind": "variable",
           "name": "reject_extended_remote",
           "qualifiedName": "bsp::can::GlobalFilter::reject_extended_remote",
@@ -5018,11 +5100,11 @@
           "description": "是否额外拒收扩展 ID 远程帧。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 215,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L215"
+            "line": 262,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L262"
           },
-          "parentId": "api-struct-a4b34ab1ac7a8874",
+          "parentId": "api-struct-553e8d279f62b2d3",
           "member": {
             "access": "public",
             "static": false,
@@ -5033,8 +5115,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-536053f2fc6ae981",
-          "anchor": "api-variable-536053f2fc6ae981",
+          "id": "api-variable-05e72604e21222fc",
+          "anchor": "api-variable-05e72604e21222fc",
           "kind": "variable",
           "name": "reject_standard_remote",
           "qualifiedName": "bsp::can::GlobalFilter::reject_standard_remote",
@@ -5042,11 +5124,11 @@
           "description": "是否额外拒收标准 ID 远程帧。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 214,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L214"
+            "line": 261,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L261"
           },
-          "parentId": "api-struct-a4b34ab1ac7a8874",
+          "parentId": "api-struct-553e8d279f62b2d3",
           "member": {
             "access": "public",
             "static": false,
@@ -5057,8 +5139,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-7561f27e969ab761",
-          "anchor": "api-variable-7561f27e969ab761",
+          "id": "api-variable-553fde9fd8596f46",
+          "anchor": "api-variable-553fde9fd8596f46",
           "kind": "variable",
           "name": "standard",
           "qualifiedName": "bsp::can::GlobalFilter::standard",
@@ -5066,11 +5148,11 @@
           "description": "未命中标准 ID 帧的处理。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 212,
+            "line": 259,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L212"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L259"
           },
-          "parentId": "api-struct-a4b34ab1ac7a8874",
+          "parentId": "api-struct-553e8d279f62b2d3",
           "member": {
             "access": "public",
             "static": false,
@@ -5078,13 +5160,13 @@
             "const": false
           },
           "references": [
-            "api-enum-4bef5a59609e1ff8"
+            "api-enum-c4d37ffcdfa2fb40"
           ],
           "enumValues": []
         },
         {
-          "id": "api-struct-1f676f70e5b182fa",
-          "anchor": "api-struct-1f676f70e5b182fa",
+          "id": "api-struct-2c866764efcc0151",
+          "anchor": "api-struct-2c866764efcc0151",
           "kind": "struct",
           "name": "bsp::can::IdFilter",
           "qualifiedName": "bsp::can::IdFilter",
@@ -5092,30 +5174,30 @@
           "description": "基于 ID 的过滤器。index 含义随后端而定：bxCAN 为 filter bank 编号，FDCAN 为所选标准/扩展过滤器数组内的 element 下标；两者硬件布局不同，索引不可 互换。过滤只比较 ID，不区分数据帧与远程帧（RTR）类型。\n\nMask：id1 为标识符，id2 为标识符掩码（掩码位为 1 表示比较该位）。 List：id1 与 id2 为两个标识符；只列一个 ID 时令 id1 == id2。 Range：id1/id2 为闭区间下界/上界，要求 id2 >= id1，仅 FDCAN 支持。 RangeWithoutExtendedMask：语义同 Range 但旁路 EIDM，仅 FDCAN 扩展 ID 列表可用。 RxBuffer：支持专用 RX Buffer 的 FDCAN 对 id1 精确匹配，要求 mode == Mask 且 id2 == 0，命中帧写入 rx_buffer_index 指定的缓冲区；固定 RAM 返回 Unsupported。 bxCAN：Mask 映射为一个 32 位掩码 bank，标准 ID 的 List 映射为同一 bank 内 两个 16 位掩码项，且都保持同时接受该 ID 的数据帧与远程帧。一个 bxCAN bank 无法表达两个不同扩展 ID 的精确 List 语义，此类请求返回 Unsupported；如需 精确控制 IDE/RTR 位与原生 16/32 位打包，请使用不同 bank 或 BankFilter。 取值约束：id1/id2 不得超过对应 id_type 的位宽；Range 类模式下 id2 < id1 返回 InvalidArgument；RxBuffer 且 calibration_message 为真时 id_type 必须 为 Standard；RxBuffer 之外 rx_buffer_index 必须为 0（否则 InvalidArgument）， 且 calibration_message 必须为假（否则 Unsupported）。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 157,
+            "line": 187,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L157"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L187"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": null,
           "references": [
             "api-enum-11a8a5d46d9bacff",
-            "api-enum-169f06293fa91513",
-            "api-enum-8b4517ed27ca1758",
-            "api-variable-0cdd217bbb7f71e8",
-            "api-variable-13687332c78cf617",
-            "api-variable-29bb617b381cf72a",
-            "api-variable-439ab29a3023f09c",
-            "api-variable-47648342fcc49cdf",
-            "api-variable-495a34053e3b336f",
-            "api-variable-e2f79e5f5c611f74",
-            "api-variable-f790c0a1daf38962"
+            "api-enum-3e923d2322b5b9f8",
+            "api-enum-bc26c181eca72b52",
+            "api-variable-0b24618900813912",
+            "api-variable-4171a2f62f4fb543",
+            "api-variable-480650307a3b5ea1",
+            "api-variable-56962161de9d963e",
+            "api-variable-5cadf5b98724db40",
+            "api-variable-63139883ddb25392",
+            "api-variable-bdddc588c50c73f6",
+            "api-variable-db7f9dfe51b96889"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-f790c0a1daf38962",
-          "anchor": "api-variable-f790c0a1daf38962",
+          "id": "api-variable-63139883ddb25392",
+          "anchor": "api-variable-63139883ddb25392",
           "kind": "variable",
           "name": "action",
           "qualifiedName": "bsp::can::IdFilter::action",
@@ -5123,11 +5205,11 @@
           "description": "命中后的处理动作。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 162,
-            "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L162"
+            "line": 192,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L192"
           },
-          "parentId": "api-struct-1f676f70e5b182fa",
+          "parentId": "api-struct-2c866764efcc0151",
           "member": {
             "access": "public",
             "static": false,
@@ -5135,13 +5217,13 @@
             "const": false
           },
           "references": [
-            "api-enum-8b4517ed27ca1758"
+            "api-enum-bc26c181eca72b52"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-0cdd217bbb7f71e8",
-          "anchor": "api-variable-0cdd217bbb7f71e8",
+          "id": "api-variable-480650307a3b5ea1",
+          "anchor": "api-variable-480650307a3b5ea1",
           "kind": "variable",
           "name": "calibration_message",
           "qualifiedName": "bsp::can::IdFilter::calibration_message",
@@ -5149,11 +5231,11 @@
           "description": "专用 RxBuffer 的 FDCAN 标准 ID 校准报文标记；固定 RAM 不支持。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 166,
+            "line": 196,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L166"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L196"
           },
-          "parentId": "api-struct-1f676f70e5b182fa",
+          "parentId": "api-struct-2c866764efcc0151",
           "member": {
             "access": "public",
             "static": false,
@@ -5164,8 +5246,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-e2f79e5f5c611f74",
-          "anchor": "api-variable-e2f79e5f5c611f74",
+          "id": "api-variable-bdddc588c50c73f6",
+          "anchor": "api-variable-bdddc588c50c73f6",
           "kind": "variable",
           "name": "id1",
           "qualifiedName": "bsp::can::IdFilter::id1",
@@ -5173,11 +5255,11 @@
           "description": "标识符或区间下界。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 163,
+            "line": 193,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L163"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L193"
           },
-          "parentId": "api-struct-1f676f70e5b182fa",
+          "parentId": "api-struct-2c866764efcc0151",
           "member": {
             "access": "public",
             "static": false,
@@ -5188,8 +5270,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-495a34053e3b336f",
-          "anchor": "api-variable-495a34053e3b336f",
+          "id": "api-variable-56962161de9d963e",
+          "anchor": "api-variable-56962161de9d963e",
           "kind": "variable",
           "name": "id2",
           "qualifiedName": "bsp::can::IdFilter::id2",
@@ -5197,11 +5279,11 @@
           "description": "掩码、第二标识符或区间上界。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 164,
+            "line": 194,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L164"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L194"
           },
-          "parentId": "api-struct-1f676f70e5b182fa",
+          "parentId": "api-struct-2c866764efcc0151",
           "member": {
             "access": "public",
             "static": false,
@@ -5212,8 +5294,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-13687332c78cf617",
-          "anchor": "api-variable-13687332c78cf617",
+          "id": "api-variable-0b24618900813912",
+          "anchor": "api-variable-0b24618900813912",
           "kind": "variable",
           "name": "id_type",
           "qualifiedName": "bsp::can::IdFilter::id_type",
@@ -5221,11 +5303,11 @@
           "description": "选择标准/扩展过滤器数组。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 160,
-            "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L160"
+            "line": 190,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L190"
           },
-          "parentId": "api-struct-1f676f70e5b182fa",
+          "parentId": "api-struct-2c866764efcc0151",
           "member": {
             "access": "public",
             "static": false,
@@ -5238,8 +5320,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-439ab29a3023f09c",
-          "anchor": "api-variable-439ab29a3023f09c",
+          "id": "api-variable-db7f9dfe51b96889",
+          "anchor": "api-variable-db7f9dfe51b96889",
           "kind": "variable",
           "name": "index",
           "qualifiedName": "bsp::can::IdFilter::index",
@@ -5247,11 +5329,11 @@
           "description": "bxCAN bank 号或 FDCAN element 下标。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 159,
+            "line": 189,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L159"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L189"
           },
-          "parentId": "api-struct-1f676f70e5b182fa",
+          "parentId": "api-struct-2c866764efcc0151",
           "member": {
             "access": "public",
             "static": false,
@@ -5262,8 +5344,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-47648342fcc49cdf",
-          "anchor": "api-variable-47648342fcc49cdf",
+          "id": "api-variable-4171a2f62f4fb543",
+          "anchor": "api-variable-4171a2f62f4fb543",
           "kind": "variable",
           "name": "mode",
           "qualifiedName": "bsp::can::IdFilter::mode",
@@ -5271,11 +5353,11 @@
           "description": "匹配方式。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 161,
-            "column": 16,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L161"
+            "line": 191,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L191"
           },
-          "parentId": "api-struct-1f676f70e5b182fa",
+          "parentId": "api-struct-2c866764efcc0151",
           "member": {
             "access": "public",
             "static": false,
@@ -5283,13 +5365,13 @@
             "const": false
           },
           "references": [
-            "api-enum-169f06293fa91513"
+            "api-enum-3e923d2322b5b9f8"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-29bb617b381cf72a",
-          "anchor": "api-variable-29bb617b381cf72a",
+          "id": "api-variable-5cadf5b98724db40",
+          "anchor": "api-variable-5cadf5b98724db40",
           "kind": "variable",
           "name": "rx_buffer_index",
           "qualifiedName": "bsp::can::IdFilter::rx_buffer_index",
@@ -5297,11 +5379,11 @@
           "description": "FDCAN RxBuffer 目标缓冲区下标。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 165,
+            "line": 195,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L165"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L195"
           },
-          "parentId": "api-struct-1f676f70e5b182fa",
+          "parentId": "api-struct-2c866764efcc0151",
           "member": {
             "access": "public",
             "static": false,
@@ -5347,8 +5429,8 @@
           ]
         },
         {
-          "id": "api-typedef-61a4498868277048",
-          "anchor": "api-typedef-61a4498868277048",
+          "id": "api-typedef-8baa1262a3370ac2",
+          "anchor": "api-typedef-8baa1262a3370ac2",
           "kind": "typedef",
           "name": "NativeHandle",
           "qualifiedName": "bsp::can::NativeHandle",
@@ -5356,9 +5438,9 @@
           "description": "由编译期 HAL 后端选择决定的 HAL 句柄类型。",
           "location": {
             "path": "bsp/can_driver2/can_driver.hpp",
-            "line": 149,
+            "line": 155,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L149"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver.hpp#L155"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -5371,8 +5453,8 @@
           "enumValues": []
         },
         {
-          "id": "api-enum-4bef5a59609e1ff8",
-          "anchor": "api-enum-4bef5a59609e1ff8",
+          "id": "api-enum-c4d37ffcdfa2fb40",
+          "anchor": "api-enum-c4d37ffcdfa2fb40",
           "kind": "enum",
           "name": "NonMatchingAction",
           "qualifiedName": "bsp::can::NonMatchingAction",
@@ -5380,9 +5462,9 @@
           "description": "FDCAN 全局过滤器对未命中帧的处理：拒收，或存入指定 FIFO（该 FIFO 未分配 element 时返回 NoCapacity）。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 204,
+            "line": 246,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L204"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L246"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -5411,8 +5493,8 @@
           ]
         },
         {
-          "id": "api-enum-fce25224b3f6358f",
-          "anchor": "api-enum-fce25224b3f6358f",
+          "id": "api-enum-46043be5e0d260ba",
+          "anchor": "api-enum-46043be5e0d260ba",
           "kind": "enum",
           "name": "RxFifo",
           "qualifiedName": "bsp::can::RxFifo",
@@ -5420,9 +5502,9 @@
           "description": "命中帧写入的 Rx FIFO。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 174,
+            "line": 212,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L174"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L212"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -5446,8 +5528,8 @@
           ]
         },
         {
-          "id": "api-enum-3a1160d24449b069",
-          "anchor": "api-enum-3a1160d24449b069",
+          "id": "api-enum-e8976e05ea68a506",
+          "anchor": "api-enum-e8976e05ea68a506",
           "kind": "enum",
           "name": "SendResult",
           "qualifiedName": "bsp::can::SendResult",
@@ -5455,9 +5537,9 @@
           "description": "send() 的结果。Submitted/Queued/ReplacedOldest 只表示帧已被受理，均不保证 真正发送成功，也不包含 CAN 仲裁顺序信息。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 90,
+            "line": 114,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L90"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L114"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -5516,8 +5598,8 @@
           ]
         },
         {
-          "id": "api-enum-fc4fbf4c73aac232",
-          "anchor": "api-enum-fc4fbf4c73aac232",
+          "id": "api-enum-1c06edf7ac47791e",
+          "anchor": "api-enum-1c06edf7ac47791e",
           "kind": "enum",
           "name": "Status",
           "qualifiedName": "bsp::can::Status",
@@ -5525,9 +5607,9 @@
           "description": "统一状态码；各 API 只返回与其相关的子集。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 57,
+            "line": 81,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L57"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L81"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -5537,7 +5619,7 @@
             "const": false
           },
           "references": [
-            "api-class-a206bedeaa8964ee"
+            "api-class-9f62762617ead6e3"
           ],
           "enumValues": [
             {
@@ -5608,8 +5690,112 @@
           ]
         },
         {
-          "id": "api-struct-aff305fed64704a7",
-          "anchor": "api-struct-aff305fed64704a7",
+          "id": "api-struct-4419cce6a6a588e1",
+          "anchor": "api-struct-4419cce6a6a588e1",
+          "kind": "struct",
+          "name": "bsp::can::TrafficCounters",
+          "qualifiedName": "bsp::can::TrafficCounters",
+          "signature": "",
+          "description": "Can 单个实例的累计帧数快照；从对象构造起计数，uint32_t 自然回绕。",
+          "location": {
+            "path": "bsp/can_driver2/can_driver_types.hpp",
+            "line": 67,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L67"
+          },
+          "parentId": "api-namespace-6fb3a57881748479",
+          "member": null,
+          "references": [
+            "api-class-9f62762617ead6e3",
+            "api-function-7b52df06dce4285c",
+            "api-variable-1ebdc05a8902a0f5",
+            "api-variable-c132ea3bcdf946e5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-7b52df06dce4285c",
+          "anchor": "api-function-7b52df06dce4285c",
+          "kind": "function",
+          "name": "operator-",
+          "qualifiedName": "bsp::can::TrafficCounters::operator-",
+          "signature": "TrafficCounters bsp::can::TrafficCounters::operator- (const TrafficCounters &other) const noexcept",
+          "description": "",
+          "location": {
+            "path": "bsp/can_driver2/can_driver_types.hpp",
+            "line": 72,
+            "column": 31,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L72"
+          },
+          "parentId": "api-struct-4419cce6a6a588e1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-struct-4419cce6a6a588e1",
+            "api-variable-1ebdc05a8902a0f5",
+            "api-variable-c132ea3bcdf946e5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c132ea3bcdf946e5",
+          "anchor": "api-variable-c132ea3bcdf946e5",
+          "kind": "variable",
+          "name": "rx_frames",
+          "qualifiedName": "bsp::can::TrafficCounters::rx_frames",
+          "signature": "std::uint32_t bsp::can::TrafficCounters::rx_frames",
+          "description": "成功读出并可交付的 RX 帧数，与回调数量无关。",
+          "location": {
+            "path": "bsp/can_driver2/can_driver_types.hpp",
+            "line": 69,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L69"
+          },
+          "parentId": "api-struct-4419cce6a6a588e1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-7b52df06dce4285c"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-1ebdc05a8902a0f5",
+          "anchor": "api-variable-1ebdc05a8902a0f5",
+          "kind": "variable",
+          "name": "tx_submitted_frames",
+          "qualifiedName": "bsp::can::TrafficCounters::tx_submitted_frames",
+          "signature": "std::uint32_t bsp::can::TrafficCounters::tx_submitted_frames",
+          "description": "成功写入硬件的 TX 帧数，不保证最终发送成功。",
+          "location": {
+            "path": "bsp/can_driver2/can_driver_types.hpp",
+            "line": 70,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L70"
+          },
+          "parentId": "api-struct-4419cce6a6a588e1",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-7b52df06dce4285c"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-af7a1d29101fd473",
+          "anchor": "api-struct-af7a1d29101fd473",
           "kind": "struct",
           "name": "bsp::can::TxDelayCompensation",
           "qualifiedName": "bsp::can::TxDelayCompensation",
@@ -5617,22 +5803,22 @@
           "description": "发送延迟补偿配置，仅 FDCAN 支持。mtq 为 FDCAN 内核时钟周期，不是预分频后的 tq。 硬件始终自动测量环回延迟，offset_mtq 是在实测延迟之后的 SSP 附加偏移。 enabled 为 false 时仅禁用补偿，其余字段被忽略；不调用配置 API 则保持板级设置。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 79,
+            "line": 103,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L79"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L103"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": null,
           "references": [
-            "api-variable-33a0bf731d0439fa",
-            "api-variable-57aa5eb06465ce41",
-            "api-variable-611eac66d1766b61"
+            "api-variable-b34e60a6ee69cf79",
+            "api-variable-ecde91de7b06fd07",
+            "api-variable-f61e5d6e9e754fef"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-33a0bf731d0439fa",
-          "anchor": "api-variable-33a0bf731d0439fa",
+          "id": "api-variable-b34e60a6ee69cf79",
+          "anchor": "api-variable-b34e60a6ee69cf79",
           "kind": "variable",
           "name": "enabled",
           "qualifiedName": "bsp::can::TxDelayCompensation::enabled",
@@ -5640,11 +5826,11 @@
           "description": "",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 81,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L81"
+            "line": 105,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L105"
           },
-          "parentId": "api-struct-aff305fed64704a7",
+          "parentId": "api-struct-af7a1d29101fd473",
           "member": {
             "access": "public",
             "static": false,
@@ -5655,8 +5841,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-57aa5eb06465ce41",
-          "anchor": "api-variable-57aa5eb06465ce41",
+          "id": "api-variable-ecde91de7b06fd07",
+          "anchor": "api-variable-ecde91de7b06fd07",
           "kind": "variable",
           "name": "filter_mtq",
           "qualifiedName": "bsp::can::TxDelayCompensation::filter_mtq",
@@ -5664,11 +5850,11 @@
           "description": "延迟测量过滤窗口，启用时合法范围为 0..127。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 83,
+            "line": 107,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L83"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L107"
           },
-          "parentId": "api-struct-aff305fed64704a7",
+          "parentId": "api-struct-af7a1d29101fd473",
           "member": {
             "access": "public",
             "static": false,
@@ -5679,8 +5865,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-611eac66d1766b61",
-          "anchor": "api-variable-611eac66d1766b61",
+          "id": "api-variable-f61e5d6e9e754fef",
+          "anchor": "api-variable-f61e5d6e9e754fef",
           "kind": "variable",
           "name": "offset_mtq",
           "qualifiedName": "bsp::can::TxDelayCompensation::offset_mtq",
@@ -5688,11 +5874,11 @@
           "description": "SSP 附加偏移，启用时合法范围为 0..127。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 82,
+            "line": 106,
             "column": 19,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L82"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L106"
           },
-          "parentId": "api-struct-aff305fed64704a7",
+          "parentId": "api-struct-af7a1d29101fd473",
           "member": {
             "access": "public",
             "static": false,
@@ -5720,17 +5906,17 @@
           "member": null,
           "references": [
             "api-define-19abf947ec10dce0",
-            "api-define-6e822fe6248d47c1",
+            "api-define-336995dbece98c2e",
             "api-define-bb7076373ab560f1",
-            "api-enum-fc4fbf4c73aac232",
+            "api-enum-1c06edf7ac47791e",
             "api-function-53470078c8876f5b",
             "api-function-53c630d5637ee6a4",
             "api-function-7a53ff5025f182c8",
             "api-function-c447c247740ae722",
             "api-function-d9fa691ac44fd6c7",
             "api-function-fe8034ed31ed2a75",
-            "api-struct-1f676f70e5b182fa",
-            "api-struct-d02ef904485cde60",
+            "api-struct-2c866764efcc0151",
+            "api-struct-af27a08b698421d8",
             "api-variable-1a9450346eceb139",
             "api-variable-258b07838b332bca",
             "api-variable-4b0eb2c7452e0270",
@@ -5765,7 +5951,7 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232",
+            "api-enum-1c06edf7ac47791e",
             "api-function-7a53ff5025f182c8",
             "api-function-d9fa691ac44fd6c7"
           ],
@@ -5793,11 +5979,11 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232",
+            "api-enum-1c06edf7ac47791e",
             "api-function-53470078c8876f5b",
             "api-function-c447c247740ae722",
             "api-function-fe8034ed31ed2a75",
-            "api-struct-1f676f70e5b182fa",
+            "api-struct-2c866764efcc0151",
             "api-variable-258b07838b332bca",
             "api-variable-4b0eb2c7452e0270",
             "api-variable-768929cc7926a035",
@@ -5831,11 +6017,11 @@
             "const": false
           },
           "references": [
-            "api-enum-fc4fbf4c73aac232",
+            "api-enum-1c06edf7ac47791e",
             "api-function-53470078c8876f5b",
             "api-function-c447c247740ae722",
             "api-function-fe8034ed31ed2a75",
-            "api-struct-d02ef904485cde60"
+            "api-struct-af27a08b698421d8"
           ],
           "enumValues": []
         },
@@ -6129,7 +6315,7 @@
             "const": false
           },
           "references": [
-            "api-define-6e822fe6248d47c1",
+            "api-define-336995dbece98c2e",
             "api-function-7a53ff5025f182c8",
             "api-function-d9fa691ac44fd6c7"
           ],
@@ -6162,8 +6348,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-1b9ca085229a1be1",
-          "anchor": "api-function-1b9ca085229a1be1",
+          "id": "api-function-51cfff5d108817e3",
+          "anchor": "api-function-51cfff5d108817e3",
           "kind": "function",
           "name": "is_fd_length",
           "qualifiedName": "bsp::can::is_fd_length",
@@ -6171,9 +6357,9 @@
           "description": "DLC 到字节数映射中允许的 FD 长度；经典长度 0..8 也在此集合内。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 104,
+            "line": 128,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L104"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L128"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -6186,8 +6372,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-a7fd70f757d4cf54",
-          "anchor": "api-function-a7fd70f757d4cf54",
+          "id": "api-function-e71f8aa41a707dc5",
+          "anchor": "api-function-e71f8aa41a707dc5",
           "kind": "function",
           "name": "is_valid_id",
           "qualifiedName": "bsp::can::is_valid_id",
@@ -6195,9 +6381,9 @@
           "description": "校验标识符是否落在该类型可表示的位宽内（Standard ≤ 0x7FF，Extended ≤ 0x1FFFFFFF）。",
           "location": {
             "path": "bsp/can_driver2/can_driver_types.hpp",
-            "line": 111,
+            "line": 135,
             "column": 17,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L111"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/can_driver2/can_driver_types.hpp#L135"
           },
           "parentId": "api-namespace-6fb3a57881748479",
           "member": {
@@ -6213,8 +6399,8 @@
         }
       ],
       "inheritanceRelations": [],
-      "symbolCount": 145,
-      "documentedSymbolCount": 121
+      "symbolCount": 152,
+      "documentedSymbolCount": 127
     },
     {
       "targetKind": "package",
