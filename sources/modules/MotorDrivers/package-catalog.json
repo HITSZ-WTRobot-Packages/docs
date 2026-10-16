@@ -1,17 +1,39 @@
 {
   "formatVersion": 1,
   "moduleId": "MotorDrivers",
-  "moduleSha": "8ed1d36cb23f6baac1ecebb4702d214af673b8f5",
+  "moduleSha": "64c49b43e8088e1ac581b451a282cc81f3931475",
   "packages": [
+    {
+      "name": "PosController",
+      "pkgname": "MotorController::PosController",
+      "version": "0.1.0",
+      "manifestPath": "controllers/pos_controller/cpkg.toml",
+      "packagePath": "controllers/pos_controller",
+      "dependencyNames": [
+        "MotorDrivers::Core",
+        "libs::PIDMotor"
+      ]
+    },
+    {
+      "name": "VelController",
+      "pkgname": "MotorController::VelController",
+      "version": "0.1.0",
+      "manifestPath": "controllers/vel_controller/cpkg.toml",
+      "packagePath": "controllers/vel_controller",
+      "dependencyNames": [
+        "MotorDrivers::Core",
+        "libs::PIDMotor"
+      ]
+    },
     {
       "name": "Controller",
       "pkgname": "MotorDrivers::Controller",
       "version": "0.1.0",
-      "manifestPath": "controllers/cpkg.toml",
-      "packagePath": "controllers",
+      "manifestPath": "controllers/_/cpkg.toml",
+      "packagePath": "controllers/_",
       "dependencyNames": [
-        "MotorDrivers::Core",
-        "libs::PIDMotor"
+        "MotorController::PosController",
+        "MotorController::VelController"
       ]
     },
     {

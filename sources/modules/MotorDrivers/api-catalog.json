@@ -4,213 +4,162 @@
   "references": [
     {
       "targetKind": "package",
-      "targetId": "motordrivers--controller",
-      "displayName": "MotorDrivers::Controller",
+      "targetId": "motorcontroller--poscontroller",
+      "displayName": "MotorController::PosController",
       "moduleId": "MotorDrivers",
-      "packageSlug": "motordrivers--controller",
+      "packageSlug": "motorcontroller--poscontroller",
       "sourceBranch": "main",
       "inputPaths": [
-        "controllers/motor_pos_controller.cpp",
-        "controllers/motor_pos_controller.hpp",
-        "controllers/motor_vel_controller.cpp",
-        "controllers/motor_vel_controller.hpp"
+        "controllers/pos_controller/motor_pos_controller.cpp",
+        "controllers/pos_controller/motor_pos_controller.hpp"
       ],
       "status": "sparse",
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "6 of 39 public API symbols have no description."
+          "message": "3 of 21 public API symbols have no description."
         }
       ],
       "symbols": [
         {
-          "id": "api-namespace-d41e911e8032083d",
-          "anchor": "api-namespace-d41e911e8032083d",
+          "id": "api-namespace-9e86f863102a4cfc",
+          "anchor": "api-namespace-9e86f863102a4cfc",
           "kind": "namespace",
           "name": "controllers",
           "qualifiedName": "controllers",
           "signature": "",
           "description": "",
           "location": {
-            "path": "controllers/motor_pos_controller.cpp",
+            "path": "controllers/pos_controller/motor_pos_controller.cpp",
             "line": 10,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.cpp#L10"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.cpp#L10"
           },
           "parentId": null,
           "member": null,
           "references": [
-            "api-class-28eca7ce34ce50bd",
-            "api-class-7ae9cb29d575dd87"
+            "api-class-e9c64ed859df1d3f"
           ],
           "enumValues": []
         },
         {
-          "id": "api-file-a8f0e862e677bd3d",
-          "anchor": "api-file-a8f0e862e677bd3d",
+          "id": "api-file-fa40cf1f46389c27",
+          "anchor": "api-file-fa40cf1f46389c27",
           "kind": "file",
-          "name": "controllers/motor_pos_controller.cpp",
-          "qualifiedName": "controllers/motor_pos_controller.cpp",
+          "name": "controllers/pos_controller/motor_pos_controller.cpp",
+          "qualifiedName": "controllers/pos_controller/motor_pos_controller.cpp",
           "signature": "",
           "description": "通用位置控制器实现\n\nsyhanjin 2026-01-28",
           "location": {
-            "path": "controllers/motor_pos_controller.cpp",
+            "path": "controllers/pos_controller/motor_pos_controller.cpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.cpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.cpp"
           },
           "parentId": null,
           "member": null,
           "references": [
-            "api-file-3679cc75c7a7b98b",
-            "api-namespace-d41e911e8032083d"
+            "api-namespace-9e86f863102a4cfc"
           ],
           "enumValues": []
         },
         {
-          "id": "api-file-3679cc75c7a7b98b",
-          "anchor": "api-file-3679cc75c7a7b98b",
+          "id": "api-file-3e4330f37d0ec9c5",
+          "anchor": "api-file-3e4330f37d0ec9c5",
           "kind": "file",
-          "name": "controllers/motor_pos_controller.hpp",
-          "qualifiedName": "controllers/motor_pos_controller.hpp",
+          "name": "controllers/pos_controller/motor_pos_controller.hpp",
+          "qualifiedName": "controllers/pos_controller/motor_pos_controller.hpp",
           "signature": "",
           "description": "通用位置控制器\n\nsyhanjin 2026-01-28 ControlMode InternalPos ：电机只支持位置指令时，直接把目标角度交给驱动器 InternalVelPos ：电机同时支持速度指令和位置指令时，位置控制器直接发送位置指令 内部速度模式：位置环先算出目标角速度，再交给驱动器内部速度环 外部 PID 模式：位置环算目标角速度，速度环再算电流输出 这个控制器统一处理“目标是一个角度”的场景。 根据电机支持的能力和的选择，它会自动走不同的控制路径：",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": null,
             "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp"
           },
           "parentId": null,
           "member": null,
           "references": [
-            "api-class-28eca7ce34ce50bd",
-            "api-file-a8f0e862e677bd3d",
-            "api-namespace-d41e911e8032083d",
-            "api-struct-f0a1af8665883eb7"
+            "api-class-e9c64ed859df1d3f",
+            "api-namespace-9e86f863102a4cfc",
+            "api-struct-83c58756866f4ef3"
           ],
           "enumValues": []
         },
         {
-          "id": "api-file-7de8c7f8db3446ca",
-          "anchor": "api-file-7de8c7f8db3446ca",
-          "kind": "file",
-          "name": "controllers/motor_vel_controller.cpp",
-          "qualifiedName": "controllers/motor_vel_controller.cpp",
-          "signature": "",
-          "description": "通用速度控制器实现\n\nsyhanjin 2026-01-28",
-          "location": {
-            "path": "controllers/motor_vel_controller.cpp",
-            "line": null,
-            "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.cpp"
-          },
-          "parentId": null,
-          "member": null,
-          "references": [
-            "api-file-edc9102cf57ebba8",
-            "api-namespace-d41e911e8032083d"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-file-edc9102cf57ebba8",
-          "anchor": "api-file-edc9102cf57ebba8",
-          "kind": "file",
-          "name": "controllers/motor_vel_controller.hpp",
-          "qualifiedName": "controllers/motor_vel_controller.hpp",
-          "signature": "",
-          "description": "通用速度控制器\n\nsyhanjin 2026-01-28 _rad _rps getVelocity() setInternalVelocity() 这里的“速度”应理解为电机角速度参考。 整个电机控制驱动里，速度默认单位都是 rpm，除非变量名明确带有、等后缀。 控制器要求参考值和绑定电机的/保持一致。",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": null,
-            "column": null,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp"
-          },
-          "parentId": null,
-          "member": null,
-          "references": [
-            "api-class-7ae9cb29d575dd87",
-            "api-file-7de8c7f8db3446ca",
-            "api-namespace-d41e911e8032083d",
-            "api-struct-fce47fad9758999c"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-class-28eca7ce34ce50bd",
-          "anchor": "api-class-28eca7ce34ce50bd",
+          "id": "api-class-e9c64ed859df1d3f",
+          "anchor": "api-class-e9c64ed859df1d3f",
           "kind": "class",
           "name": "controllers::MotorPosController",
           "qualifiedName": "controllers::MotorPosController",
           "signature": "",
           "description": "电机位置控制器\n\n对初学者来说，可以把它理解成“把目标角度逐步变成驱动器能理解的控制命令”的中间层。",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 29,
             "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L29"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L29"
           },
-          "parentId": "api-namespace-d41e911e8032083d",
+          "parentId": "api-namespace-9e86f863102a4cfc",
           "member": null,
           "references": [
-            "api-function-a236e618edfa1eae",
-            "api-function-b76a16a342bced96",
-            "api-function-b7fe3ed5255fba0a",
-            "api-function-dbbafd4e564ebd8e",
-            "api-struct-f0a1af8665883eb7",
-            "api-variable-0657565c55de579a",
-            "api-variable-100b2de4b7bc29e9",
-            "api-variable-48e512270d1aedea",
-            "api-variable-4ed60c0e167e6c34",
-            "api-variable-7f917c4eb0ac50b2",
-            "api-variable-859f04b174dd36c6",
-            "api-variable-85b531210c7dc1f2",
-            "api-variable-8dd5ffb4b0b31748",
-            "api-variable-aa612da995d6340a"
+            "api-function-3ab3759a866d5bfb",
+            "api-function-b264dacbd98d5c15",
+            "api-function-c3903b59daadc6c5",
+            "api-function-d0503b22be917f75",
+            "api-struct-83c58756866f4ef3",
+            "api-variable-07331d3ee5f14745",
+            "api-variable-1fadc8ce56fba027",
+            "api-variable-398d8d465195ca5c",
+            "api-variable-5e7c703b1b6c6bfb",
+            "api-variable-609c596947282d76",
+            "api-variable-7c78c7a2f28e8302",
+            "api-variable-bb827ed5075c4fc2",
+            "api-variable-cadc530394a21b21",
+            "api-variable-d7bf55121bf9f287"
           ],
           "enumValues": []
         },
         {
-          "id": "api-struct-f0a1af8665883eb7",
-          "anchor": "api-struct-f0a1af8665883eb7",
+          "id": "api-struct-83c58756866f4ef3",
+          "anchor": "api-struct-83c58756866f4ef3",
           "kind": "struct",
           "name": "controllers::MotorPosController::Config",
           "qualifiedName": "controllers::MotorPosController::Config",
           "signature": "",
           "description": "位置控制器配置",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 35,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L35"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L35"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": null,
           "references": [
-            "api-variable-0bf7044a2d20b161",
-            "api-variable-5ae8dea89538e706",
-            "api-variable-6b4ffc2032b7b064",
-            "api-variable-bd50f9432ac40286",
-            "api-variable-f1b9cd3ac61bd5e6"
+            "api-variable-3236f501b1765e61",
+            "api-variable-653c76400edf9c15",
+            "api-variable-9aecc2995f2ae70d",
+            "api-variable-cb03a4dfae2a40ec",
+            "api-variable-f88a23f7dbd664fe"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-bd50f9432ac40286",
-          "anchor": "api-variable-bd50f9432ac40286",
+          "id": "api-variable-3236f501b1765e61",
+          "anchor": "api-variable-3236f501b1765e61",
           "kind": "variable",
           "name": "ctrl_mode",
           "qualifiedName": "controllers::MotorPosController::Config::ctrl_mode",
           "signature": "ControlMode controllers::MotorPosController::Config::ctrl_mode",
           "description": "控制模式，Default 时跟随电机默认模式",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 41,
             "column": 21,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L41"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L41"
           },
-          "parentId": "api-struct-f0a1af8665883eb7",
+          "parentId": "api-struct-83c58756866f4ef3",
           "member": {
             "access": "public",
             "static": false,
@@ -221,20 +170,20 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-6b4ffc2032b7b064",
-          "anchor": "api-variable-6b4ffc2032b7b064",
+          "id": "api-variable-cb03a4dfae2a40ec",
+          "anchor": "api-variable-cb03a4dfae2a40ec",
           "kind": "variable",
           "name": "internal_set_ratio",
           "qualifiedName": "controllers::MotorPosController::Config::internal_set_ratio",
           "signature": "uint32_t controllers::MotorPosController::Config::internal_set_ratio",
           "description": "当驱动器支持内部位置指令时，发送频率相对于控制器 update 频率的分频。 用于只需要较低频率维持控制指令，同时需要节约总线负载的情况\n\n如果只能发送内部速度指令，则会降速度指令的频率为位置环更新频率 应 >= 1",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 49,
             "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L49"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L49"
           },
-          "parentId": "api-struct-f0a1af8665883eb7",
+          "parentId": "api-struct-83c58756866f4ef3",
           "member": {
             "access": "public",
             "static": false,
@@ -245,20 +194,20 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f1b9cd3ac61bd5e6",
-          "anchor": "api-variable-f1b9cd3ac61bd5e6",
+          "id": "api-variable-9aecc2995f2ae70d",
+          "anchor": "api-variable-9aecc2995f2ae70d",
           "kind": "variable",
           "name": "pos_vel_freq_ratio",
           "qualifiedName": "controllers::MotorPosController::Config::pos_vel_freq_ratio",
           "signature": "uint32_t controllers::MotorPosController::Config::pos_vel_freq_ratio",
           "description": "位置环相对更新周期的分频，应 >= 1",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 39,
             "column": 26,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L39"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L39"
           },
-          "parentId": "api-struct-f0a1af8665883eb7",
+          "parentId": "api-struct-83c58756866f4ef3",
           "member": {
             "access": "public",
             "static": false,
@@ -269,20 +218,20 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-5ae8dea89538e706",
-          "anchor": "api-variable-5ae8dea89538e706",
+          "id": "api-variable-f88a23f7dbd664fe",
+          "anchor": "api-variable-f88a23f7dbd664fe",
           "kind": "variable",
           "name": "position_pid",
           "qualifiedName": "controllers::MotorPosController::Config::position_pid",
           "signature": "PIDMotor::Config controllers::MotorPosController::Config::position_pid",
           "description": "位置环 PID 配置，用于“角度 -> 目标角速度”",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 37,
             "column": 26,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L37"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L37"
           },
-          "parentId": "api-struct-f0a1af8665883eb7",
+          "parentId": "api-struct-83c58756866f4ef3",
           "member": {
             "access": "public",
             "static": false,
@@ -293,20 +242,20 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0bf7044a2d20b161",
-          "anchor": "api-variable-0bf7044a2d20b161",
+          "id": "api-variable-653c76400edf9c15",
+          "anchor": "api-variable-653c76400edf9c15",
           "kind": "variable",
           "name": "velocity_pid",
           "qualifiedName": "controllers::MotorPosController::Config::velocity_pid",
           "signature": "PIDMotor::Config controllers::MotorPosController::Config::velocity_pid",
           "description": "速度环 PID 配置，用于“目标角速度 -> 电流输出”",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 38,
             "column": 26,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L38"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L38"
           },
-          "parentId": "api-struct-f0a1af8665883eb7",
+          "parentId": "api-struct-83c58756866f4ef3",
           "member": {
             "access": "public",
             "static": false,
@@ -317,20 +266,20 @@
           "enumValues": []
         },
         {
-          "id": "api-function-b76a16a342bced96",
-          "anchor": "api-function-b76a16a342bced96",
+          "id": "api-function-b264dacbd98d5c15",
+          "anchor": "api-function-b264dacbd98d5c15",
           "kind": "function",
           "name": "MotorPosController",
           "qualifiedName": "controllers::MotorPosController::MotorPosController",
           "signature": "controllers::MotorPosController::MotorPosController (motors::IMotor *motor, const Config &cfg)",
           "description": "motor 被控制的电机 cfg 控制器配置",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 56,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L56"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L56"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "public",
             "static": false,
@@ -338,25 +287,25 @@
             "const": false
           },
           "references": [
-            "api-struct-f0a1af8665883eb7"
+            "api-struct-83c58756866f4ef3"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-4ed60c0e167e6c34",
-          "anchor": "api-variable-4ed60c0e167e6c34",
+          "id": "api-variable-398d8d465195ca5c",
+          "anchor": "api-variable-398d8d465195ca5c",
           "kind": "variable",
           "name": "internal_set_prescaler_",
           "qualifiedName": "controllers::MotorPosController::internal_set_prescaler_",
           "signature": "size_t controllers::MotorPosController::internal_set_prescaler_",
           "description": "内部指令发送分频计数器",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 85,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L85"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L85"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "private",
             "static": false,
@@ -367,20 +316,20 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-0657565c55de579a",
-          "anchor": "api-variable-0657565c55de579a",
+          "id": "api-variable-bb827ed5075c4fc2",
+          "anchor": "api-variable-bb827ed5075c4fc2",
           "kind": "variable",
           "name": "internal_set_ratio_",
           "qualifiedName": "controllers::MotorPosController::internal_set_ratio_",
           "signature": "uint32_t controllers::MotorPosController::internal_set_ratio_",
           "description": "内部指令发送分频比",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 86,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L86"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L86"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "private",
             "static": false,
@@ -391,20 +340,20 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-859f04b174dd36c6",
-          "anchor": "api-variable-859f04b174dd36c6",
+          "id": "api-variable-07331d3ee5f14745",
+          "anchor": "api-variable-07331d3ee5f14745",
           "kind": "variable",
           "name": "kNoLimit",
           "qualifiedName": "controllers::MotorPosController::kNoLimit",
           "signature": "float controllers::MotorPosController::kNoLimit",
           "description": "",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 71,
             "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L71"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L71"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "public",
             "static": true,
@@ -412,25 +361,25 @@
             "const": false
           },
           "references": [
-            "api-function-a236e618edfa1eae"
+            "api-function-d0503b22be917f75"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-85b531210c7dc1f2",
-          "anchor": "api-variable-85b531210c7dc1f2",
+          "id": "api-variable-d7bf55121bf9f287",
+          "anchor": "api-variable-d7bf55121bf9f287",
           "kind": "variable",
           "name": "max_velocity_",
           "qualifiedName": "controllers::MotorPosController::max_velocity_",
           "signature": "float controllers::MotorPosController::max_velocity_",
           "description": "位置环输出速度限幅",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 81,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L81"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L81"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "private",
             "static": false,
@@ -438,25 +387,25 @@
             "const": false
           },
           "references": [
-            "api-variable-859f04b174dd36c6"
+            "api-variable-07331d3ee5f14745"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-7f917c4eb0ac50b2",
-          "anchor": "api-variable-7f917c4eb0ac50b2",
+          "id": "api-variable-609c596947282d76",
+          "anchor": "api-variable-609c596947282d76",
           "kind": "variable",
           "name": "pos_vel_freq_ratio_",
           "qualifiedName": "controllers::MotorPosController::pos_vel_freq_ratio_",
           "signature": "uint32_t controllers::MotorPosController::pos_vel_freq_ratio_",
           "description": "位置环相对 update 的分频比",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 83,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L83"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L83"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "private",
             "static": false,
@@ -467,20 +416,20 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-8dd5ffb4b0b31748",
-          "anchor": "api-variable-8dd5ffb4b0b31748",
+          "id": "api-variable-7c78c7a2f28e8302",
+          "anchor": "api-variable-7c78c7a2f28e8302",
           "kind": "variable",
           "name": "pos_vel_prescaler_",
           "qualifiedName": "controllers::MotorPosController::pos_vel_prescaler_",
           "signature": "uint32_t controllers::MotorPosController::pos_vel_prescaler_",
           "description": "位置环分频计数器",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 77,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L77"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L77"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "private",
             "static": false,
@@ -491,20 +440,20 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-100b2de4b7bc29e9",
-          "anchor": "api-variable-100b2de4b7bc29e9",
+          "id": "api-variable-cadc530394a21b21",
+          "anchor": "api-variable-cadc530394a21b21",
           "kind": "variable",
           "name": "position_pid_",
           "qualifiedName": "controllers::MotorPosController::position_pid_",
           "signature": "PIDMotor controllers::MotorPosController::position_pid_",
           "description": "外层位置环",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 74,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L74"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L74"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "private",
             "static": false,
@@ -515,20 +464,20 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-aa612da995d6340a",
-          "anchor": "api-variable-aa612da995d6340a",
+          "id": "api-variable-5e7c703b1b6c6bfb",
+          "anchor": "api-variable-5e7c703b1b6c6bfb",
           "kind": "variable",
           "name": "position_ref_",
           "qualifiedName": "controllers::MotorPosController::position_ref_",
           "signature": "float controllers::MotorPosController::position_ref_",
           "description": "当前位置参考，单位 deg",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 79,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L79"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L79"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "private",
             "static": false,
@@ -539,20 +488,20 @@
           "enumValues": []
         },
         {
-          "id": "api-function-b7fe3ed5255fba0a",
-          "anchor": "api-function-b7fe3ed5255fba0a",
+          "id": "api-function-c3903b59daadc6c5",
+          "anchor": "api-function-c3903b59daadc6c5",
           "kind": "function",
           "name": "setRef",
           "qualifiedName": "controllers::MotorPosController::setRef",
           "signature": "void controllers::MotorPosController::setRef (float position, float max_velocity=kNoLimit)",
           "description": "设置位置参考\n\nposition 目标输出轴角度，单位 deg max_velocity 位置环输出的最大目标角速度限制； 传 kNoLimit（默认）表示不施加额外限制",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 69,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L69"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L69"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "public",
             "static": false,
@@ -560,25 +509,25 @@
             "const": false
           },
           "references": [
-            "api-variable-859f04b174dd36c6"
+            "api-variable-07331d3ee5f14745"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-a236e618edfa1eae",
-          "anchor": "api-function-a236e618edfa1eae",
+          "id": "api-function-d0503b22be917f75",
+          "anchor": "api-function-d0503b22be917f75",
           "kind": "function",
           "name": "update",
           "qualifiedName": "controllers::MotorPosController::update",
           "signature": "void controllers::MotorPosController::update () override",
           "description": "周期更新控制器",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 62,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L62"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L62"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "public",
             "static": false,
@@ -586,25 +535,25 @@
             "const": false
           },
           "references": [
-            "api-variable-859f04b174dd36c6"
+            "api-variable-07331d3ee5f14745"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-48e512270d1aedea",
-          "anchor": "api-variable-48e512270d1aedea",
+          "id": "api-variable-1fadc8ce56fba027",
+          "anchor": "api-variable-1fadc8ce56fba027",
           "kind": "variable",
           "name": "velocity_pid_",
           "qualifiedName": "controllers::MotorPosController::velocity_pid_",
           "signature": "PIDMotor controllers::MotorPosController::velocity_pid_",
           "description": "内层速度环",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 75,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L75"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L75"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "private",
             "static": false,
@@ -615,471 +564,20 @@
           "enumValues": []
         },
         {
-          "id": "api-function-dbbafd4e564ebd8e",
-          "anchor": "api-function-dbbafd4e564ebd8e",
+          "id": "api-function-3ab3759a866d5bfb",
+          "anchor": "api-function-3ab3759a866d5bfb",
           "kind": "function",
           "name": "~MotorPosController",
           "qualifiedName": "controllers::MotorPosController::~MotorPosController",
           "signature": "controllers::MotorPosController::~MotorPosController () override",
           "description": "",
           "location": {
-            "path": "controllers/motor_pos_controller.hpp",
+            "path": "controllers/pos_controller/motor_pos_controller.hpp",
             "line": 57,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_pos_controller.hpp#L57"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/pos_controller/motor_pos_controller.hpp#L57"
           },
-          "parentId": "api-class-28eca7ce34ce50bd",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-class-7ae9cb29d575dd87",
-          "anchor": "api-class-7ae9cb29d575dd87",
-          "kind": "class",
-          "name": "controllers::MotorVelController",
-          "qualifiedName": "controllers::MotorVelController",
-          "signature": "",
-          "description": "电机速度控制器\n\n外部 PID 模式下，输出为电流 / 力矩类命令 内部速度模式下，直接把目标速度交给驱动器内部闭环 它负责把“目标速度”转换成电机可以执行的命令：",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 27,
-            "column": 1,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L27"
-          },
-          "parentId": "api-namespace-d41e911e8032083d",
-          "member": null,
-          "references": [
-            "api-function-0f8a4d6ce4a15812",
-            "api-function-147803d9c0c9fe7a",
-            "api-function-b95ceefe31eeb0fd",
-            "api-function-e1003f9466cf0705",
-            "api-function-f434107f8bfd6a11",
-            "api-function-fdc18fd373fa2b03",
-            "api-struct-fce47fad9758999c",
-            "api-variable-0804f4751e69d05f",
-            "api-variable-87f591ba64a26462",
-            "api-variable-96b1f8ca61c05826",
-            "api-variable-cb0effcd63eb6202",
-            "api-variable-dff349918201395a",
-            "api-variable-e09214e41c72e378",
-            "api-variable-e9383a9fc5ac5049"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-struct-fce47fad9758999c",
-          "anchor": "api-struct-fce47fad9758999c",
-          "kind": "struct",
-          "name": "controllers::MotorVelController::Config",
-          "qualifiedName": "controllers::MotorVelController::Config",
-          "signature": "",
-          "description": "速度控制器配置",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 33,
-            "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L33"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": null,
-          "references": [
-            "api-variable-158e978b341a91cd",
-            "api-variable-7e1315e096c45c40",
-            "api-variable-b542c98f895a591a"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-158e978b341a91cd",
-          "anchor": "api-variable-158e978b341a91cd",
-          "kind": "variable",
-          "name": "ctrl_mode",
-          "qualifiedName": "controllers::MotorVelController::Config::ctrl_mode",
-          "signature": "ControlMode controllers::MotorVelController::Config::ctrl_mode",
-          "description": "控制模式，Default 时跟随电机默认模式",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 36,
-            "column": 26,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L36"
-          },
-          "parentId": "api-struct-fce47fad9758999c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-b542c98f895a591a",
-          "anchor": "api-variable-b542c98f895a591a",
-          "kind": "variable",
-          "name": "internal_set_ratio",
-          "qualifiedName": "controllers::MotorVelController::Config::internal_set_ratio",
-          "signature": "uint32_t controllers::MotorVelController::Config::internal_set_ratio",
-          "description": "当可以发送内部速度指令时，发送频率相对于 update 频率的分频。 用于只需要较低频率维持控制指令，同时需要节约总线负载的情况\n\n应 >= 1",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 42,
-            "column": 18,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L42"
-          },
-          "parentId": "api-struct-fce47fad9758999c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-7e1315e096c45c40",
-          "anchor": "api-variable-7e1315e096c45c40",
-          "kind": "variable",
-          "name": "pid",
-          "qualifiedName": "controllers::MotorVelController::Config::pid",
-          "signature": "PIDMotor::Config controllers::MotorVelController::Config::pid",
-          "description": "外部 PID 配置；在内部速度模式下该项无效",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 35,
-            "column": 26,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L35"
-          },
-          "parentId": "api-struct-fce47fad9758999c",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-0f8a4d6ce4a15812",
-          "anchor": "api-function-0f8a4d6ce4a15812",
-          "kind": "function",
-          "name": "MotorVelController",
-          "qualifiedName": "controllers::MotorVelController::MotorVelController",
-          "signature": "controllers::MotorVelController::MotorVelController (motors::IMotor *motor, const Config &cfg)",
-          "description": "motor 被控制的电机 cfg 控制器配置",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 49,
-            "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L49"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-struct-fce47fad9758999c"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-b95ceefe31eeb0fd",
-          "anchor": "api-function-b95ceefe31eeb0fd",
-          "kind": "function",
-          "name": "enable",
-          "qualifiedName": "controllers::MotorVelController::enable",
-          "signature": "bool controllers::MotorVelController::enable () override",
-          "description": "",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 52,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L52"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-e09214e41c72e378",
-          "anchor": "api-variable-e09214e41c72e378",
-          "kind": "variable",
-          "name": "ff_",
-          "qualifiedName": "controllers::MotorVelController::ff_",
-          "signature": "float controllers::MotorVelController::ff_",
-          "description": "前馈输入",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 81,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L81"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-147803d9c0c9fe7a",
-          "anchor": "api-function-147803d9c0c9fe7a",
-          "kind": "function",
-          "name": "getPID",
-          "qualifiedName": "controllers::MotorVelController::getPID",
-          "signature": "auto & controllers::MotorVelController::getPID ()",
-          "description": "直接访问内部 PID 对象",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 74,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L74"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-cb0effcd63eb6202",
-          "anchor": "api-variable-cb0effcd63eb6202",
-          "kind": "variable",
-          "name": "internal_set_prescaler_",
-          "qualifiedName": "controllers::MotorVelController::internal_set_prescaler_",
-          "signature": "size_t controllers::MotorVelController::internal_set_prescaler_",
-          "description": "内部速度指令发送分频计数器",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 85,
-            "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L85"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-0804f4751e69d05f",
-          "anchor": "api-variable-0804f4751e69d05f",
-          "kind": "variable",
-          "name": "internal_set_ratio_",
-          "qualifiedName": "controllers::MotorVelController::internal_set_ratio_",
-          "signature": "size_t controllers::MotorVelController::internal_set_ratio_",
-          "description": "内部速度指令发送分频比",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 86,
-            "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L86"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-dff349918201395a",
-          "anchor": "api-variable-dff349918201395a",
-          "kind": "variable",
-          "name": "kNoLimit",
-          "qualifiedName": "controllers::MotorVelController::kNoLimit",
-          "signature": "float controllers::MotorVelController::kNoLimit",
-          "description": "",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 76,
-            "column": 28,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L76"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "public",
-            "static": true,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-function-f434107f8bfd6a11"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-96b1f8ca61c05826",
-          "anchor": "api-variable-96b1f8ca61c05826",
-          "kind": "variable",
-          "name": "max_current_",
-          "qualifiedName": "controllers::MotorVelController::max_current_",
-          "signature": "float controllers::MotorVelController::max_current_",
-          "description": "电流/力矩输出限幅",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 83,
-            "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L83"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-variable-dff349918201395a"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-e9383a9fc5ac5049",
-          "anchor": "api-variable-e9383a9fc5ac5049",
-          "kind": "variable",
-          "name": "pid_",
-          "qualifiedName": "controllers::MotorVelController::pid_",
-          "signature": "PIDMotor controllers::MotorVelController::pid_",
-          "description": "速度环 PID",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 79,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L79"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-e1003f9466cf0705",
-          "anchor": "api-function-e1003f9466cf0705",
-          "kind": "function",
-          "name": "setRef",
-          "qualifiedName": "controllers::MotorVelController::setRef",
-          "signature": "void controllers::MotorVelController::setRef (float velocity, float max_current=kNoLimit, float ff=0.0f)",
-          "description": "设置速度参考\n\nvelocity 目标输出轴速度，单位 rpm max_current 外部 PID 模式下临时电流/力矩输出上限； 传 kNoLimit（默认）表示不施加额外限制 ff 前馈输入,使用者应该根据实际情况自己计算前馈值，直接传入该函数",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 69,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L69"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-variable-dff349918201395a"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-f434107f8bfd6a11",
-          "anchor": "api-function-f434107f8bfd6a11",
-          "kind": "function",
-          "name": "update",
-          "qualifiedName": "controllers::MotorVelController::update",
-          "signature": "void controllers::MotorVelController::update () override",
-          "description": "周期更新控制器",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 61,
-            "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L61"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "public",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-variable-dff349918201395a"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-87f591ba64a26462",
-          "anchor": "api-variable-87f591ba64a26462",
-          "kind": "variable",
-          "name": "velocity_target_",
-          "qualifiedName": "controllers::MotorVelController::velocity_target_",
-          "signature": "float controllers::MotorVelController::velocity_target_",
-          "description": "目标速度，默认单位 rpm",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 80,
-            "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L80"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
-          "member": {
-            "access": "private",
-            "static": false,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-fdc18fd373fa2b03",
-          "anchor": "api-function-fdc18fd373fa2b03",
-          "kind": "function",
-          "name": "~MotorVelController",
-          "qualifiedName": "controllers::MotorVelController::~MotorVelController",
-          "signature": "controllers::MotorVelController::~MotorVelController () override",
-          "description": "",
-          "location": {
-            "path": "controllers/motor_vel_controller.hpp",
-            "line": 50,
-            "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/motor_vel_controller.hpp#L50"
-          },
-          "parentId": "api-class-7ae9cb29d575dd87",
+          "parentId": "api-class-e9c64ed859df1d3f",
           "member": {
             "access": "public",
             "static": false,
@@ -1093,23 +591,584 @@
       "inheritanceRelations": [
         {
           "kind": "inherits",
-          "derivedId": "api-class-28eca7ce34ce50bd",
-          "baseId": null,
-          "baseQualifiedName": "IController",
-          "access": "public",
-          "virtual": false
-        },
-        {
-          "kind": "inherits",
-          "derivedId": "api-class-7ae9cb29d575dd87",
+          "derivedId": "api-class-e9c64ed859df1d3f",
           "baseId": null,
           "baseQualifiedName": "IController",
           "access": "public",
           "virtual": false
         }
       ],
-      "symbolCount": 43,
-      "documentedSymbolCount": 37
+      "symbolCount": 23,
+      "documentedSymbolCount": 20
+    },
+    {
+      "targetKind": "package",
+      "targetId": "motorcontroller--velcontroller",
+      "displayName": "MotorController::VelController",
+      "moduleId": "MotorDrivers",
+      "packageSlug": "motorcontroller--velcontroller",
+      "sourceBranch": "main",
+      "inputPaths": [
+        "controllers/vel_controller/motor_vel_controller.cpp",
+        "controllers/vel_controller/motor_vel_controller.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "4 of 19 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-namespace-27c4cf73be8d7151",
+          "anchor": "api-namespace-27c4cf73be8d7151",
+          "kind": "namespace",
+          "name": "controllers",
+          "qualifiedName": "controllers",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.cpp",
+            "line": 10,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.cpp#L10"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-e7435489f22292a4"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-da62b8b63a984809",
+          "anchor": "api-file-da62b8b63a984809",
+          "kind": "file",
+          "name": "controllers/vel_controller/motor_vel_controller.cpp",
+          "qualifiedName": "controllers/vel_controller/motor_vel_controller.cpp",
+          "signature": "",
+          "description": "通用速度控制器实现\n\nsyhanjin 2026-01-28",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.cpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.cpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-namespace-27c4cf73be8d7151"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-316b4016b2e00496",
+          "anchor": "api-file-316b4016b2e00496",
+          "kind": "file",
+          "name": "controllers/vel_controller/motor_vel_controller.hpp",
+          "qualifiedName": "controllers/vel_controller/motor_vel_controller.hpp",
+          "signature": "",
+          "description": "通用速度控制器\n\nsyhanjin 2026-01-28 _rad _rps getVelocity() setInternalVelocity() 这里的“速度”应理解为电机角速度参考。 整个电机控制驱动里，速度默认单位都是 rpm，除非变量名明确带有、等后缀。 控制器要求参考值和绑定电机的/保持一致。",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-e7435489f22292a4",
+            "api-namespace-27c4cf73be8d7151",
+            "api-struct-8bf593d15eef3364"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-e7435489f22292a4",
+          "anchor": "api-class-e7435489f22292a4",
+          "kind": "class",
+          "name": "controllers::MotorVelController",
+          "qualifiedName": "controllers::MotorVelController",
+          "signature": "",
+          "description": "电机速度控制器\n\n外部 PID 模式下，输出为电流 / 力矩类命令 内部速度模式下，直接把目标速度交给驱动器内部闭环 它负责把“目标速度”转换成电机可以执行的命令：",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 27,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L27"
+          },
+          "parentId": "api-namespace-27c4cf73be8d7151",
+          "member": null,
+          "references": [
+            "api-function-0307f0cc26af432a",
+            "api-function-53c7610765284612",
+            "api-function-96be031fe588ac4d",
+            "api-function-a12d7110189deefb",
+            "api-function-e928b88b6f435e5d",
+            "api-function-f04a318cfba46e5b",
+            "api-struct-8bf593d15eef3364",
+            "api-variable-137f434e3fc410cf",
+            "api-variable-36ba8d7d219288a9",
+            "api-variable-3e0e0167a9a06699",
+            "api-variable-874ff264b0f44787",
+            "api-variable-adb8881618cd33e0",
+            "api-variable-c3858fd7bcf5c51d",
+            "api-variable-c6a44a5401078f21"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-8bf593d15eef3364",
+          "anchor": "api-struct-8bf593d15eef3364",
+          "kind": "struct",
+          "name": "controllers::MotorVelController::Config",
+          "qualifiedName": "controllers::MotorVelController::Config",
+          "signature": "",
+          "description": "速度控制器配置",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 33,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L33"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": null,
+          "references": [
+            "api-variable-2fd33de142d7ac2b",
+            "api-variable-b554c4ee4e8ebda1",
+            "api-variable-fbdc4af24eadd49a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2fd33de142d7ac2b",
+          "anchor": "api-variable-2fd33de142d7ac2b",
+          "kind": "variable",
+          "name": "ctrl_mode",
+          "qualifiedName": "controllers::MotorVelController::Config::ctrl_mode",
+          "signature": "ControlMode controllers::MotorVelController::Config::ctrl_mode",
+          "description": "控制模式，Default 时跟随电机默认模式",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 36,
+            "column": 26,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L36"
+          },
+          "parentId": "api-struct-8bf593d15eef3364",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-fbdc4af24eadd49a",
+          "anchor": "api-variable-fbdc4af24eadd49a",
+          "kind": "variable",
+          "name": "internal_set_ratio",
+          "qualifiedName": "controllers::MotorVelController::Config::internal_set_ratio",
+          "signature": "uint32_t controllers::MotorVelController::Config::internal_set_ratio",
+          "description": "当可以发送内部速度指令时，发送频率相对于 update 频率的分频。 用于只需要较低频率维持控制指令，同时需要节约总线负载的情况\n\n应 >= 1",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 42,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L42"
+          },
+          "parentId": "api-struct-8bf593d15eef3364",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b554c4ee4e8ebda1",
+          "anchor": "api-variable-b554c4ee4e8ebda1",
+          "kind": "variable",
+          "name": "pid",
+          "qualifiedName": "controllers::MotorVelController::Config::pid",
+          "signature": "PIDMotor::Config controllers::MotorVelController::Config::pid",
+          "description": "外部 PID 配置；在内部速度模式下该项无效",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 35,
+            "column": 26,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L35"
+          },
+          "parentId": "api-struct-8bf593d15eef3364",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e928b88b6f435e5d",
+          "anchor": "api-function-e928b88b6f435e5d",
+          "kind": "function",
+          "name": "MotorVelController",
+          "qualifiedName": "controllers::MotorVelController::MotorVelController",
+          "signature": "controllers::MotorVelController::MotorVelController (motors::IMotor *motor, const Config &cfg)",
+          "description": "motor 被控制的电机 cfg 控制器配置",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 49,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L49"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-8bf593d15eef3364"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-53c7610765284612",
+          "anchor": "api-function-53c7610765284612",
+          "kind": "function",
+          "name": "enable",
+          "qualifiedName": "controllers::MotorVelController::enable",
+          "signature": "bool controllers::MotorVelController::enable () override",
+          "description": "",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 52,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L52"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c6a44a5401078f21",
+          "anchor": "api-variable-c6a44a5401078f21",
+          "kind": "variable",
+          "name": "ff_",
+          "qualifiedName": "controllers::MotorVelController::ff_",
+          "signature": "float controllers::MotorVelController::ff_",
+          "description": "前馈输入",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 81,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L81"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-96be031fe588ac4d",
+          "anchor": "api-function-96be031fe588ac4d",
+          "kind": "function",
+          "name": "getPID",
+          "qualifiedName": "controllers::MotorVelController::getPID",
+          "signature": "auto & controllers::MotorVelController::getPID ()",
+          "description": "直接访问内部 PID 对象",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 74,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L74"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3e0e0167a9a06699",
+          "anchor": "api-variable-3e0e0167a9a06699",
+          "kind": "variable",
+          "name": "internal_set_prescaler_",
+          "qualifiedName": "controllers::MotorVelController::internal_set_prescaler_",
+          "signature": "size_t controllers::MotorVelController::internal_set_prescaler_",
+          "description": "内部速度指令发送分频计数器",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 85,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L85"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-36ba8d7d219288a9",
+          "anchor": "api-variable-36ba8d7d219288a9",
+          "kind": "variable",
+          "name": "internal_set_ratio_",
+          "qualifiedName": "controllers::MotorVelController::internal_set_ratio_",
+          "signature": "size_t controllers::MotorVelController::internal_set_ratio_",
+          "description": "内部速度指令发送分频比",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 86,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L86"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-137f434e3fc410cf",
+          "anchor": "api-variable-137f434e3fc410cf",
+          "kind": "variable",
+          "name": "kNoLimit",
+          "qualifiedName": "controllers::MotorVelController::kNoLimit",
+          "signature": "float controllers::MotorVelController::kNoLimit",
+          "description": "",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 76,
+            "column": 28,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L76"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-a12d7110189deefb"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-874ff264b0f44787",
+          "anchor": "api-variable-874ff264b0f44787",
+          "kind": "variable",
+          "name": "max_current_",
+          "qualifiedName": "controllers::MotorVelController::max_current_",
+          "signature": "float controllers::MotorVelController::max_current_",
+          "description": "电流/力矩输出限幅",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 83,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L83"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-137f434e3fc410cf"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-adb8881618cd33e0",
+          "anchor": "api-variable-adb8881618cd33e0",
+          "kind": "variable",
+          "name": "pid_",
+          "qualifiedName": "controllers::MotorVelController::pid_",
+          "signature": "PIDMotor controllers::MotorVelController::pid_",
+          "description": "速度环 PID",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 79,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L79"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f04a318cfba46e5b",
+          "anchor": "api-function-f04a318cfba46e5b",
+          "kind": "function",
+          "name": "setRef",
+          "qualifiedName": "controllers::MotorVelController::setRef",
+          "signature": "void controllers::MotorVelController::setRef (float velocity, float max_current=kNoLimit, float ff=0.0f)",
+          "description": "设置速度参考\n\nvelocity 目标输出轴速度，单位 rpm max_current 外部 PID 模式下临时电流/力矩输出上限； 传 kNoLimit（默认）表示不施加额外限制 ff 前馈输入,使用者应该根据实际情况自己计算前馈值，直接传入该函数",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 69,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L69"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-137f434e3fc410cf"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-a12d7110189deefb",
+          "anchor": "api-function-a12d7110189deefb",
+          "kind": "function",
+          "name": "update",
+          "qualifiedName": "controllers::MotorVelController::update",
+          "signature": "void controllers::MotorVelController::update () override",
+          "description": "周期更新控制器",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 61,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L61"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-137f434e3fc410cf"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c3858fd7bcf5c51d",
+          "anchor": "api-variable-c3858fd7bcf5c51d",
+          "kind": "variable",
+          "name": "velocity_target_",
+          "qualifiedName": "controllers::MotorVelController::velocity_target_",
+          "signature": "float controllers::MotorVelController::velocity_target_",
+          "description": "目标速度，默认单位 rpm",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 80,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L80"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0307f0cc26af432a",
+          "anchor": "api-function-0307f0cc26af432a",
+          "kind": "function",
+          "name": "~MotorVelController",
+          "qualifiedName": "controllers::MotorVelController::~MotorVelController",
+          "signature": "controllers::MotorVelController::~MotorVelController () override",
+          "description": "",
+          "location": {
+            "path": "controllers/vel_controller/motor_vel_controller.hpp",
+            "line": 50,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/vel_controller/motor_vel_controller.hpp#L50"
+          },
+          "parentId": "api-class-e7435489f22292a4",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-e7435489f22292a4",
+          "baseId": null,
+          "baseQualifiedName": "IController",
+          "access": "public",
+          "virtual": false
+        }
+      ],
+      "symbolCount": 21,
+      "documentedSymbolCount": 17
+    },
+    {
+      "targetKind": "package",
+      "targetId": "motordrivers--controller",
+      "displayName": "MotorDrivers::Controller",
+      "moduleId": "MotorDrivers",
+      "packageSlug": "motordrivers--controller",
+      "sourceBranch": "main",
+      "inputPaths": [],
+      "status": "empty",
+      "warnings": [
+        {
+          "code": "API_INPUT_MISSING",
+          "message": "No synchronized C or C++ inputs belong to MotorDrivers::Controller."
+        }
+      ],
+      "symbols": [],
+      "inheritanceRelations": [],
+      "symbolCount": 0,
+      "documentedSymbolCount": 0
     },
     {
       "targetKind": "package",
