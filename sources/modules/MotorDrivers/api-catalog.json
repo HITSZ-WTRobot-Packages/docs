@@ -59,6 +59,7 @@
           "parentId": null,
           "member": null,
           "references": [
+            "api-file-3e4330f37d0ec9c5",
             "api-namespace-9e86f863102a4cfc"
           ],
           "enumValues": []
@@ -81,6 +82,7 @@
           "member": null,
           "references": [
             "api-class-e9c64ed859df1d3f",
+            "api-file-fa40cf1f46389c27",
             "api-namespace-9e86f863102a4cfc",
             "api-struct-83c58756866f4ef3"
           ],
@@ -658,6 +660,7 @@
           "parentId": null,
           "member": null,
           "references": [
+            "api-file-316b4016b2e00496",
             "api-namespace-27c4cf73be8d7151"
           ],
           "enumValues": []
@@ -680,6 +683,7 @@
           "member": null,
           "references": [
             "api-class-e7435489f22292a4",
+            "api-file-da62b8b63a984809",
             "api-namespace-27c4cf73be8d7151",
             "api-struct-8bf593d15eef3364"
           ],
