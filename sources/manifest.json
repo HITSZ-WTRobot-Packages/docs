@@ -249,10 +249,10 @@
       "displayName": "MotorDrivers",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers.git",
       "branch": "main",
-      "sha": "525ad7f83ef4fd397582458802b9482a412e2e00",
-      "shortSha": "525ad7f83ef4",
-      "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
-      "totalBytes": 470698,
+      "sha": "8ed1d36cb23f6baac1ecebb4702d214af673b8f5",
+      "shortSha": "8ed1d36cb23f",
+      "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
+      "totalBytes": 476222,
       "files": [
         {
           "path": "LICENSE",
@@ -262,46 +262,46 @@
         },
         {
           "path": "README.md",
-          "bytes": 18490,
-          "sha256": "9e3af4a477460882f4162867f660a789441a1ea0ede2d71b6af528b56bc6e4d9",
+          "bytes": 25533,
+          "sha256": "d30fe2f865e45402af40b6c2b16cb00c87847dc7ca26c6d773222d1ae875b5d2",
           "kind": "readme"
         },
         {
           "path": "motors/DJI/README.md",
-          "bytes": 3060,
-          "sha256": "a61cd5b19f4fd7351261bed39aba69b4d142eb3eaf268bf59fc08e0805792b41",
+          "bytes": 4475,
+          "sha256": "0ef65677751a57fcffa00abad33895cedfd1ee3e20c4e9c8c31f4c50eb5df444",
           "kind": "readme"
         },
         {
           "path": "motors/DM/README.md",
-          "bytes": 3844,
-          "sha256": "0c2ad1b6d43c71454ea80aa9d4eadfbbf408137dab247d978ed3db76cae81d8b",
+          "bytes": 6052,
+          "sha256": "e79f564a5f46912bea424cd0f3d31756a2405020ae326d775af28656df9b32db",
           "kind": "readme"
         },
         {
           "path": "motors/MI/README.md",
-          "bytes": 10272,
-          "sha256": "e2b414148048597874015fedc4d82f0d65b7a0cd9d3e59e59e9314ae79ecfead",
+          "bytes": 10855,
+          "sha256": "fdbe0aa87bee8f16737a26477457c8a0bd881cbed0b4a19202324b42a9f96bcf",
           "kind": "readme"
         },
         {
           "path": "motors/VESC/README.md",
-          "bytes": 2468,
-          "sha256": "5c8e41e9a527d57da58eead14425921f3ecaed39e34e5f918da33b1dcd1bfd92",
+          "bytes": 2707,
+          "sha256": "39e37ec53a58c1289cb1034d97993b1636fd7c3d06acd65572d1100c89bb233b",
           "kind": "readme"
         }
       ],
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 395545,
-          "sha256": "e305118a607aacf807c117846361f1d88e2e7eab66e9c80089ea48790d7af11d",
+          "bytes": 389629,
+          "sha256": "9c545f2d2172816997b7690ee0ddb7c32d625e6def3087443a4defd0ca546911",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
-          "bytes": 1870,
-          "sha256": "1522e21acee0778a13a39b83aa40e473850f4ee2530ad60a0af092b6c1af5691",
+          "bytes": 1822,
+          "sha256": "45be0ff4e7207ffbbae24a201b213e85fe63af7fbc18c43f189c9f082a890731",
           "kind": "package-catalog"
         }
       ],

@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "MotorDrivers",
-  "moduleSha": "525ad7f83ef4fd397582458802b9482a412e2e00",
+  "moduleSha": "8ed1d36cb23f6baac1ecebb4702d214af673b8f5",
   "packages": [
     {
       "name": "Controller",
@@ -30,7 +30,7 @@
       "packagePath": "motors/DJI",
       "dependencyNames": [
         "MotorDrivers::Core",
-        "bsp::CANDriver",
+        "bsp::CANDriver2",
         "services::Watchdog"
       ]
     },
@@ -42,8 +42,7 @@
       "packagePath": "motors/DM",
       "dependencyNames": [
         "MotorDrivers::Core",
-        "bsp::CANDriver",
-        "libs::FixedMap",
+        "bsp::CANDriver2",
         "services::Watchdog"
       ]
     },
@@ -55,7 +54,7 @@
       "packagePath": "motors/MI",
       "dependencyNames": [
         "MotorDrivers::Core",
-        "libs::FixedMap",
+        "bsp::CANDriver2",
         "services::Watchdog"
       ]
     },
@@ -67,8 +66,7 @@
       "packagePath": "motors/VESC",
       "dependencyNames": [
         "MotorDrivers::Core",
-        "bsp::CANDriver",
-        "libs::FixedMap",
+        "bsp::CANDriver2",
         "services::Watchdog"
       ]
     }
