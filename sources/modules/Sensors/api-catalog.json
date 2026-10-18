@@ -6709,6 +6709,1582 @@
     },
     {
       "targetKind": "package",
+      "targetId": "sensorled--ws2812b",
+      "displayName": "SensorLed::WS2812B",
+      "moduleId": "Sensors",
+      "packageSlug": "sensorled--ws2812b",
+      "sourceBranch": "main",
+      "inputPaths": [
+        "led/ws2812/WS2812B.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "55 of 58 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-file-66fd3c41faaf48be",
+          "anchor": "api-file-66fd3c41faaf48be",
+          "kind": "file",
+          "name": "led/ws2812/WS2812B.hpp",
+          "qualifiedName": "led/ws2812/WS2812B.hpp",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-de8ab0108e559048",
+            "api-namespace-5da889f62dd6f3eb",
+            "api-namespace-92720c40bb3fb81b",
+            "api-struct-d22026193bf9ad13"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-92720c40bb3fb81b",
+          "anchor": "api-namespace-92720c40bb3fb81b",
+          "kind": "namespace",
+          "name": "sensors",
+          "qualifiedName": "sensors",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 13,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L13"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-namespace-5da889f62dd6f3eb"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-5da889f62dd6f3eb",
+          "anchor": "api-namespace-5da889f62dd6f3eb",
+          "kind": "namespace",
+          "name": "sensors::led",
+          "qualifiedName": "sensors::led",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 13,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L13"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-de8ab0108e559048"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-de8ab0108e559048",
+          "anchor": "api-class-de8ab0108e559048",
+          "kind": "class",
+          "name": "sensors::led::WS2812B",
+          "qualifiedName": "sensors::led::WS2812B",
+          "signature": "",
+          "description": "WS2812B Finiteframes using a dedicated timer's CC-triggered circular DMA.\n\nRGB N is the strip length; BufferLen is the TOTAL waveform capacity in LED units, not the strip length and not the capacity of one half. Only theframe is stored per LED. Each DMA half is refilled in its consumed-half interrupt. The application must service interrupts and finish each refill before DMA returns to that half (24 * BufferLen / 2 bit periods). Exclusively owned timer, up-counting edge-aligned PWM1, active-high output, CCR preload enabled, initial Pulse=0, no repetition/slave/one-pulse mode or CC control preload; update events must remain enabled. The bit rate MUST be 800 kbit/s. ARR therefore counts one 1.25 us bit; zero/one high times are derived from ARR as 24%/52% of the period, i.e. about 300 ns / 650 ns per bit. No timing argument is accepted. Linked CC DMA: circular, memory-to-peripheral, incrementing halfword memory, fixed halfword peripheral; CC DMA requests, not update DMA requests. The application configures the timer clock, PSC/ARR, GPIO AF, DMA request, DMA IRQ/HAL_DMA_IRQHandler, and any advanced-timer break/output settings. PWM mode, polarity, preload, GPIO pulls and idle/off-state levels must all be configured in CubeMX. The driver never reconfigures them. The stopped output must remain LOW; GPIO/advanced-timer idle settings are board-owned. It must ensure the actual pin is driven and the actual timing meets the LED datasheet. Ticks alone do not identify the timer's counter frequency. Validation uses HAL getters and Init metadata, not direct register reads. Settings without HAL getters are application preconditions; bypassing HAL or changing configuration externally is not detected by this driver. Hardware contract, checked by show where possible: Buffer is memory::DMABuffer<48 * BufferLen>, a 32-byte aligned byte array. It must reside in DMA-accessible SRAM (NOT the H7 default DTCM .bss). Place it using the project's linker/section scheme. The buffer must be noncacheable or hardware-coherent: this driver does not clean D-Cache. A barrier alone does not provide cache coherency. No cache policy is changed. One task owns all normal API calls. Only the three explicitly forwarded HAL callbacks run in ISR context. No callbacks are installed globally. Forward: HAL_TIM_PWM_PulseFinishedHalfCpltCallback -> onHalfTransfer; HAL_TIM_PWM_PulseFinishedCallback -> onTransferComplete; HAL_TIM_ErrorCallback -> onError. Buffer stop() Buffer Construction never touches HAL/peripherals and never sends an initial frame. Driver andmust outlive, asynchronous DMA abort completion (!isBusy()), and any forwarded callback. Detach forwarding before destroying the driver. The destructor deliberately does not invoke uninitialized HAL. Never access the borrowedwhile owned by this driver. Do not change timer/DMA configuration during its lifetime. Between frames PWM and DMA are stopped. The project's fixed GPIO/timer configuration must hold DIN LOW.",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 65,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L65"
+          },
+          "parentId": "api-namespace-5da889f62dd6f3eb",
+          "member": null,
+          "references": [
+            "api-enum-0c47f440ecfb5b74",
+            "api-enum-1bf66a9e3f2ba1dd",
+            "api-function-0706299cea6a41a9",
+            "api-function-09a21d705efb0028",
+            "api-function-0b1978564d1d42e5",
+            "api-function-0d735f4a10866d0f",
+            "api-function-0fc072702a36de5a",
+            "api-function-16bb675cc22d1cde",
+            "api-function-26ae6c44f59f931c",
+            "api-function-34585479502442c3",
+            "api-function-46f8a88c4624d85b",
+            "api-function-54b47c65c2c3fd19",
+            "api-function-5b7be3715ec3346b",
+            "api-function-5c7f8c472c08cd30",
+            "api-function-5d2aa1b70c2f0e8e",
+            "api-function-64cdaabbebbc2807",
+            "api-function-6f51eec8462b86e0",
+            "api-function-74004e494e9959c7",
+            "api-function-94812d4603d3f005",
+            "api-function-954befcf340323aa",
+            "api-function-9585d78ee3251238",
+            "api-function-ad946f9dd6a55490",
+            "api-function-b781103efe8c8656",
+            "api-function-ba2bb43653ea2b8d",
+            "api-function-bb165573b20ad5d2",
+            "api-function-c1de92e2c1764908",
+            "api-function-cf5ffa3718e42e81",
+            "api-function-ef0f9375ffbbe77e",
+            "api-function-f3a3644e89f327c3",
+            "api-struct-d22026193bf9ad13",
+            "api-typedef-1edd62901b61de10",
+            "api-typedef-525142304e5d8902",
+            "api-typedef-d8cb142903211f0b",
+            "api-variable-008ac57ab13c8d05",
+            "api-variable-1caf82dfa6ca3aa6",
+            "api-variable-3da03f8674352765",
+            "api-variable-4844e3bd76ce29b6",
+            "api-variable-5f31b7bc6a54ad69",
+            "api-variable-631d593c6d6473ec",
+            "api-variable-6a7ad72dfd57c4c1",
+            "api-variable-7c40046d80d5c3b1",
+            "api-variable-84d92f9684614e7d",
+            "api-variable-9104b8786e7ace89",
+            "api-variable-9861ec2b9b79e95b",
+            "api-variable-9b7c6a30b9bfc0ed",
+            "api-variable-a96678127193f7e9",
+            "api-variable-b2d699590de018f4",
+            "api-variable-b62100676032adcd",
+            "api-variable-bbb59393fbd6e93a",
+            "api-variable-cb2999f1636e5039",
+            "api-variable-d4f99bd9b4e1f717",
+            "api-variable-e7f8f984830c7681"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-typedef-d8cb142903211f0b",
+          "anchor": "api-typedef-d8cb142903211f0b",
+          "kind": "typedef",
+          "name": "Buffer",
+          "qualifiedName": "sensors::led::WS2812B::Buffer",
+          "signature": "using sensors::led::WS2812B< N, BufferLen >::Buffer = memory::DMABuffer<SampleBytes>",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 86,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L86"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-bbb59393fbd6e93a"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-typedef-1edd62901b61de10",
+          "anchor": "api-typedef-1edd62901b61de10",
+          "kind": "typedef",
+          "name": "CacheClean",
+          "qualifiedName": "sensors::led::WS2812B::CacheClean",
+          "signature": "using sensors::led::WS2812B< N, BufferLen >::CacheClean = void (*)(const void*, std::size_t)",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 92,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L92"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-d22026193bf9ad13",
+          "anchor": "api-struct-d22026193bf9ad13",
+          "kind": "struct",
+          "name": "sensors::led::WS2812B::Color",
+          "qualifiedName": "sensors::led::WS2812B::Color",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 75,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L75"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": null,
+          "references": [
+            "api-variable-51e941b05339dc2e",
+            "api-variable-9881c9cad824c086",
+            "api-variable-d29ba30c5bf3c114"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9881c9cad824c086",
+          "anchor": "api-variable-9881c9cad824c086",
+          "kind": "variable",
+          "name": "b",
+          "qualifiedName": "sensors::led::WS2812B::Color::b",
+          "signature": "std::uint8_t sensors::led::WS2812B< N, BufferLen >::Color::b",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 77,
+            "column": 26,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L77"
+          },
+          "parentId": "api-struct-d22026193bf9ad13",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-51e941b05339dc2e",
+          "anchor": "api-variable-51e941b05339dc2e",
+          "kind": "variable",
+          "name": "g",
+          "qualifiedName": "sensors::led::WS2812B::Color::g",
+          "signature": "std::uint8_t sensors::led::WS2812B< N, BufferLen >::Color::g",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 77,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L77"
+          },
+          "parentId": "api-struct-d22026193bf9ad13",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d29ba30c5bf3c114",
+          "anchor": "api-variable-d29ba30c5bf3c114",
+          "kind": "variable",
+          "name": "r",
+          "qualifiedName": "sensors::led::WS2812B::Color::r",
+          "signature": "std::uint8_t sensors::led::WS2812B< N, BufferLen >::Color::r",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 77,
+            "column": 22,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L77"
+          },
+          "parentId": "api-struct-d22026193bf9ad13",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-cb2999f1636e5039",
+          "anchor": "api-variable-cb2999f1636e5039",
+          "kind": "variable",
+          "name": "HalfSampleBytes",
+          "qualifiedName": "sensors::led::WS2812B::HalfSampleBytes",
+          "signature": "std::size_t sensors::led::WS2812B< N, BufferLen >::HalfSampleBytes",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 84,
+            "column": 34,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L84"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-84d92f9684614e7d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-84d92f9684614e7d",
+          "anchor": "api-variable-84d92f9684614e7d",
+          "kind": "variable",
+          "name": "HalfSampleCount",
+          "qualifiedName": "sensors::led::WS2812B::HalfSampleCount",
+          "signature": "std::size_t sensors::led::WS2812B< N, BufferLen >::HalfSampleCount",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 82,
+            "column": 34,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L82"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-5f31b7bc6a54ad69"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-1bf66a9e3f2ba1dd",
+          "anchor": "api-enum-1bf66a9e3f2ba1dd",
+          "kind": "enum",
+          "name": "Phase",
+          "qualifiedName": "sensors::led::WS2812B::Phase",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 244,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L244"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": [
+            {
+              "name": "LeadingReset",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "Padding",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "Pixels",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "TrailingReset",
+              "initializer": "",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-typedef-525142304e5d8902",
+          "anchor": "api-typedef-525142304e5d8902",
+          "kind": "typedef",
+          "name": "RGB",
+          "qualifiedName": "sensors::led::WS2812B::RGB",
+          "signature": "using sensors::led::WS2812B< N, BufferLen >::RGB = Color",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 79,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L79"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-d22026193bf9ad13"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a96678127193f7e9",
+          "anchor": "api-variable-a96678127193f7e9",
+          "kind": "variable",
+          "name": "ResetPeriods",
+          "qualifiedName": "sensors::led::WS2812B::ResetPeriods",
+          "signature": "std::uint32_t sensors::led::WS2812B< N, BufferLen >::ResetPeriods",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 90,
+            "column": 36,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L90"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-26ae6c44f59f931c"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-bbb59393fbd6e93a",
+          "anchor": "api-variable-bbb59393fbd6e93a",
+          "kind": "variable",
+          "name": "SampleBytes",
+          "qualifiedName": "sensors::led::WS2812B::SampleBytes",
+          "signature": "std::size_t sensors::led::WS2812B< N, BufferLen >::SampleBytes",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 83,
+            "column": 34,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L83"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-5f31b7bc6a54ad69"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5f31b7bc6a54ad69",
+          "anchor": "api-variable-5f31b7bc6a54ad69",
+          "kind": "variable",
+          "name": "SampleCount",
+          "qualifiedName": "sensors::led::WS2812B::SampleCount",
+          "signature": "std::size_t sensors::led::WS2812B< N, BufferLen >::SampleCount",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 81,
+            "column": 34,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L81"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-26ae6c44f59f931c"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-0c47f440ecfb5b74",
+          "anchor": "api-enum-0c47f440ecfb5b74",
+          "kind": "enum",
+          "name": "State",
+          "qualifiedName": "sensors::led::WS2812B::State",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 93,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L93"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": [
+            {
+              "name": "Error",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "Idle",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "Sending",
+              "initializer": "",
+              "description": ""
+            },
+            {
+              "name": "Stopping",
+              "initializer": "",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-function-ad946f9dd6a55490",
+          "anchor": "api-function-ad946f9dd6a55490",
+          "kind": "function",
+          "name": "WS2812B",
+          "qualifiedName": "sensors::led::WS2812B::WS2812B",
+          "signature": "sensors::led::WS2812B< N, BufferLen >::WS2812B (TIM_HandleTypeDef *htim, std::uint32_t channel, Buffer &buffer) noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 103,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L103"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-0b1978564d1d42e5",
+            "api-function-16bb675cc22d1cde",
+            "api-function-34585479502442c3",
+            "api-function-b781103efe8c8656",
+            "api-typedef-d8cb142903211f0b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-34585479502442c3",
+          "anchor": "api-function-34585479502442c3",
+          "kind": "function",
+          "name": "WS2812B",
+          "qualifiedName": "sensors::led::WS2812B::WS2812B",
+          "signature": "sensors::led::WS2812B< N, BufferLen >::WS2812B (WS2812B &&)=delete",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 110,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L110"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-ad946f9dd6a55490"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b781103efe8c8656",
+          "anchor": "api-function-b781103efe8c8656",
+          "kind": "function",
+          "name": "WS2812B",
+          "qualifiedName": "sensors::led::WS2812B::WS2812B",
+          "signature": "sensors::led::WS2812B< N, BufferLen >::WS2812B (const WS2812B &)=delete",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 108,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L108"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-ad946f9dd6a55490"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5b7be3715ec3346b",
+          "anchor": "api-function-5b7be3715ec3346b",
+          "kind": "function",
+          "name": "alignFrameStart",
+          "qualifiedName": "sensors::led::WS2812B::alignFrameStart",
+          "signature": "bool sensors::led::WS2812B< N, BufferLen >::alignFrameStart () noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 321,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L321"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-008ac57ab13c8d05",
+          "anchor": "api-variable-008ac57ab13c8d05",
+          "kind": "variable",
+          "name": "bitMask_",
+          "qualifiedName": "sensors::led::WS2812B::bitMask_",
+          "signature": "std::uint32_t sensors::led::WS2812B< N, BufferLen >::bitMask_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 448,
+            "column": 30,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L448"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9b7c6a30b9bfc0ed",
+          "anchor": "api-variable-9b7c6a30b9bfc0ed",
+          "kind": "variable",
+          "name": "buffer_",
+          "qualifiedName": "sensors::led::WS2812B::buffer_",
+          "signature": "Buffer& sensors::led::WS2812B< N, BufferLen >::buffer_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 438,
+            "column": 29,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L438"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-typedef-d8cb142903211f0b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0fc072702a36de5a",
+          "anchor": "api-function-0fc072702a36de5a",
+          "kind": "function",
+          "name": "channelIndex",
+          "qualifiedName": "sensors::led::WS2812B::channelIndex",
+          "signature": "unsigned sensors::led::WS2812B< N, BufferLen >::channelIndex () const noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 252,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L252"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-631d593c6d6473ec",
+          "anchor": "api-variable-631d593c6d6473ec",
+          "kind": "variable",
+          "name": "channel_",
+          "qualifiedName": "sensors::led::WS2812B::channel_",
+          "signature": "const std::uint32_t sensors::led::WS2812B< N, BufferLen >::channel_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 437,
+            "column": 30,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L437"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ba2bb43653ea2b8d",
+          "anchor": "api-function-ba2bb43653ea2b8d",
+          "kind": "function",
+          "name": "clear",
+          "qualifiedName": "sensors::led::WS2812B::clear",
+          "signature": "bool sensors::led::WS2812B< N, BufferLen >::clear () noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 129,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L129"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-c1de92e2c1764908"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5c7f8c472c08cd30",
+          "anchor": "api-function-5c7f8c472c08cd30",
+          "kind": "function",
+          "name": "consumed",
+          "qualifiedName": "sensors::led::WS2812B::consumed",
+          "signature": "void sensors::led::WS2812B< N, BufferLen >::consumed (TIM_HandleTypeDef *htim, unsigned half) noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 419,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L419"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-cf5ffa3718e42e81",
+          "anchor": "api-function-cf5ffa3718e42e81",
+          "kind": "function",
+          "name": "dmaReady",
+          "qualifiedName": "sensors::led::WS2812B::dmaReady",
+          "signature": "bool sensors::led::WS2812B< N, BufferLen >::dmaReady () const noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 274,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L274"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ef0f9375ffbbe77e",
+          "anchor": "api-function-ef0f9375ffbbe77e",
+          "kind": "function",
+          "name": "dmaRequest",
+          "qualifiedName": "sensors::led::WS2812B::dmaRequest",
+          "signature": "std::uint32_t sensors::led::WS2812B< N, BufferLen >::dmaRequest () const noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 279,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L279"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b62100676032adcd",
+          "anchor": "api-variable-b62100676032adcd",
+          "kind": "variable",
+          "name": "dma_",
+          "qualifiedName": "sensors::led::WS2812B::dma_",
+          "signature": "DMA_HandleTypeDef* sensors::led::WS2812B< N, BufferLen >::dma_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 443,
+            "column": 29,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L443"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c1de92e2c1764908",
+          "anchor": "api-function-c1de92e2c1764908",
+          "kind": "function",
+          "name": "fill",
+          "qualifiedName": "sensors::led::WS2812B::fill",
+          "signature": "bool sensors::led::WS2812B< N, BufferLen >::fill (Color color) noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 121,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L121"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-ba2bb43653ea2b8d",
+            "api-function-f3a3644e89f327c3",
+            "api-struct-d22026193bf9ad13"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-954befcf340323aa",
+          "anchor": "api-function-954befcf340323aa",
+          "kind": "function",
+          "name": "fillHalf",
+          "qualifiedName": "sensors::led::WS2812B::fillHalf",
+          "signature": "void sensors::led::WS2812B< N, BufferLen >::fillHalf (unsigned half) noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 361,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L361"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-74004e494e9959c7",
+          "anchor": "api-function-74004e494e9959c7",
+          "kind": "function",
+          "name": "getState",
+          "qualifiedName": "sensors::led::WS2812B::getState",
+          "signature": "State sensors::led::WS2812B< N, BufferLen >::getState () const noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 131,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L131"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-enum-0c47f440ecfb5b74"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-64cdaabbebbc2807",
+          "anchor": "api-function-64cdaabbebbc2807",
+          "kind": "function",
+          "name": "highTicks",
+          "qualifiedName": "sensors::led::WS2812B::highTicks",
+          "signature": "static constexpr std::uint32_t sensors::led::WS2812B< N, BufferLen >::highTicks (std::uint32_t period, std::uint32_t percent) noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 285,
+            "column": 37,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L285"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9861ec2b9b79e95b",
+          "anchor": "api-variable-9861ec2b9b79e95b",
+          "kind": "variable",
+          "name": "htim_",
+          "qualifiedName": "sensors::led::WS2812B::htim_",
+          "signature": "TIM_HandleTypeDef* const sensors::led::WS2812B< N, BufferLen >::htim_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 436,
+            "column": 29,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L436"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-f3a3644e89f327c3",
+          "anchor": "api-function-f3a3644e89f327c3",
+          "kind": "function",
+          "name": "isBusy",
+          "qualifiedName": "sensors::led::WS2812B::isBusy",
+          "signature": "bool sensors::led::WS2812B< N, BufferLen >::isBusy () const noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 139,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L139"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-26ae6c44f59f931c",
+            "api-function-bb165573b20ad5d2",
+            "api-function-c1de92e2c1764908"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-6f51eec8462b86e0",
+          "anchor": "api-function-6f51eec8462b86e0",
+          "kind": "function",
+          "name": "loadPixel",
+          "qualifiedName": "sensors::led::WS2812B::loadPixel",
+          "signature": "void sensors::led::WS2812B< N, BufferLen >::loadPixel () noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 353,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L353"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-46f8a88c4624d85b",
+          "anchor": "api-function-46f8a88c4624d85b",
+          "kind": "function",
+          "name": "onError",
+          "qualifiedName": "sensors::led::WS2812B::onError",
+          "signature": "void sensors::led::WS2812B< N, BufferLen >::onError (TIM_HandleTypeDef *htim) noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 234,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L234"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-09a21d705efb0028",
+          "anchor": "api-function-09a21d705efb0028",
+          "kind": "function",
+          "name": "onHalfTransfer",
+          "qualifiedName": "sensors::led::WS2812B::onHalfTransfer",
+          "signature": "void sensors::led::WS2812B< N, BufferLen >::onHalfTransfer (TIM_HandleTypeDef *htim) noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 231,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L231"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-9585d78ee3251238",
+          "anchor": "api-function-9585d78ee3251238",
+          "kind": "function",
+          "name": "onTransferComplete",
+          "qualifiedName": "sensors::led::WS2812B::onTransferComplete",
+          "signature": "void sensors::led::WS2812B< N, BufferLen >::onTransferComplete (TIM_HandleTypeDef *htim) noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 232,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L232"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b2d699590de018f4",
+          "anchor": "api-variable-b2d699590de018f4",
+          "kind": "variable",
+          "name": "oneHighTicks_",
+          "qualifiedName": "sensors::led::WS2812B::oneHighTicks_",
+          "signature": "std::uint16_t sensors::led::WS2812B< N, BufferLen >::oneHighTicks_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 440,
+            "column": 30,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L440"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-16bb675cc22d1cde",
+          "anchor": "api-function-16bb675cc22d1cde",
+          "kind": "function",
+          "name": "operator=",
+          "qualifiedName": "sensors::led::WS2812B::operator=",
+          "signature": "WS2812B & sensors::led::WS2812B< N, BufferLen >::operator= (WS2812B &&)=delete",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 111,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L111"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-ad946f9dd6a55490"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0b1978564d1d42e5",
+          "anchor": "api-function-0b1978564d1d42e5",
+          "kind": "function",
+          "name": "operator=",
+          "qualifiedName": "sensors::led::WS2812B::operator=",
+          "signature": "WS2812B & sensors::led::WS2812B< N, BufferLen >::operator= (const WS2812B &)=delete",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 109,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L109"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-ad946f9dd6a55490"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6a7ad72dfd57c4c1",
+          "anchor": "api-variable-6a7ad72dfd57c4c1",
+          "kind": "variable",
+          "name": "paddingHalf_",
+          "qualifiedName": "sensors::led::WS2812B::paddingHalf_",
+          "signature": "bool sensors::led::WS2812B< N, BufferLen >::paddingHalf_[2] [2]",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 449,
+            "column": 30,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L449"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-1caf82dfa6ca3aa6",
+          "anchor": "api-variable-1caf82dfa6ca3aa6",
+          "kind": "variable",
+          "name": "phase_",
+          "qualifiedName": "sensors::led::WS2812B::phase_",
+          "signature": "Phase sensors::led::WS2812B< N, BufferLen >::phase_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 444,
+            "column": 30,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L444"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7c40046d80d5c3b1",
+          "anchor": "api-variable-7c40046d80d5c3b1",
+          "kind": "variable",
+          "name": "pixelIndex_",
+          "qualifiedName": "sensors::led::WS2812B::pixelIndex_",
+          "signature": "std::size_t sensors::led::WS2812B< N, BufferLen >::pixelIndex_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 446,
+            "column": 30,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L446"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d4f99bd9b4e1f717",
+          "anchor": "api-variable-d4f99bd9b4e1f717",
+          "kind": "variable",
+          "name": "pixelWord_",
+          "qualifiedName": "sensors::led::WS2812B::pixelWord_",
+          "signature": "std::uint32_t sensors::led::WS2812B< N, BufferLen >::pixelWord_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 447,
+            "column": 30,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L447"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-4844e3bd76ce29b6",
+          "anchor": "api-variable-4844e3bd76ce29b6",
+          "kind": "variable",
+          "name": "pixels_",
+          "qualifiedName": "sensors::led::WS2812B::pixels_",
+          "signature": "std::array<Color, N> sensors::led::WS2812B< N, BufferLen >::pixels_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 441,
+            "column": 20,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L441"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-d22026193bf9ad13"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-3da03f8674352765",
+          "anchor": "api-variable-3da03f8674352765",
+          "kind": "variable",
+          "name": "resetRemaining_",
+          "qualifiedName": "sensors::led::WS2812B::resetRemaining_",
+          "signature": "std::size_t sensors::led::WS2812B< N, BufferLen >::resetRemaining_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 445,
+            "column": 30,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L445"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0d735f4a10866d0f",
+          "anchor": "api-function-0d735f4a10866d0f",
+          "kind": "function",
+          "name": "selectedDma",
+          "qualifiedName": "sensors::led::WS2812B::selectedDma",
+          "signature": "DMA_HandleTypeDef * sensors::led::WS2812B< N, BufferLen >::selectedDma () const noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 257,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L257"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-bb165573b20ad5d2",
+          "anchor": "api-function-bb165573b20ad5d2",
+          "kind": "function",
+          "name": "setPixel",
+          "qualifiedName": "sensors::led::WS2812B::setPixel",
+          "signature": "bool sensors::led::WS2812B< N, BufferLen >::setPixel (std::size_t index, Color color) noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 113,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L113"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-f3a3644e89f327c3",
+            "api-struct-d22026193bf9ad13"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-26ae6c44f59f931c",
+          "anchor": "api-function-26ae6c44f59f931c",
+          "kind": "function",
+          "name": "show",
+          "qualifiedName": "sensors::led::WS2812B::show",
+          "signature": "HAL_StatusTypeDef sensors::led::WS2812B< N, BufferLen >::show () noexcept",
+          "description": "HAL_BUSY also covers an asynchronous abort still awaiting its DMA IRQ.\n\nstop() Errors remain visible until an explicitclears them after abort.",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 149,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L149"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-0706299cea6a41a9",
+            "api-function-f3a3644e89f327c3",
+            "api-variable-5f31b7bc6a54ad69",
+            "api-variable-a96678127193f7e9"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9104b8786e7ace89",
+          "anchor": "api-variable-9104b8786e7ace89",
+          "kind": "variable",
+          "name": "state_",
+          "qualifiedName": "sensors::led::WS2812B::state_",
+          "signature": "std::atomic<State> sensors::led::WS2812B< N, BufferLen >::state_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 442,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L442"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-0c47f440ecfb5b74"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0706299cea6a41a9",
+          "anchor": "api-function-0706299cea6a41a9",
+          "kind": "function",
+          "name": "stop",
+          "qualifiedName": "sensors::led::WS2812B::stop",
+          "signature": "HAL_StatusTypeDef sensors::led::WS2812B< N, BufferLen >::stop () noexcept",
+          "description": "Request a safe stop, or explicitly clear a latched error.\n\nHAL_BUSY means abort is pending: retain this object/Buffer and service the DMA IRQ before reuse/destruction. Does nothing to an unused timer. A mid-frame stop leaves the last CCR value; the next frame may begin with one invalid bit. Normal frame completion ends on all-zero padding.",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 211,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L211"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5d2aa1b70c2f0e8e",
+          "anchor": "api-function-5d2aa1b70c2f0e8e",
+          "kind": "function",
+          "name": "stopPwmDma",
+          "qualifiedName": "sensors::led::WS2812B::stopPwmDma",
+          "signature": "bool sensors::led::WS2812B< N, BufferLen >::stopPwmDma () noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 344,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L344"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-94812d4603d3f005",
+          "anchor": "api-function-94812d4603d3f005",
+          "kind": "function",
+          "name": "txBarrier",
+          "qualifiedName": "sensors::led::WS2812B::txBarrier",
+          "signature": "static void sensors::led::WS2812B< N, BufferLen >::txBarrier () noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 333,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L333"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-54b47c65c2c3fd19",
+          "anchor": "api-function-54b47c65c2c3fd19",
+          "kind": "function",
+          "name": "validConfiguration",
+          "qualifiedName": "sensors::led::WS2812B::validConfiguration",
+          "signature": "bool sensors::led::WS2812B< N, BufferLen >::validConfiguration () noexcept",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 291,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L291"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e7f8f984830c7681",
+          "anchor": "api-variable-e7f8f984830c7681",
+          "kind": "variable",
+          "name": "zeroHighTicks_",
+          "qualifiedName": "sensors::led::WS2812B::zeroHighTicks_",
+          "signature": "std::uint16_t sensors::led::WS2812B< N, BufferLen >::zeroHighTicks_",
+          "description": "",
+          "location": {
+            "path": "led/ws2812/WS2812B.hpp",
+            "line": 439,
+            "column": 30,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/led/ws2812/WS2812B.hpp#L439"
+          },
+          "parentId": "api-class-de8ab0108e559048",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [],
+      "symbolCount": 59,
+      "documentedSymbolCount": 3
+    },
+    {
+      "targetKind": "package",
       "targetId": "sensorops--actionops",
       "displayName": "SensorOPS::ActionOPS",
       "moduleId": "Sensors",

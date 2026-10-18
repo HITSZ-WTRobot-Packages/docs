@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "Sensors",
-  "moduleSha": "d53b00e6225a43e748df477bf377fd7d315e21fc",
+  "moduleSha": "145123d15262f68b8ad253190ec5a5122f8f2cdb",
   "packages": [
     {
       "name": "HWT101CT",
@@ -45,6 +45,17 @@
       "packagePath": "laser/stp23l",
       "dependencyNames": [
         "protocol::UartRxSync"
+      ]
+    },
+    {
+      "name": "WS2812B",
+      "pkgname": "SensorLed::WS2812B",
+      "version": "0.1.0",
+      "manifestPath": "led/ws2812/cpkg.toml",
+      "packagePath": "led/ws2812",
+      "dependencyNames": [
+        "memory::DMABuffer",
+        "stm32cubemx"
       ]
     },
     {
