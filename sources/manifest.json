@@ -331,10 +331,10 @@
       "displayName": "MotorDrivers",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers.git",
       "branch": "main",
-      "sha": "ffe06493c6687fa4447c8b33864fdc4a33359e10",
-      "shortSha": "ffe06493c668",
+      "sha": "576ddbf6732a3f59849a3e0508d0dd83ee10be7a",
+      "shortSha": "576ddbf6732a",
       "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
-      "totalBytes": 480315,
+      "totalBytes": 472020,
       "files": [
         {
           "path": "LICENSE",
@@ -344,32 +344,62 @@
         },
         {
           "path": "README.md",
-          "bytes": 25533,
-          "sha256": "d30fe2f865e45402af40b6c2b16cb00c87847dc7ca26c6d773222d1ae875b5d2",
+          "bytes": 7177,
+          "sha256": "d5da01ed9bb5487c4fe9f16f20feeb1ec07e9655fe8669d7ad439c5435e43f56",
+          "kind": "readme"
+        },
+        {
+          "path": "controllers/README.md",
+          "bytes": 2522,
+          "sha256": "8b13c21d8b1e4316b4d4e1af8a92cf21de12818b48f968d9dcbf2ec787ddc740",
+          "kind": "readme"
+        },
+        {
+          "path": "controllers/_/README.md",
+          "bytes": 634,
+          "sha256": "53f0b76c9ad8f4e2ae1ba10ddea051d67fcf595e4c509c2270bfe9c1174ce299",
+          "kind": "readme"
+        },
+        {
+          "path": "controllers/pos_controller/README.md",
+          "bytes": 2304,
+          "sha256": "e6c6e83b5a594b60d2f67f9ff03b55d2f637e9930b6f129501a80caa2f8da13b",
+          "kind": "readme"
+        },
+        {
+          "path": "controllers/vel_controller/README.md",
+          "bytes": 1908,
+          "sha256": "910e0e670d25d033c208a6f9e14b3786eb6c9c422fd7203bba74008bfe5637b1",
+          "kind": "readme"
+        },
+        {
+          "path": "core/README.md",
+          "bytes": 3428,
+          "sha256": "45feb634f6d8bdefd3cc4b9620c1ab26037968a308b60dc13069f4cb1909e031",
           "kind": "readme"
         },
         {
           "path": "motors/DJI/README.md",
-          "bytes": 4475,
-          "sha256": "0ef65677751a57fcffa00abad33895cedfd1ee3e20c4e9c8c31f4c50eb5df444",
+          "bytes": 4933,
+          "sha256": "5fc75aa59cfaf5070d4efeeb6bee1ed6e5af126e465dc7a3da04fc8da8fc98bc",
           "kind": "readme"
         },
         {
           "path": "motors/DM/README.md",
-          "bytes": 6052,
-          "sha256": "e79f564a5f46912bea424cd0f3d31756a2405020ae326d775af28656df9b32db",
+          "bytes": 7296,
+          "sha256": "d2853f799eb6ef0e7e9d949772f44352e526278f71b09f3ac44ac2a4b114d6d4",
           "kind": "readme"
         },
         {
           "path": "motors/MI/README.md",
-          "bytes": 10855,
-          "sha256": "fdbe0aa87bee8f16737a26477457c8a0bd881cbed0b4a19202324b42a9f96bcf",
+          "bytes": 7284,
+          "sha256": "edd3da1e66eb00e0d531006870348bbb6723cf993d8b774a99963cd1878728ad",
           "kind": "readme"
         },
         {
           "path": "motors/VESC/README.md",
-          "bytes": 2707,
-          "sha256": "39e37ec53a58c1289cb1034d97993b1636fd7c3d06acd65572d1100c89bb233b",
+          "bytes": 3841,
+          "sha256": "c2ef7b00afbdb160964e475796927565b869e0f2c4e82ff94ec9aaf507e3b668",
           "kind": "readme"
         }
       ],
@@ -383,11 +413,57 @@
         {
           "path": "package-catalog.json",
           "bytes": 2502,
-          "sha256": "986f9f60e6aee1b0c7e7c3bcaadf0e49e0a41920a6c89618d43014eaddaffa80",
+          "sha256": "63d9b05c2f377158bd2d5ef38eb1d02d226d8f15bd8b2764fff4eb4bfdab2769",
           "kind": "package-catalog"
         }
       ],
-      "references": [],
+      "references": [
+        {
+          "path": "controllers/_/cpkg.toml"
+        },
+        {
+          "path": "controllers/pos_controller/cpkg.toml"
+        },
+        {
+          "path": "controllers/pos_controller/motor_pos_controller.hpp"
+        },
+        {
+          "path": "controllers/vel_controller/cpkg.toml"
+        },
+        {
+          "path": "controllers/vel_controller/motor_vel_controller.hpp"
+        },
+        {
+          "path": "core/cpkg.toml"
+        },
+        {
+          "path": "core/motor_if.hpp"
+        },
+        {
+          "path": "motors/DJI/cpkg.toml"
+        },
+        {
+          "path": "motors/DJI/dji.hpp"
+        },
+        {
+          "path": "motors/DM/cpkg.toml"
+        },
+        {
+          "path": "motors/DM/dm.hpp"
+        },
+        {
+          "path": "motors/MI/cpkg.toml"
+        },
+        {
+          "path": "motors/MI/mi.hpp"
+        },
+        {
+          "path": "motors/VESC/cpkg.toml"
+        },
+        {
+          "path": "motors/VESC/vesc.hpp"
+        }
+      ],
       "licenseFiles": [
         "LICENSE"
       ],
