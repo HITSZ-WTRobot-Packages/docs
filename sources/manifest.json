@@ -47,11 +47,17 @@
       "displayName": "BasicComponents",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents.git",
       "branch": "main",
-      "sha": "741d8ac8ecc88ce629599fa7538f7a84c9b78be5",
-      "shortSha": "741d8ac8ecc8",
+      "sha": "cff99f12cee0e473590f11a62b586af8e505e76b",
+      "shortSha": "cff99f12cee0",
       "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
-      "totalBytes": 1355987,
+      "totalBytes": 4911167,
       "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 4252,
+          "sha256": "230f2a7fa566faf8bde0eefbb462cfdec73d5dc59ccf8b1822592d6f437cb2f0",
+          "kind": "markdown"
+        },
         {
           "path": "LICENSE",
           "bytes": 35149,
@@ -60,44 +66,182 @@
         },
         {
           "path": "README.md",
-          "bytes": 5363,
-          "sha256": "bb4b5e2a8b6904bb7239092a698a34156edca74f643d7de3b3521a223a98a201",
+          "bytes": 4365,
+          "sha256": "9787c7182ed281d0ac98bc44898c3b6633c167a338a86eca1731b6c651c3adce",
+          "kind": "readme"
+        },
+        {
+          "path": "bsp/can_driver/README.md",
+          "bytes": 6511,
+          "sha256": "10883d235f6c54ddb44a57e8c82de9a9e0d2962fc132cc0f9cfa2be9d489eef6",
           "kind": "readme"
         },
         {
           "path": "bsp/can_driver2/README.md",
-          "bytes": 18247,
-          "sha256": "7b14d5801a2bf94ac0533c51f23c46e7c0cbf3a05ebb0100535ce760ba465dcf",
+          "bytes": 7962,
+          "sha256": "066c0f34069ed2499a848ee6d16e8e714c37d74c3068b3cd721d7c4c45ab9158",
           "kind": "readme"
         },
         {
           "path": "bsp/ethernet/core/README.md",
-          "bytes": 2591,
-          "sha256": "809e85a05a5bb1a7c0b5e40f1dccf953532d685c4cdd294d7cf7e20fff970fb3",
+          "bytes": 1779,
+          "sha256": "0f4c45139ea42b3af92274d66631f425f01246e3eb18ef53c4b714fd85758307",
           "kind": "readme"
         },
         {
           "path": "bsp/ethernet/lwip_platform/README.md",
-          "bytes": 9401,
-          "sha256": "24036b6a8e5d551fdf777cd6145ac718e41b953be59e669cf29b6d4ec2a00487",
+          "bytes": 5316,
+          "sha256": "8f94bb1d85a24f9a37fb0cf06fbc2b3a2ad0db67636b19e4adf7d99b84a3cbf2",
+          "kind": "readme"
+        },
+        {
+          "path": "bsp/ethernet/net/udp_socket/README.md",
+          "bytes": 4803,
+          "sha256": "0b9afc8ac23ef8cc4270faf3891014bf946f6b7f0733e47b28b26b1962ce6bf3",
           "kind": "readme"
         },
         {
           "path": "bsp/ethernet/phy_drivers/dp83822/README.md",
-          "bytes": 3775,
-          "sha256": "00d31b1d62563005025c09e4b706c2999a1db8031b3bf549262ea4fdc7fbcdd3",
+          "bytes": 2904,
+          "sha256": "b9dab1741c121cbef18d8d5919c7a348ac2fc05a3fff54133876518422d19f03",
+          "kind": "readme"
+        },
+        {
+          "path": "bsp/ethernet/phy_drivers/dp83822/dp83822h.pdf",
+          "bytes": 3500724,
+          "sha256": "a83a75e6aa9a4729e5a30dd1c18322a75ea7dedcfe90255dd59cc8e3e6138b98",
+          "kind": "asset"
+        },
+        {
+          "path": "bsp/gpio_driver/README.md",
+          "bytes": 4266,
+          "sha256": "6dbab547477de3998ae9cb85dcffcb0576b1e3a565914815596ded26390dab02",
           "kind": "readme"
         },
         {
           "path": "bsp/i2c_driver/README.md",
-          "bytes": 1854,
-          "sha256": "b16430f32795324204c3cb5bf521553827cdb3232e8b754fd4ece9c8facc36db",
+          "bytes": 2334,
+          "sha256": "deb3a225678e03e35244f678615b7b9ae6ad5ac3a473f0f79eb7418ad6394269",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/concurrency/README.md",
+          "bytes": 1759,
+          "sha256": "b4aedaa7934e6624f920d2d958ae246265a3698af519a079e0f25355b8834736",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/control/mit_pd/README.md",
+          "bytes": 2135,
+          "sha256": "2ae46d19dd20fcc6b65d6df15389c5ea40a6e91172fe1cbcaeca2456ada37f0c",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/control/pid_motor/README.md",
+          "bytes": 2592,
+          "sha256": "95d6cf58e17c76439886e5704a8bee0533aac1458637714a6638f052258aeab8",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/control/pid_pd/README.md",
+          "bytes": 2125,
+          "sha256": "50889bdce3ccf72c09e27acc2811ca91cdde22e2ce31b6ef73a81384fbed4c72",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/math/EKF/README.md",
+          "bytes": 3539,
+          "sha256": "1455dbf619a89cae1e1a009e6cab3a497d2fc7faacd953d2882221880de015f3",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/math/Geometry/README.md",
+          "bytes": 3355,
+          "sha256": "97392fcafa593ed088557b1210535bd5d0478be6d886c1f2bb80cf6bd8cd4ac1",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/math/LinearAlgebra/README.md",
+          "bytes": 2862,
+          "sha256": "ec7349ce032f8a048466b0ec5284b69691b3c7d8df9ce7089e86f6c027310adb",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/traits/README.md",
+          "bytes": 2421,
+          "sha256": "1a697b7c64eeda13dbf89a2d2fd51cdc8a1032529b7eca2422ed6c2a299fe09b",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/utils/crc/README.md",
+          "bytes": 2440,
+          "sha256": "5a73e94a838821c41718e79070737cd4432cfe1551e72472e115a9c1748812be",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/utils/deque/README.md",
+          "bytes": 2389,
+          "sha256": "91dfca11a1695fc45d12804432554985cac612d3e08a90838507dc9eefe4cbff",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/utils/fixed_map/README.md",
+          "bytes": 2134,
+          "sha256": "82093339e4387b6c5d7d131efaa6a129a679702c19a70aeee5631f664137db6a",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/utils/printf/README.md",
+          "bytes": 3505,
+          "sha256": "a7c5f7aa58c32ff54221f52312e44a83f1a7cd15ff679fe88916e76c83f43ba6",
+          "kind": "readme"
+        },
+        {
+          "path": "libs/utils/ring_buffer/README.md",
+          "bytes": 2710,
+          "sha256": "ece4b63066f162d7e96ab1f85ad0f2c1865ce6c121f1a111a473aeb7846b1715",
+          "kind": "readme"
+        },
+        {
+          "path": "memory/DMABuffer/README.md",
+          "bytes": 1893,
+          "sha256": "11d87619f8ace564324c61cc61391e0e480772de0b730abe529efa77a10b1645",
+          "kind": "readme"
+        },
+        {
+          "path": "memory/StaticArena/README.md",
+          "bytes": 2588,
+          "sha256": "785fd1bfd59c67a5e0afe79147da91ae41a9670a44a795e155b3ebb7fcd4e23e",
+          "kind": "readme"
+        },
+        {
+          "path": "memory/StaticObject/README.md",
+          "bytes": 2353,
+          "sha256": "eafe6eb5bbd844b2e7e013c779c3ca7e69dd959bb9a1c84c7ff79ffd5d7e122c",
+          "kind": "readme"
+        },
+        {
+          "path": "protocol/UartRxSync/README.md",
+          "bytes": 4896,
+          "sha256": "848fbced15e672c8f70162dfcc6cf15d32153fe835df889a3bcd3dec0069e0b3",
           "kind": "readme"
         },
         {
           "path": "services/i2c_update_manager/README.md",
-          "bytes": 2014,
-          "sha256": "bc1733936b07ea602afd4b96626d049f3e4344bc3cf2e13f331166d6e9dbd7bb",
+          "bytes": 2260,
+          "sha256": "d6479800678c9477524c5ab00adfe4426b908d55f721c45008d4e68ab96b0aa1",
+          "kind": "readme"
+        },
+        {
+          "path": "services/watchdog/README.md",
+          "bytes": 2831,
+          "sha256": "97738f0e399e304eecc4831f2aa7255868ea706358443801032adbea1cdf14b8",
+          "kind": "readme"
+        },
+        {
+          "path": "utils/README.md",
+          "bytes": 2422,
+          "sha256": "27a0b7499b7b2fca4983ae97df8e921dfbb8194bc2ffe58bd2af3860ec9ee93f",
           "kind": "readme"
         }
       ],
@@ -111,11 +255,234 @@
         {
           "path": "package-catalog.json",
           "bytes": 7237,
-          "sha256": "34a864ccaeaf9c7c869cc971bee390e40a3f45cd6d61966f874e16b661bb9666",
+          "sha256": "39fa4c9725a281c3472afb14a579719051bc125e526c10251b64b89f033c3dbc",
           "kind": "package-catalog"
         }
       ],
-      "references": [],
+      "references": [
+        {
+          "path": "bsp/can_driver/can_driver.cpp"
+        },
+        {
+          "path": "bsp/can_driver/can_driver.hpp"
+        },
+        {
+          "path": "bsp/can_driver/can_hal_def.h"
+        },
+        {
+          "path": "bsp/can_driver2/can_driver.hpp"
+        },
+        {
+          "path": "bsp/can_driver2/can_driver_types.hpp"
+        },
+        {
+          "path": "bsp/ethernet/core/IPhy.hpp"
+        },
+        {
+          "path": "bsp/ethernet/lwip_platform/LwipPlatform.hpp"
+        },
+        {
+          "path": "bsp/ethernet/net/udp_socket/udp_socket.cpp"
+        },
+        {
+          "path": "bsp/ethernet/net/udp_socket/udp_socket.hpp"
+        },
+        {
+          "path": "bsp/ethernet/phy_drivers/dp83822/DP83822Phy.hpp"
+        },
+        {
+          "path": "bsp/gpio_driver/gpio_driver.c"
+        },
+        {
+          "path": "bsp/gpio_driver/gpio_driver.cpp"
+        },
+        {
+          "path": "bsp/gpio_driver/gpio_driver.h"
+        },
+        {
+          "path": "bsp/gpio_driver/gpio_driver.hpp"
+        },
+        {
+          "path": "bsp/gpio_driver/pwm.h"
+        },
+        {
+          "path": "bsp/i2c_driver/I2CBusDMA.hpp"
+        },
+        {
+          "path": "libs/concurrency/AtomicFlagLock.hpp"
+        },
+        {
+          "path": "libs/concurrency/cpkg.toml"
+        },
+        {
+          "path": "libs/control/mit_pd/cpkg.toml"
+        },
+        {
+          "path": "libs/control/mit_pd/mit_pd.cpp"
+        },
+        {
+          "path": "libs/control/mit_pd/mit_pd.hpp"
+        },
+        {
+          "path": "libs/control/pid_motor/cpkg.toml"
+        },
+        {
+          "path": "libs/control/pid_motor/pid_motor.cpp"
+        },
+        {
+          "path": "libs/control/pid_motor/pid_motor.hpp"
+        },
+        {
+          "path": "libs/control/pid_pd/cpkg.toml"
+        },
+        {
+          "path": "libs/control/pid_pd/pid_pd.cpp"
+        },
+        {
+          "path": "libs/control/pid_pd/pid_pd.hpp"
+        },
+        {
+          "path": "libs/math/EKF/EKF.hpp"
+        },
+        {
+          "path": "libs/math/EKF/cpkg.toml"
+        },
+        {
+          "path": "libs/math/Geometry/Euler.hpp"
+        },
+        {
+          "path": "libs/math/Geometry/Pose.hpp"
+        },
+        {
+          "path": "libs/math/Geometry/Quaternion.hpp"
+        },
+        {
+          "path": "libs/math/Geometry/cpkg.toml"
+        },
+        {
+          "path": "libs/math/LinearAlgebra/Mat.hpp"
+        },
+        {
+          "path": "libs/math/LinearAlgebra/Vec.hpp"
+        },
+        {
+          "path": "libs/math/LinearAlgebra/cpkg.toml"
+        },
+        {
+          "path": "libs/traits/cpkg.toml"
+        },
+        {
+          "path": "libs/traits/interface_only.hpp"
+        },
+        {
+          "path": "libs/traits/no_copy.hpp"
+        },
+        {
+          "path": "libs/traits/no_copy_move.hpp"
+        },
+        {
+          "path": "libs/traits/no_delete.hpp"
+        },
+        {
+          "path": "libs/traits/no_derive.hpp"
+        },
+        {
+          "path": "libs/traits/no_heap.hpp"
+        },
+        {
+          "path": "libs/traits/no_move.hpp"
+        },
+        {
+          "path": "libs/traits/no_stack.hpp"
+        },
+        {
+          "path": "libs/traits/static_only.hpp"
+        },
+        {
+          "path": "libs/traits/traits.hpp"
+        },
+        {
+          "path": "libs/utils/crc/cpkg.toml"
+        },
+        {
+          "path": "libs/utils/crc/crc.hpp"
+        },
+        {
+          "path": "libs/utils/deque/Deque.hpp"
+        },
+        {
+          "path": "libs/utils/deque/cpkg.toml"
+        },
+        {
+          "path": "libs/utils/fixed_map/FixedPointerMap.hpp"
+        },
+        {
+          "path": "libs/utils/fixed_map/cpkg.toml"
+        },
+        {
+          "path": "libs/utils/printf/cpkg.toml"
+        },
+        {
+          "path": "libs/utils/printf/printf.c"
+        },
+        {
+          "path": "libs/utils/printf/printf.h"
+        },
+        {
+          "path": "libs/utils/ring_buffer/RingBuffer.hpp"
+        },
+        {
+          "path": "libs/utils/ring_buffer/cpkg.toml"
+        },
+        {
+          "path": "memory/DMABuffer/cpkg.toml"
+        },
+        {
+          "path": "memory/DMABuffer/dma_buffer.hpp"
+        },
+        {
+          "path": "memory/StaticArena/cpkg.toml"
+        },
+        {
+          "path": "memory/StaticArena/static_arena.hpp"
+        },
+        {
+          "path": "memory/StaticObject/cpkg.toml"
+        },
+        {
+          "path": "memory/StaticObject/static_object.hpp"
+        },
+        {
+          "path": "protocol/UartRxSync/UartRxSync.hpp"
+        },
+        {
+          "path": "protocol/UartRxSync/cpkg.toml"
+        },
+        {
+          "path": "services/i2c_update_manager/I2CDevice.hpp"
+        },
+        {
+          "path": "services/i2c_update_manager/I2CUpdateManager.hpp"
+        },
+        {
+          "path": "services/watchdog/cpkg.toml"
+        },
+        {
+          "path": "services/watchdog/watchdog.cpp"
+        },
+        {
+          "path": "services/watchdog/watchdog.hpp"
+        },
+        {
+          "path": "utils/cpkg.toml"
+        },
+        {
+          "path": "utils/isr_lock.h"
+        },
+        {
+          "path": "utils/utils.h"
+        }
+      ],
       "licenseFiles": [
         "LICENSE"
       ],
