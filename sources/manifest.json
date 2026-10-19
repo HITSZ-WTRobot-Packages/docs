@@ -359,11 +359,17 @@
       "displayName": "TrajectoryControl",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/TrajectoryControl.git",
       "branch": "main",
-      "sha": "0f27569746189b5042d32ace0ccd1d47a63c9800",
-      "shortSha": "0f2756974618",
-      "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
-      "totalBytes": 164424,
+      "sha": "0284004d805613a980121cdd3059fc00b17389b3",
+      "shortSha": "0284004d8056",
+      "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
+      "totalBytes": 176050,
       "files": [
+        {
+          "path": "HomingMotorTrajectory/README.md",
+          "bytes": 5440,
+          "sha256": "211c469e5c5c2b9fb2fa3f188f824eff0ef0fa681bf8067f16df8f90bd20981c",
+          "kind": "readme"
+        },
         {
           "path": "LICENSE",
           "bytes": 35149,
@@ -371,9 +377,15 @@
           "kind": "license"
         },
         {
+          "path": "MotorTrajectory/README.md",
+          "bytes": 4913,
+          "sha256": "e5bcca8325cc4acc1e1110899b584999b5dcdeb9d6ac6f8c88b151f537c7af89",
+          "kind": "readme"
+        },
+        {
           "path": "README.md",
-          "bytes": 95,
-          "sha256": "0aa84a98cae8022bbc9c64b198a291c785c20d88f9489fe05bd0d1dddc1f59f0",
+          "bytes": 1368,
+          "sha256": "8c274bd72a10f99803da4ad37f941b768aa7b14d8a4e0413c50d05e2ccd913a4",
           "kind": "readme"
         }
       ],
@@ -387,11 +399,27 @@
         {
           "path": "package-catalog.json",
           "bytes": 863,
-          "sha256": "c6f635d1bddb58f646e7a5e8962395a5d2599717c09ab97f85e58aabc43a5314",
+          "sha256": "0a855b05d2b07da369c51c3d941543dc7720bb0e1c0609a0749718ac88a7094f",
           "kind": "package-catalog"
         }
       ],
-      "references": [],
+      "references": [
+        {
+          "path": "HomingMotorTrajectory/cpkg.toml"
+        },
+        {
+          "path": "HomingMotorTrajectory/homing_motor_trajectory.hpp"
+        },
+        {
+          "path": "MotorTrajectory/cpkg.toml"
+        },
+        {
+          "path": "MotorTrajectory/motor_trajectory.hpp"
+        },
+        {
+          "path": "MotorTrajectory/motor_trajectory_slave.hpp"
+        }
+      ],
       "licenseFiles": [
         "LICENSE"
       ],
