@@ -126,27 +126,45 @@
       "displayName": "ChassisController",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/ChassisController.git",
       "branch": "main",
-      "sha": "7691678de58ff43a983ddd4ecab599bd24d36d13",
-      "shortSha": "7691678de58f",
-      "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
-      "totalBytes": 522095,
+      "sha": "6dcc8d9dd75c31ebb99b20f94168bd655036c91a",
+      "shortSha": "6dcc8d9dd75c",
+      "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
+      "totalBytes": 505839,
       "files": [
         {
+          "path": "Chassis/Mecanum4/README.md",
+          "bytes": 1706,
+          "sha256": "b7ea71e2d1a04dc4b081b9f567eb7d306b23debe723f2bd4a7fa738bb40501f0",
+          "kind": "readme"
+        },
+        {
+          "path": "Chassis/Omni4/README.md",
+          "bytes": 1564,
+          "sha256": "8df97888fbb09e5531d63da7300069f42ab5c8130432953763d41bfb7fb9ddaf",
+          "kind": "readme"
+        },
+        {
           "path": "Chassis/Steering4/README.md",
-          "bytes": 5892,
-          "sha256": "8a52c6a61c416cf113ec3f6aec0afe4b167cd2ab8f13f2917db159978dc8c395",
+          "bytes": 5602,
+          "sha256": "c108b6faa9c5ffb73564b91a0ad70a5eb5bf568b884cd2c3e95caafe125e9845",
           "kind": "readme"
         },
         {
           "path": "Controller/Master/README.md",
-          "bytes": 8012,
-          "sha256": "10daf703a8104f2a289a3b644f700c8bc349d47f2d092686092b9441ba933c85",
+          "bytes": 8848,
+          "sha256": "d47ed4246351ad00436571f88b8b22f09a3f362a1537081c4fe47e2a742dc9ea",
           "kind": "readme"
         },
         {
           "path": "Controller/Slave/README.md",
-          "bytes": 3356,
-          "sha256": "8e58781c1e5aaf3610cdc3eb3acb4d91d415f98525a2e8aed2f037ca6924ddd0",
+          "bytes": 3365,
+          "sha256": "2f60619714ab866b8840e887e9362f8a720570d9e8516904298a9c82cf165343",
+          "kind": "readme"
+        },
+        {
+          "path": "Core/README.md",
+          "bytes": 1467,
+          "sha256": "9dec4ebf5da5022ecbd80e6e23610b9b2cc916b7ce83895e659f09120b9e05a4",
           "kind": "readme"
         },
         {
@@ -157,14 +175,20 @@
         },
         {
           "path": "Localization/EKF/README.md",
-          "bytes": 6855,
-          "sha256": "81777f5c208d43cd36bac756f6a38bf1aae03582dad0bc3e67443a7c080459cd",
+          "bytes": 4430,
+          "sha256": "e1da63b62acbc093b5e3e3a77be73eedd5a9ce8a6de52763f747b8af2c0a0994",
+          "kind": "readme"
+        },
+        {
+          "path": "Localization/JustEncoder/README.md",
+          "bytes": 1533,
+          "sha256": "deb0f421a025bdbc4f6693771b15d5192b1510cbdc57d7eb3517dab0a4355bc9",
           "kind": "readme"
         },
         {
           "path": "README.md",
-          "bytes": 26685,
-          "sha256": "01523862d0f9f0a54371e87871ebc20c0d7784c75fe6ea255030ffa001570c32",
+          "bytes": 6029,
+          "sha256": "ed022b745dc016328f81297c8deae7884fa75df84893d473912d5e42b92ff14b",
           "kind": "readme"
         }
       ],
@@ -178,11 +202,44 @@
         {
           "path": "package-catalog.json",
           "bytes": 2542,
-          "sha256": "78817a90f5840c537fcfabaf706c92a177d2b8cece731422de496bad0d4f51c9",
+          "sha256": "7840387ce4249fac2d18ff7bfafe7892b4dc328531e00e9925b4a7cdcb150343",
           "kind": "package-catalog"
         }
       ],
       "references": [
+        {
+          "path": "Chassis/Mecanum4/Mecanum4.hpp"
+        },
+        {
+          "path": "Chassis/Mecanum4/cpkg.toml"
+        },
+        {
+          "path": "Chassis/Omni4/Omni4.hpp"
+        },
+        {
+          "path": "Chassis/Omni4/cpkg.toml"
+        },
+        {
+          "path": "Chassis/Steering4/Steering4.hpp"
+        },
+        {
+          "path": "Chassis/Steering4/SteeringWheel.hpp"
+        },
+        {
+          "path": "Chassis/Steering4/cpkg.toml"
+        },
+        {
+          "path": "Controller/Master/Master.hpp"
+        },
+        {
+          "path": "Controller/Master/cpkg.toml"
+        },
+        {
+          "path": "Controller/Slave/Slave.hpp"
+        },
+        {
+          "path": "Controller/Slave/cpkg.toml"
+        },
         {
           "path": "Core/IChassisController.hpp"
         },
@@ -194,6 +251,21 @@
         },
         {
           "path": "Core/IChassisMotion.hpp"
+        },
+        {
+          "path": "Core/cpkg.toml"
+        },
+        {
+          "path": "Localization/EKF/LocEKF.hpp"
+        },
+        {
+          "path": "Localization/EKF/cpkg.toml"
+        },
+        {
+          "path": "Localization/JustEncoder/JustEncoder.hpp"
+        },
+        {
+          "path": "Localization/JustEncoder/cpkg.toml"
         }
       ],
       "licenseFiles": [
