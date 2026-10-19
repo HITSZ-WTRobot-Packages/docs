@@ -474,10 +474,10 @@
       "displayName": "Sensors",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/Sensors.git",
       "branch": "main",
-      "sha": "145123d15262f68b8ad253190ec5a5122f8f2cdb",
-      "shortSha": "145123d15262",
+      "sha": "72438aa4de7e5e95a9b7dabbd82e9c86e9a5649e",
+      "shortSha": "72438aa4de7e",
       "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
-      "totalBytes": 426516,
+      "totalBytes": 448815,
       "files": [
         {
           "path": "LICENSE",
@@ -487,8 +487,50 @@
         },
         {
           "path": "README.md",
-          "bytes": 1666,
-          "sha256": "05c38f1542a576ac5f77aa6d1ef918ed346b494fffa8bd2ca0a90c97313422c6",
+          "bytes": 3634,
+          "sha256": "f1d21d2f7106319aebd136694271b4b43e59aa46e6156d021dcd4c5d2c0e9f5e",
+          "kind": "readme"
+        },
+        {
+          "path": "gyro/HWT101CT/README.md",
+          "bytes": 1429,
+          "sha256": "f610ca28cd325df970ee1163b7a37ecce9c67ec0b3dcb869bf1cdf9bad06506a",
+          "kind": "readme"
+        },
+        {
+          "path": "gyro/JY901S/README.md",
+          "bytes": 1618,
+          "sha256": "4dd09ca6a7f3602ed92de6e300bdb321970d4a9bbc3fd414b4d92aa4fbecdbe1",
+          "kind": "readme"
+        },
+        {
+          "path": "laser/dt35/README.md",
+          "bytes": 1908,
+          "sha256": "44bc74bf8a544c9c20110eb08db87606a73e319351ba40d6242ddb2724fba09e",
+          "kind": "readme"
+        },
+        {
+          "path": "laser/stp23l/README.md",
+          "bytes": 1188,
+          "sha256": "4ee6890d6a7fe6e29fad60acebf9fbbb7caafaf5ebc9d9c5e94d285c7fbff918",
+          "kind": "readme"
+        },
+        {
+          "path": "led/ws2812/README.md",
+          "bytes": 9521,
+          "sha256": "ea236c930a8613e1b4676761c6d32ed34758ca97bf3822ffa9710a2731048fe8",
+          "kind": "readme"
+        },
+        {
+          "path": "ops/ActionOPS/README.md",
+          "bytes": 1870,
+          "sha256": "1e50e7f7ce6e3081d07122d9f0bc7934dd4a5a8833feb5560e23a37650206a4b",
+          "kind": "readme"
+        },
+        {
+          "path": "pressure/XGZP6847D/README.md",
+          "bytes": 2797,
+          "sha256": "ca7a75714636a9a5a9e54a9e3f30d6f10c81a710bcb2f696769a54952f1d29bf",
           "kind": "readme"
         }
       ],
@@ -502,11 +544,36 @@
         {
           "path": "package-catalog.json",
           "bytes": 2073,
-          "sha256": "642e27a578aa0fbd8e021633d889c8097ea504f42136bf83f1a4a3ced0760d95",
+          "sha256": "f2fa33bad3d0f28d7210e76485435bb6228cbf3d7cc4b9afa5fa5667edc998f7",
           "kind": "package-catalog"
         }
       ],
-      "references": [],
+      "references": [
+        {
+          "path": "gyro/HWT101CT/HWT101CT.hpp"
+        },
+        {
+          "path": "gyro/JY901S/JY901S.hpp"
+        },
+        {
+          "path": "laser/dt35/DT35.hpp"
+        },
+        {
+          "path": "laser/stp23l/STP23L.cpp"
+        },
+        {
+          "path": "laser/stp23l/STP23L.hpp"
+        },
+        {
+          "path": "led/ws2812/WS2812B.hpp"
+        },
+        {
+          "path": "ops/ActionOPS/ActionOPS.hpp"
+        },
+        {
+          "path": "pressure/XGZP6847D/XGZP6847DDevice.hpp"
+        }
+      ],
       "licenseFiles": [
         "LICENSE"
       ],
