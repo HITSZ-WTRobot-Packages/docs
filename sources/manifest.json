@@ -278,11 +278,17 @@
       "displayName": "Core",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/Core.git",
       "branch": "main",
-      "sha": "5f442f61af7729a0187d71b885f61dfd9bdf3251",
-      "shortSha": "5f442f61af77",
-      "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
-      "totalBytes": 117082,
+      "sha": "de92b6f71c5f5a60963f492e26eee05db6fc7185",
+      "shortSha": "de92b6f71c5f",
+      "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
+      "totalBytes": 117002,
       "files": [
+        {
+          "path": "IController/README.md",
+          "bytes": 7586,
+          "sha256": "0132c5a2359c037db2ede27384141b5e4a96ab92808690762ed9209f06f3327e",
+          "kind": "readme"
+        },
         {
           "path": "LICENSE",
           "bytes": 35149,
@@ -291,8 +297,8 @@
         },
         {
           "path": "README.md",
-          "bytes": 8264,
-          "sha256": "6ffb3e4c13b6458234abd004152f7bad817c97deb83f2084c3b1c7ba1dbfb4e7",
+          "bytes": 598,
+          "sha256": "12a149d3dffbbba86d09442b29f0cb28a19411a446e87ba3ae0e7beeaf354103",
           "kind": "readme"
         }
       ],
@@ -306,11 +312,15 @@
         {
           "path": "package-catalog.json",
           "bytes": 378,
-          "sha256": "30c1b658568ab85ea24bf37864b76e309013ad01696534bbaaff2eedb0bd65e0",
+          "sha256": "b30226e485fd064674ec8d10263f0dd5961fab20e80b4d88a7b2b5f1e7598eac",
           "kind": "package-catalog"
         }
       ],
-      "references": [],
+      "references": [
+        {
+          "path": "IController/IController.hpp"
+        }
+      ],
       "licenseFiles": [
         "LICENSE"
       ],

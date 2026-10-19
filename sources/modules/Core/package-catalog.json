@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "Core",
-  "moduleSha": "5f442f61af7729a0187d71b885f61dfd9bdf3251",
+  "moduleSha": "de92b6f71c5f5a60963f492e26eee05db6fc7185",
   "packages": [
     {
       "name": "IController",
