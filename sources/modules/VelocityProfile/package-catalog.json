@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "VelocityProfile",
-  "moduleSha": "61823125cf9d9b9ecaa3330fcba6080bbc50d963",
+  "moduleSha": "31a7a461d6fc6fa7af867ff7df65a060ac17c704",
   "packages": [
     {
       "name": "Core",

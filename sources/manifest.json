@@ -588,11 +588,23 @@
       "displayName": "VelocityProfile",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/VelocityProfile.git",
       "branch": "main",
-      "sha": "61823125cf9d9b9ecaa3330fcba6080bbc50d963",
-      "shortSha": "61823125cf9d",
-      "producerFingerprint": "9e357ddbeb6e266b002a26f5e410174931d63bc692861976416046dfa662379f",
-      "totalBytes": 261116,
+      "sha": "31a7a461d6fc6fa7af867ff7df65a060ac17c704",
+      "shortSha": "31a7a461d6fc",
+      "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
+      "totalBytes": 330205,
       "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 3544,
+          "sha256": "685e1fb782a2371925fa90d7b3d0d1b2ab033db8edc8ce2e1cd1ad15001626fb",
+          "kind": "markdown"
+        },
+        {
+          "path": "Core/README.md",
+          "bytes": 1722,
+          "sha256": "13c91939c982c3c89e0e5678e42c4dbb4b0c5011d7c827e4d4c2bcf80046a590",
+          "kind": "readme"
+        },
         {
           "path": "LICENSE",
           "bytes": 35149,
@@ -601,8 +613,8 @@
         },
         {
           "path": "README.md",
-          "bytes": 631,
-          "sha256": "8cec96ebe4341db1eab885fcc42c8b48186dd03551d209725d6465b8d4a63276",
+          "bytes": 1080,
+          "sha256": "2c00f9466929ccfa8925e7099bef4c6d71dd05b355dc19119ba1d38472e3e2b2",
           "kind": "readme"
         },
         {
@@ -613,9 +625,27 @@
         },
         {
           "path": "SCurve/README.md",
-          "bytes": 2974,
-          "sha256": "36c23fd46963350ce142d8d4b61ff0b43992921b7731740338207907253407d2",
+          "bytes": 19507,
+          "sha256": "006bc04bca9cc6d879ff96b0a934f417e555c890c598b4e597fc313ad4eae661",
           "kind": "readme"
+        },
+        {
+          "path": "SCurve/simulation/plot_chassis_display.py",
+          "bytes": 6828,
+          "sha256": "5e0797fb79ed0aa63291027cada87df44baaa752a6d5941bc8f9a0b546a0291c",
+          "kind": "asset"
+        },
+        {
+          "path": "SCurve/simulation/plot_display.py",
+          "bytes": 3330,
+          "sha256": "d43108cc7a911ac5cc4ad99db2fd8e4d194b88dd5eca09ac5bb3c60c9e6fd591",
+          "kind": "asset"
+        },
+        {
+          "path": "SCurve/simulation/s_curve.py",
+          "bytes": 36683,
+          "sha256": "4e23355eaad1c50d5117580be936be5881acca79938f79b7c1ce77ba8899f7d5",
+          "kind": "asset"
         }
       ],
       "artifacts": [
@@ -628,11 +658,21 @@
         {
           "path": "package-catalog.json",
           "bytes": 584,
-          "sha256": "107bedbb795dd1a8fe8fa5ebf04ffb85dc63922ec513d90a08872ea8eb4690c7",
+          "sha256": "1f8c90e46d0f9a2abe5fe5045ea4a04439e9502d0fee90fe10cdf02703d7ac3f",
           "kind": "package-catalog"
         }
       ],
-      "references": [],
+      "references": [
+        {
+          "path": "Core/IVelocityProfile.hpp"
+        },
+        {
+          "path": "SCurve/src/s_curve.cpp"
+        },
+        {
+          "path": "SCurve/src/s_curve.hpp"
+        }
+      ],
       "licenseFiles": [
         "LICENSE",
         "SCurve/LICENSE"
