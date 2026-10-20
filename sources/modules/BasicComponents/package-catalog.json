@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "BasicComponents",
-  "moduleSha": "cff99f12cee0e473590f11a62b586af8e505e76b",
+  "moduleSha": "37eb5d6bd60c5f01f7ac737ab95bca3d62fa4210",
   "packages": [
     {
       "name": "UdpSocket",
@@ -76,6 +76,17 @@
       "manifestPath": "libs/math/LinearAlgebra/cpkg.toml",
       "packagePath": "libs/math/LinearAlgebra",
       "dependencyNames": []
+    },
+    {
+      "name": "Button",
+      "pkgname": "bsp::Button",
+      "version": "0.1.0",
+      "manifestPath": "bsp/button/cpkg.toml",
+      "packagePath": "bsp/button",
+      "dependencyNames": [
+        "bsp::GPIO_Driver",
+        "stm32cubemx"
+      ]
     },
     {
       "name": "CANDriver",

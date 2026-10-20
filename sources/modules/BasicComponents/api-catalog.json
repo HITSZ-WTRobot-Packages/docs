@@ -94,6 +94,642 @@
     },
     {
       "targetKind": "package",
+      "targetId": "bsp--button",
+      "displayName": "bsp::Button",
+      "moduleId": "BasicComponents",
+      "packageSlug": "bsp--button",
+      "sourceBranch": "main",
+      "inputPaths": [
+        "bsp/button/button.cpp",
+        "bsp/button/button.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "9 of 22 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-namespace-7b20f212f266f46f",
+          "anchor": "api-namespace-7b20f212f266f46f",
+          "kind": "namespace",
+          "name": "bsp",
+          "qualifiedName": "bsp",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "bsp/button/button.cpp",
+            "line": 10,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.cpp#L10"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-c766d5c95d439f78",
+            "api-namespace-d69d486aac292458"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-1d2b9cc94c6c2c61",
+          "anchor": "api-file-1d2b9cc94c6c2c61",
+          "kind": "file",
+          "name": "bsp/button/button.cpp",
+          "qualifiedName": "bsp/button/button.cpp",
+          "signature": "",
+          "description": "Button 的具体实现：输入引脚绑定、中断通知及任务中的采样消抖。\n\n函数实现集中在本文件，接口、参数说明和使用约定见 button.hpp。 HAL_GPIO_EXTI_Callback 由业务层统一定义，分发按键与其他 GPIO 的中断。",
+          "location": {
+            "path": "bsp/button/button.cpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.cpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-file-19d132ffe81d5a39",
+            "api-namespace-7b20f212f266f46f"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-19d132ffe81d5a39",
+          "anchor": "api-file-19d132ffe81d5a39",
+          "kind": "file",
+          "name": "bsp/button/button.hpp",
+          "qualifiedName": "bsp/button/button.hpp",
+          "signature": "",
+          "description": "基于分装好的gpio的STM32按键二次封装：输入引脚、EXTI 通知、软件消抖及状态变化回调。\n\nWleaf 2026-10-5 button.cpp 业务只需在构造时传入一个接收 bool 的函数，并在任务中周期调用 update()。 引脚读取、中断通知和消抖状态机均由 Button 内部处理。 本文件声明接口及成员变量，具体函数实现在中。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-c766d5c95d439f78",
+            "api-file-1d2b9cc94c6c2c61",
+            "api-namespace-7b20f212f266f46f"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-c766d5c95d439f78",
+          "anchor": "api-class-c766d5c95d439f78",
+          "kind": "class",
+          "name": "bsp::Button",
+          "qualifiedName": "bsp::Button",
+          "signature": "",
+          "description": "Button 一个对应一个 GPIO 输入引脚，继承 GpioPinInput 封装。\n\n构造时注册该引脚的 EXTI 回调。 中断只增加通知计数，不读取电平、不消抖，也不执行业务回调。 update() 在任务中读取电平，用 HAL_GetTick() 记录候选状态持续的时间。 采样得到的候选状态保持 stable_ms 后，才确认按下或松开并通知业务。 工作流程： 回调参数 true 表示确认按下，false 表示确认松开。只有确认状态发生变化才回调， 长按不会重复触发；首次读到松开也不会产生松开回调。上电时已按住的按键同样 需要经过消抖确认，不会在第一次采样时立即触发。 GPIO 时钟、输入模式、上下拉及 EXTI/NVIC 仍由 CubeMX 初始化。 应用层在 app.cpp 中定义统一的 HAL_GPIO_EXTI_Callback，并调用 bsp::gpio::DispatchExtiInterrupt()；按键与其他已注册 GPIO 共用此分发入口。 至少配置按下对应的中断边沿：高电平有效用上升沿，低电平有效用下降沿。 按住后会持续采样，因此松开检测不依赖松开边沿中断，也支持双边沿配置。 update() pressed() 同一个对象只能由一个任务调用和；回调也在该任务中执行。 update() 定期调用，例如每 10ms 调用一次，默认消抖时间为 30ms。 实际确认时间受采样周期和任务调度影响，两个采样点之间的短暂变化可能被漏采。 每条 EXTI 线只能绑定一个对象；相同引脚编号即使位于不同端口也共用 EXTI 线。 注册后不要修改继承得到的 port、pin 和 user_data，避免破坏引脚及对象绑定。 使用约定： void on_button_changed( bool pressed ) { if pressed () { //处理确认后的按下动作。 } else { //处理确认后的松开动作。 } } //在GPIO初始化完成后创建，且对象必须存活到任务不再使用它为止。 bsp::Buttonbutton{GPIOE,GPIO_PIN_13,on_button_changed}; //在任务循环或者定时器中每10ms执行：button.update();",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 62,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L62"
+          },
+          "parentId": "api-namespace-7b20f212f266f46f",
+          "member": null,
+          "references": [
+            "api-function-0d6e127bcba9ade3",
+            "api-function-2fcaa594c06b1ba9",
+            "api-function-43ec013bca3d13a2",
+            "api-function-75ae510fa100abbb",
+            "api-function-89633c3a6ae401c6",
+            "api-function-d68cf6b65ad9da70",
+            "api-function-e79efeb4783d27bb",
+            "api-function-e904da832854bdd0",
+            "api-function-ee3eaa6a5862de05",
+            "api-typedef-f96a25e82fe943c7",
+            "api-variable-1f720f0d35d7006a",
+            "api-variable-2015b1286af72b8b",
+            "api-variable-2da5eb74a4cb78d6",
+            "api-variable-5ce72168003774cf",
+            "api-variable-6604e760b54d2145",
+            "api-variable-7c76726edc85aff1",
+            "api-variable-aacb1d88a0a0ad5f",
+            "api-variable-b3dc68127c8f5f04",
+            "api-variable-f818dbd88a6a7c8c"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-43ec013bca3d13a2",
+          "anchor": "api-function-43ec013bca3d13a2",
+          "kind": "function",
+          "name": "Button",
+          "qualifiedName": "bsp::Button::Button",
+          "signature": "bsp::Button::Button (Button &&)=delete",
+          "description": "",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 95,
+            "column": 9,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L95"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-0d6e127bcba9ade3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0d6e127bcba9ade3",
+          "anchor": "api-function-0d6e127bcba9ade3",
+          "kind": "function",
+          "name": "Button",
+          "qualifiedName": "bsp::Button::Button",
+          "signature": "bsp::Button::Button (GPIO_TypeDef *port, uint16_t pin, Callback callback, uint32_t stable_ms=30, GPIO_PinState active_state=GPIO_PIN_SET)",
+          "description": "绑定输入引脚、业务回调和消抖参数，并自动注册 EXTI 回调。\n\nport GPIO 端口，例如 GPIOE；必须是已经初始化的有效端口。 pin 单个引脚的位掩码，例如 GPIO_PIN_13；不能组合多个引脚。 callback pressed() 状态变化回调；可传 nullptr，仅通过查询确认状态。 stable_ms 候选状态需要保持的毫秒数，默认 30ms，按下与松开共用此值。 active_state 按下时的电平，默认 GPIO_PIN_SET，即高电平有效。 update() 基类构造参数中的 this 保存到 user_data，中断回调据此找到当前 Button。 GPIO 的硬件初始化不在此处执行；构造完成后仍需周期调用才能消抖。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 79,
+            "column": 9,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L79"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-2fcaa594c06b1ba9",
+            "api-function-43ec013bca3d13a2",
+            "api-function-75ae510fa100abbb",
+            "api-function-e79efeb4783d27bb",
+            "api-function-e904da832854bdd0",
+            "api-function-ee3eaa6a5862de05",
+            "api-typedef-f96a25e82fe943c7"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e79efeb4783d27bb",
+          "anchor": "api-function-e79efeb4783d27bb",
+          "kind": "function",
+          "name": "Button",
+          "qualifiedName": "bsp::Button::Button",
+          "signature": "bsp::Button::Button (const Button &)=delete",
+          "description": "",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 93,
+            "column": 9,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L93"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-0d6e127bcba9ade3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-typedef-f96a25e82fe943c7",
+          "anchor": "api-typedef-f96a25e82fe943c7",
+          "kind": "typedef",
+          "name": "Callback",
+          "qualifiedName": "bsp::Button::Callback",
+          "signature": "using bsp::Button::Callback = void (*)(bool pressed)",
+          "description": "update() 业务回调签名：true 为确认按下，false 为确认松开；由同步调用。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 66,
+            "column": 9,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L66"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-75ae510fa100abbb",
+            "api-function-e904da832854bdd0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2015b1286af72b8b",
+          "anchor": "api-variable-2015b1286af72b8b",
+          "kind": "variable",
+          "name": "active_state_",
+          "qualifiedName": "bsp::Button::active_state_",
+          "signature": "const GPIO_PinState bsp::Button::active_state_",
+          "description": "表示按下的原始 GPIO 电平。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 127,
+            "column": 29,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L127"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-aacb1d88a0a0ad5f",
+          "anchor": "api-variable-aacb1d88a0a0ad5f",
+          "kind": "variable",
+          "name": "callback_",
+          "qualifiedName": "bsp::Button::callback_",
+          "signature": "const Callback bsp::Button::callback_",
+          "description": "状态变化时调用的业务函数，可为空。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 125,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L125"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-typedef-f96a25e82fe943c7"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-1f720f0d35d7006a",
+          "anchor": "api-variable-1f720f0d35d7006a",
+          "kind": "variable",
+          "name": "candidate_",
+          "qualifiedName": "bsp::Button::candidate_",
+          "signature": "bool bsp::Button::candidate_",
+          "description": "最近采样得到的候选状态，尚未必满足消抖时间。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 139,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L139"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f818dbd88a6a7c8c",
+          "anchor": "api-variable-f818dbd88a6a7c8c",
+          "kind": "variable",
+          "name": "changed_at_",
+          "qualifiedName": "bsp::Button::changed_at_",
+          "signature": "uint32_t bsp::Button::changed_at_",
+          "description": "",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 137,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L137"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7c76726edc85aff1",
+          "anchor": "api-variable-7c76726edc85aff1",
+          "kind": "variable",
+          "name": "notification_",
+          "qualifiedName": "bsp::Button::notification_",
+          "signature": "volatile uint32_t bsp::Button::notification_",
+          "description": "",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 132,
+            "column": 35,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L132"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-b3dc68127c8f5f04",
+          "anchor": "api-variable-b3dc68127c8f5f04",
+          "kind": "variable",
+          "name": "observed_notification_",
+          "qualifiedName": "bsp::Button::observed_notification_",
+          "signature": "uint32_t bsp::Button::observed_notification_",
+          "description": "",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 135,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L135"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-d68cf6b65ad9da70",
+          "anchor": "api-function-d68cf6b65ad9da70",
+          "kind": "function",
+          "name": "on_exti",
+          "qualifiedName": "bsp::Button::on_exti",
+          "signature": "void bsp::Button::on_exti (const bsp::gpio::GpioPinInput *gpio, uint32_t)",
+          "description": "GPIO 分发器调用的静态中断入口，只记录有新的采样通知。\n\ngpio 注册到分发器的输入引脚句柄，user_data 指向所属 Button。 update() update() 第二个参数是 GPIO 驱动的中断计数，本类不使用；这里维护独立的通知计数。 运行期间只有中断写 notification_，任务只读且从不清零。若中断恰好出现在读取快照之后，新的计数会在下一次被发现，不会被任务覆盖。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 123,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L123"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-e904da832854bdd0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2fcaa594c06b1ba9",
+          "anchor": "api-function-2fcaa594c06b1ba9",
+          "kind": "function",
+          "name": "operator=",
+          "qualifiedName": "bsp::Button::operator=",
+          "signature": "Button & bsp::Button::operator= (Button &&)=delete",
+          "description": "",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 96,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L96"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-0d6e127bcba9ade3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ee3eaa6a5862de05",
+          "anchor": "api-function-ee3eaa6a5862de05",
+          "kind": "function",
+          "name": "operator=",
+          "qualifiedName": "bsp::Button::operator=",
+          "signature": "Button & bsp::Button::operator= (const Button &)=delete",
+          "description": "",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 94,
+            "column": 16,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L94"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-0d6e127bcba9ade3"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-75ae510fa100abbb",
+          "anchor": "api-function-75ae510fa100abbb",
+          "kind": "function",
+          "name": "pressed",
+          "qualifiedName": "bsp::Button::pressed",
+          "signature": "bool bsp::Button::pressed () const",
+          "description": "查询最近一次消抖确认的状态，true 为按下，false 为松开。\n\nupdate() 此函数不读取 GPIO，也不推进消抖；仅允许在调用的同一个任务中使用。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 112,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L112"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-e904da832854bdd0"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5ce72168003774cf",
+          "anchor": "api-variable-5ce72168003774cf",
+          "kind": "variable",
+          "name": "sampling_",
+          "qualifiedName": "bsp::Button::sampling_",
+          "signature": "bool bsp::Button::sampling_",
+          "description": "初始开启采样，保证上电时已按住也能经过消抖确认。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 138,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L138"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6604e760b54d2145",
+          "anchor": "api-variable-6604e760b54d2145",
+          "kind": "variable",
+          "name": "stable_",
+          "qualifiedName": "bsp::Button::stable_",
+          "signature": "bool bsp::Button::stable_",
+          "description": "已确认状态；初始按松开处理，只在确认变化后更新。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 140,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L140"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-2da5eb74a4cb78d6",
+          "anchor": "api-variable-2da5eb74a4cb78d6",
+          "kind": "variable",
+          "name": "stable_ms_",
+          "qualifiedName": "bsp::Button::stable_ms_",
+          "signature": "const uint32_t bsp::Button::stable_ms_",
+          "description": "按下和松开共用的消抖时间，单位 ms。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 126,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L126"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-e904da832854bdd0",
+          "anchor": "api-function-e904da832854bdd0",
+          "kind": "function",
+          "name": "update",
+          "qualifiedName": "bsp::Button::update",
+          "signature": "void bsp::Button::update ()",
+          "description": "在采样任务中推进消抖状态，并同步执行需要触发的业务回调。\n\n此函数只执行一次采样，不等待消抖时间，也不创建任务或定时器。 业务回调应及时返回，以免影响后续采样和同一任务的其他工作。 空闲松开时暂停采样，新的 EXTI 通知重新启动采样；按住时持续采样以检测松开。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 105,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L105"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-75ae510fa100abbb"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-89633c3a6ae401c6",
+          "anchor": "api-function-89633c3a6ae401c6",
+          "kind": "function",
+          "name": "~Button",
+          "qualifiedName": "bsp::Button::~Button",
+          "signature": "bsp::Button::~Button ()",
+          "description": "解除软件中断回调绑定，避免分发器继续保存已销毁对象的地址。\n\n销毁前应保证任务不再访问此对象。注销不修改 GPIO 模式，也不关闭 NVIC 中断。",
+          "location": {
+            "path": "bsp/button/button.hpp",
+            "line": 90,
+            "column": 9,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/bsp/button/button.hpp#L90"
+          },
+          "parentId": "api-class-c766d5c95d439f78",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-namespace-d69d486aac292458",
+          "anchor": "api-namespace-d69d486aac292458",
+          "kind": "namespace",
+          "name": "bsp::gpio",
+          "qualifiedName": "bsp::gpio",
+          "signature": "",
+          "description": "",
+          "location": null,
+          "parentId": null,
+          "member": null,
+          "references": [],
+          "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-c766d5c95d439f78",
+          "baseId": null,
+          "baseQualifiedName": "bsp::gpio::GpioPinInput",
+          "access": "public",
+          "virtual": false
+        }
+      ],
+      "symbolCount": 24,
+      "documentedSymbolCount": 15
+    },
+    {
+      "targetKind": "package",
       "targetId": "bsp--candriver",
       "displayName": "bsp::CANDriver",
       "moduleId": "BasicComponents",
