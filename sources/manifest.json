@@ -698,10 +698,10 @@
       "displayName": "MotorDrivers",
       "repository": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers.git",
       "branch": "main",
-      "sha": "576ddbf6732a3f59849a3e0508d0dd83ee10be7a",
-      "shortSha": "576ddbf6732a",
+      "sha": "a9c5cd59cc4d071b5c743a0b3d657efec6528565",
+      "shortSha": "a9c5cd59cc4d",
       "producerFingerprint": "3bfcc62b80aa13231854fee7343454abe0c7189d7768fd6b17a407ae2bc560b5",
-      "totalBytes": 472020,
+      "totalBytes": 473444,
       "files": [
         {
           "path": "LICENSE",
@@ -753,8 +753,8 @@
         },
         {
           "path": "motors/DM/README.md",
-          "bytes": 7296,
-          "sha256": "d2853f799eb6ef0e7e9d949772f44352e526278f71b09f3ac44ac2a4b114d6d4",
+          "bytes": 7889,
+          "sha256": "53471c585ff7ae5652546fa95c93d4fb8729ea3174abfcc7aa4b8667b195dd60",
           "kind": "readme"
         },
         {
@@ -773,14 +773,14 @@
       "artifacts": [
         {
           "path": "api-catalog.json",
-          "bytes": 393042,
-          "sha256": "99b0e92d6fa3a9d15b702a6df7e1b50395d421b98100baff5097b52241b7a1d0",
+          "bytes": 393873,
+          "sha256": "15658c9b8462d2f0f2e0665af2ee2a74d40a9322f7868a85de3b5bb35698bc07",
           "kind": "api-catalog"
         },
         {
           "path": "package-catalog.json",
           "bytes": 2502,
-          "sha256": "63d9b05c2f377158bd2d5ef38eb1d02d226d8f15bd8b2764fff4eb4bfdab2769",
+          "sha256": "88513958ff870c52bd7c4d7f77507982d31c304e7d3524181b9c41ac97f20f6e",
           "kind": "package-catalog"
         }
       ],

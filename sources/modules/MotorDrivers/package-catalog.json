@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "moduleId": "MotorDrivers",
-  "moduleSha": "576ddbf6732a3f59849a3e0508d0dd83ee10be7a",
+  "moduleSha": "a9c5cd59cc4d071b5c743a0b3d657efec6528565",
   "packages": [
     {
       "name": "PosController",

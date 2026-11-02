@@ -3785,7 +3785,7 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "28 of 79 public API symbols have no description."
+          "message": "29 of 80 public API symbols have no description."
         }
       ],
       "symbols": [
@@ -3811,8 +3811,8 @@
             "const": false
           },
           "references": [
-            "api-function-0bcbc21b500664c3",
-            "api-function-50593ecbaa6a227e"
+            "api-function-87050d174e6b2095",
+            "api-function-bea3cfbe3b0e0951"
           ],
           "enumValues": []
         },
@@ -3838,8 +3838,8 @@
             "const": false
           },
           "references": [
-            "api-function-93e84b9bdf739487",
-            "api-function-c91fd5b4b643c7b2"
+            "api-function-15fb4659d08ccdb9",
+            "api-function-f1bf5f8649ae6d57"
           ],
           "enumValues": []
         },
@@ -3865,8 +3865,8 @@
             "const": false
           },
           "references": [
-            "api-function-0bcbc21b500664c3",
-            "api-function-6c5f8dcf53c97bdc"
+            "api-function-87050d174e6b2095",
+            "api-function-f15a3fc1522733c1"
           ],
           "enumValues": []
         },
@@ -3892,7 +3892,7 @@
             "const": false
           },
           "references": [
-            "api-function-c91fd5b4b643c7b2"
+            "api-function-f1bf5f8649ae6d57"
           ],
           "enumValues": []
         },
@@ -3914,12 +3914,11 @@
           "member": null,
           "references": [
             "api-class-6a1548fa3e0dae02",
-            "api-enum-a423b8c9ce06b381",
-            "api-enum-a950de6834fd9746",
-            "api-function-0bcbc21b500664c3",
-            "api-function-6c5f8dcf53c97bdc",
-            "api-function-c91fd5b4b643c7b2",
-            "api-function-d47ea36f8cc078ec"
+            "api-enum-375037452aee8ceb",
+            "api-enum-56df7f5d05b0ad28",
+            "api-function-87050d174e6b2095",
+            "api-function-f15a3fc1522733c1",
+            "api-function-f1bf5f8649ae6d57"
           ],
           "enumValues": []
         },
@@ -3941,11 +3940,11 @@
           "member": null,
           "references": [
             "api-file-ce1b8d33d8acb80d",
-            "api-function-0bcbc21b500664c3",
-            "api-function-50593ecbaa6a227e",
-            "api-function-6c5f8dcf53c97bdc",
-            "api-function-93e84b9bdf739487",
-            "api-function-c91fd5b4b643c7b2",
+            "api-function-15fb4659d08ccdb9",
+            "api-function-87050d174e6b2095",
+            "api-function-bea3cfbe3b0e0951",
+            "api-function-f15a3fc1522733c1",
+            "api-function-f1bf5f8649ae6d57",
             "api-namespace-c79f54ea2e89d525"
           ],
           "enumValues": []
@@ -3970,7 +3969,7 @@
             "api-class-6a1548fa3e0dae02",
             "api-file-ce0b65fcb3586bd2",
             "api-namespace-c79f54ea2e89d525",
-            "api-struct-2d503197447057c5"
+            "api-struct-51868f1b2d187de4"
           ],
           "enumValues": []
         },
@@ -3981,7 +3980,7 @@
           "name": "motors::DMMotor",
           "qualifiedName": "motors::DMMotor",
           "signature": "",
-          "description": "达妙（DM）电机驱动对象\n\nMIT 内部位置 内部速度 DM 驱动支持多种控制模式： 这类驱动对参数量程比较敏感，因此配置中的量程必须和上位机设定一致， 否则反馈换算和指令打包都会出错。 master_id 所有 DM 电机共享同一个 id0 0x09 ~ 0x0F 建议使用，以便避开 DJI 的标准 ID 区间 当前库对 DM 还额外有两个明确约束： bsp::can::Can cfg.can on_can Can::start() 反馈通过的成员回调接收：构造时即向注册，因此本对象必须在之前构造，并存活到该总线不再使用 （can_driver2 没有注销接口）。对象禁止复制与移动，避免回调借用旧地址。",
+          "description": "达妙（DM）电机驱动对象\n\nMIT 内部位置 内部速度 DM 驱动支持多种控制模式： 这类驱动对参数量程比较敏感，因此配置中的量程必须和上位机设定一致， 否则反馈换算和指令打包都会出错。 master_id 0x020 + id0 每台电机的必须在电调端设为，驱动不会自动配置 id0 0x09 ~ 0x0F 必须使用，以便避开 DJI 的标准 ID 区间 当前库对 DM 还额外有两个明确约束： bsp::can::Can cfg.can on_can Can::start() 反馈通过的成员回调接收：构造时即向注册，因此本对象必须在之前构造，并存活到该总线不再使用 （can_driver2 没有注销接口）。对象禁止复制与移动，避免回调借用旧地址。",
           "location": {
             "path": "motors/DM/dm.hpp",
             "line": 34,
@@ -3995,49 +3994,49 @@
             "api-define-74e5dca65b07931c",
             "api-define-7ba8a944cb4d46a9",
             "api-define-b5647b74aefb9676",
-            "api-enum-27751d431dbac65e",
-            "api-enum-a423b8c9ce06b381",
-            "api-enum-a950de6834fd9746",
-            "api-function-063515213c4ef328",
-            "api-function-0bcbc21b500664c3",
+            "api-enum-375037452aee8ceb",
+            "api-enum-56df7f5d05b0ad28",
+            "api-enum-5a3993169ed52458",
             "api-function-0e9dad212782d9a7",
-            "api-function-11db7889cfbc530c",
-            "api-function-17f4d14ef9b463d6",
-            "api-function-3138da95b3007c78",
-            "api-function-330031a4b44befb3",
-            "api-function-42a5709b87b014be",
-            "api-function-4337046880957f20",
-            "api-function-4d03c6cb4c7bff82",
-            "api-function-50593ecbaa6a227e",
-            "api-function-56c3467a3159e55f",
-            "api-function-56db60fc5f42b873",
-            "api-function-6c5f8dcf53c97bdc",
-            "api-function-6e09726517d14630",
-            "api-function-718f7dcdcb4d5c89",
-            "api-function-786a02895e4d281b",
-            "api-function-85a1d201117acea0",
-            "api-function-8aa542f0595ca3a9",
-            "api-function-91dc7a9631e23625",
-            "api-function-93e84b9bdf739487",
-            "api-function-9864d2ed387f849a",
+            "api-function-15dd0265f2145411",
+            "api-function-15fb4659d08ccdb9",
+            "api-function-28f66f11d1c04a12",
+            "api-function-35bbdf4c5c02b71f",
+            "api-function-41a021c7be622f77",
+            "api-function-4760e7f74279a833",
+            "api-function-6b566dbe568dbac8",
+            "api-function-6c8481ef4955a78b",
+            "api-function-6f591f82e7bc2d8a",
+            "api-function-70046c69ea35f3a3",
+            "api-function-7056d79771cfb4ee",
+            "api-function-73cf2d0c16e604bb",
+            "api-function-7d7b727bd1986ac1",
+            "api-function-8520d6ecd6b84bb6",
+            "api-function-87050d174e6b2095",
+            "api-function-8b69bf4d92237b7f",
+            "api-function-9f9e37be8a71cf0e",
+            "api-function-a7580fa72c73d505",
+            "api-function-a7b0875e271d7a83",
             "api-function-aa44bc31822b784b",
-            "api-function-ab55ae9192d09f36",
-            "api-function-c91fd5b4b643c7b2",
-            "api-function-d35865204f56aaba",
-            "api-function-d47ea36f8cc078ec",
-            "api-function-d841dafc222269c5",
-            "api-function-dd55374aa7b1954d",
-            "api-function-e5ff385860366e43",
-            "api-function-ec503169aed942a6",
-            "api-function-f255abb64dff0c15",
-            "api-function-f3d99dce9ca5f6d2",
-            "api-function-fee94856ccd7a6ac",
-            "api-struct-2d503197447057c5",
+            "api-function-b08f79ffb44eaae5",
+            "api-function-b5cd309137422faa",
+            "api-function-bd3a157b3cfe03a3",
+            "api-function-bea3cfbe3b0e0951",
+            "api-function-c029ae46c1b3822d",
+            "api-function-c430ac420427df3e",
+            "api-function-d658f091b80ff1fc",
+            "api-function-e764f6ac83047d3b",
+            "api-function-eadbdd3b284cc0ce",
+            "api-function-ecd4b487ee1ccf42",
+            "api-function-f03c1dc399ac84e6",
+            "api-function-f15a3fc1522733c1",
+            "api-function-f1bf5f8649ae6d57",
+            "api-function-f3cde73ae13f7069",
+            "api-struct-51868f1b2d187de4",
             "api-variable-0630d4396e499145",
             "api-variable-08abd3687858320e",
             "api-variable-23558ce3b4f3d087",
             "api-variable-33641dfc4c6facbe",
-            "api-variable-35f9ce2bc0f5703a",
             "api-variable-47f2703f56b47432",
             "api-variable-51a529c3aa50d8a2",
             "api-variable-53945734cd218ead",
@@ -4048,6 +4047,7 @@
             "api-variable-9268e1028a87190b",
             "api-variable-bca306f2e1947711",
             "api-variable-c6024bede96e8008",
+            "api-variable-e615df6fe09aa434",
             "api-variable-e8e10b639c16deec",
             "api-variable-e9b027b292732c98",
             "api-variable-ec409c1f7f43374e",
@@ -4058,13 +4058,13 @@
           "enumValues": []
         },
         {
-          "id": "api-function-d47ea36f8cc078ec",
-          "anchor": "api-function-d47ea36f8cc078ec",
+          "id": "api-function-a7580fa72c73d505",
+          "anchor": "api-function-a7580fa72c73d505",
           "kind": "function",
           "name": "CAN_FilterInit",
           "qualifiedName": "motors::DMMotor::CAN_FilterInit",
-          "signature": "bsp::can::Status motors::DMMotor::CAN_FilterInit (bsp::can::Can &can, uint32_t filter_index, uint32_t master_id)",
-          "description": "初始化 DM 反馈的 CAN 滤波器\n\nid1 = master_id 0x7FF on_can 只接受发给主机（master）的标准帧：、掩码；命中帧写入 FIFO0。RTR 位不参与掩码，因此硬件同时放行数据帧与远程帧，远程帧由丢弃（原实现靠掩码低半字一并排除）。 can Can::start() 目标总线（须在之前调用） filter_index 过滤器资源编号。can_driver2 中 bxCAN 为 filter bank 编号， FDCAN 为所选标准/扩展过滤器数组内的 element 下标，两者硬件 布局不同，索引不可互换。 master_id 本机主控 ID，用于接收属于自己的反馈；当前库要求所有 DM 电机共用同一个值 can_driver2 状态码；调用方需自行检查",
+          "signature": "bsp::can::Status motors::DMMotor::CAN_FilterInit (bsp::can::Can &can, uint32_t filter_index)",
+          "description": "初始化 DM 反馈的 CAN 滤波器\n\nid1 = 0x028 id2 = 0x7F8 0x028 ~ 0x02F masterId() on_can 配置标准 ID 掩码、，放行至 FIFO0，覆盖所有合法电机的。回调再匹配自身主机 ID 与电机 ID。 RTR 位不参与掩码，硬件也放行远程帧，由丢弃。 can Can::start() 目标总线（须在之前调用） filter_index 过滤器资源编号。can_driver2 中 bxCAN 为 filter bank 编号， FDCAN 为所选标准/扩展过滤器数组内的 element 下标，两者硬件 布局不同，索引不可互换。 can_driver2 状态码；调用方需自行检查",
           "location": {
             "path": "motors/DM/dm.hpp",
             "line": 220,
@@ -4079,13 +4079,13 @@
             "const": false
           },
           "references": [
-            "api-variable-35f9ce2bc0f5703a"
+            "api-function-6c8481ef4955a78b"
           ],
           "enumValues": []
         },
         {
-          "id": "api-struct-2d503197447057c5",
-          "anchor": "api-struct-2d503197447057c5",
+          "id": "api-struct-51868f1b2d187de4",
+          "anchor": "api-struct-51868f1b2d187de4",
           "kind": "struct",
           "name": "motors::DMMotor::Config",
           "qualifiedName": "motors::DMMotor::Config",
@@ -4093,33 +4093,33 @@
           "description": "达妙电机配置",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 85,
+            "line": 86,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L85"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L86"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": null,
           "references": [
-            "api-enum-a423b8c9ce06b381",
-            "api-enum-a950de6834fd9746",
-            "api-variable-01f810acf5d4713d",
-            "api-variable-11255a710989794f",
-            "api-variable-1f27cc286c829e6e",
-            "api-variable-3376812259394933",
-            "api-variable-9b0d492314bf0190",
-            "api-variable-b53830f56dbcafd3",
-            "api-variable-bd46785ba86a1820",
-            "api-variable-bd57d6b101a67ef8",
-            "api-variable-bda0a75431fafb4c",
-            "api-variable-ed0893e0997aca13",
-            "api-variable-ee408a01d44e88d4",
-            "api-variable-f1cae4db93a84652"
+            "api-enum-375037452aee8ceb",
+            "api-enum-56df7f5d05b0ad28",
+            "api-variable-045aa6efc8405893",
+            "api-variable-0ee5b92cde15a9f8",
+            "api-variable-249419cc7e509216",
+            "api-variable-4569bacc2e097533",
+            "api-variable-46c8501755dfda78",
+            "api-variable-5f72e1df89eb9f0b",
+            "api-variable-63fcf1f74c62cab5",
+            "api-variable-6e055e29922d9440",
+            "api-variable-759e0736029ff982",
+            "api-variable-8f0f879eb3de30e4",
+            "api-variable-ba3e9053766b822b",
+            "api-variable-e053777f6fdde412"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-01f810acf5d4713d",
-          "anchor": "api-variable-01f810acf5d4713d",
+          "id": "api-variable-46c8501755dfda78",
+          "anchor": "api-variable-46c8501755dfda78",
           "kind": "variable",
           "name": "auto_zero",
           "qualifiedName": "motors::DMMotor::Config::auto_zero",
@@ -4127,11 +4127,11 @@
           "description": "上电收够一段稳定反馈后，是否自动把当前角度设为零点",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 97,
+            "line": 98,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L97"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L98"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4142,8 +4142,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-ee408a01d44e88d4",
-          "anchor": "api-variable-ee408a01d44e88d4",
+          "id": "api-variable-0ee5b92cde15a9f8",
+          "anchor": "api-variable-0ee5b92cde15a9f8",
           "kind": "variable",
           "name": "can",
           "qualifiedName": "motors::DMMotor::Config::can",
@@ -4151,11 +4151,11 @@
           "description": "所在 CAN 总线（借用，须比本对象长寿）",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 87,
+            "line": 88,
             "column": 23,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L87"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L88"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4166,8 +4166,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-f1cae4db93a84652",
-          "anchor": "api-variable-f1cae4db93a84652",
+          "id": "api-variable-6e055e29922d9440",
+          "anchor": "api-variable-6e055e29922d9440",
           "kind": "variable",
           "name": "can_fd_brs",
           "qualifiedName": "motors::DMMotor::Config::can_fd_brs",
@@ -4175,11 +4175,11 @@
           "description": "true：CAN FD + BRS；false：Classic CAN，须匹配电调配置",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 100,
+            "line": 101,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L100"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L101"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4190,8 +4190,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-bd57d6b101a67ef8",
-          "anchor": "api-variable-bd57d6b101a67ef8",
+          "id": "api-variable-ba3e9053766b822b",
+          "anchor": "api-variable-ba3e9053766b822b",
           "kind": "variable",
           "name": "default_angle_zero",
           "qualifiedName": "motors::DMMotor::Config::default_angle_zero",
@@ -4199,11 +4199,11 @@
           "description": "默认电机零点，理解为零点时电机编码器返回的角度",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 95,
+            "line": 96,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L95"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L96"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4214,20 +4214,20 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-bda0a75431fafb4c",
-          "anchor": "api-variable-bda0a75431fafb4c",
+          "id": "api-variable-e053777f6fdde412",
+          "anchor": "api-variable-e053777f6fdde412",
           "kind": "variable",
           "name": "id0",
           "qualifiedName": "motors::DMMotor::Config::id0",
           "signature": "uint8_t motors::DMMotor::Config::id0",
-          "description": "电调 ID，仅低 4 位有效，建议从 0x09 到 0x0F",
+          "description": "电调 ID，必须为 0x09 到 0x0F，不截取低 4 位",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 88,
+            "line": 89,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L88"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L89"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4238,8 +4238,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-ed0893e0997aca13",
-          "anchor": "api-variable-ed0893e0997aca13",
+          "id": "api-variable-249419cc7e509216",
+          "anchor": "api-variable-249419cc7e509216",
           "kind": "variable",
           "name": "mode",
           "qualifiedName": "motors::DMMotor::Config::mode",
@@ -4247,11 +4247,11 @@
           "description": "驱动器控制模式，需要和上位机配置一致",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 90,
+            "line": 91,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L90"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L91"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4259,13 +4259,13 @@
             "const": false
           },
           "references": [
-            "api-enum-a950de6834fd9746"
+            "api-enum-56df7f5d05b0ad28"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-11255a710989794f",
-          "anchor": "api-variable-11255a710989794f",
+          "id": "api-variable-045aa6efc8405893",
+          "anchor": "api-variable-045aa6efc8405893",
           "kind": "variable",
           "name": "pos_max_rad",
           "qualifiedName": "motors::DMMotor::Config::pos_max_rad",
@@ -4273,11 +4273,11 @@
           "description": "驱动器配置的位置最大值，单位 rad",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 91,
+            "line": 92,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L91"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L92"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4288,8 +4288,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-3376812259394933",
-          "anchor": "api-variable-3376812259394933",
+          "id": "api-variable-8f0f879eb3de30e4",
+          "anchor": "api-variable-8f0f879eb3de30e4",
           "kind": "variable",
           "name": "reduction_rate",
           "qualifiedName": "motors::DMMotor::Config::reduction_rate",
@@ -4297,11 +4297,11 @@
           "description": "外接减速比",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 99,
+            "line": 100,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L99"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L100"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4312,8 +4312,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-bd46785ba86a1820",
-          "anchor": "api-variable-bd46785ba86a1820",
+          "id": "api-variable-63fcf1f74c62cab5",
+          "anchor": "api-variable-63fcf1f74c62cab5",
           "kind": "variable",
           "name": "reverse",
           "qualifiedName": "motors::DMMotor::Config::reverse",
@@ -4321,11 +4321,11 @@
           "description": "是否反转输出方向",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 98,
+            "line": 99,
             "column": 15,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L98"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L99"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4336,8 +4336,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-1f27cc286c829e6e",
-          "anchor": "api-variable-1f27cc286c829e6e",
+          "id": "api-variable-759e0736029ff982",
+          "anchor": "api-variable-759e0736029ff982",
           "kind": "variable",
           "name": "tor_max",
           "qualifiedName": "motors::DMMotor::Config::tor_max",
@@ -4345,11 +4345,11 @@
           "description": "驱动器配置的力矩最大值，单位 Nm",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 93,
+            "line": 94,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L93"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L94"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4360,8 +4360,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-b53830f56dbcafd3",
-          "anchor": "api-variable-b53830f56dbcafd3",
+          "id": "api-variable-5f72e1df89eb9f0b",
+          "anchor": "api-variable-5f72e1df89eb9f0b",
           "kind": "variable",
           "name": "type",
           "qualifiedName": "motors::DMMotor::Config::type",
@@ -4369,11 +4369,11 @@
           "description": "电机类型",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 89,
+            "line": 90,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L89"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L90"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4381,13 +4381,13 @@
             "const": false
           },
           "references": [
-            "api-enum-a423b8c9ce06b381"
+            "api-enum-375037452aee8ceb"
           ],
           "enumValues": []
         },
         {
-          "id": "api-variable-9b0d492314bf0190",
-          "anchor": "api-variable-9b0d492314bf0190",
+          "id": "api-variable-4569bacc2e097533",
+          "anchor": "api-variable-4569bacc2e097533",
           "kind": "variable",
           "name": "vel_max_rad",
           "qualifiedName": "motors::DMMotor::Config::vel_max_rad",
@@ -4395,11 +4395,11 @@
           "description": "驱动器配置的速度最大值，单位 rad/s",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 92,
+            "line": 93,
             "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L92"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L93"
           },
-          "parentId": "api-struct-2d503197447057c5",
+          "parentId": "api-struct-51868f1b2d187de4",
           "member": {
             "access": "public",
             "static": false,
@@ -4434,8 +4434,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-11db7889cfbc530c",
-          "anchor": "api-function-11db7889cfbc530c",
+          "id": "api-function-41a021c7be622f77",
+          "anchor": "api-function-41a021c7be622f77",
           "kind": "function",
           "name": "DMMotor",
           "qualifiedName": "motors::DMMotor::DMMotor",
@@ -4443,9 +4443,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 109,
+            "line": 110,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L109"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L110"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -4455,13 +4455,13 @@
             "const": false
           },
           "references": [
-            "api-function-93e84b9bdf739487"
+            "api-function-15fb4659d08ccdb9"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-93e84b9bdf739487",
-          "anchor": "api-function-93e84b9bdf739487",
+          "id": "api-function-15fb4659d08ccdb9",
+          "anchor": "api-function-15fb4659d08ccdb9",
           "kind": "function",
           "name": "DMMotor",
           "qualifiedName": "motors::DMMotor::DMMotor",
@@ -4469,9 +4469,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 103,
+            "line": 104,
             "column": 14,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L103"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L104"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -4482,17 +4482,17 @@
           },
           "references": [
             "api-define-b5647b74aefb9676",
-            "api-function-063515213c4ef328",
-            "api-function-11db7889cfbc530c",
-            "api-function-17f4d14ef9b463d6",
-            "api-function-d841dafc222269c5",
-            "api-struct-2d503197447057c5"
+            "api-function-35bbdf4c5c02b71f",
+            "api-function-41a021c7be622f77",
+            "api-function-bd3a157b3cfe03a3",
+            "api-function-e764f6ac83047d3b",
+            "api-struct-51868f1b2d187de4"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-063515213c4ef328",
-          "anchor": "api-function-063515213c4ef328",
+          "id": "api-function-35bbdf4c5c02b71f",
+          "anchor": "api-function-35bbdf4c5c02b71f",
           "kind": "function",
           "name": "DMMotor",
           "qualifiedName": "motors::DMMotor::DMMotor",
@@ -4500,9 +4500,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 107,
+            "line": 108,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L107"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L108"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -4512,7 +4512,7 @@
             "const": false
           },
           "references": [
-            "api-function-93e84b9bdf739487"
+            "api-function-15fb4659d08ccdb9"
           ],
           "enumValues": []
         },
@@ -4541,8 +4541,34 @@
           "enumValues": []
         },
         {
-          "id": "api-enum-a950de6834fd9746",
-          "anchor": "api-enum-a950de6834fd9746",
+          "id": "api-variable-e615df6fe09aa434",
+          "anchor": "api-variable-e615df6fe09aa434",
+          "kind": "variable",
+          "name": "MasterIDOffset",
+          "qualifiedName": "motors::DMMotor::MasterIDOffset",
+          "signature": "uint32_t motors::DMMotor::MasterIDOffset",
+          "description": "",
+          "location": {
+            "path": "motors/DM/dm.hpp",
+            "line": 37,
+            "column": 31,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L37"
+          },
+          "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-6c8481ef4955a78b"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-56df7f5d05b0ad28",
+          "anchor": "api-enum-56df7f5d05b0ad28",
           "kind": "enum",
           "name": "Mode",
           "qualifiedName": "motors::DMMotor::Mode",
@@ -4550,9 +4576,9 @@
           "description": "DM 驱动器内部控制模式\n\nVel = 0x200 + ID Pos = 0x100 + ID MIT = 0x000 + ID 这里不是 MCU 侧控制器模式，而是驱动器固件当前配置成哪种协议解释方式。 发送时标准帧 ID 为“模式基值 + 电机 ID”：",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 60,
+            "line": 61,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L60"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L61"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -4581,8 +4607,8 @@
           ]
         },
         {
-          "id": "api-enum-27751d431dbac65e",
-          "anchor": "api-enum-27751d431dbac65e",
+          "id": "api-enum-5a3993169ed52458",
+          "anchor": "api-enum-5a3993169ed52458",
           "kind": "enum",
           "name": "State",
           "qualifiedName": "motors::DMMotor::State",
@@ -4590,9 +4616,9 @@
           "description": "达妙反馈状态码",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 69,
+            "line": 70,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L69"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L70"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -4651,8 +4677,8 @@
           ]
         },
         {
-          "id": "api-enum-a423b8c9ce06b381",
-          "anchor": "api-enum-a423b8c9ce06b381",
+          "id": "api-enum-375037452aee8ceb",
+          "anchor": "api-enum-375037452aee8ceb",
           "kind": "enum",
           "name": "Type",
           "qualifiedName": "motors::DMMotor::Type",
@@ -4660,9 +4686,9 @@
           "description": "已封装的 DM 电机类型",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 40,
+            "line": 41,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L40"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L41"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -4804,7 +4830,7 @@
             "const": false
           },
           "references": [
-            "api-struct-2d503197447057c5"
+            "api-struct-51868f1b2d187de4"
           ],
           "enumValues": []
         },
@@ -4833,8 +4859,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-c91fd5b4b643c7b2",
-          "anchor": "api-function-c91fd5b4b643c7b2",
+          "id": "api-function-f1bf5f8649ae6d57",
+          "anchor": "api-function-f1bf5f8649ae6d57",
           "kind": "function",
           "name": "decode",
           "qualifiedName": "motors::DMMotor::decode",
@@ -4842,9 +4868,9 @@
           "description": "解码一帧 DM 反馈",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 150,
+            "line": 151,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L150"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L151"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -4856,15 +4882,15 @@
           "references": [
             "api-define-7ba8a944cb4d46a9",
             "api-define-b5647b74aefb9676",
-            "api-function-718f7dcdcb4d5c89",
-            "api-function-8aa542f0595ca3a9",
-            "api-function-ab55ae9192d09f36"
+            "api-function-15dd0265f2145411",
+            "api-function-6f591f82e7bc2d8a",
+            "api-function-7056d79771cfb4ee"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-dd55374aa7b1954d",
-          "anchor": "api-function-dd55374aa7b1954d",
+          "id": "api-function-ecd4b487ee1ccf42",
+          "anchor": "api-function-ecd4b487ee1ccf42",
           "kind": "function",
           "name": "defaultControlMode",
           "qualifiedName": "motors::DMMotor::defaultControlMode",
@@ -4872,9 +4898,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 132,
+            "line": 133,
             "column": 31,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L132"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L133"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -4887,8 +4913,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-4337046880957f20",
-          "anchor": "api-function-4337046880957f20",
+          "id": "api-function-b08f79ffb44eaae5",
+          "anchor": "api-function-b08f79ffb44eaae5",
           "kind": "function",
           "name": "disable",
           "qualifiedName": "motors::DMMotor::disable",
@@ -4896,9 +4922,9 @@
           "description": "发送失能报文",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 241,
+            "line": 239,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L241"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L239"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -4908,13 +4934,13 @@
             "const": false
           },
           "references": [
-            "api-function-91dc7a9631e23625"
+            "api-function-d658f091b80ff1fc"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-e5ff385860366e43",
-          "anchor": "api-function-e5ff385860366e43",
+          "id": "api-function-8b69bf4d92237b7f",
+          "anchor": "api-function-8b69bf4d92237b7f",
           "kind": "function",
           "name": "enable",
           "qualifiedName": "motors::DMMotor::enable",
@@ -4922,9 +4948,9 @@
           "description": "发送使能报文\n\n是否发送成功",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 237,
+            "line": 235,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L237"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L235"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -4934,8 +4960,8 @@
             "const": false
           },
           "references": [
-            "api-function-42a5709b87b014be",
-            "api-function-786a02895e4d281b"
+            "api-function-73cf2d0c16e604bb",
+            "api-function-c029ae46c1b3822d"
           ],
           "enumValues": []
         },
@@ -5012,8 +5038,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-f3d99dce9ca5f6d2",
-          "anchor": "api-function-f3d99dce9ca5f6d2",
+          "id": "api-function-70046c69ea35f3a3",
+          "anchor": "api-function-70046c69ea35f3a3",
           "kind": "function",
           "name": "getAngle",
           "qualifiedName": "motors::DMMotor::getAngle",
@@ -5021,9 +5047,9 @@
           "description": "获取输出轴角度\n\n角度，单位 deg",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 116,
+            "line": 117,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L116"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L117"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5036,8 +5062,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-6e09726517d14630",
-          "anchor": "api-function-6e09726517d14630",
+          "id": "api-function-a7b0875e271d7a83",
+          "anchor": "api-function-a7b0875e271d7a83",
           "kind": "function",
           "name": "getTorque",
           "qualifiedName": "motors::DMMotor::getTorque",
@@ -5045,9 +5071,9 @@
           "description": "获取反馈力矩\n\n力矩，单位 Nm",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 126,
+            "line": 127,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L126"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L127"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5060,8 +5086,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-fee94856ccd7a6ac",
-          "anchor": "api-function-fee94856ccd7a6ac",
+          "id": "api-function-8520d6ecd6b84bb6",
+          "anchor": "api-function-8520d6ecd6b84bb6",
           "kind": "function",
           "name": "getVelocity",
           "qualifiedName": "motors::DMMotor::getVelocity",
@@ -5069,9 +5095,9 @@
           "description": "获取输出轴角速度\n\n速度；DM 对外接口单位按库约定使用 rpm",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 121,
+            "line": 122,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L121"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L122"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5084,8 +5110,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-9864d2ed387f849a",
-          "anchor": "api-function-9864d2ed387f849a",
+          "id": "api-function-4760e7f74279a833",
+          "anchor": "api-function-4760e7f74279a833",
           "kind": "function",
           "name": "internalPositionSupportLevel",
           "qualifiedName": "motors::DMMotor::internalPositionSupportLevel",
@@ -5093,9 +5119,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 176,
+            "line": 177,
             "column": 35,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L176"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L177"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5108,8 +5134,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-56c3467a3159e55f",
-          "anchor": "api-function-56c3467a3159e55f",
+          "id": "api-function-6b566dbe568dbac8",
+          "anchor": "api-function-6b566dbe568dbac8",
           "kind": "function",
           "name": "internalVelocitySupportLevel",
           "qualifiedName": "motors::DMMotor::internalVelocitySupportLevel",
@@ -5117,9 +5143,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 163,
+            "line": 164,
             "column": 35,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L163"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L164"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5156,8 +5182,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-ec503169aed942a6",
-          "anchor": "api-function-ec503169aed942a6",
+          "id": "api-function-f03c1dc399ac84e6",
+          "anchor": "api-function-f03c1dc399ac84e6",
           "kind": "function",
           "name": "isConnected",
           "qualifiedName": "motors::DMMotor::isConnected",
@@ -5165,9 +5191,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 152,
+            "line": 153,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L152"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L153"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5177,6 +5203,32 @@
             "const": true
           },
           "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-6c8481ef4955a78b",
+          "anchor": "api-function-6c8481ef4955a78b",
+          "kind": "function",
+          "name": "masterId",
+          "qualifiedName": "motors::DMMotor::masterId",
+          "signature": "uint32_t motors::DMMotor::masterId () const",
+          "description": "",
+          "location": {
+            "path": "motors/DM/dm.hpp",
+            "line": 260,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L260"
+          },
+          "parentId": "api-class-6a1548fa3e0dae02",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-variable-e615df6fe09aa434"
+          ],
           "enumValues": []
         },
         {
@@ -5204,8 +5256,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-d841dafc222269c5",
-          "anchor": "api-function-d841dafc222269c5",
+          "id": "api-function-bd3a157b3cfe03a3",
+          "anchor": "api-function-bd3a157b3cfe03a3",
           "kind": "function",
           "name": "operator=",
           "qualifiedName": "motors::DMMotor::operator=",
@@ -5213,9 +5265,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 110,
+            "line": 111,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L110"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L111"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5225,13 +5277,13 @@
             "const": false
           },
           "references": [
-            "api-function-93e84b9bdf739487"
+            "api-function-15fb4659d08ccdb9"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-17f4d14ef9b463d6",
-          "anchor": "api-function-17f4d14ef9b463d6",
+          "id": "api-function-e764f6ac83047d3b",
+          "anchor": "api-function-e764f6ac83047d3b",
           "kind": "function",
           "name": "operator=",
           "qualifiedName": "motors::DMMotor::operator=",
@@ -5239,9 +5291,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 108,
+            "line": 109,
             "column": 13,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L108"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L109"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5251,13 +5303,13 @@
             "const": false
           },
           "references": [
-            "api-function-93e84b9bdf739487"
+            "api-function-15fb4659d08ccdb9"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-d35865204f56aaba",
-          "anchor": "api-function-d35865204f56aaba",
+          "id": "api-function-f3cde73ae13f7069",
+          "anchor": "api-function-f3cde73ae13f7069",
           "kind": "function",
           "name": "ping",
           "qualifiedName": "motors::DMMotor::ping",
@@ -5265,9 +5317,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 246,
+            "line": 244,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L246"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L244"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5277,8 +5329,8 @@
             "const": true
           },
           "references": [
-            "api-function-786a02895e4d281b",
-            "api-function-91dc7a9631e23625"
+            "api-function-73cf2d0c16e604bb",
+            "api-function-d658f091b80ff1fc"
           ],
           "enumValues": []
         },
@@ -5307,8 +5359,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-56db60fc5f42b873",
-          "anchor": "api-function-56db60fc5f42b873",
+          "id": "api-function-c430ac420427df3e",
+          "anchor": "api-function-c430ac420427df3e",
           "kind": "function",
           "name": "releaseController",
           "qualifiedName": "motors::DMMotor::releaseController",
@@ -5316,9 +5368,9 @@
           "description": "释放控制权",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 231,
+            "line": 229,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L231"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L229"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5331,8 +5383,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-8aa542f0595ca3a9",
-          "anchor": "api-function-8aa542f0595ca3a9",
+          "id": "api-function-7056d79771cfb4ee",
+          "anchor": "api-function-7056d79771cfb4ee",
           "kind": "function",
           "name": "resetAngle",
           "qualifiedName": "motors::DMMotor::resetAngle",
@@ -5340,9 +5392,9 @@
           "description": "把当前输出角度设置为零点",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 130,
+            "line": 131,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L130"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L131"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5352,13 +5404,13 @@
             "const": false
           },
           "references": [
-            "api-function-c91fd5b4b643c7b2"
+            "api-function-f1bf5f8649ae6d57"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-91dc7a9631e23625",
-          "anchor": "api-function-91dc7a9631e23625",
+          "id": "api-function-d658f091b80ff1fc",
+          "anchor": "api-function-d658f091b80ff1fc",
           "kind": "function",
           "name": "sendDisableFrame",
           "qualifiedName": "motors::DMMotor::sendDisableFrame",
@@ -5366,9 +5418,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 244,
+            "line": 242,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L244"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L242"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5378,14 +5430,14 @@
             "const": true
           },
           "references": [
-            "api-function-4337046880957f20",
-            "api-function-d35865204f56aaba"
+            "api-function-b08f79ffb44eaae5",
+            "api-function-f3cde73ae13f7069"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-786a02895e4d281b",
-          "anchor": "api-function-786a02895e4d281b",
+          "id": "api-function-73cf2d0c16e604bb",
+          "anchor": "api-function-73cf2d0c16e604bb",
           "kind": "function",
           "name": "sendEnableFrame",
           "qualifiedName": "motors::DMMotor::sendEnableFrame",
@@ -5393,9 +5445,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 243,
+            "line": 241,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L243"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L241"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5405,14 +5457,14 @@
             "const": true
           },
           "references": [
-            "api-function-d35865204f56aaba",
-            "api-function-e5ff385860366e43"
+            "api-function-8b69bf4d92237b7f",
+            "api-function-f3cde73ae13f7069"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-f255abb64dff0c15",
-          "anchor": "api-function-f255abb64dff0c15",
+          "id": "api-function-9f9e37be8a71cf0e",
+          "anchor": "api-function-9f9e37be8a71cf0e",
           "kind": "function",
           "name": "setCurrent",
           "qualifiedName": "motors::DMMotor::setCurrent",
@@ -5420,9 +5472,9 @@
           "description": "低层输出接口\n\n设置低层输出 当 DM 运行在 MIT 模式时，这个接口会把 MIT 退化为力矩输入使用。 因此这里的入参语义应理解为力矩，单位 Nm。 current 在 DM MIT 模式下，这里按力矩输入处理，单位 Nm",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 161,
+            "line": 162,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L161"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L162"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5432,13 +5484,13 @@
             "const": false
           },
           "references": [
-            "api-function-50593ecbaa6a227e"
+            "api-function-bea3cfbe3b0e0951"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-50593ecbaa6a227e",
-          "anchor": "api-function-50593ecbaa6a227e",
+          "id": "api-function-bea3cfbe3b0e0951",
+          "anchor": "api-function-bea3cfbe3b0e0951",
           "kind": "function",
           "name": "setInternalMIT",
           "qualifiedName": "motors::DMMotor::setInternalMIT",
@@ -5446,9 +5498,9 @@
           "description": "发送 MIT 控制指令\n\nMIT 控制指令 p_ref 使用 deg v_ref 使用 deg/s t_ff 使用 Nm 当前实现约定： v_ref p_ref p_ref 这里的不是普通速度模式下的目标转速，而是 MIT 五元组里的速度参考项，通常和配套使用，可理解为的导数。 setInternalMIT() setInternalVelocity() deg + deg/s rad + rad/s 也正因为如此，的单位约定和普通不同：前者当前用这一组量，再在驱动内部换算成协议要求的。 t_ff 前馈力矩 p_ref 位置参考，单位 deg v_ref 速度参考，单位 deg/s kp Kp kd Kd",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 204,
+            "line": 205,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L204"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L205"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5459,14 +5511,14 @@
           },
           "references": [
             "api-define-74e5dca65b07931c",
-            "api-function-6c5f8dcf53c97bdc",
-            "api-function-f255abb64dff0c15"
+            "api-function-9f9e37be8a71cf0e",
+            "api-function-f15a3fc1522733c1"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-0bcbc21b500664c3",
-          "anchor": "api-function-0bcbc21b500664c3",
+          "id": "api-function-87050d174e6b2095",
+          "anchor": "api-function-87050d174e6b2095",
           "kind": "function",
           "name": "setInternalPosition",
           "qualifiedName": "motors::DMMotor::setInternalPosition",
@@ -5474,9 +5526,9 @@
           "description": "发送内部位置参考\n\n当前位置参考使用 deg；DM 协议内部会换算成 rad。 maxv 单位 rpm，传 kNoLimit 时回退到 cfg_.vel_max_rad。",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 187,
+            "line": 188,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L187"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L188"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5488,13 +5540,13 @@
           "references": [
             "api-define-5a9c6514037ff4ea",
             "api-define-74e5dca65b07931c",
-            "api-function-718f7dcdcb4d5c89"
+            "api-function-15dd0265f2145411"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-6c5f8dcf53c97bdc",
-          "anchor": "api-function-6c5f8dcf53c97bdc",
+          "id": "api-function-f15a3fc1522733c1",
+          "anchor": "api-function-f15a3fc1522733c1",
           "kind": "function",
           "name": "setInternalVelocity",
           "qualifiedName": "motors::DMMotor::setInternalVelocity",
@@ -5502,9 +5554,9 @@
           "description": "发送内部速度参考\n\n库设计上对外统一使用 rpm；DM 驱动内部会把它换算成协议要求的 rad/s。 DM 速度模式协议不支持 maxi，该参数被忽略。",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 174,
+            "line": 175,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L174"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L175"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5515,7 +5567,7 @@
           },
           "references": [
             "api-define-5a9c6514037ff4ea",
-            "api-function-ab55ae9192d09f36"
+            "api-function-6f591f82e7bc2d8a"
           ],
           "enumValues": []
         },
@@ -5544,8 +5596,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-85a1d201117acea0",
-          "anchor": "api-function-85a1d201117acea0",
+          "id": "api-function-eadbdd3b284cc0ce",
+          "anchor": "api-function-eadbdd3b284cc0ce",
           "kind": "function",
           "name": "state",
           "qualifiedName": "motors::DMMotor::state",
@@ -5553,9 +5605,9 @@
           "description": "最近一次反馈出来的状态码",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 260,
+            "line": 258,
             "column": 12,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L260"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L258"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5565,7 +5617,7 @@
             "const": true
           },
           "references": [
-            "api-enum-27751d431dbac65e"
+            "api-enum-5a3993169ed52458"
           ],
           "enumValues": []
         },
@@ -5591,13 +5643,13 @@
             "const": false
           },
           "references": [
-            "api-enum-27751d431dbac65e"
+            "api-enum-5a3993169ed52458"
           ],
           "enumValues": []
         },
         {
-          "id": "api-function-3138da95b3007c78",
-          "anchor": "api-function-3138da95b3007c78",
+          "id": "api-function-7d7b727bd1986ac1",
+          "anchor": "api-function-7d7b727bd1986ac1",
           "kind": "function",
           "name": "supportsCurrent",
           "qualifiedName": "motors::DMMotor::supportsCurrent",
@@ -5605,9 +5657,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 154,
+            "line": 155,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L154"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L155"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5620,8 +5672,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-330031a4b44befb3",
-          "anchor": "api-function-330031a4b44befb3",
+          "id": "api-function-b5cd309137422faa",
+          "anchor": "api-function-b5cd309137422faa",
           "kind": "function",
           "name": "supportsInternalMIT",
           "qualifiedName": "motors::DMMotor::supportsInternalMIT",
@@ -5629,9 +5681,9 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 189,
+            "line": 190,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L189"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L190"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5716,8 +5768,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-42a5709b87b014be",
-          "anchor": "api-function-42a5709b87b014be",
+          "id": "api-function-c029ae46c1b3822d",
+          "anchor": "api-function-c029ae46c1b3822d",
           "kind": "function",
           "name": "tryAcquireController",
           "qualifiedName": "motors::DMMotor::tryAcquireController",
@@ -5725,9 +5777,9 @@
           "description": "获取控制权时，同时尝试使能电机",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 227,
+            "line": 225,
             "column": 10,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L227"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L225"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5737,7 +5789,7 @@
             "const": false
           },
           "references": [
-            "api-function-e5ff385860366e43"
+            "api-function-8b69bf4d92237b7f"
           ],
           "enumValues": []
         },
@@ -5838,8 +5890,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-4d03c6cb4c7bff82",
-          "anchor": "api-function-4d03c6cb4c7bff82",
+          "id": "api-function-28f66f11d1c04a12",
+          "anchor": "api-function-28f66f11d1c04a12",
           "kind": "function",
           "name": "~DMMotor",
           "qualifiedName": "motors::DMMotor::~DMMotor",
@@ -5847,9 +5899,9 @@
           "description": "析构不注销 CAN 回调（can_driver2 无 unregister），对象须存活至总线不再使用。",
           "location": {
             "path": "motors/DM/dm.hpp",
-            "line": 105,
+            "line": 106,
             "column": 5,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L105"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.hpp#L106"
           },
           "parentId": "api-class-6a1548fa3e0dae02",
           "member": {
@@ -5862,8 +5914,8 @@
           "enumValues": []
         },
         {
-          "id": "api-function-718f7dcdcb4d5c89",
-          "anchor": "api-function-718f7dcdcb4d5c89",
+          "id": "api-function-15dd0265f2145411",
+          "anchor": "api-function-15dd0265f2145411",
           "kind": "function",
           "name": "get_inv_pos_reduction_rate",
           "qualifiedName": "motors::get_inv_pos_reduction_rate",
@@ -5871,64 +5923,8 @@
           "description": "",
           "location": {
             "path": "motors/DM/dm.cpp",
-            "line": 41,
-            "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L41"
-          },
-          "parentId": "api-namespace-c79f54ea2e89d525",
-          "member": {
-            "access": null,
-            "static": true,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-enum-a423b8c9ce06b381",
-            "api-function-0bcbc21b500664c3",
-            "api-function-c91fd5b4b643c7b2"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-function-ab55ae9192d09f36",
-          "anchor": "api-function-ab55ae9192d09f36",
-          "kind": "function",
-          "name": "get_inv_vel_reduction_rate",
-          "qualifiedName": "motors::get_inv_vel_reduction_rate",
-          "signature": "static constexpr float motors::get_inv_vel_reduction_rate (const DMMotor::Type type)",
-          "description": "",
-          "location": {
-            "path": "motors/DM/dm.cpp",
-            "line": 53,
-            "column": 24,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L53"
-          },
-          "parentId": "api-namespace-c79f54ea2e89d525",
-          "member": {
-            "access": null,
-            "static": true,
-            "virtual": "none",
-            "const": false
-          },
-          "references": [
-            "api-enum-a423b8c9ce06b381",
-            "api-function-6c5f8dcf53c97bdc",
-            "api-function-c91fd5b4b643c7b2"
-          ],
-          "enumValues": []
-        },
-        {
-          "id": "api-variable-35f9ce2bc0f5703a",
-          "anchor": "api-variable-35f9ce2bc0f5703a",
-          "kind": "variable",
-          "name": "master_id_",
-          "qualifiedName": "motors::master_id_",
-          "signature": "uint32_t motors::master_id_",
-          "description": "",
-          "location": {
-            "path": "motors/DM/dm.cpp",
             "line": 38,
-            "column": 17,
+            "column": 24,
             "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L38"
           },
           "parentId": "api-namespace-c79f54ea2e89d525",
@@ -5939,7 +5935,37 @@
             "const": false
           },
           "references": [
-            "api-function-d47ea36f8cc078ec"
+            "api-enum-375037452aee8ceb",
+            "api-function-87050d174e6b2095",
+            "api-function-f1bf5f8649ae6d57"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-6f591f82e7bc2d8a",
+          "anchor": "api-function-6f591f82e7bc2d8a",
+          "kind": "function",
+          "name": "get_inv_vel_reduction_rate",
+          "qualifiedName": "motors::get_inv_vel_reduction_rate",
+          "signature": "static constexpr float motors::get_inv_vel_reduction_rate (const DMMotor::Type type)",
+          "description": "",
+          "location": {
+            "path": "motors/DM/dm.cpp",
+            "line": 50,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/motors/DM/dm.cpp#L50"
+          },
+          "parentId": "api-namespace-c79f54ea2e89d525",
+          "member": {
+            "access": null,
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-375037452aee8ceb",
+            "api-function-f15a3fc1522733c1",
+            "api-function-f1bf5f8649ae6d57"
           ],
           "enumValues": []
         },
@@ -5965,7 +5991,7 @@
             "const": false
           },
           "references": [
-            "api-enum-a950de6834fd9746"
+            "api-enum-56df7f5d05b0ad28"
           ],
           "enumValues": []
         },
@@ -5991,7 +6017,7 @@
             "const": false
           },
           "references": [
-            "api-enum-a950de6834fd9746"
+            "api-enum-56df7f5d05b0ad28"
           ],
           "enumValues": []
         }
@@ -6006,7 +6032,7 @@
           "virtual": false
         }
       ],
-      "symbolCount": 81,
+      "symbolCount": 82,
       "documentedSymbolCount": 53
     },
     {
