@@ -18174,7 +18174,7 @@
       "warnings": [
         {
           "code": "API_DOCUMENTATION_SPARSE",
-          "message": "8 of 17 public API symbols have no description."
+          "message": "8 of 18 public API symbols have no description."
         }
       ],
       "symbols": [
@@ -18199,13 +18199,14 @@
             "api-function-42eadf3b927fd824",
             "api-function-489d2294b7397b5c",
             "api-function-5fd2eb7b72defa58",
-            "api-function-8c4df1b7a99cebf6",
+            "api-function-96fb703a577e314e",
             "api-function-eeb2d70d2d29f442",
             "api-struct-3d9ac646b0beacba",
             "api-variable-2c9246e057777839",
             "api-variable-3ff9f3ba1b1d5206",
+            "api-variable-41cfb7a3519c5cf0",
+            "api-variable-54412b2b8eaf57ba",
             "api-variable-8c8d0c7af069140d",
-            "api-variable-8f38850721488439",
             "api-variable-99db9845ae090f4c",
             "api-variable-b3ccd2538bfc170c"
           ],
@@ -18357,12 +18358,12 @@
           "enumValues": []
         },
         {
-          "id": "api-function-8c4df1b7a99cebf6",
-          "anchor": "api-function-8c4df1b7a99cebf6",
+          "id": "api-function-96fb703a577e314e",
+          "anchor": "api-function-96fb703a577e314e",
           "kind": "function",
           "name": "calc",
           "qualifiedName": "MITPD::calc",
-          "signature": "float MITPD::calc (const float &p_ref, const float &p_fdb, const float &v_ref, const float &v_fdb)",
+          "signature": "float MITPD::calc (const float &p_ref, const float &p_fdb, const float &v_ref, const float &v_fdb, const float &t_ff)",
           "description": "计算一次 MIT 风格 PD 输出。\n\np_ref 位置给定 p_fdb 位置反馈 v_ref 速度给定 v_fdb 速度反馈 限幅后的控制输出",
           "location": {
             "path": "libs/control/mit_pd/mit_pd.hpp",
@@ -18431,8 +18432,8 @@
           "enumValues": []
         },
         {
-          "id": "api-variable-8f38850721488439",
-          "anchor": "api-variable-8f38850721488439",
+          "id": "api-variable-41cfb7a3519c5cf0",
+          "anchor": "api-variable-41cfb7a3519c5cf0",
           "kind": "variable",
           "name": "output_",
           "qualifiedName": "MITPD::output_",
@@ -18440,9 +18441,9 @@
           "description": "最近一次控制输出",
           "location": {
             "path": "libs/control/mit_pd/mit_pd.hpp",
-            "line": 48,
+            "line": 49,
             "column": 11,
-            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/mit_pd/mit_pd.hpp#L48"
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/mit_pd/mit_pd.hpp#L49"
           },
           "parentId": "api-class-0c3fbb3dc5aff9df",
           "member": {
@@ -18553,6 +18554,30 @@
           "enumValues": []
         },
         {
+          "id": "api-variable-54412b2b8eaf57ba",
+          "anchor": "api-variable-54412b2b8eaf57ba",
+          "kind": "variable",
+          "name": "t_ff_",
+          "qualifiedName": "MITPD::t_ff_",
+          "signature": "float MITPD::t_ff_",
+          "description": "最近一次前馈扭矩",
+          "location": {
+            "path": "libs/control/mit_pd/mit_pd.hpp",
+            "line": 48,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/BasicComponents/blob/main/libs/control/mit_pd/mit_pd.hpp#L48"
+          },
+          "parentId": "api-class-0c3fbb3dc5aff9df",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
           "id": "api-variable-b3ccd2538bfc170c",
           "anchor": "api-variable-b3ccd2538bfc170c",
           "kind": "variable",
@@ -18646,8 +18671,8 @@
         }
       ],
       "inheritanceRelations": [],
-      "symbolCount": 19,
-      "documentedSymbolCount": 11
+      "symbolCount": 20,
+      "documentedSymbolCount": 12
     },
     {
       "targetKind": "package",
