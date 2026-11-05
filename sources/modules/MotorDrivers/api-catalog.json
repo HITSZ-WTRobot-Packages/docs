@@ -4,6 +4,664 @@
   "references": [
     {
       "targetKind": "package",
+      "targetId": "motorcontroller--mitcontroller",
+      "displayName": "MotorController::MITController",
+      "moduleId": "MotorDrivers",
+      "packageSlug": "motorcontroller--mitcontroller",
+      "sourceBranch": "main",
+      "inputPaths": [
+        "controllers/mit_controller/motor_mit_controller.cpp",
+        "controllers/mit_controller/motor_mit_controller.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "20 of 23 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-namespace-d2fdce7881f032be",
+          "anchor": "api-namespace-d2fdce7881f032be",
+          "kind": "namespace",
+          "name": "controllers",
+          "qualifiedName": "controllers",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.cpp",
+            "line": 16,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.cpp#L16"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-7d2380288219aae8"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-3e83b2ec3bab8319",
+          "anchor": "api-file-3e83b2ec3bab8319",
+          "kind": "file",
+          "name": "controllers/mit_controller/motor_mit_controller.cpp",
+          "qualifiedName": "controllers/mit_controller/motor_mit_controller.cpp",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.cpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.cpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-file-8f705af2b24d5378",
+            "api-function-5548b383826c0473",
+            "api-namespace-d2fdce7881f032be"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-8f705af2b24d5378",
+          "anchor": "api-file-8f705af2b24d5378",
+          "kind": "file",
+          "name": "controllers/mit_controller/motor_mit_controller.hpp",
+          "qualifiedName": "controllers/mit_controller/motor_mit_controller.hpp",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-7d2380288219aae8",
+            "api-file-3e83b2ec3bab8319",
+            "api-namespace-d2fdce7881f032be",
+            "api-struct-5d2df2bac2ee2933"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-7d2380288219aae8",
+          "anchor": "api-class-7d2380288219aae8",
+          "kind": "class",
+          "name": "controllers::MotorMITController",
+          "qualifiedName": "controllers::MotorMITController",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 24,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L24"
+          },
+          "parentId": "api-namespace-d2fdce7881f032be",
+          "member": null,
+          "references": [
+            "api-function-05a14b7338bacbad",
+            "api-function-1ca96fe914e0bf7d",
+            "api-function-212f0a93ca61cb91",
+            "api-function-5548b383826c0473",
+            "api-function-fd0b80c354433bbd",
+            "api-struct-5d2df2bac2ee2933",
+            "api-variable-09791983815f1507",
+            "api-variable-12d13308fcaa2cd7",
+            "api-variable-1616d9b74c4b55f6",
+            "api-variable-392ce34a188e7848",
+            "api-variable-59a68d89425e1532",
+            "api-variable-5fdc84aef8056598",
+            "api-variable-a90416df83a7a3ba",
+            "api-variable-a99ffd3f0d307557",
+            "api-variable-d21d5f41ab05ea80",
+            "api-variable-d7731846c86f4631",
+            "api-variable-e19674f80518f689",
+            "api-variable-f9f7124ad1264ce5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-5d2df2bac2ee2933",
+          "anchor": "api-struct-5d2df2bac2ee2933",
+          "kind": "struct",
+          "name": "controllers::MotorMITController::Config",
+          "qualifiedName": "controllers::MotorMITController::Config",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 27,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L27"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": null,
+          "references": [
+            "api-variable-103bd58fadbffebf",
+            "api-variable-4d11b2e596d4c637",
+            "api-variable-e41545beab30a725"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e41545beab30a725",
+          "anchor": "api-variable-e41545beab30a725",
+          "kind": "variable",
+          "name": "ctrl_mode",
+          "qualifiedName": "controllers::MotorMITController::Config::ctrl_mode",
+          "signature": "ControlMode controllers::MotorMITController::Config::ctrl_mode",
+          "description": "显式选择 InternalMIT/ExternalPID；Default 跟随电机默认模式",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 33,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L33"
+          },
+          "parentId": "api-struct-5d2df2bac2ee2933",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-4d11b2e596d4c637",
+          "anchor": "api-variable-4d11b2e596d4c637",
+          "kind": "variable",
+          "name": "internal_set_ratio",
+          "qualifiedName": "controllers::MotorMITController::Config::internal_set_ratio",
+          "signature": "uint32_t controllers::MotorMITController::Config::internal_set_ratio",
+          "description": "内部 MIT 指令发送分频，0 按 1 处理",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 34,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L34"
+          },
+          "parentId": "api-struct-5d2df2bac2ee2933",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-103bd58fadbffebf",
+          "anchor": "api-variable-103bd58fadbffebf",
+          "kind": "variable",
+          "name": "mit",
+          "qualifiedName": "controllers::MotorMITController::Config::mit",
+          "signature": "MITPD::Config controllers::MotorMITController::Config::mit",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 32,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L32"
+          },
+          "parentId": "api-struct-5d2df2bac2ee2933",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-fd0b80c354433bbd",
+          "anchor": "api-function-fd0b80c354433bbd",
+          "kind": "function",
+          "name": "MotorMITController",
+          "qualifiedName": "controllers::MotorMITController::MotorMITController",
+          "signature": "controllers::MotorMITController::MotorMITController (motors::IMotor *motor, const Config &cfg)",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 37,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L37"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-5d2df2bac2ee2933"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-05a14b7338bacbad",
+          "anchor": "api-function-05a14b7338bacbad",
+          "kind": "function",
+          "name": "enable",
+          "qualifiedName": "controllers::MotorMITController::enable",
+          "signature": "bool controllers::MotorMITController::enable () override",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 40,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L40"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e19674f80518f689",
+          "anchor": "api-variable-e19674f80518f689",
+          "kind": "variable",
+          "name": "internal_set_prescaler_",
+          "qualifiedName": "controllers::MotorMITController::internal_set_prescaler_",
+          "signature": "uint32_t controllers::MotorMITController::internal_set_prescaler_",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 67,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L67"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a99ffd3f0d307557",
+          "anchor": "api-variable-a99ffd3f0d307557",
+          "kind": "variable",
+          "name": "internal_set_ratio_",
+          "qualifiedName": "controllers::MotorMITController::internal_set_ratio_",
+          "signature": "uint32_t controllers::MotorMITController::internal_set_ratio_",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 68,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L68"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d21d5f41ab05ea80",
+          "anchor": "api-variable-d21d5f41ab05ea80",
+          "kind": "variable",
+          "name": "kNoLimit",
+          "qualifiedName": "controllers::MotorMITController::kNoLimit",
+          "signature": "float controllers::MotorMITController::kNoLimit",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 57,
+            "column": 28,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L57"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "public",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-5548b383826c0473"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a90416df83a7a3ba",
+          "anchor": "api-variable-a90416df83a7a3ba",
+          "kind": "variable",
+          "name": "kd_",
+          "qualifiedName": "controllers::MotorMITController::kd_",
+          "signature": "float controllers::MotorMITController::kd_",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 62,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L62"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-59a68d89425e1532",
+          "anchor": "api-variable-59a68d89425e1532",
+          "kind": "variable",
+          "name": "kp_",
+          "qualifiedName": "controllers::MotorMITController::kp_",
+          "signature": "float controllers::MotorMITController::kp_",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 61,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L61"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-1616d9b74c4b55f6",
+          "anchor": "api-variable-1616d9b74c4b55f6",
+          "kind": "variable",
+          "name": "max_current_",
+          "qualifiedName": "controllers::MotorMITController::max_current_",
+          "signature": "float controllers::MotorMITController::max_current_",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 65,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L65"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-d21d5f41ab05ea80"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-392ce34a188e7848",
+          "anchor": "api-variable-392ce34a188e7848",
+          "kind": "variable",
+          "name": "mit_",
+          "qualifiedName": "controllers::MotorMITController::mit_",
+          "signature": "MITPD controllers::MotorMITController::mit_",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 60,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L60"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-f9f7124ad1264ce5",
+          "anchor": "api-variable-f9f7124ad1264ce5",
+          "kind": "variable",
+          "name": "position_ref_",
+          "qualifiedName": "controllers::MotorMITController::position_ref_",
+          "signature": "float controllers::MotorMITController::position_ref_",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 63,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L63"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-1ca96fe914e0bf7d",
+          "anchor": "api-function-1ca96fe914e0bf7d",
+          "kind": "function",
+          "name": "setRef",
+          "qualifiedName": "controllers::MotorMITController::setRef",
+          "signature": "void controllers::MotorMITController::setRef (float position_deg, float velocity_degs, float max_current=kNoLimit, float t_ff=0.0f)",
+          "description": "position_deg 位置参考，单位 deg velocity_degs 速度参考，单位 deg/s；保持位置时传 0 max_current 外部模式额外输出上限；kNoLimit 表示不额外限制。 内部模式忽略，不能用它限制驱动器内部 PD 的总力矩。 t_ff 前馈；内部模式为 Nm，外部模式与 setCurrent() 输出单位一致 未启用时只保存参考。启用后的内部模式立即发送，并重置分频计数。 内部路径要求驱动 setInternalMIT() 接收 deg、deg/s 和按弧度定义的增益。 所有调用应在同一个控制任务中串行执行。",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 54,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L54"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-d21d5f41ab05ea80"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-d7731846c86f4631",
+          "anchor": "api-variable-d7731846c86f4631",
+          "kind": "variable",
+          "name": "t_ff_",
+          "qualifiedName": "controllers::MotorMITController::t_ff_",
+          "signature": "float controllers::MotorMITController::t_ff_",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 66,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L66"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-5548b383826c0473",
+          "anchor": "api-function-5548b383826c0473",
+          "kind": "function",
+          "name": "update",
+          "qualifiedName": "controllers::MotorMITController::update",
+          "signature": "void controllers::MotorMITController::update () override",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 41,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L41"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-12d13308fcaa2cd7",
+            "api-variable-5fdc84aef8056598",
+            "api-variable-d21d5f41ab05ea80"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-09791983815f1507",
+          "anchor": "api-variable-09791983815f1507",
+          "kind": "variable",
+          "name": "velocity_ref_",
+          "qualifiedName": "controllers::MotorMITController::velocity_ref_",
+          "signature": "float controllers::MotorMITController::velocity_ref_",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 64,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L64"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-212f0a93ca61cb91",
+          "anchor": "api-function-212f0a93ca61cb91",
+          "kind": "function",
+          "name": "~MotorMITController",
+          "qualifiedName": "controllers::MotorMITController::~MotorMITController",
+          "signature": "controllers::MotorMITController::~MotorMITController () override",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.hpp",
+            "line": 38,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.hpp#L38"
+          },
+          "parentId": "api-class-7d2380288219aae8",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-12d13308fcaa2cd7",
+          "anchor": "api-variable-12d13308fcaa2cd7",
+          "kind": "variable",
+          "name": "kDegToRad",
+          "qualifiedName": "kDegToRad",
+          "signature": "float kDegToRad",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.cpp",
+            "line": 13,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.cpp#L13"
+          },
+          "parentId": "api-file-3e83b2ec3bab8319",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-5548b383826c0473"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5fdc84aef8056598",
+          "anchor": "api-variable-5fdc84aef8056598",
+          "kind": "variable",
+          "name": "kRpmToRadS",
+          "qualifiedName": "kRpmToRadS",
+          "signature": "float kRpmToRadS",
+          "description": "",
+          "location": {
+            "path": "controllers/mit_controller/motor_mit_controller.cpp",
+            "line": 14,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/MotorDrivers/blob/main/controllers/mit_controller/motor_mit_controller.cpp#L14"
+          },
+          "parentId": "api-file-3e83b2ec3bab8319",
+          "member": {
+            "access": null,
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-5548b383826c0473"
+          ],
+          "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [
+        {
+          "kind": "inherits",
+          "derivedId": "api-class-7d2380288219aae8",
+          "baseId": null,
+          "baseQualifiedName": "IController",
+          "access": "public",
+          "virtual": false
+        }
+      ],
+      "symbolCount": 25,
+      "documentedSymbolCount": 3
+    },
+    {
+      "targetKind": "package",
       "targetId": "motorcontroller--poscontroller",
       "displayName": "MotorController::PosController",
       "moduleId": "MotorDrivers",

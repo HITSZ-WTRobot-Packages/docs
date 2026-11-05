@@ -1,8 +1,19 @@
 {
   "formatVersion": 1,
   "moduleId": "MotorDrivers",
-  "moduleSha": "a9c5cd59cc4d071b5c743a0b3d657efec6528565",
+  "moduleSha": "5c9b3fa38ed25953fad3a29be0f20da7c4134342",
   "packages": [
+    {
+      "name": "MITController",
+      "pkgname": "MotorController::MITController",
+      "version": "0.1.0",
+      "manifestPath": "controllers/mit_controller/cpkg.toml",
+      "packagePath": "controllers/mit_controller",
+      "dependencyNames": [
+        "MotorDrivers::Core",
+        "libs::MIT_PD"
+      ]
+    },
     {
       "name": "PosController",
       "pkgname": "MotorController::PosController",
@@ -32,6 +43,7 @@
       "manifestPath": "controllers/_/cpkg.toml",
       "packagePath": "controllers/_",
       "dependencyNames": [
+        "MotorController::MITController",
         "MotorController::PosController",
         "MotorController::VelController"
       ]
