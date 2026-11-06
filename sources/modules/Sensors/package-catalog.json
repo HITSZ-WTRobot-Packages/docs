@@ -1,8 +1,18 @@
 {
   "formatVersion": 1,
   "moduleId": "Sensors",
-  "moduleSha": "72438aa4de7e5e95a9b7dabbd82e9c86e9a5649e",
+  "moduleSha": "0acb6092b0c99a377e407c985dbb7829e4895135",
   "packages": [
+    {
+      "name": "ADS1220",
+      "pkgname": "SensorADC::ADS1220",
+      "version": "0.1.0",
+      "manifestPath": "ADC/ADS1220/cpkg.toml",
+      "packagePath": "ADC/ADS1220",
+      "dependencyNames": [
+        "stm32cubemx"
+      ]
+    },
     {
       "name": "HWT101CT",
       "pkgname": "SensorGyro::HWT101CT",

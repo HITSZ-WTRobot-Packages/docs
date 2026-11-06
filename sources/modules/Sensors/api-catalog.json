@@ -4,6 +4,2507 @@
   "references": [
     {
       "targetKind": "package",
+      "targetId": "sensoradc--ads1220",
+      "displayName": "SensorADC::ADS1220",
+      "moduleId": "Sensors",
+      "packageSlug": "sensoradc--ads1220",
+      "sourceBranch": "main",
+      "inputPaths": [
+        "ADC/ADS1220/ADS1220.cpp",
+        "ADC/ADS1220/ADS1220.hpp"
+      ],
+      "status": "sparse",
+      "warnings": [
+        {
+          "code": "API_DOCUMENTATION_SPARSE",
+          "message": "14 of 75 public API symbols have no description."
+        }
+      ],
+      "symbols": [
+        {
+          "id": "api-file-040140a572985e6b",
+          "anchor": "api-file-040140a572985e6b",
+          "kind": "file",
+          "name": "ADC/ADS1220/ADS1220.cpp",
+          "qualifiedName": "ADC/ADS1220/ADS1220.cpp",
+          "signature": "",
+          "description": "Wleaf. 2026-09-18",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.cpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.cpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-file-4546bb7fac008ec5"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-file-4546bb7fac008ec5",
+          "anchor": "api-file-4546bb7fac008ec5",
+          "kind": "file",
+          "name": "ADC/ADS1220/ADS1220.hpp",
+          "qualifiedName": "ADC/ADS1220/ADS1220.hpp",
+          "signature": "",
+          "description": "针对ADS1220 24位ADC的封装\n\nWleaf. 2026-09-18",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": null,
+            "column": null,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-class-d78a84a4202b4832",
+            "api-file-040140a572985e6b",
+            "api-struct-1052774111877a65"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-class-d78a84a4202b4832",
+          "anchor": "api-class-d78a84a4202b4832",
+          "kind": "class",
+          "name": "ADS1220",
+          "qualifiedName": "ADS1220",
+          "signature": "",
+          "description": "ADS1220 24 位 ADC 面向对象驱动。\n\nhttps://www.ti.com/cn/lit/ds/symlink/ads1220.pdf 具体使用请对应ti数据手册 业务层通过 Config、Init()、Configure()、Update() 和各类读取接口使用芯片； SPI 命令、配置寄存器编码、24 位补码解码等底层细节全部封装在 private 区域。 SPI 必须配置为模式 1（CPOL = 0，CPHA = 1）。 当前类不控制 CS 引脚，调用期间 CS 必须由硬件或外部代码保持为有效低电平。 Update() 不等待 ADC 转换；未到就绪时刻立即返回 NotReady，缓存保持不变。 就绪判断基于 HAL 毫秒时基，支持内部振荡器或 4.096 MHz 外部时钟，不代替 DRDY 在线检测。 同一个对象不支持多线程并发调用。 硬件约束：",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 29,
+            "column": 1,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L29"
+          },
+          "parentId": null,
+          "member": null,
+          "references": [
+            "api-enum-1848679005ba6a63",
+            "api-enum-2378e8e6bef7654c",
+            "api-enum-29279d2283649aeb",
+            "api-enum-5540c58b17213694",
+            "api-enum-8393edf8c96bef98",
+            "api-enum-88e8e82040485869",
+            "api-enum-9316f4c339eff2cc",
+            "api-enum-b2a9597b11e1c0ea",
+            "api-enum-d3bfe7f3a35fa8f6",
+            "api-enum-dacaed2e4ad021ae",
+            "api-function-0638f3f9f72b340a",
+            "api-function-10a5ae9e76f9b0bb",
+            "api-function-111477ce4a80ef4b",
+            "api-function-14cd9b8a47d86a2a",
+            "api-function-1505379c9862d02a",
+            "api-function-189b8e99ec8a84ed",
+            "api-function-1cb363e11a8d355b",
+            "api-function-1d63c036138187c6",
+            "api-function-24ddb66e82a49cc3",
+            "api-function-28e3d7c6c274a47a",
+            "api-function-2e5f470360a1523b",
+            "api-function-3f9f1afd8cc03672",
+            "api-function-43107b7583416e6b",
+            "api-function-492b1fa5b95de8e7",
+            "api-function-49d584b90b09724e",
+            "api-function-4ba8a83cf4a01c95",
+            "api-function-53d745ff0454a064",
+            "api-function-621561a209229f08",
+            "api-function-712d51068ccda14d",
+            "api-function-78a8a9be3eab514d",
+            "api-function-8094b9a2170f45fe",
+            "api-function-8119c7abbaef6015",
+            "api-function-83b80ecfe0fdda7b",
+            "api-function-9a70bf6e32b102ae",
+            "api-function-a626fa09287f9152",
+            "api-function-b169cd20a900224f",
+            "api-function-b1b399bc0fa54575",
+            "api-function-b6838baf96b55919",
+            "api-function-b84fafececc0fe09",
+            "api-function-bc9f37146d3b75bf",
+            "api-function-c52b98d43d706903",
+            "api-function-dc38ad015fbae148",
+            "api-function-ec977d692f4158ff",
+            "api-function-ff3a3b98c4376a30",
+            "api-struct-1052774111877a65",
+            "api-variable-0dbdef6ea087e27c",
+            "api-variable-119465fb5aeb3660",
+            "api-variable-18172e76f2c1cc5c",
+            "api-variable-186dc25129a80627",
+            "api-variable-1d00c672ee27e0c6",
+            "api-variable-25bfbdef9a924932",
+            "api-variable-5971ec8a7cfcb36a",
+            "api-variable-6374719c53947742",
+            "api-variable-69848ad714739b8d",
+            "api-variable-69a5513958152c02",
+            "api-variable-6c7c6e68b7f780f7",
+            "api-variable-7ca07bb788594323",
+            "api-variable-854b9451a10a75fe",
+            "api-variable-867bb852decc0c44",
+            "api-variable-871a66f59d45ed01",
+            "api-variable-876b37c24884c613",
+            "api-variable-9478eaf2e9bd2ed7",
+            "api-variable-9483aa352e55a817",
+            "api-variable-99b0ca84dedc5b51",
+            "api-variable-a728e25dcf157ce4",
+            "api-variable-bcfa0ce179813290",
+            "api-variable-c8c9eba4a3b4bed4"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-10a5ae9e76f9b0bb",
+          "anchor": "api-function-10a5ae9e76f9b0bb",
+          "kind": "function",
+          "name": "ADS1220",
+          "qualifiedName": "ADS1220::ADS1220",
+          "signature": "ADS1220::ADS1220 (SPI_HandleTypeDef *hspi, const Config &config)",
+          "description": "使用完整配置构造 ADC。\n\nhspi STM32 HAL SPI 句柄，生命周期必须长于本对象且不能为 nullptr。 config 高层功能配置；构造阶段只保存，Init() 时才写入芯片。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 219,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L219"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-1052774111877a65"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-854b9451a10a75fe",
+          "anchor": "api-variable-854b9451a10a75fe",
+          "kind": "variable",
+          "name": "AdcPositiveScale_",
+          "qualifiedName": "ADS1220::AdcPositiveScale_",
+          "signature": "float ADS1220::AdcPositiveScale_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 363,
+            "column": 28,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L363"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-c52b98d43d706903",
+          "anchor": "api-function-c52b98d43d706903",
+          "kind": "function",
+          "name": "ApplyConfig",
+          "qualifiedName": "ADS1220::ApplyConfig",
+          "signature": "ADS1220::Status ADS1220::ApplyConfig ()",
+          "description": "编码、写入并读回校验当前 Config_，成功后发送 START。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 333,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L333"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-8094b9a2170f45fe",
+          "anchor": "api-function-8094b9a2170f45fe",
+          "kind": "function",
+          "name": "BuildRegisters",
+          "qualifiedName": "ADS1220::BuildRegisters",
+          "signature": "void ADS1220::BuildRegisters (uint8_t registers[4]) const",
+          "description": "将高层 Config_ 编码为配置寄存器 0～3。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 342,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L342"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-bc9f37146d3b75bf",
+          "anchor": "api-function-bc9f37146d3b75bf",
+          "kind": "function",
+          "name": "Calibrate",
+          "qualifiedName": "ADS1220::Calibrate",
+          "signature": "ADS1220::Status ADS1220::Calibrate ()",
+          "description": "通过内部短接完成 ADC 自身偏移校准，Init() 会自动调用。\n\n阻塞调用；Normal20 下约 2 秒，Duty5 下约 7.3 秒。 仅校准 ADC 本身，不消除传感器或外部放大电路的零点偏置。 使用内部振荡器或 4.096 MHz 外部时钟；非此频率需调整私有等待时间。 Configure() 改变增益、PGA 旁路、数据率或硬件参考源后会自动重新校准。 仅更新 reference_voltage 软件换算系数不会重新校准，偏移码保持不变。 保持当前增益和参考源，短接 PGA 两端至电源中点，等待并平均 32 次独立转换， 再恢复原通道和转换模式。GetRawValue()、GetVoltage()、GetGainVoltage() 的后续结果均扣除偏移；失败时不更新原校准值，无法恢复硬件时禁止继续采样。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 233,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L233"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae",
+            "api-function-712d51068ccda14d",
+            "api-function-78a8a9be3eab514d",
+            "api-function-a626fa09287f9152",
+            "api-function-ec977d692f4158ff",
+            "api-variable-876b37c24884c613"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b1b399bc0fa54575",
+          "anchor": "api-function-b1b399bc0fa54575",
+          "kind": "function",
+          "name": "ClearSample",
+          "qualifiedName": "ADS1220::ClearSample",
+          "signature": "void ADS1220::ClearSample ()",
+          "description": "清空测量缓存并使其失效。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 357,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L357"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-b2a9597b11e1c0ea",
+          "anchor": "api-enum-b2a9597b11e1c0ea",
+          "kind": "enum",
+          "name": "Cmd",
+          "qualifiedName": "ADS1220::Cmd",
+          "signature": "",
+          "description": "ADS1220 SPI 命令字节，仅供驱动内部使用。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 307,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L307"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-class-d78a84a4202b4832"
+          ],
+          "enumValues": [
+            {
+              "name": "POWERDOWN",
+              "initializer": "= 0x02",
+              "description": ""
+            },
+            {
+              "name": "RDATA",
+              "initializer": "= 0x10",
+              "description": ""
+            },
+            {
+              "name": "RESET",
+              "initializer": "= 0x06",
+              "description": ""
+            },
+            {
+              "name": "RREG",
+              "initializer": "= 0x23",
+              "description": ""
+            },
+            {
+              "name": "START",
+              "initializer": "= 0x08",
+              "description": ""
+            },
+            {
+              "name": "WREG",
+              "initializer": "= 0x43",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-variable-5971ec8a7cfcb36a",
+          "anchor": "api-variable-5971ec8a7cfcb36a",
+          "kind": "variable",
+          "name": "CodeOffset_",
+          "qualifiedName": "ADS1220::CodeOffset_",
+          "signature": "int32_t ADS1220::CodeOffset_",
+          "description": "内部短接平均偏移码；复位清零，成功校准后更新。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 376,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L376"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-struct-1052774111877a65",
+          "anchor": "api-struct-1052774111877a65",
+          "kind": "struct",
+          "name": "ADS1220::Config",
+          "qualifiedName": "ADS1220::Config",
+          "signature": "",
+          "description": "ADS1220 完整工作配置。\n\n默认值保持现有工程行为：AIN0-AIN1 差分输入、128 倍增益、正常模式 330 SPS、连续转换、外部 REFP0/REFN0 参考、PGA 启用、IDAC 关闭。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 195,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L195"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": null,
+          "references": [
+            "api-class-d78a84a4202b4832",
+            "api-enum-1848679005ba6a63",
+            "api-enum-2378e8e6bef7654c",
+            "api-enum-29279d2283649aeb",
+            "api-enum-5540c58b17213694",
+            "api-enum-8393edf8c96bef98",
+            "api-enum-88e8e82040485869",
+            "api-enum-9316f4c339eff2cc",
+            "api-enum-d3bfe7f3a35fa8f6",
+            "api-function-2e5f470360a1523b",
+            "api-function-621561a209229f08",
+            "api-function-78a8a9be3eab514d",
+            "api-function-bc9f37146d3b75bf",
+            "api-variable-186dc25129a80627",
+            "api-variable-1ec1eee1dcac3de4",
+            "api-variable-5a9d4e1283d2e3fd",
+            "api-variable-6374719c53947742",
+            "api-variable-867bb852decc0c44",
+            "api-variable-871a66f59d45ed01",
+            "api-variable-876b37c24884c613",
+            "api-variable-8bb2bd95e5bf06fe",
+            "api-variable-9483aa352e55a817",
+            "api-variable-bcfa0ce179813290",
+            "api-variable-c53ec6cd021d9f1e",
+            "api-variable-c88bd6512c79a159",
+            "api-variable-c8c9eba4a3b4bed4",
+            "api-variable-df6766d763e51fea",
+            "api-variable-e9d3a4d652225ab1"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-e9d3a4d652225ab1",
+          "anchor": "api-variable-e9d3a4d652225ab1",
+          "kind": "variable",
+          "name": "burn_out_sources",
+          "qualifiedName": "ADS1220::Config::burn_out_sources",
+          "signature": "bool ADS1220::Config::burn_out_sources",
+          "description": "启用 10 µA 传感器检测电流源。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 206,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L206"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-6374719c53947742",
+          "anchor": "api-variable-6374719c53947742",
+          "kind": "variable",
+          "name": "bypass_pga",
+          "qualifiedName": "ADS1220::Config::bypass_pga",
+          "signature": "bool ADS1220::Config::bypass_pga",
+          "description": "true 时旁路 PGA，仅允许 X1、X2、X4。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 204,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L204"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-78a8a9be3eab514d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c88bd6512c79a159",
+          "anchor": "api-variable-c88bd6512c79a159",
+          "kind": "variable",
+          "name": "conversion_mode",
+          "qualifiedName": "ADS1220::Config::conversion_mode",
+          "signature": "ConversionMode ADS1220::Config::conversion_mode",
+          "description": "单次或连续转换。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 200,
+            "column": 24,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L200"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-9316f4c339eff2cc"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-867bb852decc0c44",
+          "anchor": "api-variable-867bb852decc0c44",
+          "kind": "variable",
+          "name": "data_rate",
+          "qualifiedName": "ADS1220::Config::data_rate",
+          "signature": "DataRate ADS1220::Config::data_rate",
+          "description": "工作模式与输出数据率。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 199,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L199"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-1848679005ba6a63",
+            "api-function-78a8a9be3eab514d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-df6766d763e51fea",
+          "anchor": "api-variable-df6766d763e51fea",
+          "kind": "variable",
+          "name": "dout_drdy_enabled",
+          "qualifiedName": "ADS1220::Config::dout_drdy_enabled",
+          "signature": "bool ADS1220::Config::dout_drdy_enabled",
+          "description": "DOUT/DRDY 是否同步指示数据就绪。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 211,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L211"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c53ec6cd021d9f1e",
+          "anchor": "api-variable-c53ec6cd021d9f1e",
+          "kind": "variable",
+          "name": "filter",
+          "qualifiedName": "ADS1220::Config::filter",
+          "signature": "FirFilter ADS1220::Config::filter",
+          "description": "20 SPS/5 SPS 下的工频抑制方式。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 203,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L203"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-29279d2283649aeb"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-186dc25129a80627",
+          "anchor": "api-variable-186dc25129a80627",
+          "kind": "variable",
+          "name": "gain",
+          "qualifiedName": "ADS1220::Config::gain",
+          "signature": "Gain ADS1220::Config::gain",
+          "description": "输入增益，参与满量程和电压换算。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 198,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L198"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-2378e8e6bef7654c",
+            "api-function-2e5f470360a1523b",
+            "api-function-78a8a9be3eab514d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-c8c9eba4a3b4bed4",
+          "anchor": "api-variable-c8c9eba4a3b4bed4",
+          "kind": "variable",
+          "name": "idac1_route",
+          "qualifiedName": "ADS1220::Config::idac1_route",
+          "signature": "IdacRoute ADS1220::Config::idac1_route",
+          "description": "IDAC1 输出位置。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 209,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L209"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-d3bfe7f3a35fa8f6"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9483aa352e55a817",
+          "anchor": "api-variable-9483aa352e55a817",
+          "kind": "variable",
+          "name": "idac2_route",
+          "qualifiedName": "ADS1220::Config::idac2_route",
+          "signature": "IdacRoute ADS1220::Config::idac2_route",
+          "description": "IDAC2 输出位置。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 210,
+            "column": 19,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L210"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-d3bfe7f3a35fa8f6"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-8bb2bd95e5bf06fe",
+          "anchor": "api-variable-8bb2bd95e5bf06fe",
+          "kind": "variable",
+          "name": "idac_current",
+          "qualifiedName": "ADS1220::Config::idac_current",
+          "signature": "IdacCurrent ADS1220::Config::idac_current",
+          "description": "两路 IDAC 的公共电流设置。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 208,
+            "column": 21,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L208"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-8393edf8c96bef98"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-876b37c24884c613",
+          "anchor": "api-variable-876b37c24884c613",
+          "kind": "variable",
+          "name": "input",
+          "qualifiedName": "ADS1220::Config::input",
+          "signature": "InputMux ADS1220::Config::input",
+          "description": "ADC 输入通道组合。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 197,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L197"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-5540c58b17213694",
+            "api-function-bc9f37146d3b75bf"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-1ec1eee1dcac3de4",
+          "anchor": "api-variable-1ec1eee1dcac3de4",
+          "kind": "variable",
+          "name": "low_side_switch",
+          "qualifiedName": "ADS1220::Config::low_side_switch",
+          "signature": "bool ADS1220::Config::low_side_switch",
+          "description": "START 闭合、POWERDOWN 断开内部低侧开关。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 207,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L207"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-871a66f59d45ed01",
+          "anchor": "api-variable-871a66f59d45ed01",
+          "kind": "variable",
+          "name": "reference_voltage",
+          "qualifiedName": "ADS1220::Config::reference_voltage",
+          "signature": "float ADS1220::Config::reference_voltage",
+          "description": "外部/电源参考实际电压，内部参考固定 2.048 V。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 202,
+            "column": 15,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L202"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-621561a209229f08"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-5a9d4e1283d2e3fd",
+          "anchor": "api-variable-5a9d4e1283d2e3fd",
+          "kind": "variable",
+          "name": "temperature_sensor",
+          "qualifiedName": "ADS1220::Config::temperature_sensor",
+          "signature": "bool ADS1220::Config::temperature_sensor",
+          "description": "true 时测量内部温度，而非模拟输入。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 205,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L205"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-bcfa0ce179813290",
+          "anchor": "api-variable-bcfa0ce179813290",
+          "kind": "variable",
+          "name": "voltage_reference",
+          "qualifiedName": "ADS1220::Config::voltage_reference",
+          "signature": "VoltageReference ADS1220::Config::voltage_reference",
+          "description": "硬件参考源。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 201,
+            "column": 26,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L201"
+          },
+          "parentId": "api-struct-1052774111877a65",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-88e8e82040485869",
+            "api-function-78a8a9be3eab514d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-99b0ca84dedc5b51",
+          "anchor": "api-variable-99b0ca84dedc5b51",
+          "kind": "variable",
+          "name": "Config_",
+          "qualifiedName": "ADS1220::Config_",
+          "signature": "Config ADS1220::Config_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 369,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L369"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-1052774111877a65"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-78a8a9be3eab514d",
+          "anchor": "api-function-78a8a9be3eab514d",
+          "kind": "function",
+          "name": "Configure",
+          "qualifiedName": "ADS1220::Configure",
+          "signature": "ADS1220::Status ADS1220::Configure (const Config &config)",
+          "description": "应用一套完整配置。\n\n初始化前只保存配置；运行时写入、校验并启动转换，必要时自动校准。 Init() 失败后恢复原配置并验证；恢复失败则禁止采样，必须重新。 Update() 配置成功后旧缓存清零；下次有效转换前立即返回 NotReady。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 253,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L253"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae",
+            "api-function-2e5f470360a1523b",
+            "api-function-621561a209229f08",
+            "api-function-712d51068ccda14d",
+            "api-function-a626fa09287f9152",
+            "api-function-bc9f37146d3b75bf",
+            "api-struct-1052774111877a65",
+            "api-variable-186dc25129a80627",
+            "api-variable-6374719c53947742",
+            "api-variable-867bb852decc0c44",
+            "api-variable-bcfa0ce179813290"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-9316f4c339eff2cc",
+          "anchor": "api-enum-9316f4c339eff2cc",
+          "kind": "enum",
+          "name": "ConversionMode",
+          "qualifiedName": "ADS1220::ConversionMode",
+          "signature": "",
+          "description": "转换模式。\n\nStart() Start() PowerDown() SingleShot 每次只完成一次转换并自动进入低功耗状态； Continuous 在后连续转换，直到调用。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 132,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L132"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-8119c7abbaef6015",
+            "api-function-ec977d692f4158ff"
+          ],
+          "enumValues": [
+            {
+              "name": "Continuous",
+              "initializer": "= 0x04",
+              "description": ""
+            },
+            {
+              "name": "SingleShot",
+              "initializer": "= 0x00",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-variable-6c7c6e68b7f780f7",
+          "anchor": "api-variable-6c7c6e68b7f780f7",
+          "kind": "variable",
+          "name": "ConversionStartedAt_",
+          "qualifiedName": "ADS1220::ConversionStartedAt_",
+          "signature": "uint32_t ADS1220::ConversionStartedAt_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 380,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L380"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-7ca07bb788594323",
+          "anchor": "api-variable-7ca07bb788594323",
+          "kind": "variable",
+          "name": "Converting_",
+          "qualifiedName": "ADS1220::Converting_",
+          "signature": "bool ADS1220::Converting_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 379,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L379"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-1848679005ba6a63",
+          "anchor": "api-enum-1848679005ba6a63",
+          "kind": "enum",
+          "name": "DataRate",
+          "qualifiedName": "ADS1220::DataRate",
+          "signature": "",
+          "description": "工作模式与输出数据率的有效组合。\n\nNormal 为正常模式（256 kHz 调制器时钟），Duty 的工作时间占总周期的 1/4， Turbo 为高速模式（512 kHz 调制器时钟）。 数值基于内部振荡器或 4.096 MHz 外部时钟；当前转换等待仅支持这两种时钟。 以下单位都是SPS（每秒采样次数） _代表小数点",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 101,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L101"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": [
+            {
+              "name": "Duty11_25",
+              "initializer": "= 0x28",
+              "description": ""
+            },
+            {
+              "name": "Duty150",
+              "initializer": "= 0xA8",
+              "description": ""
+            },
+            {
+              "name": "Duty22_5",
+              "initializer": "= 0x48",
+              "description": ""
+            },
+            {
+              "name": "Duty250",
+              "initializer": "= 0xC8",
+              "description": ""
+            },
+            {
+              "name": "Duty44",
+              "initializer": "= 0x68",
+              "description": ""
+            },
+            {
+              "name": "Duty5",
+              "initializer": "= 0x08",
+              "description": ""
+            },
+            {
+              "name": "Duty82_5",
+              "initializer": "= 0x88",
+              "description": ""
+            },
+            {
+              "name": "Normal1000",
+              "initializer": "= 0xC0",
+              "description": ""
+            },
+            {
+              "name": "Normal175",
+              "initializer": "= 0x60",
+              "description": ""
+            },
+            {
+              "name": "Normal20",
+              "initializer": "= 0x00",
+              "description": ""
+            },
+            {
+              "name": "Normal330",
+              "initializer": "= 0x80",
+              "description": ""
+            },
+            {
+              "name": "Normal45",
+              "initializer": "= 0x20",
+              "description": ""
+            },
+            {
+              "name": "Normal600",
+              "initializer": "= 0xA0",
+              "description": ""
+            },
+            {
+              "name": "Normal90",
+              "initializer": "= 0x40",
+              "description": ""
+            },
+            {
+              "name": "Turbo1200",
+              "initializer": "= 0xB0",
+              "description": ""
+            },
+            {
+              "name": "Turbo180",
+              "initializer": "= 0x50",
+              "description": ""
+            },
+            {
+              "name": "Turbo2000",
+              "initializer": "= 0xD0",
+              "description": ""
+            },
+            {
+              "name": "Turbo350",
+              "initializer": "= 0x70",
+              "description": ""
+            },
+            {
+              "name": "Turbo40",
+              "initializer": "= 0x10",
+              "description": ""
+            },
+            {
+              "name": "Turbo660",
+              "initializer": "= 0x90",
+              "description": ""
+            },
+            {
+              "name": "Turbo90",
+              "initializer": "= 0x30",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-function-4ba8a83cf4a01c95",
+          "anchor": "api-function-4ba8a83cf4a01c95",
+          "kind": "function",
+          "name": "DecodeValue",
+          "qualifiedName": "ADS1220::DecodeValue",
+          "signature": "void ADS1220::DecodeValue (const uint8_t data[3])",
+          "description": "解码 24 位补码 ADC 数据或左对齐的 14 位温度数据。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 345,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L345"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-29279d2283649aeb",
+          "anchor": "api-enum-29279d2283649aeb",
+          "kind": "enum",
+          "name": "FirFilter",
+          "qualifiedName": "ADS1220::FirFilter",
+          "signature": "",
+          "description": "工频干扰抑制滤波器。\n\n非 None 选项仅允许与 Normal20 或 Duty5 配合使用。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 152,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L152"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": [
+            {
+              "name": "None",
+              "initializer": "= 0x00",
+              "description": ""
+            },
+            {
+              "name": "Reject50",
+              "initializer": "= 0x20",
+              "description": ""
+            },
+            {
+              "name": "Reject50And60",
+              "initializer": "= 0x10",
+              "description": ""
+            },
+            {
+              "name": "Reject60",
+              "initializer": "= 0x30",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-function-189b8e99ec8a84ed",
+          "anchor": "api-function-189b8e99ec8a84ed",
+          "kind": "function",
+          "name": "FromHalStatus",
+          "qualifiedName": "ADS1220::FromHalStatus",
+          "signature": "ADS1220::Status ADS1220::FromHalStatus (HAL_StatusTypeDef status) const",
+          "description": "将 STM32 HAL SPI 状态转换为公共 Status。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 339,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L339"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-2378e8e6bef7654c",
+          "anchor": "api-enum-2378e8e6bef7654c",
+          "kind": "enum",
+          "name": "Gain",
+          "qualifiedName": "ADS1220::Gain",
+          "signature": "",
+          "description": "ADC 可编程增益。\n\nConfig::bypass_pga 满量程差分输入范围为 ±VREF / Gain。X8 至 X128 始终启用 PGA； X1、X2、X4 可以结合旁路 PGA。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 80,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L80"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-6374719c53947742"
+          ],
+          "enumValues": [
+            {
+              "name": "X1",
+              "initializer": "= 0",
+              "description": ""
+            },
+            {
+              "name": "X128",
+              "initializer": "= 7",
+              "description": ""
+            },
+            {
+              "name": "X16",
+              "initializer": "= 4",
+              "description": ""
+            },
+            {
+              "name": "X2",
+              "initializer": "= 1",
+              "description": ""
+            },
+            {
+              "name": "X32",
+              "initializer": "= 5",
+              "description": ""
+            },
+            {
+              "name": "X4",
+              "initializer": "= 2",
+              "description": ""
+            },
+            {
+              "name": "X64",
+              "initializer": "= 6",
+              "description": ""
+            },
+            {
+              "name": "X8",
+              "initializer": "= 3",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-variable-119465fb5aeb3660",
+          "anchor": "api-variable-119465fb5aeb3660",
+          "kind": "variable",
+          "name": "GainVoltage_",
+          "qualifiedName": "ADS1220::GainVoltage_",
+          "signature": "float ADS1220::GainVoltage_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 375,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L375"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-43107b7583416e6b",
+          "anchor": "api-function-43107b7583416e6b",
+          "kind": "function",
+          "name": "GetConfig",
+          "qualifiedName": "ADS1220::GetConfig",
+          "signature": "const Config & ADS1220::GetConfig () const",
+          "description": "只读访问当前高层配置；不能通过该引用修改对象。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 298,
+            "column": 18,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L298"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-struct-1052774111877a65"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-83b80ecfe0fdda7b",
+          "anchor": "api-function-83b80ecfe0fdda7b",
+          "kind": "function",
+          "name": "GetConversionDelayMs",
+          "qualifiedName": "ADS1220::GetConversionDelayMs",
+          "signature": "uint32_t ADS1220::GetConversionDelayMs () const",
+          "description": "按当前工作模式和数据率计算含裕量的单次转换等待时间，单位 ms。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 351,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L351"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-1505379c9862d02a",
+          "anchor": "api-function-1505379c9862d02a",
+          "kind": "function",
+          "name": "GetGainValue",
+          "qualifiedName": "ADS1220::GetGainValue",
+          "signature": "uint16_t ADS1220::GetGainValue () const",
+          "description": "Gain 将枚举转换为实际倍率 1、2、4……128。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 348,
+            "column": 14,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L348"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-enum-2378e8e6bef7654c"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b169cd20a900224f",
+          "anchor": "api-function-b169cd20a900224f",
+          "kind": "function",
+          "name": "GetGainVoltage",
+          "qualifiedName": "ADS1220::GetGainVoltage",
+          "signature": "float ADS1220::GetGainVoltage () const",
+          "description": "模拟输入电压 × 配置增益（V）；温度和系统监测模式为零。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 280,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L280"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-14cd9b8a47d86a2a",
+          "anchor": "api-function-14cd9b8a47d86a2a",
+          "kind": "function",
+          "name": "GetLastStatus",
+          "qualifiedName": "ADS1220::GetLastStatus",
+          "signature": "Status ADS1220::GetLastStatus () const",
+          "description": "返回最近一次操作状态。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 295,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L295"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-1d63c036138187c6",
+          "anchor": "api-function-1d63c036138187c6",
+          "kind": "function",
+          "name": "GetMonitorVoltage",
+          "qualifiedName": "ADS1220::GetMonitorVoltage",
+          "signature": "float ADS1220::GetMonitorVoltage () const",
+          "description": "系统监测还原后的电源/外部参考电压（V）；其他模式为零。\n\nGetGainVoltage() ReferenceDiv4 / SupplyDiv4 结果统一通过此接口读取，不再复用。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 286,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L286"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-b169cd20a900224f"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b84fafececc0fe09",
+          "anchor": "api-function-b84fafececc0fe09",
+          "kind": "function",
+          "name": "GetRawValue",
+          "qualifiedName": "ADS1220::GetRawValue",
+          "signature": "int32_t ADS1220::GetRawValue () const",
+          "description": "返回最近一次有效采样的有符号码；模拟输入已扣除校准偏移。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 274,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L274"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-28e3d7c6c274a47a",
+          "anchor": "api-function-28e3d7c6c274a47a",
+          "kind": "function",
+          "name": "GetTemperature",
+          "qualifiedName": "ADS1220::GetTemperature",
+          "signature": "float ADS1220::GetTemperature () const",
+          "description": "返回最近一次内部温度传感器采样值，单位 °C。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 292,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L292"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-3f9f1afd8cc03672",
+          "anchor": "api-function-3f9f1afd8cc03672",
+          "kind": "function",
+          "name": "GetVoltage",
+          "qualifiedName": "ADS1220::GetVoltage",
+          "signature": "float ADS1220::GetVoltage () const",
+          "description": "输入电压（V）；系统监测模式为被监测电压的 1/4，温度模式为零。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 277,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L277"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-53d745ff0454a064",
+          "anchor": "api-function-53d745ff0454a064",
+          "kind": "function",
+          "name": "HasSample",
+          "qualifiedName": "ADS1220::HasSample",
+          "signature": "bool ADS1220::HasSample () const",
+          "description": "当前配置下是否已获得有效缓存；配置/复位/启动新转换后为 false。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 289,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L289"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-9478eaf2e9bd2ed7",
+          "anchor": "api-variable-9478eaf2e9bd2ed7",
+          "kind": "variable",
+          "name": "HasSample_",
+          "qualifiedName": "ADS1220::HasSample_",
+          "signature": "bool ADS1220::HasSample_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 378,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L378"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-8393edf8c96bef98",
+          "anchor": "api-enum-8393edf8c96bef98",
+          "kind": "enum",
+          "name": "IdacCurrent",
+          "qualifiedName": "ADS1220::IdacCurrent",
+          "signature": "",
+          "description": "IDAC1 和 IDAC2 共用的激励电流大小。\n\nConfig::idac1_route Config::idac2_route 具体输出引脚由和决定。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 165,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L165"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-variable-9483aa352e55a817",
+            "api-variable-c8c9eba4a3b4bed4"
+          ],
+          "enumValues": [
+            {
+              "name": "Off",
+              "initializer": "= 0",
+              "description": ""
+            },
+            {
+              "name": "Ua10",
+              "initializer": "= 1",
+              "description": ""
+            },
+            {
+              "name": "Ua100",
+              "initializer": "= 3",
+              "description": ""
+            },
+            {
+              "name": "Ua1000",
+              "initializer": "= 6",
+              "description": ""
+            },
+            {
+              "name": "Ua1500",
+              "initializer": "= 7",
+              "description": ""
+            },
+            {
+              "name": "Ua250",
+              "initializer": "= 4",
+              "description": ""
+            },
+            {
+              "name": "Ua50",
+              "initializer": "= 2",
+              "description": ""
+            },
+            {
+              "name": "Ua500",
+              "initializer": "= 5",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-enum-d3bfe7f3a35fa8f6",
+          "anchor": "api-enum-d3bfe7f3a35fa8f6",
+          "kind": "enum",
+          "name": "IdacRoute",
+          "qualifiedName": "ADS1220::IdacRoute",
+          "signature": "",
+          "description": "IDAC 激励电流的输出路由；Disabled 表示该路 IDAC 不连接到引脚。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 178,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L178"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": [
+            {
+              "name": "Ain0",
+              "initializer": "= 1",
+              "description": ""
+            },
+            {
+              "name": "Ain1",
+              "initializer": "= 2",
+              "description": ""
+            },
+            {
+              "name": "Ain2",
+              "initializer": "= 3",
+              "description": ""
+            },
+            {
+              "name": "Ain3",
+              "initializer": "= 4",
+              "description": ""
+            },
+            {
+              "name": "Disabled",
+              "initializer": "= 0",
+              "description": ""
+            },
+            {
+              "name": "Refn0",
+              "initializer": "= 6",
+              "description": ""
+            },
+            {
+              "name": "Refp0",
+              "initializer": "= 5",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-function-712d51068ccda14d",
+          "anchor": "api-function-712d51068ccda14d",
+          "kind": "function",
+          "name": "Init",
+          "qualifiedName": "ADS1220::Init",
+          "signature": "ADS1220::Status ADS1220::Init ()",
+          "description": "复位、校验配置并启动转换；模拟输入模式自动完成偏移校准后返回。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 236,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L236"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae",
+            "api-function-b6838baf96b55919",
+            "api-function-bc9f37146d3b75bf"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-a728e25dcf157ce4",
+          "anchor": "api-variable-a728e25dcf157ce4",
+          "kind": "variable",
+          "name": "Initialized_",
+          "qualifiedName": "ADS1220::Initialized_",
+          "signature": "bool ADS1220::Initialized_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 374,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L374"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-5540c58b17213694",
+          "anchor": "api-enum-5540c58b17213694",
+          "kind": "enum",
+          "name": "InputMux",
+          "qualifiedName": "ADS1220::InputMux",
+          "signature": "",
+          "description": "ADC 正、负输入端选择。\n\nAinXAinY 表示差分输入 AINP = X、AINN = Y；AinXAvss 表示单端输入。 单端输入必须旁路 PGA，且增益只能选择 X1、X2 或 X4。 ReferenceDiv4、SupplyDiv4 用于系统监测， ReferenceDiv4设置测量外部参考电压四分之一 SupplyDiv4设置测量模拟电压四分之一 ShortedMidSupply 可用于偏移校准。 具体参考手册手册51页",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 55,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L55"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": [
+            {
+              "name": "Ain0Ain1",
+              "initializer": "= 0x00",
+              "description": ""
+            },
+            {
+              "name": "Ain0Ain2",
+              "initializer": "= 0x10",
+              "description": ""
+            },
+            {
+              "name": "Ain0Ain3",
+              "initializer": "= 0x20",
+              "description": ""
+            },
+            {
+              "name": "Ain0Avss",
+              "initializer": "= 0x80",
+              "description": ""
+            },
+            {
+              "name": "Ain1Ain0",
+              "initializer": "= 0x60",
+              "description": ""
+            },
+            {
+              "name": "Ain1Ain2",
+              "initializer": "= 0x30",
+              "description": ""
+            },
+            {
+              "name": "Ain1Ain3",
+              "initializer": "= 0x40",
+              "description": ""
+            },
+            {
+              "name": "Ain1Avss",
+              "initializer": "= 0x90",
+              "description": ""
+            },
+            {
+              "name": "Ain2Ain3",
+              "initializer": "= 0x50",
+              "description": ""
+            },
+            {
+              "name": "Ain2Avss",
+              "initializer": "= 0xA0",
+              "description": ""
+            },
+            {
+              "name": "Ain3Ain2",
+              "initializer": "= 0x70",
+              "description": ""
+            },
+            {
+              "name": "Ain3Avss",
+              "initializer": "= 0xB0",
+              "description": ""
+            },
+            {
+              "name": "ReferenceDiv4",
+              "initializer": "= 0xC0",
+              "description": ""
+            },
+            {
+              "name": "ShortedMidSupply",
+              "initializer": "= 0xE0",
+              "description": ""
+            },
+            {
+              "name": "SupplyDiv4",
+              "initializer": "= 0xD0",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "api-function-24ddb66e82a49cc3",
+          "anchor": "api-function-24ddb66e82a49cc3",
+          "kind": "function",
+          "name": "IsAnalogInput",
+          "qualifiedName": "ADS1220::IsAnalogInput",
+          "signature": "bool ADS1220::IsAnalogInput (const Config &config)",
+          "description": "普通差分/单端输入才使用 PGA 偏移校准。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 360,
+            "column": 17,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L360"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": true,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-struct-1052774111877a65"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-492b1fa5b95de8e7",
+          "anchor": "api-function-492b1fa5b95de8e7",
+          "kind": "function",
+          "name": "IsInitialized",
+          "qualifiedName": "ADS1220::IsInitialized",
+          "signature": "bool ADS1220::IsInitialized () const",
+          "description": "Init() 是否已经完整成功。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 301,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L301"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-712d51068ccda14d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-0dbdef6ea087e27c",
+          "anchor": "api-variable-0dbdef6ea087e27c",
+          "kind": "variable",
+          "name": "LastStatus_",
+          "qualifiedName": "ADS1220::LastStatus_",
+          "signature": "Status ADS1220::LastStatus_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 373,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L373"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-69848ad714739b8d",
+          "anchor": "api-variable-69848ad714739b8d",
+          "kind": "variable",
+          "name": "MonitorVoltage_",
+          "qualifiedName": "ADS1220::MonitorVoltage_",
+          "signature": "float ADS1220::MonitorVoltage_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 377,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L377"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-8119c7abbaef6015",
+          "anchor": "api-function-8119c7abbaef6015",
+          "kind": "function",
+          "name": "PowerDown",
+          "qualifiedName": "ADS1220::PowerDown",
+          "signature": "ADS1220::Status ADS1220::PowerDown ()",
+          "description": "完成当前转换后进入省电模式；寄存器配置保持不变。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 259,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L259"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-25bfbdef9a924932",
+          "anchor": "api-variable-25bfbdef9a924932",
+          "kind": "variable",
+          "name": "RawValue_",
+          "qualifiedName": "ADS1220::RawValue_",
+          "signature": "int32_t ADS1220::RawValue_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 370,
+            "column": 13,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L370"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-9a70bf6e32b102ae",
+          "anchor": "api-function-9a70bf6e32b102ae",
+          "kind": "function",
+          "name": "ReadData",
+          "qualifiedName": "ADS1220::ReadData",
+          "signature": "ADS1220::Status ADS1220::ReadData (uint8_t *pData, uint8_t size)",
+          "description": "接收数据。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 324,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L324"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ff3a3b98c4376a30",
+          "anchor": "api-function-ff3a3b98c4376a30",
+          "kind": "function",
+          "name": "ReadRegisters",
+          "qualifiedName": "ADS1220::ReadRegisters",
+          "signature": "ADS1220::Status ADS1220::ReadRegisters (uint8_t registers[4])",
+          "description": "从配置寄存器 0 开始连续读取全部 4 个配置寄存器。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 330,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L330"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-b6838baf96b55919",
+          "anchor": "api-function-b6838baf96b55919",
+          "kind": "function",
+          "name": "Reset",
+          "qualifiedName": "ADS1220::Reset",
+          "signature": "ADS1220::Status ADS1220::Reset ()",
+          "description": "发送硬件复位命令；成功后对象变为未初始化状态。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 262,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L262"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae",
+            "api-function-712d51068ccda14d"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-49d584b90b09724e",
+          "anchor": "api-function-49d584b90b09724e",
+          "kind": "function",
+          "name": "SendCommand",
+          "qualifiedName": "ADS1220::SendCommand",
+          "signature": "ADS1220::Status ADS1220::SendCommand (Cmd cmd)",
+          "description": "发送无附加数据的单字节命令。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 318,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L318"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-111477ce4a80ef4b",
+          "anchor": "api-function-111477ce4a80ef4b",
+          "kind": "function",
+          "name": "SendData",
+          "qualifiedName": "ADS1220::SendData",
+          "signature": "ADS1220::Status ADS1220::SendData (uint8_t *pData, uint8_t size)",
+          "description": "发送数据。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 321,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L321"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-2e5f470360a1523b",
+          "anchor": "api-function-2e5f470360a1523b",
+          "kind": "function",
+          "name": "SetGain",
+          "qualifiedName": "ADS1220::SetGain",
+          "signature": "ADS1220::Status ADS1220::SetGain (Gain gain)",
+          "description": "修改增益；已初始化时立即重写并校验整套配置。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 265,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L265"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-2378e8e6bef7654c",
+            "api-enum-dacaed2e4ad021ae",
+            "api-function-78a8a9be3eab514d",
+            "api-variable-186dc25129a80627"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-621561a209229f08",
+          "anchor": "api-function-621561a209229f08",
+          "kind": "function",
+          "name": "SetVref",
+          "qualifiedName": "ADS1220::SetVref",
+          "signature": "ADS1220::Status ADS1220::SetVref (float Vref)",
+          "description": "修改外部/电源参考的实际电压（V），必须为正有限数。\n\nConfigure() 不改变参考源选择、不触发偏移校准；仍通过应用并使缓存失效。。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 271,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L271"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae",
+            "api-function-78a8a9be3eab514d",
+            "api-variable-871a66f59d45ed01"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-ec977d692f4158ff",
+          "anchor": "api-function-ec977d692f4158ff",
+          "kind": "function",
+          "name": "Start",
+          "qualifiedName": "ADS1220::Start",
+          "signature": "ADS1220::Status ADS1220::Start ()",
+          "description": "启动单次转换，或启动/同步连续转换。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 256,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L256"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae",
+            "api-function-bc9f37146d3b75bf"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-dacaed2e4ad021ae",
+          "anchor": "api-enum-dacaed2e4ad021ae",
+          "kind": "enum",
+          "name": "Status",
+          "qualifiedName": "ADS1220::Status",
+          "signature": "",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 32,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L32"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-function-712d51068ccda14d"
+          ],
+          "enumValues": [
+            {
+              "name": "ConfigurationMismatch",
+              "initializer": "",
+              "description": "配置寄存器读回值与写入值不一致。"
+            },
+            {
+              "name": "InvalidArgument",
+              "initializer": "",
+              "description": "SPI 句柄、参考电压或配置组合无效。"
+            },
+            {
+              "name": "NotInitialized",
+              "initializer": "",
+              "description": "Init() 在成功前调用了依赖初始化的接口。"
+            },
+            {
+              "name": "NotReady",
+              "initializer": "",
+              "description": "尚未转换完成、已休眠或单次结果已读取。"
+            },
+            {
+              "name": "Ok",
+              "initializer": "",
+              "description": "操作成功。"
+            },
+            {
+              "name": "SpiBusy",
+              "initializer": "",
+              "description": "SPI 外设当前忙。"
+            },
+            {
+              "name": "SpiError",
+              "initializer": "",
+              "description": "HAL 报告普通 SPI 错误。"
+            },
+            {
+              "name": "SpiTimeout",
+              "initializer": "",
+              "description": "SPI 发送或接收超时。"
+            }
+          ]
+        },
+        {
+          "id": "api-variable-1d00c672ee27e0c6",
+          "anchor": "api-variable-1d00c672ee27e0c6",
+          "kind": "variable",
+          "name": "Temperature_",
+          "qualifiedName": "ADS1220::Temperature_",
+          "signature": "float ADS1220::Temperature_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 372,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L372"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-a626fa09287f9152",
+          "anchor": "api-function-a626fa09287f9152",
+          "kind": "function",
+          "name": "Update",
+          "qualifiedName": "ADS1220::Update",
+          "signature": "ADS1220::Status ADS1220::Update ()",
+          "description": "非等待式检查新转换；未就绪返回 NotReady，就绪才读 SPI 并更新缓存。\n\nStart() Start() 单次模式每个只允许一次成功读取；休眠后需再启动。 HasSample() HasSample() NotReady 不改变缓存或；成功读取后为 true。 不调用 HAL_Delay()，但就绪后仍使用带超时的同步 HAL SPI，并非 DMA 异步接口。 无 DRDY 时采用带裕量的毫秒时基判断；实际读频低于标称 SPS，尤其高速档。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 245,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L245"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae",
+            "api-function-53d745ff0454a064",
+            "api-function-bc9f37146d3b75bf",
+            "api-function-ec977d692f4158ff"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-1cb363e11a8d355b",
+          "anchor": "api-function-1cb363e11a8d355b",
+          "kind": "function",
+          "name": "ValidateConfig",
+          "qualifiedName": "ADS1220::ValidateConfig",
+          "signature": "ADS1220::Status ADS1220::ValidateConfig (const Config &config) const",
+          "description": "检查枚举范围及数据手册规定的配置组合限制。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 336,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L336"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae",
+            "api-struct-1052774111877a65"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-enum-88e8e82040485869",
+          "anchor": "api-enum-88e8e82040485869",
+          "kind": "enum",
+          "name": "VoltageReference",
+          "qualifiedName": "ADS1220::VoltageReference",
+          "signature": "",
+          "description": "转换使用的参考电压来源。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 139,
+            "column": 5,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L139"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "public",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": [
+            {
+              "name": "AnalogSupply",
+              "initializer": "= 0xC0",
+              "description": "模拟电源 AVDD - AVSS。"
+            },
+            {
+              "name": "ExternalRef0",
+              "initializer": "= 0x40",
+              "description": "专用 REFP0、REFN0 引脚。"
+            },
+            {
+              "name": "ExternalRef1",
+              "initializer": "= 0x80",
+              "description": "复用AIN0/REFP1、AIN3/REFN1 引脚。"
+            },
+            {
+              "name": "Internal2048",
+              "initializer": "= 0x00",
+              "description": "内部 2.048 V 精密参考。"
+            }
+          ]
+        },
+        {
+          "id": "api-variable-18172e76f2c1cc5c",
+          "anchor": "api-variable-18172e76f2c1cc5c",
+          "kind": "variable",
+          "name": "Voltage_",
+          "qualifiedName": "ADS1220::Voltage_",
+          "signature": "float ADS1220::Voltage_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 371,
+            "column": 11,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L371"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-dc38ad015fbae148",
+          "anchor": "api-function-dc38ad015fbae148",
+          "kind": "function",
+          "name": "WaitForConversion",
+          "qualifiedName": "ADS1220::WaitForConversion",
+          "signature": "void ADS1220::WaitForConversion () const",
+          "description": "Update() 仅供校准内部等待新结果；正常不调用。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 354,
+            "column": 10,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L354"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": true
+          },
+          "references": [
+            "api-function-a626fa09287f9152"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-function-0638f3f9f72b340a",
+          "anchor": "api-function-0638f3f9f72b340a",
+          "kind": "function",
+          "name": "WriteRegisters",
+          "qualifiedName": "ADS1220::WriteRegisters",
+          "signature": "ADS1220::Status ADS1220::WriteRegisters (const uint8_t registers[4])",
+          "description": "从配置寄存器 0 开始连续写入全部 4 个配置寄存器。",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 327,
+            "column": 12,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L327"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [
+            "api-enum-dacaed2e4ad021ae"
+          ],
+          "enumValues": []
+        },
+        {
+          "id": "api-variable-69a5513958152c02",
+          "anchor": "api-variable-69a5513958152c02",
+          "kind": "variable",
+          "name": "hspi_",
+          "qualifiedName": "ADS1220::hspi_",
+          "signature": "SPI_HandleTypeDef* ADS1220::hspi_",
+          "description": "",
+          "location": {
+            "path": "ADC/ADS1220/ADS1220.hpp",
+            "line": 366,
+            "column": 23,
+            "sourceUrl": "https://github.com/HITSZ-WTRobot-Packages/Sensors/blob/main/ADC/ADS1220/ADS1220.hpp#L366"
+          },
+          "parentId": "api-class-d78a84a4202b4832",
+          "member": {
+            "access": "private",
+            "static": false,
+            "virtual": "none",
+            "const": false
+          },
+          "references": [],
+          "enumValues": []
+        }
+      ],
+      "inheritanceRelations": [],
+      "symbolCount": 77,
+      "documentedSymbolCount": 63
+    },
+    {
+      "targetKind": "package",
       "targetId": "sensorgyro--hwt101ct",
       "displayName": "SensorGyro::HWT101CT",
       "moduleId": "Sensors",
